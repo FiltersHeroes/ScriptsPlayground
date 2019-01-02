@@ -1,1 +1,28 @@
- 
+ [Adblock Plus 2.0]
+! Checksum: cy4Ltu7Yh0kzn76GkUBGPw
+! Title: Lista testowa
+! Codename: Test
+! Description: Lista przeznaczona do testowania skryptu.
+! Last modified: Wed, 02 Jan 2019, 18:17 UTC+01
+! Version: @wersja
+! Expires: 2 days
+! Copyright © 2018 Polish Filters Team
+! Aktualizacja: śro, 02 sty 2019, 18:17 UTC+01
+!
+!
+! Testy
+costam.pl###test
+hehe.pl##.haha
+test.pl###nlt_test
+!Test
+!
+!
+! Testy2
+aletojuzbylo.pl###iniewrociwiecej
+test2.pl###big_brother
+zniklogdzieszanami.pl###tralala
+!
+!
+! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
+!#include Test2.txt
+
