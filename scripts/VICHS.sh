@@ -165,8 +165,8 @@ done
 # Wysyłanie zmienionych plików do repozytorium git
 if [ "$CI" = "true" ] ; then
     CI_USERNAME=$(grep -oP -m 1 '@CIusername \K.*' $CONFIG)
-    GIT_SLUG=$(git ls-remote --get-url | sed "s/git@//g" | sed "s|:|/|g")
-    git push https://PolishJarvis:${GH_TOKEN}@github.com/PolishFiltersTeam/VICHSPlayground.git HEAD:master > /dev/null 2>&1
+    GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|:|/|g")
+    git push https://${CI_USERNAME}:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
 elif [ ! "$RTM_MODE" ] ; then
     echo "Czy chcesz teraz wysłać do gita zmienione pliki?"
     select yn in "Tak" "Nie"; do
