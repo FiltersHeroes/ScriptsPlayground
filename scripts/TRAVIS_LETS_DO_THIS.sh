@@ -9,4 +9,4 @@ elif [ "$ost_commit_katalog" == "Test/uBO_AG" ]; then
     glowna_lista="Test.txt Test_uBO_AG.txt"
 fi
 
-./scripts/VICHS.sh $katalog/$plik
+./scripts/VICHS.sh $glowna_lista
