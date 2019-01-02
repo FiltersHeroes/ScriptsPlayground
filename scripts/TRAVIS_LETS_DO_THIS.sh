@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ost_commit_katalog=$(dirname $(git diff-tree --no-commit-id --name-only -r master))
+ost_commit_plik=$(git diff-tree --no-commit-id --name-only -r master)
+
+if [ "$ost_commit_katalog" == "Test" ]; then
+    glowna_lista="Test.txt"
+elif [ "$ost_commit_katalog" == "Test/uBO_AG" ]; then
+    glowna_lista="Test.txt Test_uBO_AG.txt"
+fi
+
+./scripts/VICHS.sh $katalog/$plik

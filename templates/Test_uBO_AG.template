@@ -1,0 +1,19 @@
+! Checksum: @
+! Title: Lista testowa - uzupełnienie do uBO i AG
+! Codename: Test - supplement
+! Last modified: @modified
+! Version: @wersja
+! Expires: 2 days
+! Copyright © 2018 Polish Filters Team
+! Aktualizacja: @aktualizacja
+!
+!
+@path Test/uBO_AG
+! Testy
+@include test3
+!
+!
+! Testy2
+@include test4
+!
+!
