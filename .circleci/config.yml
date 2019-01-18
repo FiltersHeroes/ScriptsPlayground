@@ -2,8 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: buildpack-deps:bionic
+      - image: hawkeye116477/pft:latest
     steps:
       - checkout
-      - run: apt-get update && apt-get install -y language-pack-pl
       - run: ./scripts/TRAVIS_LETS_DO_THIS.sh
