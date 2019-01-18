@@ -5,5 +5,5 @@ jobs:
       - image: buildpack-deps:bionic
     steps:
       - checkout
-      - run: sudo apt-get update && sudo apt-get install -y language-pack-pl
+      - run: apt-get update && apt-get install -y language-pack-pl
       - run: ./scripts/TRAVIS_LETS_DO_THIS.sh
