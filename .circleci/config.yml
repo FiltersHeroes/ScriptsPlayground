@@ -6,3 +6,15 @@ jobs:
     steps:
       - checkout
       - run: ./scripts/TRAVIS_LETS_DO_THIS.sh
+workflows:
+   version: 2
+   schedule-workflow:
+     triggers:
+       - schedule:
+           cron: "26 9,15,20 * * *"
+           filters:
+             branches:
+               only:
+                 - master
+     jobs:
+       - build
