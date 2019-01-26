@@ -1,0 +1,21 @@
+addons:
+  apt:
+    packages:
+    - language-pack-pl
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+language: bash
+services:
+- docker
+before_install:
+- docker pull hawkeye116477/pft:latest
+- docker run -p 127.0.0.1:80:4567 hawkeye116477/pft:latest
+script:
+- "wget -O ./PPB.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PPB.txt"
+- "./scripts/expired_domains.sh ./PPB.txt"
+- "git push https://PolishJarvis:${GIT_TOKEN}@${TRAVIS_REPO_SLUG} HEAD:master > /dev/null 2>&1"
+env:
+  global:
+    secure: H074te9G3gsDg47Xo6CxnZppGc5IrEXGYseubfEaX/qLE6PF8AP2QKUM62fPM2OKrVdTbIvXWt0FWUfo2+GTMmK7ah2cA9VYk+SCokTE7CCRivw6fWrYIZUMQfdASjTbPG1WyP3Tja1g2yhLmEFt+R/gAWw+0JnCt4sY0eQeFwzIlY5V7UhaUI17HmZtRFpuqrhbuz82a9Mr0MESS/pyxIHuTJlorE3ln0e4aqYD2L7ukpL3RZWQs2ApV0r8RTdnsFnRInMZPREArXJk0Dz7ZnrJtr/6Wqe8GaA3Uz8ZBJSyBnG9MvwwEHQmwWzfV+nKcvS49jxmraJLFTf540zkXd0Zf0HWyyx/aAhEQqLbqkwc2qvmya5oI8JLENupjQrur/FTNv0i6/1zVqMDzZ6Sk/JSSwte4kXJpgbXLeZnZSeqHvbGjvBKAFHUgwyIf9ZZk78Vu6CSWw2N+1i/ot/chqEP7h8M1l7vXMqKk01w3p3vLPHi/4uOJ+h3mPnrxAS7YruARGqHrPN+Yqw5fk+MF8KFOvvgM4FQL21SYyj8DIq85pW4VZMV4HRp0KdtLCU9bmtAX+9dXJbhciW2JTni914OZU5KGDWLHKhBT8icSdQUM+NZpH2A48h0RyKd0/FaHTq88aFsbM63rJ7lL7neNft2dayUV1h3gcOhKMp6N/c=
