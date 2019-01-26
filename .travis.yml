@@ -4,6 +4,7 @@ addons:
     packages:
     - language-pack-pl
     - pcregrep
+    - whois
 notifications:
   email:
     on_success: never
