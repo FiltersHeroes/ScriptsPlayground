@@ -8,5 +8,5 @@ wget -O ./PAF_backgrounds_self-advertising.txt https://raw.githubusercontent.com
 
 ./scripts/expired_domains.sh $sciezka/../PAF_backgrounds_self-advertising.txt
 git add --all
-git commit -m "Check"
+git commit -m "Check [ci skip]"
 git push https://PolishJarvis:${GIT_TOKEN}@github.com/PolishFiltersTeam/ExpiredDomainsFilterListsPlayground.git HEAD:master > /dev/null 2>&1
