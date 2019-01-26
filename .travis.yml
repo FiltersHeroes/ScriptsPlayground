@@ -1,3 +1,4 @@
+dist: xenial
 addons:
   apt:
     packages:
@@ -7,11 +8,6 @@ notifications:
     on_success: never
     on_failure: always
 language: bash
-services:
-- docker
-before_install:
-- docker pull hawkeye116477/pft:latest
-- docker run -p 127.0.0.1:80:4567 hawkeye116477/pft:latest
 script:
 - "wget -O ./PPB.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PPB.txt"
 - "./scripts/expired_domains.sh ./PPB.txt"
