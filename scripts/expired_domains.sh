@@ -27,12 +27,21 @@ sed -i "s|\#||" $TEMPORARY
 sed -i "s|\?||" $TEMPORARY
 sort -u -o $TEMPORARY $TEMPORARY
 
-# Sprawdzanie domen
-$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY | tee $TEMPORARY.2
-sed '/Expired/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-sed '/Unknown/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
-sed '/Valid/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-clean.txt
+for ips in `cat $TEMPORARY`
+do
+    hostname=$(host ${ips})
+    if [[ "${hostname}" =~ "NXDOMAIN" ]]
+        then
+            echo "${hostname}" | awk '{ print $2 }' >> $TEMPORARY.2
+    fi
+done
+
+$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
+sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+sed '/Valid/!d' $TEMPORARY.3 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-clean.txt
 rm -rf $TEMPORARY
 rm -rf $TEMPORARY.2
+rm -rf $TEMPORARY.3
 
 done
