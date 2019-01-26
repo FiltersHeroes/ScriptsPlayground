@@ -287,7 +287,7 @@ check_domain_status()
 {
     local REGISTRAR=""
     # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
-    sleep 1
+    sleep 3
     # Save the domain since set will trip up the ordering
     DOMAIN=${1}
     TLDTYPE="`echo ${DOMAIN} | ${CUT} -d '.' -f3 | tr '[A-Z]' '[a-z]'`"
