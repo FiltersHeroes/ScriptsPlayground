@@ -33,6 +33,8 @@ do
     if [[ "${hostname}" =~ "NXDOMAIN" ]]
         then
             echo "${hostname}" | awk '{ print $2 }' >> $TEMPORARY.2
+    else
+            echo "Test"
     fi
 done
 
