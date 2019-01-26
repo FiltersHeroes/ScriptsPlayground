@@ -25,6 +25,7 @@ sed -i "s|domain=||" $TEMPORARY
 sed -ni '/\./p' $TEMPORARY
 sed -i "s|\#||" $TEMPORARY
 sed -i "s|\?||" $TEMPORARY
+sed -i "s/[$].*//" $TEMPORARY
 sort -u -o $TEMPORARY $TEMPORARY
 
 for ips in `cat $TEMPORARY`
