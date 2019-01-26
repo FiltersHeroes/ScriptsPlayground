@@ -880,7 +880,7 @@ prints()
     if [ "${QUIET}" != "TRUE" ]
     then
             MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
-            printf "%-35s %-46s %-8s %-11s %-5s\n" "$1" "$5" "$2" "$MIN_DATE" "$4"
+            printf "%-35s %-46s %-8s %-11s %-5s\n" "$1" "D" "$2" "$MIN_DATE" "$4"
     fi
 }
 

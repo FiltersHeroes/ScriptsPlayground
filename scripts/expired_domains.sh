@@ -28,7 +28,7 @@ sed -i "s|\?||" $TEMPORARY
 sort -u -o $TEMPORARY $TEMPORARY
 
 # Sprawdzanie domen
-$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY > $TEMPORARY.2
+$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY | tee $TEMPORARY.2
 sed '/Expired/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Unknown/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 sed '/Valid/!d' $TEMPORARY.2 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-clean.txt
