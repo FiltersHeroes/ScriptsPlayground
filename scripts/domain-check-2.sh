@@ -360,6 +360,7 @@ check_domain_status()
         REGISTRAR=`cat ${WHOIS_TMP} | ${AWK} -F: '/registrar:/ && $2 != "" { REGISTRAR=substr($2,5,17) } END { print REGISTRAR }'`
     elif [ "${TLDTYPE}" == "pl" ];
     then
+    ${WHOIS} -h whois.dns.pl "${1}" > ${WHOIS_TMP}
 	REGISTRAR=`cat ${WHOIS_TMP} | ${AWK} -F: '/REGISTRAR:/ && $0 != "" { getline; REGISTRAR=substr($0,0,35) } END { print REGISTRAR }'`
     elif [ "${TLDTYPE}" == "xyz" ];
     then
