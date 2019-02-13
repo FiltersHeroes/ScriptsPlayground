@@ -655,7 +655,7 @@ check_domain_status()
 
     elif [ "${TLDTYPE}" == "pl" ] # NASK
     then
-          tdomdate=`cat ${WHOIS_TMP} | ${AWK} -F':' '/expiration date:/ { print $2 }' | ${AWK} '{ print $1 ;}'`
+          tdomdate=`cat ${WHOIS_TMP} | ${AWK} -F':' '/expiration date:/ || /renewal date:/ { print $2 }' | ${AWK} '{ print $1 ;}'`
           tyear=`echo ${tdomdate} | ${CUT} -d'.' -f1`
           tmon=`echo ${tdomdate} | ${CUT} -d'.' -f2`
           case ${tmon} in
