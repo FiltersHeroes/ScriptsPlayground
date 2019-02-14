@@ -6,6 +6,8 @@ pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' $i)
 
 pageDoublePipe=$(pcregrep -o1 '^.*?\|\|(.*)' $i)
 
+hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' $i)
+
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
 
@@ -15,6 +17,7 @@ TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
 echo $pageComma >> $TEMPORARY
 echo $pagePipe >> $TEMPORARY
 echo $pageDoublePipe >> $TEMPORARY
+echo $hosts >> $TEMPORARY
 sed -i "s/[|]/\n/g" $TEMPORARY
 sed -i "s/\,/\n/g" $TEMPORARY
 sed -i "s/\ /\n/g" $TEMPORARY
