@@ -1,6 +1,5 @@
 image:
   name: hawkeye116477/pft2:latest
-  entrypoint: ["/bin/bash"]
 before_script:
   - apt-get update -qq && apt-get install -y -qq pcregrep whois
 job:
