@@ -1,0 +1,4 @@
+before_script:
+  - apt-get update -qq && apt-get install -y -qq pcregrep whois
+job:
+  script: "./scripts/CI_LETS_DO_THIS_kad.sh"
