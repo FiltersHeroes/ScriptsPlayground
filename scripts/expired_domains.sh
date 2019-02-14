@@ -2,7 +2,7 @@
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
 
-pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' $i) 
+pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' $i)
 
 pageDoublePipe=$(pcregrep -o1 '^.*?\|\|(.*)' $i)
 
@@ -25,6 +25,8 @@ sed -i "s/[/].*//" $TEMPORARY
 sed -i "s/[\^].*//" $TEMPORARY
 sed -i "s|\~||" $TEMPORARY
 sed -i "s|domain=||" $TEMPORARY
+sed -i "s|redirect=noopmp3-0.1s||" $TEMPORARY
+sed -i "s|*||" $TEMPORARY
 sed -ni '/\./p' $TEMPORARY
 sed -i "s|\#||" $TEMPORARY
 sed -i "s|\?||" $TEMPORARY
