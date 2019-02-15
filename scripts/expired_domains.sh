@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.2
+# v1.3
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
