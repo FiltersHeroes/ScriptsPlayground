@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# v1.2
+
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
 
@@ -26,7 +29,7 @@ sed -i "s/[\^].*//" $TEMPORARY
 sed -i "s|\~||" $TEMPORARY
 sed -i "s|domain=||" $TEMPORARY
 sed -i "s|redirect=noopmp3-0.1s||" $TEMPORARY
-sed -i "s|*||" $TEMPORARY
+sed -i '/[/\*]/d' $TEMPORARY
 sed -ni '/\./p' $TEMPORARY
 sed -i "s|\#||" $TEMPORARY
 sed -i "s|\?||" $TEMPORARY
@@ -49,6 +52,8 @@ awk '{gsub("www.", "");print}' $TEMPORARY.2 >> $TEMPORARY.3
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.3 | tee $TEMPORARY.4
 sed '/Expired/!d' $TEMPORARY.4 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Unknown/!d' $TEMPORARY.4 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+sort -u -o $FILTERLIST-expired.txt
+sort -u -o $FILTERLIST-unknown.txt
 rm -rf $TEMPORARY
 rm -rf $TEMPORARY.2
 rm -rf $TEMPORARY.3
