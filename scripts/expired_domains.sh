@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.4
+# v1.4.1
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -48,7 +48,7 @@ do
 done
 
 awk '{gsub("^ww..", "");print}' $TEMPORARY.2 >> $TEMPORARY.3
-sort -u -o $TEMPORARY.3
+sort -u -o $TEMPORARY.3 $TEMPORARY.3
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.3 | tee $TEMPORARY.4
 sed '/Expired/!d' $TEMPORARY.4 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
@@ -67,8 +67,8 @@ do
 done
 
 
-sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 rm -rf $TEMPORARY
 rm -rf $TEMPORARY.2
 rm -rf $TEMPORARY.3
