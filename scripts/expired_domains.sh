@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.3
+# v1.4
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -47,7 +47,7 @@ do
     fi
 done
 
-awk '{gsub("ww..", "");print}' $TEMPORARY.2 >> $TEMPORARY.3
+awk '{gsub("^ww..", "");print}' $TEMPORARY.2 >> $TEMPORARY.3
 sort -u -o $TEMPORARY.3
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.3 | tee $TEMPORARY.4
