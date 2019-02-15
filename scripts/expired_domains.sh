@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.4.4
+# v1.4.5
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -40,8 +40,8 @@ for ips in `cat $TEMPORARY`
 do
     hostname=$(host ${ips})
     if [[ "${hostname}" =~ "NXDOMAIN" ]]
-        then
-            echo "${hostname}" | awk '{ print $2 }' >> $TEMPORARY.2
+    then
+            echo "$ips" >> $TEMPORARY.2
     else
             echo "Test"
     fi
