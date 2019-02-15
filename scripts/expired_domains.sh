@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.4.2
+# v1.4.3
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -60,7 +60,7 @@ do
     status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
     if [ $status_code -ne "200" ]
     then
-        echo  "$ips $status_code" >> $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+        echo  "$ips $status_code" > $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
     else
         echo "Test"
     fi
