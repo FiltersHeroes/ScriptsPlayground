@@ -15,5 +15,5 @@ rm -r ./adblock.txt
 rm -r ./adblock_ublock.txt
 rm -r ./hostfile_MajkiIT.txt
 git add --all
-git commit -m "Check [ci skip]"
+git commit -m "Check [ci skip]" -m "@MajkiIT"
 git push https://PolishJarvis:${GIT_TOKEN}@github.com/PolishFiltersTeam/ExpiredDomainsFilterListsPlayground.git HEAD:master > /dev/null 2>&1
