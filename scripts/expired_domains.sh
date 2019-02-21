@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.4.5
+# v1.4.6
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -36,6 +36,7 @@ sed -i "s|\?||" $TEMPORARY
 sed -i "s/[$].*//" $TEMPORARY
 sort -u -o $TEMPORARY $TEMPORARY
 
+
 for ips in `cat $TEMPORARY`
 do
     hostname=$(host ${ips})
@@ -47,27 +48,28 @@ do
     fi
 done
 
-awk '{gsub("^www.\\.", "");print}' $TEMPORARY.2 >> $TEMPORARY.3
-sort -u -o $TEMPORARY.3 $TEMPORARY.3
+sed -i "s/^www[0-9]\.//" $TEMPORARY.2
+sed -i "s/^www\.//" $TEMPORARY.2
+sort -u -o $TEMPORARY.2 $TEMPORARY.2
 
-$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.3 | tee $TEMPORARY.4
-sed '/Expired/!d' $TEMPORARY.4 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
+sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 
-sed '/Unknown/!d' $TEMPORARY.4 | cut -d' ' -f1 >> $TEMPORARY.5
+sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
-for ips in `cat $TEMPORARY.5`
+for ips in `cat $TEMPORARY.4`
 do
     status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
     if [ $status_code -ne "200" ]
     then
-        echo  "$ips $status_code" >> $TEMPORARY.6
+        echo  "$ips $status_code" >> $TEMPORARY.5
     else
         echo "Test"
     fi
 done
 
 touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
-mv $TEMPORARY.6 $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+mv $TEMPORARY.5 $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
