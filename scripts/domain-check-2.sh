@@ -293,8 +293,8 @@ tolower()
 check_domain_status()
 {
     local REGISTRAR=""
-    # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 5 sec
-    sleep 5
+    # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 10 sec
+    sleep 10
     # Save the domain since set will trip up the ordering
     DOMAIN=${1}
     TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($NF);}')
