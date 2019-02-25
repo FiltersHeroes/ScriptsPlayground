@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.5
+# v1.5.1
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -55,7 +55,7 @@ sort -u -o $TEMPORARY.2 $TEMPORARY.2
 # Zamieniamy subdomeny na domeny (alpha)
 # https://ubuntuforums.org/showthread.php?t=873034&s=99fb8190182be62fbf8f81352b2fa4fa&p=5477397#post5477397
 awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.2 >> $TEMPORARY.3
-
+sort -u -o $TEMPORARY.3 $TEMPORARY.3
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.3 | tee $TEMPORARY.4
 sed '/Expired/!d' $TEMPORARY.4 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
