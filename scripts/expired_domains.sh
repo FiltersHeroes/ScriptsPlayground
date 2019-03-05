@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6
+# v1.6.1
 
 for i in "$@"; do
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
@@ -53,10 +53,13 @@ sed -i "s/^www\.//" $TEMPORARY.2
 sort -u -o $TEMPORARY.2 $TEMPORARY.2
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
-sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 > $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+
+rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 
 sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
+rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 
 for ips in `cat $TEMPORARY.4`
