@@ -103,7 +103,7 @@ done
 
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
-rm -rf $MAIN_PATH/*.temp.*
+rm -rf $TEMPORARY.*
 rm -rf $TEMPORARY
 
 done
