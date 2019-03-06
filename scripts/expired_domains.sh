@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# v1.6.1
+# v1.6.2
 
 for i in "$@"; do
+
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
 
 pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' $i)
@@ -16,6 +17,9 @@ MAIN_PATH=$(dirname "$0")/..
 
 FILTERLIST=$(basename $i .txt)
 TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
+
+rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 
 echo $pageComma >> $TEMPORARY
 echo $pagePipe >> $TEMPORARY
@@ -54,12 +58,11 @@ sort -u -o $TEMPORARY.2 $TEMPORARY.2
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
 
-rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+
 sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 
 sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
-rm -rf $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 
 for ips in `cat $TEMPORARY.4`
@@ -100,6 +103,6 @@ done
 
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
-rm -rf $MAIN_PATH/*.temp
+rm -rf $MAIN_PATH/*.temp.*
 
 done
