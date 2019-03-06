@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6.2
+# v1.6.3
 
 for i in "$@"; do
 
@@ -68,7 +68,7 @@ touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 for ips in `cat $TEMPORARY.4`
 do
     status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
-    if [ $status_code -e "000" ]
+    if [ $status_code -eq "000" ]
     then
         echo  "$ips" >> $TEMPORARY.5
     elif [ $status_code -ne "200" ] && [ $status_code -ne "000" ]
@@ -104,5 +104,6 @@ done
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 rm -rf $MAIN_PATH/*.temp.*
+rm -rf $TEMPORARY
 
 done
