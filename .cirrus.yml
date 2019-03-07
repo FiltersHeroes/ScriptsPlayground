@@ -2,4 +2,7 @@ container:
   image: hawkeye116477/pft2:latest
 
 test_task:
-  script: echo 'test'
+  timeout_in: 90m
+  environment:
+    GIT_TOKEN: ENCRYPTED[f8ae98205e77dffecf5ef0148223d2ab6f5d9dd3175a4db402d000d0aed30e5d099b4a75993fea1a76defd179fea6684]
+  script: "./scripts/CI_LETS_DO_THIS.sh"
