@@ -1,6 +1,8 @@
+image:
+  name: hawkeye116477/pft2:latest
 before_script:
-  - apt-get update -qq && apt-get install -y -qq git sudo openssh-client ca-certificates parallel net-tools gnupg curl wget pcregrep whois host
   - git config --global user.email "PolishJarvis@int.pl"
   - git config --global user.name "PolishJarvis"
 job:
   script: "./scripts/CI_LETS_DO_THIS.sh"
+  parallel: 50
