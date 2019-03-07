@@ -1,0 +1,5 @@
+container:
+  image: hawkeye116477/pft2:latest
+
+test_task:
+  script: echo 'test'
