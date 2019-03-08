@@ -3,7 +3,7 @@ image:
 
 
 stages:
-  - test
+  - check
   - deploy
 
 before_script:
