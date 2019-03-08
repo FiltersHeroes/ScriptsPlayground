@@ -8,6 +8,4 @@ wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/
 
 ./scripts/expired_domains.sh $sciezka/../PPB_uBlock_AdGuard.txt
 rm -r ./PPB_uBlock_AdGuard.txt
-git add --all
-git commit -m "Check [ci skip]"
-git push https://PolishJarvis:${GIT_TOKEN}@github.com/PolishFiltersTeam/ExpiredDomainsFilterListsPlayground.git HEAD:master > /dev/null 2>&1
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6.3
+# v1.6.4
 
 for i in "$@"; do
 
@@ -105,5 +105,13 @@ sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 rm -rf $TEMPORARY.*
 rm -rf $TEMPORARY
+
+if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
+  rm $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+fi
+
+if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
+  rm -r $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+fi
 
 done

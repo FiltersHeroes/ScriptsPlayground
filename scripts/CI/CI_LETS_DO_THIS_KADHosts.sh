@@ -2,9 +2,11 @@
 # Sciezka to miejsce, w którym znajduje się skrypt
 sciezka=$(dirname "$0")
 
-cd $sciezka/..
+cd $sciezka/../..
 
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
 
-./scripts/expired_domains.sh $sciezka/../hostsplus.txt
-rm -r ./hostsplus.txt
+mv hostsplus.txt KADhosts.txt
+
+./scripts/expired_domains.sh ./KADhosts.txt
+rm -r ./KADhosts.txt

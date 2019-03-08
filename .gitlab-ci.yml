@@ -1,7 +1,6 @@
 image:
   name: hawkeye116477/pft2:latest
 
-
 stages:
   - check
   - deploy
@@ -10,20 +9,192 @@ before_script:
   - git config --global user.email "PolishJarvis@int.pl"
   - git config --global user.name "PolishJarvis"
 
-kad:
+KAD:
   stage: check
-  script: "./scripts/CI_LETS_DO_THIS_kad.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS_KAD.sh"
   artifacts:
     paths:
-      - expired-domains/
+      - expired-domains/KAD-expired.txt
+      - expired-domains/KAD-unknown.txt
 
-kadhosts:
+KADhosts:
   stage: check
-  script: "./scripts/CI_LETS_DO_THIS_kadHosts.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS_KADHosts.sh"
   artifacts:
     paths:
-      - expired-domains/
+      - expired-domains/KADHosts-expired.txt
+      - expired-domains/KADHosts-unknown.txt
+
+PAF_arrows:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_arrows.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_arrows-expired.txt
+      - expired-domains/PAF_arrows-unknown.txt
+
+PAF_backgrounds_self-advertising:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_backgrounds_self-advertising-expired.txt
+      - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
+
+PAF_backgrounds_self-advertising_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
+
+PAF_contact_feedback_widgets:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_contact_feedback_widgets.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_contact_feedback_widgets-expired.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown.txt
+
+PAF_newsletters:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_newsletters-expired.txt
+      - expired-domains/PAF_newsletters-unknown.txt
+
+PAF_newsletters_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_newsletters_supp-expired.txt
+      - expired-domains/PAF_newsletters_supp-unknown.txt
+
+PAF_other_widgets:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_other_widgets-expired.txt
+      - expired-domains/PAF_other_widgets-unknown.txt
+
+PAF_other_widgets_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_widgety_nie_dla_ff-expired.txt
+      - expired-domains/PAF_widgety_nie_dla_ff-unknown.txt
+      - expired-domains/PAF_widgety_AG-expired.txt
+      - expired-domains/PAF_widgety_AG-unknown.txt
+      - expired-domains/PAF_widgety_bez_html-expired.txt
+      - expired-domains/PAF_widgety_bez_html-unknown.txt
+      - expired-domains/PAF_widgety_suplement-expired.txt
+      - expired-domains/PAF_widgety_suplement-unknown.txt
+
+PAF_pop-ups:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_pop-ups-expired.txt
+      - expired-domains/PAF_pop-ups-unknown.txt
+
+PAF_pop-ups_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_pop-ups_supp-expired.txt
+      - expired-domains/PAF_pop-ups_supp-unknown.txt
+
+PAF_push:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_push.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_push-expired.txt
+      - expired-domains/PAF_push-unknown.txt
+
+PAF_push_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_push_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_push_supp-expired.txt
+      - expired-domains/PAF_push_supp-unknown.txt
+
+PAF_scrolling_videos:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_scrolling_videos-expired.txt
+      - expired-domains/PAF_scrolling_videos-unknown.txt
+
+PAF_scrolling_videos_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_scroll_film_suplement-expired.txt
+      - expired-domains/PAF_scroll_film_suplement-unknown.txt
+      - expired-domains/PAF_scroll_film_AG-expired.txt
+      - expired-domains/PAF_scroll_film_AG-unknown.txt
+
+PAF_tagged_internal_links:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_tagged_internal_links.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_tagged_internal_links-expired.txt
+      - expired-domains/PAF_tagged_internal_links-unknown.txt
+
+RSS:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_RSS.sh"
+  artifacts:
+    paths:
+      - expired-domains/polish_rss_filters-expired.txt
+      - expired-domains/polish_rss_filters-unknown.txt
+      - expired-domains/polish_rss_filters_supp-expired.txt
+      - expired-domains/polish_rss_filters_supp-unknown.txt
+
+Social:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Social.sh"
+  artifacts:
+    paths:
+      - expired-domains/adblock_social_list-expired.txt
+      - expired-domains/adblock_social_list-unknown.txt
+
+Social_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Social_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/social_filters_uB_AG-expired.txt
+      - expired-domains/social_filters_uB_AG-unknown.txt
+
+Cookies:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
+  artifacts:
+    paths:
+      - expired-domains/adblock_cookies-expired.txt
+      - expired-domains/adblock_cookies-unknown.txt
+
+Cookies_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
+  artifacts:
+    paths:
+      - expired-domains/cookies_uB_AG-expired.txt
+      - expired-domains/cookies_uB_AG-unknown.txt
 
 deploy:
   stage: deploy
-  script: "./scripts/push.sh"
+  script: "./scripts/CI/push.sh"
