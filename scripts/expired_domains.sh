@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6.4
+# v1.6.5
 
 for i in "$@"; do
 
@@ -111,7 +111,7 @@ if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
 fi
 
 if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
-  rm -r $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+  rm $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 fi
 
 done

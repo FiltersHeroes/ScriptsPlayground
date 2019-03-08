@@ -61,12 +61,12 @@ PAF:
 PAF_supp:
   stage: check
   script:
-    - "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising_supp.sh"
     - "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters_supp.sh"
-    - "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets_supp.sh"
     - "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups_supp.sh"
     - "./scripts/CI/CI_LETS_DO_THIS_PAF_push_supp.sh"
-    - "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos_supp.sh"
   artifacts:
     paths:
       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
@@ -126,7 +126,7 @@ Cookies:
 
 Cookies_supp:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies_supp.sh"
   artifacts:
     paths:
       - expired-domains/cookies_uB_AG-expired.txt
