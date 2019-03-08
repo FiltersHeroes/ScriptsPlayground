@@ -1,9 +1,29 @@
 image:
   name: hawkeye116477/pft2:latest
+
+
+stages:
+  - test
+  - deploy
+
 before_script:
   - git config --global user.email "PolishJarvis@int.pl"
   - git config --global user.name "PolishJarvis"
-job:
-  script: echo 'job'
-test:
-  script: echo 'test'
+
+kad:
+  stage: check
+  script: "./scripts/CI_LETS_DO_THIS_kad.sh"
+  artifacts:
+    paths:
+      - expired-domains/
+
+kadhosts:
+  stage: check
+  script: "./scripts/CI_LETS_DO_THIS_kadHosts.sh"
+  artifacts:
+    paths:
+      - expired-domains/
+
+deploy:
+  stage: deploy
+  script: "./scripts/push.sh"
