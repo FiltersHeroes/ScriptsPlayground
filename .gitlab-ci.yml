@@ -25,67 +25,54 @@ KADhosts:
       - expired-domains/KADHosts-expired.txt
       - expired-domains/KADHosts-unknown.txt
 
-PAF_arrows:
+PAF:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_arrows.sh"
+  script:
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_arrows.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_contact_feedback_widgets.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_push.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_tagged_internal_links.sh"
   artifacts:
     paths:
       - expired-domains/PAF_arrows-expired.txt
       - expired-domains/PAF_arrows-unknown.txt
-
-PAF_backgrounds_self-advertising:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_backgrounds_self-advertising-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
+      - expired-domains/PAF_contact_feedback_widgets-expired.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown.txt
+      - expired-domains/PAF_newsletters-expired.txt
+      - expired-domains/PAF_newsletters-unknown.txt
+      - expired-domains/PAF_other_widgets-expired.txt
+      - expired-domains/PAF_other_widgets-unknown.txt
+      - expired-domains/PAF_pop-ups-expired.txt
+      - expired-domains/PAF_pop-ups-unknown.txt
+      - expired-domains/PAF_push-expired.txt
+      - expired-domains/PAF_push-unknown.txt
+      - expired-domains/PAF_scrolling_videos-expired.txt
+      - expired-domains/PAF_scrolling_videos-unknown.txt
+      - expired-domains/PAF_tagged_internal_links-expired.txt
+      - expired-domains/PAF_tagged_internal_links-unknown.txt
 
-PAF_backgrounds_self-advertising_supp:
+PAF_supp:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+  script:
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_backgrounds_self-advertising.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters_supp.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups_supp.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_push_supp.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
   artifacts:
     paths:
       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
-
-PAF_contact_feedback_widgets:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_contact_feedback_widgets.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_contact_feedback_widgets-expired.txt
-      - expired-domains/PAF_contact_feedback_widgets-unknown.txt
-
-PAF_newsletters:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_newsletters-expired.txt
-      - expired-domains/PAF_newsletters-unknown.txt
-
-PAF_newsletters_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_newsletters_supp.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_newsletters_supp-expired.txt
       - expired-domains/PAF_newsletters_supp-unknown.txt
-
-PAF_other_widgets:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_other_widgets-expired.txt
-      - expired-domains/PAF_other_widgets-unknown.txt
-
-PAF_other_widgets_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_other_widgets.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_widgety_nie_dla_ff-expired.txt
       - expired-domains/PAF_widgety_nie_dla_ff-unknown.txt
       - expired-domains/PAF_widgety_AG-expired.txt
@@ -94,64 +81,14 @@ PAF_other_widgets_supp:
       - expired-domains/PAF_widgety_bez_html-unknown.txt
       - expired-domains/PAF_widgety_suplement-expired.txt
       - expired-domains/PAF_widgety_suplement-unknown.txt
-
-PAF_pop-ups:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_pop-ups-expired.txt
-      - expired-domains/PAF_pop-ups-unknown.txt
-
-PAF_pop-ups_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_pop-ups_supp.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_pop-ups_supp-expired.txt
       - expired-domains/PAF_pop-ups_supp-unknown.txt
-
-PAF_push:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_push.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_push-expired.txt
-      - expired-domains/PAF_push-unknown.txt
-
-PAF_push_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_push_supp.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_push_supp-expired.txt
       - expired-domains/PAF_push_supp-unknown.txt
-
-PAF_scrolling_videos:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_scrolling_videos-expired.txt
-      - expired-domains/PAF_scrolling_videos-unknown.txt
-
-PAF_scrolling_videos_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_scrolling_videos.sh"
-  artifacts:
-    paths:
       - expired-domains/PAF_scroll_film_suplement-expired.txt
       - expired-domains/PAF_scroll_film_suplement-unknown.txt
       - expired-domains/PAF_scroll_film_AG-expired.txt
       - expired-domains/PAF_scroll_film_AG-unknown.txt
-
-PAF_tagged_internal_links:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PAF_tagged_internal_links.sh"
-  artifacts:
-    paths:
-      - expired-domains/PAF_tagged_internal_links-expired.txt
-      - expired-domains/PAF_tagged_internal_links-unknown.txt
 
 RSS:
   stage: check
