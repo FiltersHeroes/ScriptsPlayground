@@ -4,4 +4,6 @@ before_script:
   - git config --global user.email "PolishJarvis@int.pl"
   - git config --global user.name "PolishJarvis"
 job:
-  script: "./scripts/CI_LETS_DO_THIS_kad.sh"
+  script: echo 'job'
+test:
+  script: echo 'test'
