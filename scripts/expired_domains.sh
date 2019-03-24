@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6.6
+# v1.7
 
 for i in "$@"; do
 
@@ -66,13 +66,17 @@ sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 for domain in `cat $TEMPORARY.4`
 do
     notRegistered=$(whois ${domain} | grep "after release from the queue, available for registration")
+    reserved=$(whois ${domain} | grep "is queued up for registration")
     if [ ! -z "$notRegistered" ]
     then
         echo $notRegistered
         echo "$domain" >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-    else
+    elif [ -z "$reserved" ]
+    then
         echo "Test"
         echo "$domain" >> $TEMPORARY.5
+    else
+        echo $reserved
     fi
 done
 
@@ -103,13 +107,17 @@ sed '/Unknown/!d' $TEMPORARY.8 | cut -d' ' -f1 >> $TEMPORARY.9
 for domain in `cat $TEMPORARY.9`
 do
     notRegistered=$(whois ${domain} | grep "after release from the queue, available for registration")
+    reserved=$(whois ${domain} | grep "is queued up for registration")
     if [ ! -z "$notRegistered" ]
     then
         echo $notRegistered
         echo "$domain" >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-    else
+    elif [ -z "$reserved" ]
+    then
         echo "Test"
         echo "$domain" >> $TEMPORARY.10
+    else
+        echo $reserved
     fi
 done
 
