@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.6.5
+# v1.6.6
 
 for i in "$@"; do
 
@@ -63,14 +63,25 @@ sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FI
 
 sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
-touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
+for domain in `cat $TEMPORARY.4`
+do
+    notRegistered=$(whois ${domain} | grep "after release from the queue, available for registration")
+    if [ ! -z "$notRegistered" ]
+    then
+        echo $notRegistered
+        echo "$domain" >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+    else
+        echo "Test"
+        echo "$domain" >> $TEMPORARY.5
+    fi
+done
 
-for ips in `cat $TEMPORARY.4`
+for ips in `cat $TEMPORARY.5`
 do
     status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
     if [ $status_code -eq "000" ]
     then
-        echo  "$ips" >> $TEMPORARY.5
+        echo  "$ips" >> $TEMPORARY.6
     elif [ $status_code -ne "200" ] && [ $status_code -ne "000" ]
     then
         echo  "$ips $status_code" >> $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
@@ -81,15 +92,28 @@ done
 
 # Zamieniamy subdomeny na domeny (alpha)
 # https://ubuntuforums.org/showthread.php?t=873034&s=99fb8190182be62fbf8f81352b2fa4fa&p=5477397#post5477397
-awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.5 >> $TEMPORARY.6
-sort -u -o $TEMPORARY.6 $TEMPORARY.6
+awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.6 >> $TEMPORARY.7
+sort -u -o $TEMPORARY.7 $TEMPORARY.7
 
-$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.6 | tee $TEMPORARY.7
-sed '/Expired/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+$MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.7 | tee $TEMPORARY.8
+sed '/Expired/!d' $TEMPORARY.8 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 
-sed '/Unknown/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $TEMPORARY.8
+sed '/Unknown/!d' $TEMPORARY.8 | cut -d' ' -f1 >> $TEMPORARY.9
 
-for ips in `cat $TEMPORARY.8`
+for domain in `cat $TEMPORARY.9`
+do
+    notRegistered=$(whois ${domain} | grep "after release from the queue, available for registration")
+    if [ ! -z "$notRegistered" ]
+    then
+        echo $notRegistered
+        echo "$domain" >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+    else
+        echo "Test"
+        echo "$domain" >> $TEMPORARY.10
+    fi
+done
+
+for ips in `cat $TEMPORARY.10`
 do
     status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
     if [ $status_code -ne "200" ]
