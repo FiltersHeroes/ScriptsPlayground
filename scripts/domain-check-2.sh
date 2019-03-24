@@ -451,7 +451,7 @@ check_domain_status()
     # If the Registrar is NULL, then we didn't get any data
     if [ "${REGISTRAR}" = "" ] && [ ! -z "$book_blocked" ]
     then
-        prints "$DOMAIN" "B_blocked" "Unknown" "Unknown" "Unknown"
+        prints "$DOMAIN" "B_blocked" "Un" "Un" "Un"
         return
     elif [ "${REGISTRAR}" = "" ] && [ -z "$book_blocked" ];
     then
