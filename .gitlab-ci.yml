@@ -19,11 +19,11 @@ KAD:
 
 KADhosts:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_KADHosts.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS_KADhosts.sh"
   artifacts:
     paths:
-      - expired-domains/KADHosts-expired.txt
-      - expired-domains/KADHosts-unknown.txt
+      - expired-domains/KADhosts-expired.txt
+      - expired-domains/KADhosts-unknown.txt
 
 PAF:
   stage: check

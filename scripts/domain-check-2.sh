@@ -446,8 +446,14 @@ check_domain_status()
        REGISTRAR=$(cat ${WHOIS_TMP} | ${AWK} '/Registrar:/ && $0 != "" {print $2;}')
     fi
 
+    book_blocked=`cat ${WHOIS_TMP} | ${GREP} "after release from the queue, available for registration"`
+    
     # If the Registrar is NULL, then we didn't get any data
-    if [ "${REGISTRAR}" = "" ]
+    if [ "${REGISTRAR}" = "" ] && [ ! -z "$book_blocked" ]
+    then
+        prints "$DOMAIN" "B_blocked" "Unknown" "Unknown" "Unknown"
+        return
+    elif [ "${REGISTRAR}" = "" ] && [ -z "$book_blocked" ];
     then
         prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "Unknown"
         return
