@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.7.2
+# v1.7.3
 
 for i in "$@"; do
 
@@ -60,7 +60,7 @@ $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
 
 
 sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-
+sed '/B_blocked/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
 for ips in `cat $TEMPORARY.4`
@@ -84,7 +84,7 @@ sort -u -o $TEMPORARY.6 $TEMPORARY.6
 
 $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.6 | tee $TEMPORARY.7
 sed '/Expired/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-
+sed '/B_blocked/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Unknown/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $TEMPORARY.8
 
 for ips in `cat $TEMPORARY.8`
