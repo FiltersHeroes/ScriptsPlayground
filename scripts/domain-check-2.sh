@@ -313,7 +313,7 @@ check_domain_status()
 {
     local REGISTRAR=""
     # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
-    sleep 3
+    sleep 1
     # Save the domain since set will trip up the ordering
     DOMAIN=${1}
     TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($NF);}')
@@ -446,14 +446,8 @@ check_domain_status()
        REGISTRAR=$(cat ${WHOIS_TMP} | ${AWK} '/Registrar:/ && $0 != "" {print $2;}')
     fi
 
-    book_blocked=`cat ${WHOIS_TMP} | ${GREP} "after release from the queue, available for registration"`
-    
     # If the Registrar is NULL, then we didn't get any data
-    if [ "${REGISTRAR}" = "" ] && [ ! -z "$book_blocked" ]
-    then
-        prints "$DOMAIN" "B_blocked" "Un" "Un" "Un"
-        return
-    elif [ "${REGISTRAR}" = "" ] && [ -z "$book_blocked" ];
+    if [ "${REGISTRAR}" = "" ]
     then
         prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "Unknown"
         return
@@ -968,7 +962,7 @@ prints()
     if [ "${QUIET}" != "TRUE" ]
     then
             MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
-            printf "%-35s %-46s %-8s %-11s %-5s\n" "$1" "D" "$2" "$MIN_DATE" "$4"
+            printf "%-35s %-46s %-8s %-11s %-5s\n" "$1" "$5" "$2" "$MIN_DATE" "$4"
     fi
 }
 

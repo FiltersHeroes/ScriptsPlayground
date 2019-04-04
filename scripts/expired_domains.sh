@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# v1.7.3
+# v1.7.4
+
+# MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
+MAIN_PATH=$(dirname "$0")/..
+
+cd $MAIN_PATH
+patch -Np1 -i $MAIN_PATH/scripts/improve.patch
 
 for i in "$@"; do
 
@@ -11,9 +17,6 @@ pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' $i)
 pageDoublePipe=$(pcregrep -o1 '^.*?\|\|(.*)' $i)
 
 hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' $i)
-
-# MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
-MAIN_PATH=$(dirname "$0")/..
 
 FILTERLIST=$(basename $i .txt)
 TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
