@@ -357,7 +357,7 @@ check_domain_status()
     then
        ${WHOIS} -h whois.dns.pl "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
     fi
-    if [ "${TLDTYPE}" == "is" ];
+    if [ "${TLDTYPE}" == "is" ]; # added by @hawkeye116477 20190408
     then
        ${WHOIS} -h whois.isnic.is "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
     fi
@@ -454,7 +454,7 @@ check_domain_status()
     elif [ "${TLDTYPE}" == "mx" ];
     then
        REGISTRAR=$(cat ${WHOIS_TMP} | ${AWK} '/Registrar:/ && $0 != "" {print $2;}')
-    elif [ "${TLDTYPE}" == "is" ];
+    elif [ "${TLDTYPE}" == "is" ]; # added by @hawkeye116477 20190408
     then
        REGISTRAR=$(cat ${WHOIS_TMP} | ${AWK} '/registrant:/ && $0 != "" {print $2;}')
     fi
