@@ -11,7 +11,7 @@
 # Revision History:
 #
 #  Version 2.28
-#   Added support for .systems domain -- https://github.com/hawkeye116477
+#   Added support for .systems domain and fixed status when expiration date isn't detected -- https://github.com/hawkeye116477
 #
 #  Version 2.27
 #   Added support for .is/.cloud domains -- https://github.com/hawkeye116477
@@ -949,7 +949,7 @@ check_domain_status()
     DOMAINJULIAN=$(date2julian ${MONTH} ${1#0} ${3})
     DOMAINDIFF=$(date_diff ${NOWJULIAN} ${DOMAINJULIAN})
 
-    if [ ${DOMAINDIFF} -lt 0 ]
+    if [ ${DOMAINDIFF} -lt 0 ] && [ $DOMAINJULIAN -gt 0 ]
     then
           if [ "${ALARM}" == "TRUE" ]
           then
@@ -959,7 +959,7 @@ check_domain_status()
 
            prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
 
-    elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ]
+    elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ $DOMAINJULIAN -gt 0 ]
     then
            if [ "${ALARM}" == "TRUE" ]
            then
@@ -967,9 +967,12 @@ check_domain_status()
                     | ${MAIL} -s "Domain ${DOMAIN} will expire in ${WARNDAYS}-days or less" ${ADMIN}
             fi
             prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
-     else
-            prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
-     fi
+    elif [ $DOMAINJULIAN -eq 0 ]
+    then
+        prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
+    else
+        prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
+    fi
 }
 
 ####################################################
