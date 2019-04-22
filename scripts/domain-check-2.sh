@@ -12,6 +12,7 @@
 #
 #  Version 2.28
 #   Added support for .systems domain and fixed status when expiration date isn't detected -- https://github.com/hawkeye116477
+#   Fixed status when expiration date isn't detected -- https://github.com/hawkeye116477
 #
 #  Version 2.27
 #   Added support for .is/.cloud domains -- https://github.com/hawkeye116477
@@ -969,7 +970,7 @@ check_domain_status()
             prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
     elif [ ${DOMAINJULIAN} -eq 0 ]
     then
-        prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
+        prints "${DOMAIN}" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
     else
         prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
     fi
