@@ -132,30 +132,6 @@ Cookies_supp:
       - expired-domains/cookies_uB_AG-expired.txt
       - expired-domains/cookies_uB_AG-unknown.txt
 
-PolishAds:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PolishAds.sh"
-  artifacts:
-    paths:
-      - expired-domains/adblock-expired.txt
-      - expired-domains/adblock-unknown.txt
-
-PolishAds_supp:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PolishAds_supp.sh"
-  artifacts:
-    paths:
-      - expired-domains/adblock_ublock-expired.txt
-      - expired-domains/adblock_ublock-unknown.txt
-
-PolishAdsHosts:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PolishAdsHosts.sh"
-  artifacts:
-    paths:
-      - expired-domains/PolishAdsHosts-expired.txt
-      - expired-domains/PolishAdsHosts-unknown.txt
-
 deploy:
   stage: deploy
   script: "./scripts/CI/push.sh"
