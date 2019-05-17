@@ -1,5 +1,5 @@
 #!/bin/bash
-echo which python
+which python
 # SCRIPT_PATH to miejsce, w którym znajduje się skrypt
 SCRIPT_PATH=$(dirname "$0")
 
