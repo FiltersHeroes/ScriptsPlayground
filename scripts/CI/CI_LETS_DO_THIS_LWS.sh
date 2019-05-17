@@ -9,11 +9,11 @@ cd $MAIN_PATH
 LWS=$SCRIPT_PATH/LWS.temp
 python3 $SCRIPT_PATH/../findSuspiciousDomains_LWS.py >> $LWS
 sed -i -r "s|http(s)?:\/\/||" $LWS
+sed -i -r "s/^www[0-9]\.//" $LWS
+sed -i -r "s/^www\.//" $LWS
 sed -i -r "s|^|\|\||" $LWS
-sed -i "s|[/]||" $LWS
-sed -i 's|$|\^|' $LWS
-sed -i "s/^www[0-9]\.//" $LWS
-sed -i "s/^www\.//" $LWS
+sed -i -r "s|\/$||" $LWS
+sed -i -r 's|$|\^|' $LWS
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/sections/podejrzane_inne_oszustwa.txt
 sort -u -o ./podejrzane_inne_oszustwa.txt ./podejrzane_inne_oszustwa.txt
 sort -u -o $LWS $LWS
@@ -25,6 +25,11 @@ mv $LWS.2 $SCRIPT_PATH/LWS_temp.txt
 
 EXPIRED=$MAIN_PATH/expired-domains/LWS_temp-expired.txt
 UNKNOWN=$MAIN_PATH/expired-domains/LWS_temp-unknown.txt
+
+if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN"]; then
+    sed -i "s|[|][|]||" $SCRIPT_PATH/LWS_temp.txt
+    sed -i 's/[/\^]//g' $SCRIPT_PATH/LWS_temp.txt
+fi
 
 if [ -f "$EXPIRED" ]; then
     comm -2 -3 $SCRIPT_PATH/LWS_temp.txt $EXPIRED >> $MAIN_PATH/LWS/podejrzane_LWS.txt
