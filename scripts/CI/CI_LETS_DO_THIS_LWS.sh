@@ -1,4 +1,5 @@
 #!/bin/bash
+echo which python
 # SCRIPT_PATH to miejsce, w którym znajduje się skrypt
 SCRIPT_PATH=$(dirname "$0")
 
@@ -45,4 +46,4 @@ MAIN_PATH=$(dirname "$0")/../..
 # git add $MAIN_PATH/LWS/podejrzane_LWS.txt
 # git commit -m "Check [ci skip]"
 # git push https://PolishJarvis:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
-which python
+
