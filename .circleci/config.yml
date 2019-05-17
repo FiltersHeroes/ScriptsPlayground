@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: hawkeye116477/pft3:latest
+    steps:
+    - checkout
+    - run: ./scripts/CI/CI_LETS_DO_THIS_LWS.sh
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build:
+          context: org-global
