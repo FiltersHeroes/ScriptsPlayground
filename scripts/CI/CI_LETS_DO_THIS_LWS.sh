@@ -18,6 +18,8 @@ sed -i -r 's|$|\^|' $LWS
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/sections/podejrzane_inne_oszustwa.txt
 sed -i -r "s/^[|][|]www[0-9]\.//" ./podejrzane_inne_oszustwa.txt
 sed -i -r "s/^[|][|]www\.//" ./podejrzane_inne_oszustwa.txt
+sed -i -r "s/^[|][|]//" ./podejrzane_inne_oszustwa.txt
+sed -i -r "s|^|\|\||" ./podejrzane_inne_oszustwa.txt
 sort -u -o ./podejrzane_inne_oszustwa.txt ./podejrzane_inne_oszustwa.txt
 sort -u -o $LWS $LWS
 comm -1 -3 ./podejrzane_inne_oszustwa.txt $LWS >> $LWS.2
