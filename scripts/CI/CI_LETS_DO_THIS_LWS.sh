@@ -22,6 +22,9 @@ comm -1 -3 ./podejrzane_inne_oszustwa.txt $LWS >> $LWS.2
 rm -r $LWS
 rm -r ./podejrzane_inne_oszustwa.txt
 mv $LWS.2 $SCRIPT_PATH/LWS_temp.txt
+
+patch -Np1 -i ./scripts/no_sc.patch
+
 ./scripts/expired_domains.sh $SCRIPT_PATH/LWS_temp.txt
 
 EXPIRED=$MAIN_PATH/expired-domains/LWS_temp-expired.txt
