@@ -7,7 +7,7 @@ MAIN_PATH=$(dirname "$0")/../..
 
 cd $MAIN_PATH
 LWS=$SCRIPT_PATH/LWS.temp
-python $SCRIPT_PATH/../findSuspiciousDomains_LWS.py >> $LWS
+python $SCRIPT_PATH/../findSuspiciousDomains_LWS.py
 sed -i -r "s|http(s)?:\/\/||" $LWS
 sed -i -r "s|^|\|\||" $LWS
 sed -i "s|[/]||" $LWS
@@ -23,7 +23,7 @@ mv $LWS.2 $SCRIPT_PATH/LWS_temp.txt
 
 EXPIRED=$MAIN_PATH/expired-domains/LWS_temp-expired.txt
 UNKNOWN=$MAIN_PATH/expired-domains/LWS_temp-unknown.txt
-if [ -f $EXPIRED ]; then
+if [ -f "$EXPIRED" ]; then
     comm -2 -3 $SCRIPT_PATH/LWS_temp.txt $EXPIRED >> $MAIN_PATH/LWS/podejrzane_LWS.txt
     rm -r $SCRIPT_PATH/LWS_temp.txt
 else
