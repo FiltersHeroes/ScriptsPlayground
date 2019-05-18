@@ -1,5 +1,5 @@
 diff --git a/scripts/domain-check-2.sh b/scripts/domain-check-2.sh
-index f50e85d..100fb3a 100755
+index f50e85d..7881e0c 100755
 --- a/scripts/domain-check-2.sh
 +++ b/scripts/domain-check-2.sh
 @@ -375,7 +375,7 @@ check_domain_status()
@@ -31,7 +31,7 @@ index f50e85d..100fb3a 100755
      DOMAINJULIAN=$(date2julian ${MONTH} ${1#0} ${3})
      DOMAINDIFF=$(date_diff ${NOWJULIAN} ${DOMAINJULIAN})
  
-+    suspended=`cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding"
++    suspended=`cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding"`
 +
      if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ]
      then

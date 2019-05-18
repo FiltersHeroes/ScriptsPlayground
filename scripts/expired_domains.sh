@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.7.4
+# v1.7.5
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -64,6 +64,7 @@ $MAIN_PATH/scripts/domain-check-2.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
 
 sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/B_blocked/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sed '/Suspended/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Unknown/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
 for ips in `cat $TEMPORARY.4`
