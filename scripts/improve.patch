@@ -1,8 +1,8 @@
 diff --git a/scripts/domain-check-2.sh b/scripts/domain-check-2.sh
-index d25e556..b6bdef0 100755
+index f50e85d..100fb3a 100755
 --- a/scripts/domain-check-2.sh
 +++ b/scripts/domain-check-2.sh
-@@ -313,7 +313,7 @@ check_domain_status()
+@@ -375,7 +375,7 @@ check_domain_status()
  {
      local REGISTRAR=""
      # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
@@ -11,8 +11,8 @@ index d25e556..b6bdef0 100755
      # Save the domain since set will trip up the ordering
      DOMAIN=${1}
      TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($NF);}')
-@@ -446,8 +446,14 @@ check_domain_status()
-        REGISTRAR=$(cat ${WHOIS_TMP} | ${AWK} '/Registrar:/ && $0 != "" {print $2;}')
+@@ -518,8 +518,14 @@ check_domain_status()
+        REGISTRAR=$(${AWK} '/registrant:/ && $0 != "" {print $2;}' ${WHOIS_TMP})
      fi
  
 +    book_blocked=`cat ${WHOIS_TMP} | ${GREP} "after release from the queue, available for registration"`
@@ -27,7 +27,26 @@ index d25e556..b6bdef0 100755
      then
          prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "Unknown"
          return
-@@ -962,7 +968,7 @@ prints()
+@@ -757,6 +763,8 @@ check_domain_status()
+     DOMAINJULIAN=$(date2julian ${MONTH} ${1#0} ${3})
+     DOMAINDIFF=$(date_diff ${NOWJULIAN} ${DOMAINJULIAN})
+ 
++    suspended=`cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding"
++
+     if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ]
+     then
+           if [ "${ALARM}" == "TRUE" ]
+@@ -774,6 +782,9 @@ check_domain_status()
+                     | ${MAIL} -s "Domain ${DOMAIN} will expire in ${WARNDAYS}-days or less" ${ADMIN}
+            fi
+            prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
++    elif [ ! -z "$suspended" ]
++    then
++        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
+     elif [ ${DOMAINJULIAN} -eq 0 ]
+     then
+         prints "${DOMAIN}" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
+@@ -810,7 +821,7 @@ prints()
      if [ "${QUIET}" != "TRUE" ]
      then
              MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
