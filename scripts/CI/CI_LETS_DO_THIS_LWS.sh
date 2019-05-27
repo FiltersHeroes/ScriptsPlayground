@@ -28,6 +28,7 @@ rm -r ./podejrzane_inne_oszustwa.txt
 mv $LWS.2 $SCRIPT_PATH/LWS_temp.txt
 
 patch -Np1 -i ./scripts/no_sc.patch
+patch -Np1 -i ./scripts/improve.patch
 
 ./scripts/expired_domains.sh $SCRIPT_PATH/LWS_temp.txt
 
