@@ -1,13 +1,13 @@
  [Adblock Plus 2.0]
-! Checksum: XOy+Z0L7p/BG9gJMSLvFTA
+! Checksum: OvrdBzAqdpYovDGDrioP6w
 ! Title: Lista testowa
 ! Codename: Test
 ! Description: Lista przeznaczona do testowania skryptu.
-! Last modified: Thu, 06 Jun 2019, 14:45 UTC+02
-! Version: 2019.6.1
+! Last modified: Thu, 06 Jun 2019, 14:48 UTC+02
+! Version: 2019.6.2
 ! Expires: 2 days
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: czw, 06 cze 2019, 14:45 UTC+02
+! Aktualizacja: czw, 06 cze 2019, 14:48 UTC+02
 !
 !
 ! Testy
@@ -16,7 +16,7 @@ haha.pl##test
 hehe.pl##.haha
 inne.pl###test
 jeszczeinne.pl##.haha
-test.pl###nlt_tes
+test.pl###nlt_test
 !
 !
 ! Testy2
