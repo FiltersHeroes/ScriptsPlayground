@@ -1,8 +1,5 @@
 #!/bin/bash
 
-git config --global user.email "PolishJarvis@int.pl"
-git config --global user.name "PolishJarvis"
-
 ost_commit_katalog=$(dirname $(git diff-tree --no-commit-id --name-only -r master))
 ost_commit_plik=$(git diff-tree --no-commit-id --name-only -r master)
 
