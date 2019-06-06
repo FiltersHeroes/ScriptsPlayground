@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.2
+# v2.2.1
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -184,7 +184,6 @@ done
 
 # Wysyłanie zmienionych plików do repozytorium git
 if [ "$CI" = "true" ] ; then
-    CI_USERNAME=$(grep -oP -m 1 '@CIusername \K.*' $CONFIG)
     GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
     git push https://${CI_USERNAME}:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
 elif [ ! "$RTM_MODE" ] ; then
