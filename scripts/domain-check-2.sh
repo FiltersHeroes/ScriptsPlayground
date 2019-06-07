@@ -5,10 +5,13 @@
 #
 # Author: Matty < matty91 at gmail dot com >
 #
-# Current Version: 2.38
-# Last Updated: 05-June-2019
+# Current Version: 2.39
+# Last Updated: 07-June-2019
 #
 # Revision History:
+#
+#  Version 2.39
+#   Added support for .club domain -- https://github.com/hawkeye116477
 #
 #  Version 2.38
 #   Added support for .sk domain -- https://github.com/hawkeye116477
@@ -574,7 +577,7 @@ check_domain_status()
 
     elif [ "${TLDTYPE}" == "jp" ]; # for .jp fixed @hawkeye116477 2019/06/03
     then
-	    tdomdate=`${AWK} '/Expires on/ {print $3}' ${WHOIS_TMP}`
+	    tdomdate=`${AWK} '/\[有効期限\]|\[Expires on\]/ {print $2}' ${WHOIS_TMP} | ${TR} -d " \r"`
         tyear=`echo ${tdomdate} | ${CUT} -d'/' -f1`
         tmon=`echo ${tdomdate} | ${CUT} -d'/' -f2`
         tmonth=$(getmonth_number ${tmon})
@@ -650,7 +653,7 @@ check_domain_status()
     		"${TLDTYPE}" == "top" -o "${TLDTYPE}" == "bid" -o "${TLDTYPE}" == "ng" -o "${TLDTYPE}" == "site" -o \
     		"${TLDTYPE}" == "icu"  -o "${TLDTYPE}" == "cloud" -o "${TLDTYPE}" == "systems" -o \
             "${TLDTYPE}" == "expert" -o "${TLDTYPE}" == "express" -o "${TLDTYPE}" == "ca" -o "${TLDTYPE}" == "space" -o \
-            "${TLDTYPE}" == "fun" -o "${TLDTYPE}" == "museum" -o "${TLDTYPE}" == "live" ]; # added on 26-aug-2017 by nixCraft
+            "${TLDTYPE}" == "fun" -o "${TLDTYPE}" == "museum" -o "${TLDTYPE}" == "live" -o "${TLDTYPE}" == "club" ]; # added on 26-aug-2017 by nixCraft
     then
         tdomdate=`${AWK} '/Registry Expiry Date:/ { print $NF }' ${WHOIS_TMP}`
         tyear=`echo ${tdomdate} | ${CUT} -d'-' -f1`
