@@ -1,4 +1,4 @@
-image: hawkeye116477/pft2:latest
+image: polishfiltersteam/expired_domains_image:latest
 
 stages:
   - check
@@ -57,6 +57,8 @@ PAF_supp:
       - expired-domains/PAF_widgety_nie_dla_ff-unknown.txt
       - expired-domains/PAF_widgety_AG-expired.txt
       - expired-domains/PAF_widgety_AG-unknown.txt
+      - expired-domains/PAF_widgety_html-expired.txt
+      - expired-domains/PAF_widgety_html-unknown.txt
       - expired-domains/PAF_widgety_bez_html-expired.txt
       - expired-domains/PAF_widgety_bez_html-unknown.txt
       - expired-domains/PAF_widgety_suplement-expired.txt
@@ -115,7 +117,7 @@ Cookies_supp:
       - expired-domains/cookies_uB_AG-unknown.txt
 
 LWS:
-  image: hawkeye116477/pft3:latest
+  image: polishfiltersteam/lws_image:latest
   stage: check
   script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
   artifacts:
