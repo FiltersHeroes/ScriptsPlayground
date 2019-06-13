@@ -1,5 +1,4 @@
-image:
-  name: hawkeye116477/pft2:latest
+image: hawkeye116477/pft2:latest
 
 stages:
   - check
@@ -118,3 +117,8 @@ Cookies_supp:
 deploy:
   stage: final
   script: "./scripts/CI/push.sh"
+
+LWS:
+  image: hawkeye116477/pft3:latest
+  stage: final
+  script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
