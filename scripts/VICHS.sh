@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.3
+# v2.3.1
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -75,6 +75,12 @@ for i in "$@"; do
         EXTERNAL=$(grep -oP -m 1 '@URLinclude \K.*' $FINAL)
         EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
         wget -O $EXTERNAL_TEMP "${EXTERNAL}"
+        if [[ "$?" != 0 ]]; then
+            echo "Błąd w trakcie pobierania pliku"
+            git reset --hard
+            git clean -xdf
+            exit 0
+        fi
         sed -i '/! Checksum/d' $EXTERNAL_TEMP
         sed -i '/!#include /d' $EXTERNAL_TEMP
         sed -i '/Adblock Plus 2.0/d' $EXTERNAL_TEMP
@@ -96,6 +102,12 @@ for i in "$@"; do
         EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
         MERGED_TEMP=$SECTIONS_DIR/merged.temp
         wget -O $EXTERNAL_TEMP "${EXTERNAL}"
+        if [[ "$?" != 0 ]]; then
+            echo "Błąd w trakcie pobierania pliku"
+            git reset --hard
+            git clean -xdf
+            exit 0
+        fi
         sed -i '/! Checksum/d' $EXTERNAL_TEMP
         sed -i '/!#include /d' $EXTERNAL_TEMP
         sed -i '/Adblock Plus 2.0/d' $EXTERNAL_TEMP
@@ -141,6 +153,12 @@ for i in "$@"; do
         EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
         EXTERNALHOSTS_TEMP=$SECTIONS_DIR/external_hosts.temp
         wget -O $EXTERNAL_TEMP "${EXTERNAL}"
+        if [[ "$?" != 0 ]]; then
+            echo "Błąd w trakcie pobierania pliku"
+            git reset --hard
+            git clean -xdf
+            exit 0
+        fi
         grep -o '\||.*^' $EXTERNAL_TEMP > $EXTERNALHOSTS_TEMP
         sed -i "s|[|][|]|0.0.0.0 |" $EXTERNALHOSTS_TEMP
         sed -i 's/[/\^]//g' $EXTERNALHOSTS_TEMP
