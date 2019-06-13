@@ -65,9 +65,9 @@ if [ -f "$UNKNOWN" ]; then
     rm -r $UNKNOWN
 fi
 
-GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
-git config --global user.email "PolishJarvis@int.pl"
-git config --global user.name "PolishJarvis"
-git add $MAIN_PATH/LWS/podejrzane_LWS.txt
-git commit -m "Check [ci skip]"
-git push https://PolishJarvis:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
+# GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
+# git config --global user.email "PolishJarvis@int.pl"
+# git config --global user.name "PolishJarvis"
+# git add $MAIN_PATH/LWS/podejrzane_LWS.txt
+# git commit -m "Check [ci skip]"
+# git push https://PolishJarvis:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1

@@ -114,11 +114,14 @@ Cookies_supp:
       - expired-domains/cookies_uB_AG-expired.txt
       - expired-domains/cookies_uB_AG-unknown.txt
 
+LWS:
+  image: hawkeye116477/pft3:latest
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
+  artifacts:
+    paths:
+      - LWS/podejrzane_LWS.txt
+
 deploy:
   stage: final
   script: "./scripts/CI/push.sh"
-
-LWS:
-  image: hawkeye116477/pft3:latest
-  stage: final
-  script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
