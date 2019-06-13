@@ -1,9 +1,0 @@
-env:
-  - secure: KN3VSUmQx+DQUmTdrA2t5/BSm//5v67i8kMlMwGZu6q0nRl6hYxAnjZHvcd6EpKKr2extyEJv0Yk79L/xjXrirkUjw+sasBe+9UUQAIqOtleVs9bMUdxIZ1W3uk4xeIh+m7lIp8k/dsNYvrZpvwfjXolN7QFJCpcteoxionyZCFG5nS2NXrweoKn4rbj2Nm7lolV/KCx9v5OQ4h9HEuWkeZDTw9T0+6SdaPZfIMQHYoZ/4tnPc0sk/uj/kXMR+2GZoS9lQcl5E3hTWmNpyd6Hph1HLRScAi+ElCY8d+bo/2eivN5y2lMex8qI19Lu8IKau3IfbDJDv84knMkHafxTg==
-build:
-  pre_ci_boot:
-    image_name: hawkeye116477/pft
-    image_tag: latest
-    pull: true
-  ci:
-    - ./scripts/TRAVIS_LETS_DO_THIS.sh
