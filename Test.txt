@@ -1,13 +1,13 @@
  [Adblock Plus 2.0]
-! Checksum: DtyzzLNRmaIRq/PIwK/rtQ
+! Checksum: hrqE76/deTcuimrBLejGng
 ! Title: Lista testowa
 ! Codename: Test
 ! Description: Lista przeznaczona do testowania skryptu.
-! Last modified: Thu, 13 Jun 2019, 12:30 UTC+02
-! Version: 2019.6.3
+! Last modified: Thu, 13 Jun 2019, 18:29 UTC+02
+! Version: 2019.6.4
 ! Expires: 2 days
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: czw, 13 cze 2019, 12:30 UTC+02
+! Aktualizacja: czw, 13 cze 2019, 18:29 UTC+02
 !
 !
 ! Testy
@@ -15,7 +15,7 @@ costam.pl###test
 haha.pl##test
 hehe.pl##.heh
 inne.pl###test
-jeszczeinne.pl##.haha
+jeszczeinne.pl##.hah
 test.pl###nlt_test
 !
 !
@@ -27,6 +27,20 @@ zniklogdzieszanami.pl###tralala
 !test3
 !
 !
+!
+! Test łączenia
+aletojuzbylo.pl###iniewrociwiecej
+costam.pl###test
+haha.pl##test
+hehe.pl##.heh
+inne.pl###test
+jeszczeinne.pl##.hah
+test2.pl###big_brother
+test.pl###nlt_test
+zniklogdzieszanami.pl###tralala
+!hehe
+!test3
+!
+!
 ! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
 !#include Test2.txt
-
