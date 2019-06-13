@@ -1,0 +1,27 @@
+ [Adblock Plus 2.0]
+! Checksum: @
+! Title: Lista testowa
+! Codename: Test
+! Description: Lista przeznaczona do testowania skryptu.
+! Last modified: @modified
+! Version: @version
+! Expires: 2 days
+! Copyright © 2018 Polish Filters Team
+! Aktualizacja: @aktualizacja
+!
+!
+! Testy
+@include test1
+!
+!
+! Testy2
+@include test2
+!
+!
+!
+! Test łączenia
+@COMBINEinclude test1 https://raw.githubusercontent.com/PolishFiltersTeam/VICHSPlayground/master/VICHS_Test/test2.txt
+!
+!
+! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
+!#include Test2.txt
