@@ -1,0 +1,3 @@
+FROM hawkeye116477/pft2:latest
+
+RUN apt-get update && apt-get install -y python3-bs4 python3-certifi python3-urllib3
