@@ -1,2 +1,2 @@
-# ExpiredDomainsFilterListsPlayground
-Skrypt do sprawdzania wygasłych domen w listach filtrów ABP/uBO/AG.
+# ScriptsPlayground
+Miejsce przeznaczone do testowania, jak i również rozwijania naszych skryptów.
