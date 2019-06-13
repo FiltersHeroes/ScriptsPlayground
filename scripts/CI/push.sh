@@ -4,4 +4,4 @@ git config --global user.email "PolishJarvis@int.pl"
 git config --global user.name "PolishJarvis"
 git add --all
 git commit -m "Check [ci skip]"
-git push https://PolishJarvis:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
+git push https://PolishJarvis:${GIT_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
