@@ -3,6 +3,6 @@ FROM ubuntu:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y git sudo openssh-client ca-certificates wget pcregrep whois host language-pack-pl
+RUN apt-get update && apt-get install -y git sudo openssh-client ca-certificates wget pcregrep whois host language-pack-pl curl
 
 CMD ["/bin/sh"]
