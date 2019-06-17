@@ -1,8 +1,8 @@
 diff --git a/scripts/expired_domains.sh b/scripts/expired_domains.sh
-index 07108b2..227e363 100755
+index 52c3d83..bd25439 100755
 --- a/scripts/expired_domains.sh
 +++ b/scripts/expired_domains.sh
-@@ -74,7 +74,7 @@ do
+@@ -75,7 +75,7 @@ do
          echo  "$ips" >> $TEMPORARY.5
      elif [ $status_code -ne "200" ] && [ $status_code -ne "000" ]
      then
@@ -11,7 +11,7 @@ index 07108b2..227e363 100755
      else
          echo "Test"
      fi
-@@ -95,7 +95,7 @@ do
+@@ -96,7 +96,7 @@ do
      status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $ips)
      if [ $status_code -ne "200" ]
      then
