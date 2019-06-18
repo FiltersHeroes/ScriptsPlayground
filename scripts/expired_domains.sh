@@ -41,6 +41,7 @@ sed -ni '/\./p' $TEMPORARY
 sed -i "s|\#||" $TEMPORARY
 sed -i "s|\?||" $TEMPORARY
 sed -i "s/[$].*//" $TEMPORARY
+sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" $TEMPORARY
 sort -u -o $TEMPORARY $TEMPORARY
 
 
