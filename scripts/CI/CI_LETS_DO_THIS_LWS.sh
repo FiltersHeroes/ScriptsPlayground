@@ -9,11 +9,7 @@ cd $MAIN_PATH
 rm -r $MAIN_PATH/LWS/podejrzane_LWS.txt
 LWS=$SCRIPT_PATH/LWS.temp
 python3 $SCRIPT_PATH/../findSuspiciousDomains_LWS.py >> $LWS
-sed -i -r "s|http(s)?:\/\/||" $LWS
-sed -i -r "s/^www[0-9]\.//" $LWS
-sed -i -r "s/^www\.//" $LWS
 sed -i -r "s|^|\|\||" $LWS
-sed -i -r "s|[\/]$||" $LWS
 sed -i -r 's|$|\^|' $LWS
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/sections/podejrzane_inne_oszustwa.txt
 sed -i -r "s/^[|][|]www[0-9]\.//" ./podejrzane_inne_oszustwa.txt

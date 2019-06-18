@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import certifi
 import urllib3
+import re
 
 # specify the url
 quote_page = 'https://www.legalniewsieci.pl/aktualnosci/podejrzane-sklepy-internetowe'
@@ -21,4 +22,8 @@ data = soup.find_all('div', class_="ul-unsafe")
 for div in data:
     links = div.find_all('a', rel="nofollow")
     for a in links:
+        a['href'] = re.sub('http(s)?:\/\/', '', a['href'])
+        a['href'] = re.sub('\/(.*)', '', a['href'])
+        a['href'] = re.sub('^www[0-9]\.', '', a['href'])
+        a['href'] = re.sub('^www\.', '', a['href'])
         print(a['href'])

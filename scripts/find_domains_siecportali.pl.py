@@ -2,7 +2,6 @@
 from bs4 import BeautifulSoup
 import certifi
 import urllib3
-import re
 import tldextract
 
 # specify the url
