@@ -19,9 +19,15 @@ soup = BeautifulSoup(page.data, "html5lib")
 
 data = soup.find_all('div', class_="portal-logos")
 
+final_links = []
+
 for div in data:
     links = div.find_all('a')
     for a in links:
         a['href'] = re.sub('http(s)?:\/\/', "", a['href'])
         a['href'] = re.sub('[\/]$', "", a['href'])
-        print(a['href'])
+        final_links.append(a['href'])
+        break
+
+final_links.sort()
+print(','.join(final_links))
