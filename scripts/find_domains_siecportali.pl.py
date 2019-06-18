@@ -5,7 +5,7 @@ import urllib3
 import tldextract
 
 # specify the url
-quote_page = 'http://siecportali.pl/realizacje'
+quote_page = 'https://siecportali.pl/realizacje'
 
 # query the website and return the html to the variable ‘page’
 http = urllib3.PoolManager(
