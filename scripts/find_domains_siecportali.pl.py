@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import certifi
 import urllib3
 import re
+import tldextract
 
 # specify the url
 quote_page = 'http://siecportali.pl/realizacje'
@@ -24,10 +25,9 @@ final_links = []
 for div in data:
     links = div.find_all('a')
     for a in links:
-        a['href'] = re.sub('http(s)?:\/\/', "", a['href'])
-        a['href'] = re.sub('[\/]$', "", a['href'])
+        a['href'] = tldextract.extract(a['href']).registered_domain
         final_links.append(a['href'])
         break
 
-final_links.sort()
+final_links = sorted(set(final_links))
 print(','.join(final_links))
