@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.7.5
+# v1.7.6
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -108,13 +108,5 @@ sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt $MAIN_PATH/expired
 sort -u -o $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 rm -rf $TEMPORARY.*
 rm -rf $TEMPORARY
-
-if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
-  rm $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
-fi
-
-if [ ! -s $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt ] ; then
-  rm $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
-fi
 
 done

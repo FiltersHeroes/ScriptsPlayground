@@ -126,4 +126,4 @@ LWS:
 
 deploy:
   stage: final
-  script: "./scripts/CI/push.sh"
+  script: "./scripts/CI/cleanup_push.sh"
