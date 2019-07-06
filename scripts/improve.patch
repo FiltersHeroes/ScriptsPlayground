@@ -1,5 +1,5 @@
 diff --git a/scripts/domain-check-2.sh b/scripts/domain-check-2.sh
-index c7482d7..08c2372 100755
+index c7482d7..e59b0f7 100755
 --- a/scripts/domain-check-2.sh
 +++ b/scripts/domain-check-2.sh
 @@ -402,7 +402,7 @@ check_domain_status()
@@ -36,17 +36,18 @@ index c7482d7..08c2372 100755
      if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ]
      then
          if [ "${ALARM}" == "TRUE" ]
-@@ -823,6 +831,9 @@ check_domain_status()
-                 | ${MAIL} -s "Domain ${DOMAIN} will expire in ${WARNDAYS}-days or less" ${ADMIN}
+@@ -814,7 +822,9 @@ check_domain_status()
+                 | ${MAIL} -s "Domain ${DOMAIN} has expired!" ${ADMIN}
          fi
-         prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
+         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
+-
 +    elif [ ! -z "$suspended" ]
 +    then
 +        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
-     elif [ ${DOMAINJULIAN} -eq 0 ]
+     elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ ${DOMAINJULIAN} -gt 0 ]
      then
-         prints "${DOMAIN}" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
-@@ -859,7 +870,7 @@ prints()
+         if [ "${ALARM}" == "TRUE" ]
+@@ -859,7 +869,7 @@ prints()
      if [ "${QUIET}" != "TRUE" ]
      then
          MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
