@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.3.9
+# v2.3.10
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -61,10 +61,20 @@ for i in "$@"; do
     # Doklejanie sekcji w odpowiednie miejsca
     for (( n=1; n<=END; n++ ))
     do
-        SEKCJA=${SECTIONS_DIR}/$(grep -oP -m 1 '@include \K.*' "$FINAL").txt
-        sed -e '0,/^@include/!b; /@include/{ r '"${SEKCJA}"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        SECTION=${SECTIONS_DIR}/$(grep -oP -m 1 '@include \K.*' "$FINAL").txt
+        sed -e '0,/^@include/!b; /@include/{ r '"${SECTION}"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
     done
+
+    function external_cleanup {
+        sed -i '/! Checksum/d' "$EXTERNAL_TEMP"
+        sed -i '/!#include /d' "$EXTERNAL_TEMP"
+        sed -i '/!#if /d' "$EXTERNAL_TEMP"
+        sed -i '/!#endif/d' "$EXTERNAL_TEMP"
+        sed -i '/Adblock Plus 2.0/d' "$EXTERNAL_TEMP"
+        sed -i '/! Dołączenie listy/d' "$EXTERNAL_TEMP"
+        sed -i "s|! |!@|g" "$EXTERNAL_TEMP"
+    }
 
     # Obliczanie ilości sekcji/list filtrów, które zostaną pobrane ze źródeł zewnętrznych
     END_URL=$(grep -o -i '@URLinclude' "${TEMPLATE}" | wc -l)
@@ -81,11 +91,7 @@ for i in "$@"; do
             rm -r "$EXTERNAL_TEMP"
             exit 0
         fi
-        sed -i '/! Checksum/d' "$EXTERNAL_TEMP"
-        sed -i '/!#include /d' "$EXTERNAL_TEMP"
-        sed -i '/Adblock Plus 2.0/d' "$EXTERNAL_TEMP"
-        sed -i '/! Dołączenie listy/d' "$EXTERNAL_TEMP"
-        sed -i "s|! |!@|g" "$EXTERNAL_TEMP"
+        external_cleanup
         sed -e '0,/^@URLinclude/!b; /@URLinclude/{ r '"$EXTERNAL_TEMP"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$EXTERNAL_TEMP"
@@ -108,11 +114,7 @@ for i in "$@"; do
             rm -r "$EXTERNAL_TEMP"
             exit 0
         fi
-        sed -i '/! Checksum/d' "$EXTERNAL_TEMP"
-        sed -i '/!#include /d' "$EXTERNAL_TEMP"
-        sed -i '/Adblock Plus 2.0/d' "$EXTERNAL_TEMP"
-        sed -i '/! Dołączenie listy/d' "$EXTERNAL_TEMP"
-        sed -i "s|! |!@|g" "$EXTERNAL_TEMP"
+        external_cleanup
         sort -u -o "$LOCAL" "$LOCAL"
         sort -u -o "$EXTERNAL_TEMP" "$EXTERNAL_TEMP"
         cat "$LOCAL" "$EXTERNAL_TEMP" >> "$MERGED_TEMP"
@@ -124,6 +126,14 @@ for i in "$@"; do
         rm -r "$MERGED_TEMP"
     done
 
+    function convertToHosts() {
+        sed -i "s|[|][|]|0.0.0.0 |" "$1"
+        sed -i 's/[/\^]//g' "$1"
+        sed -i '/[/\*]/d' "$1"
+        sed -i -r "/0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]/d" "$1"
+        sed -r "/^0\.0\.0\.0 (www\.|www[0-9]\.|www\-|pl\.|pl[0-9]\.)/! s/^0\.0\.0\.0 /0.0.0.0 www./" "$1" > "$1.2"
+    }
+
     # Obliczanie ilości sekcji/list filtrów, które zostaną przekonwertowane na hosts
     END_HOSTS=$(grep -o -i '@HOSTSinclude' "${TEMPLATE}" | wc -l)
 
@@ -134,11 +144,7 @@ for i in "$@"; do
         HOSTS_TEMP=$SECTIONS_DIR/hosts.temp
         grep -o '\||.*^' "$HOSTS_FILE" > "$HOSTS_TEMP"
         grep -o '\0.0.0.0.*' "$HOSTS_FILE" >> "$HOSTS_TEMP"
-        sed -i "s|[|][|]|0.0.0.0 |" "$HOSTS_TEMP"
-        sed -i 's/[/\^]//g' "$HOSTS_TEMP"
-        sed -i '/[/\*]/d' "$HOSTS_TEMP"
-        sed -i -r "/0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]/d" "$HOSTS_TEMP"
-        sed -r "/^0\.0\.0\.0 (www\.|www[0-9]\.|www\-|pl\.|pl[0-9]\.)/! s/^0\.0\.0\.0 /0.0.0.0 www./" "$HOSTS_TEMP" > "$HOSTS_TEMP.2"
+        convertToHosts "$HOSTS_TEMP"
         if [ -f "$HOSTS_TEMP.2" ]
         then
             cat "$HOSTS_TEMP" "$HOSTS_TEMP.2"  > "$HOSTS_TEMP.3"
@@ -171,11 +177,7 @@ for i in "$@"; do
             exit 0
         fi
         grep -o '\||.*^' "$EXTERNAL_TEMP" > "$EXTERNALHOSTS_TEMP"
-        sed -i "s|[|][|]|0.0.0.0 |" "$EXTERNALHOSTS_TEMP"
-        sed -i 's/[/\^]//g' "$EXTERNALHOSTS_TEMP"
-        sed -i '/[/\*]/d' "$EXTERNALHOSTS_TEMP"
-        sed -i -r "/0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]/d" "$EXTERNALHOSTS_TEMP"
-        sed -r "/^0\.0\.0\.0 (www\.|www[0-9]\.|www\-|pl\.|pl[0-9]\.)/! s/^0\.0\.0\.0 /0.0.0.0 www./" "$EXTERNALHOSTS_TEMP" > "$EXTERNALHOSTS_TEMP.2"
+        convertToHosts "$EXTERNALHOSTS_TEMP"
         if [ -f "$EXTERNALHOSTS_TEMP.2" ]
         then
             cat "$EXTERNALHOSTS_TEMP" "$EXTERNALHOSTS_TEMP.2"  > "$EXTERNALHOSTS_TEMP.3"
@@ -247,9 +249,9 @@ for i in "$@"; do
     # Usuwanie starej sumy kontrolnej i pustych linii
     grep -v '! Checksum: ' "$i" | grep -v '^$' > "$i".chk
     # Pobieranie sumy kontrolnej... Binarny MD5 zakodowany w Base64
-    suma_k=$(openssl dgst -md5 -binary "$i".chk | openssl enc -base64 | cut -d "=" -f 1)
+    checksum=$(openssl dgst -md5 -binary "$i".chk | openssl enc -base64 | cut -d "=" -f 1)
     # Zamiana atrapy sumy kontrolnej na prawdziwą
-    sed -i "/! Checksum: /c\! Checksum: $suma_k" "$i"
+    sed -i "/! Checksum: /c\! Checksum: $checksum" "$i"
     rm -r "$i".chk
 
     # Dodawanie zmienionych plików do repozytorium git
