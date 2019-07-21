@@ -5,10 +5,21 @@
 #
 # Author: Matty < matty91 at gmail dot com >
 #
-# Current Version: 2.41
-# Last Updated: 16-June-2019
+# Current Version: 2.44
+# Last Updated: 27-July-2019
 #
 # Revision History:
+#
+#  Version 2.44
+#   Fixed status when expiration date is wrongly detected (sometimes can be described as not defined) -- https://github.com/hawkeye116477
+#   Added support for .today domain -- https://github.com/hawkeye116477
+#
+#  Version 2.43
+#   Added support for .id domain -- Menthol Date <github.com/menthoolll>
+#
+#  Version 2.42
+#   Fixed support for .jp domain -- Tozapid <github.com/Tozapid>
+#   Added support for .xxx domain -- Tozapid <github.com/Tozapid>
 #
 #  Version 2.41
 #   Added support for .stream domain -- https://github.com/hawkeye116477
@@ -545,6 +556,9 @@ check_domain_status()
     elif [ "${TLDTYPE}" == "sk" ]; # added by @hawkeye116477 20190603
     then
         REGISTRAR=$(${AWK} '/Registrar:/ && $0 != "" {print $2; exit}' ${WHOIS_TMP})
+    elif [ "${TLDTYPE}" == "id" ];
+    then
+    	REGISTRAR=`cat ${WHOIS_TMP} | ${AWK} -F: '/Registrar Organization:/ && $2 != ""  { REGISTRAR=substr($2,1,40) } END { print REGISTRAR }'`
     fi
 
     # If the Registrar is NULL, then we didn't get any data
@@ -557,6 +571,15 @@ check_domain_status()
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008"
 
     if [ "${TLDTYPE}" == "info" -o "${TLDTYPE}" == "org" ];
+    then
+        tdomdate=`${AWK} '/Expiry Date:/ { print $4 }' ${WHOIS_TMP}`
+        tyear=`echo ${tdomdate} | ${CUT} -d'-' -f1`
+        tmon=`echo ${tdomdate} | ${CUT} -d'-' -f2`
+        tmonth=$(getmonth_number ${tmon})
+        tday=`echo ${tdomdate} | ${CUT} -d'-' -f3 | ${CUT} -d'T' -f1`
+        DOMAINDATE=`echo $tday-$tmonth-$tyear`
+
+    elif [ "${TLDTYPE}" == "xxx" ]; # for .xxx domain @tozapid 2019/06/21
     then
         tdomdate=`${AWK} '/Expiry Date:/ { print $4 }' ${WHOIS_TMP}`
         tyear=`echo ${tdomdate} | ${CUT} -d'-' -f1`
@@ -578,9 +601,9 @@ check_domain_status()
     then
         DOMAINDATE=`${AWK} '/Renewal date:/ || /Expiry date:/ { print $3 }' ${WHOIS_TMP}`
 
-    elif [ "${TLDTYPE}" == "jp" ]; # for .jp fixed @hawkeye116477 2019/06/03
+    elif [ "${TLDTYPE}" == "jp" ]; # for .jp fixed @click0 2019/06/26
     then
-        tdomdate=`${AWK} '/\[有効期限\]|\[Expires on\]/ {print $2}' ${WHOIS_TMP} | ${TR} -d " \r"`
+        tdomdate=`${AWK} -F] '/\[有効期限\]|\[Expires on\]/ {print $2}' ${WHOIS_TMP} | ${TR} -d " \r"`
         tyear=`echo ${tdomdate} | ${CUT} -d'/' -f1`
         tmon=`echo ${tdomdate} | ${CUT} -d'/' -f2`
         tmonth=$(getmonth_number ${tmon})
@@ -657,7 +680,7 @@ check_domain_status()
         "${TLDTYPE}" == "icu"  -o "${TLDTYPE}" == "cloud" -o "${TLDTYPE}" == "systems" -o \
         "${TLDTYPE}" == "expert" -o "${TLDTYPE}" == "express" -o "${TLDTYPE}" == "ca" -o "${TLDTYPE}" == "space" -o \
         "${TLDTYPE}" == "fun" -o "${TLDTYPE}" == "museum" -o "${TLDTYPE}" == "live" -o "${TLDTYPE}" == "club" -o \
-        "${TLDTYPE}" == "stream" ]; # added on 26-aug-2017 by nixCraft
+        "${TLDTYPE}" == "stream" -o "${TLDTYPE}" == "today" ]; # added on 26-aug-2017 by nixCraft
     then
         tdomdate=`${AWK} '/Registry Expiry Date:/ { print $NF }' ${WHOIS_TMP}`
         tyear=`echo ${tdomdate} | ${CUT} -d'-' -f1`
@@ -781,6 +804,7 @@ check_domain_status()
         tmonth=$(getmonth_number ${tmon})
         tday=`echo ${tdomdate} | ${CUT} -d "-" -f 3`
         DOMAINDATE=`echo "${tday}-${tmonth}-${tyear}"`
+
     elif  [ "${TLDTYPE}" == "sk" ]; # for .sk @hawkeye116477 2019/06/03
     then
         tdomdate=`${AWK} '/Valid Until:/ {print $3}' ${WHOIS_TMP}`
@@ -788,6 +812,15 @@ check_domain_status()
         tmon=`echo ${tdomdate} | ${CUT} -d "-" -f 2`
         tmonth=$(getmonth_number ${tmon})
         tday=`echo ${tdomdate} | ${CUT} -d "-" -f 3`
+        DOMAINDATE=`echo "${tday}-${tmonth}-${tyear}"`
+
+    elif [ "${TLDTYPE}" == "id" ]; # for .id @Minitram 2019/07/01
+    then
+        tdomdate=`cat ${WHOIS_TMP} | ${AWK} '/Expiration Date:/ { print $2 }' | ${AWK} -F: '{ print $2}'`
+        tyear=`echo ${tdomdate} | ${CUT} -d "-" -f 3`
+        tmon=`echo ${tdomdate} | ${CUT} -d "-" -f 2`
+        tmonth=$(tolower ${tmon})
+        tday=`echo ${tdomdate} | ${CUT} -d "-" -f 1`
         DOMAINDATE=`echo "${tday}-${tmonth}-${tyear}"`
 
     # may work with others	 ??? ;)
@@ -806,7 +839,7 @@ check_domain_status()
     DOMAINJULIAN=$(date2julian ${MONTH} ${1#0} ${3})
     DOMAINDIFF=$(date_diff ${NOWJULIAN} ${DOMAINJULIAN})
 
-    if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ]
+    if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ] && [ ${MONTH} -gt 0 ] && [ ${DAY} -gt 0 ] && [ ${YEAR} -gt 0 ]
     then
         if [ "${ALARM}" == "TRUE" ]
         then
@@ -815,7 +848,7 @@ check_domain_status()
         fi
         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
 
-    elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ ${DOMAINJULIAN} -gt 0 ]
+    elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ ${DOMAINJULIAN} -gt 0 ] && [ ${MONTH} -gt 0 ] && [ ${DAY} -gt 0 ] && [ ${YEAR} -gt 0 ]
     then
         if [ "${ALARM}" == "TRUE" ]
         then
@@ -823,7 +856,7 @@ check_domain_status()
                 | ${MAIL} -s "Domain ${DOMAIN} will expire in ${WARNDAYS}-days or less" ${ADMIN}
         fi
         prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
-    elif [ ${DOMAINJULIAN} -eq 0 ]
+    elif [ ${DOMAINJULIAN} -eq 0 ] || [ ${MONTH} -le 0 ] || [ ${DAY} -le 0 ] || [ ${YEAR} -le 0 ]
     then
         prints "${DOMAIN}" "Unknown" "Unknown" "Unknown" "${REGISTRAR}"
     else
