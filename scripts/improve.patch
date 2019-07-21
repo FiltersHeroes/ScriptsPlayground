@@ -1,8 +1,8 @@
 diff --git a/scripts/domain-check-2.sh b/scripts/domain-check-2.sh
-index c7482d7..e59b0f7 100755
+index fba8194..38cf1f5 100755
 --- a/scripts/domain-check-2.sh
 +++ b/scripts/domain-check-2.sh
-@@ -402,7 +402,7 @@ check_domain_status()
+@@ -413,7 +413,7 @@ check_domain_status()
  {
      local REGISTRAR=""
      # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
@@ -11,8 +11,8 @@ index c7482d7..e59b0f7 100755
      # Save the domain since set will trip up the ordering
      DOMAIN=${1}
      TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($NF);}')
-@@ -547,8 +547,14 @@ check_domain_status()
-         REGISTRAR=$(${AWK} '/Registrar:/ && $0 != "" {print $2; exit}' ${WHOIS_TMP})
+@@ -561,8 +561,14 @@ check_domain_status()
+     	REGISTRAR=`cat ${WHOIS_TMP} | ${AWK} -F: '/Registrar Organization:/ && $2 != ""  { REGISTRAR=substr($2,1,40) } END { print REGISTRAR }'`
      fi
  
 +    book_blocked=`cat ${WHOIS_TMP} | ${GREP} "after release from the queue, available for registration"`
@@ -27,16 +27,16 @@ index c7482d7..e59b0f7 100755
      then
          prints "$DOMAIN" "Unknown" "Unknown" "Unknown" "Unknown"
          return
-@@ -806,6 +812,8 @@ check_domain_status()
+@@ -839,6 +845,8 @@ check_domain_status()
      DOMAINJULIAN=$(date2julian ${MONTH} ${1#0} ${3})
      DOMAINDIFF=$(date_diff ${NOWJULIAN} ${DOMAINJULIAN})
  
 +    suspended=`cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding"`
 +
-     if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ]
+     if [ ${DOMAINDIFF} -lt 0 ] && [ ${DOMAINJULIAN} -gt 0 ] && [ ${MONTH} -gt 0 ] && [ ${DAY} -gt 0 ] && [ ${YEAR} -gt 0 ]
      then
          if [ "${ALARM}" == "TRUE" ]
-@@ -814,7 +822,9 @@ check_domain_status()
+@@ -847,7 +855,9 @@ check_domain_status()
                  | ${MAIL} -s "Domain ${DOMAIN} has expired!" ${ADMIN}
          fi
          prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}" "${REGISTRAR}"
@@ -44,10 +44,10 @@ index c7482d7..e59b0f7 100755
 +    elif [ ! -z "$suspended" ]
 +    then
 +        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}"  "${DOMAINDIFF}" "${REGISTRAR}"
-     elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ ${DOMAINJULIAN} -gt 0 ]
+     elif [ ${DOMAINDIFF} -lt ${WARNDAYS} ] && [ ${DOMAINJULIAN} -gt 0 ] && [ ${MONTH} -gt 0 ] && [ ${DAY} -gt 0 ] && [ ${YEAR} -gt 0 ]
      then
          if [ "${ALARM}" == "TRUE" ]
-@@ -859,7 +869,7 @@ prints()
+@@ -892,7 +902,7 @@ prints()
      if [ "${QUIET}" != "TRUE" ]
      then
          MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
