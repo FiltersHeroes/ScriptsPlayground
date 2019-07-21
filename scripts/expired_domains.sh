@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.7.7
+# v1.7.8
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -82,7 +82,7 @@ do
     fi
 done
 
-# Zamieniamy subdomeny na domeny (alpha)
+# Zamieniamy subdomeny na domeny (beta)
 # https://ubuntuforums.org/showthread.php?t=873034&s=99fb8190182be62fbf8f81352b2fa4fa&p=5477397#post5477397
 awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" || $(NF-1) == "info" || $(NF-1) == "gov" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.5 >> $TEMPORARY.6
 sort -u -o $TEMPORARY.6 $TEMPORARY.6
