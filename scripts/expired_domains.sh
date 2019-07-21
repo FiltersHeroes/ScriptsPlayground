@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.7.8
+# v1.7.9
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
