@@ -11,7 +11,7 @@
 # and all contributors of domain-check-2 script (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.2
+# Current Version: 1.0.3
 #
 #
 #
@@ -175,6 +175,7 @@ check_domain_status()
     free=$(cat ${WHOIS_TMP} | ${GREP} "is free")
     suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the Dot TK Registry" )
     redemption_period=$(cat ${WHOIS_TMP} | ${GREP} "redemptionPeriod" )
+    reserved=$(cat ${WHOIS_TMP} | ${GREP} "is queued up for registration" )
 
     if [ ! -z "$removed" ]
     then
@@ -191,6 +192,9 @@ check_domain_status()
     elif [ ! -z "$book_blocked" ]
     then
         prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "$reserved" ]
+    then
+        prints "${DOMAIN}" "Reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt 0 ]
     then
         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}"
