@@ -11,7 +11,7 @@
 # and all contributors of domain-check-2 script (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.3
+# Current Version: 1.0.4
 #
 #
 #
@@ -186,9 +186,6 @@ check_domain_status()
     elif [ ! -z "$suspended" ]
     then
         prints "${DOMAIN}" "Suspended" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${redemption_period}" ]
-    then
-        prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! -z "$book_blocked" ]
     then
         prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
@@ -198,6 +195,9 @@ check_domain_status()
     elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt 0 ]
     then
         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "${redemption_period}" ]
+    then
+        prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt ${WARNDAYS} ]
     then
         prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}"
