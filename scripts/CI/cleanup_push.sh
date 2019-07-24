@@ -3,10 +3,12 @@
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
 MAIN_PATH=$(dirname "$0")/../..
 
-cd $MAIN_PATH/expired-domains
+cd $MAIN_PATH
+
+cd ./expired-domains
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 
-cd $MAIN_PATH/LWS
+cd ./LWS
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 
 cd $MAIN_PATH
