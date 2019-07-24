@@ -11,7 +11,7 @@
 # and all contributors of domain-check-2 script (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.1
+# Current Version: 1.0.2
 #
 #
 #
@@ -182,6 +182,15 @@ check_domain_status()
     elif [ ! -z "$suspended_reserved" ]
     then
         prints "${DOMAIN}" "Suspended_or_reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "$suspended" ]
+    then
+        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "${redemption_period}" ]
+    then
+        prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "$book_blocked" ]
+    then
+        prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt 0 ]
     then
         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}"
@@ -191,18 +200,9 @@ check_domain_status()
     elif [ ! -z "${free}" ]
     then
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${redemption_period}" ]
-    then
-        prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
         prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$book_blocked" ]
-    then
-        prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$suspended" ]
-    then
-        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}" "${DOMAINDIFF}"
     else
         prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}"
     fi
