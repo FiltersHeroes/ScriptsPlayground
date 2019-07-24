@@ -12,7 +12,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-# Set timezone to UTC by default
-RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
+# Set timezone to Warsaw by default
+RUN ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 
 CMD ["/bin/sh"]

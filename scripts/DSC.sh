@@ -11,12 +11,8 @@
 # and all contributors of domain-check-2 script (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0
+# Current Version: 1.0.1
 #
-# Revision History:
-#
-#  Version 1.0
-#    Initial Release
 #
 #
 # Purpose:
@@ -154,6 +150,7 @@ check_domain_status()
 				DOMAINDIFF=$(( sec / 86400 ))
 			else
 				DOMAINDATE="Unknown ($adate)" # date="Error: Could not input domain expiration date ($adate)."
+                DOMAINDIFF="Unknown"
 			fi
     elif [ "${TLDTYPE}" == "kz" ]; # for .kz @click0 2019/02/23
     then
@@ -197,7 +194,7 @@ check_domain_status()
     elif [ ! -z "${redemption_period}" ]
     then
         prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ${DOMAINDATE} == "Unknown" ] || [ ${DOMAINDATE} == "Unknown ($adate)" ] && [ -z "$active" ]
+    elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
         prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! -z "$book_blocked" ]

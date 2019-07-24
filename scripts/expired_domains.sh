@@ -7,8 +7,6 @@ MAIN_PATH=$(dirname "$0")/..
 
 cd $MAIN_PATH
 
-export TZ=":Poland"
-
 for i in "$@"; do
 
 pageComma=$(pcregrep -o1 '^([^\/\*\|\@\"\!]*?)#\@?#\K.*' $i)
