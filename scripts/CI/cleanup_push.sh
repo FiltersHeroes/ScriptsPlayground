@@ -3,7 +3,7 @@
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
 MAIN_PATH=$(dirname "$0")/../..
 
-cd "$MAIN_PATH"
+cd "$MAIN_PATH" || exit
 
 cd ./expired-domains
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
@@ -11,7 +11,7 @@ for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 cd ./LWS
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 
-cd $MAIN_PATH
+cd "$MAIN_PATH" || exit
 
 git config --global user.email "PolishJarvis@int.pl"
 git config --global user.name "PolishJarvis"
