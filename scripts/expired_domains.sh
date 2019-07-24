@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# v1.8
+# v1.8.1
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
 
 cd $MAIN_PATH
+
+export TZ=":Poland"
 
 for i in "$@"; do
 
