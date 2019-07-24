@@ -8,7 +8,7 @@ cd "$MAIN_PATH" || exit
 cd ./expired-domains
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 
-cd ./LWS
+cd ../LWS
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
 
 cd "$MAIN_PATH" || exit
