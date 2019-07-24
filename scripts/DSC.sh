@@ -143,7 +143,7 @@ check_domain_status()
     removed=$(cat ${WHOIS_TMP} | ${GREP} "The queried object does not exist: previous registration")
 
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
-    export LC_ALL="en_US.UTF-8"
+    export LC_ALL=en_US.UTF-8
 
     if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
