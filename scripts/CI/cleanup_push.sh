@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
-MAIN_PATH=$(dirname "$0")/../..
+MAIN_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/../..
 
 cd "$MAIN_PATH" || exit
 
