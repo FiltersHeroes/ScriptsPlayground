@@ -61,6 +61,7 @@ sort -u -o $TEMPORARY.2 $TEMPORARY.2
 
 $MAIN_PATH/scripts/DSC.sh -f $TEMPORARY.2 | tee $TEMPORARY.3
 
+touch $MAIN_PATH/expired-domains/$FILTERLIST-unknown.txt
 
 sed '/Expired/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Book_blocked/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
