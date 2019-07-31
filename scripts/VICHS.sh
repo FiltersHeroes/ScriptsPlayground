@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.3.10
+# v2.3.11
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -27,7 +27,13 @@ for i in "$@"; do
 
     TEMPLATE=$MAIN_PATH/templates/${FILTERLIST}.template
     FINAL=$i
+    FINAL_B=$MAIN_PATH/${FILTERLIST}.backup
     TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
+
+    # Tworzenie kopii pliku początkowego
+    if grep -q '@URLUinclude' "${TEMPLATE}"; then
+        cp -R "$FINAL" "$FINAL_B"
+    fi
 
     # Podmienianie zawartości pliku końcowego na zawartość template'u
     cp -R "$TEMPLATE" "$FINAL"
@@ -92,9 +98,61 @@ for i in "$@"; do
             exit 0
         fi
         external_cleanup
+        sed -i "1s|^|!@>>>>>>>> $EXTERNAL\n|" "$EXTERNAL_TEMP"
+        echo "!@<<<<<<<< $EXTERNAL" >> "$EXTERNAL_TEMP"
         sed -e '0,/^@URLinclude/!b; /@URLinclude/{ r '"$EXTERNAL_TEMP"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$EXTERNAL_TEMP"
+    done
+
+    # Obliczanie ilości sekcji, które zostaną pobrane ze źródeł zewnętrznych i dodane z nich zostaną tylko unikalne elementy
+    END_URLU=$(grep -o -i '@URLUinclude' "${TEMPLATE}" | wc -l)
+
+    # Dodawanie unikalnych reguł z zewnętrznych list
+    for (( n=1; n<=END_URLU; n++ ))
+    do
+        EXTERNAL=$(awk '$1 == "@URLUinclude" { print $2; exit }' "$FINAL")
+        EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
+        UNIQUE_TEMP=$SECTIONS_DIR/unique_external.temp
+        wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
+
+        if  ! wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"; then
+            echo "Błąd w trakcie pobierania pliku"
+            git checkout "$FINAL"
+            rm -r "$EXTERNAL_TEMP"
+            exit 0
+        fi
+
+        sed  -i '/!.*Title\|modified\|Licence\|License/p;/!/d' "$EXTERNAL_TEMP"
+        external_cleanup
+
+        sort -u -o "$EXTERNAL_TEMP" "$EXTERNAL_TEMP"
+        sort -u -o "$FINAL_B" "$FINAL_B"
+
+        comm -23 "$EXTERNAL_TEMP" "$FINAL_B" > "$UNIQUE_TEMP"
+
+        sort -uV -o "$UNIQUE_TEMP" "$UNIQUE_TEMP"
+
+        E_TITLE=$(grep -r 'Title:' "$EXTERNAL_TEMP")
+        E_MODIFIED=$(grep -r 'modified:' "$EXTERNAL_TEMP")
+        E_LICENSE=$(grep -r 'Licence:\|License:' "$EXTERNAL_TEMP")
+
+        sed -i "/!@Title/d" "$UNIQUE_TEMP"
+        sed -i "/!@Last modified/d" "$UNIQUE_TEMP"
+        sed -i "/!@Licence/d" "$UNIQUE_TEMP"
+        sed -i "/!@License/d" "$UNIQUE_TEMP"
+
+        sed -i "1s|^|!@>>>>>>>> $EXTERNAL\n|" "$UNIQUE_TEMP"
+        sed -i "2s|^|$E_TITLE\n|" "$UNIQUE_TEMP"
+        sed -i "3s|^|$E_LICENSE\n|" "$UNIQUE_TEMP"
+        sed -i "4s|^|$E_MODIFIED\n|" "$UNIQUE_TEMP"
+        sed -i "5s/^/!\n/" "$UNIQUE_TEMP"
+        sed -i "6s/^/!\n/" "$UNIQUE_TEMP"
+        echo "!@<<<<<<<< $EXTERNAL" >> "$UNIQUE_TEMP"
+        sed -e '0,/^@URLUinclude/!b; /@URLUinclude/{ r '"$UNIQUE_TEMP"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        mv "$TEMPORARY" "$FINAL"
+        rm -r "$EXTERNAL_TEMP"
+        rm -r "$UNIQUE_TEMP"
     done
 
     # Obliczanie ilości sekcji, które zostaną pobrane ze źródeł zewnętrznych i połączone z lokalnymi sekcjami
@@ -196,6 +254,11 @@ for i in "$@"; do
 
     # Usuwanie instrukcji informującej o ścieżce do sekcji
     sed -i '/@path /d' "$FINAL"
+
+    # Usuwanie kopii pliku początkowego
+    if [ -f "$FINAL_B" ]; then
+         rm -r "$FINAL_B"
+    fi
 
     # Przejście do katalogu, w którym znajduje się lokalne repozytorium git
     cd "$MAIN_PATH" || exit
