@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.4
+# v2.4.1
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -70,30 +70,30 @@ for i in "$@"; do
         mv "$TEMPORARY" "$FINAL"
     done
 
-    # Obliczanie ilości sekcji, w których zostaną zwhitelistowane reguły sieciowe (wystąpień słowa @N@@include w template'cie)
-    END_NWL=$(grep -o -i '@N@@include' "${TEMPLATE}" | wc -l)
+    # Obliczanie ilości sekcji, w których zostaną zwhitelistowane reguły sieciowe (wystąpień słowa @NWLinclude w template'cie)
+    END_NWL=$(grep -o -i '@NWLinclude' "${TEMPLATE}" | wc -l)
 
     # Doklejanie sekcji w odpowiednie miejsca i zamiana na wyjątki
     for (( n=1; n<=END_NWL; n++ ))
     do
-        SECTION=${SECTIONS_DIR}/$(grep -oP -m 1 '@N@@include \K.*' "$FINAL").txt
+        SECTION=${SECTIONS_DIR}/$(grep -oP -m 1 '@NWLinclude \K.*' "$FINAL").txt
         grep -o '\||.*^' "$SECTION" > "$SECTION.temp"
-        sed -e '0,/^@N@@include/!b; /@N@@include/{ r '"${SECTION}.temp"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        sed -e '0,/^@NWLinclude/!b; /@NWLinclude/{ r '"${SECTION}.temp"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         sed -i "s|[|][|]|@@|" "$TEMPORARY"
         sed -i 's/[\^]//g' "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$SECTION.temp"
     done
 
-    # Obliczanie ilości sekcji, w których zostaną zwhitelistowane reguły sieciowe z wykorzystaniem modyfikatora badfilter (wystąpień słowa @BN@@include w template'cie)
-    END_BNWL=$(grep -o -i '@BN@@include' "${TEMPLATE}" | wc -l)
+    # Obliczanie ilości sekcji, w których zostaną zwhitelistowane reguły sieciowe z wykorzystaniem modyfikatora badfilter (wystąpień słowa @BNWLinclude w template'cie)
+    END_BNWL=$(grep -o -i '@BNWLinclude' "${TEMPLATE}" | wc -l)
 
     # Doklejanie sekcji w odpowiednie miejsca i zamiana na wyjątki
     for (( n=1; n<=END_BNWL; n++ ))
     do
-        SECTION=${SECTIONS_DIR}/$(grep -oP -m 1 '@BN@@include \K.*' "$FINAL").txt
+        SECTION=${SECTIONS_DIR}/$(grep -oP -m 1 '@BNWLinclude \K.*' "$FINAL").txt
         grep -o '\||.*^' "$SECTION" > "$SECTION.temp"
-        sed -e '0,/^@BN@@include/!b; /@BN@@include/{ r '"${SECTION}.temp"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        sed -e '0,/^@BNWLinclude/!b; /@BNWLinclude/{ r '"${SECTION}.temp"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         sed -i 's/[\^]/\^$badfilter/g' "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$SECTION.temp"
@@ -130,13 +130,13 @@ for i in "$@"; do
         rm -r "$EXTERNAL_TEMP"
     done
 
-    # Obliczanie ilości zewnętrznych sekcji, w których zostaną zwhitelistowane reguły sieciowe (wystąpień słowa @URL@@include w template'cie)
-    END_URLNWL=$(grep -o -i '@URLN@@include' "${TEMPLATE}" | wc -l)
+    # Obliczanie ilości zewnętrznych sekcji, w których zostaną zwhitelistowane reguły sieciowe (wystąpień słowa @URLNWLinclude w template'cie)
+    END_URLNWL=$(grep -o -i '@URLNWLinclude' "${TEMPLATE}" | wc -l)
 
     # Doklejanie sekcji w odpowiednie miejsca i zamiana na wyjątki
     for (( n=1; n<=END_URLNWL; n++ ))
     do
-        EXTERNAL=$(grep -oP -m 1 '@URLN@@include \K.*' "$FINAL")
+        EXTERNAL=$(grep -oP -m 1 '@URLNWLinclude \K.*' "$FINAL")
         EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
         wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
         if ! wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"; then
@@ -147,7 +147,7 @@ for i in "$@"; do
         fi
         grep -o '\||.*^' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
         external_cleanup
-        sed -e '0,/^@URLN@@include/!b; /@URLN@@include/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        sed -e '0,/^@URLNWLinclude/!b; /@URLNWLinclude/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         sed -i "s|[|][|]|@@|" "$TEMPORARY"
         sed -i 's/[\^]//g' "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
@@ -155,13 +155,13 @@ for i in "$@"; do
         rm -r "$EXTERNAL_TEMP.2"
     done
 
-    # Obliczanie ilości zewnętrznych sekcji, w których zostaną zwhitelistowane reguły sieciowe z wykorzystaniem modyfikatora badfilter (wystąpień słowa @URLBN@@include w template'cie)
-    END_URLBNWL=$(grep -o -i '@URLBN@@include' "${TEMPLATE}" | wc -l)
+    # Obliczanie ilości zewnętrznych sekcji, w których zostaną zwhitelistowane reguły sieciowe z wykorzystaniem modyfikatora badfilter (wystąpień słowa @URLBNWLinclude w template'cie)
+    END_URLBNWL=$(grep -o -i '@URLBNWLinclude' "${TEMPLATE}" | wc -l)
 
     # Doklejanie sekcji w odpowiednie miejsca i zamiana na wyjątki
     for (( n=1; n<=END_URLBNWL; n++ ))
     do
-        EXTERNAL=$(grep -oP -m 1 '@URLBN@@include \K.*' "$FINAL")
+        EXTERNAL=$(grep -oP -m 1 '@URLBNWLinclude \K.*' "$FINAL")
         EXTERNAL_TEMP=$SECTIONS_DIR/external.temp
         wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
         if ! wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"; then
@@ -172,7 +172,7 @@ for i in "$@"; do
         fi
         grep -o '\||.*^' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
         external_cleanup
-        sed -e '0,/^@URLBN@@include/!b; /@URLBN@@include/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
+        sed -e '0,/^@URLBNWLinclude/!b; /@URLBNWLinclude/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         sed -i 's/[\^]/\^$badfilter/g' "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$EXTERNAL_TEMP"
