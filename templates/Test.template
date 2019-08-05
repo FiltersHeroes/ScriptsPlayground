@@ -20,7 +20,7 @@
 !
 !
 ! Test łączenia
-@COMBINEinclude test1 https://raw.githubusercontent.com/PolishFiltersTeam/VICHSPlayground/master/VICHS_Test/test2.txt
+@COMBINEinclude test1 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
 !
 !
 ! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
