@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.8.1
+# v1.8.2
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -69,6 +69,7 @@ sed '/Suspended/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$
 sed '/Removed/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Free/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Redemption_period/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sed '/Suspended_or_reserved/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 awk -F' ' '$2=="Unknown"' $TEMPORARY.3 | cut -d' ' -f1 >> $TEMPORARY.4
 
 for ips in `cat $TEMPORARY.4`
@@ -97,6 +98,7 @@ sed '/Suspended/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$
 sed '/Removed/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Free/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Redemption_period/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
+sed '/Suspended_or_reserved/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 awk -F' ' '$2=="Unknown"' $TEMPORARY.7 | cut -d' ' -f1 >> $TEMPORARY.8
 
 for ips in `cat $TEMPORARY.8`

@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.5
+# Current Version: 1.0.6
 #
 #
 # Purpose:
@@ -93,7 +93,7 @@ check_domain_status()
     then
         TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($(NF-1));}')
     fi
-    if [ "${TLDTYPE}"  == "ua" -o "${TLDTYPE}"  == "pl" ];
+    if [ "${TLDTYPE}"  == "ua" -o "${TLDTYPE}"  == "pl" -o "${TLDTYPE}"  == "net" ];
     then
         SUBTLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($(NF-1)"."$(NF));}')
     fi
@@ -102,34 +102,12 @@ check_domain_status()
     #${WHOIS} -h ${WHOIS_SERVER} "=${1}" > ${WHOIS_TMP}
     # Let whois select server
 
-    WHS="$(${WHOIS} -h "whois.iana.org" "${TLDTYPE}" | ${GREP} 'whois:' | ${AWK} '{print $2}')"
-
-    if [ "${TLDTYPE}" == "aero" ];
-    then
-        ${WHOIS} -h whois.aero "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    elif [ "${TLDTYPE}" == "cn" ];
-    then
-       ${WHOIS} -h whois.cnnic.cn "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    elif [ "${TLDTYPE}" == "pl" ] && [ "${SUBTLDTYPE}" != "co.pl" ];
-    then
-       ${WHOIS} -h whois.dns.pl "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    elif [ "${SUBTLDTYPE}" == "co.pl" ];
-    then
-       ${WHOIS} -h whois.co.pl "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    elif [ "${TLDTYPE}" == "is" ];
-    then
-       ${WHOIS} -h whois.isnic.is "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    elif [ "${TLDTYPE}" == "stream" ];
-    then
-        ${WHOIS} -h whois.nic.stream "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    else
-        ${WHOIS} -h ${WHS} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-    fi
-
     if [ "${TLDTYPE}" == "kz" ];
     then
-       ${CURL} -s "https://api.ps.kz/kzdomain/domain-whois?username=test&password=test&input_format=http&output_format=get&dname=${1}" \
+        ${CURL} -s "https://api.ps.kz/kzdomain/domain-whois?username=test&password=test&input_format=http&output_format=get&dname=${1}" \
         | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_2_TMP}
+    else
+        ${WHOIS} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
     fi
 
     removed=$(cat ${WHOIS_TMP} | ${GREP} "The queried object does not exist: previous registration")
@@ -137,7 +115,7 @@ check_domain_status()
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
     export LC_ALL=en_US.UTF-8
 
-    if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento'); then
+    if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento\|expire on'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
 			adate=${adate%.}
 			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | ${AWK} -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
@@ -169,7 +147,7 @@ check_domain_status()
     suspended=$(cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding")
     active=$(cat ${WHOIS_TMP} | ${GREP} "Status: [[:space:]]*active")
     free=$(cat ${WHOIS_TMP} | ${GREP} "is free")
-    suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the Dot TK Registry" )
+    suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the" )
     redemption_period=$(cat ${WHOIS_TMP} | ${GREP} "redemptionPeriod" )
     reserved=$(cat ${WHOIS_TMP} | ${GREP} "is queued up for registration" )
 
