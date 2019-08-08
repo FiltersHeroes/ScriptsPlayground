@@ -4,11 +4,12 @@
 #
 # Based on domain-check-2.sh (https://github.com/click0/domain-check-2/blob/master/domain-check-2.sh)
 # and domains.sh script (https://github.com/tdulcet/Remote-Servers-Status/blob/master/domains.sh).
-# Many thanks for nixcraft (https://github.com/nixcraft), tdulcet (https://github.com/tdulcet), click0 (https://github.com/click0)
-# and all contributors of domain-check-2 script (https://github.com/click0/domain-check-2/graphs/contributors) !
+# Many thanks for nixcraft (https://github.com/nixcraft), tdulcet (https://github.com/tdulcet), click0 (https://github.com/click0),
+# Matty9191 (https://github.com/Matty9191) and all contributors of domain-check-2 script
+# (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.4
+# Current Version: 1.0.5
 #
 #
 # Purpose:
@@ -139,7 +140,7 @@ check_domain_status()
     if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
 			adate=${adate%.}
-			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | awk -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
+			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | ${AWK} -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
 				DOMAINDATE=$(${DATE} -d "$date" +"%d-%b-%Y-%T-%Z")
 				sec=$(( $(${DATE} -d "$date" +%s) - $(${DATE} -d "$NOW" +%s) ))
 				DOMAINDIFF=$(( sec / 86400 ))
