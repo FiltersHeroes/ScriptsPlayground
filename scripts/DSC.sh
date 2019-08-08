@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-
 #
 # Program: DSC <Domain Status Check>
-#
-# Author: hawkeye116477 < hawkeye116477 at gmail dot com >
 #
 # Based on domain-check-2.sh (https://github.com/click0/domain-check-2/blob/master/domain-check-2.sh)
 # and domains.sh script (https://github.com/tdulcet/Remote-Servers-Status/blob/master/domains.sh).
@@ -12,7 +9,6 @@
 #
 #
 # Current Version: 1.0.4
-#
 #
 #
 # Purpose:
@@ -38,7 +34,6 @@
 #
 #
 #
-
 PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/ssl/bin:/usr/sfw/bin
 export PATH
 
