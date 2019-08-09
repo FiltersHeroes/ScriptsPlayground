@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.6
+# Current Version: 1.0.7
 #
 #
 # Purpose:
@@ -115,7 +115,7 @@ check_domain_status()
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
     export LC_ALL=en_US.UTF-8
 
-    if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento\|expire on'); then
+    if adate=$(cat ${WHOIS_TMP} | ${GREP} -i 'expiration\|expires\|expiry\|renewal\|expire\|paid-till\|valid until\|exp date\|vencimiento'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
 			adate=${adate%.}
 			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | ${AWK} -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
