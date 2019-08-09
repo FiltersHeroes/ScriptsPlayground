@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v1.8.2
+# v1.9
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -86,9 +86,12 @@ do
     fi
 done
 
+# Kopiujemy adresy zawierające subdomeny do osobnego pliku
+grep -E '(.+\.)+.+\..+$' $TEMPORARY.5 > $TEMPORARY.sub
+
 # Zamieniamy subdomeny na domeny (beta)
 # https://ubuntuforums.org/showthread.php?t=873034&s=99fb8190182be62fbf8f81352b2fa4fa&p=5477397#post5477397
-awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" || $(NF-1) == "info" || $(NF-1) == "gov" || $(NF-1) == "biz" || $(NF-1) == "art" || $(NF-1) == "aid" || $(NF-1) == "agro" || $(NF-1) == "atm" || $(NF-1) == "auto" || $(NF-1) == "chem" || $(NF-1) == "gmina" || $(NF-1) == "gsm" || $(NF-1) == "mail" || $(NF-1) == "med" || $(NF-1) == "miasta" || $(NF-1) == "media" || $(NF-1) == "mil" || $(NF-1) == "nieruchomosci" || $(NF-1) == "nom" || $(NF-1) == "pc" || $(NF-1) == "powiat" || $(NF-1) == "priv" || $(NF-1) == "realestate" || $(NF-1) == "rel" || $(NF-1) == "sci" || $(NF-1) == "shop" || $(NF-1) == "sklep" || $(NF-1) == "sos" || $(NF-1) == "szkola" || $(NF-1) == "targi" || $(NF-1) == "tm" || $(NF-1) == "tourism" || $(NF-1) == "travel" || $(NF-1) == "turystyka" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.5 >> $TEMPORARY.6
+awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" || $(NF-1) == "info" || $(NF-1) == "gov" || $(NF-1) == "biz" || $(NF-1) == "art" || $(NF-1) == "aid" || $(NF-1) == "agro" || $(NF-1) == "atm" || $(NF-1) == "auto" || $(NF-1) == "chem" || $(NF-1) == "gmina" || $(NF-1) == "gsm" || $(NF-1) == "mail" || $(NF-1) == "med" || $(NF-1) == "miasta" || $(NF-1) == "media" || $(NF-1) == "mil" || $(NF-1) == "nieruchomosci" || $(NF-1) == "nom" || $(NF-1) == "pc" || $(NF-1) == "powiat" || $(NF-1) == "priv" || $(NF-1) == "realestate" || $(NF-1) == "rel" || $(NF-1) == "sci" || $(NF-1) == "shop" || $(NF-1) == "sklep" || $(NF-1) == "sos" || $(NF-1) == "szkola" || $(NF-1) == "targi" || $(NF-1) == "tm" || $(NF-1) == "tourism" || $(NF-1) == "travel" || $(NF-1) == "turystyka" || $(NF-1) == "in" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' $TEMPORARY.5 >> $TEMPORARY.6
 sort -u -o $TEMPORARY.6 $TEMPORARY.6
 
 $MAIN_PATH/scripts/DSC.sh -f $TEMPORARY.6 | tee $TEMPORARY.7
@@ -100,6 +103,21 @@ sed '/Free/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTE
 sed '/Redemption_period/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 sed '/Suspended_or_reserved/!d' $TEMPORARY.3 | cut -d' ' -f1 >> $MAIN_PATH/expired-domains/$FILTERLIST-expired.txt
 awk -F' ' '$2=="Unknown"' $TEMPORARY.7 | cut -d' ' -f1 >> $TEMPORARY.8
+
+# Musimy wiedzieć, które domeny subdomen są ok
+sed '/Valid/!d' $TEMPORARY.7 | cut -d' ' -f1 >> $TEMPORARY.d
+
+for d in `cat $TEMPORARY.d`
+do
+    # Jeżeli subdomeny padły, ale ich domeny działają, to subdomeny trafiają do kolejnego pliku tymczasowego
+    if grep -q "$d" "$TEMPORARY.sub"
+    then
+        grep "$d" "$TEMPORARY.sub" >> $TEMPORARY.8
+    fi
+done
+
+rm -rf "$TEMPORARY.d"
+rm -rf "$TEMPORARY.sub"
 
 for ips in `cat $TEMPORARY.8`
 do
