@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.5.1
+# v2.5.2
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -398,7 +398,7 @@ for i in "$@"; do
     # Dodawanie zmienionych sekcji do repozytorium git
     if [ ! "$RTM_MODE" ] ; then
         git add "$SECTIONS_DIR"/*
-        git commit -m "Update sections of $filter [ci skip]"
+        git commit -m "Update sections [ci skip]"
     fi
 
     # Ustawienie polskiej strefy czasowej
