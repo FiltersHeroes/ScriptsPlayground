@@ -17,16 +17,13 @@ page = http.request('GET', quote_page)
 # parse the html using beautiful soup and store in variable `soup`
 soup = BeautifulSoup(page.data, "html5lib")
 
-data = soup.find_all('div', class_="portal-logos")
+data = soup.select('.portal-logos a')
 
 final_links = []
 
-for div in data:
-    links = div.find_all('a')
-    for a in links:
-        a['href'] = tldextract.extract(a['href']).registered_domain
-        final_links.append(a['href'])
-        break
+for a in data:
+    a['href'] = tldextract.extract(a['href']).registered_domain
+    final_links.append(a['href'])
 
 final_links = sorted(set(final_links))
 print(','.join(final_links))
