@@ -16,7 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>."""
 # FOP version number
-VERSION = 3.12
+VERSION = 3.13
 
 # Import the key modules
 import collections, filecmp, os, re, subprocess, sys
@@ -69,7 +69,9 @@ KNOWNOPTIONS = ("badfilter", "collapse", "csp", "document", "elemhide",
                 "redirect=google-analytics_cx_api.js", "redirect=googlesyndication_adsbygoogle.js", "redirect=doubleclick_instream_ad_status.js",
                 "redirect=ampproject_v0.js", "redirect=noop.js", "redirect=noop.html", "redirect=noop.txt",
                 "redirect=noop-0.1s.mp3", "redirect=noop-1s.mp4", "redirect=1x1.gif", "redirect=2x2.png",
-                "redirect=3x2.png", "redirect=32x32.png", "1p", "3p", "inline-script", "xhr")
+                "redirect=3x2.png", "redirect=32x32.png",
+                "rewrite=abp-resource:blank-css", "rewrite=abp-resource:blank-js", "rewrite=abp-resource:blank-html", "rewrite=abp-resource:blank-mp3", "rewrite=abp-resource:blank-text", "rewrite=abp-resource:1x1-transparent-gif", "rewrite=abp-resource:2x2-transparent-png", "rewrite=abp-resource:3x2-transparent-png", "rewrite=abp-resource:32x32-transparent-png",
+                "1p", "3p", "inline-script", "xhr")
 
 # List the supported revision control system commands
 REPODEF = collections.namedtuple("repodef", "name, directory, locationoption, repodirectoryoption, checkchanges, difference, commit, pull, push")
