@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.5.2
+# v2.6
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
 MAIN_PATH=$(dirname "$0")/..
@@ -57,6 +57,7 @@ for i in "$@"; do
     find "${SECTIONS_DIR}" -type f -exec sed -i 's/[[:space:]]*$//' {} \;
 
     # Sortowanie sekcji z pominięciem tych, które zawierają specjalne instrukcje
+    python3 "$MAIN_PATH"/scripts/FOP.py --d "${SECTIONS_DIR}"
     find "${SECTIONS_DIR}" -type f ! -iname '*_specjalne_instrukcje.txt' -exec sort -uV -o {} {} \;
 
     # Obliczanie ilości sekcji (wystąpień słowa @include w template'cie)

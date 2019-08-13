@@ -16,7 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>."""
 # FOP version number
-VERSION = 3.11
+VERSION = 3.12
 
 # Import the key modules
 import collections, filecmp, os, re, subprocess, sys
@@ -37,9 +37,9 @@ if sys.version_info < (MAJORREQUIRED, MINORREQUIRED):
 from urllib.parse import urlparse
 
 # Compile regular expressions to match important filter parts (derived from Wladimir Palant's Adblock Plus source code)
-ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)#\??\@?#")
+ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)#?\$?\$?\??\@?#")
 FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)domain\=([^\,\s]+)$")
-ELEMENTPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#?\@?#\+?)([^{}]+)$")
+ELEMENTPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(\$?\$?#?\@?#\+?)([^{}]+)$")
 OPTIONPATTERN = re.compile(r"^(.*)\$(~?[\w\-]+(?:=[^,\s]+)?(?:,~?[\w\-]+(?:=[^,\s]+)?)*)$")
 
 # Compile regular expressions that match element tags and pseudo classes and strings and tree selectors; "@" indicates either the beginning or the end of a selector
@@ -326,14 +326,14 @@ def elementtidy (domains, separator, selector):
         ac = untag.group(5)
         selector = selector.replace("{before}{untag}{after}".format(before = bc, untag = untagname, after = ac), "{before}{after}".format(before = bc, after = ac), 1)
     # Make the remaining tags lower case wherever possible
-    for tag in each(SELECTORPATTERN, selector):
-        tagname = tag.group(1)
-        if tagname in selectoronlystrings or not tagname in selectorwithoutstrings: continue
-        if re.search(UNICODESELECTOR, selectorwithoutstrings) != None: break
-        ac = tag.group(3)
-        if ac == None:
-            ac = tag.group(4)
-        selector = selector.replace("{tag}{after}".format(tag = tagname, after = ac), "{tag}{after}".format(tag = tagname.lower(), after = ac), 1)
+    # for tag in each(SELECTORPATTERN, selector):
+    #     tagname = tag.group(1)
+    #     if tagname in selectoronlystrings or not tagname in selectorwithoutstrings: continue
+    #     if re.search(UNICODESELECTOR, selectorwithoutstrings) != None: break
+    #     ac = tag.group(3)
+    #     if ac == None:
+    #         ac = tag.group(4)
+    #     selector = selector.replace("{tag}{after}".format(tag = tagname, after = ac), "{tag}{after}".format(tag = tagname.lower(), after = ac), 1)
     # Make pseudo classes lower case where possible
     for pseudo in each(PSEUDOPATTERN, selector):
         pseudoclass = pseudo.group(1)
