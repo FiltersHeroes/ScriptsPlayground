@@ -16,7 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>."""
 # FOP version number
-VERSION = 3.9
+VERSION = 3.11
 
 # Import the key modules
 import collections, filecmp, os, re, subprocess, sys
@@ -39,7 +39,7 @@ from urllib.parse import urlparse
 # Compile regular expressions to match important filter parts (derived from Wladimir Palant's Adblock Plus source code)
 ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)#\??\@?#")
 FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)domain\=([^\,\s]+)$")
-ELEMENTPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#\@?#?\+?)([^{}]+)$")
+ELEMENTPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#?\@?#\+?)([^{}]+)$")
 OPTIONPATTERN = re.compile(r"^(.*)\$(~?[\w\-]+(?:=[^,\s]+)?(?:,~?[\w\-]+(?:=[^,\s]+)?)*)$")
 
 # Compile regular expressions that match element tags and pseudo classes and strings and tree selectors; "@" indicates either the beginning or the end of a selector
@@ -59,8 +59,8 @@ COMMITPATTERN = re.compile(r"^(A|M|P)\:\s(\((.+)\)\s)?(.*)$")
 # List the files that should not be sorted, either because they have a special sorting system or because they are not filter files
 IGNORE = ("output", "requirements.txt", "templates", "node_modules")
 
-# List all Adblock Plus options (excepting domain, which is handled separately), as of version 1.3.9
-KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
+# List all Adblock Plus and uBlock Origin options (excepting domain, which is handled separately), as of version 1.3.9
+KNOWNOPTIONS = ("badfilter", "collapse", "csp", "document", "elemhide",
                 "font", "genericblock", "generichide", "image", "match-case",
                 "object", "media", "object-subrequest", "other", "ping", "popup",
                 "script", "stylesheet", "subdocument", "third-party", "first-party",
@@ -222,8 +222,16 @@ def fopsort (filename):
                         filterlines = elementlines = 0
                     outputfile.write("{line}\n".format(line = line))
                 else:
-                    # Convert inject:script to +js
+                    # Convert script:inject to +js
                     line = line.replace("##script:inject", "##+js")
+
+                    # Convert deprecated noop resources to new names
+                    line = line.replace("redirect=noopjs", "redirect=noop.js")
+                    line = line.replace("redirect=noopframe", "redirect=noop.html")
+                    line = line.replace("redirect=nooptext", "redirect=noop.txt")
+                    line = line.replace("redirect=noopmp3-0.1s", "redirect=noop-0.1s.mp3")
+                    line = line.replace("redirect=noopmp4-1s", "redirect=noop-1s.mp4")
+
                     # Neaten up filters and, if necessary, check their type for the sorting algorithm
                     elementparts = re.match(ELEMENTPATTERN, line)
                     if elementparts:
