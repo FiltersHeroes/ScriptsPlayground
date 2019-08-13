@@ -1,3 +1,11 @@
 costam.pl##+js(set-constant.js, dobra_zabawa, trueFunc)
 hehe.pl##+js(abort-current-inline-script.js, dowcipy)
 test.pl###nlt_test:style(overflow: visible !important;)
+test.pl$$script[tag-content="łobuzowanie"]
+testy.pl$$script[tag-content="łobuzowanie"]
+inne.pl$$#test
+inny.pl$$#test
+blabla.com$$.test
+heh.com$$.test
+test.pl#$#html.fancybox-lock { overflow: auto !important; margin-right: 0 !important; }
+tests.pl#$#html.fancybox-lock { overflow: auto !important; margin-right: 0 !important; }
