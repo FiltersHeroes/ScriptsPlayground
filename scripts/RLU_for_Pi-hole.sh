@@ -185,7 +185,7 @@ if [[ "${usingDB}" == true ]]; then
 			fi
 			echo "[i] $no_prev_m"
 			# As we haven't yet migrated, we need to manually remove matches
-			# If we have a local mmotti-regex.list, read from that as it was used on the last install (pre-db)
+			# If we have a local list-regex.list, read from that as it was used on the last install (pre-db)
 			if [[ -s "${file_list_regex}" ]]; then
 				# Only return regexps in both the regex table and regex file
 				mapfile -t result <<< "$(comm -12 <(sort <<< "${str_regex}") <(sort < "${file_list_regex}"))"
