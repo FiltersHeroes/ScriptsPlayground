@@ -15,30 +15,37 @@ Additionaly we add that you can add this script to cron and have automatic updat
 Before doing any steps, we recommend backuping your existing regex list.
 
 If you are using the new **Pi-hole DB**
-```
+```bash
 sudo cp /etc/pihole/gravity.db /etc/pihole/gravity.db.bak
 ```
 
 If you are using the older style **regex.list**:
-```
+```bash
 sudo cp /etc/pihole/regex.list /etc/pihole/regex.list.bak
 ```
 
 ### Installation
 First download it:
 ```bash
-wget https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RHI_for_Pi-hole.sh | bash
+wget \
+https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RHI_for_Pi-hole.sh
 ```
 
 Then just run it with url to list as its parameter:
 ```bash
-path_to_script/RHI_for_Pi-hole.sh https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt
+path_to_script/RHI_for_Pi-hole.sh \
+https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt
 ```
 
 You can also install multiple lists at once:
 ```bash
-path_to_script/RHI_for_Pi-hole.sh https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
+path_to_script/RHI_for_Pi-hole.sh \
+https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt \
+https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 ```
+
+### Updating
+To update lists, you must repeat installation procedure. As we previously mentioned, you can add this script to cron to have automatic updates.
 
 ### Removal
 **Uninstallation script coming soon!**
