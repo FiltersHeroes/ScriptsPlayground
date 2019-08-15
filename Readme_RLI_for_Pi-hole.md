@@ -48,4 +48,15 @@ https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 To update lists, you must repeat installation procedure. As we previously mentioned, you can add this script to cron to have automatic updates.
 
 ### Removal
-**Uninstallation script coming soon!**
+To remove one of the installed regex lists, first you need to download uninstaller:
+```bash
+wget \
+https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.sh
+```
+
+Then just run it:
+```bash
+path_to_script/RLU_for_Pi-hole.sh
+```
+
+And choose list which you want to uninstall (just type number corresponding to the list).
