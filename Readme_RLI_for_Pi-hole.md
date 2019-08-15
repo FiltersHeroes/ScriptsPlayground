@@ -1,4 +1,4 @@
-# Regex Hosts Installer for Pi-hole
+# Regex Lists Installer for Pi-hole
 
 This script is based on https://github.com/mmotti/pihole-regex/blob/master/install.sh.
 All commands will need to be entered via Terminal (PuTTY or your SSH client of choice) after logging in.

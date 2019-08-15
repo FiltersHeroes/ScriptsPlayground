@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Regex Hosts Installer for Pi-hole
+# Regex Lists Installer for Pi-hole
 # Based on https://github.com/mmotti/pihole-regex/blob/master/install.sh
 
 for i in "$@"; do
