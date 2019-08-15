@@ -35,7 +35,7 @@ Then just run it with url to list as its parameter:
 path_to_script/RHI_for_Pi-hole.sh https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt
 ```
 
-You can also install multiple list at once:
+You can also install multiple lists at once:
 ```bash
 path_to_script/RHI_for_Pi-hole.sh https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 ```
