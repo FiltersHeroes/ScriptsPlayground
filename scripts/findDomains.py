@@ -9,7 +9,7 @@ import configparser
 from appdirs import *
 
 appname = "GroupsDomainsExtractor"
-appversion = "1.1.1"
+appversion = "1.1.2"
 
 def extractDomains():
     # specify the url
@@ -86,10 +86,10 @@ def loadGroup():
     config = configparser.ConfigParser()
     cfilepath = user_config_dir(appname)+'/groups.ini'
     config.read(cfilepath)
-    if not [*loadGroupList()]:
+    if not values['GROUP']:
         sg.Popup("Błąd", "Co mam wczytać? Powiedz mi, bo niestety moja szklana kula się stłukła.")
 
-    if [*loadGroupList()]:
+    if values['GROUP']:
         window.Element('URL').Update(config[values['GROUP']]['url'])
         window.Element('CSS').Update(config[values['GROUP']]['css'])
         window.Element('SEPARATOR').Update(config[values['GROUP']]['separator'])
