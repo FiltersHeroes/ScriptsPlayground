@@ -8,6 +8,10 @@ for i in "$@"; do
 remote_list_name=$(basename "$i" | cut -f 1 -d '.')
 db_gravity='/etc/pihole/gravity.db'
 file_pihole_regex='/etc/pihole/regex.list'
+if [ "$remote_list_name" == "regex" ];
+then
+	remote_list_name="regex_remote"
+fi
 file_list_regex=/etc/pihole/$remote_list_name.list
 file_list_remote_regex=$i
 installer_comment='github.com/PolishFiltersTeam/ScriptsPlayground'
