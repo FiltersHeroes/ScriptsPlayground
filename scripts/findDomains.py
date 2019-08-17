@@ -7,9 +7,10 @@ import PySimpleGUI as sg
 from tkinter import Tk
 import configparser
 from appdirs import *
+import os
 
 appname = "GroupsDomainsExtractor"
-appversion = "1.1.2"
+appversion = "1.1.3"
 
 def extractDomains():
     # specify the url
@@ -53,10 +54,10 @@ def extractDomains():
 def saveGroup():
     config = configparser.ConfigParser()
 
-    if not os.path.exists(user_config_dir(appname)):
-        os.mkdir(user_config_dir(appname))
+    if not os.path.exists(os.path.join(user_config_dir(), appname)):
+        os.mkdir(os.path.join(user_config_dir(), appname))
 
-    cfilepath=user_config_dir(appname)+'/groups.ini'
+    cfilepath=os.path.join(user_config_dir(), appname, 'groups.ini')
     config.read(cfilepath)
     if not values['GROUP_NAME']:
         sg.Popup("Błąd", "Nie tak szybko kowboju, wprowadź nazwę grupy!")
@@ -75,7 +76,7 @@ def saveGroup():
 
 def loadGroupList():
     config = configparser.ConfigParser()
-    cfilepath = user_config_dir(appname)+'/groups.ini'
+    cfilepath=os.path.join(user_config_dir(), appname, 'groups.ini')
     config.read(cfilepath)
     sections = []
     for each_section in config.sections():
@@ -84,7 +85,7 @@ def loadGroupList():
 
 def loadGroup():
     config = configparser.ConfigParser()
-    cfilepath = user_config_dir(appname)+'/groups.ini'
+    cfilepath=os.path.join(user_config_dir(), appname, 'groups.ini')
     config.read(cfilepath)
     if not values['GROUP']:
         sg.Popup("Błąd", "Co mam wczytać? Powiedz mi, bo niestety moja szklana kula się stłukła.")
