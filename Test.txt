@@ -1,20 +1,20 @@
  [Adblock Plus 2.0]
-! Checksum: 3Nyo1qvKQEeOdVHk2wiPcw
+! Checksum: w58AiV1RYDo5Zl7amUMWUw
 ! Title: Lista testowa
 ! Codename: Test
 ! Description: Lista przeznaczona do testowania skryptu.
-! Last modified: Mon, 19 Aug 2019, 22:10 UTC+02
-! Version: 2019.8.6
+! Last modified: Mon, 19 Aug 2019, 22:42 UTC+02
+! Version: 2019.8.7
 ! Expires: 2 days
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: Mon, 19 Aug 2019, 22:10 UTC+02
+! Aktualizacja: Mon, 19 Aug 2019, 22:42 UTC+02
 !
 !
 ! Testy
 costam.pl,inne.pl###test
 haha.pl##test
-hehe.pl,jeszczeinne.pl#?#.heh:-abp-contains(suchar)
-jeszczeinny.pl#?#.hehe:-abp-contains(suchar)
+hehe.pl,jeszczeinne.pl#?#.heh:-abp-contains(suchary)
+jeszczeinny.pl#?#.hehe:-abp-contains(suchary)
 test.pl###nlt_test
 !
 !
@@ -32,8 +32,8 @@ zniklogdzieszanami.pl###tralala
 aletojuzbylo.pl###iniewrociwiecej
 costam.pl,inne.pl###test
 haha.pl##test
-hehe.pl,jeszczeinne.pl#?#.heh:-abp-contains(suchar)
-jeszczeinny.pl#?#.hehe:-abp-contains(suchar)
+hehe.pl,jeszczeinne.pl#?#.heh:-abp-contains(suchary)
+jeszczeinny.pl#?#.hehe:-abp-contains(suchary)
 test2.pl###big_brother
 test.pl###nlt_test
 zniklogdzieszanami.pl###tralala
