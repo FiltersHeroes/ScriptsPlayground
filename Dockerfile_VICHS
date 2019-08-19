@@ -6,11 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates wget tzdata language-pack-pl python3 gettext-base
 
 # Set the locale
-RUN locale-gen pl_PL.UTF-8
-RUN update-locale LANG=pl_PL.UTF-8 LANGUAGE=pl LC_TIME=pl_PL.UTF-8
-RUN export LANG=pl_PL.UTF-8
-RUN export LC_TIME=pl_PL.UTF-8
-RUN export LANGUAGE=pl
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+locale-gen
 RUN dpkg-reconfigure --frontend=noninteractive locales
 RUN locale
 
