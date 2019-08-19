@@ -511,7 +511,8 @@ for i in "$@"; do
     # Sprawdzanie czy aktualizacja naprawdę jest konieczna
     if [ "$old_md5" != "$new_md5" ] || [ "$FORCED" ]; then
         # Aktualizacja daty i godziny w polu „Last modified"
-        modified=$(LC_ALL=en_US.UTF-8; date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
+        export LC_TIME="en_US.UTF-8"
+        modified=$(date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
         sed -i "s|@modified|$modified|g" "$i"
 
         # Aktualizacja wersji
@@ -533,7 +534,8 @@ for i in "$@"; do
         sed -i "s|@version|$version|g" "$i"
 
         # Aktualizacja pola „aktualizacja"
-        aktualizacja=$(LC_ALL=pl_PL.UTF-8; date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
+        export LC_TIME="pl_PL.UTF-8"
+        aktualizacja=$(date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
         sed -i "s|@aktualizacja|$aktualizacja|g" "$i"
 
         # Aktualizacja sumy kontrolnej
