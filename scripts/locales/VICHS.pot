@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019 PolishFiltersTeam
+# This file is distributed under the same license as the VICHS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: VICHS\n"
+"Report-Msgid-Bugs-To: PolishJarvis@gmail.com\n"
+"POT-Creation-Date: 2019-08-19 11:39+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: VICHS.sh:133 VICHS.sh:156 VICHS.sh:181 VICHS.sh:208 VICHS.sh:260
+#: VICHS.sh:324 VICHS.sh:404 VICHS.sh:429
+msgid "Error during file download"
+msgstr ""
+
+#: VICHS.sh:459
+msgid "Update sections"
+msgstr ""
+
+#: VICHS.sh:528 VICHS.sh:532
+#, sh-format
+msgid "Update $filter to version $version"
+msgstr ""
+
+#: VICHS.sh:530
+#, sh-format
+msgid ""
+"Enter extended commit description to $filter list, e.g 'Fix #1, fix "
+"#2' (without quotation marks; if you do not want an extended description, "
+"you can simply enter nothing): "
+msgstr ""
+
+#: VICHS.sh:535
+#, sh-format
+msgid ""
+"Nothing new has been added to $filter list. If you still want to update it, "
+"then set the variable FORCED and run script again."
+msgstr ""
+
+#: VICHS.sh:547
+msgid "Do you want to send changed files to git now?"
+msgstr ""
+
+#: VICHS.sh:548 VICHS.sh:550
+msgid "Yes"
+msgstr ""
+
+#: VICHS.sh:548 VICHS.sh:553
+msgid "No"
+msgstr ""

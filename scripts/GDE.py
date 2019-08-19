@@ -43,10 +43,10 @@ if platform.system() == "Windows":
         os.environ['LANG'] = lang
 
 appname = "GroupsDomainsExtractor"
-appversion = "1.2.0"
+appversion = "1.2.1"
 
-localedir = os.path.join(sys.path[0], 'GDE_locales')
-translate = gettext.translation('base', localedir, fallback=True)
+localedir = os.path.join(sys.path[0], 'locales')
+translate = gettext.translation('GDE', localedir, fallback=True)
 _ = translate.gettext
 cfilepath = os.path.join(user_config_dir(), appname, 'groups.ini')
 

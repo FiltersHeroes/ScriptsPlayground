@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019 Polish Filters Team
+# This file is distributed under the same license as the VICHS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VICHS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-19 11:39+0200\n"
+"PO-Revision-Date: 2019-08-19 11:41+0200\n"
+"Last-Translator: hawkeye116477\n"
+"Language-Team: Polish Filters Team\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: VICHS.sh:133 VICHS.sh:156 VICHS.sh:181 VICHS.sh:208 VICHS.sh:260
+#: VICHS.sh:324 VICHS.sh:404 VICHS.sh:429
+msgid "Error during file download"
+msgstr "Błąd w trakcie pobierania pliku"
+
+#: VICHS.sh:459
+msgid "Update sections"
+msgstr "Aktualizacja sekcji"
+
+#: VICHS.sh:528 VICHS.sh:532
+#, sh-format
+msgid "Update $filter to version $version"
+msgstr "Aktualizacja listy $filter do wersji $version"
+
+#: VICHS.sh:530
+#, sh-format
+msgid ""
+"Enter extended commit description to $filter list, e.g 'Fix #1, fix "
+"#2' (without quotation marks; if you do not want an extended description, "
+"you can simply enter nothing): "
+msgstr ""
+"Podaj rozszerzony opis commita do listy $filter, np. 'Fix #1, fix #2' (bez "
+"ciapek; jeśli nie chcesz rozszerzonego opisu, to możesz po prostu nic nie "
+"wpisywać): "
+
+#: VICHS.sh:535
+#, sh-format
+msgid ""
+"Nothing new has been added to $filter list. If you still want to update it, "
+"then set the variable FORCED and run script again."
+msgstr ""
+"Nic nowego nie zostało dodane do listy $filter. Jeżeli mimo to chcesz ją "
+"zaktualizować, to ustaw zmienną FORCED i uruchom ponownie skrypt."
+
+#: VICHS.sh:547
+msgid "Do you want to send changed files to git now?"
+msgstr "Czy chcesz teraz wysłać do gita zmienione pliki?"
+
+#: VICHS.sh:548 VICHS.sh:550
+msgid "Yes"
+msgstr "Tak"
+
+#: VICHS.sh:548 VICHS.sh:553
+msgid "No"
+msgstr "Nie"
