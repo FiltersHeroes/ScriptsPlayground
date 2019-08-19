@@ -14,7 +14,6 @@ RUN locale-gen pl_PL.UTF-8
 # set system-wide locale settings
 ENV LANG pl_PL.UTF-8
 ENV LANGUAGE pl_PL
-ENV LC_ALL pl_PL.UTF-8
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
 
