@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y git locales openssh-client ca-certifica
 
 # Set the locale
 RUN dpkg-reconfigure --frontend=noninteractive locales
-
+RUN locale-gen pl_PL.UTF-8
+RUN update-locale LANG=pl_PL.UTF-8 LANGUAGE=pl LC_TIME=pl_PL.UTF-8
 RUN locale
 
 CMD ["/bin/sh"]
