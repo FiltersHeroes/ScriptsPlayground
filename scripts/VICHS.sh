@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.8.6
+# v2.8.7
 
 # MIT License
 
@@ -514,7 +514,7 @@ for i in "$@"; do
     # Sprawdzanie czy aktualizacja naprawdę jest konieczna
     if [ "$old_md5" != "$new_md5" ] || [ "$FORCED" ]; then
         # Aktualizacja daty i godziny w polu „Last modified"
-        if grep -q '@modified'; then
+        if grep -q '@modified' "$i"; then
             export LC_TIME="en_US.UTF-8"
             modified=$(date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
             sed -i "s|@modified|$modified|g" "$i"
@@ -536,10 +536,12 @@ for i in "$@"; do
             version=$(date +"%Y%m%d%H%M")
         fi
 
-        sed -i "s|@version|$version|g" "$i"
+        if grep -q '@version' "$i"; then
+            sed -i "s|@version|$version|g" "$i"
+        fi
 
         # Aktualizacja pola „aktualizacja"
-        if grep -q '@aktualizacja'; then
+        if grep -q '@aktualizacja' "$i"; then
             export LC_TIME="pl_PL.UTF-8"
             aktualizacja=$(date +"$(grep -oP -m 1 '@dateFormat \K.*' "$CONFIG")")
             sed -i "s|@aktualizacja|$aktualizacja|g" "$i"
