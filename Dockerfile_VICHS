@@ -12,10 +12,15 @@ RUN sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
 # generate chosen locale
 RUN locale-gen pl_PL.UTF-8
 RUN locale-gen en_US.UTF-8
+
 # set system-wide locale settings
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US
+
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
+
+# Set timezone to UTC by default
+RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
 CMD ["/bin/sh"]
