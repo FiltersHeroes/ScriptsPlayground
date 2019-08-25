@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VICHS\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-19 11:39+0200\n"
+"Report-Msgid-Bugs-To: PolishJarvis@gmail.com\n"
+"POT-Creation-Date: 2019-08-25 14:12+0200\n"
 "PO-Revision-Date: 2019-08-19 11:41+0200\n"
 "Last-Translator: hawkeye116477\n"
 "Language-Team: Polish Filters Team\n"
@@ -17,21 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: VICHS.sh:133 VICHS.sh:156 VICHS.sh:181 VICHS.sh:208 VICHS.sh:260
-#: VICHS.sh:324 VICHS.sh:404 VICHS.sh:429
+#: VICHS.sh:154
 msgid "Error during file download"
 msgstr "Błąd w trakcie pobierania pliku"
 
-#: VICHS.sh:459
+#: VICHS.sh:437
 msgid "Update sections"
 msgstr "Aktualizacja sekcji"
 
-#: VICHS.sh:528 VICHS.sh:532
+#: VICHS.sh:511 VICHS.sh:515
 #, sh-format
 msgid "Update $filter to version $version"
 msgstr "Aktualizacja listy $filter do wersji $version"
 
-#: VICHS.sh:530
+#: VICHS.sh:513
 #, sh-format
 msgid ""
 "Enter extended commit description to $filter list, e.g 'Fix #1, fix "
@@ -42,7 +41,7 @@ msgstr ""
 "ciapek; jeśli nie chcesz rozszerzonego opisu, to możesz po prostu nic nie "
 "wpisywać): "
 
-#: VICHS.sh:535
+#: VICHS.sh:518
 #, sh-format
 msgid ""
 "Nothing new has been added to $filter list. If you still want to update it, "
@@ -51,14 +50,14 @@ msgstr ""
 "Nic nowego nie zostało dodane do listy $filter. Jeżeli mimo to chcesz ją "
 "zaktualizować, to ustaw zmienną FORCED i uruchom ponownie skrypt."
 
-#: VICHS.sh:547
+#: VICHS.sh:530
 msgid "Do you want to send changed files to git now?"
 msgstr "Czy chcesz teraz wysłać do gita zmienione pliki?"
 
-#: VICHS.sh:548 VICHS.sh:550
+#: VICHS.sh:531 VICHS.sh:533
 msgid "Yes"
 msgstr "Tak"
 
-#: VICHS.sh:548 VICHS.sh:553
+#: VICHS.sh:531 VICHS.sh:536
 msgid "No"
 msgstr "Nie"

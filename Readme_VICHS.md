@@ -52,6 +52,8 @@ Then you should add some instructions into it, currently following instructions 
 
 `@URLinclude https://example.com/mylist.txt` - includes external filterlist/section into the final filterlist file, adds comments about source of external filterlist
 
+`@URLUinclude https://example.com/mylist.txt` - includes external filterlist/section with only unique rules into the final filterlist file, adds comments about source of external filterlist
+
 `@NWLinclude section_file_name` - make whitelist from direct blocking rules from section using standard method
 
 `@URLNWLinclude https://example.com/mylist.txt` - make whitelist from direct blocking rules from external section using standard method
