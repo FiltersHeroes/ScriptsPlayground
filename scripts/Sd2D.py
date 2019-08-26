@@ -27,6 +27,9 @@ import tldextract
 import os
 import sys
 
+if not os.path.exists('~/.cache'):
+    os.makedirs('~/.cache')
+
 extract = tldextract.TLDExtract(cache_file='~/.cache/tldextract.cache', include_psl_private_domains=True)
 extract.update()
 subdomains_file = sys.argv[1]
