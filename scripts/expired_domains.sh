@@ -45,6 +45,7 @@ for i in "$@"; do
     sed -i '/[/\*]/d' "$TEMPORARY"
     sed -ni '/\./p' "$TEMPORARY"
     sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" $TEMPORARY
+    sed -i '/^$/d' $TEMPORARY
     sort -u -o "$TEMPORARY" "$TEMPORARY"
 
     while IFS= read -r domain; do
