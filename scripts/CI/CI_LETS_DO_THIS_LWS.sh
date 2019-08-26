@@ -25,7 +25,7 @@ mv $LWS.2 $SCRIPT_PATH/LWS_temp.txt
 
 patch -Np1 -i ./scripts/no_sc.patch
 
-./scripts/ECODFF.sh $SCRIPT_PATH/LWS_temp.txt
+NO_SC="true" ./scripts/ECODFF.sh $SCRIPT_PATH/LWS_temp.txt
 
 EXPIRED=$MAIN_PATH/expired-domains/LWS_temp-expired.txt
 UNKNOWN=$MAIN_PATH/expired-domains/LWS_temp-unknown.txt

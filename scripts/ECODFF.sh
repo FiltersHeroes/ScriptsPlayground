@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.11.1
+# v1.12
 
 # MIT License
 
@@ -83,40 +83,42 @@ for i in "$@"; do
     sed -i "s/^www\.//" "$TEMPORARY".2
     sort -u -o "$TEMPORARY".2 "$TEMPORARY".2
 
-    "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".2 | tee "$TEMPORARY".3
+    # Kopiujemy adresy zawierające subdomeny do osobnego pliku
+    grep -E '(.+\.)+.+\..+$' "$TEMPORARY".2 >"$TEMPORARY".sub
+
+    # Zamieniamy subdomeny na domeny
+    python3 "$SCRIPT_PATH"/Sd2D.py "$TEMPORARY".2 >> "$TEMPORARY".3
+    sort -u -o "$TEMPORARY".3 "$TEMPORARY".3
+
+    "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".3 | tee "$TEMPORARY".4
 
     touch "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
 
     {
-        sed '/Expired/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Book_blocked/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Suspended/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Removed/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Free/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Redemption_period/!d' "$TEMPORARY".3 | cut -d' ' -f1
-        sed '/Suspended_or_reserved/!d' "$TEMPORARY".3 | cut -d' ' -f1
+        sed '/Expired/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Book_blocked/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Suspended/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Removed/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Free/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Redemption_period/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        sed '/Suspended_or_reserved/!d' "$TEMPORARY".4 | cut -d' ' -f1
     } >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
-    awk -F' ' '$2=="Unknown"' "$TEMPORARY".3 | cut -d' ' -f1 >> "$TEMPORARY".4
+    awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >> "$TEMPORARY".5
 
     while IFS= read -r domain; do
         status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
         if [ "$status_code" -eq "000" ]; then
-            echo "$domain" >> "$TEMPORARY".5
-        elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ]; then
+            echo "$domain" >> "$TEMPORARY".6
+        elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ ! "$NO_SC" ]; then
             echo "$domain $status_code" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+        elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ "$NO_SC" ]; then
+            echo "$domain" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
         else
             echo "Test"
         fi
-    done < "$TEMPORARY".4
+    done < "$TEMPORARY".5
 
-    # Kopiujemy adresy zawierające subdomeny do osobnego pliku
-    grep -E '(.+\.)+.+\..+$' "$TEMPORARY".5 >"$TEMPORARY".sub
-
-    # Zamieniamy subdomeny na domeny (beta)
-    # https://ubuntuforums.org/showthread.php?t=873034&s=99fb8190182be62fbf8f81352b2fa4fa&p=5477397#post5477397
-    awk -F. '{if ($(NF-1) == "co"|| $(NF-1) == "com" || $(NF-1) == "net" || $(NF-1) == "edu" || $(NF-1) == "org" || $(NF-1) == "info" || $(NF-1) == "gov" || $(NF-1) == "biz" || $(NF-1) == "art" || $(NF-1) == "aid" || $(NF-1) == "agro" || $(NF-1) == "atm" || $(NF-1) == "auto" || $(NF-1) == "chem" || $(NF-1) == "gmina" || $(NF-1) == "gsm" || $(NF-1) == "mail" || $(NF-1) == "med" || $(NF-1) == "miasta" || $(NF-1) == "media" || $(NF-1) == "mil" || $(NF-1) == "nieruchomosci" || $(NF-1) == "nom" || $(NF-1) == "pc" || $(NF-1) == "powiat" || $(NF-1) == "priv" || $(NF-1) == "realestate" || $(NF-1) == "rel" || $(NF-1) == "sci" || $(NF-1) == "shop" || $(NF-1) == "sklep" || $(NF-1) == "sos" || $(NF-1) == "szkola" || $(NF-1) == "targi" || $(NF-1) == "tm" || $(NF-1) == "tourism" || $(NF-1) == "travel" || $(NF-1) == "turystyka" || $(NF-1) == "in" ) printf $(NF-2)"."; printf $(NF-1)"."$(NF)"\n";}' "$TEMPORARY".5 >> "$TEMPORARY".6
-    sort -u -o "$TEMPORARY".6 "$TEMPORARY".6
 
     "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".6 | tee "$TEMPORARY".7
 
@@ -127,10 +129,10 @@ for i in "$@"; do
         sed '/Removed/!d' "$TEMPORARY".7 | cut -d' ' -f1
         sed '/Free/!d' "$TEMPORARY".7 | cut -d' ' -f1
         sed '/Redemption_period/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Suspended_or_reserved/!d' "$TEMPORARY".3 | cut -d' ' -f1
+        sed '/Suspended_or_reserved/!d' "$TEMPORARY".7 | cut -d' ' -f1
     } >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
-    awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >> "$TEMPORARY".8
+    awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >> "$TEMPORARY".7
 
     # Musimy wiedzieć, które domeny subdomen są ok
     sed '/Valid/!d' "$TEMPORARY".7 | cut -d' ' -f1 >> "$TEMPORARY".d
@@ -147,8 +149,10 @@ for i in "$@"; do
 
     while IFS= read -r domain; do
         status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
-        if [ "$status_code" -ne "200" ]; then
+        if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
             echo "$domain $status_code" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+        elif [ "$status_code" -ne "200" ] && [ "$NO_SC" ]; then
+            echo "$domain" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
         else
             echo "Test"
         fi
