@@ -1,8 +1,5 @@
 FROM ubuntu:latest
 
-RUN useradd -m example
-USER example
-
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -22,5 +19,8 @@ ENV LANGUAGE en_US
 
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
+
+RUN useradd -m example
+USER example
 
 CMD ["/bin/sh"]
