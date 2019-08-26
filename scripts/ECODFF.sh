@@ -1,7 +1,29 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.11
+# v1.11.1
+
+# MIT License
+
+# Copyright (c) 2019 Polish Filters Team
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 SCRIPT_PATH=$(dirname "$0")
 
@@ -138,3 +160,49 @@ for i in "$@"; do
     rm -rf "$TEMPORARY"
 
 done
+
+# Lokalizacja pliku konfiguracyjnego
+CONFIG=$SCRIPT_PATH/ECODFF.config
+
+COMMIT_MODE=$(grep -oP -m 1 '@commit_mode true' "$CONFIG")
+commit_message=$(grep -oP -m 1 '@commit \K.*' "$CONFIG")
+
+if [ "$COMMIT_MODE" ] && [ -n "$(git status --porcelain)" ]; then
+    cd ./expired-domains
+    for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
+    cd "$MAIN_PATH" || exit
+    if [ "$CI" = "true" ] ; then
+        CI_USERNAME=$(grep -oP -m 1 '@CIusername \K.*' "$CONFIG")
+        CI_EMAIL=$(grep -oP -m 1 '@CIemail \K.*' "$CONFIG")
+        git config --global user.name "${CI_USERNAME}"
+        git config --global user.email "${CI_EMAIL}"
+    fi
+    git add "$MAIN_PATH"/expired-domains/
+    if [ "$commit_message" ] && [ ! "$CI" ]; then
+        git commit -m "$commit_message"
+    elif [ ! "$commit_message" ] && [ ! "$CI" ]; then
+        git commit -m "Expired domains check"
+    elif [ ! "$commit_message" ] && [ "$CI" ]; then
+        git commit -m "Expired domains check [ci skip]"
+    elif [ "$commit_message" ] && [ "$CI" ]; then
+        git commit -m "$commit_message [ci skip]"
+    fi
+    commited=$(git cherry -v)
+    if [ "$commited" ]; then
+        if [ "$CI" = "true" ]; then
+            GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
+            git push https://"${CI_USERNAME}":"${GIT_TOKEN}"@"${GIT_SLUG}" HEAD:master >/dev/null 2>&1
+        else
+            printf "%s\n" "Do you want to send changed files to git now?"
+            select yn in "Yes" "No"; do
+                case $yn in
+                Yes)
+                    git push
+                    break
+                    ;;
+                No) break ;;
+                esac
+            done
+        fi
+    fi
+fi

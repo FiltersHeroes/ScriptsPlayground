@@ -16,5 +16,5 @@ cd "$MAIN_PATH" || exit
 git config --global user.email "PolishJarvis@int.pl"
 git config --global user.name "PolishJarvis"
 git add --all
-git commit -m "Check [ci skip]"
+git commit -m "Expired domains check [ci skip]"
 git push https://PolishJarvis:${GIT_TOKEN}@github.com/PolishFiltersTeam/ScriptsPlayground.git HEAD:master > /dev/null 2>&1
