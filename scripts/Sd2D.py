@@ -26,9 +26,13 @@ SOFTWARE."""
 import tldextract
 import os
 import sys
+from pathlib import Path
 
-if not os.path.exists('~/.cache'):
-    os.makedirs('~/.cache')
+home = str(Path.home())
+cachePath = os.path.join(home, '.cache')
+
+if not os.path.exists(cachePath):
+    os.mkdir(cachePath)
 
 extract = tldextract.TLDExtract(cache_file='~/.cache/tldextract.cache', include_psl_private_domains=True)
 extract.update()
