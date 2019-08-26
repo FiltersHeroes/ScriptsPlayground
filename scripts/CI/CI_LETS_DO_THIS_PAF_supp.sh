@@ -27,7 +27,7 @@ mv push_suplement.txt PAF_push_supp.txt
 mv scroll_film_suplement.txt PAF_scroll_film_suplement.txt
 mv scroll_film_AG.txt PAF_scroll_film_AG.txt
 
-./scripts/expired_domains.sh ./PAF_backgrounds_self-advertising_supp.txt ./PAF_tagged_internal_links.txt ./PAF_newsletters_supp.txt ./PAF_inne_nie_dla_ff.txt ./PAF_inne_AG.txt ./PAF_inne_bez_html.txt ./PAF_inne_html.txt ./PAF_inne_suplement.txt ./PAF_pop-ups_supp.txt ./PAF_push_supp.txt ./PAF_scroll_film_suplement.txt ./PAF_scroll_film_AG.txt
+./scripts/ECODFF.sh ./PAF_backgrounds_self-advertising_supp.txt ./PAF_tagged_internal_links.txt ./PAF_newsletters_supp.txt ./PAF_inne_nie_dla_ff.txt ./PAF_inne_AG.txt ./PAF_inne_bez_html.txt ./PAF_inne_html.txt ./PAF_inne_suplement.txt ./PAF_pop-ups_supp.txt ./PAF_push_supp.txt ./PAF_scroll_film_suplement.txt ./PAF_scroll_film_AG.txt
 
 rm -r ./PAF_backgrounds_self-advertising_supp.txt
 rm -r ./PAF_tagged_internal_links.txt

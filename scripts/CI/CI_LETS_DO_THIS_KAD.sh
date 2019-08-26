@@ -6,5 +6,5 @@ cd $sciezka/../..
 
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
 
-./scripts/expired_domains.sh ./KAD.txt
+./scripts/ECODFF.sh ./KAD.txt
 rm -r ./KAD.txt

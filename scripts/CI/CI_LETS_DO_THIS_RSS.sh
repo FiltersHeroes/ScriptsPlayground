@@ -10,6 +10,6 @@ wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishRSSFilters/master
 
 mv suplement.txt polish_rss_filters_supp.txt
 
-./scripts/expired_domains.sh ./polish_rss_filters.txt ./polish_rss_filters_supp.txt
+./scripts/ECODFF.sh ./polish_rss_filters.txt ./polish_rss_filters_supp.txt
 rm -r ./polish_rss_filters.txt
 rm -r ./polish_rss_filters_supp.txt

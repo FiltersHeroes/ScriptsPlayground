@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/
 wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_push.txt
 wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_scrolling_videos.txt
 
-./scripts/expired_domains.sh ./PAF_arrows.txt ./PAF_backgrounds_self-advertising.txt ./PAF_contact_feedback_widgets.txt ./PAF_newsletters.txt ./PAF_other_widgets.txt ./PAF_pop-ups.txt ./PAF_push.txt ./PAF_scrolling_videos.txt
+./scripts/ECODFF.sh ./PAF_arrows.txt ./PAF_backgrounds_self-advertising.txt ./PAF_contact_feedback_widgets.txt ./PAF_newsletters.txt ./PAF_other_widgets.txt ./PAF_pop-ups.txt ./PAF_push.txt ./PAF_scrolling_videos.txt
 
 rm -r ./PAF_arrows.txt
 rm -r ./PAF_backgrounds_self-advertising.txt

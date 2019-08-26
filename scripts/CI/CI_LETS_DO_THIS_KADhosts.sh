@@ -8,5 +8,5 @@ wget https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/section
 
 mv hostsplus.txt KADhosts.txt
 
-./scripts/expired_domains.sh ./KADhosts.txt
+./scripts/ECODFF.sh ./KADhosts.txt
 rm -r ./KADhosts.txt
