@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.10
+# v1.11
 
 SCRIPT_PATH=$(dirname "$0")
 
@@ -12,7 +12,7 @@ cd "$MAIN_PATH" || exit
 
 for i in "$@"; do
 
-    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)\@?(#|\$)\K.*' "$i")
+    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)\@?(#|\$\$)\K.*' "$i")
 
     pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' "$i")
 
@@ -44,6 +44,7 @@ for i in "$@"; do
     sed -i "s|\~||" "$TEMPORARY"
     sed -i '/[/\*]/d' "$TEMPORARY"
     sed -ni '/\./p' "$TEMPORARY"
+    sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" $TEMPORARY
     sort -u -o "$TEMPORARY" "$TEMPORARY"
 
     while IFS= read -r domain; do
