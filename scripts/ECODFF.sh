@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.12
+# v1.13
 
 # MIT License
 
@@ -34,9 +34,9 @@ cd "$MAIN_PATH" || exit
 
 for i in "$@"; do
 
-    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)\@?(#|\$\$)\K.*' "$i")
+    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$)' "$i")
 
-    pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' "$i")
+    pagePipe=$(pcregrep -o1 '(?:\$|\,)domain\=([^\,\s]+)$' "$i")
 
     pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' "$i")
 
@@ -167,9 +167,10 @@ done
 
 # Lokalizacja pliku konfiguracyjnego
 CONFIG=$SCRIPT_PATH/ECODFF.config
-
-COMMIT_MODE=$(grep -oP -m 1 '@commit_mode true' "$CONFIG")
-commit_message=$(grep -oP -m 1 '@commit \K.*' "$CONFIG")
+if [ -f "$CONFIG" ]; then
+    COMMIT_MODE=$(grep -oP -m 1 '@commit_mode true' "$CONFIG")
+    commit_message=$(grep -oP -m 1 '@commit \K.*' "$CONFIG")
+fi
 
 if [ "$COMMIT_MODE" ] && [ -n "$(git status --porcelain)" ]; then
     cd ./expired-domains
