@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.13
+# v1.14
 
 # MIT License
 
@@ -36,7 +36,7 @@ for i in "$@"; do
 
     pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$)' "$i")
 
-    pagePipe=$(pcregrep -o1 '(?:\$|\,)domain\=([^\,\s]+)$' "$i")
+    pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' "$i")
 
     pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' "$i")
 
