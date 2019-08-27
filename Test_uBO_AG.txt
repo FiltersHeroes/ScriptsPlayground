@@ -1,11 +1,11 @@
-! Checksum: M084N3bfICU+3nvylImSsg
+! Checksum: 9TWc1DY5ZGOVF3Eni6ArqA
 ! Title: Lista testowa - uzupełnienie do uBO i AG
 ! Codename: Test - supplement
-! Last modified: Tue, 20 Aug 2019, 00:08 UTC+02
+! Last modified: Tue, 27 Aug 2019, 12:43 UTC+02
 ! Version: 2019.8.2
 ! Expires: 2 days
 ! Copyright © 2018 Polish Filters Team
-! Aktualizacja: wto, 20 sie 2019, 00:08 UTC+02
+! Aktualizacja: wto, 27 sie 2019, 12:43 UTC+02
 !
 !
 ! Testy
@@ -20,16 +20,12 @@ zniklogdzieszanami.pl###tralala:style(overflow: auto !important;)
 !
 !
 ! Testy2
-blabla.com$$.test
+blabla.com,heh.com$$.test
 costam.pl##+js(set-constant.js, dobra_zabawa, trueFunc)
 hehe.pl##+js(abort-current-inline-script.js, dowcipy)
-heh.com$$.test
-inne.pl$$#test
-inny.pl$$#test
-tests.pl#$#html.fancybox-lock { overflow: auto !important; margin-right: 0 !important; }
-testy.pl$$script[tag-content="łobuzowanie"]
+inne.pl,inny.pl$$#test
 test.pl###nlt_test:style(overflow: visible !important;)
-test.pl#$#html.fancybox-lock { overflow: auto !important; margin-right: 0 !important; }
-test.pl$$script[tag-content="łobuzowanie"]
+test.pl,tests.pl#$#html.fancybox-lock { overflow: auto !important; margin-right: 0 !important; }
+test.pl,testy.pl$$script[tag-content="łobuzowanie"]
 !
 !
