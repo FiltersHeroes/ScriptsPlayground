@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.14.1
+# v1.14.2
 
 # MIT License
 
@@ -89,6 +89,7 @@ for i in "$@"; do
 
         # Zamieniamy subdomeny na domeny
         python3 "$SCRIPT_PATH"/Sd2D.py "$TEMPORARY".2 >>"$TEMPORARY".3
+        sed -i '/^$/d' "$TEMPORARY".3
         sort -u -o "$TEMPORARY".3 "$TEMPORARY".3
     fi
 
