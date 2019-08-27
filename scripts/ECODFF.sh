@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.14
+# v1.14.1
 
 # MIT License
 
@@ -58,7 +58,7 @@ for i in "$@"; do
         echo "$pagePipe"
         echo "$pageDoublePipe"
         echo "$hosts"
-    } >> "$TEMPORARY"
+    } >>"$TEMPORARY"
 
     sed -i "s/[|]/\n/g" "$TEMPORARY"
     sed -i "s/\,/\n/g" "$TEMPORARY"
@@ -66,100 +66,119 @@ for i in "$@"; do
     sed -i "s|\~||" "$TEMPORARY"
     sed -i '/[/\*]/d' "$TEMPORARY"
     sed -ni '/\./p' "$TEMPORARY"
-    sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" $TEMPORARY
-    sed -i '/^$/d' $TEMPORARY
+    sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" "$TEMPORARY"
+    sed -i '/^$/d' "$TEMPORARY"
     sort -u -o "$TEMPORARY" "$TEMPORARY"
 
     while IFS= read -r domain; do
         hostname=$(host "${domain}")
         if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
-            echo "$domain" >> "$TEMPORARY".2
+            echo "$domain" >>"$TEMPORARY".2
         else
             echo "Test"
         fi
-    done < "$TEMPORARY"
+    done <"$TEMPORARY"
 
-    sed -i "s/^www[0-9]\.//" "$TEMPORARY".2
-    sed -i "s/^www\.//" "$TEMPORARY".2
-    sort -u -o "$TEMPORARY".2 "$TEMPORARY".2
+    if [ -f "$TEMPORARY.2" ]; then
+        sed -i "s/^www[0-9]\.//" "$TEMPORARY".2
+        sed -i "s/^www\.//" "$TEMPORARY".2
+        sort -u -o "$TEMPORARY".2 "$TEMPORARY".2
 
-    # Kopiujemy adresy zawierające subdomeny do osobnego pliku
-    grep -E '(.+\.)+.+\..+$' "$TEMPORARY".2 >"$TEMPORARY".sub
+        # Kopiujemy adresy zawierające subdomeny do osobnego pliku
+        grep -E '(.+\.)+.+\..+$' "$TEMPORARY".2 >"$TEMPORARY".sub
 
-    # Zamieniamy subdomeny na domeny
-    python3 "$SCRIPT_PATH"/Sd2D.py "$TEMPORARY".2 >> "$TEMPORARY".3
-    sort -u -o "$TEMPORARY".3 "$TEMPORARY".3
+        # Zamieniamy subdomeny na domeny
+        python3 "$SCRIPT_PATH"/Sd2D.py "$TEMPORARY".2 >>"$TEMPORARY".3
+        sort -u -o "$TEMPORARY".3 "$TEMPORARY".3
+    fi
 
-    "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".3 | tee "$TEMPORARY".4
+    if [ -f "$TEMPORARY.3" ]; then
+        "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".3 | tee "$TEMPORARY".4
 
-    touch "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+        touch "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
 
-    {
-        sed '/Expired/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Book_blocked/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Suspended/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Removed/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Free/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Redemption_period/!d' "$TEMPORARY".4 | cut -d' ' -f1
-        sed '/Suspended_or_reserved/!d' "$TEMPORARY".4 | cut -d' ' -f1
-    } >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
+        {
+            sed '/Expired/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Book_blocked/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Suspended/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Removed/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Free/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Redemption_period/!d' "$TEMPORARY".4 | cut -d' ' -f1
+            sed '/Suspended_or_reserved/!d' "$TEMPORARY".4 | cut -d' ' -f1
+        } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
-    awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >> "$TEMPORARY".5
+        awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".5
+    fi
 
-    while IFS= read -r domain; do
-        status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
-        if [ "$status_code" -eq "000" ]; then
-            echo "$domain" >> "$TEMPORARY".6
-        elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ ! "$NO_SC" ]; then
-            echo "$domain $status_code" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-        elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ "$NO_SC" ]; then
-            echo "$domain" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-        else
-            echo "Test"
-        fi
-    done < "$TEMPORARY".5
+    if [ -f "$TEMPORARY.5" ]; then
+        while IFS= read -r domain; do
+            status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            if [ "$status_code" -eq "000" ]; then
+                echo "$domain" >>"$TEMPORARY".6
+            elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ ! "$NO_SC" ]; then
+                echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ "$NO_SC" = "true" ]; then
+                echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            else
+                echo "Test"
+            fi
+        done <"$TEMPORARY".5
+    fi
 
+    if [ -f "$TEMPORARY.6" ]; then
+        "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".6 | tee "$TEMPORARY".7
 
-    "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".6 | tee "$TEMPORARY".7
+        {
+            sed '/Expired/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Book_blocked/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Suspended/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Removed/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Free/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Redemption_period/!d' "$TEMPORARY".7 | cut -d' ' -f1
+            sed '/Suspended_or_reserved/!d' "$TEMPORARY".7 | cut -d' ' -f1
+        } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
-    {
-        sed '/Expired/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Book_blocked/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Suspended/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Removed/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Free/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Redemption_period/!d' "$TEMPORARY".7 | cut -d' ' -f1
-        sed '/Suspended_or_reserved/!d' "$TEMPORARY".7 | cut -d' ' -f1
-    } >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
+        awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".8
 
-    awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >> "$TEMPORARY".7
+        # Musimy wiedzieć, które domeny subdomen są ok
+        sed '/Valid/!d' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".d
+    fi
 
-    # Musimy wiedzieć, które domeny subdomen są ok
-    sed '/Valid/!d' "$TEMPORARY".7 | cut -d' ' -f1 >> "$TEMPORARY".d
+    if [ -f "$TEMPORARY.d" ]; then
+        while IFS= read -r domain; do
+            # Jeżeli subdomeny padły, ale ich domeny działają, to subdomeny trafiają do kolejnego pliku tymczasowego
+            if grep -q "$domain" "$TEMPORARY.sub"; then
+                grep "$domain" "$TEMPORARY.sub" >>"$TEMPORARY".8
+            fi
+        done <"$TEMPORARY".d
 
-    while IFS= read -r domain; do
-        # Jeżeli subdomeny padły, ale ich domeny działają, to subdomeny trafiają do kolejnego pliku tymczasowego
-        if grep -q "$domain" "$TEMPORARY.sub"; then
-            grep "$domain" "$TEMPORARY.sub" >> "$TEMPORARY".8
-        fi
-    done < "$TEMPORARY".d
+        rm -rf "$TEMPORARY.d"
+    fi
 
-    rm -rf "$TEMPORARY.d"
-    rm -rf "$TEMPORARY.sub"
+    if [ -f "$TEMPORARY.sub" ]; then
+        rm -rf "$TEMPORARY.sub"
+    fi
 
-    while IFS= read -r domain; do
-        status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
-        if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
-            echo "$domain $status_code" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-        elif [ "$status_code" -ne "200" ] && [ "$NO_SC" ]; then
-            echo "$domain" >> "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-        else
-            echo "Test"
-        fi
-    done < "$TEMPORARY".8
+    if [ -f "$TEMPORARY.8" ]; then
+        while IFS= read -r domain; do
+            status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
+                echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            elif [ "$status_code" -ne "200" ] && [ "$NO_SC" = "true" ]; then
+                echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            else
+                echo "Test"
+            fi
+        done <"$TEMPORARY".8
+    fi
 
-    sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
-    sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+    if [ -f "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt ]; then
+        sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
+    fi
+    if [ -f "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt ]; then
+        sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+    fi
+
     rm -rf "$TEMPORARY".*
     rm -rf "$TEMPORARY"
 
@@ -173,10 +192,10 @@ if [ -f "$CONFIG" ]; then
 fi
 
 if [ "$COMMIT_MODE" ] && [ -n "$(git status --porcelain)" ]; then
-    cd ./expired-domains
-    for file in *.txt; do if [[ ! -s $file ]]; then rm -r $file; fi; done
+    cd ./expired-domains || exit
+    for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
     cd "$MAIN_PATH" || exit
-    if [ "$CI" = "true" ] ; then
+    if [ "$CI" = "true" ]; then
         CI_USERNAME=$(grep -oP -m 1 '@CIusername \K.*' "$CONFIG")
         CI_EMAIL=$(grep -oP -m 1 '@CIemail \K.*' "$CONFIG")
         git config --global user.name "${CI_USERNAME}"
