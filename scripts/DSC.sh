@@ -9,13 +9,12 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.7
+# Current Version: 1.0.8
 #
 #
 # Purpose:
 #  DSC checks to see what domain has status (expired, suspended, book blocked, etc).
-#  DSC can be run in interactive and batch mode, and provides faciltities
-#  to alarm if a domain is about to expire.
+#  DSC can be run in interactive and batch mode.
 #
 # License:
 #  This program is distributed in the hope that it will be useful,
@@ -38,17 +37,11 @@
 PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/ssl/bin:/usr/sfw/bin
 export PATH
 
-# Who to page when an expired domain is detected (cmdline: -e)
-ADMIN="sysadmin@mydomain.com"
-
 # Number of days in the warning threshhold  (cmdline: -x)
 WARNDAYS=30
 
 # If QUIET is set to TRUE, don't print anything on the console (cmdline: -q)
 QUIET="FALSE"
-
-# Don't send emails by default (cmdline: -a)
-ALARM="FALSE"
 
 # Don't show the version of the script by default (cmdline: -V)
 VERSIONENABLE="FALSE"
@@ -66,7 +59,6 @@ DATE=`which date`
 CUT=`which cut`
 GREP=`which grep`
 TR=`which tr`
-MAIL=`which mail`
 CURL=`which curl`
 
 # Version of the script
@@ -224,12 +216,10 @@ prints()
 ##########################################
 usage()
 {
-    echo "Usage: $0 [ -e email ] [ -x expir_days ] [ -s whois server ] [ -q ] [ -a ] [ -h ] [ -v ] [ -V ]"
+    echo "Usage: $0 [ -x expir_days ] [ -s whois server ] [ -q ] [ -h ] [ -v ] [ -V ]"
     echo "	  {[ -d domain_namee ]} || { -f domainfile}"
     echo ""
-    echo "  -a               : Send a warning message through email"
     echo "  -d domain        : Domain to analyze (interactive mode)"
-    echo "  -e email address : Email address to send expiration notices"
     echo "  -f domain file   : File with a list of domains"
     echo "  -h               : Print this screen"
     echo "  -s whois server  : Whois sever to query for information"
@@ -245,9 +235,7 @@ while getopts ad:e:f:hs:qx:vV option
 do
     case "${option}"
     in
-        a) ALARM="TRUE";;
         d) DOMAIN=${OPTARG};;
-        e) ADMIN=${OPTARG};;
         f) SERVERFILE=$OPTARG;;
         s) WHOIS_SERVER=$OPTARG;;
         q) QUIET="TRUE";;
