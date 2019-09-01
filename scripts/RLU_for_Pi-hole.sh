@@ -22,7 +22,7 @@ else
 	exit="Exit"
 fi
 
-if [[ "$regexlist" ]]; then
+if [[ "${regexlist[*]}" ]]; then
 	echo "$select_text"
 
 	select opt in "${regexlist[@]}" "$exit"
@@ -31,7 +31,6 @@ if [[ "$regexlist" ]]; then
 			"$exit")
 					break
 					;;
-			""
 			*)
 					break
 				;;
