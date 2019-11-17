@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.9.1
+# v2.9.2
 
 # MIT License
 
@@ -136,8 +136,8 @@ for i in "$@"; do
         grep -o '\||.*^' "$SECTION" > "$SECTION.temp"
         grep -o '\||.*^$all$' "$SECTION" >> "$SECTION.temp"
         sed -e '0,/^@BNWLinclude/!b; /@BNWLinclude/{ r '"${SECTION}.temp"'' -e 'd }' "$FINAL" > "$TEMPORARY"
-        sed -i "s|\$all$||" "$TEMPORARY"
-        sed -i "s/[\^]/\^\$badfilter/g" "$TEMPORARY"
+        sed -i "s|\$all$|\$all,badfilter|" "$TEMPORARY"
+        sed -i "s|\^$|\^\$badfilter|" "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$SECTION.temp"
     done
@@ -210,8 +210,8 @@ for i in "$@"; do
         grep -o '\||.*^' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
         grep -o '\||.*^$all$' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
         sed -e '0,/^@URLBNWLinclude/!b; /@URLBNWLinclude/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
-        sed -i "s|\$all$||" "$TEMPORARY"
-        sed -i "s/[\^]/\^\$badfilter/g" "$TEMPORARY"
+        sed -i "s|\$all$|\$all,badfilter|" "$TEMPORARY"
+        sed -i "s|\^$|\^\$badfilter|" "$TEMPORARY"
         mv "$TEMPORARY" "$FINAL"
         rm -r "$EXTERNAL_TEMP"
         rm -r "$EXTERNAL_TEMP.2"
