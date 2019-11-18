@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.9.2
+# v2.9.3
 
 # MIT License
 
@@ -208,7 +208,7 @@ for i in "$@"; do
         wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
         revertWhenDownloadError
         grep -o '\||.*^' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
-        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" > "$EXTERNAL_TEMP.2"
+        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" >> "$EXTERNAL_TEMP.2"
         sed -e '0,/^@URLBNWLinclude/!b; /@URLBNWLinclude/{ r '"$EXTERNAL_TEMP.2"'' -e 'd }' "$FINAL" > "$TEMPORARY"
         sed -i "s|\$all$|\$all,badfilter|" "$TEMPORARY"
         sed -i "s|\^$|\^\$badfilter|" "$TEMPORARY"
@@ -321,7 +321,7 @@ for i in "$@"; do
         wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
         revertWhenDownloadError
         grep -o '\||.*^$' "$EXTERNAL_TEMP" > "$EXTERNALHOSTS_TEMP"
-        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" > "$EXTERNALHOSTS_TEMP"
+        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" >> "$EXTERNALHOSTS_TEMP"
         convertToHosts "$EXTERNALHOSTS_TEMP"
         if [ -f "$EXTERNALHOSTS_TEMP.2" ]
         then
@@ -362,7 +362,7 @@ for i in "$@"; do
         PH_FILE=${SECTIONS_DIR}/$(grep -oP -m 1 '@PHinclude \K.*' "$FINAL").txt
         PH_TEMP=$SECTIONS_DIR/ph.temp
         grep -o '\||.*^$' "$PH_FILE" > "$PH_TEMP"
-        grep -o '\||.*^$all$' "$PH_FILE" > "$PH_TEMP"
+        grep -o '\||.*^$all$' "$PH_FILE" >> "$PH_TEMP"
         convertToPihole "$PH_TEMP"
         sort -uV -o "$PH_TEMP" "$PH_TEMP"
         sed -e '0,/^@PHinclude/!b; /@PHinclude/{ r '"$PH_TEMP"'' -e 'd }' "$FINAL" > "$TEMPORARY"
@@ -398,7 +398,7 @@ for i in "$@"; do
         wget -O "$EXTERNAL_TEMP" "${EXTERNAL}"
         revertWhenDownloadError
         grep -o '\||.*^$' "$EXTERNAL_TEMP" > "$EXTERNALPH_TEMP"
-        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" > "$EXTERNALPH_TEMP"
+        grep -o '\||.*^$all$' "$EXTERNAL_TEMP" >> "$EXTERNALPH_TEMP"
         convertToPihole "$EXTERNALPH_TEMP"
         sort -uV -o "$EXTERNALPH_TEMP" "$EXTERNALPH_TEMP"
         sed -e '0,/^@URLPHinclude/!b; /@URLPHinclude/{ r '"$EXTERNALPH_TEMP"'' -e 'd }' "$FINAL" > "$TEMPORARY"
