@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.9.4b
+# v2.9.5
 
 # MIT License
 
