@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.9.4
+# v2.9.4b
 
 # MIT License
 
@@ -537,7 +537,7 @@ commited=$(git cherry -v)
 if [ "$commited" ]; then
     if [ "$CI" = "true" ] ; then
         GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
-        git push https://"${CI_USERNAME}":"${GIT_TOKEN}"@"${GIT_SLUG}" HEAD:master > /dev/null 2>&1
+        git push https://"${CI_USERNAME}":"${GIT_TOKEN}"@"${GIT_SLUG}" > /dev/null 2>&1
     else
         printf "%s\n" "$(gettext "Do you want to send changed files to git now?")"
         select yn in $(gettext "Yes") $(gettext "No"); do
