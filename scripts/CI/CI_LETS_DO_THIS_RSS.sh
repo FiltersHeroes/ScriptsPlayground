@@ -4,9 +4,9 @@ sciezka=$(dirname "$0")
 
 cd $sciezka/../..
 
-wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishRSSFilters/master/polish_rss_filters.txt
+wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt
 
-wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishRSSFilters/master/polish_rss_filters/suplement.txt
+wget https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt
 
 mv suplement.txt polish_rss_filters_supp.txt
 
