@@ -43,7 +43,7 @@ if platform.system() == "Windows":
         os.environ['LANG'] = lang
 
 appname = "GroupsDomainsExtractor"
-appversion = "1.2.1"
+appversion = "1.2.2"
 
 localedir = os.path.join(sys.path[0], 'locales')
 translate = gettext.translation('GDE', localedir, fallback=True)
@@ -155,12 +155,18 @@ def removeGroup():
             cfile.close()
             window.FindElement('GROUP').Update(values=([*loadGroupList()]))
 
+if platform.system() == "Windows":
+      sg.change_look_and_feel('Dark2')
+      sg.set_options(button_color=('white', '#082567'), background_color="#292f34", text_element_background_color="#292f34", input_text_color="black")
+else:
+      sg.change_look_and_feel('SystemDefault')
+
 layout = [
           [sg.Text(_('Site address:'), size=(30, 1)), sg.InputText('http://siecportali.pl/realizacje', key='URL')],
           [sg.Text(_('CSS path:'), size=(30, 1)), sg.InputText('.portal-logos a', key="CSS")],
-          [sg.Text(_('Separator:'), size=(30, 1)), sg.Combo([_('comma'), _('pipe')], size=(43,1), key="SEPARATOR")],
+          [sg.Text(_('Separator:'), size=(30, 1)), sg.Combo([_('comma'), _('pipe')], default_value=_('comma'), readonly=True, size=(43,1), key="SEPARATOR")],
           [sg.Text(_("Group’s name:"), size=(30, 1)), sg.InputText('Sieć portali', key="GROUP_NAME")],
-          [sg.Text(_("Group’s configuration:"), size=(30, 1)), sg.Combo([*loadGroupList()], key="GROUP", size=(43,1))],
+          [sg.Text(_("Group’s configuration:"), size=(30, 1)), sg.Combo([*loadGroupList()], readonly=True, key="GROUP", size=(43,1))],
           [sg.Submit(_('Extract domains'), key="EXTRACT"), sg.Submit(_('Load group'), key="LOAD"), sg.Submit(_('Save group'), key="SAVE"), sg.Submit(_('Remove group'), key="REMOVE"), sg.Cancel(_('About GDE'), key="ABOUT"), ]
          ]
 
