@@ -34,7 +34,7 @@ cd "$MAIN_PATH" || exit
 
 for i in "$@"; do
 
-    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$)' "$i")
+    pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)' "$i")
 
     pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' "$i")
 
@@ -75,7 +75,7 @@ for i in "$@"; do
         if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
             echo "$domain" >>"$TEMPORARY".2
         else
-            echo "Test"
+            echo "Test $domain"
         fi
     done <"$TEMPORARY"
 
