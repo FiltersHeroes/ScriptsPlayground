@@ -41,6 +41,9 @@ subdomains_file = sys.argv[1]
 f = open(subdomains_file, "r")
 line = f.readline()
 while line:
-    print(extract(line).registered_domain)
+    if(extract(line).registered_domain != ""):
+        print(extract(line).registered_domain)
+    else:
+        print(line.strip())
     line = f.readline()
 f.close()
