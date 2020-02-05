@@ -75,7 +75,7 @@ for i in "$@"; do
         if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
             echo "$domain" >>"$TEMPORARY".2
         else
-            echo "Test $domain"
+            echo "Test"
         fi
     done <"$TEMPORARY"
 
