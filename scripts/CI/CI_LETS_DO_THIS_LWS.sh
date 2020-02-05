@@ -30,7 +30,7 @@ UNKNOWN=$MAIN_PATH/expired-domains/LWS_temp-unknown.txt
 
 if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ]; then
     sed -i "s|[|][|]||" "$SCRIPT_PATH"/LWS_temp.txt
-    sed -i 's/[/\^]//g' "$SCRIPT_PATH"/LWS_temp.txt
+    sed -i 's/\^\$all//g' "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
 if [ -f "$EXPIRED" ]; then
@@ -49,7 +49,7 @@ if [ ! -f "$MAIN_PATH/LWS/podejrzane_LWS.txt" ]; then
 fi
 
 sed -i -r "s|^|\|\||" "$MAIN_PATH"/LWS/podejrzane_LWS.txt
-sed -i -r 's|$|\^|' "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/LWS/podejrzane_LWS.txt
 
 if [ -f "$EXPIRED" ]; then
     rm -r "$EXPIRED"
