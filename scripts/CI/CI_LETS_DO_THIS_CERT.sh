@@ -46,9 +46,6 @@ if [ ! -f "$MAIN_PATH/novelties/przekrety_CERT.txt" ]; then
     mv "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/przekrety_CERT.txt
 fi
 
-sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/przekrety_CERT.txt
-sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/novelties/przekrety_CERT.txt
-
 if [ -f "$EXPIRED" ]; then
     rm -r "$EXPIRED"
 fi
