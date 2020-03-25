@@ -6,7 +6,7 @@ SCRIPT_PATH=$(dirname "$0")
 MAIN_PATH=$(dirname "$0")/../..
 
 cd "$MAIN_PATH" || exit
-rm -r "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+rm -r "$MAIN_PATH"/novelties/podejrzane_LWS.txt
 LWS=$SCRIPT_PATH/LWS.temp
 python3 "$SCRIPT_PATH"/../findSuspiciousDomains_LWS.py >> "$LWS"
 sed -i -r "s|^|\|\||" "$LWS"
@@ -34,22 +34,22 @@ if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ]; then
 fi
 
 if [ -f "$EXPIRED" ]; then
-    comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$EXPIRED" >> "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+    comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$EXPIRED" >> "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     rm -r "$SCRIPT_PATH"/LWS_temp.txt
-    mv "$MAIN_PATH"/LWS/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
+    mv "$MAIN_PATH"/novelties/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
 if [ -f "$UNKNOWN" ]; then
-    comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$UNKNOWN" >> "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+    comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$UNKNOWN" >> "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     rm -r "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
-if [ ! -f "$MAIN_PATH/LWS/podejrzane_LWS.txt" ]; then
-    mv "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+if [ ! -f "$MAIN_PATH/novelties/podejrzane_LWS.txt" ]; then
+    mv "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/podejrzane_LWS.txt
 fi
 
-sed -i -r "s|^|\|\||" "$MAIN_PATH"/LWS/podejrzane_LWS.txt
-sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/LWS/podejrzane_LWS.txt
+sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/novelties/podejrzane_LWS.txt
 
 if [ -f "$EXPIRED" ]; then
     rm -r "$EXPIRED"
@@ -62,6 +62,6 @@ fi
 # GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
 # git config --global user.email "PolishJarvis@int.pl"
 # git config --global user.name "PolishJarvis"
-# git add $MAIN_PATH/LWS/podejrzane_LWS.txt
+# git add $MAIN_PATH/novelties/podejrzane_LWS.txt
 # git commit -m "Check [ci skip]"
 # git push https://PolishJarvis:${GH_TOKEN}@${GIT_SLUG} HEAD:master > /dev/null 2>&1
