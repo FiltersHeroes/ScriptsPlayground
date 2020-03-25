@@ -7,7 +7,7 @@ MAIN_PATH=$(dirname "$0")/../..
 
 cd "$MAIN_PATH" || exit
 rm -r "$MAIN_PATH"/novelties/przekrety_CERT.txt
-LWS=$SCRIPT_PATH/CERTHole.temp
+CERT=$SCRIPT_PATH/CERTHole.temp
 wget -O "$CERT" https://hole.cert.pl/domains/domains.txt
 sed -i -r "s|^|\|\||" "$CERT"
 sed -i -r 's|$|\^\$all|' "$CERT"
