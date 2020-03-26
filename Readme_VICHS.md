@@ -68,13 +68,13 @@ Then you should add some instructions into it, currently following instructions 
 
 `@URLHOSTSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the hosts format and include it into the final filterlist file
 
-`@PHinclude section_file_name` - converts **all** network blocking regex rules of section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
+`@COMBINEHOSTSinclude https://example.com/mylist.txt` - converts direct blocking rules of external and local section/filterlist into the hosts format and combines them into one section (combining is always done on temporary files)
 
-`@URLPHinclude https://example.com/mylist.txt` - converts **all** network blocking regex rules of external section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
+`@PHinclude section_file_name` - converts network blocking regex rules **with star multipler** of section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
 
-`@PHLinclude section_file_name` - converts network blocking regex rules **with star multipler** of section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
+`@URLPHinclude https://example.com/mylist.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules
 
-`@URLPHLinclude https://example.com/mylist.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules
+`@COMBINEPHinclude section_file_name https://example.com/mysection.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules (converting is always done on temporary files) and combines it with local section into one section (combining is always done on temporary files)
 
 Script should sort lines of sections of filterlists, but it's only basic sort, it can't sort domains or filter options in one line and remove some duplicates (only removes duplicates if lines are identical). Anyway for more advanced sorting and deduplication, you can use [FOP.py script](https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/FOP.py), just download it and place it on the same folder as **VICHS** script and it should be launched automatically by **VICHS** (**FOP** requires min. **python 3.2**).
 
