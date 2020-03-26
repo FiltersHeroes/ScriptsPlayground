@@ -9,6 +9,7 @@ cd "$MAIN_PATH" || exit
 rm -r "$MAIN_PATH"/novelties/przekrety_CERT.txt
 CERT=$SCRIPT_PATH/CERTHole.temp
 wget -O "$CERT" https://hole.cert.pl/domains/domains.txt
+sed -i 's/^www.//g' "$CERT"
 sed -i -r "s|^|\|\||" "$CERT"
 sed -i -r 's|$|\^\$all|' "$CERT"
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/sections/przekrety.txt
