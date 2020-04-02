@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.8
+# Current Version: 1.0.9
 #
 #
 # Purpose:
@@ -142,6 +142,7 @@ check_domain_status()
     suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the" )
     redemption_period=$(cat ${WHOIS_TMP} | ${GREP} "redemptionPeriod" )
     reserved=$(cat ${WHOIS_TMP} | ${GREP} "is queued up for registration" )
+    limit_exceeded=$(cat ${WHOIS_TMP} | ${GREP} "request limit exceeded")
 
     if [ ! -z "$removed" ]
     then
@@ -172,7 +173,11 @@ check_domain_status()
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
-        prints "${DOMAIN}" "Unknown ($(cat ${WHOIS_TMP}))" "${DOMAINDATE}" "${DOMAINDIFF}"
+        prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -z "${limit_exceeded}" ] && [ "${TLDTYPE}" == "pl" ]
+    then
+        # If whois request limit exceeded, then wait 16 minutes for counter reset and try again
+        sleep 16m && check_domain_status "${DOMAIN}"
     else
         prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}"
     fi
