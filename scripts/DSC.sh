@@ -172,7 +172,7 @@ check_domain_status()
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
-        prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
+        prints "${DOMAIN}" "Unknown ($(cat ${WHOIS_TMP}))" "${DOMAINDATE}" "${DOMAINDIFF}"
     else
         prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}"
     fi
