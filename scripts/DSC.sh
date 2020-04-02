@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.9
+# Current Version: 1.0.11
 #
 #
 # Purpose:
@@ -171,10 +171,9 @@ check_domain_status()
     elif [ ! -z "${free}" ]
     then
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${limit_exceeded}" ] && [ "${TLDTYPE}" == "pl" ]
+    elif [ ! -z "${limit_exceeded}" ]
     then
-        # If whois request limit exceeded, then wait 16 minutes for counter reset and try again
-        sleep 16m && check_domain_status "${DOMAIN}"
+        prints "${DOMAIN}" "Limit_exceeded" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
         prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"

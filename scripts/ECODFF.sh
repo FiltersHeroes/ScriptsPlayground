@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.14.2
+# v1.14.3
 
 # MIT License
 
@@ -109,6 +109,7 @@ for i in "$@"; do
         } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
         awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".5
+        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".L
     fi
 
     if [ -f "$TEMPORARY.5" ]; then
@@ -140,6 +141,7 @@ for i in "$@"; do
         } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
         awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".8
+        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".L
 
         # Musimy wiedzieć, które domeny subdomen są ok
         sed '/Valid/!d' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".d
@@ -173,11 +175,57 @@ for i in "$@"; do
         done <"$TEMPORARY".8
     fi
 
+    if [ -f "$TEMPORARY.L" ]; then
+        sleep 16m
+        "$SCRIPT_PATH"/DSC.sh -f "$TEMPORARY".L | tee "$TEMPORARY".L2
+        {
+            sed '/Expired/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Book_blocked/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Suspended/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Removed/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Free/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Redemption_period/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+            sed '/Suspended_or_reserved/!d' "$TEMPORARY".L2 | cut -d' ' -f1
+        } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
+
+        awk -F' ' '$2=="Unknown"' "$TEMPORARY".L2 | cut -d' ' -f1 >> "$TEMPORARY".LU
+        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".L2 | cut -d' ' -f1 >> "$TEMPORARY".LL
+    fi
+
+    if [ -f "$TEMPORARY.LU" ]; then
+        while IFS= read -r domain; do
+            status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
+                echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            elif [ "$status_code" -ne "200" ] && [ "$NO_SC" = "true" ]; then
+                echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+            else
+                echo "Test"
+            fi
+        done <"$TEMPORARY".LU
+    fi
+
+    if [ -f "$TEMPORARY.LL" ]; then
+        while IFS= read -r domain; do
+            status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
+                echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
+            elif [ "$status_code" -ne "200" ] && [ "$NO_SC" = "true" ]; then
+                echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
+            else
+                echo "Test"
+            fi
+        done <"$TEMPORARY".LL
+    fi
+
     if [ -f "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt ]; then
         sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
     fi
     if [ -f "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt ]; then
         sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+    fi
+    if [ -f "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt ]; then
+        sort -u -o "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
     fi
 
     rm -rf "$TEMPORARY".*

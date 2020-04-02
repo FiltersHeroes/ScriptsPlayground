@@ -18,6 +18,7 @@ KAD:
     paths:
       - expired-domains/KAD-expired.txt
       - expired-domains/KAD-unknown.txt
+      - expired-domains/KAD-unknown_limit.txt
 
 KADhosts:
   stage: check
@@ -26,6 +27,7 @@ KADhosts:
     paths:
       - expired-domains/KADhosts-expired.txt
       - expired-domains/KADhosts-unknown.txt
+      - expired-domains/KADhosts-unknown_limit.txt
 
 PAF:
   stage: check
@@ -35,20 +37,28 @@ PAF:
     paths:
       - expired-domains/PAF_arrows-expired.txt
       - expired-domains/PAF_arrows-unknown.txt
+      - expired-domains/PAF_arrows-unknown_limit.txt
       - expired-domains/PAF_backgrounds_self-advertising-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
+      - expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
       - expired-domains/PAF_contact_feedback_widgets-expired.txt
       - expired-domains/PAF_contact_feedback_widgets-unknown.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
       - expired-domains/PAF_newsletters-expired.txt
       - expired-domains/PAF_newsletters-unknown.txt
+      - expired-domains/PAF_newsletters-unknown_limit.txt
       - expired-domains/PAF_other_widgets-expired.txt
       - expired-domains/PAF_other_widgets-unknown.txt
+      - expired-domains/PAF_other_widgets-unknown_limit.txt
       - expired-domains/PAF_pop-ups-expired.txt
       - expired-domains/PAF_pop-ups-unknown.txt
+      - expired-domains/PAF_pop-ups-unknown_limit.txt
       - expired-domains/PAF_push-expired.txt
       - expired-domains/PAF_push-unknown.txt
+      - expired-domains/PAF_push-unknown_limit.txt
       - expired-domains/PAF_scrolling_videos-expired.txt
       - expired-domains/PAF_scrolling_videos-unknown.txt
+      - expired-domains/PAF_scrolling_videos-unknown_limit.txt
 
 PAF_supp:
   stage: check
@@ -58,18 +68,25 @@ PAF_supp:
     paths:
       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown_limit.txt
       - expired-domains/PAF_newsletters_supp-expired.txt
       - expired-domains/PAF_newsletters_supp-unknown.txt
+      - expired-domains/PAF_newsletters_supp-unknown_limit.txt
       - expired-domains/PAF_other_elements_supp-expired.txt
       - expired-domains/PAF_other_elements_supp-unknown.txt
+      - expired-domains/PAF_other_elements_supp-unknown_limit.txt
       - expired-domains/PAF_pop-ups_supp-expired.txt
       - expired-domains/PAF_pop-ups_supp-unknown.txt
+      - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
       - expired-domains/PAF_push_supp-expired.txt
       - expired-domains/PAF_push_supp-unknown.txt
+      - expired-domains/PAF_push_supp-unknown_limit.txt
       - expired-domains/PAF_scrolling_videos_supp-expired.txt
       - expired-domains/PAF_scrolling_videos_supp-unknown.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
       - expired-domains/PAF_tagged_internal_links-expired.txt
       - expired-domains/PAF_tagged_internal_links-unknown.txt
+      - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
 
 RSS:
   stage: check
@@ -78,8 +95,10 @@ RSS:
     paths:
       - expired-domains/polish_rss_filters-expired.txt
       - expired-domains/polish_rss_filters-unknown.txt
+      - expired-domains/polish_rss_filters-unknown_limit.txt
       - expired-domains/polish_rss_filters_supp-expired.txt
       - expired-domains/polish_rss_filters_supp-unknown.txt
+      - expired-domains/polish_rss_filters_supp-unknown_limit.txt
 
 Social:
   stage: check
@@ -88,6 +107,7 @@ Social:
     paths:
       - expired-domains/adblock_social_list-expired.txt
       - expired-domains/adblock_social_list-unknown.txt
+      - expired-domains/adblock_social_list-unknown_limit.txt
 
 Social_supp:
   stage: check
@@ -96,6 +116,7 @@ Social_supp:
     paths:
       - expired-domains/social_filters_uB_AG-expired.txt
       - expired-domains/social_filters_uB_AG-unknown.txt
+      - expired-domains/social_filters_uB_AG-unknown_limit.txt
 
 Cookies:
   stage: check
@@ -104,6 +125,7 @@ Cookies:
     paths:
       - expired-domains/adblock_cookies-expired.txt
       - expired-domains/adblock_cookies-unknown.txt
+      - expired-domains/adblock_cookies-unknown_limit.txt
 
 Cookies_supp:
   stage: check
@@ -112,6 +134,7 @@ Cookies_supp:
     paths:
       - expired-domains/cookies_uB_AG-expired.txt
       - expired-domains/cookies_uB_AG-unknown.txt
+      - expired-domains/cookies_uB_AG-unknown_limit.txt
 
 LWS:
   image: polishfiltersteam/lws_image:latest
