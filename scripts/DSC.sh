@@ -171,13 +171,13 @@ check_domain_status()
     elif [ ! -z "${free}" ]
     then
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
-    then
-        prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! -z "${limit_exceeded}" ] && [ "${TLDTYPE}" == "pl" ]
     then
         # If whois request limit exceeded, then wait 16 minutes for counter reset and try again
         sleep 16m && check_domain_status "${DOMAIN}"
+    elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
+    then
+        prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
     else
         prints "${DOMAIN}" "Valid" "${DOMAINDATE}"  "${DOMAINDIFF}"
     fi
