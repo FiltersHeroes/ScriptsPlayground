@@ -9,18 +9,20 @@ cd "$MAIN_PATH" || exit
 rm -r "$MAIN_PATH"/novelties/przekrety_CERT.txt
 CERT=$SCRIPT_PATH/CERTHole.temp
 wget -O "$CERT" https://hole.cert.pl/domains/domains.txt
-sed -i 's/^www.//g' "$CERT"
-sed -i -r "s|^|\|\||" "$CERT"
-sed -i -r 's|$|\^\$all|' "$CERT"
-wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/sections/przekrety.txt
-sed -i -r "s/^[|][|]www[0-9]\.//" ./przekrety.txt
-sed -i -r "s/^[|][|]www\.//" ./przekrety.txt
-sort -u -o ./przekrety.txt ./przekrety.txt
+wget https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+pcregrep -o1 '^.*?0.0.0.0 (.*)' ./KADhosts.txt >> ./KADhosts_temp.txt
+rm -rf ./KADhosts.txt
+mv ./KADhosts_temp.txt ./KADhosts.txt
+sort -u -o ./KADhosts.txt ./KADhosts.txt
 sort -u -o "$CERT" "$CERT"
-comm -1 -3 ./przekrety.txt "$CERT" >> "$CERT".2
+comm -1 -3 ./KADhosts.txt "$CERT" >> "$CERT".2
 rm -r "$CERT"
-rm -r ./przekrety.txt
+rm -r ./KADhosts.txt
 mv "$CERT".2 "$SCRIPT_PATH"/CERTHole_temp.txt
+sed -i 's/^www.//g' "$SCRIPT_PATH"/CERTHole_temp.txt
+sed -i -r "s|^|\|\||" "$SCRIPT_PATH"/CERTHole_temp.txt
+sed -i -r 's|$|\^\$all|' "$SCRIPT_PATH"/CERTHole_temp.txt
+sort -u -o "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 
 NO_SC="true" ./scripts/ECODFF.sh "$SCRIPT_PATH"/CERTHole_temp.txt
 
