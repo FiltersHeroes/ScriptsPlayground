@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.14.5
+# v1.14.6
 
 # MIT License
 
@@ -112,7 +112,7 @@ for i in "$@"; do
         } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
         awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".5
-        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$FILTERLIST"-unknown_limit.txt
+        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
     fi
 
     if [ -f "$TEMPORARY.5" ]; then
@@ -144,7 +144,7 @@ for i in "$@"; do
         } >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
 
         awk -F' ' '$2=="Unknown"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".8
-        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$FILTERLIST"-unknown_limit.txt
+        awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".7 | cut -d' ' -f1 >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
 
         # Musimy wiedzieć, które domeny subdomen są ok
         sed '/Valid/!d' "$TEMPORARY".7 | cut -d' ' -f1 >>"$TEMPORARY".d
