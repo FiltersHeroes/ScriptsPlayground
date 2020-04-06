@@ -69,6 +69,9 @@ if [ -f "$UNKNOWN_LIMIT" ]; then
     rm -r "$UNKNOWN_LIMIT"
 fi
 
+sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+
 # GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
 # git config --global user.email "PolishJarvis@int.pl"
 # git config --global user.name "PolishJarvis"

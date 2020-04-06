@@ -26,10 +26,11 @@ sort -u -o "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 
 NO_SC="true" ./scripts/ECODFF.sh "$SCRIPT_PATH"/CERTHole_temp.txt
 
-EXPIRED=$MAIN_PATH/expired-domains/CERT_temp-expired.txt
-UNKNOWN=$MAIN_PATH/expired-domains/CERT_temp-unknown.txt
+EXPIRED=$MAIN_PATH/expired-domains/CERTHole_temp-expired.txt
+UNKNOWN=$MAIN_PATH/expired-domains/CERTHole_temp-unknown.txt
+UNKNOWN_LIMIT=$MAIN_PATH/expired-domains/CERTHole_temp-unknown_limit.txt
 
-if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ]; then
+if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ] || [ -f "$UNKNOWN_LIMIT" ]; then
     sed -i "s|[|][|]||" "$SCRIPT_PATH"/CERTHole_temp.txt
     sed -i 's/\^\$all//g' "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
@@ -56,6 +57,13 @@ fi
 if [ -f "$UNKNOWN" ]; then
     rm -r "$UNKNOWN"
 fi
+
+if [ -f "$UNKNOWN_LIMIT" ]; then
+    rm -r "$UNKNOWN_LIMIT"
+fi
+
+sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/przekrety_CERT.txt
+sed -i -r 's|$|\^\$all|' "$MAIN_PATH"/novelties/przekrety_CERT.txt
 
 # GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
 # git config --global user.email "PolishJarvis@int.pl"
