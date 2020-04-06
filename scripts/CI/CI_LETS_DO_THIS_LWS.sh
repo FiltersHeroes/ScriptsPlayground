@@ -23,14 +23,15 @@ mv "$LWS".2 "$SCRIPT_PATH"/LWS_temp.txt
 sed -i 's/^www.//g' "$SCRIPT_PATH"/LWS_temp.txt
 sed -i -r "s|^|\|\||" "$SCRIPT_PATH"/LWS_temp.txt
 sed -i -r 's|$|\^\$all|' "$SCRIPT_PATH"/LWS_temp.txt
-sort -u -o"$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_temp.txt
+sort -u -o "$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_temp.txt
 
 NO_SC="true" ./scripts/ECODFF.sh "$SCRIPT_PATH"/LWS_temp.txt
 
 EXPIRED=$MAIN_PATH/expired-domains/LWS_temp-expired.txt
 UNKNOWN=$MAIN_PATH/expired-domains/LWS_temp-unknown.txt
+UNKNOWN_LIMIT=$MAIN_PATH/expired-domains/LWS_temp-unknown_limit.txt
 
-if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ]; then
+if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ] || [ -f "$UNKNOWN_LIMIT" ]; then
     sed -i "s|[|][|]||" "$SCRIPT_PATH"/LWS_temp.txt
     sed -i 's/\^\$all//g' "$SCRIPT_PATH"/LWS_temp.txt
 fi
@@ -44,6 +45,12 @@ fi
 if [ -f "$UNKNOWN" ]; then
     comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$UNKNOWN" >> "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     rm -r "$SCRIPT_PATH"/LWS_temp.txt
+    mv "$MAIN_PATH"/novelties/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
+fi
+
+if [ -f "$UNKNOWN_LIMIT" ]; then
+    comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$UNKNOWN_LIMIT" >> "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    rm -r "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
 if [ ! -f "$MAIN_PATH/novelties/podejrzane_LWS.txt" ]; then
@@ -56,6 +63,10 @@ fi
 
 if [ -f "$UNKNOWN" ]; then
     rm -r "$UNKNOWN"
+fi
+
+if [ -f "$UNKNOWN_LIMIT" ]; then
+    rm -r "$UNKNOWN_LIMIT"
 fi
 
 # GIT_SLUG=$(git ls-remote --get-url | sed "s|https://||g" | sed "s|git@||g" | sed "s|:|/|g")
