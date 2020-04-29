@@ -20,6 +20,7 @@ KAD:
       - expired-domains/KAD-expired.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
+      - expired-domains/KAD-parked.txt
 
 KADhosts:
   stage: check
@@ -29,6 +30,7 @@ KADhosts:
       - expired-domains/KADhosts-expired.txt
       - expired-domains/KADhosts-unknown.txt
       - expired-domains/KADhosts-unknown_limit.txt
+      - expired-domains/KADhosts-parked.txt
 
 PAF:
   stage: check
@@ -97,6 +99,7 @@ RSS:
       - expired-domains/polish_rss_filters-expired.txt
       - expired-domains/polish_rss_filters-unknown.txt
       - expired-domains/polish_rss_filters-unknown_limit.txt
+      - expired-domains/polish_rss_filters-parked.txt
       - expired-domains/polish_rss_filters_supp-expired.txt
       - expired-domains/polish_rss_filters_supp-unknown.txt
       - expired-domains/polish_rss_filters_supp-unknown_limit.txt
@@ -109,6 +112,7 @@ Social:
       - expired-domains/adblock_social_list-expired.txt
       - expired-domains/adblock_social_list-unknown.txt
       - expired-domains/adblock_social_list-unknown_limit.txt
+      - expired-domains/adblock_social_list-parked.txt
 
 Social_supp:
   stage: check
@@ -118,6 +122,7 @@ Social_supp:
       - expired-domains/social_filters_uB_AG-expired.txt
       - expired-domains/social_filters_uB_AG-unknown.txt
       - expired-domains/social_filters_uB_AG-unknown_limit.txt
+      - expired-domains/social_filters_uB_AG-parked.txt
 
 Cookies:
   stage: check
@@ -127,6 +132,7 @@ Cookies:
       - expired-domains/adblock_cookies-expired.txt
       - expired-domains/adblock_cookies-unknown.txt
       - expired-domains/adblock_cookies-unknown_limit.txt
+      - expired-domains/adblock_cookies-parked.txt
 
 Cookies_supp:
   stage: check
@@ -136,6 +142,7 @@ Cookies_supp:
       - expired-domains/cookies_uB_AG-expired.txt
       - expired-domains/cookies_uB_AG-unknown.txt
       - expired-domains/cookies_uB_AG-unknown_limit.txt
+      - expired-domains/cookies_uB_AG-parked.txt
 
 LWS:
   image: polishfiltersteam/lws_image:latest

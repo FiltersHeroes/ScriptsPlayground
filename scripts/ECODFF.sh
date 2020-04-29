@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.14.6
+# v1.15
 
 # MIT License
 
@@ -79,6 +79,10 @@ for i in "$@"; do
             echo "$domain" >>"$TEMPORARY".2
         else
             echo "Test"
+            parked=$(host -t ns "${domain}" | grep -E "aftermarket.pl|parkingcrew.net|parklogic.com|sedoparking.com")
+            if [ ! -z "${parked}" ]; then
+                echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
+            fi
         fi
     done <"$TEMPORARY"
 
