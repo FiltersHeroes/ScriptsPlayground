@@ -51,10 +51,7 @@ fi
 if [ -f "$UNKNOWN_LIMIT" ]; then
     comm -2 -3 "$SCRIPT_PATH"/LWS_temp.txt "$UNKNOWN_LIMIT" >> "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     rm -r "$SCRIPT_PATH"/LWS_temp.txt
-fi
-
-if [ ! -f "$MAIN_PATH/novelties/podejrzane_LWS.txt" ]; then
-    mv "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    mv "$MAIN_PATH"/novelties/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
 if [ -f "$EXPIRED" ]; then
@@ -67,6 +64,14 @@ fi
 
 if [ -f "$UNKNOWN_LIMIT" ]; then
     rm -r "$UNKNOWN_LIMIT"
+fi
+
+if [ -f "$MAIN_PATH"/novelties/LWS_whitelist.txt ]; then
+    comm -3 "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/LWS_whitelist.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+fi
+
+if [ ! -f "$MAIN_PATH/novelties/podejrzane_LWS.txt" ]; then
+    mv "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/podejrzane_LWS.txt
 fi
 
 sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/podejrzane_LWS.txt

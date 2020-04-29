@@ -44,10 +44,7 @@ fi
 if [ -f "$UNKNOWN" ]; then
     comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$UNKNOWN" >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
     rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
-fi
-
-if [ ! -f "$MAIN_PATH/novelties/przekrety_CERT.txt" ]; then
-    mv "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
 if [ -f "$EXPIRED" ]; then
@@ -60,6 +57,14 @@ fi
 
 if [ -f "$UNKNOWN_LIMIT" ]; then
     rm -r "$UNKNOWN_LIMIT"
+fi
+
+if [ -f "$MAIN_PATH"/novelties/CERT_whitelist.txt ]; then
+    comm -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/CERT_whitelist.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
+fi
+
+if [ ! -f "$MAIN_PATH/novelties/przekrety_CERT.txt" ]; then
+    mv "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/przekrety_CERT.txt
 fi
 
 sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/przekrety_CERT.txt
