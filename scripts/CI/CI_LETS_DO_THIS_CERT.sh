@@ -47,6 +47,12 @@ if [ -f "$UNKNOWN" ]; then
     mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
+if [ -f "$UNKNOWN_LIMIT" ]; then
+    comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$UNKNOWN_LIMIT" >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
+    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
+fi
+
 if [ -f "$EXPIRED" ]; then
     rm -r "$EXPIRED"
 fi
