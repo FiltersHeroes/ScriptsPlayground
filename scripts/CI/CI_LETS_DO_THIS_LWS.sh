@@ -68,10 +68,27 @@ fi
 
 if [ -f "$MAIN_PATH"/novelties/LWS_whitelist.txt ]; then
     comm -3 "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/LWS_whitelist.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    mv "$MAIN_PATH"/novelties/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
+fi
+
+while IFS= read -r domain; do
+    parked=$(host -t ns "${domain}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
+    if [ ! -z "${parked}" ]; then
+        echo "$domain" >> "$SCRIPT_PATH"/LWS_parked.txt
+    fi
+done < "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+
+if [ -f "$SCRIPT_PATH"/LWS_parked.txt ]; then
+    comm -3 "$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_parked.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    rm -rf "$SCRIPT_PATH"/LWS_parked.txt
 fi
 
 if [ ! -f "$MAIN_PATH/novelties/podejrzane_LWS.txt" ]; then
     mv "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+fi
+
+if [ -f "$SCRIPT_PATH"/LWS_temp.txt ]; then
+    rm -rf "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
 sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/podejrzane_LWS.txt

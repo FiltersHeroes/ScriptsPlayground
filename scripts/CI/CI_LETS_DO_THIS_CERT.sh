@@ -61,10 +61,27 @@ fi
 
 if [ -f "$MAIN_PATH"/novelties/CERT_whitelist.txt ]; then
     comm -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/CERT_whitelist.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
+fi
+
+while IFS= read -r domain; do
+    parked=$(host -t ns "${domain}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
+    if [ ! -z "${parked}" ]; then
+        echo "$domain" >> "$SCRIPT_PATH"/CERT_parked.txt
+    fi
+done < "$MAIN_PATH"/novelties/przekrety_CERT.txt
+
+if [ -f "$SCRIPT_PATH"/CERT_parked.txt ]; then
+    comm -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERT_parked.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    rm -rf "$SCRIPT_PATH"/CERT_parked.txt
 fi
 
 if [ ! -f "$MAIN_PATH/novelties/przekrety_CERT.txt" ]; then
     mv "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/przekrety_CERT.txt
+fi
+
+if [ -f "$SCRIPT_PATH"/CERTHole_temp.txt ]; then
+    rm -rf "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
 sed -i -r "s|^|\|\||" "$MAIN_PATH"/novelties/przekrety_CERT.txt
