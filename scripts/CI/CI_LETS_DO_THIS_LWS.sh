@@ -66,8 +66,13 @@ if [ -f "$UNKNOWN_LIMIT" ]; then
     rm -r "$UNKNOWN_LIMIT"
 fi
 
+if [ -f "$SCRIPT_PATH"/LWS_temp.txt ]; then
+    sort -u -o "$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_temp.txt
+fi
+
 if [ -f "$MAIN_PATH"/novelties/LWS_whitelist.txt ]; then
-    comm -3 "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/LWS_whitelist.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    sort -u -o "$MAIN_PATH"/novelties/LWS_whitelist.txt "$MAIN_PATH"/novelties/LWS_whitelist.txt
+    comm -23 "$SCRIPT_PATH"/LWS_temp.txt "$MAIN_PATH"/novelties/LWS_whitelist.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     mv "$MAIN_PATH"/novelties/podejrzane_LWS.txt "$SCRIPT_PATH"/LWS_temp.txt
 fi
 
@@ -76,10 +81,11 @@ while IFS= read -r domain; do
     if [ ! -z "${parked}" ]; then
         echo "$domain" >> "$SCRIPT_PATH"/LWS_parked.txt
     fi
-done < "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+done < "$SCRIPT_PATH"/LWS_temp.txt
 
 if [ -f "$SCRIPT_PATH"/LWS_parked.txt ]; then
-    comm -3 "$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_parked.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
+    sort -u -o "$SCRIPT_PATH"/LWS_parked.txt "$SCRIPT_PATH"/LWS_parked.txt
+    comm -23 "$SCRIPT_PATH"/LWS_temp.txt "$SCRIPT_PATH"/LWS_parked.txt > "$MAIN_PATH"/novelties/podejrzane_LWS.txt
     rm -rf "$SCRIPT_PATH"/LWS_parked.txt
 fi
 

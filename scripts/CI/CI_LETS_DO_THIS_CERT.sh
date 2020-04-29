@@ -59,8 +59,13 @@ if [ -f "$UNKNOWN_LIMIT" ]; then
     rm -r "$UNKNOWN_LIMIT"
 fi
 
+if [ -f "$SCRIPT_PATH"/CERTHole_temp.txt ]; then
+    sort -u -o "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERTHole_temp.txt
+fi
+
 if [ -f "$MAIN_PATH"/novelties/CERT_whitelist.txt ]; then
-    comm -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/CERT_whitelist.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    sort -u -o "$MAIN_PATH"/novelties/CERT_whitelist.txt "$MAIN_PATH"/novelties/CERT_whitelist.txt
+    comm -23 "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/CERT_whitelist.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
     mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
@@ -69,10 +74,11 @@ while IFS= read -r domain; do
     if [ ! -z "${parked}" ]; then
         echo "$domain" >> "$SCRIPT_PATH"/CERT_parked.txt
     fi
-done < "$MAIN_PATH"/novelties/przekrety_CERT.txt
+done < "$SCRIPT_PATH"/CERTHole_temp.txt
 
 if [ -f "$SCRIPT_PATH"/CERT_parked.txt ]; then
-    comm -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERT_parked.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    sort -u -o "$SCRIPT_PATH"/CERT_parked.txt "$SCRIPT_PATH"/CERT_parked.txt
+    comm -23 "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERT_parked.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
     rm -rf "$SCRIPT_PATH"/CERT_parked.txt
 fi
 
