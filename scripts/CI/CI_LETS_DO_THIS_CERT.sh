@@ -76,7 +76,7 @@ if [ -f "$MAIN_PATH"/novelties/CERT_whitelist.txt ]; then
 fi
 
 while IFS= read -r domain; do
-    parked=$(host -t ns "${domain}" | grep -E "aftermarket.pl|parkingcrew.net|parklogic.com|sedoparking.com")
+    parked=$(host -t ns "${domain}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
     if [ ! -z "${parked}" ]; then
         echo "$domain" >> "$SCRIPT_PATH"/CERT_parked.txt
     fi
