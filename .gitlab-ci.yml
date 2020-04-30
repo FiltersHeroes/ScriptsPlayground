@@ -20,7 +20,6 @@ KAD:
       - expired-domains/KAD-expired.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
-      - expired-domains/KAD-parked.txt
 
 KADhosts:
   stage: check
@@ -30,7 +29,6 @@ KADhosts:
       - expired-domains/KADhosts-expired.txt
       - expired-domains/KADhosts-unknown.txt
       - expired-domains/KADhosts-unknown_limit.txt
-      - expired-domains/KADhosts-parked.txt
 
 PAF:
   stage: check
@@ -41,27 +39,35 @@ PAF:
       - expired-domains/PAF_arrows-expired.txt
       - expired-domains/PAF_arrows-unknown.txt
       - expired-domains/PAF_arrows-unknown_limit.txt
+      - expired-domains/PAF_arrows-parked.txt
       - expired-domains/PAF_backgrounds_self-advertising-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
+      - expired-domains/PAF_backgrounds_self-advertising-parked.txt
       - expired-domains/PAF_contact_feedback_widgets-expired.txt
       - expired-domains/PAF_contact_feedback_widgets-unknown.txt
       - expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
+      - expired-domains/PAF_contact_feedback_widgets-parked.txt
       - expired-domains/PAF_newsletters-expired.txt
       - expired-domains/PAF_newsletters-unknown.txt
       - expired-domains/PAF_newsletters-unknown_limit.txt
+      - expired-domains/PAF_newsletters-parked.txt
       - expired-domains/PAF_other_widgets-expired.txt
       - expired-domains/PAF_other_widgets-unknown.txt
       - expired-domains/PAF_other_widgets-unknown_limit.txt
+      - expired-domains/PAF_other_widgets-parked.txt
       - expired-domains/PAF_pop-ups-expired.txt
       - expired-domains/PAF_pop-ups-unknown.txt
       - expired-domains/PAF_pop-ups-unknown_limit.txt
+      - expired-domains/PAF_pop-ups-parked.txt
       - expired-domains/PAF_push-expired.txt
       - expired-domains/PAF_push-unknown.txt
       - expired-domains/PAF_push-unknown_limit.txt
+      - expired-domains/PAF_push-parked.txt
       - expired-domains/PAF_scrolling_videos-expired.txt
       - expired-domains/PAF_scrolling_videos-unknown.txt
       - expired-domains/PAF_scrolling_videos-unknown_limit.txt
+      - expired-domains/PAF_scrolling_videos-parked.txt
 
 PAF_supp:
   stage: check
@@ -72,24 +78,31 @@ PAF_supp:
       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown_limit.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-parked.txt
       - expired-domains/PAF_newsletters_supp-expired.txt
       - expired-domains/PAF_newsletters_supp-unknown.txt
       - expired-domains/PAF_newsletters_supp-unknown_limit.txt
+      - expired-domains/PAF_newsletters_supp-parked.txt
       - expired-domains/PAF_other_elements_supp-expired.txt
       - expired-domains/PAF_other_elements_supp-unknown.txt
       - expired-domains/PAF_other_elements_supp-unknown_limit.txt
+      - expired-domains/PAF_other_elements_supp-parked.txt
       - expired-domains/PAF_pop-ups_supp-expired.txt
       - expired-domains/PAF_pop-ups_supp-unknown.txt
       - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
+      - expired-domains/PAF_pop-ups_supp-parked.txt
       - expired-domains/PAF_push_supp-expired.txt
       - expired-domains/PAF_push_supp-unknown.txt
       - expired-domains/PAF_push_supp-unknown_limit.txt
+      - expired-domains/PAF_push_supp-parked.txt
       - expired-domains/PAF_scrolling_videos_supp-expired.txt
       - expired-domains/PAF_scrolling_videos_supp-unknown.txt
       - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
+      - expired-domains/PAF_scrolling_videos_supp-parked.txt
       - expired-domains/PAF_tagged_internal_links-expired.txt
       - expired-domains/PAF_tagged_internal_links-unknown.txt
       - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
+      - expired-domains/PAF_tagged_internal_links-parked.txt
 
 RSS:
   stage: check
@@ -103,6 +116,7 @@ RSS:
       - expired-domains/polish_rss_filters_supp-expired.txt
       - expired-domains/polish_rss_filters_supp-unknown.txt
       - expired-domains/polish_rss_filters_supp-unknown_limit.txt
+      - expired-domains/polish_rss_filters_supp-parked.txt
 
 Social:
   stage: check
