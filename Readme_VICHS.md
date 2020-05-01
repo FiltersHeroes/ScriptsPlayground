@@ -78,7 +78,10 @@ Then you should add some instructions into it, currently following instructions 
 
 Script should sort lines of sections of filterlists, but it's only basic sort, it can't sort domains or filter options in one line and remove some duplicates (only removes duplicates if lines are identical). Anyway for more advanced sorting and deduplication, you can use [FOP.py script](https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/FOP.py), just download it and place it on the same folder as **VICHS** script and it should be launched automatically by **VICHS** (**FOP** requires min. **python 3.2**).
 
-If you want to use CI for updating filterlists, then you should also create personal access token with **public_repo scope** and add it to CircleCI as environment variable named **GIT_TOKEN**. Default commit message for CI is **Update filterlist_filename to version VERSION**, but you can override **filterlist_filename**, by adding comment like this to filterlist template `! Codename: Test`, of course you should replace **Test** with your chosen codename.
+If you want to use CI for updating filterlists, then you should also create personal access token with **public_repo scope** and add it to CircleCI as environment variable named **GIT_TOKEN**. Default commit message for CI is **Update filterlist_filename to version VERSION**, but you can override **filterlist_filename**, by adding comment like this to filterlist template `! Codename: Test`, of course you should replace **Test** with your chosen codename. You can also set extended commit message/description for CI in `VICHS.config` file, like this:
+```
+@commitDesc This is test commit description
+```
 
 The final step is launching `VICHS.sh`, to do that you just need to put final_filename.extension with path to it as argument (script always begins job from root directory of repository, so you can skip that directory), for example: `./scripts/VICHS.sh list/mylist.txt list/mylist2.txt` (you can put multiple lists at once as arguments).
 
