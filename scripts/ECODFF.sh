@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.15.2
+# v1.15.3
 
 # MIT License
 
@@ -54,6 +54,7 @@ for i in "$@"; do
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
+        rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
     fi
 
     {
