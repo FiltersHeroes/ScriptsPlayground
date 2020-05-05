@@ -20,52 +20,24 @@ rm -r "$CERT"
 rm -r ./KADhosts.txt
 mv "$CERT".2 "$SCRIPT_PATH"/CERTHole_temp.txt
 sed -i 's/^www.//g' "$SCRIPT_PATH"/CERTHole_temp.txt
-sed -i -r "s|^|\|\||" "$SCRIPT_PATH"/CERTHole_temp.txt
-sed -i -r 's|$|\^\$all|' "$SCRIPT_PATH"/CERTHole_temp.txt
 sort -u -o "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 
-NO_SC="true" ./scripts/ECODFF.sh "$SCRIPT_PATH"/CERTHole_temp.txt
+while IFS= read -r domain; do
+    hostname=$(host -t ns "${domain}")
+    parked=$(echo "${hostname}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
+    echo "Checking the status of domains"
+    if [[ "${hostname}" =~ "NXDOMAIN" ]] || [ ! -z "${parked}" ]; then
+        echo "$domain" >>"$MAIN_PATH"/expired-domains/CERT_expired.txt
+    fi
+done <"$SCRIPT_PATH"/CERTHole_temp.txt
 
-EXPIRED=$MAIN_PATH/expired-domains/CERTHole_temp-expired.txt
-UNKNOWN=$MAIN_PATH/expired-domains/CERTHole_temp-unknown.txt
-UNKNOWN_LIMIT=$MAIN_PATH/expired-domains/CERTHole_temp-unknown_limit.txt
-
-if [ -f "$EXPIRED" ] || [ -f "$UNKNOWN" ] || [ -f "$UNKNOWN_LIMIT" ]; then
-    sed -i "s|[|][|]||" "$SCRIPT_PATH"/CERTHole_temp.txt
-    sed -i 's/\^\$all//g' "$SCRIPT_PATH"/CERTHole_temp.txt
-fi
-
-if [ -f "$EXPIRED" ]; then
-    comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$EXPIRED" >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
-    rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
-    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
-fi
-
-if [ -f "$UNKNOWN" ]; then
-    comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$UNKNOWN" >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
-    rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
-    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
-fi
-
-if [ -f "$UNKNOWN_LIMIT" ]; then
-    comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$UNKNOWN_LIMIT" >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
-    rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
-    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
-fi
+EXPIRED=$MAIN_PATH/expired-domains/CERT_expired.txt
 
 if [ -f "$EXPIRED" ]; then
-    rm -r "$EXPIRED"
-fi
-
-if [ -f "$UNKNOWN" ]; then
-    rm -r "$UNKNOWN"
-fi
-
-if [ -f "$UNKNOWN_LIMIT" ]; then
-    rm -r "$UNKNOWN_LIMIT"
-fi
-
-if [ -f "$SCRIPT_PATH"/CERTHole_temp.txt ]; then
+    comm -2 -3 "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/expired-domains/CERT_expired.txt >> "$MAIN_PATH"/novelties/przekrety_CERT.txt
+    rm -r "$SCRIPT_PATH"/CERTHole_temp.txt
+    mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
+    rm -r "$MAIN_PATH"/expired-domains/CERT_expired.txt
     sort -u -o "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
@@ -75,20 +47,7 @@ if [ -f "$MAIN_PATH"/novelties/CERT_whitelist.txt ]; then
     mv "$MAIN_PATH"/novelties/przekrety_CERT.txt "$SCRIPT_PATH"/CERTHole_temp.txt
 fi
 
-while IFS= read -r domain; do
-    parked=$(host -t ns "${domain}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
-    if [ ! -z "${parked}" ]; then
-        echo "$domain" >> "$SCRIPT_PATH"/CERT_parked.txt
-    fi
-done < "$SCRIPT_PATH"/CERTHole_temp.txt
-
-if [ -f "$SCRIPT_PATH"/CERT_parked.txt ]; then
-    sort -u -o "$SCRIPT_PATH"/CERT_parked.txt "$SCRIPT_PATH"/CERT_parked.txt
-    comm -23 "$SCRIPT_PATH"/CERTHole_temp.txt "$SCRIPT_PATH"/CERT_parked.txt > "$MAIN_PATH"/novelties/przekrety_CERT.txt
-    rm -rf "$SCRIPT_PATH"/CERT_parked.txt
-fi
-
-if [ ! -f "$MAIN_PATH/novelties/przekrety_CERT.txt" ]; then
+if [ ! -f "$MAIN_PATH"/novelties/przekrety_CERT.txt ]; then
     mv "$SCRIPT_PATH"/CERTHole_temp.txt "$MAIN_PATH"/novelties/przekrety_CERT.txt
 fi
 

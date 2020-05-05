@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.15.3
+# v1.15.4
 
 # MIT License
 
@@ -77,12 +77,11 @@ for i in "$@"; do
     while IFS= read -r domain; do
         hostname=$(host -t ns "${domain}")
         parked=$(echo "${hostname}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
+        echo "Checking the status of domains"
         if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
             echo "$domain" >>"$TEMPORARY".2
         elif [ ! -z "${parked}" ]; then
             echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
-        else
-            echo "Test"
         fi
     done <"$TEMPORARY"
 
@@ -122,14 +121,13 @@ for i in "$@"; do
     if [ -f "$TEMPORARY.5" ]; then
         while IFS= read -r domain; do
             status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            echo "Checking the status of domains"
             if [ "$status_code" -eq "000" ]; then
                 echo "$domain" >>"$TEMPORARY".6
             elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ ! "$NO_SC" ]; then
                 echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
             elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ "$NO_SC" = "true" ]; then
                 echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-            else
-                echo "Test"
             fi
         done <"$TEMPORARY".5
     fi
@@ -172,12 +170,11 @@ for i in "$@"; do
     if [ -f "$TEMPORARY.8" ]; then
         while IFS= read -r domain; do
             status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
+            echo "Checking the status of domains"
             if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
                 echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
             elif [ "$status_code" -ne "200" ] && [ "$NO_SC" = "true" ]; then
                 echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-            else
-                echo "Test"
             fi
         done <"$TEMPORARY".8
     fi
