@@ -1,9 +1,10 @@
 image: polishfiltersteam/expired_domains_image:latest
 
 stages:
-  - check
-  - tryagain
-  - final
+  # - check
+  # - tryagain
+  # - final
+  - test
 
 CERT:
   stage: check
@@ -175,7 +176,12 @@ KAD_limit:
       - expired-domains/KAD-expired.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
+      - expired-domains/KAD-unknown_no_internet.txt
 
 deploy:
   stage: final
   script: "./scripts/CI/cleanup_push.sh"
+
+test:
+  stage: test
+  script: "./scripts/CI/CI_LETS_DO_THIS_TEST.sh"
