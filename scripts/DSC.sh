@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.12
+# Current Version: 1.0.13
 #
 #
 # Purpose:
@@ -142,7 +142,7 @@ check_domain_status()
     suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the" )
     redemption_period=$(cat ${WHOIS_TMP} | ${GREP} "redemptionPeriod" )
     reserved=$(cat ${WHOIS_TMP} | ${GREP} "is queued up for registration" )
-    limit_exceeded=$(cat ${WHOIS_TMP} | ${GREP} "request limit exceeded")
+    limit_exceeded=$(cat ${WHOIS_TMP} | ${GREP} -Ei "request limit exceeded|Query rate exceeded")
 
     if [ ! -z "$removed" ]
     then

@@ -1,187 +1,187 @@
 image: polishfiltersteam/expired_domains_image:latest
 
 stages:
-  # - check
-  # - tryagain
-  # - final
-  - test
+  - check
+  - tryagain
+  - final
+  # - test
 
-# CERT:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_CERT.sh"
-#   artifacts:
-#     paths:
-#       - novelties/przekrety_CERT.txt
+CERT:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_CERT.sh"
+  artifacts:
+    paths:
+      - novelties/przekrety_CERT.txt
 
-# KAD:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_KAD.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/KAD-expired.txt
-#       - expired-domains/KAD-unknown.txt
-#       - expired-domains/KAD-unknown_limit.txt
-#       - expired-domains/KAD-unknown_no_internet.txt
+KAD:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_KAD.sh"
+  artifacts:
+    paths:
+      - expired-domains/KAD-expired.txt
+      - expired-domains/KAD-unknown.txt
+      - expired-domains/KAD-unknown_limit.txt
+      - expired-domains/KAD-unknown_no_internet.txt
 
-# KADhosts:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_KADhosts.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/KADhosts-expired.txt
-#       - expired-domains/KADhosts-unknown.txt
-#       - expired-domains/KADhosts-unknown_limit.txt
+KADhosts:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_KADhosts.sh"
+  artifacts:
+    paths:
+      - expired-domains/KADhosts-expired.txt
+      - expired-domains/KADhosts-unknown.txt
+      - expired-domains/KADhosts-unknown_limit.txt
 
-# PAF:
-#   stage: check
-#   script:
-#     - "./scripts/CI/CI_LETS_DO_THIS_PAF.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/PAF_arrows-expired.txt
-#       - expired-domains/PAF_arrows-unknown.txt
-#       - expired-domains/PAF_arrows-unknown_limit.txt
-#       - expired-domains/PAF_arrows-parked.txt
-#       - expired-domains/PAF_backgrounds_self-advertising-expired.txt
-#       - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
-#       - expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
-#       - expired-domains/PAF_backgrounds_self-advertising-parked.txt
-#       - expired-domains/PAF_contact_feedback_widgets-expired.txt
-#       - expired-domains/PAF_contact_feedback_widgets-unknown.txt
-#       - expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
-#       - expired-domains/PAF_contact_feedback_widgets-parked.txt
-#       - expired-domains/PAF_newsletters-expired.txt
-#       - expired-domains/PAF_newsletters-unknown.txt
-#       - expired-domains/PAF_newsletters-unknown_limit.txt
-#       - expired-domains/PAF_newsletters-parked.txt
-#       - expired-domains/PAF_other_widgets-expired.txt
-#       - expired-domains/PAF_other_widgets-unknown.txt
-#       - expired-domains/PAF_other_widgets-unknown_limit.txt
-#       - expired-domains/PAF_other_widgets-parked.txt
-#       - expired-domains/PAF_pop-ups-expired.txt
-#       - expired-domains/PAF_pop-ups-unknown.txt
-#       - expired-domains/PAF_pop-ups-unknown_limit.txt
-#       - expired-domains/PAF_pop-ups-parked.txt
-#       - expired-domains/PAF_push-expired.txt
-#       - expired-domains/PAF_push-unknown.txt
-#       - expired-domains/PAF_push-unknown_limit.txt
-#       - expired-domains/PAF_push-parked.txt
-#       - expired-domains/PAF_scrolling_videos-expired.txt
-#       - expired-domains/PAF_scrolling_videos-unknown.txt
-#       - expired-domains/PAF_scrolling_videos-unknown_limit.txt
-#       - expired-domains/PAF_scrolling_videos-parked.txt
+PAF:
+  stage: check
+  script:
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_arrows-expired.txt
+      - expired-domains/PAF_arrows-unknown.txt
+      - expired-domains/PAF_arrows-unknown_limit.txt
+      - expired-domains/PAF_arrows-parked.txt
+      - expired-domains/PAF_backgrounds_self-advertising-expired.txt
+      - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
+      - expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
+      - expired-domains/PAF_backgrounds_self-advertising-parked.txt
+      - expired-domains/PAF_contact_feedback_widgets-expired.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
+      - expired-domains/PAF_contact_feedback_widgets-parked.txt
+      - expired-domains/PAF_newsletters-expired.txt
+      - expired-domains/PAF_newsletters-unknown.txt
+      - expired-domains/PAF_newsletters-unknown_limit.txt
+      - expired-domains/PAF_newsletters-parked.txt
+      - expired-domains/PAF_other_widgets-expired.txt
+      - expired-domains/PAF_other_widgets-unknown.txt
+      - expired-domains/PAF_other_widgets-unknown_limit.txt
+      - expired-domains/PAF_other_widgets-parked.txt
+      - expired-domains/PAF_pop-ups-expired.txt
+      - expired-domains/PAF_pop-ups-unknown.txt
+      - expired-domains/PAF_pop-ups-unknown_limit.txt
+      - expired-domains/PAF_pop-ups-parked.txt
+      - expired-domains/PAF_push-expired.txt
+      - expired-domains/PAF_push-unknown.txt
+      - expired-domains/PAF_push-unknown_limit.txt
+      - expired-domains/PAF_push-parked.txt
+      - expired-domains/PAF_scrolling_videos-expired.txt
+      - expired-domains/PAF_scrolling_videos-unknown.txt
+      - expired-domains/PAF_scrolling_videos-unknown_limit.txt
+      - expired-domains/PAF_scrolling_videos-parked.txt
 
-# PAF_supp:
-#   stage: check
-#   script:
-#     - "./scripts/CI/CI_LETS_DO_THIS_PAF_supp.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
-#       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
-#       - expired-domains/PAF_backgrounds_self-advertising_supp-unknown_limit.txt
-#       - expired-domains/PAF_backgrounds_self-advertising_supp-parked.txt
-#       - expired-domains/PAF_newsletters_supp-expired.txt
-#       - expired-domains/PAF_newsletters_supp-unknown.txt
-#       - expired-domains/PAF_newsletters_supp-unknown_limit.txt
-#       - expired-domains/PAF_newsletters_supp-parked.txt
-#       - expired-domains/PAF_other_elements_supp-expired.txt
-#       - expired-domains/PAF_other_elements_supp-unknown.txt
-#       - expired-domains/PAF_other_elements_supp-unknown_limit.txt
-#       - expired-domains/PAF_other_elements_supp-parked.txt
-#       - expired-domains/PAF_pop-ups_supp-expired.txt
-#       - expired-domains/PAF_pop-ups_supp-unknown.txt
-#       - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
-#       - expired-domains/PAF_pop-ups_supp-parked.txt
-#       - expired-domains/PAF_push_supp-expired.txt
-#       - expired-domains/PAF_push_supp-unknown.txt
-#       - expired-domains/PAF_push_supp-unknown_limit.txt
-#       - expired-domains/PAF_push_supp-parked.txt
-#       - expired-domains/PAF_scrolling_videos_supp-expired.txt
-#       - expired-domains/PAF_scrolling_videos_supp-unknown.txt
-#       - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
-#       - expired-domains/PAF_scrolling_videos_supp-parked.txt
-#       - expired-domains/PAF_tagged_internal_links-expired.txt
-#       - expired-domains/PAF_tagged_internal_links-unknown.txt
-#       - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
-#       - expired-domains/PAF_tagged_internal_links-parked.txt
+PAF_supp:
+  stage: check
+  script:
+    - "./scripts/CI/CI_LETS_DO_THIS_PAF_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown_limit.txt
+      - expired-domains/PAF_backgrounds_self-advertising_supp-parked.txt
+      - expired-domains/PAF_newsletters_supp-expired.txt
+      - expired-domains/PAF_newsletters_supp-unknown.txt
+      - expired-domains/PAF_newsletters_supp-unknown_limit.txt
+      - expired-domains/PAF_newsletters_supp-parked.txt
+      - expired-domains/PAF_other_elements_supp-expired.txt
+      - expired-domains/PAF_other_elements_supp-unknown.txt
+      - expired-domains/PAF_other_elements_supp-unknown_limit.txt
+      - expired-domains/PAF_other_elements_supp-parked.txt
+      - expired-domains/PAF_pop-ups_supp-expired.txt
+      - expired-domains/PAF_pop-ups_supp-unknown.txt
+      - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
+      - expired-domains/PAF_pop-ups_supp-parked.txt
+      - expired-domains/PAF_push_supp-expired.txt
+      - expired-domains/PAF_push_supp-unknown.txt
+      - expired-domains/PAF_push_supp-unknown_limit.txt
+      - expired-domains/PAF_push_supp-parked.txt
+      - expired-domains/PAF_scrolling_videos_supp-expired.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
+      - expired-domains/PAF_scrolling_videos_supp-parked.txt
+      - expired-domains/PAF_tagged_internal_links-expired.txt
+      - expired-domains/PAF_tagged_internal_links-unknown.txt
+      - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
+      - expired-domains/PAF_tagged_internal_links-parked.txt
 
-# RSS:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_RSS.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/polish_rss_filters-expired.txt
-#       - expired-domains/polish_rss_filters-unknown.txt
-#       - expired-domains/polish_rss_filters-unknown_limit.txt
-#       - expired-domains/polish_rss_filters-parked.txt
-#       - expired-domains/polish_rss_filters_supp-expired.txt
-#       - expired-domains/polish_rss_filters_supp-unknown.txt
-#       - expired-domains/polish_rss_filters_supp-unknown_limit.txt
-#       - expired-domains/polish_rss_filters_supp-parked.txt
+RSS:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_RSS.sh"
+  artifacts:
+    paths:
+      - expired-domains/polish_rss_filters-expired.txt
+      - expired-domains/polish_rss_filters-unknown.txt
+      - expired-domains/polish_rss_filters-unknown_limit.txt
+      - expired-domains/polish_rss_filters-parked.txt
+      - expired-domains/polish_rss_filters_supp-expired.txt
+      - expired-domains/polish_rss_filters_supp-unknown.txt
+      - expired-domains/polish_rss_filters_supp-unknown_limit.txt
+      - expired-domains/polish_rss_filters_supp-parked.txt
 
-# Social:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_Social.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/adblock_social_list-expired.txt
-#       - expired-domains/adblock_social_list-unknown.txt
-#       - expired-domains/adblock_social_list-unknown_limit.txt
-#       - expired-domains/adblock_social_list-parked.txt
+Social:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Social.sh"
+  artifacts:
+    paths:
+      - expired-domains/adblock_social_list-expired.txt
+      - expired-domains/adblock_social_list-unknown.txt
+      - expired-domains/adblock_social_list-unknown_limit.txt
+      - expired-domains/adblock_social_list-parked.txt
 
-# Social_supp:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_Social_supp.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/social_filters_uB_AG-expired.txt
-#       - expired-domains/social_filters_uB_AG-unknown.txt
-#       - expired-domains/social_filters_uB_AG-unknown_limit.txt
-#       - expired-domains/social_filters_uB_AG-parked.txt
+Social_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Social_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/social_filters_uB_AG-expired.txt
+      - expired-domains/social_filters_uB_AG-unknown.txt
+      - expired-domains/social_filters_uB_AG-unknown_limit.txt
+      - expired-domains/social_filters_uB_AG-parked.txt
 
-# Cookies:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/adblock_cookies-expired.txt
-#       - expired-domains/adblock_cookies-unknown.txt
-#       - expired-domains/adblock_cookies-unknown_limit.txt
-#       - expired-domains/adblock_cookies-parked.txt
+Cookies:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
+  artifacts:
+    paths:
+      - expired-domains/adblock_cookies-expired.txt
+      - expired-domains/adblock_cookies-unknown.txt
+      - expired-domains/adblock_cookies-unknown_limit.txt
+      - expired-domains/adblock_cookies-parked.txt
 
-# Cookies_supp:
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_Cookies_supp.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/cookies_uB_AG-expired.txt
-#       - expired-domains/cookies_uB_AG-unknown.txt
-#       - expired-domains/cookies_uB_AG-unknown_limit.txt
-#       - expired-domains/cookies_uB_AG-parked.txt
+Cookies_supp:
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies_supp.sh"
+  artifacts:
+    paths:
+      - expired-domains/cookies_uB_AG-expired.txt
+      - expired-domains/cookies_uB_AG-unknown.txt
+      - expired-domains/cookies_uB_AG-unknown_limit.txt
+      - expired-domains/cookies_uB_AG-parked.txt
 
-# LWS:
-#   image: polishfiltersteam/lws_image:latest
-#   stage: check
-#   script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
-#   artifacts:
-#     paths:
-#       - novelties/podejrzane_LWS.txt
+LWS:
+  image: polishfiltersteam/lws_image:latest
+  stage: check
+  script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
+  artifacts:
+    paths:
+      - novelties/podejrzane_LWS.txt
 
-# KAD_limit:
-#   stage: tryagain
-#   script: "./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh"
-#   artifacts:
-#     paths:
-#       - expired-domains/KAD-expired.txt
-#       - expired-domains/KAD-unknown.txt
-#       - expired-domains/KAD-unknown_limit.txt
-#       - expired-domains/KAD-unknown_no_internet.txt
+KAD_limit:
+  stage: tryagain
+  script: "./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh"
+  artifacts:
+    paths:
+      - expired-domains/KAD-expired.txt
+      - expired-domains/KAD-unknown.txt
+      - expired-domains/KAD-unknown_limit.txt
+      - expired-domains/KAD-unknown_no_internet.txt
 
-# deploy:
-#   stage: final
-#   script: "./scripts/CI/cleanup_push.sh"
+deploy:
+  stage: final
+  script: "./scripts/CI/cleanup_push.sh"
 
-test:
-  stage: test
-  script: "./scripts/CI/CI_LETS_DO_THIS_TEST.sh"
+# test:
+#   stage: test
+#   script: "./scripts/CI/CI_LETS_DO_THIS_TEST.sh"
