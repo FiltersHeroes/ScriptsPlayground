@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.11
+# Current Version: 1.0.12
 #
 #
 # Purpose:
@@ -174,6 +174,9 @@ check_domain_status()
     elif [ ! -z "${limit_exceeded}" ]
     then
         prints "${DOMAIN}" "Limit_exceeded" "${DOMAINDATE}" "${DOMAINDIFF}"
+    elif [ ! -s "${WHOIS_TMP}" ]
+    then
+        prints "${DOMAIN}" "No_internet" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
     then
         prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"

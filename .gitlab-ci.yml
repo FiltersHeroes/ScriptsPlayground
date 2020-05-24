@@ -20,6 +20,7 @@ KAD:
       - expired-domains/KAD-expired.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
+      - expired-domains/KAD-unknown_no_internet.txt
 
 KADhosts:
   stage: check
