@@ -2,12 +2,15 @@
 # Sciezka to miejsce, w którym znajduje się skrypt
 sciezka=$(dirname "$0")
 
+# MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
+MAIN_PATH=$(dirname "$0")/../..
+
 cd $sciezka/../..
 
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
 
-sed -i 's/ 000//g' ./KAD-unknown.txt
-./scripts/DSC.sh -f ./KAD-unknown.txt
+sed -i 's/ 000//g' ./KAD.txt
+./scripts/DSC.sh -f ./KAD.txt
 
 pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)' ./KAD.txt)
 pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' ./KAD.txt)
@@ -17,7 +20,7 @@ FILTERLIST="KAD"
 TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
 
 if [ ! -d "$MAIN_PATH/expired-domains" ]; then
-    mdkir "$MAIN_PATH"/expired-domains
+    mkdir "$MAIN_PATH"/expired-domains
     touch "$MAIN_PATH"/expired-domains/.keep
 fi
 
