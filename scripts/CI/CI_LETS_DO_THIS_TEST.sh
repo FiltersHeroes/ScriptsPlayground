@@ -9,9 +9,6 @@ cd $sciezka/../..
 
 wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
 
-sed -i 's/ 000//g' ./KAD.txt
-./scripts/DSC.sh -f ./KAD.txt
-
 pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)' ./KAD.txt)
 pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' ./KAD.txt)
 pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' ./KAD.txt)
