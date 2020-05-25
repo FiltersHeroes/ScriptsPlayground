@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.17
+# v1.18
 
 # MIT License
 
@@ -81,7 +81,7 @@ for i in "$@"; do
         echo "Checking the status of domains..."
         if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
             echo "$domain" >>"$TEMPORARY".2
-        elif [ ! -z "${parked}" ]; then
+        elif [ -n "${parked}" ]; then
             echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
         fi
     done <"$TEMPORARY"
@@ -160,7 +160,10 @@ for i in "$@"; do
         while IFS= read -r domain; do
             # Jeżeli subdomeny padły, ale ich domeny działają, to subdomeny trafiają do kolejnego pliku tymczasowego
             if grep -q "$domain" "$TEMPORARY.sub"; then
-                grep "$domain" "$TEMPORARY.sub" >>"$TEMPORARY".8
+                subdomain=$(grep "$domain" "$TEMPORARY.sub")
+                if [ "$domain" != "$subdomain" ]; then
+                    echo "$subdomain" >>"$TEMPORARY".8
+                fi
             fi
         done <"$TEMPORARY".d
 
