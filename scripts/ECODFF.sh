@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.16
+# v1.17
 
 # MIT License
 
@@ -118,17 +118,18 @@ for i in "$@"; do
         awk -F' ' '$2=="Unknown"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".5
         awk -F' ' '$2=="Limit_exceeded"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
         awk -F' ' '$2=="No_internet"' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".6
+
+        # Musimy wiedzieć, które domeny subdomen są ok
+        sed '/Valid/!d' "$TEMPORARY".4 | cut -d' ' -f1 >>"$TEMPORARY".d
     fi
 
     if [ -f "$TEMPORARY.5" ]; then
         while IFS= read -r domain; do
             status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' "$domain")
             echo "Checking the status of domains..."
-            if [ "$status_code" -eq "000" ]; then
-                echo "$domain" >>"$TEMPORARY".6
-            elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ ! "$NO_SC" ]; then
+            if [ "$status_code" -ne "200" ] && [ ! "$NO_SC" ]; then
                 echo "$domain $status_code" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-            elif [ "$status_code" -ne "200" ] && [ "$status_code" -ne "000" ] && [ "$NO_SC" = "true" ]; then
+            elif [ "$status_code" -ne "200" ] && [ "$NO_SC" = "true" ]; then
                 echo "$domain" >>"$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
             fi
         done <"$TEMPORARY".5
