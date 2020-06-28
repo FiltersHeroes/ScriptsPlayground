@@ -7,7 +7,7 @@ MAIN_PATH=$(dirname "$0")/../..
 
 cd $sciezka
 
-$sciezka/../DSC.sh -d "fernanosood.info" -v
+$MAIN_PATH/scripts/DSC.sh -d "fernanosood.info" -v
 
 # cd $sciezka/../..
 # wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
