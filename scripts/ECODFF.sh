@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.18
+# v1.19
 
 # MIT License
 
@@ -25,10 +25,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-SCRIPT_PATH=$(dirname "$0")
+SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
-MAIN_PATH=$(dirname "$0")/..
+MAIN_PATH="$SCRIPT_PATH"/..
 
 cd "$MAIN_PATH" || exit
 

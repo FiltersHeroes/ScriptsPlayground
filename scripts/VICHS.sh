@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.16
+# v2.17
 
 # MIT License
 
@@ -25,10 +25,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-SCRIPT_PATH=$(dirname "$0")
+SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
-MAIN_PATH=$SCRIPT_PATH/..
+MAIN_PATH="$SCRIPT_PATH"/..
 
 # Tłumaczenie
 . gettext.sh
@@ -412,7 +412,7 @@ for i in "$@"; do
     }
 
     # Obliczanie ilości sekcji/list filtrów, z których zostanie wyodrębnionych część reguł (jedynie reguły zawierajace gwiazdki) w celu konwersji na format regex zgodny z PiHole
-    END_PH=$(egrep -o -i '@PHinclude' "${TEMPLATE}" | wc -l)
+    END_PH=$(grep -E -o -i '@PHinclude' "${TEMPLATE}" | wc -l)
 
     # Konwertowanie na format regex zgodny z PiHole i doklejanie zawartości sekcji/list filtrów w odpowiednie miejsca
     for (( n=1; n<=END_PH; n++ ))
@@ -595,10 +595,10 @@ if [ "$commited" ]; then
         printf "%s\n" "$(gettext "Do you want to send changed files to git now?")"
         select yn in $(gettext "Yes") $(gettext "No"); do
             case $yn in
-                        $(gettext "Yes") )
+                        "$(gettext "Yes")" )
                         git push
                         break;;
-                        $(gettext "No") ) break;;
+                        "$(gettext "No")" ) break;;
             esac
         done
     fi
