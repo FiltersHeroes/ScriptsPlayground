@@ -5,62 +5,65 @@ sciezka=$(dirname "$0")
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
 MAIN_PATH=$(dirname "$0")/../..
 
-cd $sciezka/../..
+cd $sciezka
 
-wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
+$sciezka/DSC.sh -d "fernanosood.info" -v
 
-pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)' ./KAD.txt)
-pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' ./KAD.txt)
-pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' ./KAD.txt)
-hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' ./KAD.txt)
-FILTERLIST="KAD"
-TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
+# cd $sciezka/../..
+# wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
 
-if [ ! -d "$MAIN_PATH/expired-domains" ]; then
-    mkdir "$MAIN_PATH"/expired-domains
-    touch "$MAIN_PATH"/expired-domains/.keep
-fi
+# pageComma=$(pcregrep -o1 '^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)' ./KAD.txt)
+# pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' ./KAD.txt)
+# pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' ./KAD.txt)
+# hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' ./KAD.txt)
+# FILTERLIST="KAD"
+# TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
 
-if [ -z "$NO_RM" ] ; then
-    rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
-    rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
-    rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
-    rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_no_internet.txt
-    rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
-fi
+# if [ ! -d "$MAIN_PATH/expired-domains" ]; then
+#     mkdir "$MAIN_PATH"/expired-domains
+#     touch "$MAIN_PATH"/expired-domains/.keep
+# fi
 
-{
-    echo "$pageComma"
-    echo "$pagePipe"
-    echo "$pageDoublePipe"
-    echo "$hosts"
-} >>"$TEMPORARY"
+# if [ -z "$NO_RM" ] ; then
+#     rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
+#     rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
+#     rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
+#     rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_no_internet.txt
+#     rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-parked.txt
+# fi
 
-sed -i "s/[|]/\n/g" "$TEMPORARY"
-sed -i "s/\,/\n/g" "$TEMPORARY"
-sed -i "s/\ /\n/g" "$TEMPORARY"
-sed -i "s|\~||" "$TEMPORARY"
-sed -i '/[/\*]/d' "$TEMPORARY"
-sed -ni '/\./p' "$TEMPORARY"
-sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" "$TEMPORARY"
-sed -i '/^$/d' "$TEMPORARY"
-sort -u -o "$TEMPORARY" "$TEMPORARY"
+# {
+#     echo "$pageComma"
+#     echo "$pagePipe"
+#     echo "$pageDoublePipe"
+#     echo "$hosts"
+# } >>"$TEMPORARY"
 
-while IFS= read -r domain; do
-    hostname=$(host -t ns "${domain}")
-    parked=$(echo "${hostname}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
-    echo "Checking the status of domains..."
-    if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
-        echo "$domain" >>"$TEMPORARY".2
-    fi
-done <"$TEMPORARY"
+# sed -i "s/[|]/\n/g" "$TEMPORARY"
+# sed -i "s/\,/\n/g" "$TEMPORARY"
+# sed -i "s/\ /\n/g" "$TEMPORARY"
+# sed -i "s|\~||" "$TEMPORARY"
+# sed -i '/[/\*]/d' "$TEMPORARY"
+# sed -ni '/\./p' "$TEMPORARY"
+# sed -i -r "s/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]//" "$TEMPORARY"
+# sed -i '/^$/d' "$TEMPORARY"
+# sort -u -o "$TEMPORARY" "$TEMPORARY"
 
-if [ -f "$TEMPORARY.2" ]; then
-    sed -i "s/^www[0-9]\.//" "$TEMPORARY".2
-    sed -i "s/^www\.//" "$TEMPORARY".2
-    sort -u -o "$TEMPORARY".2 "$TEMPORARY".2
+# while IFS= read -r domain; do
+#     hostname=$(host -t ns "${domain}")
+#     parked=$(echo "${hostname}" | grep -E "parkingcrew.net|parklogic.com|sedoparking.com")
+#     echo "Checking the status of domains..."
+#     if [[ "${hostname}" =~ "NXDOMAIN" ]]; then
+#         echo "$domain" >>"$TEMPORARY".2
+#     fi
+# done <"$TEMPORARY"
 
-    while IFS= read -r domain; do
-        whois "${domain}"
-    done <"$TEMPORARY.2"
-fi
+# if [ -f "$TEMPORARY.2" ]; then
+#     sed -i "s/^www[0-9]\.//" "$TEMPORARY".2
+#     sed -i "s/^www\.//" "$TEMPORARY".2
+#     sort -u -o "$TEMPORARY".2 "$TEMPORARY".2
+
+#     while IFS= read -r domain; do
+#         whois "${domain}"
+#     done <"$TEMPORARY.2"
+# fi
