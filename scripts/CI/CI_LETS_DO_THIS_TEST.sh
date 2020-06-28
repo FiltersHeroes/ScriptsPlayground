@@ -1,11 +1,11 @@
 #!/bin/bash
 # Sciezka to miejsce, w którym znajduje się skrypt
-sciezka=$(realpath "$0")
+sciezka=$(dirname "$(realpath -s "$0")")
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
-MAIN_PATH=$(realpath "$0")/../..
+MAIN_PATH="$sciezka/../.."
 
-cd "$sciezka" || exit
+cd "$sciezka"/ || exit
 
 "$MAIN_PATH"/scripts/DSC.sh -d "fernanosood.info" -v
 
