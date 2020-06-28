@@ -5,9 +5,9 @@ sciezka=$(dirname "$0")
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
 MAIN_PATH=$(dirname "$0")/../..
 
-cd $sciezka
+cd "$sciezka" || exit
 
-$MAIN_PATH/scripts/DSC.sh -d "fernanosood.info" -v
+"$MAIN_PATH"/scripts/DSC.sh -d "fernanosood.info" -v
 
 # cd $sciezka/../..
 # wget https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
