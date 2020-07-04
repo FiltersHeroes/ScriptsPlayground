@@ -3,7 +3,7 @@ FROM ubuntu:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y git openssh-client ca-certificates wget tzdata pcregrep whois host language-pack-pl curl python3-tldextract
+RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates wget tzdata pcregrep host language-pack-pl python3 gettext-base
 
 # uncomment chosen locale to enable it's generation
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
@@ -19,8 +19,5 @@ ENV LANGUAGE en_US
 
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
-
-RUN useradd -m example
-USER example
 
 CMD ["/bin/sh"]
