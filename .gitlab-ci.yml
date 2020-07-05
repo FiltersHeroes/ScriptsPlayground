@@ -6,13 +6,6 @@ stages:
   - final
   # - test
 
-CERT:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_CERT.sh"
-  artifacts:
-    paths:
-      - novelties/przekrety_CERT.txt
-
 KAD:
   stage: check
   script: "./scripts/CI/CI_LETS_DO_THIS_KAD.sh"
