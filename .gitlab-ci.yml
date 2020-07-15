@@ -153,14 +153,6 @@ Cookies_supp:
       - expired-domains/cookies_uB_AG-unknown_limit.txt
       - expired-domains/cookies_uB_AG-parked.txt
 
-LWS:
-  image: polishfiltersteam/lws_image:latest
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_LWS.sh"
-  artifacts:
-    paths:
-      - novelties/podejrzane_LWS.txt
-
 KAD_limit:
   stage: tryagain
   script: "./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh"
