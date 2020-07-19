@@ -8,9 +8,6 @@ cd "$MAIN_PATH" || exit
 cd ./expired-domains || exit
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
 
-cd ../novelties || exit
-for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
-
 cd "$MAIN_PATH" || exit
 
 git config --global user.email "PolishJarvis@int.pl"
