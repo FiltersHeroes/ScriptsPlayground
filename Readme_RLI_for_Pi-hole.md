@@ -54,9 +54,9 @@ wget \
 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.py
 ```
 
-Then just run it:
+Then just run it with url to list as its parameter:
 ```bash
-path_to_script/RLU_for_Pi-hole.py
+path_to_script/RLU_for_Pi-hole.py \
+https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt \
+https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 ```
-
-And choose list which you want to uninstall (just type number corresponding to the list).
