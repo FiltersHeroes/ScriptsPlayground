@@ -51,12 +51,12 @@ To update lists, you must repeat installation procedure. As we previously mentio
 To remove one of the installed regex lists, first you need to download uninstaller:
 ```bash
 wget \
-https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.sh
+https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.py
 ```
 
 Then just run it:
 ```bash
-path_to_script/RLU_for_Pi-hole.sh
+path_to_script/RLU_for_Pi-hole.py
 ```
 
 And choose list which you want to uninstall (just type number corresponding to the list).

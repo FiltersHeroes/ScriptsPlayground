@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# Regex Lists Installer for Pi-hole v5 (Beta)
-# Based on https://github.com/mmotti/pihole-regex/blob/master/install.py
+# Regex Lists Uninstaller for Pi-hole v5 (Beta)
+# Based on https://github.com/mmotti/pihole-regex/blob/master/uninstall.py
 
 import os
 import sqlite3
@@ -54,14 +54,10 @@ for i in sys.argv[1:]:
 
 
     db_exists = False
-    conn = None
-    c = None
 
     regexps_remote = set()
     regexps_local = set()
-    regexps_local = set()
-    regexps_legacy = set()
-    regexps_remove = set()
+    regexps_legacy_custom = set()
 
     # Check that pi-hole path exists
     if os.path.exists(path_pihole):
@@ -74,7 +70,7 @@ for i in sys.argv[1:]:
     if os.access(path_pihole, os.X_OK | os.W_OK):
         print(f'[i] Write access to {path_pihole} verified')
     else:
-        print(f'[e] Write access is not available for {path_pihole}. Please run as root or other privileged user')
+        print(f'[e] Write access is not available for {path_pihole}. Please run as root or  other privileged user')
         exit(1)
 
     # Determine whether we are using DB or not
@@ -89,7 +85,7 @@ for i in sys.argv[1:]:
 
     # If regexps were fetched, remove any comments and add to set
     if str_regexps_remote:
-        regexps_remote.update(x for x in map(str.strip, str_regexps_remote.splitlines()) if x and x[:1] != '#')
+        regexps_remote.update(x for x in map(str.strip, str_regexps_remote.splitlines()) if x   and x[:1] != '#')
         print(f'[i] {len(regexps_remote)} regexps collected from {url_regexps_remote}')
     else:
         print('[i] No remote regexps were found.')
@@ -108,36 +104,14 @@ for i in sys.argv[1:]:
         # Create a cursor object
         c = conn.cursor()
 
-        # Add / update remote regexps
-        print('[i] Adding / updating regexps in the DB')
-
-        c.executemany('INSERT OR IGNORE INTO domainlist (type, domain, enabled, comment) '
-                      'VALUES (3, ?, 1, ?)',
-                      [(x, install_comment) for x in sorted(regexps_remote)])
-        c.executemany('UPDATE domainlist '
-                      'SET comment = ? WHERE domain in (?) AND comment != ?',
-                      [(install_comment, x, install_comment) for x in sorted(regexps_remote)])
+        # Identifying custom regexps
+        print("[i] Removing custom's regexps")
+        c.executemany('DELETE FROM domainlist '
+                      'WHERE type = 3 '
+                      'AND (domain in (?) OR comment = ?)',
+                      [(x, install_comment) for x in regexps_remote])
 
         conn.commit()
-
-        # Fetch all current regexps in the local db
-        c.execute('SELECT domain FROM domainlist WHERE type = 3 AND comment = ?', (install_comment,))
-        regexps_local_results = c.fetchall()
-        regexps_local.update([x[0] for x in regexps_local_results])
-
-        # Remove any local entries that do not exist in the remote list
-        # (will only work for previous installs where we've set the comment field)
-        print('[i] Identifying obsolete regexps')
-        regexps_remove = regexps_local.difference(regexps_remote)
-
-        if regexps_remove:
-            print('[i] Removing obsolete regexps')
-            c.executemany('DELETE FROM domainlist WHERE type = 3 AND domain in (?)', [(x,) for x in regexps_remove])
-            conn.commit()
-
-        # Delete regex.list as if we've migrated to the db, it's no longer needed
-        if os.path.exists(path_legacy_custom_regex):
-            os.remove(path_legacy_custom_regex)
 
         print('[i] Restarting Pi-hole')
         subprocess.call(['pihole', 'restartdns', 'reload'], stdout=subprocess.DEVNULL)
@@ -164,31 +138,26 @@ for i in sys.argv[1:]:
         # If the local regexp set is not empty
         if regexps_local:
             print(f'[i] {len(regexps_local)} existing regexps identified')
-            # If we have a record of a previous legacy install
-            if os.path.isfile(path_legacy_custom_regex) and os.path.getsize(path_legacy_custom_regex) > 0:
-                print('[i] Existing regex install identified')
-                # Read the previously installed regexps to a set
-                with open(path_legacy_custom_regex, 'r') as fOpen:
-                    regexps_legacy.update(x for x in map(str.strip, fOpen) if x and x[:1] != '#')
+            # If we have a record of the previous legacy install
+            if os.path.isfile(path_legacy_remote_regex) and os.path.getsize (path_legacy_remote_regex) > 0:
+                print('[i] Existing custom-regex install identified')
+                with open(path_legacy_remote_regex, 'r') as fOpen:
+                    regexps_legacy_custom.update(x for x in map(str.strip, fOpen) if x and x    [:1] != '#')
 
-                    if regexps_legacy:
-                        print('[i] Removing previously installed regexps')
-                        regexps_local.difference_update(regexps_legacy)
+                    if regexps_legacy_custom:
+                        print(f'[i] Removing regexps found in {path_legacy_remote_regex}')
+                        regexps_local.difference_update(regexps_legacy_custom)
 
-        # Add remote regexps to local regexps
-        print(f'[i] Syncing with {url_regexps_remote}')
-        regexps_local.update(regexps_remote)
+                # Remove custom-regex.list as it will no longer be required
+                os.remove(path_legacy_remote_regex)
+            else:
+                print('[i] Removing regexps that match the remote repo')
+                regexps_local.difference_update(regexps_remote)
 
         # Output to regex.list
         print(f'[i] Outputting {len(regexps_local)} regexps to {path_legacy_regex}')
         with open(path_legacy_regex, 'w') as fWrite:
             for line in sorted(regexps_local):
-                fWrite.write(f'{line}\n')
-
-        # Output remote regexps to regex.list
-        # for future install / uninstall
-        with open(path_legacy_custom_regex, 'w') as fWrite:
-            for line in sorted(regexps_remote):
                 fWrite.write(f'{line}\n')
 
         print('[i] Restarting Pi-hole')
