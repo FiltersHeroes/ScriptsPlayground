@@ -50,7 +50,7 @@ for i in sys.argv[1:]:
     path_legacy_regex = os.path.join(path_pihole, 'regex.list')
     path_legacy_regex = os.path.join(path_pihole, remote_list_name, '.list')
     path_pihole_db = os.path.join(path_pihole, 'gravity.db')
-    install_comment = 'github.com/PolishFiltersTeam/ScriptsPlayground'
+    install_comment = i
 
 
     db_exists = False
