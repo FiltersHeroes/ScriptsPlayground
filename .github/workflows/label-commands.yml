@@ -9,4 +9,4 @@ jobs:
       - uses: bubkoo/label-commands@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: .github/solve_issues.yml
+          CONFIG_FILE: .github/solve_issue.yml
