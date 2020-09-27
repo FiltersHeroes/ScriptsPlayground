@@ -1,0 +1,12 @@
+name: Label Commands
+on:
+  issues:
+    types: [labeled]
+jobs:
+  solve_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: bubkoo/label-commands@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: .github/solve_issues.yml
