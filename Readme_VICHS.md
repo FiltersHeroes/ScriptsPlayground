@@ -70,6 +70,12 @@ Then you should add some instructions into it, currently following instructions 
 
 `@COMBINEHOSTSinclude section_file_name https://example.com/mylist.txt` - converts direct blocking rules of local and external section/filterlist into the hosts format and combines them into one section (combining is always done on temporary files)
 
+`@DOMAINSinclude section_file_name` - converts direct blocking rules of section/filterlist into the domains format and include it into the final filterlist file (converting is always done on temporary files)
+
+`@URLDOMAINSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the domains format and include it into the final filterlist file
+
+`@COMBINEDOMAINSinclude section_file_name https://example.com/mylist.txt` - converts direct blocking rules of local and external section/filterlist into the domains format and combines them into one section (combining is always done on temporary files)
+
 `@PHinclude section_file_name` - converts network blocking regex rules **with star multipler** of section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
 
 `@URLPHinclude https://example.com/mylist.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules
