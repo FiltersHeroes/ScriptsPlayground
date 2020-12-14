@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # Regex Lists Installer for Pi-hole v5 (Beta)
+# v1.0.1
 # Based on https://github.com/mmotti/pihole-regex/blob/master/install.py
+# Python 3.6+ is required!
 
 import os
 import sqlite3
@@ -34,7 +36,7 @@ def fetch_url(url):
     # If there is data
     if response:
         # Strip leading and trailing whitespace
-        response = '\n'.join(x.strip() for x in response.splitlines())
+        response = '\n'.join(x for x in map(str.strip, response.splitlines()))
 
     # Return the hosts
     return response
