@@ -31,6 +31,11 @@ wget \
 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLI_for_Pi-hole.py
 ```
 
+Then make it executable:
+```bash
+chmod +x path_to_script/RLI_for_Pi-hole.py
+```
+
 Then just run it with url to list as its parameter:
 ```bash
 path_to_script/RLI_for_Pi-hole.py \
@@ -52,6 +57,11 @@ To remove one of the installed regex lists, first you need to download uninstall
 ```bash
 wget \
 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.py
+```
+
+Then make it executable:
+```bash
+chmod +x path_to_script/RLU_for_Pi-hole.py
 ```
 
 Then just run it with url to list as its parameter:
