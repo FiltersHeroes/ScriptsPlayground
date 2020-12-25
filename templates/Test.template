@@ -10,13 +10,16 @@
 ! Aktualizacja: @aktualizacja
 !
 !
-! Testy
+! Testy-1
 @include test1
 !
 !
-! Testy2
+! Testy-2
 @include test2
 !
+!
+! Testy-3
+@include test3
 !
 !
 ! Test łączenia
