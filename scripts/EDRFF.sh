@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Expired Domains Remover For Filterlists
-# v1.1
+# v1.1 (beta)
 # Usage: EDRFF.sh pathToSections listOfExpiredDomains.txt TLD (optional)
 
 SECTIONS_DIR=$1
