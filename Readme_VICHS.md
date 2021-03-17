@@ -50,35 +50,35 @@ Then you should add some instructions into it, currently following instructions 
 
 `@include section_file_name` - includes local section (section should be without comments) into the final filterlist file, that should be written without path and extension of file. Default path to section is **root/sections/FILTERLIST_final_filename**, you can override this in **.templates** or **VICHS.config** file writing something like this: `@path Test` (path always begins from root directory of repository, we assume that the script is in the 1 lower directory than the main repository directory)
 
-`@URLinclude https://example.com/mylist.txt` - includes external filterlist/section into the final filterlist file, adds comments about source of external filterlist
+`@include https://example.com/mylist.txt` - includes external filterlist/section into the final filterlist file, adds comments about source of external filterlist
 
 `@URLUinclude https://example.com/mylist.txt` - includes external filterlist/section with only unique rules into the final filterlist file, adds comments about source of external filterlist
 
 `@NWLinclude section_file_name` - make whitelist from direct blocking rules from section using standard method
 
-`@URLNWLinclude https://example.com/mylist.txt` - make whitelist from direct blocking rules from external section using standard method
+`@NWLinclude https://example.com/mylist.txt` - make whitelist from direct blocking rules from external section using standard method
 
 `@BNWLinclude section_file_name` - make whitelist from direct blocking rules from section using **badfilter** modifier
 
-`@URLBNWLinclude https://example.com/mylist.txt` - make whitelist from direct blocking rules from external section using **badfilter** modifier
+`@BNWLinclude https://example.com/mylist.txt` - make whitelist from direct blocking rules from external section using **badfilter** modifier
 
 `@COMBINEinclude section_file_name https://example.com/mysection.txt` - combines local and external section into one section (combining is always done on temporary files)
 
 `@HOSTSinclude section_file_name` - converts direct blocking rules of section/filterlist into the hosts format and include it into the final filterlist file (converting is always done on temporary files)
 
-`@URLHOSTSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the hosts format and include it into the final filterlist file
+`@HOSTSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the hosts format and include it into the final filterlist file, adds comments about source
 
 `@COMBINEHOSTSinclude section_file_name https://example.com/mylist.txt` - converts direct blocking rules of local and external section/filterlist into the hosts format and combines them into one section (combining is always done on temporary files)
 
 `@DOMAINSinclude section_file_name` - converts direct blocking rules of section/filterlist into the domains format and include it into the final filterlist file (converting is always done on temporary files)
 
-`@URLDOMAINSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the domains format and include it into the final filterlist file
+`@DOMAINSinclude https://example.com/mylist.txt` - converts direct blocking rules of external section/filterlist into the domains format and include it into the final filterlist file, adds comments about source
 
 `@COMBINEDOMAINSinclude section_file_name https://example.com/mylist.txt` - converts direct blocking rules of local and external section/filterlist into the domains format and combines them into one section (combining is always done on temporary files)
 
 `@PHinclude section_file_name` - converts network blocking regex rules **with star multipler** of section/filterlist into the Pi-hole regex rules (converting is always done on temporary files)
 
-`@URLPHinclude https://example.com/mylist.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules
+`@PHinclude https://example.com/mylist.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules, adds comments about source
 
 `@COMBINEPHinclude section_file_name https://example.com/mysection.txt` - converts network blocking regex rules **with star multipler** of external section/filterlist into the Pi-hole regex rules (converting is always done on temporary files) and combines it with local section into one section (combining is always done on temporary files)
 
