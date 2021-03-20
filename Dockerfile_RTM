@@ -1,6 +1,7 @@
 FROM polishfiltersteam/vichs_image:latest
 
 RUN apt-get update && apt-get install -y software-properties-common
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 RUN apt-add-repository https://cli.github.com/packages
 RUN apt-get update && apt-get install -y gh
 RUN gh --version
