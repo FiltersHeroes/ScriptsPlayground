@@ -34,7 +34,7 @@ If you want to use CI for updating your lists, then you can also set username an
 @CIusername PolishJarvis
 @CIemail PolishJarvis@int.pl
 ```
-The next step is creating folder for templates. By default you need to create **templates** folder in root of your repository, but you can override this in **VICHS.config** file writing something like this: `@templatesPath scripts/templates` (path always begins from root directory of repository, we assume that the script is in the 1 lower directory than the main repository directory). In that folder, you should create **name_of_final_filterlist_file.template** file and put into it something like this:
+The next step is creating folder for templates. By default you need to create **templates** folder in root of your repository, but you can override this in **VICHS.config** file writing something like this: `@templatesPath scripts/templates` (path always begins from root directory of repository). In that folder, you should create **name_of_final_filterlist_file.template** file and put into it something like this:
 ```
 ! Checksum: @
 ! Title: I don't care about ads
@@ -48,7 +48,7 @@ The next step is creating folder for templates. By default you need to create **
 You can skip `Last modified` comment, but version is required.
 Then you should add some instructions into it, currently following instructions are available:
 
-`@include section_file_name` - includes local section (section should be without comments) into the final filterlist file, that should be written without path and extension of file. Default path to section is **root/sections/FILTERLIST_final_filename**, you can override this in **.templates** or **VICHS.config** file writing something like this: `@path Test` (path always begins from root directory of repository, we assume that the script is in the 1 lower directory than the main repository directory). By default script expects that sections has **txt** extension , but you can override this in **.templates** or **VICHS.config** file writing something like this: `@sectionsExt text`.
+`@include section_file_name` - includes local section (section should be without comments) into the final filterlist file, that should be written without path and extension of file. Default path to section is **root/sections/FILTERLIST_final_filename**, you can override this in **.templates** or **VICHS.config** file writing something like this: `@path Test` (path always begins from root directory of repository). By default script expects that sections has **txt** extension , but you can override this in **.templates** or **VICHS.config** file writing something like this: `@sectionsExt text`.
 
 `@include https://example.com/mylist.txt path/to/cloned/mylist.txt` - includes external filterlist/section into the final filterlist file, adds comments about source of external filterlist. Optionally as a second argument you can write path to cloned filterlist (path begins from parent directory of repository root directory). Thanks to that if filterlist repo is cloned, then script will use cloned filterlist instead of downloading it, but if it's not available, then it downloads it.
 
