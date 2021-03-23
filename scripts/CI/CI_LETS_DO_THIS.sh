@@ -14,7 +14,7 @@ for i in "$@"; do
     elif [[ "$F_NAME" = "suplement.txt" ]]; then
         F_NAME="polish_rss_filters_supp.txt"
     fi
-    wget -O "$i"
+    wget -O "$F_NAME" "$i"
     ./scripts/ECODFF.sh "$F_NAME"
     rm -rf ./"$F_NAME"
 done
