@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.26
+# v2.26.1
 
 # MIT License
 
@@ -545,6 +545,7 @@ for i in "$@"; do
     # Dodawanie zmienionych sekcji do repozytorium git
     if [ ! "$RTM" ]; then
         git add "$SECTIONS_DIR"/*
+        git commit -m "$(gettext "Update sections")" -m "[ci skip]"
     fi
 
     # Ustawienie strefy czasowej
