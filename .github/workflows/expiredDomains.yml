@@ -88,7 +88,9 @@ jobs:
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_PASS.sh
-          echo "E_PASS=$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp)" >> $GITHUB_ENV
+          echo 'E_PASS<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
       - uses: actions/upload-artifact@v2
         with:
           name: E_PASS
