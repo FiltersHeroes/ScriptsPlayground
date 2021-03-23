@@ -34,7 +34,7 @@ cachePath = os.path.join(home, '.cache')
 if not os.path.exists(cachePath):
     os.mkdir(cachePath)
 
-extract = tldextract.TLDExtract(cache_file='~/.cache/tldextract.cache', include_psl_private_domains=True)
+extract = tldextract.TLDExtract(include_psl_private_domains=True)
 extract.update()
 subdomains_file = sys.argv[1]
 

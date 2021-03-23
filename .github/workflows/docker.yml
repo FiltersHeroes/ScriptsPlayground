@@ -1,27 +1,29 @@
 name: Build Docker images
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: null
+  schedule:
+    - cron: "55 23 * * 6"
 
 jobs:
   docker_vichs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           registry: ghcr.io
           username: PolishJarvis
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
         with:
           context: .
           file: Dockerfile_VICHS
@@ -33,20 +35,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           registry: ghcr.io
           username: PolishJarvis
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
         with:
           context: .
           file: Dockerfile_ED
@@ -58,20 +60,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           registry: ghcr.io
           username: PolishJarvis
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
         with:
           context: .
           file: Dockerfile_KAD
@@ -83,20 +85,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
         with:
           registry: ghcr.io
           username: PolishJarvis
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
         with:
           context: .
           file: Dockerfile_RTM

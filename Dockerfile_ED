@@ -20,7 +20,4 @@ ENV LANGUAGE en_US
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
 
-RUN useradd -m example
-USER example
-
 CMD ["/bin/sh"]

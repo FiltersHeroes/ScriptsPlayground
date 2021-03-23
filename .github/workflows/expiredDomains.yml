@@ -1,0 +1,145 @@
+name: "Check Expired Domains From Filterlists"
+
+on:
+  workflow_dispatch: null
+  # schedule:
+  #   - cron: "55 23 * * 6"
+
+jobs:
+  # KAD:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: |
+  #         ./scripts/CI/CI_LETS_DO_THIS_KAD.sh
+  #         echo "E_KAD=$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: E_KAD
+  #         path: |
+  #           ${{ env.E_KAD }}
+  # KADhosts:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: |
+  #         ./scripts/CI/CI_LETS_DO_THIS_KADhosts.sh
+  #         echo "E_KADhosts=$(./scripts/CI/getFileListForED.sh KADhosts)" >> $GITHUB_ENV
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: E_KADhosts
+  #         path: |
+  #           ${{ env.E_KADhosts }}
+
+  # PAF:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_PAF.sh
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: E_PAFF
+  #         path: |
+  #           expired-domains/PAF_arrows-expired.txt
+  #           expired-domains/PAF_arrows-unknown.txt
+  #           expired-domains/PAF_arrows-unknown_limit.txt
+  #           expired-domains/PAF_arrows-parked.txt
+  #           expired-domains/PAF_backgrounds_self-advertising-expired.txt
+  #           expired-domains/PAF_backgrounds_self-advertising-unknown.txt
+  #           expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
+  #           expired-domains/PAF_backgrounds_self-advertising-parked.txt
+  #           expired-domains/PAF_contact_feedback_widgets-expired.txt
+  #           expired-domains/PAF_contact_feedback_widgets-unknown.txt
+  #           expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
+  #           expired-domains/PAF_contact_feedback_widgets-parked.txt
+  #           expired-domains/PAF_newsletters-expired.txt
+  #           expired-domains/PAF_newsletters-unknown.txt
+  #           expired-domains/PAF_newsletters-unknown_limit.txt
+  #           expired-domains/PAF_newsletters-parked.txt
+  #           expired-domains/PAF_other_widgets-expired.txt
+  #           expired-domains/PAF_other_widgets-unknown.txt
+  #           expired-domains/PAF_other_widgets-unknown_limit.txt
+  #           expired-domains/PAF_other_widgets-parked.txt
+  #           expired-domains/PAF_pop-ups-expired.txt
+  #           expired-domains/PAF_pop-ups-unknown.txt
+  #           expired-domains/PAF_pop-ups-unknown_limit.txt
+  #           expired-domains/PAF_pop-ups-parked.txt
+  #           expired-domains/PAF_push-expired.txt
+  #           expired-domains/PAF_push-unknown.txt
+  #           expired-domains/PAF_push-unknown_limit.txt
+  #           expired-domains/PAF_push-parked.txt
+  #           expired-domains/PAF_scrolling_videos-expired.txt
+  #           expired-domains/PAF_scrolling_videos-unknown.txt
+  #           expired-domains/PAF_scrolling_videos-unknown_limit.txt
+  #           expired-domains/PAF_scrolling_videos-parked.txt
+  # PAF_supp:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_PAF_supp.sh
+  PASS:
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS_PASS.sh
+          echo "E_PASS=$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp)" >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_PASS
+          path: |
+            ${{ env.E_PASS }}
+  # Social:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_Social.sh
+  # Social_supp:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_Social_supp.sh
+  # Cookies:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_Cookies.sh
+  # Cookies_supp:
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_Cookies_supp.sh
+  # KAD_limit:
+  #   needs:
+  #     [
+  #       KAD,
+  #       KADhosts,
+  #       PAF,
+  #       PAF_supp,
+  #       PASS,
+  #       Social,
+  #       Social_supp,
+  #       Cookies,
+  #       Cookies_supp,
+  #     ]
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
+  # deploy:
+  #   needs: [KAD_limit]
+  #   runs-on: ubuntu-latest
+  #   container: polishfiltersteam/expired_domains_image:latest
+  #   steps:
+  #     - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+  #     - run: ./scripts/CI/cleanup_push.sh

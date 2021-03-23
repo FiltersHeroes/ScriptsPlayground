@@ -101,7 +101,7 @@ PAF_supp:
 
 RSS:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_RSS.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS_PASS.sh"
   artifacts:
     paths:
       - expired-domains/polish_rss_filters-expired.txt
