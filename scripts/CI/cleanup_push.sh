@@ -19,7 +19,7 @@ else
 fi
 
 git add --all
-git commit -m "Expired domains check [ci skip]"
+git commit -m "Expired domains check" -m "[ci skip]"
 
 if [ "$GITHUB_ACTIONS" = "true" ]; then
     git push https://github-actions[bot]:"${GIT_TOKEN}"@github.com/PolishFiltersTeam/ScriptsPlayground.git HEAD:master > /dev/null 2>&1

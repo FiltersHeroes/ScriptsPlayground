@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/polishfiltersteam/vichs_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@f1d3225b5376a0791fdee5a0e8eac5289355e43a # pin@v2
       - name: Test
         env:
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
