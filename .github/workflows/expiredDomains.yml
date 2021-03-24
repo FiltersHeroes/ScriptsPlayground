@@ -1,6 +1,7 @@
 name: "Check Expired Domains From Filterlists"
 
-on: workflow_dispatch
+on:
+  workflow_dispatch
   # schedule:
   #   - cron: "55 23 * * 6"
 
@@ -9,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_KAD
           path: |
@@ -24,29 +25,38 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
-          echo 'E_KADh<<EOF' >> $GITHUB_ENV
+          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
+          echo 'E_KADH<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KADhosts)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
-          name: E_KADh
+          name: E_KADH
           path: |
-            ${{ env.E_KADh }}
+            ${{ env.E_KADH }}
 
   PAF:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_arrows.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_backgrounds_self-advertising.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_contact_feedback_widgets.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_newsletters.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_other_widgets.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_pop-ups.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_push.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_scrolling_videos.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh PAF
           echo 'E_PAF<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh PAF_arrows PAF_backgrounds_self-advertising PAF_contact_feedback_widgets PAF_newsletters PAF_other_widgets PAF_pop-ups PAF_push PAF_scrolling_videos)" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh \
+          PAF_arrows \
+          PAF_backgrounds_self-advertising \
+          PAF_contact_feedback_widgets \
+          PAF_e_newspaper \
+          PAF_newsletters \
+          PAF_other_widgets \
+          PAF_pop-ups \
+          PAF_push \
+          PAF_scrolling_videos)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_PAF
           path: |
@@ -55,28 +65,37 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_backgrounds_self-advertising_supp.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_tagged_internal_links.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_newsletters_supp.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_other_elements_supp.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_pop-ups_supp.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_push_supp.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/PAF_scrolling_videos_supp.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp
           echo 'E_PAF_supp<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh PAF_backgrounds_self-advertising_supp PAF_tagged_internal_links PAF_newsletters_supp PAF_other_elements_supp PAF_pop-ups_supp PAF_push_supp PAF_scrolling_videos_supp)" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh \
+          PAF_backgrounds_self-adv_supp \
+          PAF_comeback_titles \
+          PAF_contact_feedback_widgets_supp \
+          PAF_newsletters_supp \
+          PAF_other_elements_supp \
+          PAF_pop-ups_supp \
+          PAF_push_supp \
+          PAF_scrolling_videos_supp \
+          PAF_tagged_internal_links)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
-          name: E_PAF_supp
+          name: E_PAF_S
           path: |
-            ${{ env.E_PAF_supp }}
+            ${{ env.E_PAF_S }}
   PASS:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh PASS
           echo 'E_PASS<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_PASS
           path: |
@@ -85,13 +104,13 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh Social
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh adblock_social_list)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_SOCIAL
           path: |
@@ -100,13 +119,13 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh Social_supp
           echo 'E_SOCIAL_S<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh social_filters_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_SOCIAL_S
           path: |
@@ -116,13 +135,13 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh Cookies
           echo 'E_COOKIES<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh adblock_cookies)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_COOKIES
           path: |
@@ -131,13 +150,13 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
+          ./scripts/CI/CI_LETS_DO_THIS.sh Cookies_supp
           echo 'E_COOKIES_S<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh cookies_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_COOKIES_S
           path: |
@@ -158,16 +177,17 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
-      - uses: actions/download-artifact@v2.0.8
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+      - uses: actions/download-artifact@v2
         with:
+          name: E_KAD
           path: expired-domains
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2.2.2
+      - uses: actions/upload-artifact@v2
         with:
           name: E_KAD
           path: |
@@ -177,8 +197,45 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2.3.4
-      - uses: actions/download-artifact@v2.0.8
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+      ## See https://github.com/actions/download-artifact/issues/68
+      ## Unfortunately currently it's not possible to skip creating extra directory
+      ## when we want to download all artifacts at once without specyfing name.
+      ## Bad joke...
+      - uses: actions/download-artifact@v2
         with:
+          name: E_KAD
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KADH
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_PAF
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_PAF_S
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_PASS
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_SOCIAL
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_SOCIAL_S
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_COOKIES
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_COOKIES_S
           path: expired-domains
       - run: ./scripts/CI/cleanup_push.sh

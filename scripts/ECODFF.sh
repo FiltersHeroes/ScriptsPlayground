@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.19
+# v1.19.1
 
 # MIT License
 
@@ -27,8 +27,14 @@
 
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
-# MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium (zakładamy, że skrypt znajduje się w katalogu o 1 niżej od głównego katalogu repozytorium)
-MAIN_PATH="$SCRIPT_PATH"/..
+# MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
+# Zakładamy, że skrypt znajduje się gdzieś w repozytorium git,
+# w którym są pliki listy filtrów, którą chcemy zaktualizować.
+# Jednakże jeżeli skrypt znajduje się gdzieś indziej, to
+# zezwalamy na nadpisanie zmiennej MAIN_PATH.
+if [ -z "$MAIN_PATH" ]; then
+    MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
+fi
 
 cd "$MAIN_PATH" || exit
 
