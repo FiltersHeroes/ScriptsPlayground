@@ -202,39 +202,48 @@ jobs:
       ## Unfortunately currently it's not possible to skip creating extra directory
       ## when we want to download all artifacts at once without specyfing name.
       ## Bad joke...
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_KAD
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_KADH
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_PAF
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_PAF_S
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_PASS
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_SOCIAL
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_SOCIAL_S
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_COOKIES
           path: expired-domains
-      - uses: actions/download-artifact@v2
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
         with:
           name: E_COOKIES_S
           path: expired-domains
