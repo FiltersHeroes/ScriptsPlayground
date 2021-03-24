@@ -68,7 +68,7 @@ jobs:
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp
-          echo 'E_PAF_supp<<EOF' >> $GITHUB_ENV
+          echo 'E_PAF_S<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh \
           PAF_backgrounds_self-adv_supp \
           PAF_comeback_titles \
