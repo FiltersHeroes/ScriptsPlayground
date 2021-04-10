@@ -12,6 +12,7 @@ KAD:
   artifacts:
     paths:
       - expired-domains/KAD-expired.txt
+      - expired-domains/KAD-parked.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
       - expired-domains/KAD-unknown_no_internet.txt
@@ -19,11 +20,13 @@ KAD:
 KADhosts:
   stage: check
   script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts"
-  variables:
-    E_KADH: "$(./scripts/CI/getFileListForED.sh KADhosts)"
   artifacts:
     paths:
-      - "$E_KADH"
+      - expired-domains/KADhosts-expired.txt
+      - expired-domains/KADhosts-parked.txt
+      - expired-domains/KADhosts-unknown.txt
+      - expired-domains/KADhosts-unknown_limit.txt
+      - expired-domains/KADhosts-unknown_no_internet.txt
 
 PAF:
   stage: check
@@ -32,56 +35,102 @@ PAF:
   artifacts:
     paths:
       - expired-domains/PAF_arrows-expired.txt
+      - expired-domains/PAF_arrows-parked.txt
       - expired-domains/PAF_arrows-unknown.txt
       - expired-domains/PAF_arrows-unknown_limit.txt
-      - expired-domains/PAF_arrows-parked.txt
+      - expired-domains/PAF_arrows-unknown_no_internet.txt
       - expired-domains/PAF_backgrounds_self-advertising-expired.txt
+      - expired-domains/PAF_backgrounds_self-advertising-parked.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown.txt
       - expired-domains/PAF_backgrounds_self-advertising-unknown_limit.txt
-      - expired-domains/PAF_backgrounds_self-advertising-parked.txt
+      - expired-domains/PAF_backgrounds_self-advertising-unknown_no_internet.txt
       - expired-domains/PAF_contact_feedback_widgets-expired.txt
+      - expired-domains/PAF_contact_feedback_widgets-parked.txt
       - expired-domains/PAF_contact_feedback_widgets-unknown.txt
       - expired-domains/PAF_contact_feedback_widgets-unknown_limit.txt
-      - expired-domains/PAF_contact_feedback_widgets-parked.txt
+      - expired-domains/PAF_contact_feedback_widgets-unknown_no_internet.txt
+      - expired-domains/PAF_e_newspaper-expired.txt
+      - expired-domains/PAF_e_newspaper-parked.txt
+      - expired-domains/PAF_e_newspaper-unknown.txt
+      - expired-domains/PAF_e_newspaper-unknown_limit.txt
+      - expired-domains/PAF_e_newspaper-unknown_no_internet.txt
       - expired-domains/PAF_newsletters-expired.txt
+      - expired-domains/PAF_newsletters-parked.txt
       - expired-domains/PAF_newsletters-unknown.txt
       - expired-domains/PAF_newsletters-unknown_limit.txt
-      - expired-domains/PAF_newsletters-parked.txt
+      - expired-domains/PAF_newsletters-unknown_no_internet.txt
       - expired-domains/PAF_other_widgets-expired.txt
+      - expired-domains/PAF_other_widgets-parked.txt
       - expired-domains/PAF_other_widgets-unknown.txt
       - expired-domains/PAF_other_widgets-unknown_limit.txt
-      - expired-domains/PAF_other_widgets-parked.txt
+      - expired-domains/PAF_other_widgets-unknown_no_internet.txt
       - expired-domains/PAF_pop-ups-expired.txt
+      - expired-domains/PAF_pop-ups-parked.txt
       - expired-domains/PAF_pop-ups-unknown.txt
       - expired-domains/PAF_pop-ups-unknown_limit.txt
-      - expired-domains/PAF_pop-ups-parked.txt
+      - expired-domains/PAF_pop-ups-unknown_no_internet.txt
       - expired-domains/PAF_push-expired.txt
+      - expired-domains/PAF_push-parked.txt
       - expired-domains/PAF_push-unknown.txt
       - expired-domains/PAF_push-unknown_limit.txt
-      - expired-domains/PAF_push-parked.txt
+      - expired-domains/PAF_push-unknown_no_internet.txt
       - expired-domains/PAF_scrolling_videos-expired.txt
+      - expired-domains/PAF_scrolling_videos-parked.txt
       - expired-domains/PAF_scrolling_videos-unknown.txt
       - expired-domains/PAF_scrolling_videos-unknown_limit.txt
-      - expired-domains/PAF_scrolling_videos-parked.txt
+      - expired-domains/PAF_scrolling_videos-unknown_no_internet.txt
 
 PAF_supp:
   stage: check
   script:
     - "./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp"
-  variables:
-    E_PAF_S: $(./scripts/CI/getFileListForED.sh \
-          PAF_backgrounds_self-adv_supp \
-          PAF_comeback_titles \
-          PAF_contact_feedback_widgets_supp \
-          PAF_newsletters_supp \
-          PAF_other_elements_supp \
-          PAF_pop-ups_supp \
-          PAF_push_supp \
-          PAF_scrolling_videos_supp \
-          PAF_tagged_internal_links)
   artifacts:
     paths:
-      - "$E_PAF_S"
+      - expired-domains/PAF_backgrounds_self-adv_supp-expired.txt
+      - expired-domains/PAF_backgrounds_self-adv_supp-parked.txt
+      - expired-domains/PAF_backgrounds_self-adv_supp-unknown.txt
+      - expired-domains/PAF_backgrounds_self-adv_supp-unknown_limit.txt
+      - expired-domains/PAF_backgrounds_self-adv_supp-unknown_no_internet.txt
+      - expired-domains/PAF_comeback_titles-expired.txt
+      - expired-domains/PAF_comeback_titles-parked.txt
+      - expired-domains/PAF_comeback_titles-unknown.txt
+      - expired-domains/PAF_comeback_titles-unknown_limit.txt
+      - expired-domains/PAF_comeback_titles-unknown_no_internet.txt
+      - expired-domains/PAF_contact_feedback_widgets_supp-expired.txt
+      - expired-domains/PAF_contact_feedback_widgets_supp-parked.txt
+      - expired-domains/PAF_contact_feedback_widgets_supp-unknown.txt
+      - expired-domains/PAF_contact_feedback_widgets_supp-unknown_limit.txt
+      - expired-domains/PAF_contact_feedback_widgets_supp-unknown_no_internet.txt
+      - expired-domains/PAF_newsletters_supp-expired.txt
+      - expired-domains/PAF_newsletters_supp-parked.txt
+      - expired-domains/PAF_newsletters_supp-unknown.txt
+      - expired-domains/PAF_newsletters_supp-unknown_limit.txt
+      - expired-domains/PAF_newsletters_supp-unknown_no_internet.txt
+      - expired-domains/PAF_other_elements_supp-expired.txt
+      - expired-domains/PAF_other_elements_supp-parked.txt
+      - expired-domains/PAF_other_elements_supp-unknown.txt
+      - expired-domains/PAF_other_elements_supp-unknown_limit.txt
+      - expired-domains/PAF_other_elements_supp-unknown_no_internet.txt
+      - expired-domains/PAF_pop-ups_supp-expired.txt
+      - expired-domains/PAF_pop-ups_supp-parked.txt
+      - expired-domains/PAF_pop-ups_supp-unknown.txt
+      - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
+      - expired-domains/PAF_pop-ups_supp-unknown_no_internet.txt
+      - expired-domains/PAF_push_supp-expired.txt
+      - expired-domains/PAF_push_supp-parked.txt
+      - expired-domains/PAF_push_supp-unknown.txt
+      - expired-domains/PAF_push_supp-unknown_limit.txt
+      - expired-domains/PAF_push_supp-unknown_no_internet.txt
+      - expired-domains/PAF_scrolling_videos_supp-expired.txt
+      - expired-domains/PAF_scrolling_videos_supp-parked.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
+      - expired-domains/PAF_scrolling_videos_supp-unknown_no_internet.txt
+      - expired-domains/PAF_tagged_internal_links-expired.txt
+      - expired-domains/PAF_tagged_internal_links-parked.txt
+      - expired-domains/PAF_tagged_internal_links-unknown.txt
+      - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
+      - expired-domains/PAF_tagged_internal_links-unknown_no_internet.txt
 
 RSS:
   stage: check
@@ -89,13 +138,15 @@ RSS:
   artifacts:
     paths:
       - expired-domains/polish_rss_filters-expired.txt
+      - expired-domains/polish_rss_filters-parked.txt
       - expired-domains/polish_rss_filters-unknown.txt
       - expired-domains/polish_rss_filters-unknown_limit.txt
-      - expired-domains/polish_rss_filters-parked.txt
+      - expired-domains/polish_rss_filters-unknown_no_internet.txt
       - expired-domains/polish_rss_filters_supp-expired.txt
+      - expired-domains/polish_rss_filters_supp-parked.txt
       - expired-domains/polish_rss_filters_supp-unknown.txt
       - expired-domains/polish_rss_filters_supp-unknown_limit.txt
-      - expired-domains/polish_rss_filters_supp-parked.txt
+      - expired-domains/polish_rss_filters_supp-unknown_no_internet.txt
 
 Social:
   stage: check
@@ -103,9 +154,9 @@ Social:
   artifacts:
     paths:
       - expired-domains/adblock_social_list-expired.txt
+      - expired-domains/adblock_social_list-parked.txt
       - expired-domains/adblock_social_list-unknown.txt
       - expired-domains/adblock_social_list-unknown_limit.txt
-      - expired-domains/adblock_social_list-parked.txt
 
 Social_supp:
   stage: check
@@ -113,9 +164,9 @@ Social_supp:
   artifacts:
     paths:
       - expired-domains/social_filters_uB_AG-expired.txt
+      - expired-domains/social_filters_uB_AG-parked.txt
       - expired-domains/social_filters_uB_AG-unknown.txt
       - expired-domains/social_filters_uB_AG-unknown_limit.txt
-      - expired-domains/social_filters_uB_AG-parked.txt
 
 Cookies:
   stage: check
@@ -123,9 +174,9 @@ Cookies:
   artifacts:
     paths:
       - expired-domains/adblock_cookies-expired.txt
+      - expired-domains/adblock_cookies-parked.txt
       - expired-domains/adblock_cookies-unknown.txt
       - expired-domains/adblock_cookies-unknown_limit.txt
-      - expired-domains/adblock_cookies-parked.txt
 
 Cookies_supp:
   stage: check
@@ -133,9 +184,9 @@ Cookies_supp:
   artifacts:
     paths:
       - expired-domains/cookies_uB_AG-expired.txt
+      - expired-domains/cookies_uB_AG-parked.txt
       - expired-domains/cookies_uB_AG-unknown.txt
       - expired-domains/cookies_uB_AG-unknown_limit.txt
-      - expired-domains/cookies_uB_AG-parked.txt
 
 KAD_limit:
   stage: tryagain
@@ -143,6 +194,7 @@ KAD_limit:
   artifacts:
     paths:
       - expired-domains/KAD-expired.txt
+      - expired-domains/KAD-parked.txt
       - expired-domains/KAD-unknown.txt
       - expired-domains/KAD-unknown_limit.txt
       - expired-domains/KAD-unknown_no_internet.txt
