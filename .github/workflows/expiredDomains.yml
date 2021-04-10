@@ -218,6 +218,26 @@ jobs:
           name: E_KAD_09
           path: |
             ${{ env.E_KAD_09 }}
+  KAD_10:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_10
+          echo 'E_KAD_10<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_10)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KAD_10
+          path: |
+            ${{ env.E_KAD_10 }}
   KADhosts_S:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -290,6 +310,26 @@ jobs:
           name: E_KADH_02
           path: |
             ${{ env.E_KADH_02 }}
+  KADhosts_03:
+    needs: KADhosts_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KADH_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_03
+          echo 'E_KADH_03<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KADhosts_03)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KADH_03
+          path: |
+            ${{ env.E_KADH_03 }}
   PAF:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -381,6 +421,7 @@ jobs:
         KAD_07,
         KAD_08,
         KAD_09,
+        KAD_10,
       ]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -426,6 +467,10 @@ jobs:
         with:
           name: E_KAD_09
           path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_10
+          path: expired-domains
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
@@ -442,6 +487,7 @@ jobs:
         KADhosts_00,
         KADhosts_01,
         KADhosts_02,
+        KADhosts_03,
         PAF,
         PASS,
         Social,
@@ -474,6 +520,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: E_KADH_02
+          path: expired-domains
+      - continue-on-error: true
+        uses: actions/download-artifact@v2
+        with:
+          name: E_KADH_03
           path: expired-domains
       - continue-on-error: true
         uses: actions/download-artifact@v2
