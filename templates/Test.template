@@ -22,6 +22,10 @@
 @include test3
 !
 !
+! Testy-4
+@include test3
+!
+!
 ! Test łączenia
 @COMBINEinclude test1 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
 !
