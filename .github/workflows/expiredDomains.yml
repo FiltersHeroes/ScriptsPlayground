@@ -27,7 +27,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_S
-          path: split/KAD_00
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_00
           echo 'E_KAD_00<<EOF' >> $GITHUB_ENV
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_S
-          path: split/KAD_01
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_01
           echo 'E_KAD_01<<EOF' >> $GITHUB_ENV
@@ -67,7 +67,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_S
-          path: split/KAD_02
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_02
           echo 'E_KAD_02<<EOF' >> $GITHUB_ENV
@@ -87,7 +87,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_S
-          path: split/KAD_03
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_03
           echo 'E_KAD_03<<EOF' >> $GITHUB_ENV
@@ -119,7 +119,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KADH_S
-          path: split/KADhosts_00
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_00
           echo 'E_KADH_00<<EOF' >> $GITHUB_ENV
@@ -139,7 +139,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KADH_S
-          path: split/KADhosts_01
+          path: split
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_00
           echo 'E_KADH_01<<EOF' >> $GITHUB_ENV
