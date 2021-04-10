@@ -18,6 +18,7 @@ jobs:
           name: E_KAD_S
           path: |
            split/KAD_0*
+           split/KAD_10
   KAD_00:
     needs: KAD_S
     runs-on: ubuntu-latest
