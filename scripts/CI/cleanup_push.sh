@@ -5,6 +5,8 @@ MAIN_PATH="$(dirname "$(realpath -s "$0")")"/../..
 
 cd "$MAIN_PATH" || exit
 
+rm -rf ./split/*
+
 cd ./expired-domains || exit
 
 rm -rf ./KADhosts-expired.txt ./KADhosts-parked.txt ./KADhosts-unknown.txt ./KADhosts-unknown_limit.txt

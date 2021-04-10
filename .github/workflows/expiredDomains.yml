@@ -13,12 +13,17 @@ jobs:
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD
+          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
       - uses: actions/upload-artifact@v2
         with:
           name: E_KAD_S
           path: |
            split/KAD_0*
-           split/KAD_10
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KADH_S
+          path: |
+            split/KADhosts_0*
   KAD_00:
     needs: KAD_S
     runs-on: ubuntu-latest
@@ -199,60 +204,8 @@ jobs:
           name: E_KAD_08
           path: |
             ${{ env.E_KAD_08 }}
-  KAD_09:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v2.3.4 # pin@v2
-      - uses: actions/download-artifact@v2
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_09
-          echo 'E_KAD_09<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_09)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2
-        with:
-          name: E_KAD_09
-          path: |
-            ${{ env.E_KAD_09 }}
-  KAD_10:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v2.3.4 # pin@v2
-      - uses: actions/download-artifact@v2
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_10
-          echo 'E_KAD_10<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_10)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2
-        with:
-          name: E_KAD_10
-          path: |
-            ${{ env.E_KAD_10 }}
-  KADhosts_S:
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
-      - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
-      - uses: actions/upload-artifact@v2
-        with:
-          name: E_KADH_S
-          path: |
-            split/KADhosts_0*
   KADhosts_00:
-    needs: KADhosts_S
+    needs: KAD_S
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -272,7 +225,7 @@ jobs:
           path: |
             ${{ env.E_KADH_00 }}
   KADhosts_01:
-    needs: KADhosts_S
+    needs: KAD_S
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -292,7 +245,7 @@ jobs:
           path: |
             ${{ env.E_KADH_01 }}
   KADhosts_02:
-    needs: KADhosts_S
+    needs: KAD_S
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -312,7 +265,7 @@ jobs:
           path: |
             ${{ env.E_KADH_02 }}
   KADhosts_03:
-    needs: KADhosts_S
+    needs: KAD_S
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -364,30 +317,16 @@ jobs:
           name: E_PAF
           path: |
             ${{ env.E_PAF }}
-  PASS:
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
-      - run: |
-          ./scripts/CI/CI_LETS_DO_THIS.sh PASS
-          echo 'E_PASS<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v2
-        with:
-          name: E_PASS
-          path: |
-            ${{ env.E_PASS }}
-  Social:
+  SocialPASS:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
       - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS.sh Social_C
+          ./scripts/CI/CI_LETS_DO_THIS.sh PASS
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
       - uses: actions/upload-artifact@v2
         with:
@@ -421,8 +360,6 @@ jobs:
         KAD_06,
         KAD_07,
         KAD_08,
-        KAD_09,
-        KAD_10,
       ]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -464,14 +401,6 @@ jobs:
         with:
           name: E_KAD_08
           path: expired-domains
-      - uses: actions/download-artifact@v2
-        with:
-          name: E_KAD_09
-          path: expired-domains
-      - uses: actions/download-artifact@v2
-        with:
-          name: E_KAD_10
-          path: expired-domains
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
@@ -490,8 +419,7 @@ jobs:
         KADhosts_02,
         KADhosts_03,
         PAF,
-        PASS,
-        Social,
+        SocialPASS,
         Cookies,
       ]
     runs-on: ubuntu-latest
@@ -531,11 +459,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: E_PAF
-          path: expired-domains
-      - continue-on-error: true
-        uses: actions/download-artifact@v2
-        with:
-          name: E_PASS
           path: expired-domains
       - continue-on-error: true
         uses: actions/download-artifact@v2
