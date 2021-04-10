@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.19.1
+# v1.19.2
 
 # MIT License
 
@@ -48,7 +48,8 @@ for i in "$@"; do
 
     hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' "$i")
 
-    FILTERLIST=$(basename "$i" .txt)
+    FILTERLIST_FILE=$(basename "$i")
+    FILTERLIST="${FILTERLIST_FILE%.*}"
     TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
 
     if [ ! -d "$MAIN_PATH/expired-domains" ]; then

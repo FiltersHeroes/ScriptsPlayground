@@ -23,10 +23,17 @@ function letsGo() {
 
 PAFbase="https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/"
 
-if [[ $1 = "KAD" ]]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
+if [[ $1 == "KAD" ]]; then
+    wget -O KAD.txt https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
+    mkdir -p "$MAIN_PATH"/split/
+    split -d -n l/4 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
+elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KADhosts_00" || $1 == "KADhosts_01" ]]; then
+    ./scripts/ECODFF.sh "$1"
+    rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
+    wget -O KADhosts.txt https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
+    mkdir -p "$MAIN_PATH"/split/
+    split -d -n l/2 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
 elif [[ $1 == "PAF" ]]; then
     letsGo "$PAFbase"PAF_arrows.txt \
     "$PAFbase"PAF_backgrounds_self-advertising.txt \
@@ -47,6 +54,25 @@ elif [[ $1 == "PAF_supp" ]]; then
     "$PAFbase"PAF_push_supp.txt \
     "$PAFbase"PAF_scrolling_videos_supp.txt \
     "$PAFbase"PAF_tagged_internal_links.txt
+elif [[ $1 == "PAF_C" ]]; then
+    letsGo "$PAFbase"PAF_arrows.txt \
+    "$PAFbase"PAF_backgrounds_self-advertising.txt \
+    "$PAFbase"PAF_contact_feedback_widgets.txt \
+    "$PAFbase"PAF_e_newspaper \
+    "$PAFbase"PAF_newsletters.txt \
+    "$PAFbase"PAF_other_widgets.txt \
+    "$PAFbase"PAF_pop-ups.txt \
+    "$PAFbase"PAF_push.txt \
+    "$PAFbase"PAF_scrolling_videos.txt \
+    "$PAFbase"PAF_backgrounds_self-adv_supp.txt \
+    "$PAFbase"PAF_comeback_titles.txt \
+    "$PAFbase"PAF_contact_feedback_widgets_supp.txt \
+    "$PAFbase"PAF_newsletters_supp.txt \
+    "$PAFbase"PAF_other_elements_supp.txt \
+    "$PAFbase"PAF_pop-ups_supp.txt \
+    "$PAFbase"PAF_push_supp.txt \
+    "$PAFbase"PAF_scrolling_videos_supp.txt \
+    "$PAFbase"PAF_tagged_internal_links.txt
 elif [ "$1" == "PASS" ]; then
     letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt \
     https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt
@@ -54,8 +80,12 @@ elif [ "$1" == "Social" ]; then
     letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt
 elif [ "$1" == "Social_supp" ]; then
     letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
+elif [ "$1" == "Social_C" ]; then
+    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
 elif [ "$1" == "Cookies" ]; then
     letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt
 elif [ "$1" == "Cookies_supp" ]; then
     letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
+elif [ "$1" == "Cookies_C" ]; then
+    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
 fi

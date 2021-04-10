@@ -6,6 +6,14 @@ MAIN_PATH="$(dirname "$(realpath -s "$0")")"/../..
 cd "$MAIN_PATH" || exit
 
 cd ./expired-domains || exit
+
+cat ./KADhosts_0*-expired.txt >> ./KADhosts-expired.txt
+cat ./KADhosts_0*-parked.txt >> ./KADhosts-parked.txt
+cat ./KADhosts_0*-unknown.txt >> ./KADhosts-unknown.txt
+cat ./KADhosts_0*-unknown_limit.txt >> ./KADhosts-unknown_limit.txt
+
+rm -rf ./KADhosts_0*-expired.txt ./KADhosts_0*-parked.txt ./KADhosts_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
+
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
 
 cd "$MAIN_PATH" || exit
