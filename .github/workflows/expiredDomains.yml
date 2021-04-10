@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9003d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+      - uses: actions/checkout@v2.3.4 # pin@v2
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_S
@@ -115,7 +115,7 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9003d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+      - uses: actions/checkout@v2.3.4 # pin@v2
       - uses: actions/download-artifact@v2
         with:
           name: E_KADH_S
@@ -135,7 +135,7 @@ jobs:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@5a4ac9003d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+      - uses: actions/checkout@v2.3.4 # pin@v2
       - uses: actions/download-artifact@v2
         with:
           name: E_KADH_S

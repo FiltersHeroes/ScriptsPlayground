@@ -28,7 +28,7 @@ if [[ $1 == "KAD" ]]; then
     mkdir -p "$MAIN_PATH"/split/
     split -d -n l/4 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
 elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KADhosts_00" || $1 == "KADhosts_01" ]]; then
-    ./scripts/ECODFF.sh "$1"
+    ./scripts/ECODFF.sh ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then
     wget -O KADhosts.txt https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
