@@ -15,20 +15,19 @@ cd "$MAIN_PATH"/ || exit
     cut -d' ' -f1 ./expired-domains/KAD_02-unknown_no_internet.txt
     cut -d' ' -f1 ./expired-domains/KAD_03-unknown_limit.txt
     cut -d' ' -f1 ./expired-domains/KAD_03-unknown_no_internet.txt
+    cut -d' ' -f1 ./expired-domains/KAD_04-unknown_limit.txt
+    cut -d' ' -f1 ./expired-domains/KAD_04-unknown_no_internet.txt
+    cut -d' ' -f1 ./expired-domains/KAD_05-unknown_limit.txt
+    cut -d' ' -f1 ./expired-domains/KAD_05-unknown_no_internet.txt
 } >> ./KAD.txt
 
-rm -rf ./expired-domains/KAD_00-unknown_limit.txt
-rm -rf ./expired-domains/KAD_00-unknown_no_internet.txt
-rm -rf ./expired-domains/KAD_01-unknown_limit.txt
-rm -rf ./expired-domains/KAD_01-unknown_no_internet.txt
-rm -rf ./expired-domains/KAD_02-unknown_limit.txt
-rm -rf ./expired-domains/KAD_02-unknown_no_internet.txt
-rm -rf ./expired-domains/KAD_03-unknown_limit.txt
-rm -rf ./expired-domains/KAD_03-unknown_no_internet.txt
+rm -rf ./expired-domains/KAD_0*-unknown_limit.txt
+rm -rf ./expired-domains/KAD_0*-unknown_no_internet.txt
 
 sed -i "s|^|0.0.0.0 |" ./KAD.txt
+sort -u -o ./KAD.txt ./KAD.txt
 
-NO_RM="true" ./scripts/ECODFF.sh ./KAD.txt
+./scripts/ECODFF.sh ./KAD.txt
 rm -r ./KAD.txt
 rm -rf ./expired-domains/KAD-unknown_no_internet.txt
 
@@ -39,5 +38,10 @@ cat ./KAD_0*-expired.txt >> ./KAD-expired.txt
 cat ./KAD_0*-parked.txt >> ./KAD-parked.txt
 cat ./KAD_0*-unknown.txt >> ./KAD-unknown.txt
 cat ./KAD_0*-unknown_limit.txt >> ./KAD-unknown_limit.txt
+
+sort -u -o ./KAD-expired.txt ./KAD-expired.txt
+sort -u -o ./KAD-parked.txt ./KAD-parked.txt
+sort -u -o ./KAD-unknown.txt ./KAD-unknown.txt
+sort -u -o ./KAD-unknown_limit.txt ./KAD-unknown_limit.txt
 
 rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KAD_0*-unknown_limit.txt
