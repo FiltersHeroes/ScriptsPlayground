@@ -69,7 +69,7 @@ PAF_supp:
   script:
     - "./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp"
   variables:
-    E_PAF_S: "$(./scripts/CI/getFileListForED.sh \
+    E_PAF_S: $(./scripts/CI/getFileListForED.sh \
           PAF_backgrounds_self-adv_supp \
           PAF_comeback_titles \
           PAF_contact_feedback_widgets_supp \
@@ -78,7 +78,7 @@ PAF_supp:
           PAF_pop-ups_supp \
           PAF_push_supp \
           PAF_scrolling_videos_supp \
-          PAF_tagged_internal_links)"
+          PAF_tagged_internal_links)
   artifacts:
     paths:
       - "$E_PAF_S"
