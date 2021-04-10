@@ -68,36 +68,20 @@ PAF_supp:
   stage: check
   script:
     - "./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp"
+  variables:
+    E_PAF_S: "$(./scripts/CI/getFileListForED.sh \
+          PAF_backgrounds_self-adv_supp \
+          PAF_comeback_titles \
+          PAF_contact_feedback_widgets_supp \
+          PAF_newsletters_supp \
+          PAF_other_elements_supp \
+          PAF_pop-ups_supp \
+          PAF_push_supp \
+          PAF_scrolling_videos_supp \
+          PAF_tagged_internal_links)"
   artifacts:
     paths:
-      - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
-      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown.txt
-      - expired-domains/PAF_backgrounds_self-advertising_supp-unknown_limit.txt
-      - expired-domains/PAF_backgrounds_self-advertising_supp-parked.txt
-      - expired-domains/PAF_newsletters_supp-expired.txt
-      - expired-domains/PAF_newsletters_supp-unknown.txt
-      - expired-domains/PAF_newsletters_supp-unknown_limit.txt
-      - expired-domains/PAF_newsletters_supp-parked.txt
-      - expired-domains/PAF_other_elements_supp-expired.txt
-      - expired-domains/PAF_other_elements_supp-unknown.txt
-      - expired-domains/PAF_other_elements_supp-unknown_limit.txt
-      - expired-domains/PAF_other_elements_supp-parked.txt
-      - expired-domains/PAF_pop-ups_supp-expired.txt
-      - expired-domains/PAF_pop-ups_supp-unknown.txt
-      - expired-domains/PAF_pop-ups_supp-unknown_limit.txt
-      - expired-domains/PAF_pop-ups_supp-parked.txt
-      - expired-domains/PAF_push_supp-expired.txt
-      - expired-domains/PAF_push_supp-unknown.txt
-      - expired-domains/PAF_push_supp-unknown_limit.txt
-      - expired-domains/PAF_push_supp-parked.txt
-      - expired-domains/PAF_scrolling_videos_supp-expired.txt
-      - expired-domains/PAF_scrolling_videos_supp-unknown.txt
-      - expired-domains/PAF_scrolling_videos_supp-unknown_limit.txt
-      - expired-domains/PAF_scrolling_videos_supp-parked.txt
-      - expired-domains/PAF_tagged_internal_links-expired.txt
-      - expired-domains/PAF_tagged_internal_links-unknown.txt
-      - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
-      - expired-domains/PAF_tagged_internal_links-parked.txt
+      - "$E_PAF_S"
 
 RSS:
   stage: check
