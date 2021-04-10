@@ -8,7 +8,7 @@ stages:
 
 KAD:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_KAD.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD"
   artifacts:
     paths:
       - expired-domains/KAD-expired.txt
@@ -18,17 +18,17 @@ KAD:
 
 KADhosts:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_KADhosts.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts"
+  variables:
+    E_KADH: "$(./scripts/CI/getFileListForED.sh KADhosts)"
   artifacts:
     paths:
-      - expired-domains/KADhosts-expired.txt
-      - expired-domains/KADhosts-unknown.txt
-      - expired-domains/KADhosts-unknown_limit.txt
+      - "$E_KADH"
 
 PAF:
   stage: check
   script:
-    - "./scripts/CI/CI_LETS_DO_THIS_PAF.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS.sh PAF"
   artifacts:
     paths:
       - expired-domains/PAF_arrows-expired.txt
@@ -67,7 +67,7 @@ PAF:
 PAF_supp:
   stage: check
   script:
-    - "./scripts/CI/CI_LETS_DO_THIS_PAF_supp.sh"
+    - "./scripts/CI/CI_LETS_DO_THIS.sh PAF_supp"
   artifacts:
     paths:
       - expired-domains/PAF_backgrounds_self-advertising_supp-expired.txt
@@ -101,7 +101,7 @@ PAF_supp:
 
 RSS:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_PASS.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh PASS"
   artifacts:
     paths:
       - expired-domains/polish_rss_filters-expired.txt
@@ -115,7 +115,7 @@ RSS:
 
 Social:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_Social.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh Social"
   artifacts:
     paths:
       - expired-domains/adblock_social_list-expired.txt
@@ -125,7 +125,7 @@ Social:
 
 Social_supp:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_Social_supp.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh Social_supp"
   artifacts:
     paths:
       - expired-domains/social_filters_uB_AG-expired.txt
@@ -135,7 +135,7 @@ Social_supp:
 
 Cookies:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh Cookies"
   artifacts:
     paths:
       - expired-domains/adblock_cookies-expired.txt
@@ -145,7 +145,7 @@ Cookies:
 
 Cookies_supp:
   stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS_Cookies_supp.sh"
+  script: "./scripts/CI/CI_LETS_DO_THIS.sh Cookies_supp"
   artifacts:
     paths:
       - expired-domains/cookies_uB_AG-expired.txt
