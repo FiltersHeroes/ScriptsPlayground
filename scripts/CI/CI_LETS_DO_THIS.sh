@@ -33,7 +33,7 @@ elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || 
 elif [[ $1 == "KADhosts" ]]; then
     wget -O KADhosts.txt https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
     mkdir -p "$MAIN_PATH"/split/
-    split -d -n l/2 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
+    split -d -n l/3 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
 elif [[ $1 == "PAF" ]]; then
     letsGo "$PAFbase"PAF_arrows.txt \
     "$PAFbase"PAF_backgrounds_self-advertising.txt \
