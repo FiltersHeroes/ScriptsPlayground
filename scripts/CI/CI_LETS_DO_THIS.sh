@@ -26,14 +26,14 @@ PAFbase="https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilt
 if [[ $1 == "KAD" ]]; then
     wget -O KAD.txt https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
     mkdir -p "$MAIN_PATH"/split/
-    split -d -n l/6 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
-elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" ]]; then
+    split -d -n l/10 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
+elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ]]; then
     ./scripts/ECODFF.sh ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then
     wget -O KADhosts.txt https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
     mkdir -p "$MAIN_PATH"/split/
-    split -d -n l/3 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
+    split -d -n l/4 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
 elif [[ $1 == "PAF" ]]; then
     letsGo "$PAFbase"PAF_arrows.txt \
     "$PAFbase"PAF_backgrounds_self-advertising.txt \

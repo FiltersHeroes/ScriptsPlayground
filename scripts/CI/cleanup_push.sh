@@ -8,6 +8,7 @@ cd "$MAIN_PATH" || exit
 cd ./expired-domains || exit
 
 rm -rf ./KADhosts-expired.txt ./KADhosts-parked.txt ./KADhosts-unknown.txt ./KADhosts-unknown_limit.txt
+rm -rf ./*-unknown_no_internet.txt
 
 cat ./KADhosts_0*-expired.txt >> ./KADhosts-expired.txt
 cat ./KADhosts_0*-parked.txt >> ./KADhosts-parked.txt

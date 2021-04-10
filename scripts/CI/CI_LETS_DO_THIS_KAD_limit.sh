@@ -7,18 +7,8 @@ MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
 cd "$MAIN_PATH"/ || exit
 
 {
-    cut -d' ' -f1 ./expired-domains/KAD_00-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_00-unknown_no_internet.txt
-    cut -d' ' -f1 ./expired-domains/KAD_01-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_01-unknown_no_internet.txt
-    cut -d' ' -f1 ./expired-domains/KAD_02-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_02-unknown_no_internet.txt
-    cut -d' ' -f1 ./expired-domains/KAD_03-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_03-unknown_no_internet.txt
-    cut -d' ' -f1 ./expired-domains/KAD_04-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_04-unknown_no_internet.txt
-    cut -d' ' -f1 ./expired-domains/KAD_05-unknown_limit.txt
-    cut -d' ' -f1 ./expired-domains/KAD_05-unknown_no_internet.txt
+    cut -d' ' -f1 ./expired-domains/KAD_0*-unknown_limit.txt
+    cut -d' ' -f1 ./expired-domains/KAD_0*-unknown_no_internet.txt
 } >> ./KAD.txt
 
 rm -rf ./expired-domains/KAD_0*-unknown_limit.txt

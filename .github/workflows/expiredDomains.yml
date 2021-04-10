@@ -138,6 +138,86 @@ jobs:
           name: E_KAD_05
           path: |
             ${{ env.E_KAD_05 }}
+  KAD_06:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_06
+          echo 'E_KAD_06<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_06)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KAD_06
+          path: |
+            ${{ env.E_KAD_06 }}
+  KAD_07:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_07
+          echo 'E_KAD_07<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_07)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KAD_07
+          path: |
+            ${{ env.E_KAD_07 }}
+  KAD_08:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_08
+          echo 'E_KAD_08<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_08)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KAD_08
+          path: |
+            ${{ env.E_KAD_08 }}
+  KAD_09:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v2.3.4 # pin@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_S
+          path: split
+      - run: |
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_09
+          echo 'E_KAD_09<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_09)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v2
+        with:
+          name: E_KAD_09
+          path: |
+            ${{ env.E_KAD_09 }}
   KADhosts_S:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -297,6 +377,10 @@ jobs:
         KAD_03,
         KAD_04,
         KAD_05,
+        KAD_06,
+        KAD_07,
+        KAD_08,
+        KAD_09,
       ]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -325,6 +409,22 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: E_KAD_05
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_06
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_07
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_08
+          path: expired-domains
+      - uses: actions/download-artifact@v2
+        with:
+          name: E_KAD_09
           path: expired-domains
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
