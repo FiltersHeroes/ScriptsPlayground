@@ -73,49 +73,49 @@ KAD_04:
       - expired-domains/KAD_04-unknown_limit.txt
       - expired-domains/KAD_04-unknown_no_internet.txt
 
-KAD_05:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_05"
-  artifacts:
-    paths:
-      - expired-domains/KAD_05-expired.txt
-      - expired-domains/KAD_05-parked.txt
-      - expired-domains/KAD_05-unknown.txt
-      - expired-domains/KAD_05-unknown_limit.txt
-      - expired-domains/KAD_05-unknown_no_internet.txt
+# KAD_05:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_05"
+#   artifacts:
+#     paths:
+#       - expired-domains/KAD_05-expired.txt
+#       - expired-domains/KAD_05-parked.txt
+#       - expired-domains/KAD_05-unknown.txt
+#       - expired-domains/KAD_05-unknown_limit.txt
+#       - expired-domains/KAD_05-unknown_no_internet.txt
 
-KAD_06:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_06"
-  artifacts:
-    paths:
-      - expired-domains/KAD_06-expired.txt
-      - expired-domains/KAD_06-parked.txt
-      - expired-domains/KAD_06-unknown.txt
-      - expired-domains/KAD_06-unknown_limit.txt
-      - expired-domains/KAD_06-unknown_no_internet.txt
+# KAD_06:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_06"
+#   artifacts:
+#     paths:
+#       - expired-domains/KAD_06-expired.txt
+#       - expired-domains/KAD_06-parked.txt
+#       - expired-domains/KAD_06-unknown.txt
+#       - expired-domains/KAD_06-unknown_limit.txt
+#       - expired-domains/KAD_06-unknown_no_internet.txt
 
-KAD_07:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_07"
-  artifacts:
-    paths:
-      - expired-domains/KAD_07-expired.txt
-      - expired-domains/KAD_07-parked.txt
-      - expired-domains/KAD_07-unknown.txt
-      - expired-domains/KAD_07-unknown_limit.txt
-      - expired-domains/KAD_07-unknown_no_internet.txt
+# KAD_07:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_07"
+#   artifacts:
+#     paths:
+#       - expired-domains/KAD_07-expired.txt
+#       - expired-domains/KAD_07-parked.txt
+#       - expired-domains/KAD_07-unknown.txt
+#       - expired-domains/KAD_07-unknown_limit.txt
+#       - expired-domains/KAD_07-unknown_no_internet.txt
 
-KAD_08:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_08"
-  artifacts:
-    paths:
-      - expired-domains/KAD_08-expired.txt
-      - expired-domains/KAD_08-parked.txt
-      - expired-domains/KAD_08-unknown.txt
-      - expired-domains/KAD_08-unknown_limit.txt
-      - expired-domains/KAD_08-unknown_no_internet.txt
+# KAD_08:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KAD_08"
+#   artifacts:
+#     paths:
+#       - expired-domains/KAD_08-expired.txt
+#       - expired-domains/KAD_08-parked.txt
+#       - expired-domains/KAD_08-unknown.txt
+#       - expired-domains/KAD_08-unknown_limit.txt
+#       - expired-domains/KAD_08-unknown_no_internet.txt
 
 KADhosts_00:
   stage: check
@@ -139,27 +139,27 @@ KADhosts_01:
       - expired-domains/KADhosts_01-unknown_limit.txt
       - expired-domains/KADhosts_01-unknown_no_internet.txt
 
-KADhosts_02:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02"
-  artifacts:
-    paths:
-      - expired-domains/KADhosts_02-expired.txt
-      - expired-domains/KADhosts_02-parked.txt
-      - expired-domains/KADhosts_02-unknown.txt
-      - expired-domains/KADhosts_02-unknown_limit.txt
-      - expired-domains/KADhosts_02-unknown_no_internet.txt
+# KADhosts_02:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02"
+#   artifacts:
+#     paths:
+#       - expired-domains/KADhosts_02-expired.txt
+#       - expired-domains/KADhosts_02-parked.txt
+#       - expired-domains/KADhosts_02-unknown.txt
+#       - expired-domains/KADhosts_02-unknown_limit.txt
+#       - expired-domains/KADhosts_02-unknown_no_internet.txt
 
-KADhosts_03:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_03"
-  artifacts:
-    paths:
-      - expired-domains/KADhosts_03-expired.txt
-      - expired-domains/KADhosts_03-parked.txt
-      - expired-domains/KADhosts_03-unknown.txt
-      - expired-domains/KADhosts_03-unknown_limit.txt
-      - expired-domains/KADhosts_03-unknown_no_internet.txt
+# KADhosts_03:
+#   stage: check
+#   script: "./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_03"
+#   artifacts:
+#     paths:
+#       - expired-domains/KADhosts_03-expired.txt
+#       - expired-domains/KADhosts_03-parked.txt
+#       - expired-domains/KADhosts_03-unknown.txt
+#       - expired-domains/KADhosts_03-unknown_limit.txt
+#       - expired-domains/KADhosts_03-unknown_no_internet.txt
 
 PAF:
   stage: check
@@ -264,22 +264,6 @@ PAF_supp:
       - expired-domains/PAF_tagged_internal_links-unknown.txt
       - expired-domains/PAF_tagged_internal_links-unknown_limit.txt
       - expired-domains/PAF_tagged_internal_links-unknown_no_internet.txt
-
-RSS:
-  stage: check
-  script: "./scripts/CI/CI_LETS_DO_THIS.sh PASS"
-  artifacts:
-    paths:
-      - expired-domains/polish_rss_filters-expired.txt
-      - expired-domains/polish_rss_filters-parked.txt
-      - expired-domains/polish_rss_filters-unknown.txt
-      - expired-domains/polish_rss_filters-unknown_limit.txt
-      - expired-domains/polish_rss_filters-unknown_no_internet.txt
-      - expired-domains/polish_rss_filters_supp-expired.txt
-      - expired-domains/polish_rss_filters_supp-parked.txt
-      - expired-domains/polish_rss_filters_supp-unknown.txt
-      - expired-domains/polish_rss_filters_supp-unknown_limit.txt
-      - expired-domains/polish_rss_filters_supp-unknown_no_internet.txt
 
 SocialPASS:
   stage: check
