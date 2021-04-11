@@ -20,7 +20,9 @@ sort -u -o ./KADhosts-expired.txt ./KADhosts-expired.txt
 sort -u -o ./KADhosts-unknown.txt ./KADhosts-unknown.txt
 sort -u -o ./KADhosts-unknown_limit.txt ./KADhosts-unknown_limit.txt
 
+
 rm -rf ./KADhosts_0*-expired.txt ./KADhosts_0*-parked.txt ./KADhosts_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
+rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
 
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
 
