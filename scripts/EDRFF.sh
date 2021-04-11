@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Expired Domains Remover For Filterlists
-# v1.3 (beta)
+# v1.3.1 (beta)
 # Usage: EDRFF.sh pathToSections listOfExpiredDomains.txt TLD (optional)
 
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
@@ -47,17 +47,17 @@ removeE() {
     rm -rf "$TMP_DIR"/*
 }
 
-if [ -d "${SECTIONS_DIR}" ]; then
-    for file in "${SECTIONS_DIR}"/*.txt; do
-        # Remove domains only with specific TLD
-        if [ "$3" ]; then
-            grep ".$3$" "$2" > "$file".temp_"$3"
-            removeE "$file" "$file".temp_"$3"
-            rm -rf "$file".temp_"$3"
-        else
-            removeE "$file" "$2"
-        fi
-    done
+if [ -d "${SECTIONS_DIR}" ] && [ -f "$2" ]; then
+        for file in "${SECTIONS_DIR}"/*.txt; do
+            # Remove domains only with specific TLD
+            if [ "$3" ]; then
+                grep ".$3$" "$2" > "$file".temp_"$3"
+                removeE "$file" "$file".temp_"$3"
+                rm -rf "$file".temp_"$3"
+            else
+                removeE "$file" "$2"
+            fi
+        done
 fi
 
 rm -rf "$TMP_DIR"
