@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Expired Domains Remover For Filterlists
-# v1.2 (beta)
+# v1.3 (beta)
 # Usage: EDRFF.sh pathToSections listOfExpiredDomains.txt TLD (optional)
 
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
@@ -21,11 +21,29 @@ fi
 removeE() {
     cp "$2" "$TMP_DIR"/expired1.tmp
     cp "$2" "$TMP_DIR"/expired2.tmp
+    cp "$2" "$TMP_DIR"/expired3.tmp
+    cp "$2" "$TMP_DIR"/expired4.tmp
+    cp "$2" "$TMP_DIR"/expired5.tmp
+    # ||domain.com
     sed -i "s/^/||/" "$TMP_DIR"/expired1.tmp
+    # $domain=domain.com|
     sed -i "s/$/|/" "$TMP_DIR"/expired2.tmp
+    # ,domain
+    sed -i "s/^/,/" "$TMP_DIR"/expired3.tmp
+    # domain,
+    sed -i "s/$/,/" "$TMP_DIR"/expired4.tmp
+    # domain##test
+    sed -i "s/^/^/" "$TMP_DIR"/expired5.tmp
+    sed -i "s/$/##/" "$TMP_DIR"/expired5.tmp
+
     grep -v -f "$TMP_DIR"/expired1.tmp "$1" > "$1".temp
     mv "$1".temp "$1"
+    grep -v -f "$TMP_DIR"/expired5.tmp "$1" > "$1".temp
+    mv "$1".temp "$1"
+    # https://unix.stackexchange.com/a/322315
     sed -i "$(sed 's:.*:s/&//ig:' "$TMP_DIR"/expired2.tmp)" "$1"
+    sed -i "$(sed 's:.*:s/&//ig:' "$TMP_DIR"/expired3.tmp)" "$1"
+    sed -i "$(sed 's:.*:s/&//ig:' "$TMP_DIR"/expired4.tmp)" "$1"
     rm -rf "$TMP_DIR"/*
 }
 
