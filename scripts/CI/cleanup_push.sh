@@ -13,12 +13,10 @@ rm -rf ./KADhosts-expired.txt ./KADhosts-parked.txt ./KADhosts-unknown.txt ./KAD
 rm -rf ./*-unknown_no_internet.txt
 
 cat ./KADhosts_0*-expired.txt >> ./KADhosts-expired.txt
-cat ./KADhosts_0*-parked.txt >> ./KADhosts-parked.txt
 cat ./KADhosts_0*-unknown.txt >> ./KADhosts-unknown.txt
 cat ./KADhosts_0*-unknown_limit.txt >> ./KADhosts-unknown_limit.txt
 
 sort -u -o ./KADhosts-expired.txt ./KADhosts-expired.txt
-sort -u -o ./KADhosts-parked.txt ./KADhosts-parked.txt
 sort -u -o ./KADhosts-unknown.txt ./KADhosts-unknown.txt
 sort -u -o ./KADhosts-unknown_limit.txt ./KADhosts-unknown_limit.txt
 
