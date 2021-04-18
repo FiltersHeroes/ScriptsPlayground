@@ -14,41 +14,43 @@ jobs:
             var body = context.payload.issue.body;
             var labels = context.payload.issue.labels;
             var labelSet = [
-                {
+              {
                   "body": "Błąd",
                   "label": "bug",
-                },
-                {
-                  "body": "Pytanie",
-                  "label": "question",
-                },
-                {
-                  "body": "Dokumentacja",
-                  "label": "documentation",
-                },
+              },
+              {
+                "body": "Pytanie",
+                "label": "question",
+              },
+              {
+                "body": "Dokumentacja",
+                "label": "documentation",
+              },
             ]
+
+            var labelsToAdd = [];
 
             for (const i in labelSet) {
               var re_add = new RegExp("- \\[[xX]] "+labelSet[i].body);
               var re_remove = new RegExp("- \\[[ ]] "+labelSet[i].body);
-              if(body.match(re_add)) {
-                if (!labels.some(e => e.name === labelSet[i].label)) {
-                  github.issues.addLabels({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    labels: [labelSet[i].label]
-                  })
-                }
+              if(body.match(re_add) && !labels.some(e => e.name === labelSet[i].label)) {
+                labelsToAdd.push(labelSet[i].label);
               }
-              if(body.match(re_remove)) {
-                if (labels.some(e => e.name === labelSet[i].label)) {
-                  github.issues.removeLabel({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    name: labelSet[i].label
-                  })
-                }
+              if(body.match(re_remove) && labels.some(e => e.name === labelSet[i].label)) {
+                github.issues.removeLabel({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: labelSet[i].label
+                })
               }
+            }
+
+            if (labelsToAdd.length > 0) {
+              github.issues.addLabels({
+                      issue_number: context.issue.number,
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      labels: labelsToAdd
+              })
             }
