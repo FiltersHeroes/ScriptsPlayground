@@ -18,17 +18,17 @@
 @include test2
 !
 !
-! Testy-3
-@include test3
-!
-!
-! Testy-4
-@include test4
-!
-!
 ! Test łączenia
 @COMBINEinclude test1 https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
 !
 !
 ! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
 !#include Test2.txt
+!
+!
+! Testy-4
+@include test4
+!
+!
+! Testy-6
+@include test5
