@@ -1,7 +1,7 @@
 ! Title: Polska Baza Ciasteczkowa
-! Version: 2019.11.23.0
-! Copyright © 2019 Polish Filters Team
+! Version: 2021.05.13.0
+! Copyright © 2021 Polish Filters Team
 !
 !
-virustotal.com(bakeCookie, euConsent, 1, 365)
-drogerium.pl|wylecz.to|budujmase.pl(bakeCookie, rodoHfM, true, 365)
+virustotal.com##+js(bakeCookie, euConsent, 1, 365)
+drogerium.pl,wylecz.to,budujmase.pl,trec.pl##+js(bakeCookie, rodoHfM, true, 365)
