@@ -1,0 +1,78 @@
+name: Beta
+description: Beta
+labels: strzałka
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dziękujemy za zgłoszenie do Polskich Filtrów Elementów Irytujących!
+        Thanks for reporting to Polish Annoyance Filters!
+
+        ### Moja konfiguracja / My configuration
+  - type: input
+    id: webBrowser
+    attributes:
+      label: |
+        Przeglądarka internetowa / Web browser
+      placeholder: Pale Moon 29.2.1
+    validations:
+      required: true
+  - type: input
+    id: OS
+    attributes:
+      label: |
+        System operacyjny / Operating system
+      placeholder: Windows 11
+    validations:
+      required: true
+  - type: input
+    id: adblocker
+    attributes:
+      label: |
+        Bloker / Blocker
+      placeholder: uBlock Origin 1.35.2
+    validations:
+      required: true
+  - type: textarea
+    id: myfilters
+    attributes:
+      label: |
+        Używane filtry / Used Filter lists
+      value: |
+        1. EasyList
+        2. Oficjalne Polskie Filtry do AdBlocka, uBlocka Origin i AdGuarda
+        3. Polskie Filtry Elementów Irytujących
+        4. 
+        5. 
+    validations:
+      required: true
+  - type: input
+    id: directLink
+    attributes:
+      label: |
+        Link bezpośredni (opcjonalny) / Direct link (optional)
+      description: |
+        Wstaw tutaj link bezpośredni do strony, na której występuje element albo błąd.
+        Insert here a direct link to the page, where the element or bug occurs.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: |
+        Zrzut ekranu (opcjonalny) / Screenshot (optional)
+      description: |
+        Przeciągnij tutaj swój zrzut lub zamieść do niego link.
+        Drag and drop your screenshot here or place a link to it.
+    validations:
+      required: false
+  - type: textarea
+    id: otherInfo
+    attributes:
+      label: |
+        Inne ważne informacje mogące mieć znaczenie (opcjonalne) / Other important information that may be relevant (optional):
+      description: |
+        Coś co nie da się opisać wizualnie, etapy odtworzenia problemu (co doprowadziło do błędu) albo twoja metoda rozwiązania problemu.
+        Something that cannot be described visually, the stages of reproducing the problem (which led to the error) or your method of solving the problem.
+    validations:
+      required: false
