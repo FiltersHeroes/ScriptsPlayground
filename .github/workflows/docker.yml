@@ -8,101 +8,53 @@ on:
 jobs:
   docker_vichs:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dfile:
+          [
+            "Dockerfile_VICHS",
+            "Dockerfile_ED",
+            "Dockerfile_KAD",
+            "Dockerfile_RTM",
+          ]
+        imname: ["vichs", "expired_domains", "kad", "rtm"]
     steps:
       - name: Check out the repo
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
+        uses: actions/checkout@v2
       - name: Login to DockerHub
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
+        uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: PolishJarvis
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
-        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
+        uses: docker/build-push-action@v2
         with:
           context: .
-          file: Dockerfile_VICHS
+          file: ${{ matrix.dfile }}
           push: true
           tags: |
-            polishfiltersteam/vichs_image:latest
-            ghcr.io/polishfiltersteam/vichs_image:latest
-  docker_ed:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
-      - name: Login to DockerHub
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          registry: ghcr.io
-          username: PolishJarvis
-          password: ${{ secrets.CR_PAT }}
-      - name: Build and push
-        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
-        with:
-          context: .
-          file: Dockerfile_ED
-          push: true
-          tags: |
-            polishfiltersteam/expired_domains_image:latest
-            ghcr.io/polishfiltersteam/expired_domains_image:latest
-  docker_kad:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
-      - name: Login to DockerHub
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          registry: ghcr.io
-          username: PolishJarvis
-          password: ${{ secrets.CR_PAT }}
-      - name: Build and push
-        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
-        with:
-          context: .
-          file: Dockerfile_KAD
-          push: true
-          tags: |
-            polishfiltersteam/kad_image:latest
-            ghcr.io/polishfiltersteam/kad_image:latest
-  docker_rtm:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # pin@v2
-      - name: Login to DockerHub
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a # pin@v1
-        with:
-          registry: ghcr.io
-          username: PolishJarvis
-          password: ${{ secrets.CR_PAT }}
-      - name: Build and push
-        uses: docker/build-push-action@9379083e426e2e84abb80c8c091f5cdeb7d3fd7a # pin@v2
-        with:
-          context: .
-          file: Dockerfile_RTM
-          push: true
-          tags: |
-            polishfiltersteam/rtm_image:latest
-            ghcr.io/polishfiltersteam/rtm_image:latest
+            polishfiltersteam/${{ matrix.imname }}_image:latest
+            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
+      - # Temp fix
+        # https://github.com/docker/build-push-action/issues/252
+        # https://github.com/moby/buildkit/issues/1896
+        name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
