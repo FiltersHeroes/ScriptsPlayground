@@ -6,7 +6,7 @@ on:
     - cron: "55 23 * * 6"
 
 jobs:
-  docker_vichs:
+  docker:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -34,9 +34,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          key: ${{ matrix.imname }}-buildx-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            ${{ matrix.imname }}-buildx-
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -52,6 +52,8 @@ jobs:
           tags: |
             polishfiltersteam/${{ matrix.imname }}_image:latest
             ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix
         # https://github.com/docker/build-push-action/issues/252
         # https://github.com/moby/buildkit/issues/1896
