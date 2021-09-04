@@ -11,14 +11,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dfile:
-          [
-            "Dockerfile_VICHS",
-            "Dockerfile_ED",
-            "Dockerfile_KAD",
-            "Dockerfile_RTM",
-          ]
-        imname: ["vichs", "expired_domains", "kad", "rtm"]
+        include:
+          - dfile: "VICHS"
+            imname: "vichs"
+          - dfile: "ED"
+            imname: "expired_domains"
+          - dfile: "KAD"
+            imname: "kad"
+          - dfile: "RTM"
+            imname: "rtm"
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -46,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ${{ matrix.dfile }}
+          file: Dockerfile_${{ matrix.dfile }}
           push: true
           tags: |
             polishfiltersteam/${{ matrix.imname }}_image:latest
