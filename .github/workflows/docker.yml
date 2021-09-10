@@ -6,7 +6,7 @@ on:
     - cron: "55 23 * * 6"
 
 jobs:
-  docker_vichs:
+  docker_vichs_ed:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -15,6 +15,9 @@ jobs:
           - dfile: "VICHS"
             imname: "vichs"
             version: "2.26.6"
+          - dfile: "ED"
+            imname: "expired_domains"
+            version: "1"
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -69,16 +72,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dfile: "ED"
-            imname: "expired_domains"
-            version: "1"
           - dfile: "KAD"
             imname: "kad"
             version: "2.26.6"
           - dfile: "RTM"
             imname: "rtm"
             version: "2.26.6"
-    needs: docker_vichs
+    needs: docker_vichs_ed
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
