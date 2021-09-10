@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.26.4
+# v2.26.5
 
 # MIT License
 
@@ -34,7 +34,7 @@ SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 # Zakładamy, że skrypt znajduje się gdzieś w repozytorium git,
 # w którym są pliki listy filtrów, którą chcemy zaktualizować.
 # Jednakże jeżeli skrypt znajduje się gdzieś indziej, to
-# zezwalamy na nadpisanie zmiennej MAIN_PATH.
+# zezwalamy na ustawienie innej ścieżki za pomocą zmiennej VICHS_MAIN_PATH.
 if [ -z "$VICHS_MAIN_PATH" ]; then
     MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
 else
@@ -45,12 +45,27 @@ fi
 # shellcheck disable=SC1091
 . gettext.sh
 export TEXTDOMAIN="VICHS"
-export TEXTDOMAINDIR=$SCRIPT_PATH/locales
+
+# Lokalizacja tłumaczeń
+# Zakładamy, że znajdują się one w katalogu locales,
+# który jest w tym samym katalogu, co skrypt.
+# Jednakże zezwalamy na ustawienie innej ścieżki
+# za pomocą zmiennej VICHS_LOCALES_PATH.
+if [ -z "$VICHS_LOCALES_PATH" ]; then
+    TEXTDOMAINDIR=$SCRIPT_PATH/locales
+else
+    TEXTDOMAINDIR="$VICHS_LOCALES_PATH"
+fi
+export TEXTDOMAINDIR
 
 # Przejście do katalogu, w którym znajduje się lokalne repozytorium git
 cd "$MAIN_PATH" || exit
 
 # Lokalizacja pliku konfiguracyjnego
+# Zakładamy, że znajduje się on w katalogu scripts,
+# który jest w głównej ścieżce repozytorium git.
+# Jednakże zezwalamy na ustawienie innej ścieżki
+# za pomocą zmiennej VICHS_CONFIG_PATH.
 if [ -z "$VICHS_CONFIG_PATH" ]; then
     CONFIG=$MAIN_PATH/scripts/VICHS.config
 else
