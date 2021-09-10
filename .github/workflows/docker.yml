@@ -14,12 +14,16 @@ jobs:
         include:
           - dfile: "VICHS"
             imname: "vichs"
+            version: "2.26.6"
           - dfile: "ED"
             imname: "expired_domains"
+            version: "1"
           - dfile: "KAD"
             imname: "kad"
+            version: "1"
           - dfile: "RTM"
             imname: "rtm"
+            version: "1"
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -51,7 +55,9 @@ jobs:
           push: true
           tags: |
             polishfiltersteam/${{ matrix.imname }}_image:latest
+            polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ date +"%Y%m%d%H%M" }}
             ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
+            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ date +"%Y%m%d%H%M" }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix

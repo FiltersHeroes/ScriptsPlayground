@@ -3,6 +3,10 @@ FROM ubuntu:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV VICHS_tag="VICHS-2.26.6"
+ENV VICHS_LOCALES_PATH="/usr/share/locale"
+ENV FOP_tag="FOP-3.20"
+
 RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates wget tzdata language-pack-pl python3 gettext-base
 
 # uncomment chosen locale to enable it's generation
@@ -19,5 +23,20 @@ ENV LANGUAGE en_US
 
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
+
+# Download VICHS
+RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${VICHS_tag}/scripts/VICHS.sh" -P "/usr/bin"
+RUN chmod +x "VICHS.sh"
+VICHS.sh --version
+
+# Download translations for VICHS
+RUN wget "https://github.com/PolishFiltersTeam/ScriptsPlayground/raw/${VICHS_tag}/scripts/locales/pl/LC_MESSAGES/VICHS.mo" -P "$VICHS_LOCALES_PATH/pl/LC_MESSAGES"
+
+# Download HelperForVICHS
+RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${VICHS_tag}/scripts/HelperForVICHS.sh" -P "/usr/bin"
+RUN chmod +x "HelperForVICHS.sh"
+
+# Download FOP
+RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${FOP_tag}/scripts/FOP.py" -P "/usr/bin"
 
 CMD ["/bin/sh"]
