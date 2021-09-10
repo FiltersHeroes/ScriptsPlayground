@@ -58,8 +58,10 @@ jobs:
           push: true
           tags: |
             polishfiltersteam/${{ matrix.imname }}_image:latest
+            polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
             polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
             ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
+            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
             ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
