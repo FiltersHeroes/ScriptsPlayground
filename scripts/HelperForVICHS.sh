@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Helper for VICHS - helper for Version Include Checksum Hosts Sort script
-# v1.3.1
+# v1.3.2
 
 # MIT License
 
@@ -36,13 +36,15 @@ SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 # w którym są pliki listy filtrów, którą chcemy zaktualizować.
 # Jednakże jeżeli skrypt znajduje się gdzieś indziej, to
 # zezwalamy na nadpisanie zmiennej MAIN_PATH.
-if [ -z "$MAIN_PATH" ]; then
+if [ -z "$VICHS_MAIN_PATH" ]; then
     MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
+else
+    MAIN_PATH="$VICHS_MAIN_PATH"
 fi
 
 cd "$MAIN_PATH" || exit
 
-V_CHANGED_FILES_FILE="$SCRIPT_PATH"/V_CHANGED_FILES.txt
+V_CHANGED_FILES_FILE="$MAIN_PATH"/changed_files/V_CHANGED_FILES.txt
 
 if [ -f "$V_CHANGED_FILES_FILE" ]; then
     rm -rf "$V_CHANGED_FILES_FILE"
@@ -70,7 +72,12 @@ function addListToVarIfAnotherListUpdated() {
     fi
 }
 
-CONFIG="$SCRIPT_PATH"/VICHS.config
+if [ -z "$VICHS_CONFIG_PATH" ]; then
+    CONFIG=$MAIN_PATH/scripts/VICHS.config
+else
+    CONFIG="$VICHS_CONFIG_PATH"
+fi
+
 END=$(grep -o -i '@updateListIfAnotherListUpdated' "${CONFIG}" | wc -l)
 for ((n = 1; n <= END; n++)); do
     LIST=$(grep -oP -m "$n" '@updateListIfAnotherListUpdated \K.*' "$CONFIG" | tail -n1 | awk -F " " '{print $1;}')

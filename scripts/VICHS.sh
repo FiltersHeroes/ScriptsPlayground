@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.26.3
+# v2.26.4
 
 # MIT License
 
@@ -35,8 +35,10 @@ SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 # w którym są pliki listy filtrów, którą chcemy zaktualizować.
 # Jednakże jeżeli skrypt znajduje się gdzieś indziej, to
 # zezwalamy na nadpisanie zmiennej MAIN_PATH.
-if [ -z "$MAIN_PATH" ]; then
+if [ -z "$VICHS_MAIN_PATH" ]; then
     MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
+else
+    MAIN_PATH="$VICHS_MAIN_PATH"
 fi
 
 # Tłumaczenie
@@ -49,7 +51,11 @@ export TEXTDOMAINDIR=$SCRIPT_PATH/locales
 cd "$MAIN_PATH" || exit
 
 # Lokalizacja pliku konfiguracyjnego
-CONFIG=$SCRIPT_PATH/VICHS.config
+if [ -z "$VICHS_CONFIG_PATH" ]; then
+    CONFIG=$MAIN_PATH/scripts/VICHS.config
+else
+    CONFIG="$VICHS_CONFIG_PATH"
+fi
 
 # Konfiguracja nazwy użytkownika i maila dla CI
 if [ "$CI" = "true" ]; then
@@ -619,7 +625,8 @@ for i in "$@"; do
 
         # Zapisywanie nazw zmienionych plików
         if [ "$SAVE_CHANGED_FN" = "true" ]; then
-            git diff --cached --name-only --pretty=format: | sort -u  >> "$SCRIPT_PATH"/V_CHANGED_FILES.txt
+            mkdir "$MAIN_PATH"/changed_files
+            git diff --cached --name-only --pretty=format: | sort -u  >> "$MAIN_PATH"/changed_files/V_CHANGED_FILES.txt
         fi
 
         # Commitowanie zmienionych plików
