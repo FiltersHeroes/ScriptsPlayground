@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# Version: 2.26.6
+# Version: 2.26.7
 
 # MIT License
 
@@ -31,12 +31,13 @@
 SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
 
 # MAIN_PATH to miejsce, w którym znajduje się główny katalog repozytorium
-# Zakładamy, że skrypt znajduje się gdzieś w repozytorium git,
-# w którym są pliki listy filtrów, którą chcemy zaktualizować.
-# Jednakże jeżeli skrypt znajduje się gdzieś indziej, to
-# zezwalamy na ustawienie innej ścieżki za pomocą zmiennej VICHS_MAIN_PATH.
+# Zezwalamy na ustawienie innej ścieżki za pomocą zmiennej VICHS_MAIN_PATH.
 if [ -z "$VICHS_MAIN_PATH" ]; then
-    MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
+    if [[ ! "$1" =~ ^\- ]]; then
+        MAIN_PATH=$(git -C "$(dirname "$(realpath -s "$1")")" rev-parse --show-toplevel)
+    else
+        MAIN_PATH="$SCRIPT_PATH"
+    fi
 else
     MAIN_PATH="$VICHS_MAIN_PATH"
 fi
@@ -73,14 +74,16 @@ else
 fi
 
 # Konfiguracja nazwy użytkownika i maila dla CI
-if [ "$CI" = "true" ]; then
+if [ "$CI" = "true" ] && [[ -f "$CONFIG" ]]; then
     CI_USERNAME=$(grep -oP -m 1 '@CIusername \K.*' "$CONFIG")
     CI_EMAIL=$(grep -oP -m 1 '@CIemail \K.*' "$CONFIG")
     git config --global user.name "${CI_USERNAME}"
     git config --global user.email "${CI_EMAIL}"
 fi
 
-LOCALE=$(grep -oP -m 1 '@lang \K.*' "$CONFIG")
+if [ -f "$CONFIG" ]; then
+    LOCALE=$(grep -oP -m 1 '@lang \K.*' "$CONFIG")
+fi
 
 if [ -n "$LOCALE" ]; then
     export LANGUAGE="$LOCALE"
