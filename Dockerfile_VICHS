@@ -27,7 +27,7 @@ RUN dpkg-reconfigure --frontend noninteractive locales
 # Download VICHS
 RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${VICHS_tag}/scripts/VICHS.sh" -P "/usr/bin"
 RUN chmod +x "VICHS.sh"
-VICHS.sh --version
+RUN VICHS.sh --version
 
 # Download translations for VICHS
 RUN wget "https://github.com/PolishFiltersTeam/ScriptsPlayground/raw/${VICHS_tag}/scripts/locales/pl/LC_MESSAGES/VICHS.mo" -P "$VICHS_LOCALES_PATH/pl/LC_MESSAGES"
