@@ -26,7 +26,7 @@ RUN dpkg-reconfigure --frontend noninteractive locales
 
 # Download VICHS
 RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${VICHS_tag}/scripts/VICHS.sh" -P "/usr/bin"
-RUN chmod +x "VICHS.sh"
+RUN chmod +x "/usr/bin/VICHS.sh"
 RUN VICHS.sh --version
 
 # Download translations for VICHS
@@ -34,7 +34,7 @@ RUN wget "https://github.com/PolishFiltersTeam/ScriptsPlayground/raw/${VICHS_tag
 
 # Download HelperForVICHS
 RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${VICHS_tag}/scripts/HelperForVICHS.sh" -P "/usr/bin"
-RUN chmod +x "HelperForVICHS.sh"
+RUN chmod +x "/usr/bin/HelperForVICHS.sh"
 
 # Download FOP
 RUN wget "https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/${FOP_tag}/scripts/FOP.py" -P "/usr/bin"
