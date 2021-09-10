@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# v2.26.5
+# Version: 2.26.6
 
 # MIT License
 
@@ -87,6 +87,14 @@ if [ -n "$LOCALE" ]; then
 fi
 
 for i in "$@"; do
+
+    # Wyświetlanie informacji o wersji
+    case $i in
+    -v | --version)
+        printf "%s %s\n" "VICHS" "$(awk -F': ' '/^# Version:/ {print $2; exit}' "$0")"
+        exit 0
+        ;;
+    esac
 
     function externalCleanup {
         sed -i '/! Checksum/d' "$EXTERNAL_TEMP"
@@ -641,7 +649,7 @@ for i in "$@"; do
         # Zapisywanie nazw zmienionych plików
         if [ "$SAVE_CHANGED_FN" = "true" ]; then
             mkdir "$MAIN_PATH"/changed_files
-            git diff --cached --name-only --pretty=format: | sort -u  >> "$MAIN_PATH"/changed_files/V_CHANGED_FILES.txt
+            git diff --cached --name-only --pretty=format: | sort -u >>"$MAIN_PATH"/changed_files/V_CHANGED_FILES.txt
         fi
 
         # Commitowanie zmienionych plików
