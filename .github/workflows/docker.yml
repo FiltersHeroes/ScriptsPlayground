@@ -14,7 +14,7 @@ jobs:
         include:
           - dfile: "VICHS"
             imname: "vichs"
-            version: "2.26.7"
+            version: "2.26.8"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
@@ -74,10 +74,10 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "2.26.7"
+            version: "2.26.8"
           - dfile: "RTM"
             imname: "rtm"
-            version: "2.26.7"
+            version: "2.26.8"
     needs: docker_vichs_ed
     steps:
       - name: Check out the repo

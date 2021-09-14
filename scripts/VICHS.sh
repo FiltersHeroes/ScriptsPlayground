@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# Version: 2.26.7
+# Version: 2.26.8
 
 # MIT License
 
@@ -53,7 +53,7 @@ export TEXTDOMAIN="VICHS"
 # Jednakże zezwalamy na ustawienie innej ścieżki
 # za pomocą zmiennej VICHS_LOCALES_PATH.
 if [ -z "$VICHS_LOCALES_PATH" ]; then
-    TEXTDOMAINDIR=$SCRIPT_PATH/locales
+    TEXTDOMAINDIR="$SCRIPT_PATH"/locales
 else
     TEXTDOMAINDIR="$VICHS_LOCALES_PATH"
 fi
@@ -68,7 +68,7 @@ cd "$MAIN_PATH" || exit
 # Jednakże zezwalamy na ustawienie innej ścieżki
 # za pomocą zmiennej VICHS_CONFIG_PATH.
 if [ -z "$VICHS_CONFIG_PATH" ]; then
-    CONFIG=$MAIN_PATH/scripts/VICHS.config
+    CONFIG="$MAIN_PATH"/scripts/VICHS.config
 else
     CONFIG="$VICHS_CONFIG_PATH"
 fi
@@ -218,14 +218,14 @@ for i in "$@"; do
 
     # Ustalanie ścieżki do szablonów
     if grep -q "@templatesPath" "$CONFIG"; then
-        TEMPLATE=$MAIN_PATH/$(grep -oP -m 1 '@templatesPath \K.*' "$CONFIG")/${FILTERLIST}.template
+        TEMPLATE="$MAIN_PATH"/$(grep -oP -m 1 '@templatesPath \K.*' "$CONFIG")/${FILTERLIST}.template
     else
-        TEMPLATE=$MAIN_PATH/templates/${FILTERLIST}.template
+        TEMPLATE="$MAIN_PATH"/templates/${FILTERLIST}.template
     fi
 
     FINAL=$i
-    FINAL_B=$MAIN_PATH/${FILTERLIST}.backup
-    TEMPORARY=$MAIN_PATH/${FILTERLIST}.temp
+    FINAL_B="$MAIN_PATH"/${FILTERLIST}.backup
+    TEMPORARY="$MAIN_PATH"/${FILTERLIST}.temp
 
     # Tworzenie kopii pliku początkowego
     cp -R "$FINAL" "$FINAL_B"
@@ -240,11 +240,11 @@ for i in "$@"; do
 
     # Ustalanie ścieżki do sekcji
     if grep -q "@path" "$FINAL"; then
-        SECTIONS_DIR=$MAIN_PATH/$(grep -oP -m 1 '@path \K.*' "$FINAL")
+        SECTIONS_DIR="$MAIN_PATH"/$(grep -oP -m 1 '@path \K.*' "$FINAL")
     elif grep -q "@path" "$CONFIG"; then
-        SECTIONS_DIR=$MAIN_PATH/$(grep -oP -m 1 '@path \K.*' "$CONFIG")
+        SECTIONS_DIR="$MAIN_PATH"/$(grep -oP -m 1 '@path \K.*' "$CONFIG")
     else
-        SECTIONS_DIR=$MAIN_PATH/sections/$FILTERLIST
+        SECTIONS_DIR="$MAIN_PATH"/sections/"$FILTERLIST"
     fi
 
     # Ustalanie rozszerzenia plików sekcji
@@ -651,7 +651,9 @@ for i in "$@"; do
 
         # Zapisywanie nazw zmienionych plików
         if [ "$SAVE_CHANGED_FN" = "true" ]; then
-            mkdir "$MAIN_PATH"/changed_files
+            if [[ ! -d "$MAIN_PATH"/changed_files ]]; then
+                mkdir "$MAIN_PATH"/changed_files
+            fi
             git diff --cached --name-only --pretty=format: | sort -u >>"$MAIN_PATH"/changed_files/V_CHANGED_FILES.txt
         fi
 
