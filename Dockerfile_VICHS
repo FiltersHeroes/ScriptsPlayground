@@ -3,7 +3,7 @@ FROM ubuntu:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV VICHS_tag="VICHS-2.26.7"
+ENV VICHS_tag="VICHS-2.26.8"
 ENV VICHS_LOCALES_PATH="/usr/share/locale"
 ENV FOP_tag="FOP-3.20"
 
