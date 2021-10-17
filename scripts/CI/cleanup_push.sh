@@ -33,14 +33,14 @@ if [ "$GITHUB_ACTIONS" = "true" ]; then
     git config --global user.name "github-actions[bot]"
 else
     git config --global user.email "PolishJarvis@int.pl"
-    git config --global user.name "PolishJarvis"
+    git config --global user.name "PolishRoboDog"
 fi
 
 git add --all
 git commit -m "Expired domains check" -m "[ci skip]"
 
 if [ "$GITHUB_ACTIONS" = "true" ]; then
-    git push https://github-actions[bot]:"${GIT_TOKEN}"@github.com/PolishFiltersTeam/ScriptsPlayground.git HEAD:master > /dev/null 2>&1
+    git push https://github-actions[bot]:"${GIT_TOKEN}"@github.com/FiltersHeroes/ScriptsPlayground.git HEAD:master > /dev/null 2>&1
 else
-    git push https://PolishJarvis:"${GIT_TOKEN}"@github.com/PolishFiltersTeam/ScriptsPlayground.git HEAD:master > /dev/null 2>&1
+    git push https://PolishRoboDog:"${GIT_TOKEN}"@github.com/FiltersHeroes/ScriptsPlayground.git HEAD:master > /dev/null 2>&1
 fi
