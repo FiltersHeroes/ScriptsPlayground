@@ -32,7 +32,7 @@ if [ "$GITHUB_ACTIONS" = "true" ]; then
     git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
     git config --global user.name "github-actions[bot]"
 else
-    git config --global user.email "PolishJarvis@int.pl"
+    git config --global user.email "35114429+PolishRoboDog@users.noreply.github.com"
     git config --global user.name "PolishRoboDog"
 fi
 
