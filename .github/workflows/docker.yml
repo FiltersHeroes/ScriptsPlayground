@@ -14,7 +14,7 @@ jobs:
         include:
           - dfile: "VICHS"
             imname: "vichs"
-            version: "2.26.8"
+            version: "2.26.9"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
@@ -54,9 +54,9 @@ jobs:
             polishfiltersteam/${{ matrix.imname }}_image:latest
             polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
             polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:latest
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:${{ matrix.version }}
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix
@@ -74,10 +74,10 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "2.26.8"
+            version: "2.26.9"
           - dfile: "RTM"
             imname: "rtm"
-            version: "2.26.8"
+            version: "2.26.9"
     needs: docker_vichs_ed
     steps:
       - name: Check out the repo
@@ -115,9 +115,9 @@ jobs:
             polishfiltersteam/${{ matrix.imname }}_image:latest
             polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
             polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:latest
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}
-            ghcr.io/polishfiltersteam/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:latest
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:${{ matrix.version }}
+            ghcr.io/filtersheroes/${{ matrix.imname }}_image:${{ matrix.version }}-${{ env.version_date }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       - # Temp fix

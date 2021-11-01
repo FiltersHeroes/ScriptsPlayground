@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # VICHS - Version Include Checksum Hosts Sort
-# Version: 2.26.8
+# Version: 2.26.9
 
 # MIT License
 
@@ -616,9 +616,9 @@ for i in "$@"; do
         # Aktualizacja wersji
         VERSION_FORMAT=$(grep -oP -m 1 '@versionFormat \K.*' "$CONFIG")
         if [[ "$VERSION_FORMAT" = "Year.Month.NumberOfCommitsInMonth" ]]; then
-            version=$(date +"%Y").$(date +"%-m").$(git rev-list --count HEAD --after="$(date -d "-$(date +%d) days " "+%Y-%m-%dT23:59")" "$FINAL")
+            version=$(date +"%Y").$(date +"%-m").$(git rev-list --date=local --count HEAD --after="$(date -d "-$(date +%d) days " "+%Y-%m-%dT23:59")" "$FINAL")
         elif [[ "$VERSION_FORMAT" = "Year.Month.Day.TodayNumberOfCommits" ]]; then
-            version=$(date +"%Y").$(date +"%-m").$(date +"%-d").$(($(git rev-list --count HEAD --before="$(date '+%F' --date="tomorrow")"T24:00 --after="$(date '+%F' -d "1 day ago")"T23:59 "$FINAL")))
+            version=$(date +"%Y").$(date +"%-m").$(date +"%-d").$(($(git rev-list --date=local --count HEAD --before="$(date '+%F' --date="tomorrow")"T24:00 --after="$(date '+%F' -d "1 day ago")"T23:59 "$FINAL")))
         elif grep -q -oP -m 1 '@versionDateFormat \K.*' "$CONFIG"; then
             version=$(date +"$(grep -oP -m 1 '@versionDateFormat \K.*' "$CONFIG")")
         else
