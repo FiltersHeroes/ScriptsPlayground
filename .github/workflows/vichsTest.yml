@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   Test:
     runs-on: ubuntu-latest
-    container: ghcr.io/polishfiltersteam/vichs_image:latest
+    container: ghcr.io/filtersheroes/vichs_image:latest
     steps:
       - uses: actions/checkout@f1d3225b5376a0791fdee5a0e8eac5289355e43a # pin@v2
       - name: Test
