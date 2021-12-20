@@ -3,7 +3,7 @@ FROM polishfiltersteam/vichs_image:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y pcregrep host python3-bs4 python3-certifi python3-urllib3
+RUN apt-get update && apt-get install -y pcregrep host python3-bs4 python3-certifi python3-urllib3 jq
 
 # uncomment chosen locale to enable it's generation
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
