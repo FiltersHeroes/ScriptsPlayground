@@ -28,7 +28,7 @@ sudo cp /etc/pihole/regex.list /etc/pihole/regex.list.bak
 First download it:
 ```bash
 wget \
-https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLI_for_Pi-hole.py
+https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/master/scripts/RLI_for_Pi-hole.py
 ```
 
 Then make it executable:
@@ -39,13 +39,13 @@ chmod +x path_to_script/RLI_for_Pi-hole.py
 Then just run it with url to list as its parameter:
 ```bash
 path_to_script/RLI_for_Pi-hole.py \
-https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt
+https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt
 ```
 
 You can also install multiple lists at once:
 ```bash
 path_to_script/RLI_for_Pi-hole.py \
-https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt \
+https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt \
 https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 ```
 
@@ -56,7 +56,7 @@ To update lists, you must repeat installation procedure. As we previously mentio
 To remove one of the installed regex lists, first you need to download uninstaller:
 ```bash
 wget \
-https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.py
+https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/master/scripts/RLU_for_Pi-hole.py
 ```
 
 Then make it executable:
@@ -67,6 +67,6 @@ chmod +x path_to_script/RLU_for_Pi-hole.py
 Then just run it with url to list as its parameter:
 ```bash
 path_to_script/RLU_for_Pi-hole.py \
-https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhole.txt \
+https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhole.txt \
 https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list
 ```
