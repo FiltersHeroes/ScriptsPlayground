@@ -4,7 +4,7 @@ Application, which helps in finding all domains of specific group and copies it 
 
 ## How to install?
 1. Download latest [Python 3](https://www.python.org/downloads/) and install it (make sure that tkinter and pip is checked).
-2. Download latest zipped version of Groups Domains Extractor from https://github.com/PolishFiltersTeam/ScriptsPlayground/releases.
+2. Download latest zipped version of Groups Domains Extractor from https://github.com/FiltersHeroes/ScriptsPlayground/releases.
 3. Extract zip and run following command from terminal:
 ```bash
 pip install -r path_to_unpacked_files/requirements.txt
