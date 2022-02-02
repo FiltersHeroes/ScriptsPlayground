@@ -14,7 +14,7 @@ jobs:
         include:
           - dfile: "VICHS"
             imname: "vichs"
-            version: "2.26.9"
+            version: "2.26.9-2"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
