@@ -74,7 +74,7 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "2.26.9"
+            version: "2.26.9-2"
           - dfile: "RTM"
             imname: "rtm"
             version: "2.26.9"
