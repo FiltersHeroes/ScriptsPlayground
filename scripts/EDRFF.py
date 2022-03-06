@@ -3,7 +3,7 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.4
+# v1.5
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
@@ -56,8 +56,8 @@ with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
             regex_list.append(re.compile("," + expired_f_line))
             # domain,
             regex_list.append(re.compile(expired_f_line + ","))
-            # domain##test
-            regex_list.append(re.compile("^" + expired_f_line + "\#\#" + ".*"))
+            # domain##test or domain#?#test or domain$$test
+            regex_list.append(re.compile("^" + expired_f_line + "(\#(\#|\?)|\$\$)" + ".*"))
 
 for section in sections:
     print(f"Checking {section} ...")
