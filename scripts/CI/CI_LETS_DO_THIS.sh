@@ -10,9 +10,9 @@ cd "$MAIN_PATH" || exit
 function letsGo() {
     for i in "$@"; do
         F_NAME=$(basename "$i")
-        if [[ "$i" = "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt" ]]; then
+        if [[ "$i" = "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus.txt" ]]; then
             F_NAME="KADhosts.txt"
-        elif [[ "$i" = "https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt" ]]; then
+        elif [[ "$i" = "https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt" ]]; then
             F_NAME="polish_rss_filters_supp.txt"
         fi
         wget -O "$F_NAME" "$i"
@@ -21,21 +21,17 @@ function letsGo() {
     done
 }
 
-PAFbase="https://raw.githubusercontent.com/PolishFiltersTeam/PolishAnnoyanceFilters/master/"
+PAFbase="https://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/"
 
 if [[ $1 == "KAD" ]]; then
-    wget -O KAD.txt https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
+    wget -O KAD.txt https://raw.githubusercontent.com/FiltersHeroes/KAD/master/KAD.txt
     mkdir -p "$MAIN_PATH"/split/
     split -d -n l/5 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
-elif [ "$1" == "Cert" ]; then
-    mkdir -p "$MAIN_PATH"/split/
-    split -d -n l/10 "$MAIN_PATH"/VICHS_Test/Cert.txt "$MAIN_PATH"/split/Cert_
-elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KAD_10" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ||
-$1 == "Cert_00" || $1 == "Cert_01" || $1 == "Cert_02" || $1 == "Cert_03" || $1 == "Cert_04" || $1 == "Cert_05" || $1 == "Cert_06" || $1 == "Cert_07" || $1 == "Cert_08" || $1 == "Cert_09" || $1 == "Cert_10" ]]; then
+elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KAD_10" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ]]; then
     ./scripts/ECODFF.sh ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then
-    wget -O KADhosts.txt https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/sections/hostsplus.txt
+    wget -O KADhosts.txt https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus.txt
     mkdir -p "$MAIN_PATH"/split/
     split -d -n l/2 "$MAIN_PATH"/KADhosts.txt "$MAIN_PATH"/split/KADhosts_
 elif [[ $1 == "PAF" ]]; then
@@ -78,18 +74,18 @@ elif [[ $1 == "PAF_C" ]]; then
     "$PAFbase"PAF_scrolling_videos_supp.txt \
     "$PAFbase"PAF_tagged_internal_links.txt
 elif [ "$1" == "PASS" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt \
-    https://raw.githubusercontent.com/PolishFiltersTeam/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt \
+    https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt
 elif [ "$1" == "Social" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt
 elif [ "$1" == "Social_supp" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
 elif [ "$1" == "Social_C" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/adblock_social_filters/adblock_social_list.txt https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/adblock_social_filters/social_filters_uB_AG.txt
 elif [ "$1" == "Cookies" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt
 elif [ "$1" == "Cookies_supp" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
 elif [ "$1" == "Cookies_C" ]; then
-    letsGo https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
+    letsGo https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/cookies_filters/adblock_cookies.txt https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/cookies_filters/cookies_uB_AG.txt
 fi
