@@ -27,7 +27,12 @@ if [[ $1 == "KAD" ]]; then
     wget -O KAD.txt https://raw.githubusercontent.com/PolishFiltersTeam/KAD/master/KAD.txt
     mkdir -p "$MAIN_PATH"/split/
     split -d -n l/5 "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
-elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KAD_10" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ]]; then
+elif [ "$1" == "Cert" ]; then
+    wget -O Cert.txt https://hole.cert.pl/domains/domains_adblock.txt
+    mkdir -p "$MAIN_PATH"/split/
+    split -d -n l/10 "$MAIN_PATH"/Cert.txt "$MAIN_PATH"/split/Cert_
+elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KAD_10" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ||
+$1 == "Cert_00" || $1 == "Cert_01" || $1 == "Cert_02" || $1 == "Cert_03" || $1 == "Cert_04" || $1 == "Cert_05" || $1 == "Cert_06" || $1 == "Cert_07" || $1 == "Cert_08" || $1 == "Cert_09" || $1 == "Cert_10" ]]; then
     ./scripts/ECODFF.sh ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then

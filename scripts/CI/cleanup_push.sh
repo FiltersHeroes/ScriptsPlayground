@@ -23,6 +23,7 @@ sort -u -o ./KADhosts-unknown_limit.txt ./KADhosts-unknown_limit.txt
 
 rm -rf ./KADhosts_0*-expired.txt ./KADhosts_0*-parked.txt ./KADhosts_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
 rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
+rm -rf ./Cert_0*-expired.txt ./Cert_0*-parked.txt ./Cert_0*-unknown.txt
 
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
 
