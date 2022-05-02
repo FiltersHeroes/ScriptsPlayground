@@ -9,6 +9,16 @@ rm -rf ./split/*
 
 cd ./expired-domains || exit
 
+cat ./Cert_0*-expired.txt >> ./Cert-expired.txt
+cat ./Cert_0*-unknown.txt >> ./Cert-unknown.txt
+cat ./Cert_0*-unknown_limit.txt >> ./Cert-unknown_limit.txt
+sort -u -o ./Cert-expired.txt ./Cert-expired.txt
+sort -u -o ./Cert-unknown.txt ./Cert-unknown.txt
+sort -u -o ./Cert-unknown_limit.txt ./Cert-unknown_limit.txt
+rm -rf ./Cert_0*-expired.txt ./Cert_0*-parked.txt ./Cert_0*-unknown.txt ./Cert_0*-unknown_limit.txt
+
+rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KAD_0*-unknown_limit.txt
+
 rm -rf ./KADhosts-expired.txt ./KADhosts-parked.txt ./KADhosts-unknown.txt ./KADhosts-unknown_limit.txt
 rm -rf ./*-unknown_no_internet.txt
 
