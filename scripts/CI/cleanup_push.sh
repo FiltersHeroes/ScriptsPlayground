@@ -9,13 +9,7 @@ rm -rf ./split/*
 
 cd ./expired-domains || exit
 
-cat ./LWS_0*-expired.txt >> ./LWS-expired.txt
-cat ./LWS_0*-unknown.txt >> ./LWS-unknown.txt
-cat ./LWS_0*-unknown_limit.txt >> ./LWS-unknown_limit.txt
-sort -u -o ./LWS-expired.txt ./LWS-expired.txt
-sort -u -o ./LWS-unknown.txt ./LWS-unknown.txt
-sort -u -o ./LWS-unknown_limit.txt ./LWS-unknown_limit.txt
-rm -rf ./LWS_0*-expired.txt ./LWS_0*-parked.txt ./LWS_0*-unknown.txt ./LWS_0*-unknown_limit.txt
+rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KAD_0*-unknown_limit.txt
 
 rm -rf ./KADhosts-expired.txt ./KADhosts-parked.txt ./KADhosts-unknown.txt ./KADhosts-unknown_limit.txt
 rm -rf ./*-unknown_no_internet.txt
@@ -31,7 +25,6 @@ sort -u -o ./KADhosts-unknown_limit.txt ./KADhosts-unknown_limit.txt
 
 rm -rf ./KADhosts_0*-expired.txt ./KADhosts_0*-parked.txt ./KADhosts_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
 rm -rf ./KAD_0*-expired.txt ./KAD_0*-parked.txt ./KAD_0*-unknown.txt ./KADhosts_0*-unknown_limit.txt
-rm -rf ./Cert_0*-expired.txt ./Cert_0*-parked.txt ./Cert_0*-unknown.txt
 
 for file in *.txt; do if [[ ! -s $file ]]; then rm -r "$file"; fi; done
 
