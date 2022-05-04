@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.19.2
+# v1.19.3
 
 # MIT License
 
@@ -57,7 +57,7 @@ for i in "$@"; do
         touch "$MAIN_PATH"/expired-domains/.keep
     fi
 
-    if [ -z "$NO_RM" ] ; then
+    if [ -z "$NO_RM" ]; then
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-expired.txt
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
         rm -rf "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown_limit.txt
@@ -102,7 +102,21 @@ for i in "$@"; do
         grep -E '(.+\.)+.+\..+$' "$TEMPORARY".2 >"$TEMPORARY".sub
 
         # Zamieniamy subdomeny na domeny
-        python3 "$SCRIPT_PATH"/Sd2D.py "$TEMPORARY".2 >>"$TEMPORARY".3
+        Sd2Dresult=$(
+            python3 <<EOF
+import os
+import importlib.util
+
+
+spec = importlib.util.spec_from_file_location(
+    "Sd2D", os.path.normpath("$SCRIPT_PATH"+"/Sd2D.py"))
+Sd2D = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(Sd2D)
+for domain in Sd2D.main("$TEMPORARY"+".2"):
+    print(domain)
+EOF
+        )
+        echo "$Sd2Dresult" >>"$TEMPORARY".3
         sed -i '/^$/d' "$TEMPORARY".3
         sort -u -o "$TEMPORARY".3 "$TEMPORARY".3
     fi

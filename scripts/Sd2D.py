@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
+# coding=utf-8
+# pylint: disable=C0103
+# pylint: disable=missing-function-docstring
 # Subdomain to Domain
 
 """MIT License
 
-Copyright (c) 2019 Polish Filters Team
+Copyright (c) 2022 Filters Heroes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,27 +26,26 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
-import tldextract
 import os
-import sys
 from pathlib import Path
+import tldextract
 
-home = str(Path.home())
-cachePath = os.path.join(home, '.cache')
 
-if not os.path.exists(cachePath):
-    os.mkdir(cachePath)
+def main(subdomains_file):
+    domains = []
+    home = str(Path.home())
+    cachePath = os.path.join(home, '.cache')
 
-extract = tldextract.TLDExtract(include_psl_private_domains=True)
-extract.update()
-subdomains_file = sys.argv[1]
+    if not os.path.exists(cachePath):
+        os.mkdir(cachePath)
 
-f = open(subdomains_file, "r")
-line = f.readline()
-while line:
-    if(extract(line).registered_domain != ""):
-        print(extract(line).registered_domain)
-    else:
-        print(line.strip())
-    line = f.readline()
-f.close()
+    extract = tldextract.TLDExtract(include_psl_private_domains=True)
+    extract.update()
+
+    with open(subdomains_file, "r", encoding='utf-8') as subdomains:
+        for line in subdomains:
+            if extract(line).registered_domain != "":
+                domains.append(extract(line).registered_domain)
+            else:
+                domains.append(line.strip())
+    return domains
