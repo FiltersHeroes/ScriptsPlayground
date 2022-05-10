@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.19.3
+# v1.19.4
 
 # MIT License
 
-# Copyright (c) 2021 Filters Heroes
+# Copyright (c) 2022 Filters Heroes
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +44,7 @@ for i in "$@"; do
 
     pagePipe=$(pcregrep -o3 '(domain)(=)([^,]+)' "$i")
 
-    pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+)' "$i")
+    pageDoublePipe=$(pcregrep -o1 '^@?@?\|\|([^\/|^|$]+\.\w+)' "$i")
 
     hosts=$(pcregrep -o1 '^.*?0.0.0.0 (.*)' "$i")
 
