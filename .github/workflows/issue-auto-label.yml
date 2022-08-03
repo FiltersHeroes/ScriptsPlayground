@@ -1,14 +1,15 @@
-name: Labeling new issue
-on:
-  issues:
-      types: ['opened', 'edited']
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Renato66/auto-label@v2 # or v2.1.5
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          labels-synonyms: '{
-              "bug":["bug","broken","zepsute"]
-            }'
+name: Auto label
+  # You may pin to the exact commit or the version.
+  # uses: Renato66/auto-label@2fc6ce23006cea59b7b23ce7f4c70e4e233de49f
+  uses: Renato66/auto-label@v2.2.0
+  with:
+    # github token for the repository
+    repo-token: 
+    # 
+    ignore-comments: # optional, default is true
+    # 
+    labels-synonyms: # optional, default is 
+    # 
+    labels-not-allowed: # optional, default is 
+    # 
+    default-labels: # optional, default is 
