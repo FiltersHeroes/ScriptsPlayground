@@ -90,12 +90,6 @@ KNOWNOPTIONS = (
     "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "removeparam"
 )
 
-# List the supported revision control system commands
-REPODEF = collections.namedtuple("repodef", "name, directory, locationoption, repodirectoryoption, checkchanges, difference, commit, pull, push")
-GIT = REPODEF(["git"], "./.git/", "--work-tree=", "--git-dir=", ["status", "-s", "--untracked-files=no"], ["diff"], ["commit", "-a", "-m"], ["pull"], ["push"])
-HG = REPODEF(["hg"], "./.hg/", "-R", None, ["stat", "-q"], ["diff"], ["commit", "-m"], ["pull"], ["push"])
-REPOTYPES = (GIT, HG)
-
 def arg():
     """ Parse console arguments. """
     return ap.parse_args()
@@ -128,31 +122,6 @@ def main (location):
         print("{location} does not exist or is not a folder.".format(location = location))
         return
 
-    # Set the repository type based on hidden directories
-    repository = None
-    for repotype in REPOTYPES:
-        if os.path.isdir(os.path.join(location, repotype.directory)):
-            repository = repotype
-            break
-    # If this is a repository, record the initial changes; if this fails, give up trying to use the repository
-    if repository:
-        try:
-            basecommand = repository.name
-            if repository.locationoption.endswith("="):
-                basecommand.append("{locationoption}{location}".format(locationoption = repository.locationoption, location = location))
-            else:
-                basecommand.extend([repository.locationoption, location])
-            if repository.repodirectoryoption:
-                if repository.repodirectoryoption.endswith("="):
-                    basecommand.append("{repodirectoryoption}{location}".format(repodirectoryoption = repository.repodirectoryoption, location = os.path.normpath(os.path.join(location, repository.directory))))
-                else:
-                    basecommand.extend([repository.repodirectoryoption, location])
-            command = basecommand + repository.checkchanges
-            originaldifference = True if subprocess.check_output(command) else False
-        except(subprocess.CalledProcessError, OSError):
-            print("The command \"{command}\" was unable to run; FOP will therefore not attempt to use the repository tools. On Windows, this may be an indication that you do not have sufficient privileges to run FOP - the exact reason why is unknown. Please also ensure that your revision control system is installed correctly and understood by FOP.".format(command = " ".join(command)))
-            repository = None
-
     # Work through the directory and any subdirectories, ignoring hidden directories
     print("\nPrimary location: {folder}".format(folder = os.path.join(os.path.abspath(location), "")))
     for path, directories, files in os.walk(location):
@@ -174,10 +143,6 @@ def main (location):
                 except(IOError, OSError):
                     # Ignore errors resulting from deleting files, as they likely indicate that the file has already been deleted
                     pass
-
-    # If in a repository, offer to commit any changes
-    if repository and arg().commit:
-        commit(repository, basecommand, originaldifference)
 
 def fopsort (filename):
     """ Sort the sections of the file and save any modifications."""
@@ -350,15 +315,6 @@ def elementtidy (domains, separator, selector):
             bc = untag.group(3)
         ac = untag.group(5)
         selector = selector.replace("{before}{untag}{after}".format(before = bc, untag = untagname, after = ac), "{before}{after}".format(before = bc, after = ac), 1)
-    # Make the remaining tags lower case wherever possible
-    # for tag in each(SELECTORPATTERN, selector):
-    #     tagname = tag.group(1)
-    #     if tagname in selectoronlystrings or not tagname in selectorwithoutstrings: continue
-    #     if re.search(UNICODESELECTOR, selectorwithoutstrings) != None: break
-    #     ac = tag.group(3)
-    #     if ac == None:
-    #         ac = tag.group(4)
-    #     selector = selector.replace("{tag}{after}".format(tag = tagname, after = ac), "{tag}{after}".format(tag = tagname.lower(), after = ac), 1)
     # Make pseudo classes lower case where possible
     for pseudo in each(PSEUDOPATTERN, selector):
         pseudoclass = pseudo.group(1)
@@ -367,56 +323,6 @@ def elementtidy (domains, separator, selector):
         selector = selector.replace("{pclass}{after}".format(pclass = pseudoclass, after = ac), "{pclass}{after}".format(pclass = pseudoclass.lower(), after = ac), 1)
     # Remove the markers from the beginning and end of the selector and return the complete rule
     return "{domain}{separator}{selector}".format(domain = domains, separator = separator, selector = selector[1:-1])
-
-def commit (repository, basecommand, userchanges):
-    """ Commit changes to a repository using the commands provided."""
-    difference = subprocess.check_output(basecommand + repository.difference)
-    if not difference:
-        print("\nNo changes have been recorded by the repository.")
-        return
-    print("\nThe following changes have been recorded by the repository:")
-    try:
-        print(difference.decode("utf-8"))
-    except UnicodeEncodeError:
-        print("\nERROR: DIFF CONTAINED UNKNOWN CHARACTER(S). Showing unformatted diff instead:\n");
-        print(difference)
-
-    try:
-        # Persistently request a suitable comment
-        while True:
-            comment = input("Please enter a valid commit comment or quit:\n")
-            if checkcomment(comment, userchanges):
-                break
-    # Allow users to abort the commit process if they do not approve of the changes
-    except (KeyboardInterrupt, SystemExit):
-        print("\nCommit aborted.")
-        return
-
-    print("Comment \"{comment}\" accepted.".format(comment = comment))
-    try:
-        # Commit the changes
-        command = basecommand + repository.commit + [comment]
-        subprocess.Popen(command).communicate()
-        print("\nConnecting to server. Please enter your password if required.")
-        # Update the server repository as required by the revision control system
-        for command in repository[7:]:
-            command = basecommand + command
-            subprocess.Popen(command).communicate()
-            print()
-    except(subprocess.CalledProcessError):
-        print("Unexpected error with the command \"{command}\".".format(command = command))
-        raise subprocess.CalledProcessError("Aborting FOP.")
-    except(OSError):
-        print("Unexpected error with the command \"{command}\".".format(command = command))
-        raise OSError("Aborting FOP.")
-    print("Completed commit process successfully.")
-
-def isglobalelement (domains):
-    """ Check whether all domains are negations."""
-    for domain in domains.split(","):
-        if domain and not domain.startswith("~"):
-            return False
-    return True
 
 def removeunnecessarywildcards (filtertext):
     # Where possible, remove unnecessary wildcards from the beginnings and ends of blocking filters.
@@ -438,42 +344,6 @@ def removeunnecessarywildcards (filtertext):
     if whitelist:
         filtertext = "@@{filtertext}".format(filtertext = filtertext)
     return filtertext
-
-def checkcomment(comment, changed):
-    """ Check the commit comment and return True if the comment is
-    acceptable and False if it is not."""
-    sections = re.match(COMMITPATTERN, comment)
-    if sections == None:
-        print("The comment \"{comment}\" is not in the recognised format.".format(comment = comment))
-    else:
-        indicator = sections.group(1)
-        if indicator == "M":
-            # Allow modification comments to have practically any format
-            return True
-        elif indicator == "A" or indicator == "P":
-            if not changed:
-                print("You have indicated that you have added or removed a rule, but no changes were initially noted by the repository.")
-            else:
-                address = sections.group(4)
-                if not validurl(address):
-                    print("Unrecognised address \"{address}\".".format(address = address))
-                else:
-                    # The user has changed the subscription and has written a suitable comment message with a valid address
-                    return True
-    print()
-    return False
-
-def validurl (url):
-    """ Check that an address has a scheme (e.g. http), a domain name
-    (e.g. example.com) and a path (e.g. /), or relates to the internal
-    about system."""
-    addresspart = urlparse(url)
-    if addresspart.scheme and addresspart.netloc and addresspart.path:
-        return True
-    elif addresspart.scheme == "about":
-        return True
-    else:
-        return False
 
 if __name__ == '__main__':
     start()
