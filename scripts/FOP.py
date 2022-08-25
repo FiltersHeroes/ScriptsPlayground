@@ -25,7 +25,6 @@ import argparse
 ap = argparse.ArgumentParser()
 ap.add_argument('--dir', nargs='+', help='Set directories', default=None)
 ap.add_argument('--commit', help='Enable commit mode', action='store_true', default=False)
-arg = ap.parse_args()
 
 # Check the version of Python for language compatibility and subprocess.check_output()
 MAJORREQUIRED = 3
@@ -97,6 +96,10 @@ GIT = REPODEF(["git"], "./.git/", "--work-tree=", "--git-dir=", ["status", "-s",
 HG = REPODEF(["hg"], "./.hg/", "-R", None, ["stat", "-q"], ["diff"], ["commit", "-m"], ["pull"], ["push"])
 REPOTYPES = (GIT, HG)
 
+def arg():
+    """ Parse console arguments. """
+    return ap.parse_args()
+
 def start ():
     """ Print a greeting message and run FOP in the directories
     specified via the command line, or the current working directory if
@@ -108,7 +111,7 @@ def start ():
     print("=" * characters)
 
     # Convert the directory names to absolute references and visit each unique location
-    places = arg.dir
+    places = arg().dir
     if places:
         places = [os.path.abspath(place) for place in places]
         for place in sorted(set(places)):
@@ -173,7 +176,7 @@ def main (location):
                     pass
 
     # If in a repository, offer to commit any changes
-    if repository and arg.commit:
+    if repository and arg().commit:
         commit(repository, basecommand, originaldifference)
 
 def fopsort (filename):
