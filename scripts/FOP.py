@@ -26,7 +26,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.21
+VERSION = 3.22
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--dir', '-d', nargs='+', help='Set directories', default=None)
@@ -271,34 +271,34 @@ def filtertidy(filterin):
     if not optionsplit:
         # Remove unnecessary asterisks from filters without any options and return them
         return removeunnecessarywildcards(filterin)
-    else:
-        # If applicable, separate and sort the filter options in addition to the filter text
-        filtertext = removeunnecessarywildcards(optionsplit.group(1))
-        optionlist = optionsplit.group(2).lower().replace("_", "-").split(",")
 
-        domainlist = []
-        removeentries = []
-        for option in optionlist:
-            # Detect and separate domain options
-            if option[0:7] == "domain=":
-                domainlist.extend(option[7:].split("|"))
-                removeentries.append(option)
-            elif option[0:4] == "app=" or option[0:9] == "protobuf=" or option[0:7] == "cookie=" or option[0:8] == "replace=" or option[0:12] == "removeparam=":
-                optionlist = optionsplit.group(2).split(",")
-            elif option.strip("~") not in KNOWNOPTIONS:
-                print(
-                    f"Warning: The option \"{option}\" used on the filter \"{filterin}\" is not recognised by FOP")
-        # Sort all options other than domain alphabetically
-        # For identical options, the inverse always follows the non-inverse option ($image,~image instead of $~image,image)
-        optionlist = sorted(set(filter(lambda option: option not in removeentries, optionlist)),
-                            key=lambda option: (option[1:] + "~") if option[0] == "~" else option)
-        # If applicable, sort domain restrictions and append them to the list of options
-        if domainlist:
-            optionlist.append(
-                f'domain={"|".join(sorted(set(domainlist), key=lambda domain: domain.strip("~")))}')
+    # If applicable, separate and sort the filter options in addition to the filter text
+    filtertext = removeunnecessarywildcards(optionsplit.group(1))
+    optionlist = optionsplit.group(2).lower().replace("_", "-").split(",")
 
-        # Return the full filter
-        return f'{filtertext}${",".join(optionlist)}'
+    domainlist = []
+    removeentries = []
+    for option in optionlist:
+        # Detect and separate domain options
+        if option[0:7] == "domain=":
+            domainlist.extend(option[7:].split("|"))
+            removeentries.append(option)
+        elif option[0:4] == "app=" or option[0:9] == "protobuf=" or option[0:7] == "cookie=" or option[0:8] == "replace=" or option[0:12] == "removeparam=":
+            optionlist = optionsplit.group(2).split(",")
+        elif option.strip("~") not in KNOWNOPTIONS:
+            print(
+                f"Warning: The option \"{option}\" used on the filter \"{filterin}\" is not recognised by FOP")
+    # Sort all options other than domain alphabetically
+    # For identical options, the inverse always follows the non-inverse option ($image,~image instead of $~image,image)
+    optionlist = sorted(set(filter(lambda option: option not in removeentries, optionlist)),
+                        key=lambda option: (option[1:] + "~") if option[0] == "~" else option)
+    # If applicable, sort domain restrictions and append them to the list of options
+    if domainlist:
+        optionlist.append(
+            f'domain={"|".join(sorted(set(domainlist), key=lambda domain: domain.strip("~")))}')
+
+    # Return the full filter
+    return f'{filtertext}${",".join(optionlist)}'
 
 
 def elementtidy(domains, separator, selector):
