@@ -37,7 +37,7 @@ ap.add_argument('--ignore', '-i', nargs='+', help='List the files that should no
 ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#|\$)\@?\??\@?(#|\$)")
 FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)domain\=([^\,\s]+)$")
 ELEMENTPATTERN = re.compile(
-    r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#\@?#?\+?)(.*)$")
+    r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
 OPTIONPATTERN = re.compile(
     r"^(.*)\$(~?[\w\-]+(?:=[^,\s]+)?(?:,~?[\w\-]+(?:=[^,\s]+)?)*)$")
 
@@ -49,7 +49,7 @@ SELECTORPATTERN = re.compile(
 PSEUDOPATTERN = re.compile(
     r"(\:[:][a-zA-Z\-]*[A-Z][a-zA-Z\-]*)(?=([\(\:\@\s]))")
 REMOVALPATTERN = re.compile(
-    r"((?<=([>+~,]\s))|(?<=(@|\s|,)))()(?=([#\.\[\:]))")
+    r"((?<=([>+~,]\s))|(?<=(@|\s|,)))()(?=(?:[#\.\[]|\:(?!-abp-)))")
 ATTRIBUTEVALUEPATTERN = re.compile(
     r"^([^\'\"\\]|\\.)*(\"(?:[^\"\\]|\\.)*\"|\'(?:[^\'\\]|\\.)*\')|\*")
 TREESELECTOR = re.compile(r"(\\.|[^\+\>\~\\\ \t])\s*([\+\>\~\ \t])\s*(\D)")
@@ -325,7 +325,10 @@ def elementtidy(domains, separator, selector):
     for tree in each(TREESELECTOR, selector):
         if tree.group(0) in selectoronlystrings or not tree.group(0) in selectorwithoutstrings:
             continue
-        replaceby = f" {tree.group(2)} "
+        if tree.group(1) == "(":
+            replaceby = f"{tree.group(2)} "
+        else:
+            replaceby = f" {tree.group(2)} "
         if replaceby == "   ":
             replaceby = " "
         selector = selector.replace(tree.group(
