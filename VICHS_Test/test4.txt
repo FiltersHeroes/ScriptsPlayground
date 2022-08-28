@@ -1,1 +1,6 @@
-www.google.com,www.google.pl##+js(acis, document.cookie, YES\+)
+www.google.com,www.google.pl##+js(acis, document.cookie, YES+)
+
+www.google.com,www.google.pl#%#//scriptlet('abort-current-inline-script', 'document.cookie', 'YES+')
+www.google.com,www.google.pl#%#//scriptlet("abort-current-inline-script", "document.cookie", "YES+")
+
+www.google.com,www.google.pl#$#abort-current-inline-script document.cookie YES+;
