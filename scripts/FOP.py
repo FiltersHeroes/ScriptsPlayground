@@ -26,7 +26,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.24
+VERSION = 3.22
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--dir', '-d', nargs='+', help='Set directories', default=None)
