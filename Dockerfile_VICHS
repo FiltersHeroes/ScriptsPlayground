@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV VICHS_tag="VICHS-2.26.9-2"
 ENV VICHS_LOCALES_PATH="/usr/share/locale"
-ENV FOP_tag="FOP-3.24"
+ENV FOP_tag="FOP-3.25"
 
 RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates wget tzdata language-pack-pl python3 gettext-base
 

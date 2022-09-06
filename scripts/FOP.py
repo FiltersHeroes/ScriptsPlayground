@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.24
+VERSION = 3.25
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -329,6 +329,8 @@ def elementtidy(domains, separator, selector):
         selectorwithoutstrings = selectorwithoutstrings.replace(
             f"{stringmatch.group(1)}{stringmatch.group(2)}", f"{stringmatch.group(1)}", 1)
         selectoronlystrings = f"{selectoronlystrings}{stringmatch.group(2)}"
+    # Make sure we don't match arguments of uBO scriptlets
+    UBO_JS_PATTERN = re.compile(r"^@js\(")
     # Clean up tree selectors
     for tree in each(TREESELECTOR, selector):
         if tree.group(0) in selectoronlystrings or not tree.group(0) in selectorwithoutstrings:
@@ -339,8 +341,6 @@ def elementtidy(domains, separator, selector):
             replaceby = f" {tree.group(2)} "
         if replaceby == "   ":
             replaceby = " "
-        # Make sure we don't match arguments of uBO scriptlets
-        UBO_JS_PATTERN = re.compile(r"^@js\(")
         if not UBO_JS_PATTERN.match(selector):
             selector = selector.replace(tree.group(
                 0), f"{tree.group(1)}{replaceby}{tree.group(3)}", 1)
