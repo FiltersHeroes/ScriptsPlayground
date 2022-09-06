@@ -22,15 +22,21 @@
 # Import the key modules
 import re
 import os
+import sys
 import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.22
+VERSION = 3.23
+
+# Welcome message
+greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--dir', '-d', nargs='+', help='Set directories', default=None)
 ap.add_argument('--ignore', '-i', nargs='+', help='List the files that should not be sorted, either because they have a special sorting system or because they are not filter files', default=("output", "requirements.txt", "templates", "node_modules"))
+ap.add_argument("--version", "-v",
+                action='store_true', help="Show script's version number and exit")
 
 # Compile regular expressions to match important filter parts
 # (derived from Wladimir Palant's Adblock Plus source code)
@@ -100,7 +106,9 @@ def start():
     """ Print a greeting message and run FOP in the directories
     specified via the command line, or the current working directory if
     no arguments have been passed."""
-    greeting = f"FOP (Filter Orderer and Preener) version {VERSION}"
+    if arg().version:
+        print(greeting)
+        sys.exit(0)
     characters = len(str(greeting))
     print("=" * characters)
     print(greeting)

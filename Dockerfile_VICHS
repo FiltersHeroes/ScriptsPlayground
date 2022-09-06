@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV VICHS_tag="VICHS-2.26.9-2"
 ENV VICHS_LOCALES_PATH="/usr/share/locale"
-ENV FOP_tag="FOP-3.22"
+ENV FOP_tag="FOP-3.23"
 
 RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates wget tzdata language-pack-pl python3 gettext-base
 
@@ -38,5 +38,6 @@ RUN chmod +x "/usr/bin/HelperForVICHS.sh"
 
 # Download FOP
 RUN wget "https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/${FOP_tag}/scripts/FOP.py" -P "/usr/bin"
+RUN python3 "/usr/bin/FOP.py" --version
 
 CMD ["/bin/sh"]
