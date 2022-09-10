@@ -262,10 +262,7 @@ def fopsort(filename):
 
     # Replace the existing file with the new one only if alterations have been made
     if not filecmp.cmp(temporaryfile, filename):
-        # Check the operating system and, if it is Windows, delete the old file to avoid an exception (it is not possible to rename files to names already in use on this operating system)
-        if os.name == "nt":
-            os.remove(filename)
-        os.rename(temporaryfile, filename)
+        os.replace(temporaryfile, filename)
         print(f"Sorted: {os.path.abspath(filename)}")
     else:
         os.remove(temporaryfile)
