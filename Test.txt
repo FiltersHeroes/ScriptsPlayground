@@ -1,16 +1,15 @@
- [Adblock Plus 2.0]
-! Checksum: EhKUP6ErHjF+cBECivcv3g
+[Adblock Plus 2.0]
 ! Title: Lista testowa
 ! Codename: Test
 ! Description: Lista przeznaczona do testowania skryptu.
-! Last modified: Fri, 29 Nov 2019, 20:47 UTC+00
-! Version: 2019.11.0
+! Last modified: Tue, 13 Sep 2022, 16:20 UTC+02:00
+! Version: 2022.9.13.0
 ! Expires: 2 days
-! Copyright © 2018 Polish Filters Team
-! Aktualizacja: pią, 29 lis 2019, 20:47 UTC+00
+! Copyright © 2022 Filters Heroes
+! Aktualizacja: wto, 13 wrz 2022, 16:20 UTC+02:00
 !
 !
-! Testy
+! Testy-1
 costam.pl,inne.pl###test
 haha.pl##test
 hehe.pl,jeszczeinne.pl#?#.heh:-abp-contains(suchar)
@@ -18,20 +17,20 @@ jeszczeinny.pl#?#.hehe:-abp-contains(suchar)
 test.pl###nlt_tes
 !
 !
-! Testy2
-aletojuzbylo.pl###iniewrociwiecej
-test2.pl###big_brother
-zniklogdzieszanami.pl###tralala
+! Testy-2
 !hehe
 !test2
 !test3
+aletojuzbylo.pl###iniewrociwiecej
+test2.pl###big_brother
+zniklogdzieszanami.pl###tralala
 !
-!
-! Testy3
-_foobar.$domain=~example.com
-/_foobar.$domain=~example.com
 !
 ! Test łączenia
+!@ >>>>>>>> test1 + https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
+!hehe
+!test2
+!test3
 aletojuzbylo.pl###iniewrociwiecej
 costam.pl,inne.pl###test
 haha.pl##test
@@ -40,10 +39,20 @@ jeszczeinny.pl#?#.hehe:-abp-contains(suchar)
 test2.pl###big_brother
 test.pl###nlt_tes
 zniklogdzieszanami.pl###tralala
-!hehe
-!test2
-!test3
+!@ <<<<<<<< test1 + https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
 !
 !
 ! Dołączenie listy uzupełniającej do uBlocka Origin i AdGuarda, by użytkownicy nie musieli jej subskrybować
-!#include Test2.txt
+!#include Test_uBO_AG.txt
+!
+!
+! Testy-4
+www.google.com,www.google.pl##+js(acis, document.cookie, YES+)
+www.google.com,www.google.pl#$#abort-current-inline-script document.cookie YES+;
+www.google.com,www.google.pl#%#//scriptlet("abort-current-inline-script", "document.cookie", "YES+")
+www.google.com,www.google.pl#%#//scriptlet('abort-current-inline-script', 'document.cookie', 'YES+')
+!
+!
+! Testy-5
+/_foobar.$domain=~example.com
+_foobar.$domain=~example.com
