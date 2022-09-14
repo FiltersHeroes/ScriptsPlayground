@@ -3,7 +3,7 @@
 # pylint: disable=line-too-long
 # pylint: disable=invalid-name
 # pylint: disable=missing-function-docstring
-""" FOP
+""" FOP_FH
     Filter Orderer and Preener (tweaked by Filters Heroes Team)
     Copyright (C) 2011 Michael
 
