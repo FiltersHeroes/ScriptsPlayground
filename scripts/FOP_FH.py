@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.25
+VERSION = 3.26
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
