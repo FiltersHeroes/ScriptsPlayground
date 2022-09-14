@@ -226,20 +226,6 @@ def fopsort(filename):
                         filterlines = elementlines = 0
                     outputfile.write(f"{line}\n")
                 else:
-                    # Convert script:inject to +js
-                    line = line.replace("##script:inject", "##+js")
-
-                    # Convert deprecated noop resources to new names
-                    line = line.replace("redirect=noopjs", "redirect=noop.js")
-                    line = line.replace(
-                        "redirect=noopframe", "redirect=noop.html")
-                    line = line.replace("redirect=nooptext",
-                                        "redirect=noop.txt")
-                    line = line.replace(
-                        "redirect=noopmp3-0.1s", "redirect=noop-0.1s.mp3")
-                    line = line.replace(
-                        "redirect=noopmp4-1s", "redirect=noop-1s.mp4")
-
                     # Neaten up filters and, if necessary, check their type for the sorting algorithm
                     elementparts = re.match(ELEMENTPATTERN, line)
                     if elementparts:
@@ -300,7 +286,7 @@ def filtertidy(filterin):
     # If applicable, sort domain restrictions and append them to the list of options
     if domainlist:
         optionlist.append(
-            f'domain={"|".join(sorted(set(domainlist), key=lambda domain: domain.strip("~")))}')
+            f'domain={"|".join(sorted(set(filter(lambda domain: domain != "", domainlist)), key=lambda domain: domain.strip("~")))}')
 
     # Return the full filter
     return f'{filtertext}${",".join(optionlist)}'
@@ -365,10 +351,10 @@ def elementtidy(domains, separator, selector):
 
 def removeunnecessarywildcards(filtertext):
     # Where possible, remove unnecessary wildcards from the beginnings and ends of blocking filters.
-    whitelist = False
+    allowlist = False
     hadStar = False
     if filtertext[0:2] == "@@":
-        whitelist = True
+        allowlist = True
         filtertext = filtertext[2:]
     while len(filtertext) > 1 and filtertext[0] == "" and not filtertext[1] == "|" and not filtertext[1] == "!":
         filtertext = filtertext[1:]
@@ -380,7 +366,7 @@ def removeunnecessarywildcards(filtertext):
         filtertext = f"{filtertext}*"
     if filtertext == "":
         filtertext = ""
-    if whitelist:
+    if allowlist:
         filtertext = f"@@{filtertext}"
     return filtertext
 
