@@ -1,0 +1,39 @@
+FROM ubuntu:latest
+
+# make Apt non-interactive
+ENV DEBIAN_FRONTEND=noninteractive
+
+ENV SFLB_tag="SFLB-3.0"
+ENV SFLB_LOCALES_PATH="/usr/share/locale"
+ENV FOP_tag="FOP-3.26"
+
+RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates tzdata language-pack-pl python3 gettext-base python3-requests python3-git python3-natsort
+
+# uncomment chosen locale to enable it's generation
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+RUN sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
+
+# generate chosen locale
+RUN locale-gen pl_PL.UTF-8
+RUN locale-gen en_US.UTF-8
+
+# set system-wide locale settings
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US
+
+# verify modified configuration
+RUN dpkg-reconfigure --frontend noninteractive locales
+
+# Download SFLB
+RUN wget "https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/${SFLB_tag}/scripts/SFLB.py" -P "/usr/bin"
+RUN chmod +x "/usr/bin/SFLB.py"
+RUN python3 "SFLB.py" --version
+
+# Download translations for SFLB
+RUN wget "https://github.com/FiltersHeroes/ScriptsPlayground/raw/${SFLB_tag}/scripts/locales/pl/LC_MESSAGES/SFLB.mo" -P "$SFLB_LOCALES_PATH/pl/LC_MESSAGES"
+
+# Download FOP
+RUN wget "https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/${FOP_tag}/scripts/FOP_FH.py" -P "/usr/bin"
+RUN python3 "/usr/bin/FOP_FH.py" --version
+
+CMD ["/bin/sh"]

@@ -9,15 +9,15 @@ permissions:
   packages: write
 
 jobs:
-  docker_vichs_ed:
+  docker_sflb_ed:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         include:
-          - dfile: "VICHS"
-            imname: "vichs"
-            version: "2.26.9-2"
+          - dfile: "SFLB"
+            imname: "sflb"
+            version: "3.0"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
@@ -77,11 +77,11 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "2.26.9-2"
+            version: "3.0"
           - dfile: "RTM"
             imname: "rtm"
-            version: "2.26.9"
-    needs: docker_vichs_ed
+            version: "3.0"
+    needs: docker_sflb_ed
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2

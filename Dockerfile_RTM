@@ -1,4 +1,4 @@
-FROM polishfiltersteam/vichs_image:latest
+FROM polishfiltersteam/sflb_image:latest
 
 RUN apt-get update && apt-get install -y curl gpg
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
