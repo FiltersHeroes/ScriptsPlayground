@@ -102,20 +102,19 @@ def getMainPath(pathToFinalLists):
             main_path = SCRIPT_PATH
     else:
         main_path = os.environ.get("SFLB_MAIN_PATH")
-    return main_path
+    return pn(main_path)
 
 
 def getConfigPath(pathToFinalLists):
     # Location of the configuration file
-    # We assume it's in the scripts directory, which is in the main path
-    # of the git repository. However, we allow to set a different path
+    # We assume it's in main path of the git repository.
+    # However, we allow to set a different path
     # using the SFLB_CONFIG_PATH variable.
     if "SFLB_CONFIG_PATH" not in os.environ:
-        config_path = pn(
-            pj(getMainPath(pathToFinalLists), "scripts/SFLB.config"))
+        config_path = pj(getMainPath(pathToFinalLists), ".SFLB.config")
     else:
         config_path = os.environ.get("SFLB_CONFIG_PATH")
-    return config_path
+    return pn(config_path)
 
 
 def getValuesFromConf(pathToFinalLists):
@@ -158,7 +157,7 @@ def doItAgainIfNeed(pathToFinalLists):
                 dependentList = someLists.split()[1].strip()
                 if listWhichShouldBeUpdated not in changed_f_contents and dependentList in changed_f_contents:
                     main_filter_lists.append(
-                        pj(getMainPath(pathToFinalLists), listWhichShouldBeUpdated))
+                        pn(pj(getMainPath(pathToFinalLists), listWhichShouldBeUpdated)))
             main_filter_lists = sorted(set(main_filter_lists))
             if main_filter_lists:
                 main(main_filter_lists, "true", "")
@@ -223,8 +222,10 @@ def main(pathToFinalLists, forced, saveChangedFN):
 
         if os.path.isfile(template_path):
             with open(template_path, "r", encoding="utf8") as tf:
-                SP_I_PAT = re.compile(r'@path (.*)$')
+                SP_I_PAT = re.compile(r'@sectionsPath (.*)$')
                 SE_I_PAT = re.compile(r'@sectionsExt (.*)$')
+                EP_I_PAT = re.compile(r'@exclusionsPath (.*)$')
+                EE_I_PAT = re.compile(r'@exclusionsExt (.*)$')
                 VALID_INSTRUCTIONS_PAT = re.compile(
                     r'^@((sections|exclusions)(Path|Ext)|(HOSTS|DOMAINS|PH|B?NWL)?include)')
                 INSTRUCTIONS_START_PAT = re.compile(r'^@')
@@ -233,9 +234,13 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         print(_("Invalid instruction {wrongInstruction} in {fileWithWrongInstruction}.").format(
                             wrongInstruction=lineT.strip(), fileWithWrongInstruction=os.path.basename(tf.name)))
                     if matchT := SP_I_PAT.search(lineT):
-                        sections_path = pj(main_path, matchT.group(1))
+                        sections_path = pn(pj(main_path, matchT.group(1)))
                     if matchT := SE_I_PAT.search(lineT):
                         sections_ext = matchT.group(1)
+                    if matchT := EP_I_PAT.search(lineT):
+                        exclusions_path = matchT.group(1)
+                    if matchT := EE_I_PAT.search(lineT):
+                        exclusions_ext = matchT.group(1)
 
         if os.path.exists(sections_path):
             for root, _dirs, files in os.walk(sections_path):
