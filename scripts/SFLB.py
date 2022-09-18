@@ -161,7 +161,8 @@ def doItAgainIfNeed(pathToFinalLists):
             main_filter_lists = sorted(set(main_filter_lists))
             if main_filter_lists:
                 main(main_filter_lists, "true", "")
-        os.remove(SFLB_CHANGED_FILES_PATH)
+        if not "NO_RM_SFLB_CHANGED_FILES" in os.environ:
+            os.remove(SFLB_CHANGED_FILES_PATH)
 
 
 def main(pathToFinalLists, forced, saveChangedFN):
