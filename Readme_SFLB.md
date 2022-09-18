@@ -23,12 +23,12 @@ For first, you will need to create some folder in root of your repository. Let's
 @versionFormat Year.Month.Day.TodayNumberOfCommits
 ```
 
-For date's format you can use [few format codes](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes).
-There are 2 version formats to choose: `Year.Month.NumberOfCommitsInMonth` and `Year.Month.Day.TodayNumberOfCommits`, but you can also write your own using format control characters supported by date command, but instead of `@dateFormat`, you should write `@versionDateFormat`. If you didn't provide any version format, then default is `YearMonthDayHourMinute`.
+For date's format you can use [few format codes](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes). If you didn't provide any date format, then default is `{Weekday as locale’s abbreviated name},{Day} {Month as locale’s abbreviated name} {Year},{Hour}:{Minute} {UTC}{UTC offset with colon sign}`
+There are 2 version formats to choose: `Year.Month.NumberOfCommitsInMonth` and `Year.Month.Day.TodayNumberOfCommits`, but you can also write your own using similar format codes as for date's format. If you didn't provide any version format, then default is `YearMonthDayHourMinute`.
 
 You can also set timezone, for example: `@tz Poland`, instead of `Poland`, you should write [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
-You can also set language of messages in script: `@messagesLang pl_PL`, but currently there is only Polish and English language, if you didn't set it, then default is English. If you want to use Polish language, then you should download [SFLB.mo file](https://github.com/FiltersHeroes/ScriptsPlayground/raw/master/scripts/locales/pl/LC_MESSAGES/SFLB.mo) and put it into **scripts/locales/pl/LC_MESSAGES/** directory.
+You can also set language of messages in script: `@messagesLang pl_PL`, but currently there is only Polish and English language, if you didn't set it, then default is your OS's locale. If you want to use Polish language, then you should download [SFLB.mo file](https://github.com/FiltersHeroes/ScriptsPlayground/raw/master/scripts/locales/pl/LC_MESSAGES/SFLB.mo) and put it into **scripts/locales/pl/LC_MESSAGES/** directory.
 
 You can also set language for date and time if you want them to be displayed in your chosen language (by default it's in English) like for example: `@timesLang pl_PL`, but in templates file you need to write `@localizedDT` in place where you want to be.
 

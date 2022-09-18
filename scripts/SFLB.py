@@ -182,9 +182,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
             if hasattr(conf(), 'CIemail'):
                 cw.set_value("user", "email", conf().CIemail).release()
 
-    if "locale" in locals():
-        if hasattr(conf(), 'messagesLang'):
-            locale.setlocale(locale.LC_MESSAGES, conf().messagesLang+".UTF-8")
+    if hasattr(conf(), 'messagesLang'):
+        os.environ["LANGUAGE"] = conf().messagesLang
 
     for pathToFinalList in pathToFinalLists:
         # FILTERLIST is filename (without extension), which we want to build
@@ -257,7 +256,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
             sectionsWereModified = ""
             if not "RTM" in os.environ and "git_repo" in locals():
                 M_S_PAT = re.compile(
-                    r"^"+re.escape(os.path.basename(sections_path) + os.sep))
+                    r"^"+re.escape(os.path.basename(sections_path) + "/"))
                 for item in git_repo.index.diff(None):
                     if M_S_PAT.search(item.a_path):
                         sectionsWereModified = "true"
@@ -590,17 +589,17 @@ def main(pathToFinalLists, forced, saveChangedFN):
                     if versionFormat == "Year.Month.NumberOfCommitsInMonth":
                         lastDayOfMonth = (today.replace(
                             day=1) - timedelta(days=1)).strftime("%Y-%m-%d 23:59")
-                        version = today.strftime("%Y.%-m") + "." + git_repo.git.rev_list(
+                        version = f"{today.year}.{today.month}." + git_repo.git.rev_list(
                             "HEAD", "--date=local", "--count", "--after", lastDayOfMonth, pathToFinalList)
                     elif versionFormat == "Year.Month.Day.TodayNumberOfCommits":
                         tomorrow = (today + timedelta(days=1)
                                     ).strftime("%Y-%m-%d 24:00")
                         yesterday = (today - timedelta(days=1)
                                      ).strftime("%Y-%m-%d 23:59")
-                        version = today.strftime("%Y.%-m.%-d") + "." + git_repo.git.rev_list(
+                        version = f"{today.year}.{today.month}.{today.day}." + git_repo.git.rev_list(
                             "HEAD", "--date=local", "--count", "--before", tomorrow, "--after", yesterday, pathToFinalList)
-                elif hasattr(conf(), "versionDateFormat"):
-                    version = today.strftime(conf().versionDateFormat)
+                    else:
+                        version = today.strftime(conf().versionFormat)
                 else:
                     version = today.strftime("%Y%m%d%H%M")
 
