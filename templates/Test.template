@@ -18,11 +18,11 @@
 !
 !
 ! Test łączenia
-@include test1 + https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt
+@include test1 + https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/master/SFLB_Test/test2.txt
 !
 !
 ! Test łączenia z wykluczeniem paru linijek
-@include test1 + https://raw.githubusercontent.com/PolishFiltersTeam/ScriptsPlayground/master/VICHS_Test/test2.txt - exclusions
+@include test1 + https://raw.githubusercontent.com/FiltersHeroes/ScriptsPlayground/master/SFLB_Test/test2.txt - exclusions
 !
 !
 !
