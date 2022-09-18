@@ -279,7 +279,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
             EXTERNAL_PAT = re.compile(r'^(http(s):|ftp:)')
             USELESS_PAT = re.compile(
                 r"^(! Checksum)|(!#include)|(\[Adblock Plus 2.0\])|(! Dołączenie listy)")
-            USELESS_I_PAT = re.compile(r'@(path|sectionsExt) (.*)$')
+            USELESS_I_PAT = re.compile(r'@(sections|exclusions)(Path|Ext) (.*)$')
 
             for lineF in f_final:
                 if INCLUDE_I_PAT.search(lineF):
