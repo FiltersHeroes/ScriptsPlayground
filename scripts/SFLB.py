@@ -50,8 +50,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('pathToFinalList', type=str, nargs='+', action='store')
 parser.add_argument("-v", "--version",
                     action='version', version="Super Filter Lists Builder" + ' ' + SCRIPT_VERSION)
-args = parser.parse_args()
-
 
 pj = os.path.join
 pn = os.path.normpath
@@ -717,6 +715,7 @@ def push(pathToFinalLists):
 
 
 if __name__ == '__main__':
+    args = parser.parse_args()
     main(args.pathToFinalList, "", "true")
     doItAgainIfNeed(args.pathToFinalList)
     push(args.pathToFinalList)
