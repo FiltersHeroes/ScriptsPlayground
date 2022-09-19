@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0"
+SCRIPT_VERSION = "3.0.1"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -389,7 +389,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         if exclusions:
                             with open(exclusions_path, "r", encoding='utf-8') as exclusions_content, open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
                                 regex_exclusions = []
-                                normal_exclusions = []
+                                normal_exclusions = {}
                                 EXCLUSIONS_RE_PAT = re.compile(r"^\/.*\/$")
                                 for lineE in exclusions_content:
                                     if lineE := lineE.strip():
@@ -398,16 +398,15 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                 "/").rstrip("/")
                                             regex_exclusions.append(lineE)
                                         else:
-                                            normal_exclusions.append(lineE)
+                                            normal_exclusions[lineE] = ""
                                 for lineS in section_content:
                                     if regex_exclusions:
                                         for regex_e in regex_exclusions:
                                             if re.search(regex_e, lineS.strip()):
                                                 lineS = ""
                                     if normal_exclusions:
-                                        for normal_e in normal_exclusions:
-                                            if lineS.strip() == normal_e:
-                                                lineS = ""
+                                        if lineS.strip() in normal_exclusions:
+                                            lineS = ""
                                     external_temp.write(lineS.encode())
                             section = external_temp.name
 
