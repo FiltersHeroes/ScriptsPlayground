@@ -251,7 +251,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                             FOP.fopsort(sectionFpath)
                         # Remove blank lines and whitespace from sections
                         with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
-                            for lineS in natsorted(set(s_f), alg=ns.GROUPLETTERS, key=special_chars_first):
+                            for lineS in natsorted(sorted(set(s_f)), alg=ns.GROUPLETTERS, key=special_chars_first):
                                 if lineS.strip():
                                     f_out.write(lineS.encode('utf8'))
                         os.replace(f_out.name, sectionFpath)
@@ -380,7 +380,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                             if FOP is not None:
                                 FOP.fopsort(combined_temp.name)
                             with open(combined_temp.name, "r", encoding='utf-8') as combined_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
-                                for lineCC in natsorted(set(combined_content), alg=ns.GROUPLETTERS, key=special_chars_first):
+                                for lineCC in natsorted(sorted(set(combined_content)), alg=ns.GROUPLETTERS, key=special_chars_first):
                                     if lineCC.strip():
                                         external_temp.write(lineCC.encode())
                             section = external_temp.name
@@ -516,7 +516,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     "include", "").lower()
                                 if instruction == "PHinclude":
                                     cType = "Pi-hole RegEx"
-                                for i, sortedLineC in enumerate(natsorted(set(unsortedLinesC), alg=ns.GROUPLETTERS, key=special_chars_first)):
+                                for i, sortedLineC in enumerate(natsorted(sorted(set(unsortedLinesC)), alg=ns.GROUPLETTERS, key=special_chars_first)):
                                     if i == 0:
                                         commentSourceStart = "#@ >>>>>>>> "+external
                                         if external2:
