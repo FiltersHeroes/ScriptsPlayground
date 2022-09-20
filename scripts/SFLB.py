@@ -44,7 +44,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.2"
+SCRIPT_VERSION = "3.0.3"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
