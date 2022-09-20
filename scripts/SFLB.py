@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.1"
+SCRIPT_VERSION = "3.0.2"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -251,7 +251,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                             FOP.fopsort(sectionFpath)
                         # Remove blank lines and whitespace from sections
                         with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
-                            for lineS in natsorted(sorted(set(s_f)), alg=ns.GROUPLETTERS, key=special_chars_first):
+                            for lineS in natsorted(sorted(set(s_f)), alg=ns.IGNORECASE, key=special_chars_first):
                                 if lineS.strip():
                                     f_out.write(lineS.encode('utf8'))
                         os.replace(f_out.name, sectionFpath)
@@ -260,7 +260,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
             sectionsWereModified = ""
             if not "RTM" in os.environ and "git_repo" in locals():
                 M_S_PAT = re.compile(
-                    r"^"+re.escape(os.path.basename(sections_path) + "/"))
+                    r"^"+re.escape(os.path.relpath(sections_path, start=main_path) + "/"))
                 for item in git_repo.index.diff(None):
                     if M_S_PAT.search(item.a_path):
                         sectionsWereModified = "true"
@@ -380,7 +380,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                             if FOP is not None:
                                 FOP.fopsort(combined_temp.name)
                             with open(combined_temp.name, "r", encoding='utf-8') as combined_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
-                                for lineCC in natsorted(sorted(set(combined_content)), alg=ns.GROUPLETTERS, key=special_chars_first):
+                                for lineCC in natsorted(sorted(set(combined_content)), alg=ns.IGNORECASE, key=special_chars_first):
                                     if lineCC.strip():
                                         external_temp.write(lineCC.encode())
                             section = external_temp.name
@@ -399,11 +399,12 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                             regex_exclusions.append(lineE)
                                         else:
                                             normal_exclusions[lineE] = ""
+                                if regex_exclusions:
+                                    combined_regex_exclusions = re.compile(f"({'|'.join(regex_exclusions)})")
                                 for lineS in section_content:
-                                    if regex_exclusions:
-                                        for regex_e in regex_exclusions:
-                                            if re.search(regex_e, lineS.strip()):
-                                                lineS = ""
+                                    if combined_regex_exclusions:
+                                        if combined_regex_exclusions.search(lineS.strip()):
+                                            lineS = ""
                                     if normal_exclusions:
                                         if lineS.strip() in normal_exclusions:
                                             lineS = ""
@@ -477,7 +478,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                 (r"^[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]", ""),
                                                 (r"^0\.0\.0\.0", ""),
                                                 (r"\.", "\\."),
-                                                (r"^", "(^\|\\.)"),
+                                                (r"^", "(^|\.)"),
                                                 (r"\*", ".*")
                                             ]
                                     elif instruction == "NWLinclude":
@@ -515,14 +516,14 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     "include", "").lower()
                                 if instruction == "PHinclude":
                                     cType = "Pi-hole RegEx"
-                                for i, sortedLineC in enumerate(natsorted(sorted(set(unsortedLinesC)), alg=ns.GROUPLETTERS, key=special_chars_first)):
+                                for i, sortedLineC in enumerate(natsorted(sorted(set(unsortedLinesC)), alg=ns.IGNORECASE, key=special_chars_first)):
                                     if i == 0:
                                         commentSourceStart = "#@ >>>>>>>> "+external
                                         if external2:
                                             commentSourceStart += " + "+external2
                                         if exclusions:
                                             commentSourceStart += " - "+exclusions
-                                        commentSourceStart += " =>"+cType+"\n"
+                                        commentSourceStart += " => "+cType+"\n"
                                         sortedLineC = re.sub(
                                             r"^", commentSourceStart, sortedLineC)
                                     external_temp_final.write(
@@ -534,7 +535,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         commentSourceEnd += " + "+external2
                                     if exclusions:
                                         commentSourceEnd += " - "+exclusions
-                                    commentSourceEnd += " =>"+cType+"\n"
+                                    commentSourceEnd += " => "+cType+"\n"
                                     external_temp_final.write(
                                         str(commentSourceEnd).encode())
                                     section = external_temp_final.name
