@@ -25,6 +25,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 import os
+import sys
 import time
 from datetime import timedelta, datetime
 import locale
@@ -166,6 +167,11 @@ def doItAgainIfNeed(pathToFinalLists):
 def main(pathToFinalLists, forced, saveChangedFN):
     _ = getTranslations()
 
+    # Build a table mapping all non-printable characters to None (thanks https://stackoverflow.com/a/54451873)
+    NOPRINT_TRANS_TABLE = {
+        i: None for i in range(0, sys.maxunicode + 1) if not chr(i).isprintable()
+    }
+
     # Go to the directory where the local git repository is located
     git_repo = getGitRepo(pathToFinalLists)
     main_path = getMainPath(pathToFinalLists)
@@ -252,8 +258,9 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         # Remove blank lines and whitespace from sections
                         with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
                             for lineS in natsorted(sorted(set(s_f)), alg=ns.IGNORECASE, key=special_chars_first):
-                                if lineS.strip():
-                                    f_out.write(lineS.encode('utf8'))
+                                lineS = lineS.translate(NOPRINT_TRANS_TABLE)
+                                if lineS := lineS.strip():
+                                    f_out.write(f"{lineS}\n".encode('utf8'))
                         os.replace(f_out.name, sectionFpath)
 
             # Add modified sections to git repository
@@ -372,16 +379,16 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         if section2:
                             with open(section, "r", encoding='utf-8') as section_content, open(section2, "r", encoding='utf-8') as section2_content, NamedTemporaryFile(dir=tempDir, delete=False) as combined_temp:
                                 for lineS1 in section_content:
-                                    if lineS1.strip():
+                                    if lineS1:
                                         combined_temp.write(lineS1.encode())
                                 for lineS2 in section2_content:
-                                    if lineS2.strip():
+                                    if lineS2:
                                         combined_temp.write(lineS2.encode())
                             if FOP is not None:
                                 FOP.fopsort(combined_temp.name)
                             with open(combined_temp.name, "r", encoding='utf-8') as combined_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
                                 for lineCC in natsorted(sorted(set(combined_content)), alg=ns.IGNORECASE, key=special_chars_first):
-                                    if lineCC.strip():
+                                    if lineCC:
                                         external_temp.write(lineCC.encode())
                             section = external_temp.name
 
