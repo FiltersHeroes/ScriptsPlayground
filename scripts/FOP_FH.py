@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.26
+VERSION = 3.27
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -97,16 +97,11 @@ KNOWNOPTIONS = (
 )
 
 
-def arg():
-    """ Parse console arguments. """
-    return ap.parse_args()
-
-
 def start():
     """ Print a greeting message and run FOP in the directories
     specified via the command line, or the current working directory if
     no arguments have been passed."""
-    if arg().version:
+    if arg.version:
         print(greeting)
         sys.exit(0)
     characters = len(str(greeting))
@@ -115,7 +110,7 @@ def start():
     print("=" * characters)
 
     # Convert the directory names to absolute references and visit each unique location
-    places = arg().dir
+    places = arg.dir
     if places:
         places = [os.path.abspath(place) for place in places]
         for place in sorted(set(places)):
@@ -136,7 +131,7 @@ def main(location):
     print(f'\nPrimary location: {os.path.join(os.path.abspath(location), "")}')
     for path, directories, files in os.walk(location):
         for direct in directories[:]:
-            if direct.startswith(".") or direct in arg().ignore:
+            if direct.startswith(".") or direct in arg.ignore:
                 directories.remove(direct)
         print(f'Current directory: {os.path.join(os.path.abspath(path), "")}')
         directories.sort()
@@ -144,7 +139,7 @@ def main(location):
             address = os.path.join(path, filename)
             extension = os.path.splitext(filename)[1]
             # Sort all text files that are not blacklisted
-            if extension == ".txt" and filename not in arg().ignore:
+            if extension == ".txt" and filename not in arg.ignore:
                 fopsort(address)
             # Delete unnecessary backups and temporary files
             if extension in (".orig", ".temp"):
@@ -372,4 +367,5 @@ def removeunnecessarywildcards(filtertext):
 
 
 if __name__ == '__main__':
+    arg = ap.parse_args()
     start()
