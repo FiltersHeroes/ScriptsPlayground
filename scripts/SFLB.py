@@ -44,7 +44,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.3"
+SCRIPT_VERSION = "3.0.4"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -667,8 +667,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 os.replace(changed_files_temp.name, SFLB_CHANGED_FILES_PATH)
 
             # Commit modified files
-            commit_message = _("Update {codename} to version {versionNumber}")+"\n[ci skip]".format(
-                codename=codename, versionNumber=version)
+            commit_message = _("Update {codename} to version {versionNumber}").format(
+                codename=codename, versionNumber=version)+"\n[ci skip]"
             if "CI" in os.environ:
                 if hasattr(conf(), 'commitDesc'):
                     commit_message += "\n"+conf().commitDesc
