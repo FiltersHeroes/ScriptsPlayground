@@ -10,6 +10,7 @@ That script can:
 * use exclusions list to skip adding lines containing words or regex patterns to final list
 * update version and modified date of list
 * sort lines "naturally"
+* remove blank lines, whitespace and other invisible characters from sections
 * add, commit and send filterlist into the git repository (it will ask you about password or you can use machine user with CircleCI and personal access token to send filterlist to git repository)
 * integrate with **FOP_FH.py** script
 
