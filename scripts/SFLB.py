@@ -673,7 +673,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 os.replace(changed_files_temp.name, SFLB_CHANGED_FILES_PATH)
 
             # Commit modified files
-            commit_message = _("Update {codename} to version {versionNumber}").format(
+            commit_message = _("Update {codename} to version {versionNumber}")+"\n[ci skip]".format(
                 codename=codename, versionNumber=version)
             if "CI" in os.environ:
                 if hasattr(conf(), 'commitDesc'):
