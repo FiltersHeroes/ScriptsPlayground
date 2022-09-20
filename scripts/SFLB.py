@@ -259,8 +259,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
                             for lineS in natsorted(sorted(set(s_f)), alg=ns.IGNORECASE, key=special_chars_first):
                                 lineS = lineS.translate(NOPRINT_TRANS_TABLE)
-                                if lineS := lineS.strip():
-                                    f_out.write(f"{lineS}\n".encode('utf8'))
+                                if lineS:
+                                    f_out.write(f"{lineS.strip()}\n".encode('utf8'))
                         os.replace(f_out.name, sectionFpath)
 
             # Add modified sections to git repository
