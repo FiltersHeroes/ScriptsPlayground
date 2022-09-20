@@ -167,11 +167,6 @@ def doItAgainIfNeed(pathToFinalLists):
 def main(pathToFinalLists, forced, saveChangedFN):
     _ = getTranslations()
 
-    # Build a table mapping all non-printable characters to None (thanks https://stackoverflow.com/a/54451873)
-    NOPRINT_TRANS_TABLE = {
-        i: None for i in range(0, sys.maxunicode + 1) if not chr(i).isprintable()
-    }
-
     # Go to the directory where the local git repository is located
     git_repo = getGitRepo(pathToFinalLists)
     main_path = getMainPath(pathToFinalLists)
@@ -258,7 +253,6 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         # Remove blank lines and whitespace from sections
                         with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
                             for lineS in natsorted(sorted(set(s_f)), alg=ns.IGNORECASE, key=special_chars_first):
-                                lineS = lineS.translate(NOPRINT_TRANS_TABLE)
                                 if lineS:
                                     f_out.write(f"{lineS.strip()}\n".encode('utf8'))
                         os.replace(f_out.name, sectionFpath)
