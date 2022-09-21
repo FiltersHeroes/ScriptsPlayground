@@ -44,7 +44,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.4"
+SCRIPT_VERSION = "3.0.5"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -419,7 +419,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         if USELESS_PAT.search(lineET):
                                             lineET = lineET.replace(lineET, "")
                                         lineET = re.sub(
-                                            r"^"+"!($|\s)", "!@ ", lineET)
+                                            r"^!($|\s)", "!@"+r"\1", lineET)
                                         if i == 0:
                                             commentSourceStart = "!@ >>>>>>>> "+external
                                             if argLen >= 2:
