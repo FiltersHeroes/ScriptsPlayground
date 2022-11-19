@@ -44,7 +44,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.5"
+SCRIPT_VERSION = "3.0.6"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -583,7 +583,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
         if oldFL != newFL or forced:
             with open(pathToFinalList, "r", encoding='utf-8') as f_final, NamedTemporaryFile(dir=tempDir, delete=False) as final_tmp:
                 today = datetime.now().astimezone()
-                DEV_PAT = re.compile(r"\! Title\:.*DEV")
+                DEV_PAT = re.compile(r"\! .*DEV$")
                 MODIFIED_PAT = re.compile(r"@modified")
                 LOCALIZED_DT_PAT = re.compile(r"@localizedDT")
                 VERSION_PAT = re.compile(r"@version")
