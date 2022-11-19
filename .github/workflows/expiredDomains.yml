@@ -12,13 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD
           ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
       - uses: actions/upload-artifact@v3
         with:
           name: E_KAD_S
           path: |
-           split/KAD_0*
+            split/KAD_0*
       - uses: actions/upload-artifact@v3
         with:
           name: E_KADH_S
@@ -35,6 +36,7 @@ jobs:
           name: E_KAD_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_00
           echo 'E_KAD_00<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD_00)" >> $GITHUB_ENV
@@ -55,6 +57,7 @@ jobs:
           name: E_KAD_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_01
           echo 'E_KAD_01<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD_01)" >> $GITHUB_ENV
@@ -75,6 +78,7 @@ jobs:
           name: E_KAD_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_02
           echo 'E_KAD_02<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD_02)" >> $GITHUB_ENV
@@ -95,6 +99,7 @@ jobs:
           name: E_KAD_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_03
           echo 'E_KAD_03<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD_03)" >> $GITHUB_ENV
@@ -115,6 +120,7 @@ jobs:
           name: E_KAD_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KAD_04
           echo 'E_KAD_04<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD_04)" >> $GITHUB_ENV
@@ -135,6 +141,7 @@ jobs:
   #         name: E_KAD_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_05
   #         echo 'E_KAD_05<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KAD_05)" >> $GITHUB_ENV
@@ -155,6 +162,7 @@ jobs:
   #         name: E_KAD_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_06
   #         echo 'E_KAD_06<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KAD_06)" >> $GITHUB_ENV
@@ -175,6 +183,7 @@ jobs:
   #         name: E_KAD_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_07
   #         echo 'E_KAD_07<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KAD_07)" >> $GITHUB_ENV
@@ -195,6 +204,7 @@ jobs:
   #         name: E_KAD_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_08
   #         echo 'E_KAD_08<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KAD_08)" >> $GITHUB_ENV
@@ -215,6 +225,7 @@ jobs:
           name: E_KADH_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_00
           echo 'E_KADH_00<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KADhosts_00)" >> $GITHUB_ENV
@@ -235,6 +246,7 @@ jobs:
           name: E_KADH_S
           path: split
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_01
           echo 'E_KADH_01<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KADhosts_01)" >> $GITHUB_ENV
@@ -255,6 +267,7 @@ jobs:
   #         name: E_KADH_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02
   #         echo 'E_KADH_02<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KADhosts_02)" >> $GITHUB_ENV
@@ -275,6 +288,7 @@ jobs:
   #         name: E_KADH_S
   #         path: split
   #     - run: |
+  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
   #         ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_03
   #         echo 'E_KADH_03<<EOF' >> $GITHUB_ENV
   #         echo "$(./scripts/CI/getFileListForED.sh KADhosts_03)" >> $GITHUB_ENV
@@ -290,6 +304,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh PAF_C
           echo 'E_PAF<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh \
@@ -323,6 +338,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh Social_C
           ./scripts/CI/CI_LETS_DO_THIS.sh PASS
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
@@ -339,6 +355,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh Cookies_C
           echo 'E_COOKIES<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh adblock_cookies cookies_uB_AG)" >> $GITHUB_ENV
@@ -349,14 +366,7 @@ jobs:
           path: |
             ${{ env.E_COOKIES }}
   KAD_limit:
-    needs:
-      [
-        KAD_00,
-        KAD_01,
-        KAD_02,
-        KAD_03,
-        KAD_04,
-      ]
+    needs: [KAD_00, KAD_01, KAD_02, KAD_03, KAD_04]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -398,6 +408,7 @@ jobs:
       #     name: E_KAD_08
       #     path: expired-domains
       - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
@@ -408,14 +419,7 @@ jobs:
           path: |
             ${{ env.E_KAD }}
   deploy:
-    needs: [
-        KAD_limit,
-        KADhosts_00,
-        KADhosts_01,
-        PAF,
-        SocialPASS,
-        Cookies,
-      ]
+    needs: [KAD_limit, KADhosts_00, KADhosts_01, PAF, SocialPASS, Cookies]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
@@ -464,4 +468,6 @@ jobs:
         with:
           name: E_COOKIES
           path: expired-domains
-      - run: ./scripts/CI/cleanup_push.sh
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/cleanup_push.sh
