@@ -44,7 +44,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.6"
+SCRIPT_VERSION = "3.0.7"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -671,7 +671,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 codename=codename, versionNumber=version)+"\n[ci skip]"
             if "CI" in os.environ:
                 if hasattr(conf(), 'commitDesc'):
-                    commit_message += "\n"+conf().commitDesc
+                    commit_message += "\n"+conf().commitDesc.replace('\\n', '\n')
             else:
                 commit_description = input(
                     _("Enter extended commit description to {codename} list, e.g 'Fix #1, fix #2' (without quotation marks; if you do not want an extended description, you can simply enter nothing): ").format(codename=codename))
