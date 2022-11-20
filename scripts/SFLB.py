@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.7"
+SCRIPT_VERSION = "3.0.8"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -346,7 +346,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         print(_("Downloading file from: {URL} ...").format(
                                             URL=external))
                                         external_response = requests.get(
-                                            external, allow_redirects=True)
+                                            external, allow_redirects=True, timeout=10)
                                         external_temp.write(
                                             external_response.text.encode('utf8'))
                                     except requests.exceptions.RequestException as ex:
@@ -368,7 +368,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         print(_("Downloading file from: {URL} ...").format(
                                             URL=external2))
                                         external_response = requests.get(
-                                            external2, allow_redirects=True)
+                                            external2, allow_redirects=True, timeout=10)
                                         external_temp2.write(
                                             external_response.text.encode('utf8'))
                                     except requests.exceptions.RequestException as ex:
@@ -618,7 +618,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 for lineF in f_final:
                     # Remove DEV from filter list name if RTM mode is active
                     if "RTM" in os.environ and DEV_PAT.search(lineF):
-                        lineF = lineF.replace("DEV", "")
+                        lineF = lineF.replace(" DEV", "")
 
                     # Set date and time in "Last modified" field
                     if MODIFIED_PAT.search(lineF):
@@ -685,7 +685,6 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 if commit_description:
                     commit_message += "\n"+commit_description
             git_repo.index.commit(commit_message)
-
         else:
             print(_("Nothing new has been added to {codename} list. If you still want to update it, then set the variable FORCED and run script again.").format(
                 codename=codename))
