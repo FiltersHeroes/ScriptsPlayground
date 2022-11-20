@@ -25,7 +25,6 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 import os
-import sys
 import time
 from datetime import timedelta, datetime
 import locale
@@ -55,6 +54,14 @@ parser.add_argument("-v", "--version",
 pj = os.path.join
 pn = os.path.normpath
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
+
+if FOP is None:
+    FOP_PATH = pj(SCRIPT_PATH, "FOP_FH.py")
+    if os.path.exists(FOP_PATH):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("FOP", FOP_PATH)
+        FOP = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(FOP)
 
 
 def special_chars_first(x):
