@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.8"
+SCRIPT_VERSION = "3.0.9"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -459,7 +459,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     lineCwww = ""
                                     convertItems = ""
                                     if instruction in ("HOSTSinclude", "DOMAINSinclude"):
-                                        if not re.match(r"^(0\.0\.0\.0.*|\|\|.*\^(\$all)?$)", lineC) or re.match(r"\*|\/", lineC):
+                                        if not re.match(r"^(0\.0\.0\.0.*|\|\|(?!.*\/).*\^(\$all)?$)", lineC) or re.match(r"\*|\/", lineC):
                                             lineC = ""
                                         else:
                                             convertItems = [
@@ -476,7 +476,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                     (r"^0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]", "")
                                                 ])
                                     elif instruction == "PHinclude":
-                                        if not re.search(r"^\|\|.*\*.*\^(\$all)?$", lineC):
+                                        if not re.search(r"^\|\|(?!.*\/).*\*.*\^(\$all)?$", lineC):
                                             lineC = ""
                                         else:
                                             convertItems = [
