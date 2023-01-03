@@ -9,7 +9,7 @@
 #
 """
     SFLB - Super Filter Lists Builder
-    Copyright (c) 2022 Filters Heroes
+    Copyright (c) 2023 Filters Heroes
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
