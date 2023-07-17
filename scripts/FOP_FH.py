@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.27
+VERSION = 3.28
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -260,7 +260,7 @@ def filtertidy(filterin):
 
     # If applicable, separate and sort the filter options in addition to the filter text
     filtertext = removeunnecessarywildcards(optionsplit.group(1))
-    optionlist = optionsplit.group(2).lower().replace("_", "-").split(",")
+    optionlist = optionsplit.group(2).lower().split(",")
 
     domainlist = []
     removeentries = []
