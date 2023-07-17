@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV SFLB_tag="SFLB-3.0.9"
 ENV SFLB_LOCALES_PATH="/usr/share/locale"
-ENV FOP_tag="FOP-3.28"
+ENV FOP_tag="FOP-3.29"
 
 RUN apt-get update && apt-get install -y git locales openssh-client ca-certificates tzdata language-pack-pl python3 gettext-base python3-requests python3-git python3-natsort wget
 
