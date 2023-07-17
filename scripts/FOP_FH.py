@@ -41,7 +41,7 @@ ap.add_argument("--version", "-v",
 # Compile regular expressions to match important filter parts
 # (derived from Wladimir Palant's Adblock Plus source code)
 ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#|\$)\@?\??\@?(#|\$)")
-FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)domain\=([^\,\s]+)$")
+FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)(denyallow|domain|from|method|to)\=([^\,\s]+)$")
 ELEMENTPATTERN = re.compile(
     r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
 OPTIONPATTERN = re.compile(
@@ -64,38 +64,41 @@ UNICODESELECTOR = re.compile(r"\\[0-9a-fA-F]{1,6}\s[a-zA-Z]*[A-Z]")
 # Compile a regular expression that describes a completely blank line
 BLANKPATTERN = re.compile(r"^\s*$")
 
-# List all Adblock Plus, uBlock Origin and AdGuard options (excepting domain, which is handled separately), as of version 1.3.9
+# Compile a regular expression that describes uBO's scriptlets pattern
+UBO_JS_PATTERN = re.compile(r"^@js\(")
+
+# List all Adblock Plus, uBlock Origin and AdGuard options (excepting domain, denyallow, from, method and to, which is handled separately)
 KNOWNOPTIONS = (
     "document", "elemhide", "font", "genericblock", "generichide", "image", "match-case", "media", "object", "other", "ping", "popup", "script", "stylesheet", "subdocument", "third-party", "webrtc", "websocket", "xmlhttprequest",
     "rewrite=abp-resource:blank-css", "rewrite=abp-resource:blank-js", "rewrite=abp-resource:blank-html", "rewrite=abp-resource:blank-mp3", "rewrite=abp-resource:blank-text", "rewrite=abp-resource:1x1-transparent-gif", "rewrite=abp-resource:2x2-transparent-png", "rewrite=abp-resource:3x2-transparent-png", "rewrite=abp-resource:32x32-transparent-png",
 
     # uBlock Origin
-    "1p", "first-party", "3p", "all", "badfilter", "cname", "csp", "css", "denyallow", "doc", "ehide", "empty", "frame", "ghide", "important", "inline-font", "inline-script", "mp4", "object-subrequest", "popunder", "shide", "specifichide", "xhr",
-    "redirect=1x1.gif", "redirect-rule=1x1.gif",
-    "redirect=2x2.png", "redirect-rule=2x2.png",
-    "redirect=3x2.png", "redirect-rule=3x2.png",
-    "redirect=32x32.png", "redirect-rule=32x32.png",
-    "redirect=noop-0.1s.mp3", "redirect-rule=noop-0.1s.mp3",
-    "redirect=noop-1s.mp4", "redirect-rule=noop-1s.mp4",
-    "redirect=noop.html", "redirect-rule=noop.html",
-    "redirect=noop.js", "redirect-rule=noop.js",
-    "redirect=noop.txt", "redirect-rule=noop.txt",
-    "redirect=noopcss", "redirect-rule=noopcss",
-    "redirect=ampproject_v0.js", "redirect-rule=ampproject_v0.js",
-    "redirect=nofab.js", "redirect-rule=nofab.js",
-    "redirect=fuckadblock.js-3.2.0", "redirect-rule=fuckadblock.js-3.2.0",
-    "redirect=google-analytics_cx_api.js", "redirect-rule=google-analytics_cx_api.js",
-    "redirect=google-analytics_analytics.js", "redirect-rule=google-analytics_analytics.js",
-    "redirect=google-analytics_ga.js", "redirect-rule=google-analytics_ga.js",
-    "redirect=googlesyndication_adsbygoogle.js", "redirect-rule=googlesyndication_adsbygoogle.js",
-    "redirect=googletagmanager_gtm.js", "redirect-rule=googletagmanager_gtm.js",
-    "redirect=googletagservices_gpt.js", "redirect-rule=googletagservices_gpt.js",
-    "redirect=click2load.html", "redirect-rule=click2load.html",
+    "_", "1p", "3p", "all", "badfilter", "cname", "csp", "css", "doc", "ehide", "empty", "first-party", "frame",
+    "ghide", "header", "important", "inline-font", "inline-script", "mp4", "object-subrequest", "popunder",
+    "shide", "specifichide", "xhr", "redirect", "redirect-rule", "strict1p", "strict3p",
 
     # AdGuard
     "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "removeparam"
 )
 
+# List all methods which should be used together with uBO's method option
+KNOWN_METHODS = ("connect", "delete", "get", "head", "options", "patch", "post", "put")
+
+# Compile regex with all valid redirect resources
+KNOWN_REDIRECT_RESOURCES = re.compile(r"""
+    (
+    1x1\.gif|(2x2|3x2|32x32).png|
+    noopframe|
+    noop\.(css|html|js|txt)|
+    noop-(0\.1|0\.5)s\.mp3|
+    noop-1s\.mp4|
+    none|click2load\.html|
+    (addthis_widget|amazon_ads|amazon_apstag|monkeybroker|doubleclick_instream_ad_status|
+    google-analytics_ga|google-analytics_analytics|google-analytics_inpage_linkid|google-analytics_cx_api|
+    google-ima|googletagservices_gpt|googletagmanager_gtm|googlesyndication_adsbygoogle|
+    scorecardresearch_beacon|outbrain-widget|hd-main)\.js
+    )(:\d+)?$
+""", re.X)
 
 def start():
     """ Print a greeting message and run FOP in the directories
@@ -234,7 +237,7 @@ def fopsort(filename):
                         if lineschecked <= CHECKLINES:
                             filterlines += 1
                             lineschecked += 1
-                        line = filtertidy(line)
+                        line = filtertidy(line, filename)
                     # Add the filter to the section
                     section.append(line)
         # At the end of the file, sort and save any remaining filters
@@ -249,7 +252,7 @@ def fopsort(filename):
         os.remove(temporaryfile)
 
 
-def filtertidy(filterin):
+def filtertidy(filterin, filename):
     """ Sort the options of blocking filters and make the filter text
     lower case if applicable."""
     optionsplit = re.match(OPTIONPATTERN, filterin)
@@ -263,25 +266,56 @@ def filtertidy(filterin):
     optionlist = optionsplit.group(2).lower().split(",")
 
     domainlist = []
+    denyallowlist = []
+    fromlist = []
+    methodlist = []
+    tolist = []
     removeentries = []
     for option in optionlist:
+        optionName = option.split("=", 1)[0].strip("~")
+        optionLength = len(optionName) + 1
         # Detect and separate domain options
-        if option[0:7] == "domain=":
-            domainlist.extend(option[7:].split("|"))
+        if optionName in ("domain", "denyallow", "from", "method", "to"):
+            if optionName == "domain":
+                argList = domainlist
+            elif optionName == "from":
+                argList = fromlist
+            elif optionName == "to":
+                argList = tolist
+            elif optionName == "denyallow":
+                argList = denyallowlist
+                if "domain=" not in filterin:
+                    print(f"\nWarning: The option \"denyallow\" used on the filter \"{filterin}\" requires the \"domain\" option [{filename}].")
+            elif optionName == "method":
+                argList = methodlist
+                methods = option[optionLength:].split("|")
+                for method in methods:
+                    if method not in KNOWN_METHODS:
+                        print(f"\nWarning: The method \"{method}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
+            argList.extend(option[optionLength:].split("|"))
             removeentries.append(option)
-        elif option[0:4] == "app=" or option[0:9] == "protobuf=" or option[0:7] == "cookie=" or option[0:8] == "replace=" or option[0:12] == "removeparam=":
-            optionlist = optionsplit.group(2).split(",")
-        elif option.strip("~") not in KNOWNOPTIONS:
+        elif optionName in ("redirect", "redirect-rule"):
+            redirectResource = option[optionLength:].split(":")[0]
+            if not re.match(KNOWN_REDIRECT_RESOURCES, redirectResource):
+                print(f"\nWarning: Redirect resource \"{redirectResource}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
+        elif optionName not in KNOWNOPTIONS:
             print(
-                f"Warning: The option \"{option}\" used on the filter \"{filterin}\" is not recognised by FOP")
-    # Sort all options other than domain alphabetically
+                f"\nWarning: The option \"{option}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
+    # Sort all options other than domain, from, to, denyallow and method alphabetically
     # For identical options, the inverse always follows the non-inverse option ($image,~image instead of $~image,image)
     optionlist = sorted(set(filter(lambda option: option not in removeentries, optionlist)),
                         key=lambda option: (option[1:] + "~") if option[0] == "~" else option)
     # If applicable, sort domain restrictions and append them to the list of options
     if domainlist:
-        optionlist.append(
-            f'domain={"|".join(sorted(set(filter(lambda domain: domain != "", domainlist)), key=lambda domain: domain.strip("~")))}')
+        optionlist.append(f'domain={"|".join(sorted(set(filter(lambda domain: domain != "", domainlist)), key=lambda domain: domain.strip("~")))}')
+    if denyallowlist:
+        optionlist.append(f'denyallow={"|".join(sorted(set(filter(lambda domain: domain != "", denyallowlist)), key=lambda domain: domain.strip("~")))}')
+    if fromlist:
+        optionlist.append(f'from={"|".join(sorted(set(filter(lambda domain: domain != "", fromlist)), key=lambda domain: domain.strip("~")))}')
+    if tolist:
+        optionlist.append(f'to={"|".join(sorted(set(filter(lambda domain: domain != "", tolist)), key=lambda domain: domain.strip("~")))}')
+    if methodlist:
+        optionlist.append(f'method={"|".join(sorted(set(filter(lambda domain: domain != "", methodlist)), key=lambda domain: domain.strip("~")))}')
 
     # Return the full filter
     return f'{filtertext}${",".join(optionlist)}'
@@ -307,8 +341,6 @@ def elementtidy(domains, separator, selector):
         selectorwithoutstrings = selectorwithoutstrings.replace(
             f"{stringmatch.group(1)}{stringmatch.group(2)}", f"{stringmatch.group(1)}", 1)
         selectoronlystrings = f"{selectoronlystrings}{stringmatch.group(2)}"
-    # Make sure we don't match arguments of uBO scriptlets
-    UBO_JS_PATTERN = re.compile(r"^@js\(")
     # Clean up tree selectors
     for tree in each(TREESELECTOR, selector):
         if tree.group(0) in selectoronlystrings or not tree.group(0) in selectorwithoutstrings:
@@ -319,6 +351,7 @@ def elementtidy(domains, separator, selector):
             replaceby = f" {tree.group(2)} "
         if replaceby == "   ":
             replaceby = " "
+        # Make sure we don't match arguments of uBO scriptlets
         if not UBO_JS_PATTERN.match(selector):
             selector = selector.replace(tree.group(
                 0), f"{tree.group(1)}{replaceby}{tree.group(3)}", 1)
