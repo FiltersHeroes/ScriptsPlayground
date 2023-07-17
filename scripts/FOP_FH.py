@@ -96,7 +96,8 @@ KNOWN_REDIRECT_RESOURCES = re.compile(r"""
     (addthis_widget|amazon_ads|amazon_apstag|monkeybroker|doubleclick_instream_ad_status|
     google-analytics_ga|google-analytics_analytics|google-analytics_inpage_linkid|google-analytics_cx_api|
     google-ima|googletagservices_gpt|googletagmanager_gtm|googlesyndication_adsbygoogle|
-    scorecardresearch_beacon|outbrain-widget|hd-main)\.js
+    scorecardresearch_beacon|outbrain-widget|hd-main|
+    ampproject_v0|fingerprint2|fingerprint3|nobab|nobab2|nofab|popads-dummy|popads|prebid-ads|adfly-defuser)\.js
     )(:\d+)?$
 """, re.X)
 
