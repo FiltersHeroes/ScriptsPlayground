@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.29
+VERSION = 3.30
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -67,15 +67,16 @@ BLANKPATTERN = re.compile(r"^\s*$")
 # Compile a regular expression that describes uBO's scriptlets pattern
 UBO_JS_PATTERN = re.compile(r"^@js\(")
 
-# List all Adblock Plus, uBlock Origin and AdGuard options (excepting domain, denyallow, from, method and to, which is handled separately)
+# List all Adblock Plus, uBlock Origin and AdGuard options 
+# (excepting domain, denyallow, from, method, permissions, redirect, redirect-rule, rewrite and to, which is handled separately)
 KNOWNOPTIONS = (
-    "document", "elemhide", "font", "genericblock", "generichide", "image", "match-case", "media", "object", "other", "ping", "popup", "script", "stylesheet", "subdocument", "third-party", "webrtc", "websocket", "xmlhttprequest",
-    "rewrite=abp-resource:blank-css", "rewrite=abp-resource:blank-js", "rewrite=abp-resource:blank-html", "rewrite=abp-resource:blank-mp3", "rewrite=abp-resource:blank-text", "rewrite=abp-resource:1x1-transparent-gif", "rewrite=abp-resource:2x2-transparent-png", "rewrite=abp-resource:3x2-transparent-png", "rewrite=abp-resource:32x32-transparent-png",
+    "document", "elemhide", "font", "genericblock", "generichide", "image", "match-case", "media", "object", "other", "ping", 
+    "popup", "script", "stylesheet", "subdocument", "third-party", "webrtc", "websocket", "xmlhttprequest",
 
     # uBlock Origin
     "_", "1p", "3p", "all", "badfilter", "cname", "csp", "css", "doc", "ehide", "empty", "first-party", "frame",
-    "ghide", "header", "important", "inline-font", "inline-script", "mp4", "object-subrequest", "popunder",
-    "shide", "specifichide", "xhr", "redirect", "redirect-rule", "strict1p", "strict3p",
+    "ghide", "header", "important", "inline-font", "inline-script", "mp4", "object-subrequest", 
+    "popunder", "shide", "specifichide", "xhr", "strict1p", "strict3p",
 
     # AdGuard
     "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "removeparam"
@@ -85,19 +86,23 @@ KNOWNOPTIONS = (
 KNOWN_METHODS = ("connect", "delete", "get", "head", "options", "patch", "post", "put")
 
 # Compile regex with all valid redirect resources
-# (https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources,
+# (https://help.adblockplus.org/hc/en-us/articles/360062733293-How-to-write-filters,
+# https://github.com/gorhill/uBlock/wiki/Resources-Library#available-empty-redirect-resources,
 # https://github.com/gorhill/uBlock/wiki/Resources-Library#available-url-specific-sanitized-redirect-resources-surrogates
 # and aliases from https://github.com/gorhill/uBlock/blob/master/src/js/redirect-resources.js)
 KNOWN_REDIRECT_RESOURCES = re.compile(r"""
     (
-    1x1(-transparent)?\.gif|(2x2|3x2|32x32)(-transparent)?.png|
-    empty|noopframe|noopjs|abp-resource:blank-js|nooptext|
+    (abp-resource:)?1x1(-transparent)?(\.|-)gif|(2x2|3x2|32x32)(-transparent)?(\.|-)png|
+    abp-resource:(blank-css|blank-html|blank-js|blank-text|blank-mp3)|
+    empty|noopframe|noopjs|nooptext|
     noop\.(css|html|js|txt)|
     noop-(0\.1|0\.5)s\.mp3|noopmp3-0.1s|
     noop-1s\.mp4|noopmp4-1s|
     none|click2load\.html|
     (addthis_widget|addthis\.com\/addthis_widget|amazon_ads|amazon-adsystem\.com\/aax2\/amzn_ads|amazon_apstag|
+    ampproject_v0|ampproject\.org\/v0|
     doubleclick_instream_ad_status|doubleclick\.net\/instream\/ad_status|
+    fingerprint(2|3)|
     google-analytics_analytics|google-analytics\.com\/analytics|googletagmanager_gtm|googletagmanager\.com\/gtm|
     google-analytics_cx_api|google-analytics\.com\/cx\/api|
     google-analytics_ga|google-analytics\.com\/ga|
@@ -105,11 +110,15 @@ KNOWN_REDIRECT_RESOURCES = re.compile(r"""
     google-ima|google-ima3|
     googlesyndication_adsbygoogle|googlesyndication\.com\/adsbygoogle|googlesyndication-adsbygoogle|
     googletagservices_gpt|googletagservices\.com\/gpt|googletagservices-gpt|
-    hd-main|monkeybroker|d3pkae9owd2lcf\.cloudfront\.net\/mb105|
+    hd-main|mxpnl_mixpanel|monkeybroker|d3pkae9owd2lcf\.cloudfront\.net\/mb105|
+    nobab(2)?|bab-defuser|prevent-bab|
+    noeval|noeval-silent|silent-noeval|nofab|fuckadblock\.js-3\.2\.0|
     outbrain-widget|widgets\.outbrain.com\/outbrain|
-    scorecardresearch_beacon|scorecardresearch\.com\/beacon.)(\.js)?
+    popads|popads\.net|prevent-popads-net|popads-dummy|prebid-ads|
+    scorecardresearch_beacon|scorecardresearch\.com\/beacon)(\.js)?
     )(:\d+)?$
 """, re.X)
+
 
 def start():
     """ Print a greeting message and run FOP in the directories
@@ -280,13 +289,14 @@ def filtertidy(filterin, filename):
     denyallowlist = []
     fromlist = []
     methodlist = []
+    permissionslist = []
     tolist = []
     removeentries = []
     for option in optionlist:
         optionName = option.split("=", 1)[0].strip("~")
         optionLength = len(optionName) + 1
         # Detect and separate domain options
-        if optionName in ("domain", "denyallow", "from", "method", "to"):
+        if optionName in ("domain", "denyallow", "from", "method", "to", "permissions"):
             if optionName == "domain":
                 argList = domainlist
             elif optionName == "from":
@@ -295,7 +305,7 @@ def filtertidy(filterin, filename):
                 argList = tolist
             elif optionName == "denyallow":
                 argList = denyallowlist
-                if "domain=" not in filterin:
+                if ("domain=" and "from") not in filterin:
                     print(f"\nWarning: The option \"denyallow\" used on the filter \"{filterin}\" requires the \"domain\" option [{filename}].")
             elif optionName == "method":
                 argList = methodlist
@@ -303,16 +313,18 @@ def filtertidy(filterin, filename):
                 for method in methods:
                     if method and method not in KNOWN_METHODS:
                         print(f"\nWarning: The method \"{method}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
+            elif optionName == "permissions":
+                argList = permissionslist
             argList.extend(option[optionLength:].split("|"))
             removeentries.append(option)
-        elif optionName in ("redirect", "redirect-rule"):
-            redirectResource = option[optionLength:].split(":")[0]
+        elif optionName in ("redirect", "redirect-rule", "rewrite"):
+            redirectResource = option[optionLength:]
             if redirectResource and not re.match(KNOWN_REDIRECT_RESOURCES, redirectResource):
                 print(f"\nWarning: Redirect resource \"{redirectResource}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
         elif optionName not in KNOWNOPTIONS:
             print(
                 f"\nWarning: The option \"{option}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
-    # Sort all options other than domain, from, to, denyallow and method alphabetically
+    # Sort all options other than domain, from, to, denyallow, method and permissions alphabetically
     # For identical options, the inverse always follows the non-inverse option ($image,~image instead of $~image,image)
     optionlist = sorted(set(filter(lambda option: option not in removeentries, optionlist)),
                         key=lambda option: (option[1:] + "~") if option[0] == "~" else option)
@@ -327,6 +339,8 @@ def filtertidy(filterin, filename):
         optionlist.append(f'to={"|".join(sorted(set(filter(lambda domain: domain != "", tolist)), key=lambda domain: domain.strip("~")))}')
     if methodlist:
         optionlist.append(f'method={"|".join(sorted(set(filter(lambda domain: domain != "", methodlist)), key=lambda domain: domain.strip("~")))}')
+    if permissionslist:
+        optionlist.append(f'permissions={"|".join(sorted(set(filter(lambda domain: domain != "", permissionslist)), key=lambda domain: domain.strip("~")))}')
 
     # Return the full filter
     return f'{filtertext}${",".join(optionlist)}'
