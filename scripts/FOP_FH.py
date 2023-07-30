@@ -301,13 +301,13 @@ def filtertidy(filterin, filename):
                 argList = methodlist
                 methods = option[optionLength:].split("|")
                 for method in methods:
-                    if method not in KNOWN_METHODS:
+                    if method and method not in KNOWN_METHODS:
                         print(f"\nWarning: The method \"{method}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
             argList.extend(option[optionLength:].split("|"))
             removeentries.append(option)
         elif optionName in ("redirect", "redirect-rule"):
             redirectResource = option[optionLength:].split(":")[0]
-            if not re.match(KNOWN_REDIRECT_RESOURCES, redirectResource):
+            if redirectResource and not re.match(KNOWN_REDIRECT_RESOURCES, redirectResource):
                 print(f"\nWarning: Redirect resource \"{redirectResource}\" used on the filter \"{filterin}\" is not recognised by FOP [{filename}].")
         elif optionName not in KNOWNOPTIONS:
             print(
