@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.30
+VERSION = 3.31
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -93,7 +93,7 @@ KNOWN_METHODS = ("connect", "delete", "get", "head", "options", "patch", "post",
 KNOWN_REDIRECT_RESOURCES = re.compile(r"""
     (
     (abp-resource:)?1x1(-transparent)?(\.|-)gif|(2x2|3x2|32x32)(-transparent)?(\.|-)png|
-    abp-resource:(blank-css|blank-html|blank-js|blank-text|blank-mp3)|
+    abp-resource:blank(css|html|js|text|mp3|mp4)|
     empty|noopframe|noopjs|nooptext|
     noop\.(css|html|js|txt)|
     noop-(0\.1|0\.5)s\.mp3|noopmp3-0.1s|
@@ -305,7 +305,7 @@ def filtertidy(filterin, filename):
                 argList = tolist
             elif optionName == "denyallow":
                 argList = denyallowlist
-                if ("domain=" and "from") not in filterin:
+                if "domain=" not in filterin and "from=" not in filterin:
                     print(f"\nWarning: The option \"denyallow\" used on the filter \"{filterin}\" requires the \"domain\" option [{filename}].")
             elif optionName == "method":
                 argList = methodlist
