@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.31
+VERSION = 3.32
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -93,7 +93,7 @@ KNOWN_METHODS = ("connect", "delete", "get", "head", "options", "patch", "post",
 KNOWN_REDIRECT_RESOURCES = re.compile(r"""
     (
     (abp-resource:)?1x1(-transparent)?(\.|-)gif|(2x2|3x2|32x32)(-transparent)?(\.|-)png|
-    abp-resource:blank(css|html|js|text|mp3|mp4)|
+    abp-resource:blank-(css|html|js|text|mp3|mp4)|
     empty|noopframe|noopjs|nooptext|
     noop\.(css|html|js|txt)|
     noop-(0\.1|0\.5)s\.mp3|noopmp3-0.1s|
