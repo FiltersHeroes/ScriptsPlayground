@@ -1,0 +1,16 @@
+name: Issue Helper Beta
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  apply-label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: hawkeye116477/issue-manager-action@main
+        with:
+          configuration-path: .github/labels.yml
+          
