@@ -6,6 +6,7 @@ on:
 
 jobs:
   apply-label:
+    if: github.event.label.name == 'zatwierdzone' || github.event.label.name == 'wontfix'
     runs-on: ubuntu-latest
     permissions:
       issues: write
