@@ -1,8 +1,8 @@
-name: Issue Helper Beta
+name: Closed Issue Labeler
 
 on:
   issues:
-    types: [opened, edited]
+    types: [closed]
 
 jobs:
   apply-label:
@@ -12,5 +12,6 @@ jobs:
     steps:
       - uses: hawkeye116477/issue-manager-action@main
         with:
-          configuration-path: .github/labels.yml
-          
+          mode: "labelClosed"
+          completed-label: "zatwierdzone"
+          not-planned-label: "wontfix"

@@ -1,16 +1,18 @@
-name: Issue Labeler
+name: Doorman
 
 on:
   issues:
-    types: [opened, edited]
+    types: [labeled]
 
 jobs:
-  apply-label:
+  close:
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
       - uses: hawkeye116477/issue-manager-action@main
         with:
-          configuration-path: .github/labels.yml
-          mode: "labelOpened"
+          mode: "close"
+          completed-label: "zatwierdzone"
+          not-planned-label: "wontfix"
+ 
