@@ -1,7 +1,12 @@
 name: "Check Expired Domains From Filterlists"
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      number_of_KAD_jobs:
+        description: "Number of KAD jobs"
+        required: true
+        default: 3
   # schedule:
   #   - cron: "55 23 * * 6"
 
@@ -9,6 +14,8 @@ jobs:
   KAD_S:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
+    outputs:
+      job-strategy-matrix: ${{ steps.generate.outputs.job-strategy-matrix }}
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -25,10 +32,20 @@ jobs:
           name: E_KADH_S
           path: |
             split/KADhosts_0*
-  KAD_00:
+      - id: generate
+        run: |
+          JOB_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KAD_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
+          echo "::set-output name=job-strategy-matrix::$JOB_STRATEGY_MATRIX"
+        env:
+          NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
+  KAD:
     needs: KAD_S
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
+    strategy:
+      matrix:
+        job: ${{ fromJson(needs.KAD_S.outputs.job-strategy-matrix) }}
+      max-parallel: ${{ github.event.inputs.number_of_kad_jobs }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
@@ -37,204 +54,16 @@ jobs:
           path: split
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_00
-          echo 'E_KAD_00<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_00)" >> $GITHUB_ENV
+          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_0${{ matrix.job }}
+          echo 'E_KAD_0<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KAD_0${{ matrix.job }})" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
+          echo "currentKADName=E_KAD_0${{ matrix.job }}" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
         with:
-          name: E_KAD_00
+          name: ${{ env.currentKADName }}
           path: |
-            ${{ env.E_KAD_00 }}
-  KAD_01:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_01
-          echo 'E_KAD_01<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_01)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KAD_01
-          path: |
-            ${{ env.E_KAD_01 }}
-  KAD_02:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_02
-          echo 'E_KAD_02<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_02)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KAD_02
-          path: |
-            ${{ env.E_KAD_02 }}
-  KAD_03:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_03
-          echo 'E_KAD_03<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_03)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KAD_03
-          path: |
-            ${{ env.E_KAD_03 }}
-  KAD_04:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_04
-          echo 'E_KAD_04<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_04)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KAD_04
-          path: |
-            ${{ env.E_KAD_04 }}
-  # KAD_05:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KAD_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_05
-  #         echo 'E_KAD_05<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KAD_05)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KAD_05
-  #         path: |
-  #           ${{ env.E_KAD_05 }}
-  # KAD_06:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KAD_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_06
-  #         echo 'E_KAD_06<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KAD_06)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KAD_06
-  #         path: |
-  #           ${{ env.E_KAD_06 }}
-  # KAD_07:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KAD_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_07
-  #         echo 'E_KAD_07<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KAD_07)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KAD_07
-  #         path: |
-  #           ${{ env.E_KAD_07 }}
-  # KAD_08:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KAD_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KAD_08
-  #         echo 'E_KAD_08<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KAD_08)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KAD_08
-  #         path: |
-  #           ${{ env.E_KAD_08 }}
-  KADhosts_00:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KADH_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_00
-          echo 'E_KADH_00<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KADhosts_00)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KADH_00
-          path: |
-            ${{ env.E_KADH_00 }}
+            ${{ env.E_KAD_0 }}
   KADhosts_01:
     needs: KAD_S
     runs-on: ubuntu-latest
@@ -256,48 +85,27 @@ jobs:
           name: E_KADH_01
           path: |
             ${{ env.E_KADH_01 }}
-  # KADhosts_02:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KADH_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02
-  #         echo 'E_KADH_02<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KADhosts_02)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KADH_02
-  #         path: |
-  #           ${{ env.E_KADH_02 }}
-  # KADhosts_03:
-  #   needs: KAD_S
-  #   runs-on: ubuntu-latest
-  #   container: polishfiltersteam/expired_domains_image:latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: E_KADH_S
-  #         path: split
-  #     - run: |
-  #         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-  #         ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_03
-  #         echo 'E_KADH_03<<EOF' >> $GITHUB_ENV
-  #         echo "$(./scripts/CI/getFileListForED.sh KADhosts_03)" >> $GITHUB_ENV
-  #         echo 'EOF' >> $GITHUB_ENV
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: E_KADH_03
-  #         path: |
-  #           ${{ env.E_KADH_03 }}
+  KADhosts_02:
+    needs: KAD_S
+    runs-on: ubuntu-latest
+    container: polishfiltersteam/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: E_KADH_S
+          path: split
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02
+          echo 'E_KADH_02<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh KADhosts_02)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v3
+        with:
+          name: E_KADH_02
+          path: |
+            ${{ env.E_KADH_02 }}
   PAF:
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
@@ -366,47 +174,16 @@ jobs:
           path: |
             ${{ env.E_COOKIES }}
   KAD_limit:
-    needs: [KAD_00, KAD_01, KAD_02, KAD_03, KAD_04]
+    needs: [KAD]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: dawidd6/action-download-artifact@v2
         with:
-          name: E_KAD_00
+          name: E_KAD_0
           path: expired-domains
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_01
-          path: expired-domains
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_02
-          path: expired-domains
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_03
-          path: expired-domains
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KAD_04
-          path: expired-domains
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KAD_05
-      #     path: expired-domains
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KAD_06
-      #     path: expired-domains
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KAD_07
-      #     path: expired-domains
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KAD_08
-      #     path: expired-domains
+          name_is_regexp: true
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
@@ -419,7 +196,7 @@ jobs:
           path: |
             ${{ env.E_KAD }}
   deploy:
-    needs: [KAD_limit, KADhosts_00, KADhosts_01, PAF, SocialPASS, Cookies]
+    needs: [KAD_limit, KADhosts_01, KADhosts_02, PAF, SocialPASS, Cookies]
     runs-on: ubuntu-latest
     container: polishfiltersteam/expired_domains_image:latest
     steps:
