@@ -56,11 +56,12 @@ jobs:
           path: split
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KAD_0${{ matrix.KAD }}
+          KADfile=KAD_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KAD }} )"
+          ./scripts/CI/CI_LETS_DO_THIS.sh "$KADfile"
           echo 'E_KAD_0<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KAD_0${{ matrix.KAD }})" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh $KADfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-          echo "currentKADName=E_KAD_0${{ matrix.KAD }}" >> $GITHUB_ENV
+          echo "currentKADName=E_$KADfile" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ env.currentKADName }}

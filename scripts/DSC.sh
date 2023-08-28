@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.14
+# Current Version: 1.0.15
 #
 #
 # Purpose:
@@ -68,6 +68,8 @@ VERSION=$(${AWK} -F': ' '/^# Current Version:/ {print $2; exit}' $0)
 WHOIS_TMP="/var/tmp/whois.$$"
 WHOIS_2_TMP="/var/tmp/whois_2.$$"
 
+# Current date
+CURRENT_TIME=$(date -d)
 
 ##################################################################
 # Purpose: Access whois data to grab the expiration date
@@ -76,6 +78,16 @@ WHOIS_2_TMP="/var/tmp/whois_2.$$"
 ##################################################################
 check_domain_status()
 {
+    # Avoid failing whole job on CI/gracefully fail script
+    if [ "$CI" = "true" ]; 
+    then
+        if [ "$CURRENT_TIME" -ge "$END_TIME" ];
+        then
+            echo "Maximum time limit reached for running on CI."
+            exit 0
+        fi
+    fi
+
     # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
     sleep 3
     # Save the domain since set will trip up the ordering
@@ -234,17 +246,19 @@ usage()
     echo "  -x days          : Domain expiration interval (eg. if domain_date < days)"
     echo "  -v               : Show debug information when running script"
     echo "  -V               : Print version of the script"
+    echo "  -t time limit    : Time limit for running script on CI"
     echo ""
 }
 
 ### Evaluate the options passed on the command line
-while getopts ad:e:f:hs:qx:vV option
+while getopts ad:e:f:hs:qx:vV:t option
 do
     case "${option}"
     in
         d) DOMAIN=${OPTARG};;
         f) SERVERFILE=$OPTARG;;
         s) WHOIS_SERVER=$OPTARG;;
+        t) END_TIME=$(date -d "+$OPTARG");;
         q) QUIET="TRUE";;
         x) WARNDAYS=$OPTARG;;
         v) VERBOSE="TRUE";;
