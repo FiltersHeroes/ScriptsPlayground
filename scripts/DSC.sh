@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.15
+# Current Version: 1.0.16
 #
 #
 # Purpose:
@@ -69,7 +69,7 @@ WHOIS_TMP="/var/tmp/whois.$$"
 WHOIS_2_TMP="/var/tmp/whois_2.$$"
 
 # Current date
-CURRENT_TIME=$(date -d)
+CURRENT_TIME=$(date -d "now" +%s)
 
 ##################################################################
 # Purpose: Access whois data to grab the expiration date
@@ -235,7 +235,7 @@ prints()
 ##########################################
 usage()
 {
-    echo "Usage: $0 [ -x expir_days ] [ -s whois server ] [ -q ] [ -h ] [ -v ] [ -V ]"
+    echo "Usage: $0 [ -x expir_days ] [ -s whois server ] [ -q ] [ -h ] [ -v ] [ -V ] [ -t time limit]"
     echo "	  {[ -d domain_namee ]} || { -f domainfile}"
     echo ""
     echo "  -d domain        : Domain to analyze (interactive mode)"
@@ -251,14 +251,14 @@ usage()
 }
 
 ### Evaluate the options passed on the command line
-while getopts ad:e:f:hs:qx:vV:t option
+while getopts ad:e:f:hs:qx:t:vV option
 do
     case "${option}"
     in
         d) DOMAIN=${OPTARG};;
         f) SERVERFILE=$OPTARG;;
         s) WHOIS_SERVER=$OPTARG;;
-        t) END_TIME=$(date -d "+$OPTARG");;
+        t) END_TIME=$(date -d "+$OPTARG" +%s);;
         q) QUIET="TRUE";;
         x) WARNDAYS=$OPTARG;;
         v) VERBOSE="TRUE";;

@@ -27,7 +27,7 @@ if [[ $1 == "KAD" ]]; then
     wget -O KAD.txt https://raw.githubusercontent.com/FiltersHeroes/KAD/master/KAD.txt
     mkdir -p "$MAIN_PATH"/split/
     split --numeric=1 -d -n l/"$numberParts" "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
-elif [[ $1 == "KAD_00" || $1 == "KAD_01" || $1 == "KAD_02" || $1 == "KAD_03" || $1 == "KAD_04" || $1 == "KAD_05" || $1 == "KAD_06" || $1 == "KAD_07" || $1 == "KAD_08" || $1 == "KAD_09" || $1 == "KAD_10" || $1 == "KADhosts_00" || $1 == "KADhosts_01" || $1 == "KADhosts_02" || $1 == "KADhosts_03" ]]; then
+elif [[ $1 =~ KAD_ || $1 =~ KADhosts_ ]]; then
     ./scripts/ECODFF.sh ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then

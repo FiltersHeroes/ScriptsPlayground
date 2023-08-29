@@ -4,27 +4,33 @@ on:
   workflow_dispatch:
     inputs:
       number_of_KAD_jobs:
-        description: "Number of KAD jobs"
+        description: "Quantity of KAD jobs"
         required: true
-        default: 3
+        default: 4
+      number_of_KADh_jobs:
+        description: "Quantity of KADhosts jobs"
+        required: true
+        default: 2
   # schedule:
   #   - cron: "55 23 * * 6"
 
 jobs:
   KAD_S:
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     outputs:
-      job-strategy-matrix: ${{ steps.generate.outputs.job-strategy-matrix }}
+      KAD-strategy-matrix: ${{ steps.generate.outputs.KAD-strategy-matrix }}
+      KADh-strategy-matrix: ${{ steps.generate.outputs.KADh-strategy-matrix }}
+    env:
+      NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
+      NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
     steps:
       - uses: actions/checkout@v3
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
           numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.sh KAD
-          numberParts="2" ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
-        env:
-          NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
+          numberParts="$NUMBER_OF_KADHOSTS_JOBS" ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
       - uses: actions/upload-artifact@v3
         with:
           name: E_KAD_S
@@ -34,20 +40,20 @@ jobs:
         with:
           name: E_KADH_S
           path: |
-            split/KADhosts_0*
+            split/KADhosts_*
       - id: generate
         run: |
-          JOB_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KAD_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
-          echo "::set-output name=job-strategy-matrix::$JOB_STRATEGY_MATRIX"
-        env:
-          NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
+          KAD_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KAD_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
+          echo "KAD-strategy-matrix=$KAD_STRATEGY_MATRIX" >> $GITHUB_OUTPUT
+          KADH_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KADHOSTS_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
+          echo "KADh-strategy-matrix=$KADH_STRATEGY_MATRIX" >> $GITHUB_OUTPUT
   KAD:
     needs: KAD_S
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     strategy:
       matrix:
-        KAD: ${{ fromJson(needs.KAD_S.outputs.job-strategy-matrix) }}
+        KAD: ${{ fromJson(needs.KAD_S.outputs.KAD-strategy-matrix) }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
@@ -58,7 +64,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           KADfile=KAD_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KAD }} )"
           ./scripts/CI/CI_LETS_DO_THIS.sh "$KADfile"
-          echo 'E_KAD_0<<EOF' >> $GITHUB_ENV
+          echo 'E_KADS<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh $KADfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
           echo "currentKADName=E_$KADfile" >> $GITHUB_ENV
@@ -66,11 +72,14 @@ jobs:
         with:
           name: ${{ env.currentKADName }}
           path: |
-            ${{ env.E_KAD_0 }}
-  KADhosts_01:
+            ${{ env.E_KADS }}
+  KADhosts:
     needs: KAD_S
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
+    strategy:
+      matrix:
+        KADH: ${{ fromJson(needs.KAD_S.outputs.KADh-strategy-matrix) }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
@@ -79,39 +88,20 @@ jobs:
           path: split
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_01
-          echo 'E_KADH_01<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KADhosts_01)" >> $GITHUB_ENV
+          KADHfile=KADhosts_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KADH }} )"
+          ./scripts/CI/CI_LETS_DO_THIS.sh "$KADHfile"
+          echo 'E_KADHS<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh $KADHfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
+          echo "currentKADHName=E_$KADHfile" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
         with:
-          name: E_KADH_01
+          name: ${{ env.currentKADHName }}
           path: |
-            ${{ env.E_KADH_01 }}
-  KADhosts_02:
-    needs: KAD_S
-    runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: E_KADH_S
-          path: split
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts_02
-          echo 'E_KADH_02<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh KADhosts_02)" >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
-        with:
-          name: E_KADH_02
-          path: |
-            ${{ env.E_KADH_02 }}
+            ${{ env.E_KADHS }}
   PAF:
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -145,7 +135,7 @@ jobs:
             ${{ env.E_PAF }}
   SocialPASS:
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -162,7 +152,7 @@ jobs:
             ${{ env.E_SOCIAL }}
   Cookies:
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -179,14 +169,15 @@ jobs:
   KAD_limit:
     needs: [KAD]
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
       - uses: dawidd6/action-download-artifact@v2
         with:
-          name: E_KAD_0
+          name: E_KAD_
           path: expired-domains
           name_is_regexp: true
+          run_id: ${{ github.event.workflow_run.id }}
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
@@ -199,9 +190,9 @@ jobs:
           path: |
             ${{ env.E_KAD }}
   deploy:
-    needs: [KAD_limit, KADhosts_01, KADhosts_02, PAF, SocialPASS, Cookies]
+    needs: [KAD_limit, KADhosts, PAF, SocialPASS, Cookies]
     runs-on: ubuntu-latest
-    container: polishfiltersteam/expired_domains_image:latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v3
       ## See https://github.com/actions/download-artifact/issues/68
@@ -214,25 +205,12 @@ jobs:
           name: E_KAD
           path: expired-domains
       - continue-on-error: true
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
         with:
-          name: E_KADH_00
+          name: E_KADH_
           path: expired-domains
-      - continue-on-error: true
-        uses: actions/download-artifact@v3
-        with:
-          name: E_KADH_01
-          path: expired-domains
-      # - continue-on-error: true
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KADH_02
-      #     path: expired-domains
-      # - continue-on-error: true
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: E_KADH_03
-      #     path: expired-domains
+          name_is_regexp: true
+          run_id: ${{ github.event.workflow_run.id }}
       - continue-on-error: true
         uses: actions/download-artifact@v3
         with:
