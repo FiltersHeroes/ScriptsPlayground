@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.16
+# Current Version: 1.0.17
 #
 #
 # Purpose:
@@ -68,9 +68,6 @@ VERSION=$(${AWK} -F': ' '/^# Current Version:/ {print $2; exit}' $0)
 WHOIS_TMP="/var/tmp/whois.$$"
 WHOIS_2_TMP="/var/tmp/whois_2.$$"
 
-# Current date
-CURRENT_TIME=$(date -d "now" +%s)
-
 ##################################################################
 # Purpose: Access whois data to grab the expiration date
 # Arguments:
@@ -81,13 +78,14 @@ check_domain_status()
     # Avoid failing whole job on CI/gracefully fail script
     if [ "$CI" = "true" ]; 
     then
+        CURRENT_TIME=$(date -d "now" +%s)
         if [ "$CURRENT_TIME" -ge "$END_TIME" ];
         then
             echo "Maximum time limit reached for running on CI."
             exit 0
         fi
     fi
-
+    
     # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
     sleep 3
     # Save the domain since set will trip up the ordering
