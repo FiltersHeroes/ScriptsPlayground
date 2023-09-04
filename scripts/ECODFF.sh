@@ -127,7 +127,7 @@ EOF
     fi
 
     if [ -f "$TEMPORARY.3" ]; then
-        ${DSC} -f "$TEMPORARY".3 | tee "$TEMPORARY".4
+        "${DSC[@]}" -f "$TEMPORARY".3 | tee "$TEMPORARY".4
 
         touch "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
 
@@ -162,7 +162,7 @@ EOF
     fi
 
     if [ -f "$TEMPORARY.6" ]; then
-        ${DSC} -f "$TEMPORARY".6 | tee "$TEMPORARY".7
+        "${DSC[@]}" -f "$TEMPORARY".6 | tee "$TEMPORARY".7
 
         {
             sed '/Expired/!d' "$TEMPORARY".7 | cut -d' ' -f1

@@ -79,6 +79,8 @@ check_domain_status()
     if [ "$CI" = "true" ]; 
     then
         CURRENT_TIME=$(date -d "now" +%s)
+        echo "currently: $CURRENT_TIME"
+        echo "END: $END_TIME"
         if [ "$CURRENT_TIME" -ge "$END_TIME" ];
         then
             echo "Maximum time limit reached for running on CI."
@@ -109,7 +111,12 @@ check_domain_status()
         ${CURL} -s "https://api.ps.kz/kzdomain/domain-whois?username=test&password=test&input_format=http&output_format=get&dname=${1}" \
         | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_2_TMP}
     else
-        ${WHOIS} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
+        if [ -n "${WHOIS_SERVER}" ];
+        then
+            ${WHOIS} -h ${WHOIS_SERVER} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
+        else
+            ${WHOIS} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
+        fi
     fi
 
     removed=$(cat ${WHOIS_TMP} | ${GREP} "The queried object does not exist: previous registration")
@@ -117,7 +124,7 @@ check_domain_status()
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
     export LC_ALL=en_US.UTF-8
 
-    if adate=$(cat ${WHOIS_TMP} | ${GREP} -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento)(.*)(\:|\])'); then
+    if adate=$(cat ${WHOIS_TMP} | ${GREP} -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento)(.*)(:|\])'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
 			adate=${adate%.}
 			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | ${AWK} -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
@@ -249,7 +256,7 @@ usage()
 }
 
 ### Evaluate the options passed on the command line
-while getopts ad:e:f:hs:qx:t:vV option
+while getopts ":d:f:s:t:q:x:v:V:" option
 do
     case "${option}"
     in
