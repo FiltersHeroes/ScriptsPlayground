@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ECODFF - Expiration Check Of Domains From Filterlists
-# v1.19.5
+# v1.19.6
 
 # MIT License
 
@@ -37,6 +37,11 @@ if [ -z "$MAIN_PATH" ]; then
 fi
 
 cd "$MAIN_PATH" || exit
+
+DSC=$SCRIPT_PATH/DSC.sh
+if [ -n "$CI_TIME_LIMIT" ]; then
+    DSC=("$SCRIPT_PATH"/DSC.sh -t "$CI_TIME_LIMIT")
+fi
 
 for i in "$@"; do
 
@@ -122,7 +127,7 @@ EOF
     fi
 
     if [ -f "$TEMPORARY.3" ]; then
-        "$SCRIPT_PATH"/DSC.sh -t "2 hours 30 minutes" -f "$TEMPORARY".3 | tee "$TEMPORARY".4
+        ${DSC} -f "$TEMPORARY".3 | tee "$TEMPORARY".4
 
         touch "$MAIN_PATH"/expired-domains/"$FILTERLIST"-unknown.txt
 
@@ -157,7 +162,7 @@ EOF
     fi
 
     if [ -f "$TEMPORARY.6" ]; then
-        "$SCRIPT_PATH"/DSC.sh -t "2 hours 30 minutes" -f "$TEMPORARY".6 | tee "$TEMPORARY".7
+        ${DSC} -f "$TEMPORARY".6 | tee "$TEMPORARY".7
 
         {
             sed '/Expired/!d' "$TEMPORARY".7 | cut -d' ' -f1
