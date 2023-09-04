@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.17
+# Current Version: 1.0.18
 #
 #
 # Purpose:
@@ -34,9 +34,6 @@
 #
 #
 #
-PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/ssl/bin:/usr/sfw/bin
-export PATH
-
 # Number of days in the warning threshhold  (cmdline: -x)
 WARNDAYS=30
 
@@ -49,24 +46,16 @@ VERSIONENABLE="FALSE"
 # Don't show debug information by default (cmdline: -vv)
 VERBOSE="FALSE"
 
-# Whois server to use (cmdline: -s)
-WHOIS_SERVER="whois.internic.org"
-
-# Location of system binaries
-AWK=`which awk`
-WHOIS=`which whois`
-DATE=`which date`
-CUT=`which cut`
-GREP=`which grep`
-TR=`which tr`
-CURL=`which curl`
-
 # Version of the script
-VERSION=$(${AWK} -F': ' '/^# Current Version:/ {print $2; exit}' $0)
+VERSION=$(awk -F': ' '/^# Current Version:/ {print $2; exit}' $0)
+
+# User-Agent
+VARUSERAGENT="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
 
 # Place to stash temporary files
 WHOIS_TMP="/var/tmp/whois.$$"
 WHOIS_2_TMP="/var/tmp/whois_2.$$"
+
 
 ##################################################################
 # Purpose: Access whois data to grab the expiration date
@@ -75,13 +64,12 @@ WHOIS_2_TMP="/var/tmp/whois_2.$$"
 ##################################################################
 check_domain_status()
 {
+    NOW=${EPOCHSECONDS:-$(date +%s)}
+
     # Avoid failing whole job on CI/gracefully fail script
     if [ "$CI" = "true" ]; 
     then
-        CURRENT_TIME=$(date -d "now" +%s)
-        echo "currently: $CURRENT_TIME"
-        echo "END: $END_TIME"
-        if [ "$CURRENT_TIME" -ge "$END_TIME" ];
+        if [ "$NOW" -ge "$END_TIME" ];
         then
             echo "Maximum time limit reached for running on CI."
             exit 0
@@ -92,44 +80,36 @@ check_domain_status()
     sleep 3
     # Save the domain since set will trip up the ordering
     DOMAIN=${1}
-    TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($NF);}')
+    TLDTYPE=$(echo ${DOMAIN} | awk -F. '{print tolower($NF);}')
     if [ "${TLDTYPE}"  == "" ];
     then
-        TLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($(NF-1));}')
+        TLDTYPE=$(echo ${DOMAIN} | awk -F. '{print tolower($(NF-1));}')
     fi
     if [ "${TLDTYPE}"  == "ua" -o "${TLDTYPE}"  == "pl" -o "${TLDTYPE}"  == "net" ];
     then
-        SUBTLDTYPE=$(echo ${DOMAIN} | ${AWK} -F. '{print tolower($(NF-1)"."$(NF));}')
+        SUBTLDTYPE=$(echo ${DOMAIN} | awk -F. '{print tolower($(NF-1)"."$(NF));}')
     fi
 
     # Invoke whois to find the domain expiration date
-    #${WHOIS} -h ${WHOIS_SERVER} "=${1}" > ${WHOIS_TMP}
-    # Let whois select server
-
     if [ "${TLDTYPE}" == "kz" ];
     then
-        ${CURL} -s "https://api.ps.kz/kzdomain/domain-whois?username=test&password=test&input_format=http&output_format=get&dname=${1}" \
-        | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_2_TMP}
+        curl -s -A "$VARUSERAGENT" "https://www.ps.kz/domains/whois/result?q=${1}" \
+        | env LC_CTYPE=C LC_ALL=C tr -d "\r" > ${WHOIS_2_TMP}
     else
-        if [ -n "${WHOIS_SERVER}" ];
-        then
-            ${WHOIS} -h ${WHOIS_SERVER} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-        else
-            ${WHOIS} "${1}" | env LC_CTYPE=C LC_ALL=C ${TR} -d "\r" > ${WHOIS_TMP}
-        fi
+        whois "${1}" | env LC_CTYPE=C LC_ALL=C tr -d "\r" > ${WHOIS_TMP}
     fi
 
-    removed=$(cat ${WHOIS_TMP} | ${GREP} "The queried object does not exist: previous registration")
+    removed=$(cat ${WHOIS_TMP} | grep "The queried object does not exist: previous registration")
 
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
     export LC_ALL=en_US.UTF-8
 
-    if adate=$(cat ${WHOIS_TMP} | ${GREP} -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento)(.*)(:|\])'); then
+    if adate=$(cat ${WHOIS_TMP} | grep -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento|exp date|validity|vencimiento|registry fee due|fecha de corte)(.*)(:|\])'); then
 			adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
 			adate=${adate%.}
-			if date=$(${DATE}  -u -d "$adate" 2>&1) || date=$(${DATE}  -u -d "${adate//./-}" 2>&1) || date=$(${DATE}  -u -d "${adate//.//}" 2>&1) || date=$(${DATE} -u -d "$(echo "${adate//./-}" | ${AWK} -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
-				DOMAINDATE=$(${DATE} -d "$date" +"%d-%b-%Y-%T-%Z")
-				sec=$(( $(${DATE} -d "$date" +%s) - $(${DATE} -d "$NOW" +%s) ))
+			if date=$(date -u -d "$adate" 2>&1) || date=$(date -u -d "${adate//./-}" 2>&1) || date=$(date -u -d "${adate//.//}" 2>&1) || date=$(date -u -d "$(echo "${adate//./-}" | awk -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
+				DOMAINDATE=$(date -d "$date" +"%d-%b-%Y-%T-%Z")
+				sec=$(( $(date -d "$date" +%s) - NOW ))
 				DOMAINDIFF=$(( sec / 86400 ))
 			else
 				DOMAINDATE="Unknown ($adate)" # date="Error: Could not input domain expiration date ($adate)."
@@ -137,61 +117,61 @@ check_domain_status()
 			fi
     elif [ "${TLDTYPE}" == "kz" ]; # for .kz @click0 2019/02/23
     then
-        adate=`${GREP} -A 1 "expire" ${WHOIS_2_TMP} | ${GREP} "utc" | ${AWK} -F\" '{print $4;}'`
-        DOMAINDATE=$(${DATE} -d "${adate}" +"%d-%b-%Y-%T-%Z")
-        sec=$(( $(${DATE} -d "$adate" +%s) - $(${DATE} -d "$NOW" +%s) ))
+        adate=$(grep -A 2 'Дата окончания:' ${WHOIS_2_TMP} | tail -n 1 | awk '{print $1;}' | awk -FT '{print $1}')
+        DOMAINDATE=$(date -d "${adate}" +"%d-%b-%Y-%T-%Z")
+        sec=$(( $(date -d "$date" +%s) - NOW ))
         DOMAINDIFF=$(( sec / 86400 ))
-    elif [ ! -z "$removed" ]
+    elif [ -n "$removed" ]
     then
-        adate=`${GREP} -oP -m 1 "was purged on \K.*" ${WHOIS_TMP} | ${AWK} -F\" '{print $1;}'`
-        DOMAINDATE=$(${DATE} -d "${adate}" +"%d-%b-%Y-%T-%Z")
-        sec=$(( $(${DATE} -d "$adate" +%s) - $(${DATE} -d "$NOW" +%s) ))
+        adate=$(grep -oP -m 1 "was purged on \K.*" ${WHOIS_TMP} | awk -F\" '{print $1;}')
+        DOMAINDATE=$(date -d "${adate}" +"%d-%b-%Y-%T-%Z")
+        sec=$(( $(date -d "$date" +%s) - NOW ))
         DOMAINDIFF=$(( sec / 86400 ))
 	else
         DOMAINDATE="Unknown" # date="Error: Could not get domain expiration date."
         DOMAINDIFF="Unknown"
     fi
 
-    book_blocked=$(cat ${WHOIS_TMP} | ${GREP} "after release from the queue, available for registration")
-    suspended=$(cat ${WHOIS_TMP} | ${GREP} "is undergoing proceeding")
-    active=$(cat ${WHOIS_TMP} | ${GREP} "Status: [[:space:]]*active")
-    free=$(cat ${WHOIS_TMP} | ${GREP} "is free")
-    suspended_reserved=$(cat ${WHOIS_TMP} | ${GREP} "cancelled, suspended, refused or reserved at the" )
-    redemption_period=$(cat ${WHOIS_TMP} | ${GREP} "redemptionPeriod" )
-    reserved=$(cat ${WHOIS_TMP} | ${GREP} "is queued up for registration" )
-    limit_exceeded=$(cat ${WHOIS_TMP} | ${GREP} -Ei "request limit exceeded|Query rate exceeded")
+    book_blocked=$(cat ${WHOIS_TMP} | grep "after release from the queue, available for registration")
+    suspended=$(cat ${WHOIS_TMP} | grep "is undergoing proceeding")
+    active=$(cat ${WHOIS_TMP} | grep "Status: [[:space:]]*active")
+    free=$(cat ${WHOIS_TMP} | grep "is free")
+    suspended_reserved=$(cat ${WHOIS_TMP} | grep "cancelled, suspended, refused or reserved at the" )
+    redemption_period=$(cat ${WHOIS_TMP} | grep "redemptionPeriod" )
+    reserved=$(cat ${WHOIS_TMP} | grep "is queued up for registration" )
+    limit_exceeded=$(cat ${WHOIS_TMP} | grep -Ei "request limit exceeded|Query rate exceeded")
 
-    if [ ! -z "$removed" ]
+    if [ -n "$removed" ]
     then
         prints "${DOMAIN}" "Removed" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$suspended_reserved" ]
+    elif [ -n "$suspended_reserved" ]
     then
         prints "${DOMAIN}" "Suspended_or_reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$suspended" ]
+    elif [ -n "$suspended" ]
     then
         prints "${DOMAIN}" "Suspended" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$book_blocked" ]
+    elif [ -n "$book_blocked" ]
     then
         prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "$reserved" ]
+    elif [ -n "$reserved" ]
     then
         prints "${DOMAIN}" "Reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt 0 ]
     then
         prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${redemption_period}" ]
+    elif [ -n "${redemption_period}" ]
     then
         prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt ${WARNDAYS} ]
+    elif [ ! ${DOMAINDIFF} == "Unknown" ] && [ ${DOMAINDIFF} -lt "${WARNDAYS}" ]
     then
         prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${free}" ]
+    elif [ -n "${free}" ]
     then
         prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -z "${limit_exceeded}" ]
+    elif [ -n "${limit_exceeded}" ]
     then
         prints "${DOMAIN}" "Limit_exceeded" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -s "${WHOIS_TMP}" ]
+    elif [ ! -s "${WHOIS_TMP}" ] && [ ! -s "${WHOIS_2_TMP}" ]
     then
         prints "${DOMAIN}" "No_internet" "${DOMAINDATE}" "${DOMAINDIFF}"
     elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]
@@ -228,7 +208,7 @@ prints()
 {
     if [ "${QUIET}" != "TRUE" ]
     then
-        MIN_DATE=$(echo $3 | ${AWK} '{ print $1, $2, $4 }')
+        MIN_DATE=$(echo $3 | awk '{ print $1, $2, $4 }')
         printf "%-35s %-21s %-31s %-5s\n" "$1" "$2" "$MIN_DATE" "$4"
     fi
 }
@@ -246,7 +226,6 @@ usage()
     echo "  -d domain        : Domain to analyze (interactive mode)"
     echo "  -f domain file   : File with a list of domains"
     echo "  -h               : Print this screen"
-    echo "  -s whois server  : Whois sever to query for information"
     echo "  -q               : Don't print anything on the console"
     echo "  -x days          : Domain expiration interval (eg. if domain_date < days)"
     echo "  -v               : Show debug information when running script"
@@ -256,13 +235,12 @@ usage()
 }
 
 ### Evaluate the options passed on the command line
-while getopts ":d:f:s:t:q:x:v:V:" option
+while getopts d:f:s:qx:t:vV option
 do
     case "${option}"
     in
         d) DOMAIN=${OPTARG};;
         f) SERVERFILE=$OPTARG;;
-        s) WHOIS_SERVER=$OPTARG;;
         t) END_TIME=$(date -d "+$OPTARG" +%s);;
         q) QUIET="TRUE";;
         x) WARNDAYS=$OPTARG;;
@@ -277,22 +255,6 @@ done
 if [ "${VERBOSE}" == "TRUE" ]
 then
     set -x
-fi
-
-### Check to see if the whois binary exists
-if [ ! -f ${WHOIS} ]
-then
-    echo "ERROR: The whois binary does not exist in ${WHOIS} ."
-    echo "  FIX: Please modify the \$WHOIS variable in the program header."
-    exit 1
-fi
-
-### Check to make sure a date utility is available
-if [ ! -f ${DATE} ]
-then
-    echo "ERROR: The date binary does not exist in ${DATE} ."
-    echo "  FIX: Please modify the \$DATE variable in the program header."
-    exit 1
 fi
 
 ### Print version of the script
