@@ -174,9 +174,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dawidd6/action-download-artifact@v2
         with:
-          name: E_KAD_
+          name: E_KAD_.
           path: expired-domains
           name_is_regexp: true
+          search_artifacts: true
+          check_artifacts: true
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
@@ -206,10 +208,10 @@ jobs:
       - continue-on-error: true
         uses: dawidd6/action-download-artifact@v2
         with:
-          name: E_KADH_
+          name: E_KADH_.*
           path: expired-domains
           name_is_regexp: true
-          run_id: ${{ github.event.workflow_run.id }}
+          search_artifacts: true
       - continue-on-error: true
         uses: actions/download-artifact@v3
         with:
