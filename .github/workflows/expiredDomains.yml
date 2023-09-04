@@ -25,7 +25,7 @@ jobs:
       NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
       NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
@@ -55,7 +55,7 @@ jobs:
       matrix:
         KAD: ${{ fromJson(needs.KAD_S.outputs.KAD-strategy-matrix) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: E_KAD_S
@@ -81,7 +81,7 @@ jobs:
       matrix:
         KADH: ${{ fromJson(needs.KAD_S.outputs.KADh-strategy-matrix) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: E_KADH_S
@@ -103,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh PAF_C
@@ -137,7 +137,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh Social_C
@@ -154,7 +154,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.sh Cookies_C
@@ -171,7 +171,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dawidd6/action-download-artifact@v2
         with:
           name: E_KAD_
@@ -193,7 +193,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       ## See https://github.com/actions/download-artifact/issues/68
       ## Unfortunately currently it's not possible to skip creating extra directory
       ## when we want to download all artifacts at once without specyfing name.
