@@ -19,7 +19,7 @@ function letsGo() {
             F_NAME="polish_rss_filters_supp.txt"
         fi
         wget -O "$F_NAME" "$i"
-        ./scripts/ECODFF.sh "$F_NAME"
+        ./scripts/ECODFF.py "$F_NAME"
         rm -rf ./"$F_NAME"
     done
 }
@@ -31,7 +31,7 @@ if [[ $1 == "KAD" ]]; then
     mkdir -p "$MAIN_PATH"/split/
     split --numeric=1 -d -n l/"$numberParts" "$MAIN_PATH"/KAD.txt "$MAIN_PATH"/split/KAD_
 elif [[ $1 =~ KAD_ || $1 =~ KADhosts_ ]]; then
-    ./scripts/ECODFF.sh ./split/"$1"
+    ./scripts/ECODFF.py ./split/"$1"
     rm -rf ./"$1"
 elif [[ $1 == "KADhosts" ]]; then
     wget -O KADhosts.txt https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus.txt

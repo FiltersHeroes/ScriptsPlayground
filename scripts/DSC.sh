@@ -67,7 +67,7 @@ check_domain_status()
     NOW=${EPOCHSECONDS:-$(date +%s)}
 
     # Avoid failing whole job on CI/gracefully fail script
-    if [ "$CI" = "true" ]; 
+    if [ "$CI" = "true" ];
     then
         if [ "$NOW" -ge "$END_TIME" ];
         then
@@ -75,7 +75,7 @@ check_domain_status()
             exit 0
         fi
     fi
-    
+
     # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
     sleep 3
     # Save the domain since set will trip up the ordering

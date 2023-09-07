@@ -31,7 +31,7 @@ from pathlib import Path
 import tldextract
 
 
-def main(subdomains_file):
+def main(subdomains):
     domains = []
     home = str(Path.home())
     cachePath = os.path.join(home, '.cache')
@@ -42,10 +42,9 @@ def main(subdomains_file):
     extract = tldextract.TLDExtract(include_psl_private_domains=True)
     extract.update()
 
-    with open(subdomains_file, "r", encoding='utf-8') as subdomains:
-        for line in subdomains:
-            if extract(line).registered_domain != "":
-                domains.append(extract(line).registered_domain)
-            else:
-                domains.append(line.strip())
+    for line in subdomains:
+        if extract(line).registered_domain != "":
+            domains.append(extract(line).registered_domain)
+        else:
+            domains.append(line.strip())
     return domains
