@@ -3,7 +3,7 @@ FROM ubuntu:latest
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y git openssh-client ca-certificates wget tzdata whois language-pack-pl curl python3-tldextract nodejs python3-dnspython python3-aiohttp
+RUN apt-get update && apt-get install -y git openssh-client ca-certificates wget tzdata whois language-pack-pl curl python3-tldextract nodejs python3-dnspython python3-aiohttp npm
 
 # uncomment chosen locale to enable it's generation
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
