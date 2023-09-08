@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.1"
+SCRIPT_VERSION = "2.0.2"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -125,13 +125,21 @@ for path_to_file in args.path_to_file:
     parked_domains = []
     offline_pages = []
 
+    sem = asyncio.Semaphore(100)
     async def domain_dns_check(domain):
-        print("Checking the status of domains...")
         try:
-            await resolve(domain)
-            answers_NS = await resolve(domain, "NS", raise_on_no_answer=False)
-        except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
+            async with sem:
+                print("Checking the status of domains...")
+                answers_NS = await resolve(domain, "NS")
+        except (NXDOMAIN, Timeout):
             offline_pages.append(domain)
+        except (NoAnswer, NoNameservers):
+            try:
+                async with sem:
+                    print("Checking the status of domains...")
+                    await resolve(domain)
+            except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
+                offline_pages.append(domain)
         else:
             if any((PARKED_PAT.search(str(answer)) for answer in answers_NS)):
                 parked_domains.append(domain)
@@ -145,7 +153,7 @@ for path_to_file in args.path_to_file:
     if parked_domains:
         with open(PARKED_FILE, 'w', encoding="utf-8") as p_f:
             for parked_domain in parked_domains:
-                p_f.write(f"{parked_domain}\n".encode())
+                p_f.write(f"{parked_domain}\n")
         del parked_domains
 
     if not offline_pages:
@@ -259,17 +267,19 @@ for path_to_file in args.path_to_file:
 
     async def get_status_code(session: aiohttp.ClientSession, url: str):
         try:
-            print("Checking the status of domains...")
-            resp = await session.head("http://"+url, timeout=10)
-            status_code = resp.status
-            if status_code == "301":
-                resp = await session.head("https://"+url, timeout=10)
+            async with sem:
+                print("Checking the status of domains...")
+                resp = await session.head(f"http://{url}", timeout=10)
                 status_code = resp.status
+                if status_code == "301":
+                    print("Checking the status of domains...")
+                    resp = await session.head(f"https://{url}", timeout=10)
+                    status_code = resp.status
         except aiohttp.ClientConnectorError:
             status_code = "000"
         result = url
         if not "NO_SC" in os.environ:
-            result += " " + status_code
+            result += f" {str(status_code)}"
         return result
 
     async def save_status_code():
@@ -277,6 +287,7 @@ for path_to_file in args.path_to_file:
             statuses = await asyncio.gather(*[get_status_code(session, url) for url in unknown_pages], return_exceptions=True)
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
+                    print(status)
                     if status != "200":
                         u_f.write(f"{status}\n")
 

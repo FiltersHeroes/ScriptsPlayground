@@ -170,17 +170,24 @@ jobs:
     needs: [KAD]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
+    env:
+      NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
     steps:
       - uses: actions/checkout@v4
-      - uses: dawidd6/action-download-artifact@v2
-        with:
-          name: E_KAD_.
-          path: expired-domains
-          name_is_regexp: true
-          search_artifacts: true
-          check_artifacts: true
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/getArtifactNamesForED.py KAD
+      - uses: actions/github-script@v6
+        continue-on-error: true
+        with:
+          script: |
+            const artifact = require("@actions/artifact")
+            const artifactClient = artifact.create()
+            const artifactNames = process.env.E_KAD_NAMES.split(" ")
+            for (artifactName of artifactNames) {
+              await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
+            }
+      - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
@@ -194,6 +201,8 @@ jobs:
     needs: [KAD_limit, KADhosts, PAF, SocialPASS, Cookies]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
+    env:
+      NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
     steps:
       - uses: actions/checkout@v4
       ## See https://github.com/actions/download-artifact/issues/68
@@ -205,13 +214,20 @@ jobs:
         with:
           name: E_KAD
           path: expired-domains
-      - continue-on-error: true
-        uses: dawidd6/action-download-artifact@v2
+      - uses: actions/checkout@v4
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/getArtifactNamesForED.py KADH
+      - uses: actions/github-script@v6
+        continue-on-error: true
         with:
-          name: E_KADH_.*
-          path: expired-domains
-          name_is_regexp: true
-          search_artifacts: true
+          script: |
+            const artifact = require("@actions/artifact")
+            const artifactClient = artifact.create()
+            const artifactNames = process.env.E_KADH_NAMES.split(" ")
+            for (artifactName of artifactNames) {
+              await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
+            }
       - continue-on-error: true
         uses: actions/download-artifact@v3
         with:

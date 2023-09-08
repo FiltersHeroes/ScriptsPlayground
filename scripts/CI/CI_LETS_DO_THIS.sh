@@ -8,7 +8,7 @@ MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
 cd "$MAIN_PATH" || exit
 
 # Limit czasu uruchamiania
-export CI_TIME_LIMIT="5 minutes"
+export CI_TIME_LIMIT="2 hours"
 
 function letsGo() {
     for i in "$@"; do

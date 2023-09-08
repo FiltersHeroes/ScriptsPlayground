@@ -6,6 +6,9 @@ MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
 
 cd "$MAIN_PATH"/ || exit
 
+# Limit czasu uruchamiania
+export CI_TIME_LIMIT="2 hours"
+
 {
     cut -d' ' -f1 ./expired-domains/KAD_0*-unknown_limit.txt
     cut -d' ' -f1 ./expired-domains/KAD_0*-unknown_no_internet.txt
@@ -17,7 +20,7 @@ rm -rf ./expired-domains/KAD_0*-unknown_no_internet.txt
 sed -i "s|^|0.0.0.0 |" ./KAD.txt
 sort -u -o ./KAD.txt ./KAD.txt
 
-./scripts/ECODFF.sh ./KAD.txt
+./scripts/ECODFF.py ./KAD.txt
 rm -r ./KAD.txt
 rm -rf ./expired-domains/KAD-unknown_no_internet.txt
 
