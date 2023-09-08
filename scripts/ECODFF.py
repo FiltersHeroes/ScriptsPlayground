@@ -37,13 +37,13 @@ import shutil
 import asyncio
 from tempfile import NamedTemporaryFile
 import importlib.util
-import git
 from dns.asyncresolver import resolve
-from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, LifetimeTimeout
+from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, Timeout
 import aiohttp
+import git
 
 # Version number
-SCRIPT_VERSION = "2.0"
+SCRIPT_VERSION = "2.0.1"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -130,7 +130,7 @@ for path_to_file in args.path_to_file:
         try:
             await resolve(domain)
             answers_NS = await resolve(domain, "NS", raise_on_no_answer=False)
-        except (NXDOMAIN, NoAnswer, NoNameservers, LifetimeTimeout):
+        except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
             offline_pages.append(domain)
         else:
             if any((PARKED_PAT.search(str(answer)) for answer in answers_NS)):
