@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.2"
+SCRIPT_VERSION = "2.0.3"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -112,8 +112,7 @@ for path_to_file in args.path_to_file:
 
     WWW_PAT = re.compile(r"^(www[0-9]\.|www\.)")
     for i, page in enumerate(pages):
-        pages[i] = page.replace("~", "")
-        pages[i] = re.sub(WWW_PAT, "", page, count=1)
+        pages[i] = re.sub(WWW_PAT, "", page.replace("~", ""), count=1)
 
     PAGE_PAT = re.compile(r".*(?<!\*)\..*(?<!\*)$")
     IP_PAT = re.compile(r"\d+\.\d+\.\d+\.\d+")
@@ -124,8 +123,8 @@ for path_to_file in args.path_to_file:
         r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
     parked_domains = []
     offline_pages = []
-
     sem = asyncio.Semaphore(100)
+
     async def domain_dns_check(domain):
         try:
             async with sem:
@@ -241,6 +240,7 @@ for path_to_file in args.path_to_file:
 
     if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
         valid_domains = []
+        regex_domains = ""
         with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
             for entry in valid_tmp_file:
                 if entry := entry.strip():
@@ -249,11 +249,12 @@ for path_to_file in args.path_to_file:
             regex_domains = re.compile(f"({'|'.join(valid_domains)})")
 
         with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file, open(unknown_pages_temp_file.name, "a", encoding="utf-8") as unknown_temp_file:
-            for sub_entry in sub_tmp_file:
-                # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
-                if regex_domains.search(sub_entry):
-                    if not sub_entry in valid_domains:
-                        unknown_temp_file.write(f"{sub_entry}\n")
+            if regex_domains:
+                for sub_entry in sub_tmp_file:
+                    # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
+                    if regex_domains.search(sub_entry):
+                        if not sub_entry in valid_domains:
+                            unknown_temp_file.write(f"{sub_entry}\n")
         os.remove(sub_temp_file.name)
         del valid_domains
 
