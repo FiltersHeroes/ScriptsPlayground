@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.4"
+SCRIPT_VERSION = "2.0.5"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -123,29 +123,38 @@ for path_to_file in args.path_to_file:
         r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
     parked_domains = []
     offline_pages = []
-    sem = asyncio.Semaphore(100)
+    sem_value = 100
+    sem = asyncio.Semaphore(sem_value)
 
     async def domain_dns_check(domain):
-        try:
-            async with sem:
+        async with sem:
+            status = "online"
+            try:
                 print("Checking the status of domains...")
                 answers_NS = await resolve(domain, "NS")
-        except (NXDOMAIN, Timeout):
-            offline_pages.append(domain)
-        except (NoAnswer, NoNameservers):
-            try:
-                async with sem:
+            except (NXDOMAIN, Timeout):
+                status = "offline"
+            except (NoAnswer, NoNameservers):
+                try:
                     print("Checking the status of domains...")
                     await resolve(domain)
-            except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
-                offline_pages.append(domain)
-        else:
-            if any((PARKED_PAT.search(str(answer)) for answer in answers_NS)):
-                parked_domains.append(domain)
+                except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
+                    status = "offline"
+            else:
+                if any((PARKED_PAT.search(str(answer)) for answer in answers_NS)):
+                    status = "parked"
+            finally:
+                result = f"{domain} {status}"
+        return result
 
     async def bulk_domain_dns_check():
-        domain_dns_tasks = [domain_dns_check(domain) for domain in pages]
-        return await asyncio.gather(*domain_dns_tasks)
+        entries = await asyncio.gather(*[domain_dns_check(domain) for domain in pages], return_exceptions=True)
+        for result in entries:
+            splitted_result = result.split()
+            if splitted_result[1] == "offline":
+                offline_pages.append(splitted_result[0])
+            elif splitted_result[1] == "parked":
+                parked_domains.append(splitted_result[0])
 
     asyncio.run(bulk_domain_dns_check())
 
@@ -264,9 +273,11 @@ for path_to_file in args.path_to_file:
                     unknown_pages.append(unknown_page)
     os.remove(unknown_pages_temp_file.name)
 
+    sem = asyncio.Semaphore(sem_value)
+
     async def get_status_code(session: aiohttp.ClientSession, url: str):
-        try:
-            async with sem:
+        async with sem:
+            try:
                 print("Checking the status of domains...")
                 resp = await session.head(f"http://{url}", timeout=10)
                 status_code = resp.status
@@ -274,11 +285,12 @@ for path_to_file in args.path_to_file:
                     print("Checking the status of domains...")
                     resp = await session.head(f"https://{url}", timeout=10)
                     status_code = resp.status
-        except aiohttp.ClientConnectorError:
-            status_code = "000"
-        result = url
-        if not "NO_SC" in os.environ:
-            result += f" {str(status_code)}"
+            except aiohttp.ClientConnectorError:
+                status_code = "000"
+            finally:
+                result = url
+                if not "NO_SC" in os.environ:
+                    result += f" {str(status_code)}"
         return result
 
     async def save_status_code():
