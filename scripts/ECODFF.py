@@ -123,11 +123,10 @@ for path_to_file in args.path_to_file:
         r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
     parked_domains = []
     offline_pages = []
-    sem_value = 100
-    sem = asyncio.Semaphore(sem_value)
+    sem_value = 10
 
-    async def domain_dns_check(domain):
-        async with sem:
+    async def domain_dns_check(domain, limit):
+        async with limit:
             status = "online"
             try:
                 print("Checking the status of domains...")
@@ -148,7 +147,8 @@ for path_to_file in args.path_to_file:
         return result
 
     async def bulk_domain_dns_check():
-        entries = await asyncio.gather(*[domain_dns_check(domain) for domain in pages], return_exceptions=True)
+        limit = asyncio.Semaphore(sem_value)
+        entries = await asyncio.gather(*[domain_dns_check(domain, limit) for domain in pages])
         for result in entries:
             splitted_result = result.split()
             if splitted_result[1] == "offline":
@@ -273,10 +273,8 @@ for path_to_file in args.path_to_file:
                     unknown_pages.append(unknown_page)
     os.remove(unknown_pages_temp_file.name)
 
-    sem = asyncio.Semaphore(sem_value)
-
-    async def get_status_code(session: aiohttp.ClientSession, url: str):
-        async with sem:
+    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
+        async with limit:
             try:
                 print("Checking the status of domains...")
                 resp = await session.head(f"http://{url}", timeout=10)
@@ -295,7 +293,8 @@ for path_to_file in args.path_to_file:
 
     async def save_status_code():
         async with aiohttp.ClientSession() as session:
-            statuses = await asyncio.gather(*[get_status_code(session, url) for url in unknown_pages], return_exceptions=True)
+            limit = asyncio.Semaphore(sem_value)
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)

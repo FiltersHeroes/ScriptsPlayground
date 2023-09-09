@@ -177,6 +177,7 @@ jobs:
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/getArtifactNamesForED.py KAD
+          npm install @actions/artifact
       - uses: actions/github-script@v6
         continue-on-error: true
         with:
@@ -218,6 +219,7 @@ jobs:
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/getArtifactNamesForED.py KADH
+          npm install @actions/artifact
       - uses: actions/github-script@v6
         continue-on-error: true
         with:

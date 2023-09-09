@@ -2,6 +2,11 @@ name: "Test downloading artifacts"
 
 on:
   workflow_dispatch:
+    inputs:
+      number_of_KAD_jobs:
+        description: "Quantity of KAD jobs"
+        required: true
+        default: 2
 
 jobs:
   generate-artifacts:
@@ -16,12 +21,12 @@ jobs:
           touch ./expired-d/test-2.txt
       - uses: actions/upload-artifact@v3
         with:
-          name: E_TEST_01
+          name: E_KAD_01
           path: |
             expired-d/test-1.txt
       - uses: actions/upload-artifact@v3
         with:
-          name: E_TEST_02
+          name: E_KAD_02
           path: |
             expired-d/test-2.txt
   download-artifacts:
@@ -30,13 +35,16 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install @actions/artifact
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/getArtifactNamesForED.py KAD
+          npm install @actions/artifact
       - uses: actions/github-script@v6
         with:
           script: |
             const artifact = require("@actions/artifact")
             const artifactClient = artifact.create()
-            const artifactFiles = ["E_TEST_01", "E_TEST_02"]
+            const artifactFiles = process.env.E_KAD_NAMES.split(" ")
             for (artifactFile of artifactFiles) {
               await artifactClient.downloadArtifact(artifactFile, "./expired-d", { createArtifactFolder: false })
             }
