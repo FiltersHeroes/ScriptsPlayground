@@ -9,12 +9,12 @@ import os
 import sys
 
 NAMES=[]
-needed_env = ""
+needed_env = 2
 
-if sys.argv[1] == "KAD":
-    needed_env = os.getenv("NUMBER_OF_KAD_JOBS")
-elif sys.argv[1] == "KADH":
-    needed_env = os.getenv("NUMBER_OF_KADHOSTS_JOBS")
+if sys.argv[1] == "KAD" and "NUMBER_OF_KAD_JOBS" in os.environ:
+    needed_env = int(os.getenv("NUMBER_OF_KAD_JOBS"))
+elif sys.argv[1] == "KADH" and "NUMBER_OF_KADHOSTS_JOBS" in os.environ:
+    needed_env = int(os.getenv("NUMBER_OF_KADHOSTS_JOBS"))
 
 for i in range(1, needed_env):
     if i < 10:

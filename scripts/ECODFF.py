@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.3"
+SCRIPT_VERSION = "2.0.4"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -165,10 +165,10 @@ for path_to_file in args.path_to_file:
 
     # Copying URLs containing subdomains
     SUB_PAT = re.compile(r"(.+\.)+.+\..+$")
-    with NamedTemporaryFile(dir=temp_path, delete=False) as sub_temp_file:
+    with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
         for page in offline_pages:
             if SUB_PAT.search(page):
-                sub_temp_file.write(f"{page}\n".encode())
+                sub_temp_file.write(f"{page}\n")
 
     spec = importlib.util.spec_from_file_location(
         "Sd2D", pj(script_path, "Sd2D.py"))
@@ -176,9 +176,9 @@ for path_to_file in args.path_to_file:
     spec.loader.exec_module(Sd2D)
     results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
 
-    with NamedTemporaryFile(dir=temp_path, delete=False) as Sd2D_result_file:
-        Sd2D_result_file.write('\n'.join(results_Sd2D).encode())
-        Sd2D_result_file.write('\n'.encode())
+    with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as Sd2D_result_file:
+        Sd2D_result_file.write('\n'.join(results_Sd2D))
+        Sd2D_result_file.write('\n')
 
     DSC_result = subprocess.run(
         DSC + ["-f", Sd2D_result_file.name], check=True, capture_output=True)
@@ -191,7 +191,7 @@ for path_to_file in args.path_to_file:
                   "Free", "Redemption_period", "Suspended_or_reserved"]
 
     if DSC_decoded_result:
-        with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False) as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False) as valid_pages_temp_file, NamedTemporaryFile(dir=temp_path, delete=False) as unknown_pages_temp_file:
+        with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as unknown_pages_temp_file:
             for entry in DSC_decoded_result.strip().splitlines():
                 splitted_entry = entry.split()
                 if splitted_entry[1] in EXPIRED_SW:
@@ -200,43 +200,41 @@ for path_to_file in args.path_to_file:
                     l_f.write(f"{splitted_entry[0]}\n")
                 elif splitted_entry[1] == "Unknown":
                     unknown_pages_temp_file.write(
-                        f"{splitted_entry[0]}\n".encode())
+                        f"{splitted_entry[0]}\n")
                 elif splitted_entry[1] == "No_internet":
                     no_internet_temp_file.write(
-                        f"{splitted_entry[0]}\n".encode())
+                        f"{splitted_entry[0]}\n")
                 # We need to know which domains of subdomains are working
                 elif splitted_entry[1] == "Valid":
                     valid_pages_temp_file.write(
-                        f"{splitted_entry[0]}\n".encode())
+                        f"{splitted_entry[0]}\n")
         del DSC_decoded_result, DSC_result
 
-    if os.path.isfile(no_internet_temp_file.name):
-        if os.path.getsize(no_internet_temp_file.name) > 0:
-            DSC_result = subprocess.run(
-                DSC + ["-f", no_internet_temp_file.name], check=True, capture_output=True)
-            DSC_decoded_result = DSC_result.stdout.decode()
+    if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
+        DSC_result = subprocess.run(
+            DSC + ["-f", no_internet_temp_file.name], check=True, capture_output=True)
+        DSC_decoded_result = DSC_result.stdout.decode()
 
-            os.remove(no_internet_temp_file.name)
-
-            if DSC_decoded_result:
-                print(DSC_decoded_result)
-                with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file, open(unknown_pages_temp_file.name, "a", encoding="utf-8") as unknown_temp_file:
-                    for entry in DSC_decoded_result.strip().splitlines():
-                        splitted_entry = entry.split()
-                        if splitted_entry[1] in EXPIRED_SW:
-                            e_f.write(f"{splitted_entry[0]}\n")
-                        elif splitted_entry[1] == "Limit_exceeded":
-                            l_f.write(f"{splitted_entry[0]}\n")
-                        elif splitted_entry[1] == "Unknown":
-                            unknown_temp_file.write(
-                                f"{splitted_entry[0]}\n".encode())
-                        elif splitted_entry[1] == "No_internet":
-                            no_i_f.write(splitted_entry[0])
-                        # We need to know which domains of subdomains are working
-                        elif splitted_entry[1] == "Valid":
-                            valid_temp_file.write(
-                                f"{splitted_entry[0]}\n".encode())
         os.remove(no_internet_temp_file.name)
+
+        if DSC_decoded_result:
+            print(DSC_decoded_result)
+            with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file, open(unknown_pages_temp_file.name, "a", encoding="utf-8") as unknown_temp_file:
+                for entry in DSC_decoded_result.strip().splitlines():
+                    splitted_entry = entry.split()
+                    if splitted_entry[1] in EXPIRED_SW:
+                        e_f.write(f"{splitted_entry[0]}\n")
+                    elif splitted_entry[1] == "Limit_exceeded":
+                        l_f.write(f"{splitted_entry[0]}\n")
+                    elif splitted_entry[1] == "Unknown":
+                        unknown_temp_file.write(
+                            f"{splitted_entry[0]}\n")
+                    elif splitted_entry[1] == "No_internet":
+                        no_i_f.write(splitted_entry[0])
+                    # We need to know which domains of subdomains are working
+                    elif splitted_entry[1] == "Valid":
+                        valid_temp_file.write(
+                            f"{splitted_entry[0]}\n")
 
     if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
         valid_domains = []
@@ -298,10 +296,10 @@ for path_to_file in args.path_to_file:
     # Sort and remove duplicated domains
     for e_file in [EXPIRED_FILE, UNKNOWN_FILE, LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]:
         if os.path.isfile(e_file):
-            with open(e_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False) as f_t:
+            with open(e_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
                 for line in sorted(set(f_f)):
                     if line:
-                        f_t.write(f"{line.strip()}\n".encode())
+                        f_t.write(f"{line.strip()}\n")
             os.replace(f_t.name, e_file)
 
     if os.path.exists(temp_path):
