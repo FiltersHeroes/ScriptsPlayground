@@ -189,7 +189,7 @@ jobs:
               await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
             }
       - run: |
-          ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.sh
+          ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.py
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
@@ -204,6 +204,8 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     env:
       NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       ## See https://github.com/actions/download-artifact/issues/68
@@ -216,9 +218,10 @@ jobs:
           name: E_KAD
           path: expired-domains
       - uses: actions/checkout@v4
+        continue-on-error: true
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/getArtifactNamesForED.py KADH
+          ./scripts/CI/getArtifactNamesForED.py KADhosts
           npm install @actions/artifact
       - uses: actions/github-script@v6
         continue-on-error: true
@@ -245,6 +248,9 @@ jobs:
         with:
           name: E_COOKIES
           path: expired-domains
-      - run: |
+      - name: "Final deploy"
+        env:
+            GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/cleanup_push.sh
+          ./scripts/CI/deploy.py

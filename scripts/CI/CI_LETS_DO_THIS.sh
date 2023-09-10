@@ -8,7 +8,7 @@ MAIN_PATH=$(git -C "$SCRIPT_PATH" rev-parse --show-toplevel)
 cd "$MAIN_PATH" || exit
 
 # Limit czasu uruchamiania
-export CI_TIME_LIMIT="2 hours"
+export CI_TIME_LIMIT="4 hours"
 
 function letsGo() {
     for i in "$@"; do
@@ -61,7 +61,7 @@ elif [[ $1 == "PAF_C" ]]; then
     letsGo "$PAFbase"PAF_arrows.txt \
     "$PAFbase"PAF_backgrounds_self-advertising.txt \
     "$PAFbase"PAF_contact_feedback_widgets.txt \
-    "$PAFbase"PAF_e_newspaper \
+    "$PAFbase"PAF_e_newspaper.txt \
     "$PAFbase"PAF_newsletters.txt \
     "$PAFbase"PAF_other_widgets.txt \
     "$PAFbase"PAF_pop-ups.txt \
