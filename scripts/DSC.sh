@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.18
+# Current Version: 1.0.19
 #
 #
 # Purpose:
@@ -99,7 +99,7 @@ check_domain_status()
         whois "${1}" | env LC_CTYPE=C LC_ALL=C tr -d "\r" > ${WHOIS_TMP}
     fi
 
-    removed=$(cat ${WHOIS_TMP} | grep "The queried object does not exist: previous registration")
+    removed=$(cat ${WHOIS_TMP} | grep -Ei "(The queried object does not exist: previous registration|is available for registration|Status: AVAILABLE$)")
 
     # The whois Expiration data should resemble the following: "Expiration Date: 09-may-2008-16:00:00-CEST"
     export LC_ALL=en_US.UTF-8
