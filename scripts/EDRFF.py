@@ -3,7 +3,7 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.6
+# v1.7
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
@@ -34,16 +34,18 @@ expired_f_list = []
 with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
     for expired_f_line in expired_f:
         if len(sys.argv) >= 4:
-            if len(sys.argv) == 5 and sys.argv[4] == "exclude":
-                # Exclude domains with specific TLD
-                if re.match(".*\."+sys.argv[3] + "$", expired_f_line):
-                    expired_f_line = ""
-            else:
-                # Include only domains with specific TLD
-                if not re.match(".*\."+sys.argv[3] + "$", expired_f_line):
-                    expired_f_line = ""
-        if expired_f_line:
-            expired_f_list.append(re.escape(expired_f_line.strip()))
+            tlds = sys.argv[3].split(",")
+            for tld in tlds:
+                if len(sys.argv) == 5 and sys.argv[4] == "exclude":
+                    # Exclude domains with specific TLD
+                    if re.match(".*\."+sys.argv[3] + "$", expired_f_line):
+                        expired_f_line = ""
+                else:
+                    # Include only domains with specific TLD
+                    if not re.match(".*\."+sys.argv[3] + "$", expired_f_line):
+                        expired_f_line = ""
+        if expired_f_line := expired_f_line.strip():
+            expired_f_list.append(re.escape(expired_f_line))
 
 regex_list = []
 regex_part_domains = '|'.join(expired_f_list)
