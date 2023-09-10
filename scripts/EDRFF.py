@@ -3,7 +3,7 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.5
+# v1.6
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
@@ -30,9 +30,9 @@ if os.path.isdir(temp_path):
 os.makedirs(temp_path)
 os.chdir(temp_path)
 
+expired_f_list = []
 with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
     for expired_f_line in expired_f:
-        expired_f_line = "(.*\.)?" + re.escape(expired_f_line.strip())
         if len(sys.argv) >= 4:
             if len(sys.argv) == 5 and sys.argv[4] == "exclude":
                 # Exclude domains with specific TLD
@@ -42,32 +42,39 @@ with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
                 # Include only domains with specific TLD
                 if not re.match(".*\."+sys.argv[3] + "$", expired_f_line):
                     expired_f_line = ""
+        if expired_f_line:
+            expired_f_list.append(re.escape(expired_f_line.strip()))
 
-        if expired_f_line != "":
-            # ||domain.com
-            regex_list.append(re.compile("^\|\|" + expired_f_line + ".*"))
-            # $domain=domain.com|
-            regex_list.append(re.compile(expired_f_line + "\|"))
-            # $domain=|domain.com
-            regex_list.append(re.compile("\|" + expired_f_line))
-            # $domain=domain.com or ,domain=domain.com
-            regex_list.append(re.compile("^(\|\||\/).*(\$|,)domain=" + expired_f_line+"$"))
-            # ,domain
-            regex_list.append(re.compile("," + expired_f_line))
-            # domain,
-            regex_list.append(re.compile(expired_f_line + ","))
-            # domain##test or domain#?#test or domain$$test
-            regex_list.append(re.compile("^" + expired_f_line + "(\#(\#|\?)|\$\$)" + ".*"))
+regex_list = []
+regex_part_domains = '|'.join(expired_f_list)
+regex_part_domains = f"(.*\.)?({regex_part_domains})"
+# ||domain.com
+regex_list.append(f"^\|\|{regex_part_domains}.*")
+# $domain=domain.com|
+regex_list.append(f"{regex_part_domains}\|")
+# $domain=|domain.com
+regex_list.append(f"\|{regex_part_domains}")
+# $domain=domain.com or ,domain=domain.com
+regex_list.append(f"^(\|\||\/).*(\$|,)domain={regex_part_domains}$")
+# ,domain
+regex_list.append(f",{regex_part_domains}")
+# domain,
+regex_list.append(f"{regex_part_domains},")
+# domain##test or domain#?#test or domain$$test
+regex_list.append(f"^{regex_part_domains}(\#(\#|\?)|\$\$).*")
+merged_regex_list = '|'.join(regex_list)
+
+new_regex = re.compile(f"({merged_regex_list})")
+del regex_part_domains, regex_list, merged_regex_list
 
 for section in sections:
     print(f"Checking {section} ...")
     section_file_path = pj(sys.argv[1], section)
-    with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False) as f_out:
+    with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False, mode="w", encoding='utf-8') as f_out:
         for line in section_f:
-            for regex in regex_list:
-                line = regex.sub(r'', line)
-            if line.strip():
-                f_out.write(line.encode('utf8'))
+            line = line.strip()
+            if line := new_regex.sub("", line):
+                f_out.write(f"{line}\n")
         os.rename(f_out.name, section_file_path)
 
 os.chdir(main_path)
