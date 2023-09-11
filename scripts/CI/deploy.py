@@ -23,61 +23,27 @@ main_path = git_repo.git.rev_parse("--show-toplevel")
 
 expired_path = pj(main_path, "expired-domains")
 
-expired_files = [glob.glob(pj(expired_path, "KADhosts_*-expired.txt"))]
-parked_files = [glob.glob(pj(expired_path, "KADhosts_*-parked.txt"))]
-unknown_files = [glob.glob(pj(expired_path, "KADhosts_*-unknown.txt")),]
-unknown_limit_files = [glob.glob(pj(expired_path, "KADhosts_*-unknown_limit.txt"))]
-unknown_no_internet_files = [glob.glob(pj(expired_path, "KADhosts_*-unknown_no_internet.txt"))]
+def merge(main_file, files_to_merge):
+    with open(main_file, "w", encoding="utf-8") as mf:
+        for file_to_merge in files_to_merge:
+            if os.path.isfile(file_to_merge):
+                if os.path.getsize(file_to_merge) > 0:
+                    with open(file_to_merge, "r", encoding="utf-8") as ef:
+                        for line in ef:
+                            mf.write(f"{line}\n")
+                os.remove(file_to_merge)
 
 main_expired_file = pj(expired_path, "KADhosts-expired.txt")
-with open(main_expired_file, "w", encoding="utf-8") as mf:
-    for expired_file in expired_files:
-        if os.path.isfile(expired_file):
-            if os.path.getsize(expired_file) > 0:
-                with open(expired_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(expired_file)
-
 main_parked_file = pj(expired_path, "KADhosts-parked.txt")
-with open(main_parked_file, "w", encoding="utf-8") as mf:
-    for parked_file in parked_files:
-        if os.path.isfile(parked_file):
-            if os.path.getsize(parked_file) > 0:
-                with open(parked_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(parked_file)
-
 main_unknown_file = pj(expired_path, "KADhosts-unknown.txt")
-with open(main_unknown_file, "w", encoding="utf-8") as mf:
-    for unknown_file in unknown_files:
-        if os.path.isfile(unknown_file):
-            if os.path.getsize(unknown_file) > 0:
-                with open(unknown_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_file)
-
 main_unknown_limit_file = pj(expired_path, "KADhosts-unknown_limit.txt")
-with open(main_unknown_limit_file, "w", encoding="utf-8") as mf:
-    for unknown_limit_file in unknown_limit_files:
-        if os.path.isfile(unknown_limit_file):
-            if os.path.getsize(unknown_limit_file) > 0:
-                with open(unknown_limit_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_limit_file)
-
 main_unknown_no_internet_file = pj(expired_path, "KADhosts-unknown_no_internet.txt")
-with open(main_unknown_no_internet_file, "w", encoding="utf-8") as mf:
-    for unknown_no_internet_file in unknown_no_internet_files:
-        if os.path.isfile(unknown_no_internet_file):
-            if os.path.getsize(unknown_no_internet_file) > 0:
-                with open(unknown_no_internet_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_no_internet_file)
+
+merge(main_expired_file, glob.glob(pj(expired_path, "KADhosts_*-expired.txt")))
+merge(main_parked_file, glob.glob(pj(expired_path, "KADhosts_*-parked.txt")))
+merge(main_unknown_file, glob.glob(pj(expired_path, "KADhosts_*-unknown.txt")))
+merge(main_unknown_limit_file, glob.glob(pj(expired_path, "KADhosts_*-unknown_limit.txt")))
+merge(main_unknown_no_internet_file, glob.glob(pj(expired_path, "KADhosts_*-unknown_no_internet.txt")))
 
 # Sort and remove duplicates
 temp_path = pj(main_path, "temp")

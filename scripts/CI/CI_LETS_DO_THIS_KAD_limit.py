@@ -42,65 +42,35 @@ if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "
 
 
 main_expired_file = pj(expired_path, "KAD-expired.txt")
-expired_pat = re.compile(r"KAD(l)?_\d+-expired\.txt")
-with open(main_expired_file, "w", encoding="utf-8") as mf:
-    for expired_file_name in os.listdir(expired_path):
-        if expired_pat.match(expired_file_name):
-            expired_file = pj(expired_path, expired_file_name)
-            if os.path.getsize(expired_file) > 0:
-                with open(expired_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(expired_file)
-
 main_parked_file = pj(expired_path, "KAD-parked.txt")
-parked_pat = re.compile(r"KAD(l)?_\d+-parked\.txt")
-with open(main_parked_file, "w", encoding="utf-8") as mf:
-    for parked_file_name in os.listdir(expired_path):
-        if parked_pat.match(parked_file_name):
-            parked_file = pj(expired_path, parked_file_name)
-            if os.path.getsize(parked_file) > 0:
-                with open(parked_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(parked_file)
-
 main_unknown_file = pj(expired_path, "KAD-unknown.txt")
-unknown_pat = re.compile(r"KAD(l)?_\d+-unknown\.txt")
-with open(main_unknown_file, "w", encoding="utf-8") as mf:
-    for unknown_file_name in os.listdir(expired_path):
-        if unknown_pat.match(unknown_file_name):
-            unknown_file = pj(expired_path, unknown_file_name)
-            if os.path.getsize(unknown_file) > 0:
-                with open(unknown_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_file)
-
 main_unknown_limit_file = pj(expired_path, "KAD-unknown_limit.txt")
-unknown_limit_pat = re.compile(r"KAD(l)?_\d+-unknown_limit\.txt")
-with open(main_unknown_limit_file, "w", encoding="utf-8") as mf:
-    for unknown_limit_file_name in os.listdir(expired_path):
-        if unknown_limit_pat.match(unknown_limit_file_name):
-            unknown_limit_file = pj(expired_path, unknown_limit_file_name)
-            if os.path.getsize(unknown_limit_file) > 0:
-                with open(unknown_limit_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_limit_file)
-
 main_unknown_no_internet_file = pj(expired_path, "KAD-unknown_no_internet.txt")
+
+expired_pat = re.compile(r"KAD(l)?_\d+-expired\.txt")
+parked_pat = re.compile(r"KAD(l)?_\d+-parked\.txt")
+unknown_pat = re.compile(r"KAD(l)?_\d+-unknown\.txt")
+unknown_limit_pat = re.compile(r"KAD(l)?_\d+-unknown_limit\.txt")
 unknown_no_internet_pat = re.compile(r"KAD(l)?_\d+-unknown_no_internet\.txt")
-with open(main_unknown_no_internet_file, "w", encoding="utf-8") as mf:
-    for unknown_no_internet_file_name in os.listdir(expired_path):
-        if unknown_no_internet_pat.match(unknown_no_internet_file_name):
-            unknown_no_internet_file = pj(
-                expired_path, unknown_no_internet_file_name)
-            if os.path.getsize(unknown_no_internet_file) > 0:
-                with open(unknown_no_internet_file, "r", encoding="utf-8") as ef:
-                    for line in ef:
-                        mf.write(f"{line}\n")
-            os.remove(unknown_no_internet_file)
+
+
+def merge(main_file, files_to_merge_pat):
+    with open(main_file, "w", encoding="utf-8") as mf:
+        for expired_file_name in os.listdir(expired_path):
+            if files_to_merge_pat.match(expired_file_name):
+                expired_file = pj(expired_path, expired_file_name)
+                if os.path.getsize(expired_file) > 0:
+                    with open(expired_file, "r", encoding="utf-8") as ef:
+                        for line in ef:
+                            mf.write(f"{line}\n")
+                os.remove(expired_file)
+
+
+merge(main_expired_file, expired_pat)
+merge(main_parked_file, parked_pat)
+merge(main_unknown_file, unknown_pat)
+merge(main_unknown_limit_file, unknown_limit_pat)
+merge(main_unknown_no_internet_file, unknown_no_internet_pat)
 
 # Sort and remove duplicates
 temp_path = pj(main_path, "temp")
