@@ -6,8 +6,8 @@
 # pylint: disable=missing-function-docstring
 
 import os
-import sys
 import glob
+import re
 import subprocess
 from tempfile import NamedTemporaryFile
 import git
@@ -22,7 +22,7 @@ git_repo = git.Repo(script_path, search_parent_directories=True)
 main_path = git_repo.git.rev_parse("--show-toplevel")
 
 expired_path = pj(main_path, "expired-domains")
-LIMIT_FILES = [glob.glob(pj(expired_path, "KAD_*-unknown_*.txt"))]
+LIMIT_FILES = glob.glob(pj(expired_path, "KAD_*-unknown_*.txt"))
 
 for limit_file in LIMIT_FILES:
     if os.path.isfile(limit_file):
@@ -41,60 +41,65 @@ if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "
     os.remove(pj(main_path, "KADl.txt"))
 
 
-expired_files = [glob.glob(pj(expired_path, "KAD_*-expired.txt")),
-                 glob.glob(pj(expired_path, "KADl_*-expired.txt"))]
-parked_files = [glob.glob(pj(expired_path, "KAD_*-parked.txt")),
-                glob.glob(pj(expired_path, "KADl_*-parked.txt"))]
-unknown_files = [glob.glob(pj(expired_path, "KAD_*-unknown.txt")),
-                 glob.glob(pj(expired_path, "KADl_*-unknown.txt"))]
-unknown_limit_files = [glob.glob(pj(expired_path, "KAD_*-unknown_limit.txt")),
-                       glob.glob(pj(expired_path, "KADl_*-unknown_limit.txt"))]
-unknown_no_internet_files = [glob.glob(pj(expired_path, "KAD_*-unknown_no_internet.txt")),
-                             glob.glob(pj(expired_path, "KADl_*-unknown_no_internet.txt"))]
-
 main_expired_file = pj(expired_path, "KAD-expired.txt")
+expired_pat = re.compile(r"KAD(l)?_\d+-expired\.txt")
 with open(main_expired_file, "w", encoding="utf-8") as mf:
-    for expired_file in expired_files:
-        if os.path.isfile(expired_file) and os.path.getsize(expired_file) > 0:
-            with open(expired_file, "r", encoding="utf-8") as ef:
-                for line in ef:
-                    mf.write(f"{line}\n")
+    for expired_file_name in os.listdir(expired_path):
+        if expired_pat.match(expired_file_name):
+            expired_file = pj(expired_path, expired_file_name)
+            if os.path.getsize(expired_file) > 0:
+                with open(expired_file, "r", encoding="utf-8") as ef:
+                    for line in ef:
+                        mf.write(f"{line}\n")
             os.remove(expired_file)
 
 main_parked_file = pj(expired_path, "KAD-parked.txt")
+parked_pat = re.compile(r"KAD(l)?_\d+-parked\.txt")
 with open(main_parked_file, "w", encoding="utf-8") as mf:
-    for parked_file in parked_files:
-        if os.path.isfile(parked_file) and os.path.getsize(parked_file) > 0:
-            with open(parked_file, "r", encoding="utf-8") as ef:
-                for line in ef:
-                    mf.write(f"{line}\n")
+    for parked_file_name in os.listdir(expired_path):
+        if parked_pat.match(parked_file_name):
+            parked_file = pj(expired_path, parked_file_name)
+            if os.path.getsize(parked_file) > 0:
+                with open(parked_file, "r", encoding="utf-8") as ef:
+                    for line in ef:
+                        mf.write(f"{line}\n")
             os.remove(parked_file)
 
 main_unknown_file = pj(expired_path, "KAD-unknown.txt")
+unknown_pat = re.compile(r"KAD(l)?_\d+-unknown\.txt")
 with open(main_unknown_file, "w", encoding="utf-8") as mf:
-    for unknown_file in unknown_files:
-        if os.path.isfile(unknown_file) and os.path.getsize(unknown_file) > 0:
-            with open(unknown_file, "r", encoding="utf-8") as ef:
-                for line in ef:
-                    mf.write(f"{line}\n")
+    for unknown_file_name in os.listdir(expired_path):
+        if unknown_pat.match(unknown_file_name):
+            unknown_file = pj(expired_path, unknown_file_name)
+            if os.path.getsize(unknown_file) > 0:
+                with open(unknown_file, "r", encoding="utf-8") as ef:
+                    for line in ef:
+                        mf.write(f"{line}\n")
             os.remove(unknown_file)
 
 main_unknown_limit_file = pj(expired_path, "KAD-unknown_limit.txt")
+unknown_limit_pat = re.compile(r"KAD(l)?_\d+-unknown_limit\.txt")
 with open(main_unknown_limit_file, "w", encoding="utf-8") as mf:
-    for unknown_limit_file in unknown_limit_files:
-        if os.path.isfile(unknown_limit_file) and os.path.getsize(unknown_limit_file) > 0:
-            with open(unknown_limit_file, "r", encoding="utf-8") as ef:
-                for line in ef:
-                    mf.write(f"{line}\n")
+    for unknown_limit_file_name in os.listdir(expired_path):
+        if unknown_limit_pat.match(unknown_limit_file_name):
+            unknown_limit_file = pj(expired_path, unknown_limit_file_name)
+            if os.path.getsize(unknown_limit_file) > 0:
+                with open(unknown_limit_file, "r", encoding="utf-8") as ef:
+                    for line in ef:
+                        mf.write(f"{line}\n")
             os.remove(unknown_limit_file)
 
 main_unknown_no_internet_file = pj(expired_path, "KAD-unknown_no_internet.txt")
+unknown_no_internet_pat = re.compile(r"KAD(l)?_\d+-unknown_no_internet\.txt")
 with open(main_unknown_no_internet_file, "w", encoding="utf-8") as mf:
-    for unknown_no_internet_file in unknown_no_internet_files:
-        if os.path.isfile(unknown_no_internet_file) and os.path.getsize(unknown_no_internet_file) > 0:
-            with open(unknown_no_internet_file, "r", encoding="utf-8") as ef:
-                for line in ef:
-                    mf.write(f"{line}\n")
+    for unknown_no_internet_file_name in os.listdir(expired_path):
+        if unknown_no_internet_pat.match(unknown_no_internet_file_name):
+            unknown_no_internet_file = pj(
+                expired_path, unknown_no_internet_file_name)
+            if os.path.getsize(unknown_no_internet_file) > 0:
+                with open(unknown_no_internet_file, "r", encoding="utf-8") as ef:
+                    for line in ef:
+                        mf.write(f"{line}\n")
             os.remove(unknown_no_internet_file)
 
 # Sort and remove duplicates

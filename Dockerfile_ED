@@ -10,6 +10,9 @@ RUN pip install GitPython dnspython aiohttp
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 RUN sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
 
+# change DNS
+RUN sed -i 's/#DNS=/DNS=1.1.1.1 1.0.0.1/g' /etc/systemd/resolved.conf
+
 # generate chosen locale
 RUN locale-gen pl_PL.UTF-8
 RUN locale-gen en_US.UTF-8
