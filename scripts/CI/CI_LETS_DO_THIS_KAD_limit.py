@@ -32,7 +32,7 @@ for limit_file in LIMIT_FILES:
                     k_f.write(f"0.0.0.0 {entry[0]}")
         os.remove(limit_file)
 
-os.environ["CI_TIME_LIMIT"] = "2 hours"
+os.environ["CI_TIME_LIMIT"] = "30 minutes"
 
 if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
