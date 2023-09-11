@@ -3,7 +3,7 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.7
+# v1.7.1
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
@@ -20,7 +20,6 @@ main_path = pn(script_path+"/..")
 temp_path = pj(main_path, "temp")
 
 sections_path = sys.argv[1]
-sections = sorted(os.listdir(sections_path))
 
 regex_list = []
 
@@ -69,15 +68,16 @@ merged_regex_list = '|'.join(regex_list)
 new_regex = re.compile(f"({merged_regex_list})")
 del regex_part_domains, regex_list, merged_regex_list
 
-for section in sections:
-    print(f"Checking {section} ...")
-    section_file_path = pj(sys.argv[1], section)
-    with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False, mode="w", encoding='utf-8') as f_out:
-        for line in section_f:
-            line = line.strip()
-            if line := new_regex.sub("", line):
-                f_out.write(f"{line}\n")
-        os.rename(f_out.name, section_file_path)
+for root, dirs, files in os.walk(sections_path):
+    for section in files:
+        print(f"Checking {section} ...")
+        section_file_path = pj(root, section)
+        with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False, mode="w",   encoding='utf-8') as f_out:
+            for line in section_f:
+                line = line.strip()
+                if line := new_regex.sub("", line):
+                    f_out.write(f"{line}\n")
+            os.rename(f_out.name, section_file_path)
 
 os.chdir(main_path)
 os.rmdir(temp_path)
