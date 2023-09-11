@@ -29,8 +29,8 @@ jobs:
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
-          numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.sh KAD
-          numberParts="$NUMBER_OF_KADHOSTS_JOBS" ./scripts/CI/CI_LETS_DO_THIS.sh KADhosts
+          numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KAD
+          numberParts="$NUMBER_OF_KADHOSTS_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhosts
       - uses: actions/upload-artifact@v3
         with:
           name: E_KAD_S
@@ -63,7 +63,7 @@ jobs:
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           KADfile=KAD_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KAD }} )"
-          ./scripts/CI/CI_LETS_DO_THIS.sh "$KADfile"
+          ./scripts/CI/CI_LETS_DO_THIS.py "$KADfile"
           echo 'E_KADS<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh $KADfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
@@ -89,7 +89,7 @@ jobs:
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           KADHfile=KADhosts_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KADH }} )"
-          ./scripts/CI/CI_LETS_DO_THIS.sh "$KADHfile"
+          ./scripts/CI/CI_LETS_DO_THIS.py "$KADHfile"
           echo 'E_KADHS<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh $KADHfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
@@ -106,7 +106,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh PAF_C
+          ./scripts/CI/CI_LETS_DO_THIS.py PAF_C
           echo 'E_PAF<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh \
           PAF_arrows \
@@ -140,8 +140,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh Social_C
-          ./scripts/CI/CI_LETS_DO_THIS.sh PASS
+          ./scripts/CI/CI_LETS_DO_THIS.py Social_C
+          ./scripts/CI/CI_LETS_DO_THIS.py PASS
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
@@ -157,7 +157,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/CI_LETS_DO_THIS.sh Cookies_C
+          ./scripts/CI/CI_LETS_DO_THIS.py Cookies_C
           echo 'E_COOKIES<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh adblock_cookies cookies_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
@@ -217,9 +217,8 @@ jobs:
         with:
           name: E_KAD
           path: expired-domains
-      - uses: actions/checkout@v4
-        continue-on-error: true
-      - run: |
+      - continue-on-error: true
+        run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/getArtifactNamesForED.py KADhosts
           npm install @actions/artifact
@@ -229,7 +228,7 @@ jobs:
           script: |
             const artifact = require("@actions/artifact")
             const artifactClient = artifact.create()
-            const artifactNames = process.env.E_KADH_NAMES.split(" ")
+            const artifactNames = process.env.E_KADhosts_NAMES.split(" ")
             for (artifactName of artifactNames) {
               await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
             }

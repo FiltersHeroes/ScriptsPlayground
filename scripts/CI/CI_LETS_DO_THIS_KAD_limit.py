@@ -32,7 +32,7 @@ for limit_file in LIMIT_FILES:
                     k_f.write(f"0.0.0.0 {entry[0]}")
         os.remove(limit_file)
 
-os.environ["CI_TIME_LIMIT"] = "30 minutes"
+os.environ["CI_TIME_LIMIT"] = "4 hours"
 
 if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
@@ -80,6 +80,6 @@ for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_u
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
             for line in sorted(set(f_f)):
-                if line:
-                    f_t.write(f"{line.strip()}\n")
+                if line := line.strip():
+                    f_t.write(f"{line}\n")
         os.replace(f_t.name, main_file)

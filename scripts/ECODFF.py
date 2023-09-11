@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.6"
+SCRIPT_VERSION = "2.0.7"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -294,9 +294,9 @@ for path_to_file in args.path_to_file:
     async def save_status_code(timeout_time, limit_value):
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
-        async with aiohttp.ClientSession() as session:
-            limit = asyncio.Semaphore(limit_value)
-            statuses = await asyncio.gather(*[get_status_code(session, url, limit, session_timeout) for url in unknown_pages])
+        limit = asyncio.Semaphore(limit_value)
+        async with aiohttp.ClientSession(timeout=session_timeout) as session:
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit, timeout_time) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)
