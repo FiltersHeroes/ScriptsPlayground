@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.5"
+SCRIPT_VERSION = "2.0.6"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -146,8 +146,8 @@ for path_to_file in args.path_to_file:
                 result = f"{domain} {status}"
         return result
 
-    async def bulk_domain_dns_check():
-        limit = asyncio.Semaphore(sem_value)
+    async def bulk_domain_dns_check(limit_value):
+        limit = asyncio.Semaphore(limit_value)
         entries = await asyncio.gather(*[domain_dns_check(domain, limit) for domain in pages])
         for result in entries:
             splitted_result = result.split()
@@ -156,7 +156,7 @@ for path_to_file in args.path_to_file:
             elif splitted_result[1] == "parked":
                 parked_domains.append(splitted_result[0])
 
-    asyncio.run(bulk_domain_dns_check())
+    asyncio.run(bulk_domain_dns_check(sem_value))
 
     if parked_domains:
         with open(PARKED_FILE, 'w', encoding="utf-8") as p_f:
@@ -273,15 +273,15 @@ for path_to_file in args.path_to_file:
                     unknown_pages.append(unknown_page)
     os.remove(unknown_pages_temp_file.name)
 
-    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
+    async def get_status_code(session: aiohttp.ClientSession, url: str, limit, timeout_time):
         async with limit:
             try:
                 print("Checking the status of domains...")
-                resp = await session.head(f"http://{url}", timeout=10)
+                resp = await session.head(f"http://{url}", timeout=timeout_time)
                 status_code = resp.status
                 if status_code == "301":
                     print("Checking the status of domains...")
-                    resp = await session.head(f"https://{url}", timeout=10)
+                    resp = await session.head(f"https://{url}", timeout=timeout_time)
                     status_code = resp.status
             except aiohttp.ClientConnectorError:
                 status_code = "000"
@@ -291,10 +291,12 @@ for path_to_file in args.path_to_file:
                     result += f" {str(status_code)}"
         return result
 
-    async def save_status_code():
+    async def save_status_code(timeout_time, limit_value):
+        session_timeout = aiohttp.ClientTimeout(
+            total=None, sock_connect=timeout_time, sock_read=timeout_time)
         async with aiohttp.ClientSession() as session:
-            limit = asyncio.Semaphore(sem_value)
-            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
+            limit = asyncio.Semaphore(limit_value)
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit, session_timeout) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)
@@ -302,7 +304,7 @@ for path_to_file in args.path_to_file:
                         u_f.write(f"{status}\n")
 
     if unknown_pages:
-        asyncio.run(save_status_code())
+        asyncio.run(save_status_code(10, sem_value))
 
     # Sort and remove duplicated domains
     for e_file in [EXPIRED_FILE, UNKNOWN_FILE, LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]:

@@ -74,6 +74,8 @@ merge(main_unknown_no_internet_file, unknown_no_internet_pat)
 
 # Sort and remove duplicates
 temp_path = pj(main_path, "temp")
+if not os.path.isdir(temp_path):
+    os.mkdir(temp_path)
 for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:

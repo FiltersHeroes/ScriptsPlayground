@@ -23,6 +23,7 @@ main_path = git_repo.git.rev_parse("--show-toplevel")
 
 expired_path = pj(main_path, "expired-domains")
 
+
 def merge(main_file, files_to_merge):
     with open(main_file, "w", encoding="utf-8") as mf:
         for file_to_merge in files_to_merge:
@@ -33,19 +34,26 @@ def merge(main_file, files_to_merge):
                             mf.write(f"{line}\n")
                 os.remove(file_to_merge)
 
+
 main_expired_file = pj(expired_path, "KADhosts-expired.txt")
 main_parked_file = pj(expired_path, "KADhosts-parked.txt")
 main_unknown_file = pj(expired_path, "KADhosts-unknown.txt")
 main_unknown_limit_file = pj(expired_path, "KADhosts-unknown_limit.txt")
-main_unknown_no_internet_file = pj(expired_path, "KADhosts-unknown_no_internet.txt")
+main_unknown_no_internet_file = pj(
+    expired_path, "KADhosts-unknown_no_internet.txt")
 
 merge(main_expired_file, glob.glob(pj(expired_path, "KADhosts_*-expired.txt")))
 merge(main_parked_file, glob.glob(pj(expired_path, "KADhosts_*-parked.txt")))
 merge(main_unknown_file, glob.glob(pj(expired_path, "KADhosts_*-unknown.txt")))
-merge(main_unknown_limit_file, glob.glob(pj(expired_path, "KADhosts_*-unknown_limit.txt")))
-merge(main_unknown_no_internet_file, glob.glob(pj(expired_path, "KADhosts_*-unknown_no_internet.txt")))
+merge(main_unknown_limit_file, glob.glob(
+    pj(expired_path, "KADhosts_*-unknown_limit.txt")))
+merge(main_unknown_no_internet_file, glob.glob(
+    pj(expired_path, "KADhosts_*-unknown_no_internet.txt")))
 
 # Sort and remove duplicates
+temp_path = pj(main_path, "temp")
+if not os.path.isdir(temp_path):
+    os.mkdir(temp_path)
 temp_path = pj(main_path, "temp")
 for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
     if os.path.isfile(main_file):
@@ -72,5 +80,5 @@ if "CI" in os.environ:
     git_repo.index.add(expired_path)
     git_repo.index.commit("Expired domains check\n[ci skip]")
     GIT_SLUG = git_repo.remotes.origin.url.replace(
-                    'https://', "").replace("git@", "").replace(":", "/")
+        'https://', "").replace("git@", "").replace(":", "/")
     git_repo.git.push(f"https://{name}:{os.environ['GIT_TOKEN']}@{GIT_SLUG}")
