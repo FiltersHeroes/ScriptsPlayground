@@ -11,8 +11,12 @@ on:
         description: "Quantity of KADhosts jobs"
         required: true
         default: 2
-  # schedule:
-  #   - cron: "55 23 * * 6"
+  schedule:
+    - cron: "55 23 * * 6"
+env:
+  CI_TIME_LIMIT: "4 hours"
+  NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 4 }}
+  NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs || 2 }}
 
 jobs:
   KAD_S:
@@ -21,9 +25,6 @@ jobs:
     outputs:
       KAD-strategy-matrix: ${{ steps.generate.outputs.KAD-strategy-matrix }}
       KADh-strategy-matrix: ${{ steps.generate.outputs.KADh-strategy-matrix }}
-    env:
-      NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
-      NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
     steps:
       - uses: actions/checkout@v4
       - run: |
@@ -170,8 +171,6 @@ jobs:
     needs: [KAD]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
-    env:
-      NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
     steps:
       - uses: actions/checkout@v4
       - run: |
@@ -202,12 +201,12 @@ jobs:
     needs: [KAD_limit, KADhosts, PAF, SocialPASS, Cookies]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
-    env:
-      NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       ## See https://github.com/actions/download-artifact/issues/68
       ## Unfortunately currently it's not possible to skip creating extra directory
       ## when we want to download all artifacts at once without specyfing name.
@@ -249,7 +248,7 @@ jobs:
           path: expired-domains
       - name: "Final deploy"
         env:
-            GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/deploy.py

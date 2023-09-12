@@ -21,9 +21,6 @@ git_repo = git.Repo(script_path, search_parent_directories=True)
 # Main_path is where the root of the repository is located
 main_path = git_repo.git.rev_parse("--show-toplevel")
 
-# Timeout
-os.environ["CI_TIME_LIMIT"] = "30 minutes"
-
 
 async def lets_go(session: aiohttp.ClientSession, url, limit):
     async with limit:
