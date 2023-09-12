@@ -42,7 +42,7 @@ with open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f, open(t_f.nam
             k_f.write(f"{entry}\n")
 os.remove(t_f.name)
 
-os.environ["CI_TIME_LIMIT"] = "4 hours"
+os.environ["CI_TIME_LIMIT"] = "30 minutes"
 
 if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
