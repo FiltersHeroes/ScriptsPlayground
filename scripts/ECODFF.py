@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.7"
+SCRIPT_VERSION = "2.0.8"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -239,7 +239,7 @@ for path_to_file in args.path_to_file:
                         unknown_temp_file.write(
                             f"{splitted_entry[0]}\n")
                     elif splitted_entry[1] == "No_internet":
-                        no_i_f.write(splitted_entry[0])
+                        no_i_f.write(f"{splitted_entry[0]}\n")
                     # We need to know which domains of subdomains are working
                     elif splitted_entry[1] == "Valid":
                         valid_temp_file.write(

@@ -24,20 +24,30 @@ main_path = git_repo.git.rev_parse("--show-toplevel")
 expired_path = pj(main_path, "expired-domains")
 LIMIT_FILES = glob.glob(pj(expired_path, "KAD_*-unknown_*.txt"))
 
-for limit_file in LIMIT_FILES:
-    if os.path.isfile(limit_file):
-        with open(limit_file, "r", encoding="utf-8") as l_f, open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f:
-            for entry in sorted(set(l_f)):
-                if entry := entry.strip().split():
-                    k_f.write(f"0.0.0.0 {entry[0]}")
+temp_path = pj(main_path, "temp")
+if not os.path.isdir(temp_path):
+    os.mkdir(temp_path)
+with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as t_f:
+    for limit_file in LIMIT_FILES:
+        if os.path.isfile(limit_file):
+            with open(limit_file, "r", encoding="utf-8") as l_f:
+                for entry in l_f:
+                    if entry := entry.strip().split():
+                        t_f.write(f"0.0.0.0 {entry[0]}\n")
         os.remove(limit_file)
+
+with open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f, open(t_f.name, "r", encoding="utf-8") as tfc:
+    for entry in sorted(set(tfc)):
+        if entry := entry.strip():
+            k_f.write(f"{entry}\n")
+os.remove(t_f.name)
 
 os.environ["CI_TIME_LIMIT"] = "4 hours"
 
 if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "KADl.txt")], check=True, capture_output=True)
-    print(ECO_result.stdout.decode())
+        main_path, "KADl.txt")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+    print(ECO_result.stdout)
     os.remove(pj(main_path, "KADl.txt"))
 
 
@@ -61,8 +71,8 @@ def merge(main_file, files_to_merge_pat):
                 expired_file = pj(expired_path, expired_file_name)
                 if os.path.getsize(expired_file) > 0:
                     with open(expired_file, "r", encoding="utf-8") as ef:
-                        for line in ef:
-                            mf.write(f"{line}\n")
+                        for line_m in ef:
+                            mf.write(f"{line_m}\n")
                 os.remove(expired_file)
 
 
@@ -73,9 +83,6 @@ merge(main_unknown_limit_file, unknown_limit_pat)
 merge(main_unknown_no_internet_file, unknown_no_internet_pat)
 
 # Sort and remove duplicates
-temp_path = pj(main_path, "temp")
-if not os.path.isdir(temp_path):
-    os.mkdir(temp_path)
 for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
