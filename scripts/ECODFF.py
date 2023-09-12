@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.8"
+SCRIPT_VERSION = "2.0.9"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -123,7 +123,7 @@ for path_to_file in args.path_to_file:
         r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
     parked_domains = []
     offline_pages = []
-    sem_value = 10
+    sem_value = 5
 
     async def domain_dns_check(domain, limit):
         async with limit:
@@ -273,21 +273,22 @@ for path_to_file in args.path_to_file:
                     unknown_pages.append(unknown_page)
     os.remove(unknown_pages_temp_file.name)
 
-    async def get_status_code(session: aiohttp.ClientSession, url: str, limit, timeout_time):
+    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
         async with limit:
             try:
                 print("Checking the status of domains...")
-                resp = await session.head(f"http://{url}", timeout=timeout_time)
+                resp = await session.head(f"http://{url}")
                 status_code = resp.status
                 if status_code == "301":
                     print("Checking the status of domains...")
-                    resp = await session.head(f"https://{url}", timeout=timeout_time)
+                    resp = await session.head(f"https://{url}")
                     status_code = resp.status
-            except aiohttp.ClientConnectorError:
+            except (aiohttp.ClientConnectorError, asyncio.TimeoutError) as e:
+                print(e)
                 status_code = "000"
             finally:
                 result = url
-                if not "NO_SC" in os.environ:
+                if not "NO_SC" in os.environ and "status_code" in locals():
                     result += f" {str(status_code)}"
         return result
 
@@ -296,7 +297,7 @@ for path_to_file in args.path_to_file:
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
         async with aiohttp.ClientSession(timeout=session_timeout) as session:
-            statuses = await asyncio.gather(*[get_status_code(session, url, limit, timeout_time) for url in unknown_pages])
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)

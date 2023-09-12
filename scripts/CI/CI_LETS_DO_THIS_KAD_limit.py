@@ -34,7 +34,7 @@ with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as t_f:
                 for entry in l_f:
                     if entry := entry.strip().split():
                         t_f.write(f"0.0.0.0 {entry[0]}\n")
-        os.remove(limit_file)
+            os.remove(limit_file)
 
 with open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f, open(t_f.name, "r", encoding="utf-8") as tfc:
     for entry in sorted(set(tfc)):
@@ -83,6 +83,8 @@ merge(main_unknown_limit_file, unknown_limit_pat)
 merge(main_unknown_no_internet_file, unknown_no_internet_pat)
 
 # Sort and remove duplicates
+if not os.path.isdir(temp_path):
+    os.mkdir(temp_path)
 for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:

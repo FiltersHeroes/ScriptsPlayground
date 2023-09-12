@@ -76,8 +76,8 @@ check_domain_status()
         fi
     fi
 
-    # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 3 sec
-    sleep 3
+    # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 1 sec
+    sleep 1
     # Save the domain since set will trip up the ordering
     DOMAIN=${1}
     TLDTYPE=$(echo ${DOMAIN} | awk -F. '{print tolower($NF);}')
