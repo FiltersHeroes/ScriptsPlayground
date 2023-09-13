@@ -48,7 +48,7 @@ async def bulk_lets_go(limit_value, urls):
         for result in results:
             if result:
                 ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, result)], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+                    main_path, result)], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
                 print(ECO_result.stdout)
 
 PAF_base = "https://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/"
@@ -121,7 +121,7 @@ if sys.argv[1] == "KAD":
     if not os.path.isdir(pj(main_path, "split")):
         os.makedirs(pj(main_path, "split"))
     s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KAD.txt"), pj(
-        main_path, "split", "KAD_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "split", "KAD_")], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(s_result.stdout)
 elif sys.argv[1] == "KADhosts":
     asyncio.run(download("KADhosts.txt",
@@ -129,10 +129,10 @@ elif sys.argv[1] == "KADhosts":
     if not os.path.isdir(pj(main_path, "split")):
         os.makedirs(pj(main_path, "split"))
     s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KADhosts.txt"), pj(
-        main_path, "split", "KADhosts_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "split", "KADhosts_")], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhosts_"):
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1])], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "split", sys.argv[1])], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(ECO_result.stdout)
     os.remove(pj(main_path, "split", sys.argv[1]))

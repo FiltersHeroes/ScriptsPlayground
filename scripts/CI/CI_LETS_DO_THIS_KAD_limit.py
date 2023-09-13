@@ -29,7 +29,7 @@ if not os.path.isdir(temp_path):
     os.mkdir(temp_path)
 with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as t_f:
     for limit_file in LIMIT_FILES:
-        if os.path.isfile(limit_file):
+        if os.path.isfile(limit_file) and os.path.getsize(limit_file) > 0:
             with open(limit_file, "r", encoding="utf-8") as l_f:
                 for entry in l_f:
                     if entry := entry.strip().split():
@@ -37,14 +37,15 @@ with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as t_f:
             os.remove(limit_file)
 
 with open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f, open(t_f.name, "r", encoding="utf-8") as tfc:
-    for entry in sorted(set(tfc)):
-        if entry := entry.strip():
-            k_f.write(f"{entry}\n")
+    if os.path.getsize(t_f.name) > 0:
+        for entry in sorted(set(tfc)):
+            if entry := entry.strip():
+                k_f.write(f"{entry}\n")
 os.remove(t_f.name)
 
 if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "KADl.txt")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "KADl.txt")], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(ECO_result.stdout)
     os.remove(pj(main_path, "KADl.txt"))
 

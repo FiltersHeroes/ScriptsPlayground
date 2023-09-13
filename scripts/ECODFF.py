@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.9"
+SCRIPT_VERSION = "2.0.11"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -283,7 +283,7 @@ for path_to_file in args.path_to_file:
                     print("Checking the status of domains...")
                     resp = await session.head(f"https://{url}")
                     status_code = resp.status
-            except (aiohttp.ClientConnectorError, asyncio.TimeoutError) as e:
+            except (aiohttp.ClientConnectorError, asyncio.TimeoutError, aiohttp.ClientOSError) as e:
                 print(e)
                 status_code = "000"
             finally:
