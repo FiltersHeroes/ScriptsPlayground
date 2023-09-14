@@ -13,6 +13,7 @@ jobs:
       - uses: hawkeye116477/issue-manager-action@main
         with:
           mode: "close"
-          completed-label: "zatwierdzone"
+          completed-label: |
+            zatwierdzone
+            solved
           not-planned-label: "wontfix"
- 
