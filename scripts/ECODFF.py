@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.11"
+SCRIPT_VERSION = "2.0.12"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -287,9 +287,9 @@ for path_to_file in args.path_to_file:
                 print(e)
                 status_code = "000"
             finally:
-                result = url
-                if not "NO_SC" in os.environ and "status_code" in locals():
-                    result += f" {str(status_code)}"
+                result = ""
+                if "status_code" in locals():
+                    result = f"{str(url)} {str(status_code)}"
         return result
 
     async def save_status_code(timeout_time, limit_value):
@@ -301,8 +301,9 @@ for path_to_file in args.path_to_file:
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)
-                    if status != "200":
-                        u_f.write(f"{status}\n")
+                    if len(status.split()) > 1:
+                        if status.split()[1] != "200":
+                            u_f.write(f"{status}\n")
 
     if unknown_pages:
         asyncio.run(save_status_code(10, sem_value))
