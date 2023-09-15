@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.9"
+SCRIPT_VERSION = "3.0.11"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -258,10 +258,10 @@ def main(pathToFinalLists, forced, saveChangedFN):
                         if FOP is not None:
                             FOP.fopsort(sectionFpath)
                         # Remove blank lines and whitespace from sections
-                        with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False) as f_out:
+                        with open(sectionFpath, "r", encoding='utf-8') as s_f, NamedTemporaryFile(dir=root, delete=False, mode="w", encoding='utf-8') as f_out:
                             for lineS in natsorted(sorted(set(s_f)), alg=ns.IGNORECASE, key=special_chars_first):
-                                if lineS:
-                                    f_out.write(f"{lineS.strip()}\n".encode('utf8'))
+                                if lineS := lineS.strip():
+                                    f_out.write(f"{lineS}\n")
                         os.replace(f_out.name, sectionFpath)
 
             # Add modified sections to git repository
@@ -281,12 +281,13 @@ def main(pathToFinalLists, forced, saveChangedFN):
         if os.path.exists(tempDir):
             shutil.rmtree(tempDir)
         os.mkdir(tempDir)
-        with open(pathToFinalList, "r", encoding='utf-8') as f_final, NamedTemporaryFile(dir=tempDir, delete=False) as final_tmp:
+        with open(pathToFinalList, "r", encoding='utf-8') as f_final, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as final_tmp:
             INCLUDE_I_PAT = re.compile(r'^@.*?include (.*)$')
             EXTERNAL_PAT = re.compile(r'^(http(s):|ftp:)')
             USELESS_PAT = re.compile(
                 r"^(! Checksum)|(!#include)|(\[Adblock Plus 2.0\])|(! Dołączenie listy)")
-            USELESS_I_PAT = re.compile(r'@(sections|exclusions)(Path|Ext) (.*)$')
+            USELESS_I_PAT = re.compile(
+                r'@(sections|exclusions)(Path|Ext) (.*)$')
 
             for lineF in f_final:
                 if INCLUDE_I_PAT.search(lineF):
@@ -333,7 +334,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                     if VALID_INSTRUCTIONS_PAT.match(lineF_words[0]):
                         external_temp = None
                         if EXTERNAL_PAT.search(external):
-                            with NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
+                            with NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp:
                                 # We assume that the directory containing other cloned repository is higher than
                                 # the directory of our own list
                                 if cloned_external is not None and os.path.exists(pj(main_path, "..", cloned_external)):
@@ -348,14 +349,14 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         external_response = requests.get(
                                             external, allow_redirects=True, timeout=10)
                                         external_temp.write(
-                                            external_response.text.encode('utf8'))
+                                            external_response.text)
                                     except requests.exceptions.RequestException as ex:
                                         git_repo.git.checkout(pathToFinalList)
                                         shutil.rmtree(tempDir)
                                         raise SystemExit(ex) from ex
                                 section = external_temp.name
                         if EXTERNAL_PAT.search(external2) and external2:
-                            with NamedTemporaryFile(dir=tempDir, delete=False) as external_temp2:
+                            with NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp2:
                                 # We assume that the directory containing other cloned repository is higher than
                                 # the directory of our own list
                                 if cloned_external2 is not None and os.path.exists(pj(main_path, "..", cloned_external2)):
@@ -370,7 +371,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         external_response = requests.get(
                                             external2, allow_redirects=True, timeout=10)
                                         external_temp2.write(
-                                            external_response.text.encode('utf8'))
+                                            external_response.text)
                                     except requests.exceptions.RequestException as ex:
                                         git_repo.git.checkout(pathToFinalList)
                                         shutil.rmtree(tempDir)
@@ -378,24 +379,24 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                 section2 = external_temp2.name
 
                         if section2:
-                            with open(section, "r", encoding='utf-8') as section_content, open(section2, "r", encoding='utf-8') as section2_content, NamedTemporaryFile(dir=tempDir, delete=False) as combined_temp:
+                            with open(section, "r", encoding='utf-8') as section_content, open(section2, "r", encoding='utf-8') as section2_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as combined_temp:
                                 for lineS1 in section_content:
                                     if lineS1:
-                                        combined_temp.write(lineS1.encode())
+                                        combined_temp.write(lineS1)
                                 for lineS2 in section2_content:
                                     if lineS2:
-                                        combined_temp.write(lineS2.encode())
+                                        combined_temp.write(lineS2)
                             if FOP is not None:
                                 FOP.fopsort(combined_temp.name)
-                            with open(combined_temp.name, "r", encoding='utf-8') as combined_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
+                            with open(combined_temp.name, "r", encoding='utf-8') as combined_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp:
                                 for lineCC in natsorted(sorted(set(combined_content)), alg=ns.IGNORECASE, key=special_chars_first):
                                     if lineCC:
-                                        external_temp.write(lineCC.encode())
+                                        external_temp.write(lineCC)
                             section = external_temp.name
 
                         # Remove lines matching exclusions file
                         if exclusions:
-                            with open(exclusions_path, "r", encoding='utf-8') as exclusions_content, open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp:
+                            with open(exclusions_path, "r", encoding='utf-8') as exclusions_content, open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp:
                                 regex_exclusions = []
                                 normal_exclusions = {}
                                 EXCLUSIONS_RE_PAT = re.compile(r"^\/.*\/$")
@@ -408,7 +409,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         else:
                                             normal_exclusions[lineE] = ""
                                 if regex_exclusions:
-                                    combined_regex_exclusions = re.compile(f"({'|'.join(regex_exclusions)})")
+                                    combined_regex_exclusions = re.compile(
+                                        f"({'|'.join(regex_exclusions)})")
                                 for lineS in section_content:
                                     if combined_regex_exclusions:
                                         if combined_regex_exclusions.search(lineS.strip()):
@@ -416,12 +418,12 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     if normal_exclusions:
                                         if lineS.strip() in normal_exclusions:
                                             lineS = ""
-                                    external_temp.write(lineS.encode())
+                                    external_temp.write(lineS)
                             section = external_temp.name
 
                         if EXTERNAL_PAT.search(external) or EXTERNAL_PAT.search(external2):
                             if instruction == "include":
-                                with open(external_temp.name, "r", encoding='utf-8') as external_temp, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp_final:
+                                with open(external_temp.name, "r", encoding='utf-8') as external_temp, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp_final:
                                     for i, lineET in enumerate(external_temp):
                                         if USELESS_PAT.search(lineET):
                                             lineET = lineET.replace(lineET, "")
@@ -438,7 +440,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                             lineET = re.sub(
                                                 r"^", commentSourceStart, lineET)
                                         external_temp_final.write(
-                                            lineET.encode())
+                                            lineET)
                                     commentSourceEnd = "!@ <<<<<<<< "+external
                                     if argLen >= 2:
                                         if external2:
@@ -447,13 +449,13 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                             commentSourceEnd += " - "+exclusions
                                     commentSourceEnd += "\n"
                                     external_temp_final.write(
-                                        str(commentSourceEnd).encode())
+                                        str(commentSourceEnd))
                                 os.replace(external_temp_final.name,
                                            external_temp.name)
                             section = external_temp.name
 
                         if re.match(r"(HOSTS|DOMAINS|PH|B?NWL)include", instruction):
-                            with open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False) as external_temp_final:
+                            with open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp_final:
                                 unsortedLinesC = []
                                 for lineC in section_content:
                                     lineCwww = ""
@@ -473,7 +475,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                             if instruction == "HOSTSinclude":
                                                 convertItems.extend([
                                                     (r"^[|][|]", "0.0.0.0 "),
-                                                    (r"^0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]", "")
+                                                    (r"^0\.0\.0\.0 [0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9](.*)?", "")
                                                 ])
                                     elif instruction == "PHinclude":
                                         if not re.search(r"^\|\|(?!.*\/).*\*.*\^(\$all)?$", lineC):
@@ -483,8 +485,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                 (r"[\^]\$all$", "$"),
                                                 (r"[|][|]", ""),
                                                 (r"[\^]$", "$"),
-                                                (r"^[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]", ""),
                                                 (r"^0\.0\.0\.0", ""),
+                                                (r"^[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9](.*)?", ""),
                                                 (r"\.", "\\."),
                                                 (r"^", "(^|\.)"),
                                                 (r"\*", ".*")
@@ -535,7 +537,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         sortedLineC = re.sub(
                                             r"^", commentSourceStart, sortedLineC)
                                     external_temp_final.write(
-                                        sortedLineC.encode())
+                                        sortedLineC)
                                 section = None
                                 if unsortedLinesC:
                                     commentSourceEnd = "#@ <<<<<<<< "+external
@@ -545,7 +547,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         commentSourceEnd += " - "+exclusions
                                     commentSourceEnd += " => "+cType+"\n"
                                     external_temp_final.write(
-                                        str(commentSourceEnd).encode())
+                                        str(commentSourceEnd))
                                     section = external_temp_final.name
 
                         if section is not None:
@@ -555,7 +557,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
 
                 # Remove useless instructions and write all processed lines to final file
                 if not USELESS_I_PAT.match(lineF):
-                    final_tmp.write(lineF.encode())
+                    final_tmp.write(lineF)
         os.replace(final_tmp.name, pathToFinalList)
 
         # Set timezone
@@ -588,7 +590,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
         if "FORCED" in os.environ:
             forced = "true"
         if oldFL != newFL or forced:
-            with open(pathToFinalList, "r", encoding='utf-8') as f_final, NamedTemporaryFile(dir=tempDir, delete=False) as final_tmp:
+            with open(pathToFinalList, "r", encoding='utf-8') as f_final, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as final_tmp:
                 today = datetime.now().astimezone()
                 DEV_PAT = re.compile(r"\! .*DEV$")
                 MODIFIED_PAT = re.compile(r"@modified")
@@ -647,7 +649,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                             dateFormat = conf().dateFormat
                         localizedDT = today.strftime(dateFormat)
                         lineF = lineF.replace("@localizedDT", localizedDT)
-                    final_tmp.write(lineF.encode())
+                    final_tmp.write(lineF)
             os.replace(final_tmp.name, pathToFinalList)
 
             # Add modified files to git repository
@@ -663,14 +665,14 @@ def main(pathToFinalLists, forced, saveChangedFN):
                     with open(SFLB_CHANGED_FILES_PATH, mode='a', encoding='utf-8'):
                         pass
                 modifiedFiles = []
-                with open(SFLB_CHANGED_FILES_PATH, "r", encoding='utf-8') as changed_f_f, NamedTemporaryFile(dir=main_path, delete=False) as changed_files_temp:
+                with open(SFLB_CHANGED_FILES_PATH, "r", encoding='utf-8') as changed_f_f, NamedTemporaryFile(dir=main_path, delete=False, mode="w", encoding="utf-8") as changed_files_temp:
                     for line in changed_f_f:
                         if line:
                             modifiedFiles.append(line)
                     modifiedFiles.append(os.path.relpath(
                         pathToFinalList, start=main_path))
                     changed_files_temp.write(
-                        str('\n'.join(sorted(set(modifiedFiles)))).encode())
+                        str('\n'.join(sorted(set(modifiedFiles)))))
                 os.replace(changed_files_temp.name, SFLB_CHANGED_FILES_PATH)
 
             # Commit modified files

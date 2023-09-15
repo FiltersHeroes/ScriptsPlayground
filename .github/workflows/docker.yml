@@ -17,7 +17,7 @@ jobs:
         include:
           - dfile: "SFLB"
             imname: "sflb"
-            version: "3.0.9"
+            version: "3.0.11"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
