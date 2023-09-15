@@ -77,10 +77,10 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "3.0.9"
+            version: "3.0.11"
           - dfile: "RTM"
             imname: "rtm"
-            version: "3.0.9"
+            version: "3.0.11"
     needs: docker_sflb_ed
     steps:
       - name: Check out the repo
