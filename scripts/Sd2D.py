@@ -40,7 +40,6 @@ def main(subdomains):
         os.mkdir(cachePath)
 
     extract = tldextract.TLDExtract(include_psl_private_domains=True)
-    extract.update()
 
     for line in subdomains:
         if extract(line).registered_domain != "":

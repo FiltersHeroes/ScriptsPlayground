@@ -1,21 +1,15 @@
-FROM ubuntu:latest
+FROM python:3-slim
 
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y git openssh-client ca-certificates wget tzdata whois language-pack-pl curl nodejs npm python3-pip python3-tldextract
-RUN pip install GitPython dnspython aiohttp
+RUN apt-get update && apt-get install -y locales git openssh-client ca-certificates wget tzdata whois curl nodejs npm && pip install GitPython dnspython aiohttp tldextract --no-cache-dir
 
 # uncomment chosen locale to enable it's generation
-RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
-RUN sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
-
-# change DNS
-RUN sed -i 's/#DNS=/DNS=1.1.1.1 1.0.0.1/g' /etc/systemd/resolved.conf
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
 
 # generate chosen locale
-RUN locale-gen pl_PL.UTF-8
-RUN locale-gen en_US.UTF-8
+RUN locale-gen
 
 # set system-wide locale settings
 ENV LANG en_US.UTF-8

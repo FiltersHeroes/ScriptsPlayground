@@ -14,7 +14,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
 
 # generate chosen locale
-RUN locale-gen pl_PL.UTF-8 && locale-gen en_US.UTF-8
+RUN locale-gen
 
 # set system-wide locale settings
 ENV LANG en_US.UTF-8
