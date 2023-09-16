@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.12"
+SCRIPT_VERSION = "2.0.13"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -279,13 +279,15 @@ for path_to_file in args.path_to_file:
                 print("Checking the status of domains...")
                 resp = await session.head(f"http://{url}")
                 status_code = resp.status
-                if status_code == "301":
+                if status_code == 301:
                     print("Checking the status of domains...")
                     resp = await session.head(f"https://{url}")
                     status_code = resp.status
-            except (aiohttp.ClientConnectorError, asyncio.TimeoutError, aiohttp.ClientOSError) as e:
-                print(e)
+            except aiohttp.ClientConnectorError as ex:
+                print(ex)
                 status_code = "000"
+            except (aiohttp.ClientOSError, asyncio.TimeoutError) as ex2:
+                print(ex2)
             finally:
                 result = ""
                 if "status_code" in locals():
@@ -296,7 +298,8 @@ for path_to_file in args.path_to_file:
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
-        async with aiohttp.ClientSession(timeout=session_timeout) as session:
+        resolver = aiohttp.AsyncResolver(nameservers=["1.1.1.1", "1.0.0.1"])
+        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver)) as session:
             statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
