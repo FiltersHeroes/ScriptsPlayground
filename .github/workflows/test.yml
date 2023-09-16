@@ -35,9 +35,9 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v4
-      - with:
+      - env:
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/downloadArtifacts.py "E_KAD_NAMES" "$GITHUB_WORKSPACE/expired-d"
+          ./scripts/CI/downloadArtifacts.py "KAD" "$GITHUB_WORKSPACE/expired-d"
           ls -l ./expired-d

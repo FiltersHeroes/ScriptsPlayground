@@ -171,7 +171,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - continue-on-error: true
-        with:
+        env:
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -206,7 +206,7 @@ jobs:
           name: E_KAD
           path: expired-domains
       - continue-on-error: true
-        with:
+        env:
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
