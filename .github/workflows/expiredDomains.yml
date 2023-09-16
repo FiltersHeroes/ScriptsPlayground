@@ -44,10 +44,7 @@ jobs:
             split/KADhosts_*
       - id: generate
         run: |
-          KAD_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KAD_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
-          echo "KAD-strategy-matrix=$KAD_STRATEGY_MATRIX" >> $GITHUB_OUTPUT
-          KADH_STRATEGY_MATRIX=$(node -e "let r=[]; for(let i = 1; i <= process.env.NUMBER_OF_KADHOSTS_JOBS; i++) { r.push(i) }; console.log(JSON.stringify(r));")
-          echo "KADh-strategy-matrix=$KADH_STRATEGY_MATRIX" >> $GITHUB_OUTPUT
+          ./scripts/CI/createMatrixStrategy.py
   KAD:
     needs: KAD_S
     runs-on: ubuntu-latest
@@ -173,20 +170,12 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/getArtifactNamesForED.py KAD
-          npm install @actions/artifact
-      - uses: actions/github-script@v6
-        continue-on-error: true
+      - continue-on-error: true
         with:
-          script: |
-            const artifact = require("@actions/artifact")
-            const artifactClient = artifact.create()
-            const artifactNames = process.env.E_KAD_NAMES.split(" ")
-            for (artifactName of artifactNames) {
-              await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
-            }
+          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/downloadArtifacts.py KAD "$GITHUB_WORKSPACE/expired-domains"
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.py
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
@@ -217,20 +206,11 @@ jobs:
           name: E_KAD
           path: expired-domains
       - continue-on-error: true
+        with:
+          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/getArtifactNamesForED.py KADhosts
-          npm install @actions/artifact
-      - uses: actions/github-script@v6
-        continue-on-error: true
-        with:
-          script: |
-            const artifact = require("@actions/artifact")
-            const artifactClient = artifact.create()
-            const artifactNames = process.env.E_KADhosts_NAMES.split(" ")
-            for (artifactName of artifactNames) {
-              await artifactClient.downloadArtifact(artifactName, "./expired-domains", { createArtifactFolder: false })
-            }
+          ./scripts/CI/downloadArtifacts.py KADhosts "$GITHUB_WORKSPACE/expired-domains"
       - continue-on-error: true
         uses: actions/download-artifact@v3
         with:
