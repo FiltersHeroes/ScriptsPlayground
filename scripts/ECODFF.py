@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.13"
+SCRIPT_VERSION = "2.0.14"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -277,12 +277,13 @@ for path_to_file in args.path_to_file:
         async with limit:
             try:
                 print("Checking the status of domains...")
-                resp = await session.head(f"http://{url}")
+                resp = await session.head(f"http://{url}", allow_redirects=False)
                 status_code = resp.status
                 if status_code == 301:
-                    print("Checking the status of domains...")
-                    resp = await session.head(f"https://{url}")
-                    status_code = resp.status
+                    location = str(resp).split(
+                        "Location': \'")[1].split("\'")[0]
+                    if url in location:
+                        status_code = 200
             except aiohttp.ClientConnectorError as ex:
                 print(ex)
                 status_code = "000"
