@@ -41,5 +41,5 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/getArtifactNamesForED.py KAD
       - run: |
-          ./scripts/CI/downloadArtifacts.py "E_KAD_NAMES"
+          ./scripts/CI/downloadArtifacts.py "E_KAD_NAMES" "$GITHUB_WORKSPACE/expired-d"
           ls -l ./expired-d

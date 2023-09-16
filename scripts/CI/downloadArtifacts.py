@@ -17,9 +17,9 @@ pn = os.path.normpath
 script_path = os.path.dirname(os.path.realpath(__file__))
 main_path = os.getenv("GITHUB_WORKSPACE")
 
-expired_dir = pj(main_path, "expired-d")
-if not os.path.isdir(expired_dir):
-    os.mkdir(expired_dir)
+extract_dir = sys.argv[2]
+if not os.path.isdir(extract_dir):
+    os.mkdir(extract_dir)
 
 async def download_artifact(session, limit, name):
     async with limit:
@@ -32,19 +32,19 @@ async def download_artifact(session, limit, name):
             resp = await session.get(artifacts_url, headers=headers, params=params)
             if resp.status == 200:
                 data = await resp.json()
-                print(data)
                 if data["artifacts"]:
                     artifact = data["artifacts"][0]
                     try:
                         print(f"Downloading artifact {name} ...")
                         resp_adl = await session.get(artifact["archive_download_url"], headers=headers)
                         if resp_adl.status == 200:
-                            file_path = pj(expired_dir, name + ".zip")
+                            file_path = pj(extract_dir, name + ".zip")
                             zip_file = await resp_adl.read()
                             with open(file_path, "wb") as f:
                                 f.write(zip_file)
                             if os.path.isfile(file_path):
-                                shutil.unpack_archive(file_path, expired_dir)
+                                shutil.unpack_archive(file_path, extract_dir)
+                                print(f"Artifact {name} downloaded successfully and extracted to {extract_dir}.")
                                 os.remove(file_path)
                     except Exception as e_adl:
                         print(e_adl)
