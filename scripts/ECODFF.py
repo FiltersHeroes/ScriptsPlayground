@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.14"
+SCRIPT_VERSION = "2.0.15"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -84,12 +84,11 @@ for path_to_file in args.path_to_file:
     NO_INTERNET_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown_no_internet.txt")
     PARKED_FILE = pj(EXPIRED_DIR, FILTERLIST + "-parked.txt")
 
-    if not "NO_RM" in os.environ:
-        FILES_TO_REMOVE = [EXPIRED_FILE, UNKNOWN_FILE,
-                           LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]
-        for file_to_remove in FILES_TO_REMOVE:
-            if os.path.isfile(file_to_remove):
-                os.remove(file_to_remove)
+    FILES_TO_CLEAN = [EXPIRED_FILE, UNKNOWN_FILE,
+                      LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]
+    for file_to_clean in FILES_TO_CLEAN:
+        with open(file_to_clean, "w", encoding="utf-8") as file_to_clean_c:
+            pass
 
     PAGE_DOUBLE_PIPE_PAT = re.compile(r"^@?@?\|\|([^\/|^|$\*]+\.\w+)")
     PAGE_PIPE_PAT = re.compile(
