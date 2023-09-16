@@ -11,8 +11,8 @@ on:
         description: "Quantity of KADhosts jobs"
         required: true
         default: 2
-  schedule:
-    - cron: "55 23 * * 6"
+  # schedule:
+  #   - cron: "55 23 * * 6"
 env:
   CI_TIME_LIMIT: "2 hours 30 minutes"
   NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 4 }}
