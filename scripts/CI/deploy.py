@@ -63,9 +63,9 @@ for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_u
                     f_t.write(f"{line.strip()}\n")
         os.replace(f_t.name, main_file)
 
-for maybe_empty_file in glob.glob(pj(expired_path, "*.txt")):
-    if os.path.isfile(maybe_empty_file) and os.path.getsize(maybe_empty_file) <= 0:
-        os.remove(maybe_empty_file)
+# for maybe_empty_file in glob.glob(pj(expired_path, "*.txt")):
+#     if os.path.isfile(maybe_empty_file) and os.path.getsize(maybe_empty_file) <= 0:
+#         os.remove(maybe_empty_file)
 
 os.chdir(main_path)
 if "CI" in os.environ:

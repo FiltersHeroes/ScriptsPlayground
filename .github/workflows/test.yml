@@ -6,7 +6,7 @@ on:
       number_of_KAD_jobs:
         description: "Quantity of KAD jobs"
         required: true
-        default: 2
+        default: 3
 
 jobs:
   generate-artifacts:
@@ -19,6 +19,7 @@ jobs:
           mkdir ./expired-d
           touch ./expired-d/test-1.txt
           touch ./expired-d/test-2.txt
+          touch ./expired-d/test-3.txt
       - uses: actions/upload-artifact@v3
         with:
           name: E_KAD_01
@@ -29,6 +30,11 @@ jobs:
           name: E_KAD_02
           path: |
             expired-d/test-2.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: E_KAD_03
+          path: |
+            expired-d/test-3.txt
   download-artifacts:
     needs: generate-artifacts
     runs-on: ubuntu-latest
