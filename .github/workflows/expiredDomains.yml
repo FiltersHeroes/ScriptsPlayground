@@ -14,7 +14,7 @@ on:
   # schedule:
   #   - cron: "55 23 * * 6"
 env:
-  CI_TIME_LIMIT: "30 minutes"
+  CI_TIME_LIMIT: "2 hours 30 minutes"
   NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 4 }}
   NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs || 2 }}
 
@@ -171,11 +171,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - continue-on-error: true
-        env:
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/downloadArtifacts.py KAD "$GITHUB_WORKSPACE/expired-domains"
+          ./scripts/CI/getArtifactNamesForED.py KAD
+      - uses: hawkeye116477/download-multiple-artifacts-action@v1
+        with:
+          names: |
+            ${{ env.E_KAD_NAMES }}
+          path: expired-domains
       - run: |
           ./scripts/CI/CI_LETS_DO_THIS_KAD_limit.py
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
@@ -196,35 +199,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      ## See https://github.com/actions/download-artifact/issues/68
-      ## Unfortunately currently it's not possible to skip creating extra directory
-      ## when we want to download all artifacts at once without specyfing name.
-      ## Bad joke...
       - continue-on-error: true
-        uses: actions/download-artifact@v3
+        run: ./scripts/CI/getArtifactNamesForED.py KADhosts
+      - continue-on-error: true
+        uses: hawkeye116477/download-multiple-artifacts-action@v1
         with:
-          name: E_KAD
-          path: expired-domains
-      - continue-on-error: true
-        env:
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          ./scripts/CI/downloadArtifacts.py KADhosts "$GITHUB_WORKSPACE/expired-domains"
-      - continue-on-error: true
-        uses: actions/download-artifact@v3
-        with:
-          name: E_PAF
-          path: expired-domains
-      - continue-on-error: true
-        uses: actions/download-artifact@v3
-        with:
-          name: E_SOCIAL
-          path: expired-domains
-      - continue-on-error: true
-        uses: actions/download-artifact@v3
-        with:
-          name: E_COOKIES
+          names: |
+            ${{ env.E_KADhosts_NAMES }}
+            E_KAD
+            E_PAF
+            E_SOCIAL
+            E_COOKIES
           path: expired-domains
       - name: "Final deploy"
         env:
