@@ -36,18 +36,18 @@ with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as t_f:
                         t_f.write(f"0.0.0.0 {entry[0]}\n")
             os.remove(limit_file)
 
-with open(pj(main_path, "KADl.txt"), "w", encoding="utf-8") as k_f, open(t_f.name, "r", encoding="utf-8") as tfc:
+with open(pj(main_path, "KADl_01.txt"), "w", encoding="utf-8") as k_f, open(t_f.name, "r", encoding="utf-8") as tfc:
     if os.path.getsize(t_f.name) > 0:
         for entry in sorted(set(tfc)):
             if entry := entry.strip():
                 k_f.write(f"{entry}\n")
 os.remove(t_f.name)
 
-if os.path.isfile(pj(main_path, "KADl.txt")) and os.path.getsize(pj(main_path, "KADl.txt")) > 0:
+if os.path.isfile(pj(main_path, "KADl_01.txt")) and os.path.getsize(pj(main_path, "KADl_01.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "KADl.txt")], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "KADl_01.txt")], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(ECO_result.stdout)
-    os.remove(pj(main_path, "KADl.txt"))
+    os.remove(pj(main_path, "KADl_01.txt"))
 
 
 main_expired_file = pj(expired_path, "KAD-expired.txt")
@@ -72,7 +72,7 @@ def merge(main_file, files_to_merge_pat):
                     with open(expired_file, "r", encoding="utf-8") as ef:
                         for line_m in ef:
                             mf.write(f"{line_m}\n")
-                os.remove(expired_file)
+                    os.remove(expired_file)
 
 
 merge(main_expired_file, expired_pat)
