@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.15"
+SCRIPT_VERSION = "2.0.16"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -189,16 +189,19 @@ for path_to_file in args.path_to_file:
         Sd2D_result_file.write('\n')
 
     DSC_result = subprocess.run(
-        DSC + ["-f", Sd2D_result_file.name], check=True, capture_output=True)
-    DSC_decoded_result = DSC_result.stdout.decode()
-    print(DSC_decoded_result)
+        DSC + ["-f", Sd2D_result_file.name], check=False, capture_output=True, text=True)
+    DSC_decoded_result = DSC_result.stdout
 
     os.remove(Sd2D_result_file.name)
 
     EXPIRED_SW = ["Expired", "Book_blocked", "Suspended", "Removed",
                   "Free", "Redemption_period", "Suspended_or_reserved"]
 
+    if DSC_error := DSC_result.stderr:
+        print(DSC_error)
+
     if DSC_decoded_result:
+        print(DSC_decoded_result)
         with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as unknown_pages_temp_file:
             for entry in DSC_decoded_result.strip().splitlines():
                 splitted_entry = entry.split()
@@ -220,10 +223,13 @@ for path_to_file in args.path_to_file:
 
     if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
         DSC_result = subprocess.run(
-            DSC + ["-f", no_internet_temp_file.name], check=True, capture_output=True)
-        DSC_decoded_result = DSC_result.stdout.decode()
+            DSC + ["-f", no_internet_temp_file.name], check=False, capture_output=True, text=True)
+        DSC_decoded_result = DSC_result.stdout
 
         os.remove(no_internet_temp_file.name)
+
+        if DSC_error := DSC_result.stderr:
+            print(DSC_error)
 
         if DSC_decoded_result:
             print(DSC_decoded_result)
