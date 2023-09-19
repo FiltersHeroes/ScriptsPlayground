@@ -3,7 +3,7 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.7.2
+# v1.7.3
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
@@ -48,7 +48,7 @@ with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
 
 regex_list = []
 regex_part_domains = '|'.join(expired_f_list)
-regex_part_domains = f"(\w+\.*)?({regex_part_domains})"
+regex_part_domains = f"((\w+\.)+)?({regex_part_domains})"
 # ||domain.com
 regex_list.append(f"^\|\|{regex_part_domains}.*")
 # $domain=domain.com|
@@ -72,7 +72,7 @@ for root, dirs, files in os.walk(sections_path):
     for section in files:
         print(f"Checking {section} ...")
         section_file_path = pj(root, section)
-        with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False, mode="w",   encoding='utf-8') as f_out:
+        with open(section_file_path, "r", encoding='utf-8') as section_f, NamedTemporaryFile(dir='.', delete=False, mode="w", encoding='utf-8') as f_out:
             for line in section_f:
                 line = line.strip()
                 if line := new_regex.sub("", line):
