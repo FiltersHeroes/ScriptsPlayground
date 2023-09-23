@@ -77,7 +77,7 @@ if "CI" in os.environ:
             name = "github-actions[bot]"
         cw.set_value("user", "name", name).release()
         cw.set_value("user", "email", mail).release()
-    git_repo.index.add(expired_path)
+    git_repo.git.add(expired_path, update=True)
     git_repo.index.commit("Expired domains check\n[ci skip]")
     GIT_SLUG = git_repo.remotes.origin.url.replace(
         'https://', "").replace("git@", "").replace(":", "/")
