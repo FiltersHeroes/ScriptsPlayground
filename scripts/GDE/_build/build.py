@@ -10,7 +10,7 @@ pj = os.path.join
 pn = os.path.normpath
 
 script_path = os.path.dirname(os.path.realpath(__file__))
-main_path = pn(pj(script_path, ".."))
+main_path = pn(pj(script_path, "..", "GDE"))
 ingredients_path = pn(pj(main_path, "ingredients"))
 
 if sys.argv[1] == "ui":

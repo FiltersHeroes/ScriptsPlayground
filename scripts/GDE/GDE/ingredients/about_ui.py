@@ -91,11 +91,12 @@ class Ui_AboutDialog(object):
         sizePolicy.setHeightForWidth(self.dependsLbl.sizePolicy().hasHeightForWidth())
         self.dependsLbl.setSizePolicy(sizePolicy)
         self.dependsLbl.setLineWidth(0)
-        self.dependsLbl.setText(u"* [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/ \"crummy.com/software/BeautifulSoup\")\n"
-"* [tldextract](https://github.com/john-kurkowski/tldextract \"github.com/john-kurkowski/tldextract\")\n"
-"* [platformdirs](https://github.com/platformdirs/platformdirs \"github.com/platformdirs/platformdirs\")\n"
-"* [PySide 2](https://wiki.qt.io/Qt_for_Python \"wiki.qt.io/Qt_for_Python\")\n"
-"* [Qt 5](https://www.qt.io \"qt.io\")\n"
+        self.dependsLbl.setText(u"* [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)\n"
+"* [tldextract](https://github.com/john-kurkowski/tldextract)\n"
+"* [platformdirs](https://github.com/platformdirs/platformdirs)\n"
+"* [PySide 2](https://wiki.qt.io/Qt_for_Python)\n"
+"* [Qt 5](https://www.qt.io)\n"
+"* [PyQtDarkTheme](https://github.com/5yutan5/PyQtDarkTheme)\n"
 "")
         self.dependsLbl.setTextFormat(Qt.MarkdownText)
         self.dependsLbl.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
