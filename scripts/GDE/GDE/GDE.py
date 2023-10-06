@@ -31,6 +31,7 @@ import configparser
 from PySide2.QtWidgets import (QApplication, QDialog,
                                QMainWindow, QMessageBox, QToolTip)
 from PySide2.QtGui import QIcon, QCursor
+from PySide2.QtCore import Qt
 from platformdirs import user_config_dir
 import requests
 import tldextract
@@ -255,6 +256,8 @@ def main():
         theme = qdarktheme._style_loader._detect_system_theme('light')
         if theme == "dark":
             os.environ["QT_QPA_PLATFORM"] = "windows:darkmode=2"
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
     app = QApplication(sys.argv)
     if sys.platform == "win32":
         if theme == "dark":
