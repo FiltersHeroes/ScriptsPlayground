@@ -246,8 +246,7 @@ class GroupSelectionDialog(QDialog, Ui_GroupSelectionDialog):
                 QMessageBox.information(self, translateGDE("Done"), translateGDE(
                     '{selected_group} group has been deleted.').format(selected_group=selected_group))
 
-
-if __name__ == '__main__':
+def main():
     i18n.install()
     app = QApplication(sys.argv)
     app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
@@ -255,3 +254,6 @@ if __name__ == '__main__':
     main_window = MainWindow()
     main_window.show()
     app.exec_()
+
+if __name__ == '__main__':
+    main()
