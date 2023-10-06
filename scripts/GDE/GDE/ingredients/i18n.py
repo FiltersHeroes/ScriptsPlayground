@@ -5,7 +5,6 @@ import sys
 import os
 import gettext
 import builtins
-import locale
 
 
 def i18n(msgid):
@@ -15,9 +14,12 @@ def i18n(msgid):
 
 
 def set_locale_for_windows():
-    if sys.platform == "win32" and os.getenv('LANG') is None:
-        lang, enc = locale.getlocale()
-        os.environ['LANG'] = lang
+    if sys.platform == "win32" and os.getenv("LANG") is None:
+        import ctypes
+        import locale
+        windll = ctypes.windll.kernel32
+        lang = locale.windows_locale[windll.GetUserDefaultUILanguage()]
+        os.environ['LANG'] = os.environ['LANGUAGE'] = lang
 
 
 def install():
