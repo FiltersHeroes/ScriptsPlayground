@@ -24,7 +24,8 @@ dependencies = [
   "platformdirs",
   "tldextract",
   "beautifulsoup4",
-  "PySide2"
+  "PySide2",
+  'pyqtdarktheme ; platform_system == "Windows"'
 ]
 [project.scripts]
 GDE = "GDE.GDE:main"

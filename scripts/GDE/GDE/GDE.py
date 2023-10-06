@@ -247,8 +247,19 @@ class GroupSelectionDialog(QDialog, Ui_GroupSelectionDialog):
                     '{selected_group} group has been deleted.').format(selected_group=selected_group))
 
 def main():
+    if sys.platform == "win32":
+        import qdarktheme
+        qdarktheme.enable_hi_dpi()
     i18n.install()
+    if sys.platform == "win32":
+        theme = qdarktheme._style_loader._detect_system_theme('light')
+        if theme == "dark":
+            os.environ["QT_QPA_PLATFORM"] = "windows:darkmode=2"
     app = QApplication(sys.argv)
+    if sys.platform == "win32":
+        if theme == "dark":
+            qdarktheme.setup_theme("dark", additional_qss="QToolTip { border: 0px; }")
+            app.setStyle("Fusion")
     app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
     clipboard = app.clipboard()
     main_window = MainWindow()
