@@ -7,87 +7,87 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Groups Domains Extractor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-05 00:27+0200\n"
-"PO-Revision-Date: 2023-10-05 00:38+0200\n"
+"POT-Creation-Date: 2023-10-07 23:46+0200\n"
+"PO-Revision-Date: 2023-10-07 23:49+0200\n"
 "Last-Translator: hawkeye116477\n"
 "Language-Team: Filters Heroes\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4\n"
 
-#: GDE.py:101 GDE.py:143 GDE.py:173 GDE.py:223
+#: GDE.py:103 GDE.py:146 GDE.py:176 GDE.py:226
 msgid "Error"
 msgstr "Błąd"
 
-#: GDE.py:101
+#: GDE.py:104
 msgid "Tell me what to extract, cuz unfortunately my glass ball broke."
 msgstr ""
 "Powiedz mi co mam wyodrębnić, bo niestety moja szklana kula się stłukła."
 
-#: GDE.py:121 GDE.py:179 ingredients/GDE_ui.py:197 ingredients/GDE_ui.py:200
+#: GDE.py:124 GDE.py:182 ingredients\GDE_ui.py:200 ingredients\GDE_ui.py:203
 msgid "comma"
 msgstr "przecinek"
 
-#: GDE.py:123 GDE.py:181 ingredients/GDE_ui.py:198
+#: GDE.py:126 GDE.py:184 ingredients\GDE_ui.py:201
 msgid "pipe"
 msgstr "pionowa kreska"
 
-#: GDE.py:130 GDE.py:187 GDE.py:242
+#: GDE.py:133 GDE.py:190 GDE.py:247
 msgid "Done"
 msgstr "Gotowe"
 
-#: GDE.py:132
-msgid "Domains have been found \\U0001F600."
-msgstr "Domeny zostały znalezione \\U0001F600."
-
 #: GDE.py:135
+msgid "Domains have been found 😀."
+msgstr "Domeny zostały znalezione 😀."
+
+#: GDE.py:138
 msgid "Copy to clipboard"
 msgstr "Skopiuj do schowka"
 
-#: GDE.py:144
+#: GDE.py:147
 msgid "Domains not found. Check the entered data and try again!"
 msgstr ""
 "Domeny nie zostały znalezione. Sprawdź wpisane dane i spróbuj ponownie!"
 
-#: GDE.py:174
+#: GDE.py:177
 msgid "Not so fast, cowboy, enter group's name!"
 msgstr "Nie tak szybko kowboju, wprowadź nazwę grupy!"
 
-#: GDE.py:188
+#: GDE.py:191
 #, python-brace-format
 msgid "{group_name} group has been saved to file: \"{file_path}\"."
 msgstr "Grupa {group_name} została zapisana do pliku: \"{file_path}\"."
 
-#: GDE.py:223
+#: GDE.py:227
 msgid "Tell me what to load, cuz unfortunately my glass ball broke."
 msgstr "Powiedz mi co mam wczytać, bo niestety moja szklana kula się stłukła."
 
-#: GDE.py:236
+#: GDE.py:240
 msgid "Confirmation"
 msgstr "Potwierdzenie"
 
-#: GDE.py:236
+#: GDE.py:241
 #, python-brace-format
 msgid ""
 "Are you sure you want to remove configuration of {selected_group} group?"
 msgstr "Czy na pewno chcesz usunąć konfigurację grupy {selected_group}?"
 
-#: GDE.py:242
+#: GDE.py:248
 #, python-brace-format
 msgid "{selected_group} group has been deleted."
 msgstr "Grupa {selected_group} została usunięta."
 
-#: GDE.py:247 ingredients/about_ui.py:172 ingredients/GDE_ui.py:179
+#: GDE.py:266 ingredients\about_ui.py:173 ingredients\GDE_ui.py:179
 msgid "Groups Domains Extractor"
 msgstr "Ekstraktor Domen Grup"
 
-#: ingredients/about_ui.py:166
+#: ingredients\about_ui.py:167
 msgid "About GDE"
 msgstr "O EDG"
 
-#: ingredients/about_ui.py:167
+#: ingredients\about_ui.py:168
 msgid ""
 "Groups Domains Extractor helps in finding all domains of specific group and "
 "copies it to clipboard.\n"
@@ -97,94 +97,98 @@ msgstr ""
 "grupy i kopiuje je do schowka. \n"
 "Ma również możliwość zapisania konfiguracji grupy do pliku i jej wczytania."
 
-#: ingredients/about_ui.py:169
+#: ingredients\about_ui.py:170
 msgid "About"
 msgstr "O programie"
 
-#: ingredients/about_ui.py:170
+#: ingredients\about_ui.py:171
 msgid "License"
 msgstr "Licencja"
 
-#: ingredients/about_ui.py:171
+#: ingredients\about_ui.py:172
 msgid "Dependencies"
 msgstr "Zależności"
 
-#: ingredients/GDE_ui.py:180
+#: ingredients\GDE_ui.py:180
 msgid "&About GDE"
 msgstr "&O EDG"
 
-#: ingredients/GDE_ui.py:181
+#: ingredients\GDE_ui.py:181
 msgid "&Load group"
 msgstr "&Wczytaj grupę"
 
-#: ingredients/GDE_ui.py:183
+#: ingredients\GDE_ui.py:183
 msgid "Ctrl+O"
 msgstr "Ctrl+O"
 
-#: ingredients/GDE_ui.py:185
+#: ingredients\GDE_ui.py:185
 msgid "&Save group"
 msgstr "&Zapisz grupę"
 
-#: ingredients/GDE_ui.py:187
+#: ingredients\GDE_ui.py:187
 msgid "Ctrl+S"
 msgstr "Ctrl+S"
 
-#: ingredients/GDE_ui.py:189
+#: ingredients\GDE_ui.py:189
 msgid "&Remove group"
 msgstr "&Usuń grupę"
 
-#: ingredients/GDE_ui.py:190
+#: ingredients\GDE_ui.py:191
+msgid "Ctrl+R"
+msgstr "Ctrl+R"
+
+#: ingredients\GDE_ui.py:193
 msgid "&Exit"
 msgstr "&Zakończ"
 
-#: ingredients/GDE_ui.py:192
+#: ingredients\GDE_ui.py:195
 msgid "Ctrl+Q"
 msgstr "Ctrl+Q"
 
-#: ingredients/GDE_ui.py:194
+#: ingredients\GDE_ui.py:197
 msgid "Site address:"
 msgstr "Adres strony:"
 
-#: ingredients/GDE_ui.py:195
+#: ingredients\GDE_ui.py:198
 msgid "CSS path:"
 msgstr "Ścieżka CSS:"
 
-#: ingredients/GDE_ui.py:196
+#: ingredients\GDE_ui.py:199
 msgid "Separator:"
 msgstr "Separator:"
 
-#: ingredients/GDE_ui.py:201
+#: ingredients\GDE_ui.py:204
 msgid "Extract domains"
 msgstr "Wyodrębnij domeny"
 
-#: ingredients/GDE_ui.py:202
+#: ingredients\GDE_ui.py:205
 msgid "Group’s name:"
 msgstr "Nazwa grupy:"
 
-#: ingredients/GDE_ui.py:203
+#: ingredients\GDE_ui.py:206
 msgid "&Help"
 msgstr "&Pomoc"
 
-#: ingredients/GDE_ui.py:204
+#: ingredients\GDE_ui.py:207
 msgid "&File"
 msgstr "&Plik"
 
-#: ingredients/group_selection_ui.py:97
+#: ingredients\group_selection_ui.py:97
 msgid "Group selection"
 msgstr "Wybór grupy"
 
-#: ingredients/group_selection_ui.py:98
+#: ingredients\group_selection_ui.py:98
 msgid "Group’s configuration:"
 msgstr "Konfiguracja grupy:"
 
-#: ingredients/group_selection_ui.py:99
+#: ingredients\group_selection_ui.py:99
 msgid "Load"
 msgstr "Wczytaj"
 
-#: ingredients/group_selection_ui.py:100
+#: ingredients\group_selection_ui.py:100
 msgid "Remove"
 msgstr "Usuń"
 
-#: ingredients/group_selection_ui.py:101
+#: ingredients\group_selection_ui.py:101
 msgid "Cancel"
 msgstr "Anuluj"

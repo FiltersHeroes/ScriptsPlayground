@@ -6,22 +6,22 @@ import os
 import gettext
 import builtins
 
-
 def i18n(msgid):
-    localedir = os.path.join(sys.path[0], 'locales')
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    localedir = os.path.normpath(os.path.join(script_path, "..", 'locales'))
     translate = gettext.translation('GDE', localedir, fallback=True)
     return translate.gettext(msgid)
 
 
-def set_locale_for_windows():
-    if sys.platform == "win32" and os.getenv("LANG") is None:
+def install(_app):
+    if sys.platform == "win32":
         import ctypes
         import locale
         windll = ctypes.windll.kernel32
         lang = locale.windows_locale[windll.GetUserDefaultUILanguage()]
         os.environ['LANG'] = os.environ['LANGUAGE'] = lang
-
-
-def install():
-    set_locale_for_windows()
+        from PySide2.QtCore import QTranslator, QLibraryInfo, QLocale
+        translator = QTranslator(_app)
+        translator.load('qt_' + lang, QLibraryInfo.location(QLibraryInfo.TranslationsPath))
+        _app.installTranslator(translator)
     builtins.translateGDE = i18n

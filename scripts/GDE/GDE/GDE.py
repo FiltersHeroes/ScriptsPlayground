@@ -132,7 +132,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg_box.setIcon(QMessageBox.Information)
             msg_box.setWindowTitle(translateGDE("Done"))
             msg_box.setText(translateGDE(
-                'Domains have been found \U0001F600.'))
+                'Domains have been found 😀.'))
             msg_box.setDetailedText(final_links_with_sep)
             copy_btn = msg_box.addButton(translateGDE(
                 "Copy to clipboard"), QMessageBox.ActionRole)
@@ -251,7 +251,6 @@ def main():
     if sys.platform == "win32":
         import qdarktheme
         qdarktheme.enable_hi_dpi()
-    i18n.install()
     if sys.platform == "win32":
         theme = qdarktheme._style_loader._detect_system_theme('light')
         if theme == "dark":
@@ -259,6 +258,7 @@ def main():
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
     app = QApplication(sys.argv)
+    i18n.install(app)
     if sys.platform == "win32":
         if theme == "dark":
             qdarktheme.setup_theme("dark", additional_qss="QToolTip { border: 0px; }")

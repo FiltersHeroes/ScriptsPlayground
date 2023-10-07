@@ -1,0 +1,4 @@
+include GDE/locales/GDE.pot
+include GDE/locales/*/LC_MESSAGES/*.po
+include GDE/ingredients/*.ui
+exclude GDE/locales/*/LC_MESSAGES/*.mo
