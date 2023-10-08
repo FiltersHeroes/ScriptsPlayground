@@ -8,16 +8,16 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *  # type: ignore
-from PySide2.QtGui import *  # type: ignore
-from PySide2.QtWidgets import *  # type: ignore
+from qtpy.QtCore import *  # type: ignore
+from qtpy.QtGui import *  # type: ignore
+from qtpy.QtWidgets import *  # type: ignore
 
 
 class Ui_AboutDialog(object):
     def setupUi(self, AboutDialog):
         if not AboutDialog.objectName():
             AboutDialog.setObjectName(u"AboutDialog")
-        AboutDialog.resize(398, 355)
+        AboutDialog.resize(397, 373)
         self.gridLayout = QGridLayout(AboutDialog)
         self.gridLayout.setObjectName(u"gridLayout")
         self.tabWidget = QTabWidget(AboutDialog)
@@ -56,28 +56,14 @@ class Ui_AboutDialog(object):
         self.plainTextEdit_2.setStyleSheet(u"QPlainTextEdit {background-color: transparent;}")
         self.plainTextEdit_2.setFrameShape(QFrame.NoFrame)
         self.plainTextEdit_2.setReadOnly(True)
-        self.plainTextEdit_2.setPlainText(u"MIT License\n"
+        self.plainTextEdit_2.setPlainText(u"Copyright (c) 2023 Filters Heroes\n"
 "\n"
-"Copyright (c) 2023 Filters Heroes\n"
+"This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or\n"
+"(at your option) any later version.\n"
 "\n"
-"Permission is hereby granted, free of charge, to any person obtaining a copy\n"
-"of this software and associated documentation files (the \"Software\"), to deal\n"
-"in the Software without restriction, including without limitation the rights\n"
-"to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n"
-"copies of the Software, and to permit persons to whom the Software is\n"
-"furnished to do so, subject to the following conditions:\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n"
 "\n"
-"The above copyright notice and this permission notice shall be included in all\n"
-"copies or substantial portions of the Software.\n"
-"\n"
-"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n"
-"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
-"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
-"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
-"LIABILITY, WHETHER IN AN ACTION OF CONTRACT,"
-                        " TORT OR OTHERWISE, ARISING FROM,\n"
-"OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n"
-"SOFTWARE.")
+"You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.")
 
         self.gridLayout_2.addWidget(self.plainTextEdit_2, 0, 0, 1, 1)
 
@@ -94,8 +80,10 @@ class Ui_AboutDialog(object):
         self.dependsLbl.setText(u"* [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)\n"
 "* [tldextract](https://github.com/john-kurkowski/tldextract)\n"
 "* [platformdirs](https://github.com/platformdirs/platformdirs)\n"
-"* [PySide 2](https://wiki.qt.io/Qt_for_Python)\n"
-"* [Qt 5](https://www.qt.io)\n"
+"* [QtPy](https://github.com/spyder-ide/qtpy)\n"
+"* [PySide](https://wiki.qt.io/Qt_for_Python)\n"
+"* [PyQt](https://www.riverbankcomputing.com/software/pyqt/)\n"
+"* [Qt](https://www.qt.io)\n"
 "* [PyQtDarkTheme](https://github.com/5yutan5/PyQtDarkTheme)\n"
 "")
         self.dependsLbl.setTextFormat(Qt.MarkdownText)
@@ -157,7 +145,7 @@ class Ui_AboutDialog(object):
         self.retranslateUi(AboutDialog)
         self.buttonBox.rejected.connect(AboutDialog.close)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(AboutDialog)

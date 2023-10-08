@@ -13,17 +13,18 @@ authors = [{ name = "Filters Heroes" }]
 description = "Groups Domains Extractor helps in finding all domains of specific group and copies it to clipboard."
 requires-python = ">=3.6"
 classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
 ]
 dependencies = [
-  "requests",
-  "platformdirs",
-  "tldextract",
-  "beautifulsoup4",
-  "PySide2",
-  'pyqtdarktheme ; platform_system == "Windows"',
+    "requests",
+    "platformdirs",
+    "tldextract",
+    "beautifulsoup4",
+    "QtPy",
+    'PyQt5',
+    'pyqtdarktheme ; platform_system == "Windows"',
 ]
 [project.scripts]
 GDE = "GDE.GDE:main"

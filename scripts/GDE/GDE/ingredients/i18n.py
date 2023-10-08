@@ -20,7 +20,7 @@ def install(_app):
         windll = ctypes.windll.kernel32
         lang = locale.windows_locale[windll.GetUserDefaultUILanguage()]
         os.environ['LANG'] = os.environ['LANGUAGE'] = lang
-        from PySide2.QtCore import QTranslator, QLibraryInfo, QLocale
+        from qtpy.QtCore import QTranslator, QLibraryInfo, QLocale
         translator = QTranslator(_app)
         translator.load('qt_' + lang, QLibraryInfo.location(QLibraryInfo.TranslationsPath))
         _app.installTranslator(translator)

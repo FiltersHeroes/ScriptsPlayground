@@ -8,9 +8,9 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *  # type: ignore
-from PySide2.QtGui import *  # type: ignore
-from PySide2.QtWidgets import *  # type: ignore
+from qtpy.QtCore import *  # type: ignore
+from qtpy.QtGui import *  # type: ignore
+from qtpy.QtWidgets import *  # type: ignore
 
 
 class Ui_MainWindow(object):
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(398, 228)
+        MainWindow.resize(398, 189)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -26,43 +26,19 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         self.actionAbout = QAction(MainWindow)
         self.actionAbout.setObjectName(u"actionAbout")
-        icon = QIcon()
-        iconThemeName = u"help-about"
-        if QIcon.hasThemeIcon(iconThemeName):
-            icon = QIcon.fromTheme(iconThemeName)
-        else:
-            icon.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
-        
+        icon = QIcon(QIcon.fromTheme(u"help-about"))
         self.actionAbout.setIcon(icon)
         self.actionLoad_group = QAction(MainWindow)
         self.actionLoad_group.setObjectName(u"actionLoad_group")
-        icon1 = QIcon()
-        iconThemeName = u"document-open"
-        if QIcon.hasThemeIcon(iconThemeName):
-            icon1 = QIcon.fromTheme(iconThemeName)
-        else:
-            icon1.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
-        
+        icon1 = QIcon(QIcon.fromTheme(u"document-open"))
         self.actionLoad_group.setIcon(icon1)
         self.actionSave_group = QAction(MainWindow)
         self.actionSave_group.setObjectName(u"actionSave_group")
-        icon2 = QIcon()
-        iconThemeName = u"document-save"
-        if QIcon.hasThemeIcon(iconThemeName):
-            icon2 = QIcon.fromTheme(iconThemeName)
-        else:
-            icon2.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
-        
+        icon2 = QIcon(QIcon.fromTheme(u"document-save"))
         self.actionSave_group.setIcon(icon2)
         self.actionRemove_group = QAction(MainWindow)
         self.actionRemove_group.setObjectName(u"actionRemove_group")
-        icon3 = QIcon()
-        iconThemeName = u"edit-delete"
-        if QIcon.hasThemeIcon(iconThemeName):
-            icon3 = QIcon.fromTheme(iconThemeName)
-        else:
-            icon3.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
-        
+        icon3 = QIcon(QIcon.fromTheme(u"edit-delete"))
         self.actionRemove_group.setIcon(icon3)
         self.actionExit = QAction(MainWindow)
         self.actionExit.setObjectName(u"actionExit")
@@ -151,7 +127,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 398, 30))
+        self.menubar.setGeometry(QRect(0, 0, 398, 22))
         self.menuHelp = QMenu(self.menubar)
         self.menuHelp.setObjectName(u"menuHelp")
         self.menuFile = QMenu(self.menubar)

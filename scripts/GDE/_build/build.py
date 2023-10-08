@@ -7,6 +7,7 @@ import sys
 import subprocess
 import hashlib
 import shutil
+from tempfile import NamedTemporaryFile
 
 pj = os.path.join
 pn = os.path.normpath
@@ -18,12 +19,18 @@ ingredients_path = pn(pj(main_path, "ingredients"))
 if sys.argv[1] == "ui":
     os.chdir(ingredients_path)
     print("Converting UI files to python...")
-    about_ui = subprocess.run(["uic", "about.ui", "-o", "about_ui.py", "-tr", "translateGDE", "--idbased", "-g=python"], check=False, capture_output=True,     text=True)
-    print(about_ui.stdout)
-    main_ui = subprocess.run(["uic", "GDE.ui", "-o", "GDE_ui.py", "-tr", "translateGDE", "--idbased", "-g=python"], check=False, capture_output=True, text=True)
-    print(main_ui.stdout)
-    group_selection_ui = subprocess.run(["uic", "group_selection.ui", "-o", "group_selection_ui.py", "-tr", "translateGDE", "--idbased", "-g=python"],     check=False, capture_output=True, text=True)
-    print(group_selection_ui.stdout)
+    temp_path = pj(main_path, "temp")
+    if not os.path.exists(temp_path):
+        os.mkdir(temp_path)
+    for ui in ["about.ui", "GDE.ui", "group_selection.ui"]:
+        py_file = f"{ui.replace('.ui', '_ui')}.py"
+        print(py_file)
+        ui_out = subprocess.run(["uic", ui, "-o", py_file, "-tr", "translateGDE", "--idbased", "-g=python"], check=False, capture_output=True, text=True)
+        print(ui_out.stdout)
+        with open(py_file, "r", encoding="utf-8") as py_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
+            for line in py_f:
+                f_t.write(line.replace("PySide2", "qtpy"))
+            os.replace(f_t.name, py_file)
 elif sys.argv[1] == "tr":
     print("Updating translation files")
     os.chdir(main_path)
