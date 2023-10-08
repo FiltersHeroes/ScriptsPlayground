@@ -22,8 +22,12 @@
 """
 import os
 import sys
+import platform
+if sys.platform == "win32" and platform.release() == "10":
+    os.environ["QT_API"] = "pyqt6"
 import importlib
 import configparser
+from qtpy import API_NAME
 from qtpy.QtWidgets import (QApplication, QDialog,
                                QMainWindow, QMessageBox, QToolTip)
 from qtpy.QtGui import QIcon, QCursor
@@ -192,6 +196,10 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         super().__init__()
         self.setupUi(self)
         self.versionLbl.setText(APP_VERSION)
+        api_url = "https://www.riverbankcomputing.com/software/pyqt"
+        if "PySide" in API_NAME:
+            api_url = "https://wiki.qt.io/Qt_for_Python"
+        self.dependsLbl.setText(self.dependsLbl.text().replace("API_URL", api_url).replace("API", API_NAME))
         self.connect_signals_slots()
 
     def connect_signals_slots(self):
@@ -244,22 +252,13 @@ class GroupSelectionDialog(QDialog, Ui_GroupSelectionDialog):
                     '{selected_group} group has been deleted.').format(selected_group=selected_group))
 
 def main():
-    if sys.platform == "win32":
-        import qdarktheme
-        qdarktheme.enable_hi_dpi()
-    if sys.platform == "win32":
-        theme = qdarktheme._style_loader._detect_system_theme('light')
-        if theme == "dark":
-            os.environ["QT_QPA_PLATFORM"] = "windows:darkmode=2"
-    if not "6" in os.environ["QT_API"]:
+    if not "6" in API_NAME:
         QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
         QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
     app = QApplication(sys.argv)
     i18n.install(app)
-    if sys.platform == "win32":
-        if theme == "dark":
-            qdarktheme.setup_theme("dark", additional_qss="QToolTip { border: 0px; }")
-            app.setStyle("Fusion")
+    if sys.platform == "win32" and "6" in API_NAME:
+        app.setStyle("Fusion")
     app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
     clipboard = app.clipboard()
     main_window = MainWindow()

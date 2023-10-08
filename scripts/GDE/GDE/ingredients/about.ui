@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>397</width>
-    <height>373</height>
+    <height>327</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -121,11 +121,8 @@ You should have received a copy of the GNU General Public License along with thi
 * [tldextract](https://github.com/john-kurkowski/tldextract)
 * [platformdirs](https://github.com/platformdirs/platformdirs)
 * [QtPy](https://github.com/spyder-ide/qtpy)
-* [PySide](https://wiki.qt.io/Qt_for_Python)
-* [PyQt](https://www.riverbankcomputing.com/software/pyqt/)
-* [Qt](https://www.qt.io)
-* [PyQtDarkTheme](https://github.com/5yutan5/PyQtDarkTheme)
-</string>
+* [API](API_URL)
+* [Qt](https://www.qt.io)</string>
          </property>
          <property name="textFormat">
           <enum>Qt::MarkdownText</enum>
@@ -165,7 +162,6 @@ You should have received a copy of the GNU General Public License along with thi
      <property name="font">
       <font>
        <pointsize>14</pointsize>
-       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -196,7 +192,6 @@ You should have received a copy of the GNU General Public License along with thi
      <property name="font">
       <font>
        <pointsize>20</pointsize>
-       <weight>75</weight>
        <italic>true</italic>
        <bold>true</bold>
       </font>

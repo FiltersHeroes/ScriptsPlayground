@@ -22,10 +22,11 @@ dependencies = [
     "platformdirs",
     "tldextract",
     "beautifulsoup4",
-    "QtPy",
-    'PyQt5',
-    'pyqtdarktheme ; platform_system == "Windows"',
+    "QtPy"
 ]
+[project.optional-dependencies]
+Qt5 = ["PyQt5"] # KDE & Co still uses Qt5
+Qt6 = ["PyQt6"] # 'Native' dark mode for Windows 10+
 [project.scripts]
 GDE = "GDE.GDE:main"
 [tool.setuptools]

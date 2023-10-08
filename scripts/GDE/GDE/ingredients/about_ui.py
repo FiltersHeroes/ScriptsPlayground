@@ -3,21 +3,21 @@
 ################################################################################
 ## Form generated from reading UI file 'about.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.10
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from qtpy.QtCore import *  # type: ignore
-from qtpy.QtGui import *  # type: ignore
-from qtpy.QtWidgets import *  # type: ignore
+from qtpy.QtCore import *
+from qtpy.QtGui import *
+from qtpy.QtWidgets import *
 
 
 class Ui_AboutDialog(object):
     def setupUi(self, AboutDialog):
         if not AboutDialog.objectName():
             AboutDialog.setObjectName(u"AboutDialog")
-        AboutDialog.resize(397, 373)
+        AboutDialog.resize(397, 327)
         self.gridLayout = QGridLayout(AboutDialog)
         self.gridLayout.setObjectName(u"gridLayout")
         self.tabWidget = QTabWidget(AboutDialog)
@@ -81,11 +81,8 @@ class Ui_AboutDialog(object):
 "* [tldextract](https://github.com/john-kurkowski/tldextract)\n"
 "* [platformdirs](https://github.com/platformdirs/platformdirs)\n"
 "* [QtPy](https://github.com/spyder-ide/qtpy)\n"
-"* [PySide](https://wiki.qt.io/Qt_for_Python)\n"
-"* [PyQt](https://www.riverbankcomputing.com/software/pyqt/)\n"
-"* [Qt](https://www.qt.io)\n"
-"* [PyQtDarkTheme](https://github.com/5yutan5/PyQtDarkTheme)\n"
-"")
+"* [API](API_URL)\n"
+"* [Qt](https://www.qt.io)")
         self.dependsLbl.setTextFormat(Qt.MarkdownText)
         self.dependsLbl.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.dependsLbl.setWordWrap(True)
@@ -110,7 +107,6 @@ class Ui_AboutDialog(object):
         font = QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.versionLbl.setFont(font)
         self.versionLbl.setText(u"version")
 
@@ -136,7 +132,6 @@ class Ui_AboutDialog(object):
         font1.setPointSize(20)
         font1.setBold(True)
         font1.setItalic(True)
-        font1.setWeight(75)
         self.appnameLbl.setFont(font1)
 
         self.gridLayout.addWidget(self.appnameLbl, 0, 0, 1, 1)
