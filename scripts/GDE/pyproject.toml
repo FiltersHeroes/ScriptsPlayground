@@ -22,7 +22,8 @@ dependencies = [
     "platformdirs",
     "tldextract",
     "beautifulsoup4",
-    "QtPy"
+    "QtPy",
+    'darkdetect; platform_system == "Windows" or platform_system == "Darwin"'
 ]
 [project.optional-dependencies]
 Qt5 = ["PyQt5"] # KDE & Co still uses Qt5
@@ -32,4 +33,4 @@ GDE = "GDE.GDE:main"
 [tool.setuptools]
 include-package-data = false
 [tool.setuptools.package-data]
-GDE = ["locales/*/LC_MESSAGES/GDE.mo"]
+GDE = ["locales/*/LC_MESSAGES/GDE.mo", "icons/*/*/actions/*", "icons/*/*"]

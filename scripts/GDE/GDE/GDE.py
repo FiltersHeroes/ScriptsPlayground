@@ -64,7 +64,6 @@ group_selection_ui = import_from_file(
     pj(ingredients_dir, "group_selection_ui.py"))
 Ui_GroupSelectionDialog = group_selection_ui.Ui_GroupSelectionDialog
 
-
 def version():
     return APP_VERSION
 
@@ -199,7 +198,13 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         api_url = "https://www.riverbankcomputing.com/software/pyqt"
         if "PySide" in API_NAME:
             api_url = "https://wiki.qt.io/Qt_for_Python"
-        self.dependsLbl.setText(self.dependsLbl.text().replace("API_URL", api_url).replace("API", API_NAME))
+        depends_txt = self.dependsLbl.text()
+        depends_txt = depends_txt.replace("API_URL", api_url).replace("API", API_NAME)
+        if (sys.platform == "win32" and "6" in API_NAME) or (sys.platform == "darwin"):
+            depends_txt = f"{depends_txt}\n* [Darkdetect](https://github.com/albertosottile/darkdetect)"
+        if QIcon.themeName() in ("Papirus", "Papirus-Dark"):
+            depends_txt = f"{depends_txt}\n* [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)"
+        self.dependsLbl.setText(depends_txt)
         self.connect_signals_slots()
 
     def connect_signals_slots(self):
@@ -256,9 +261,16 @@ def main():
         QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
         QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
     app = QApplication(sys.argv)
+    if not QIcon.themeName():
+        QIcon.setThemeName("Papirus")
+        QIcon.setThemeSearchPaths([pj(script_path, "icons")])
     i18n.install(app)
-    if sys.platform == "win32" and "6" in API_NAME:
-        app.setStyle("Fusion")
+    if (sys.platform == "win32" and "6" in API_NAME) or (sys.platform == "darwin"):
+        import darkdetect
+        if darkdetect.isDark():
+            QIcon.setThemeName("Papirus-Dark")
+            if sys.platform == "win32":
+                app.setStyle("Fusion")
     app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
     clipboard = app.clipboard()
     main_window = MainWindow()

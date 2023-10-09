@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # coding=utf-8
-from setuptools import setup
 import subprocess
 import os
 import glob
+from setuptools import setup
 
 script_path = os.path.dirname(os.path.realpath(__file__))
 pj = os.path.join
