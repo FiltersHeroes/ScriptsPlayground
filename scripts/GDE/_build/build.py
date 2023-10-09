@@ -43,7 +43,7 @@ elif sys.argv[1] == "icons":
     if os.path.exists(pj(icons_path)):
         shutil.rmtree(pj(icons_path))
     icons_src_dirs = [pn(pj(main_git_path, "..", "papirus-icon-theme", "Papirus")), pn(pj(main_git_path, "..", "papirus-icon-theme", "Papirus-Dark")),]
-    needed_icons = ["help-about.svg", "document-open.svg", "document-save.svg", "edit-delete.svg", "application-exit.svg", "window-close.svg", "index.theme"]
+    needed_icons = ["help-about.svg", "document-open.svg", "document-save.svg", "edit-copy.svg", "edit-delete.svg", "application-exit.svg", "window-close.svg", "index.theme"]
 
     for icons_src_dir in icons_src_dirs:
         icons_theme_path = pj(icons_path, os.path.basename(icons_src_dir))

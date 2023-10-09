@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Groups Domains Extractor
+Name[pl]=Ekstraktor Domen Grup
+Comment=Finding all domains of specific group and copying it to clipboard
+Comment[pl]=Odnajdywanie wszystkich domen danej grupy i kopiowanie ich do schowka
+Exec=GDE
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+StartupNotify=false

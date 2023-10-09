@@ -70,7 +70,7 @@ def version():
 
 def read_config():
     config = configparser.ConfigParser()
-    config.read(cfilepath)
+    config.read(cfilepath, encoding='utf-8')
     return config
 
 
@@ -136,6 +136,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             copy_btn = msg_box.addButton(translateGDE(
                 "Copy to clipboard"), QMessageBox.ActionRole)
             copy_btn.clicked.disconnect()
+            clipboard = app.clipboard()
             copy_btn.clicked.connect(
                 lambda: clipboard.setText(final_links_with_sep))
             copy_btn.setIcon(QIcon.fromTheme("edit-copy"))
@@ -256,26 +257,27 @@ class GroupSelectionDialog(QDialog, Ui_GroupSelectionDialog):
                 QMessageBox.information(self, translateGDE("Done"), translateGDE(
                     '{selected_group} group has been deleted.').format(selected_group=selected_group))
 
+
+if not "6" in API_NAME:
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
+app = QApplication(sys.argv)
+if not QIcon.themeName():
+    QIcon.setThemeName("Papirus")
+    QIcon.setThemeSearchPaths([pj(script_path, "icons")])
+i18n.install(app)
+if (sys.platform == "win32" and "6" in API_NAME) or (sys.platform == "darwin"):
+    import darkdetect
+    if darkdetect.isDark():
+        QIcon.setThemeName("Papirus-Dark")
+        if sys.platform == "win32":
+            app.setStyle("Fusion")
+app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
+main_window = MainWindow()
+main_window.show()
+
 def main():
-    if not "6" in API_NAME:
-        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
-        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
-    app = QApplication(sys.argv)
-    if not QIcon.themeName():
-        QIcon.setThemeName("Papirus")
-        QIcon.setThemeSearchPaths([pj(script_path, "icons")])
-    i18n.install(app)
-    if (sys.platform == "win32" and "6" in API_NAME) or (sys.platform == "darwin"):
-        import darkdetect
-        if darkdetect.isDark():
-            QIcon.setThemeName("Papirus-Dark")
-            if sys.platform == "win32":
-                app.setStyle("Fusion")
-    app.setApplicationDisplayName(translateGDE('Groups Domains Extractor'))
-    clipboard = app.clipboard()
-    main_window = MainWindow()
-    main_window.show()
     app.exec_()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
