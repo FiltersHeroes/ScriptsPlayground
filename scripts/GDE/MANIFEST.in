@@ -1,4 +1,6 @@
 include GDE/locales/GDE.pot
 include GDE/locales/*/LC_MESSAGES/*.po
 include GDE/ingredients/*.ui
+include GDE/shortcuts/bin/GDE
+include GDE/shortcuts/share/applications/GDE.desktop
 exclude GDE/locales/*/LC_MESSAGES/*.mo
