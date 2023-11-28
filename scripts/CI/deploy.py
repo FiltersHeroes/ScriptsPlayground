@@ -77,7 +77,105 @@ if "CI" in os.environ:
             name = "github-actions[bot]"
         cw.set_value("user", "name", name).release()
         cw.set_value("user", "email", mail).release()
-    git_repo.git.add(expired_path, update=True)
+    git_repo.git.add(expired_path)
+    diffs = git_repo.index.diff("HEAD")
+    filterlists = []
+    for d in diffs:
+        if "KAD" in d.a_path and "KAD" not in filterlists:
+            filterlists.append("KAD")
+        if "KADhosts" in d.a_path and "KADhosts" not in filterlists:
+            filterlists.append("KADhosts")
+        if "PAF" in d.a_path and "PolishAnnoyanceFilters" not in filterlists:
+            filterlists.append("PolishAnnoyanceFilters")
+        if "social" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
+            filterlists.append("PolishSocialCookiesFiltersDev")
+        if "polish_rss_filters" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
+            filterlists.append("PolishAntiAnnoyingSpecialSupplement")
+        if "cookies" in d.a_patha and "PolishSocialCookiesFiltersDev" not in filterlists:
+            filterlists.append("PolishSocialCookiesFiltersDev")
+
+    git_mode = "ssh"
+    with git_repo.config_reader() as cr:
+        url = cr.get_value('remote "origin"', 'url')
+        if url.startswith('http'):
+            git_mode = "http"
+    SFLB_path = pn(main_path+"/scripts/SFLB.py")
+    spec = importlib.util.spec_from_file_location("SFLB", SFLB_path)
+    SFLB = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(SFLB)
+    os.chdir(pn(main_path+"/.."))
+    for filterlist in filterlists:
+        git_clone_url = ""
+        if git_mode == "http":
+            git_clone_url = f"https://github.com/FiltersHeroes/{filterlist}.git"
+        else:
+            git_clone_url = f"git@github.com:FiltersHeroes/{filterlist}.git"
+        git.Repo.clone_from(git_clone_url, pj(os.getcwd(), filterlist))
+        os.chdir(pn(filterlist))
+        conf = SFLB.getValuesFromConf(pj(os.getcwd(), ".SFLB.config"))
+        sections_path = pj(os.getcwd(), "sections")
+        if hasattr(conf(), 'sectionsPath'):
+            sections_path = pn(pj(os.getcwd(), conf().sectionsPath))
+        expired_files = [""]
+        f_files = [""]
+
+        for d in diffs:
+            if re.search(r"expired|unknown|parked\.txt$", d.a_path):
+                if "PAF" in d.a_path and filterlist == "PolishAnnoyanceFilters":
+                    expired_files.append(d.a_path)
+                elif ("cookies", "social") in d.a_path and filterlist == "PolishSocialCookiesFiltersDev":
+                    expired_files.append(d.a_path)
+                elif "rss" in d.a_path and filterlist == "PolishAntiAnnoyingSpecialSupplement":
+                    expired_files.append(d.a_path)
+                elif "KAD" in d.a_path and filterlist == "KAD":
+                    expired_files.append(d.a_path)
+                elif "KADhosts" in d.a_path and filterlist == "KADhosts":
+                    expired_files.append(d.a_path)
+
+        f_git_repo = git.Repo(pj(os.getcwd(), ".SFLB.config"), search_parent_directories=True)
+        for i, expired_file in enumerate(expired_files):
+            if "unknown" in expired_file:
+                f_type = "unknown"
+            elif "parked" in expired_file:
+                f_type = "parked"
+            elif "expired" in expired_file:
+                f_type = "expired"
+            if f_type == "unknown":
+                with open(pn(pj(main_path, expired_file)), "r", encoding="utf-8") as e_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding='utf-8') as f_out:
+                    for line in e_f:
+                        if line != "":
+                            if not ".eu " in line:
+                                f_out.write(line.replace(" 000", ""))
+                os.replace(f_out.name, pn(pj(main_path, expired_file)))
+            EDRFF_result = subprocess.run([pj(main_path, "scripts", "EDRFF.py"), sections_path, pn(pj(main_path, expired_file))], check=False, capture_output=True, text=True)
+            if EDRFF_error := EDRFF_result.stderr:
+                print(EDRFF_error)
+            if EDRFF_output := EDRFF_result.stdout:
+                print(EDRFF_output)
+
+            if filterlist == "KAD":
+                update3pExpired_result = subprocess.run([pj(os.getcwd(), "scripts", "update3pExpired.py"), "CERT", pn(pj(main_path, expired_file))], check=False, capture_output=True, text=True)
+                if update3pExpired_error := update3pExpired_result.stderr:
+                    print(update3pExpired_error)
+                if update3pExpired_output := update3pExpired_result.stdout:
+                    print(update3pExpired_output)
+                update3pExpired_result = subprocess.run([pj(os.getcwd(), "scripts", "update3pExpired.py"), "LWS", pn(pj(main_path, expired_file))], check=False, capture_output=True, text=True)
+                if update3pExpired_error := update3pExpired_result.stderr:
+                    print(update3pExpired_error)
+                if update3pExpired_output := update3pExpired_result.stdout:
+                    print(update3pExpired_output)
+
+            f_git_repo.git.add(sections_path)
+            patch_content = git_repo.git.diff(cached=True)
+            f_type = ""
+            patch_file_name = f"{filterlist}_{i}-{f_type}.patch"
+            with open(pj(main_path, "expired-domains", "patches", patch_file_name), "w", encoding="utf-8") as patch_file:
+                for line in patch_content:
+                    patch_file.write(line)
+            f_git_repo.index.commit("Not to be added\n[ci skip]")
+
+    os.chdir(main_path)
+    git_repo.git.add(pj(expired_path, "patches"))
     git_repo.index.commit("Expired domains check\n[ci skip]")
     GIT_SLUG = git_repo.remotes.origin.url.replace(
         'https://', "").replace("git@", "").replace(":", "/")
