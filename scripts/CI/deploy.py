@@ -11,6 +11,7 @@ import glob
 import subprocess
 from tempfile import NamedTemporaryFile
 import git
+import importlib.util
 
 pj = os.path.join
 pn = os.path.normpath
@@ -91,7 +92,7 @@ if "CI" in os.environ:
             filterlists.append("PolishSocialCookiesFiltersDev")
         if "polish_rss_filters" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
             filterlists.append("PolishAntiAnnoyingSpecialSupplement")
-        if "cookies" in d.a_patha and "PolishSocialCookiesFiltersDev" not in filterlists:
+        if "cookies" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
             filterlists.append("PolishSocialCookiesFiltersDev")
 
     git_mode = "ssh"
