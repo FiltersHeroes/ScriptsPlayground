@@ -7,6 +7,7 @@
 
 import os
 import sys
+import re
 import glob
 import subprocess
 from tempfile import NamedTemporaryFile
@@ -55,7 +56,6 @@ merge(main_unknown_no_internet_file, glob.glob(
 temp_path = pj(main_path, "temp")
 if not os.path.isdir(temp_path):
     os.mkdir(temp_path)
-temp_path = pj(main_path, "temp")
 for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
@@ -79,21 +79,22 @@ if "CI" in os.environ:
         cw.set_value("user", "name", name).release()
         cw.set_value("user", "email", mail).release()
     git_repo.git.add(expired_path)
-    diffs = git_repo.index.diff("HEAD")
+    diffs = git_repo.head.commit.diff()
     filterlists = []
     for d in diffs:
-        if "KAD" in d.a_path and "KAD" not in filterlists:
-            filterlists.append("KAD")
-        if "KADhosts" in d.a_path and "KADhosts" not in filterlists:
-            filterlists.append("KADhosts")
-        if "PAF" in d.a_path and "PolishAnnoyanceFilters" not in filterlists:
-            filterlists.append("PolishAnnoyanceFilters")
-        if "social" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
-            filterlists.append("PolishSocialCookiesFiltersDev")
-        if "polish_rss_filters" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
-            filterlists.append("PolishAntiAnnoyingSpecialSupplement")
-        if "cookies" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
-            filterlists.append("PolishSocialCookiesFiltersDev")
+        if not d.deleted_file:
+            if "KAD" in d.a_path and "KAD" not in filterlists:
+                filterlists.append("KAD")
+            if "KADhosts" in d.a_path and "KADhosts" not in filterlists:
+                filterlists.append("KADhosts")
+            if "PAF" in d.a_path and "PolishAnnoyanceFilters" not in filterlists:
+                filterlists.append("PolishAnnoyanceFilters")
+            if "social" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
+                filterlists.append("PolishSocialCookiesFiltersDev")
+            if "polish_rss_filters" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
+                filterlists.append("PolishAntiAnnoyingSpecialSupplement")
+            if "cookies" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
+                filterlists.append("PolishSocialCookiesFiltersDev")
 
     git_mode = "ssh"
     with git_repo.config_reader() as cr:
@@ -113,18 +114,18 @@ if "CI" in os.environ:
             git_clone_url = f"git@github.com:FiltersHeroes/{filterlist}.git"
         git.Repo.clone_from(git_clone_url, pj(os.getcwd(), filterlist))
         os.chdir(pn(filterlist))
-        conf = SFLB.getValuesFromConf(pj(os.getcwd(), ".SFLB.config"))
+        conf = SFLB.getValuesFromConf([pj(os.getcwd(), ".SFLB.config")])
         sections_path = pj(os.getcwd(), "sections")
         if hasattr(conf(), 'sectionsPath'):
             sections_path = pn(pj(os.getcwd(), conf().sectionsPath))
-        expired_files = [""]
-        f_files = [""]
+        expired_files = []
+        f_files = []
 
         for d in diffs:
-            if re.search(r"expired|unknown|parked\.txt$", d.a_path):
+            if re.search(r"expired|unknown|parked\.txt$", d.a_path) and not d.deleted_file:
                 if "PAF" in d.a_path and filterlist == "PolishAnnoyanceFilters":
                     expired_files.append(d.a_path)
-                elif ("cookies", "social") in d.a_path and filterlist == "PolishSocialCookiesFiltersDev":
+                elif d.a_path in ("cookies", "social") and filterlist == "PolishSocialCookiesFiltersDev":
                     expired_files.append(d.a_path)
                 elif "rss" in d.a_path and filterlist == "PolishAntiAnnoyingSpecialSupplement":
                     expired_files.append(d.a_path)
@@ -133,8 +134,11 @@ if "CI" in os.environ:
                 elif "KADhosts" in d.a_path and filterlist == "KADhosts":
                     expired_files.append(d.a_path)
 
+        if not os.path.isdir(temp_path):
+            os.mkdir(temp_path)
         f_git_repo = git.Repo(pj(os.getcwd(), ".SFLB.config"), search_parent_directories=True)
         for i, expired_file in enumerate(expired_files):
+            f_type = ""
             if "unknown" in expired_file:
                 f_type = "unknown"
             elif "parked" in expired_file:
