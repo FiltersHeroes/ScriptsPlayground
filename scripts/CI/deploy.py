@@ -122,23 +122,23 @@ if "CI" in os.environ:
         f_files = []
 
         for d in diffs:
-            if re.search(r"expired|unknown|parked\.txt$", d.a_path) and not d.deleted_file:
+            if re.search(r"(expired|unknown|parked)\.txt$", d.a_path) and not d.deleted_file:
                 if "PAF" in d.a_path and filterlist == "PolishAnnoyanceFilters":
                     expired_files.append(d.a_path)
                 elif d.a_path in ("cookies", "social") and filterlist == "PolishSocialCookiesFiltersDev":
                     expired_files.append(d.a_path)
                 elif "rss" in d.a_path and filterlist == "PolishAntiAnnoyingSpecialSupplement":
                     expired_files.append(d.a_path)
-                elif "KAD" in d.a_path and filterlist == "KAD":
+                elif "KAD" in d.a_path and filterlist == "KAD" and not "parked" in d.a_path:
                     expired_files.append(d.a_path)
                 elif "KADhosts" in d.a_path and filterlist == "KADhosts":
                     expired_files.append(d.a_path)
 
-        if not os.path.isdir(temp_path):
-            os.mkdir(temp_path)
         f_git_repo = git.Repo(pj(os.getcwd(), ".SFLB.config"), search_parent_directories=True)
         for i, expired_file in enumerate(expired_files):
             f_type = ""
+            if not os.path.isdir(temp_path):
+                os.mkdir(temp_path)
             if "unknown" in expired_file:
                 f_type = "unknown"
             elif "parked" in expired_file:
@@ -152,6 +152,7 @@ if "CI" in os.environ:
                             if not ".eu " in line:
                                 f_out.write(line.replace(" 000", ""))
                 os.replace(f_out.name, pn(pj(main_path, expired_file)))
+            print(pn(pj(main_path, expired_file)))
             EDRFF_result = subprocess.run([pj(main_path, "scripts", "EDRFF.py"), sections_path, pn(pj(main_path, expired_file))], check=False, capture_output=True, text=True)
             if EDRFF_error := EDRFF_result.stderr:
                 print(EDRFF_error)
@@ -171,13 +172,14 @@ if "CI" in os.environ:
                     print(update3pExpired_output)
 
             f_git_repo.git.add(sections_path)
-            patch_content = git_repo.git.diff(cached=True)
-            f_type = ""
+            if filterlist == "KAD":
+                f_git_repo.git.add(pj(os.getcwd(), "exclusions"))
+            patch_content = f_git_repo.git.diff(cached=True)
             patch_file_name = f"{filterlist}_{i}-{f_type}.patch"
             with open(pj(main_path, "expired-domains", "patches", patch_file_name), "w", encoding="utf-8") as patch_file:
                 for line in patch_content:
                     patch_file.write(line)
-            f_git_repo.index.commit("Not to be added\n[ci skip]")
+            f_git_repo.index.commit(f"Added to {patch_file_name}\n[ci skip]")
 
     os.chdir(main_path)
     git_repo.git.add(pj(expired_path, "patches"))
