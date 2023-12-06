@@ -48,7 +48,7 @@ async def bulk_lets_go(limit_value, urls):
         for result in results:
             if result:
                 ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, result)], check=False, capture_output=True, text=True)
+                    main_path, result), "-c 40"], check=False, capture_output=True, text=True)
                 if ECO_error := ECO_result.stderr:
                     print(ECO_error)
                 if ECO_output := ECO_result.stdout:

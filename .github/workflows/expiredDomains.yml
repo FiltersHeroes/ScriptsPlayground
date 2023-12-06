@@ -46,7 +46,7 @@ jobs:
         run: |
           ./scripts/CI/createMatrixStrategy.py
   KAD:
-    needs: KAD_S
+    needs: [KAD_S, PAF, SocialPASS, Cookies, KADhosts]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     strategy:

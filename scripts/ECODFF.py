@@ -37,17 +37,18 @@ import shutil
 import asyncio
 from tempfile import NamedTemporaryFile
 import importlib.util
-from dns.asyncresolver import resolve
+import dns.asyncresolver
 from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, Timeout
 import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.18"
+SCRIPT_VERSION = "2.0.19"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('path_to_file', type=str, nargs='+', action='store')
+parser.add_argument("-c", "--connections", type=int, action='store', default=20)
 parser.add_argument("-v", "--version", action='version',
                     version="ECODFF" + ' ' + SCRIPT_VERSION)
 args = parser.parse_args()
@@ -75,6 +76,8 @@ if not os.path.isdir(EXPIRED_DIR):
     os.mkdir(EXPIRED_DIR)
     with open(pj(EXPIRED_DIR, ".keep"), 'w', encoding="utf-8") as fp:
         pass
+
+DNS_a = ["8.8.8.8", "8.8.4.4"]
 
 for path_to_file in args.path_to_file:
     FILTERLIST = os.path.splitext(os.path.basename(path_to_file))[0]
@@ -122,20 +125,23 @@ for path_to_file in args.path_to_file:
         r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
     parked_domains = []
     offline_pages = []
-    sem_value = 5
+    sem_value = args.connections
+
+    custom_resolver = dns.asyncresolver.Resolver()
+    custom_resolver.nameservers = DNS_a
 
     async def domain_dns_check(domain, limit):
         async with limit:
             status = "online"
             try:
-                print("Checking the status of domains...")
-                answers_NS = await resolve(domain, "NS")
+                print(f"Checking the status of {domain}...")
+                answers_NS = await custom_resolver.resolve(domain, "NS")
             except (NXDOMAIN, Timeout):
                 status = "offline"
             except (NoAnswer, NoNameservers):
                 try:
-                    print("Checking the status of domains...")
-                    await resolve(domain)
+                    print(f"Checking the status of {domain}...")
+                    await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
             else:
@@ -282,7 +288,7 @@ for path_to_file in args.path_to_file:
     async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
         async with limit:
             try:
-                print("Checking the status of domains...")
+                print(f"Checking the status of {url}...")
                 resp = await session.head(f"http://{url}", allow_redirects=False)
                 status_code = resp.status
                 if status_code in (301, 302):
@@ -292,9 +298,39 @@ for path_to_file in args.path_to_file:
                         status_code = 200
             except aiohttp.ClientConnectorError as ex:
                 print(ex)
-                status_code = "000"
+                if "reset by peer" in str(ex):
+                    await asyncio.sleep(1)
+                    try:
+                        print(f"Checking the status of {url} again...")
+                        resp = await session.head(f"http://{url}", allow_redirects=False)
+                        status_code = resp.status
+                        if status_code in (301, 302):
+                            location = str(resp).split("Location': \'")[1].split("\'")[0]
+                            if url in location:
+                                status_code = 200
+                    except Exception as ex3:
+                        if not "reset by peer" in str(ex3):
+                            status_code = "000"
+                        else:
+                            status_code = "200"
+                else:
+                    status_code = "000"
             except (aiohttp.ClientOSError, asyncio.TimeoutError) as ex2:
                 print(ex2)
+                await asyncio.sleep(1)
+                try:
+                    print(f"Checking the status of {url} again...")
+                    resp = await session.head(f"http://{url}", allow_redirects=False)
+                    status_code = resp.status
+                    if status_code in (301, 302):
+                        location = str(resp).split("Location': \'")[1].split("\'")[0]
+                        if url in location:
+                            status_code = 200
+                except Exception as ex3:
+                    if not "reset by peer" in str(ex3):
+                        status_code = "000"
+                    else:
+                        status_code = "200"
             finally:
                 result = ""
                 if "status_code" in locals():
@@ -306,7 +342,7 @@ for path_to_file in args.path_to_file:
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
-        resolver = aiohttp.AsyncResolver(nameservers=["1.1.1.1", "1.0.0.1"])
+        resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
         async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver)) as session:
             statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
