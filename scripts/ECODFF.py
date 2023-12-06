@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.17"
+SCRIPT_VERSION = "2.0.18"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -143,6 +143,7 @@ for path_to_file in args.path_to_file:
                     status = "parked"
             finally:
                 result = f"{domain} {status}"
+                await asyncio.sleep(1)
         return result
 
     async def bulk_domain_dns_check(limit_value):
@@ -298,6 +299,7 @@ for path_to_file in args.path_to_file:
                 result = ""
                 if "status_code" in locals():
                     result = f"{str(url)} {str(status_code)}"
+                await asyncio.sleep(1)
         return result
 
     async def save_status_code(timeout_time, limit_value):
