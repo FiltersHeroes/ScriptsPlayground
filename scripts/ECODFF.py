@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.19"
+SCRIPT_VERSION = "2.0.21"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -270,6 +270,7 @@ for path_to_file in args.path_to_file:
         with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file, open(unknown_pages_temp_file.name, "a", encoding="utf-8") as unknown_temp_file:
             if regex_domains:
                 for sub_entry in sub_tmp_file:
+                    sub_entry = sub_entry.strip()
                     # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
                     if regex_domains.search(sub_entry):
                         if not sub_entry in valid_domains:
