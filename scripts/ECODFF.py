@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.21"
+SCRIPT_VERSION = "2.0.22"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -292,7 +292,7 @@ for path_to_file in args.path_to_file:
                 print(f"Checking the status of {url}...")
                 resp = await session.head(f"http://{url}", allow_redirects=False)
                 status_code = resp.status
-                if status_code in (301, 302):
+                if status_code in (301, 302, 307, 308):
                     location = str(resp).split(
                         "Location': \'")[1].split("\'")[0]
                     if url in location:
@@ -305,7 +305,7 @@ for path_to_file in args.path_to_file:
                         print(f"Checking the status of {url} again...")
                         resp = await session.head(f"http://{url}", allow_redirects=False)
                         status_code = resp.status
-                        if status_code in (301, 302):
+                        if status_code in (301, 302, 307, 308):
                             location = str(resp).split("Location': \'")[1].split("\'")[0]
                             if url in location:
                                 status_code = 200
@@ -323,7 +323,7 @@ for path_to_file in args.path_to_file:
                     print(f"Checking the status of {url} again...")
                     resp = await session.head(f"http://{url}", allow_redirects=False)
                     status_code = resp.status
-                    if status_code in (301, 302):
+                    if status_code in (301, 302, 307, 308):
                         location = str(resp).split("Location': \'")[1].split("\'")[0]
                         if url in location:
                             status_code = 200
