@@ -1,0 +1,12 @@
+diff --git a/sections/specyficzne_ukrywajace.txt b/sections/specyficzne_ukrywajace.txt
+index e982b75..8d868c6 100644
+--- a/sections/specyficzne_ukrywajace.txt
++++ b/sections/specyficzne_ukrywajace.txt
+@@ -116,7 +116,6 @@ dlapolski.pl##.dashicons-rss
+ dobreprogramy.pl##a[href="#rssModal"], .no-mobile.block:nth-of-type(7)
+ dojczland.info##.td-footer-template-13
+ dompelenpomyslow.pl##a[href*="news.google.com/"]
+-doosanbabcock.com##.btn_rss
+ dw.com,e-petrol.pl,gram.pl,miastonowydwor.pl,mkm.szczecin.pl##a[href*="/rss/"]
+ dzeta.com.pl,zssucha.pl###block-node-syndicate
+ dziennik.com##.t-right.omega.g3
