@@ -45,7 +45,7 @@ os.remove(t_f.name)
 
 if os.path.isfile(pj(main_path, "KADl_01.txt")) and os.path.getsize(pj(main_path, "KADl_01.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "KADl_01.txt"), "-c 100"], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "KADl_01.txt"), "-c 300"], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(ECO_result.stdout)
     os.remove(pj(main_path, "KADl_01.txt"))
 
