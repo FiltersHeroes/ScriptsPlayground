@@ -136,7 +136,7 @@ elif sys.argv[1] == "KADhosts":
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhosts_"):
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), "-c 200"], check=False, capture_output=True, text=True)
+        main_path, "split", sys.argv[1]), "-c 40"], check=False, capture_output=True, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:
