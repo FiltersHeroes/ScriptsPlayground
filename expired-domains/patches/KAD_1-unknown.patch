@@ -1,0 +1,1628 @@
+diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
+index 2b3e0c4f5..018f78a26 100644
+--- a/exclusions/CERT_expired.txt
++++ b/exclusions/CERT_expired.txt
+@@ -464,6 +464,8 @@
+ 0lx.1415116.xyz
+ 0lx.1415849.xyz
+ 0lx.144241.xyz
++0lx.144247.xyz
++0lx.144248.xyz
+ 0lx.14515122.xyz
+ 0lx.14515455.xyz
+ 0lx.14548455.xyz
+@@ -1032,6 +1034,7 @@
+ 144053-weryfikacja-4788.app-all.co.pl
+ 1445a219c2aef82190d9692b977b49f5.krokla.co.pl
+ 144nft.com
++145-239-93-70.plesk.page
+ 146332-weryfikacja-6222.app-gro.co.pl
+ 148122222.xyz
+ 148a66bbf7d2af339759165daff84366.hospla.co.pl
+@@ -1066,6 +1069,7 @@
+ 16-interia.azureedge.net
+ 16-wp.azureedge.net
+ 160323.pl
++161-35-11-34.plesk.page
+ 162.in-group.xyz
+ 164ca695d9d6de6b2440dc3b876975f5.hospla.co.pl
+ 166dzxdss-41.com
+@@ -1127,6 +1131,7 @@
+ 19123.info
+ 19248-33066.bacloud.info
+ 19284819.me
++193-42-36-172.plesk.page
+ 194b.up-official.site
+ 19c91759e12fcc58379c7c0443db6b1c.hospla.co.pl
+ 19interia.azureedge.net
+@@ -1732,6 +1737,7 @@
+ 30d942dfe38c534e6265e0e1ec43391e.hospla.co.pl
+ 30minutetechbriefings.com
+ 30piecesofs1lver.com
++31-172-83-146.plesk.page
+ 310548.xyz
+ 310707-potwierdz-4907.app-all.co.pl
+ 31211212.xyz
+@@ -2822,6 +2828,7 @@
+ 78964210.xyz
+ 7898879.xyz
+ 7899800.xyz
++79-133-56-170.plesk.page
+ 79003333.xyz
+ 790842.xyz
+ 7909856323.xyz
+@@ -5209,6 +5216,7 @@ alnuhasi.com
+ aloofsmar.site
+ alorair.shop
+ alorians.xyz
++alourin.cf
+ alpadevs.com
+ alpha-web-secure.com
+ alphabeticalsubordinate.top
+@@ -5900,6 +5908,7 @@ askorw.win
+ askovinvest.pro
+ asksomeonethis.com
+ askuy.maymaxy.xyz
++askymroopi.cf
+ aslupina.pl
+ asmlengineering.net
+ asojoc.com
+@@ -6719,6 +6728,7 @@ awazne-pudelek.2600jiffy.com
+ awazne-tvn24.adsraja.com
+ awazne-wiadomosci.abarenet.com
+ awdiqopwp.pl
++awefdx.s3.us-east-005.backblazeb2.com
+ awerisman.co.vu
+ awerisman.tarungdrajatsiokalama.com
+ awesomepagez.com
+@@ -6757,6 +6767,7 @@ ayijimo.com
+ ayoxah.com
+ az.tonsystemeuro.xyz
+ azagak.com
++azbvxj.s3.us-east-005.backblazeb2.com
+ azcehn.com
+ azcmvv.com
+ azedge.net
+@@ -6773,6 +6784,7 @@ azsxxf3rm.digital
+ azurhabits.com
+ azwpikiran.co.vu
+ azx.takilon.top
++azyioil.s3.us-west-004.backblazeb2.com
+ azz.tonsystemeuro.xyz
+ azzbsxs.cn
+ b-berry.pt
+@@ -6791,8 +6803,10 @@ b102.paidtomoney.com
+ b152910279672f06971846616b7b7f8b.alldom.co.pl
+ b158.paidtomoney.com
+ b19063.hamdandates.com
++b1d3b4a8.cftvpinheiro.com.br
+ b20058fa3fcaf216b20058fa3fcaf216.azureedge.net
+ b21580.paidtomoney.com
++b21fc393.chefs-kitchen.co.uk
+ b22581.kisspark.info
+ b228.paidtomoney.com
+ b23851ccc4d9f2e74105742fe19a4b4c.alldom.co.pl
+@@ -6803,6 +6817,7 @@ b27194.hamdandates.com
+ b276.paidtomoney.com
+ b2berlin.se
+ b2bmovil.com
++b2df0d3e7e1.chefs-kitchen.co.uk
+ b2fe283561134f6d8d1f6dc88b04bb20.apl.co.pl
+ b2invest-pl.cfd
+ b2invest-pl.icu
+@@ -6822,6 +6837,7 @@ b35830.kisspark.info
+ b3604592522513f95207243cfd3e11b3.alldom.co.pl
+ b375.paidtomoney.com
+ b37839.paidtomoney.com
++b39150067c6.chefs-kitchen.co.uk
+ b398.kisspark.info
+ b39a1440389877f7898181440455053f.alldom.co.pl
+ b3a4edcb14976fe7b3a4edcb14976fe7.azureedge.net
+@@ -6838,6 +6854,8 @@ b4a34f1b693ad121a74bf7929fb467f7.alldom.co.pl
+ b4aa0534d64fdd5fa8dd53812d21a690.al-pl.co.pl
+ b4b07549c1bcbcccfd5102295f88b07c.a-pl.co.pl
+ b4bde4a7919df865310a5a770e6bd6e6.alldom.co.pl
++b4f73c70.bakerstreetfinance.tv
++b4f746d5252.chefs-kitchen.co.uk
+ b4idkugo19c7n.rdl.pl
+ b4uno.structuresilly.co.in
+ b50299.kisspark.info
+@@ -6852,7 +6870,10 @@ b6251.paidtomoney.com
+ b64399.paidtomoney.com
+ b64493.kisspark.info
+ b64ebd8f9b292dd30f64cc4134c2f883.al-pl.co.pl
++b6744e37736.chefs-kitchen.co.uk
++b67ada6f7ad.chefs-kitchen.co.uk
+ b70638.paidtomoney.com
++b7105e86.bakerstreetfinance.tv
+ b71ef2474d4290b3e90db655e631a943.alldom.co.pl
+ b72448.paidtomoney.com
+ b73097.kisspark.info
+@@ -6868,6 +6889,7 @@ b84268.kisspark.info
+ b84564.paidtomoney.com
+ b86111.kisspark.info
+ b88490.hamdandates.com
++b88a56a6.bakerstreetfinance.tv
+ b89518.paidtomoney.com
+ b899.paidtomoney.com
+ b8993.paidtomoney.com
+@@ -6901,6 +6923,7 @@ babn.tradslim.top
+ babosiki.buzz
+ babyaccords.com
+ babycompfort.com
++babygang.builderallwppro.com
+ bacc66666.net
+ bacc6868.com
+ baccaacquiesced.pl
+@@ -7379,6 +7402,7 @@ bbda.plfcaty.xyz
+ bbejott.pl
+ bbernacki.pl
+ bbezwjzmjpuk.iecza.vip
++bbfxxx.s3.us-east-005.backblazeb2.com
+ bbhg.formhh.top
+ bbimg.net
+ bbinoro.website
+@@ -7476,6 +7500,7 @@ beep-boop.org
+ beeps.name
+ beerseleqt.com
+ beestprog-one.xyz
++bef4c46d.bcdashboards.com.br
+ befitnees.com
+ beflagu.pl
+ beforpeople160.bar
+@@ -8134,6 +8159,7 @@ bjolaz.com
+ bjpubj.com
+ bkaliorsa.com
+ bkhbkh.bakuahkuah.link
++bkmgft.s3.us-east-005.backblazeb2.com
+ bkomfo.org
+ bl.hoengnk2.click
+ bl.sportbetsignupcode.com
+@@ -9015,6 +9041,7 @@ bpgbpm.com
+ bpjahr.com
+ bpjv-survey.com
+ bpkgregor.pl
++bpnol.brujoychamanhernan.com
+ bpo.profinstall.site
+ bpofficialpaya.com
+ bpofficialtabi.com
+@@ -9138,6 +9165,7 @@ brownstone-wealth.com
+ browsefeatureaasn31254.buzz
+ browser.gamingqogs.life
+ browser.sensorbuqnn.pro
++brpbhw.s3.us-east-005.backblazeb2.com
+ brpn.cloud
+ brucemackaydrummer.com
+ brucewoodconcrete.com
+@@ -9385,6 +9413,7 @@ bwflexiblesystems-doc.com.ng
+ bwfriend.com
+ bwrghj.com
+ bwsmksa.pl
++bxebvf.s3.us-east-005.backblazeb2.com
+ bxgs.mastyh.life
+ bxtent.pl
+ bxvh.formhh.top
+@@ -9415,6 +9444,7 @@ bytestaxon.pl
+ bytomwsieci.xyz
+ byu.name
+ bz.xcv6.cn
++bzdxjx.s3.us-east-005.backblazeb2.com
+ bzq.chainreact.xyz
+ bzsiu.flamingotowers.com
+ bzxxw.brujasdelamor23.com
+@@ -9467,6 +9497,7 @@ c354ed7ddd69d6825be6055eb5185757.alldom.co.pl
+ c36190ac47cf76b987f915aa41280850.alldom.co.pl
+ c36280.hamdandates.com
+ c363488862f37369d737d20ca90590bd.ats.co.pl
++c368a1f3929.chefs-kitchen.co.uk
+ c388.paidtomoney.com
+ c38bccf7c31c6e3516f2b2a07fe04d1c.hospla.co.pl
+ c39f8ce40c16081e7b1fd493088eba1c.krokla.co.pl
+@@ -9487,6 +9518,7 @@ c50995.kisspark.info
+ c52098.paidtomoney.com
+ c5268986938c21c207f6f2434504024a.acalgo.co.pl
+ c528730c0471918068ec11fbf40eb7d7.alldom.co.pl
++c550327e.cftvpinheiro.com.br
+ c5551609bcf26d3ec813e80aade9562f.alldom.co.pl
+ c565726ef46e3f6ea272d1bc483f05a1.alldom.co.pl
+ c569077e3d266d77098fda56a079c7a3.krokla.co.pl
+@@ -9509,6 +9541,7 @@ c6f083d2b95d96d9babbc3aadedf0a97.alldom.co.pl
+ c6f9708b4f324a85438e4f39765c2e86.krokla.co.pl
+ c6n9j1m3n4v.5a8.ru
+ c7095f51e13b04515faf4b33f0931878.alldom.co.pl
++c719a035a0a.chefs-kitchen.co.uk
+ c72385.kisspark.info
+ c727.paidtomoney.com
+ c72eb0a24d6a0290bc3bbc0f4654e960.hospla.co.pl
+@@ -9539,10 +9572,12 @@ c8f32cfff7d146bd600ab163bee2e2fd.ats.co.pl
+ c92122.hamdandates.com
+ c92342.hamdandates.com
+ c93a660f8c27d8f94839e8cae67c29a1.al-pl.co.pl
++c93f5814e20.chefs-kitchen.co.uk
+ c94451.hamdandates.com
+ c94bca1e6ac870957793e2f5591353e2.hospla.co.pl
+ c97101.paidtomoney.com
+ c983753c3ca983eecafd1a9ad2ca941d.hospla.co.pl
++c9866905306.chefs-kitchen.co.uk
+ c9b1ede0fbd3141f7759298186bf0467.krokla.co.pl
+ c9e8f47a71254bf636b2b7f5db4306b7.alldom.co.pl
+ ca-gastrading-oil.live
+@@ -9866,6 +9901,7 @@ casteho.site
+ castfinveting.cf
+ castlefoodlogi.com
+ castui.site
++catalog.cdek-opt.ru
+ catalpasgunpapers.info
+ catalpaswaxworks.info
+ catarrhallycrepitate.com
+@@ -9908,6 +9944,7 @@ cbe9ba3f13269fed226733718e2d23fd.krokla.co.pl
+ cbf726fdc1d688cc5b74c9771fc57365.hospla.co.pl
+ cbgdsk.foryts.top
+ cbzc-policja-gov.tech
++cbzhjx.s3.us-east-005.backblazeb2.com
+ cc.mellonpatchinn.com
+ cc102.shopmuopios.online
+ cc114.shopmuopios.online
+@@ -10345,6 +10382,7 @@ check-out.pl
+ check.deldhl.info
+ check.diia-gov.pw
+ checkid.store
++checkingmailserver.pages.dev
+ checklesss.live
+ checknownow.com
+ checkoutbase.com
+@@ -10534,6 +10572,7 @@ ciezkieczasyteraz.pl
+ ciezkiie-przypadki.pl
+ ciezko-wyjasnic.pl
+ cigarettephotocopy.info
++cijijik.s3.us-west-004.backblazeb2.com
+ cil.ltvsistem.site
+ ciliosemdia.online
+ cimabues.live
+@@ -10585,6 +10624,7 @@ cjeupn.com
+ cjfgoe.com
+ cjfl.onmos.cc
+ cjoun.win
++cjpfhk.s3.us-east-005.backblazeb2.com
+ cjsmm.in
+ cjui-text.xyz
+ ck05925.tmweb.ru
+@@ -10598,6 +10638,7 @@ cklipce.xyz
+ ckmaicmasifianfia.bar
+ ckrakowparking.pl
+ ckwmfo421-epoeqw.xyz
++ckxjkk.s3.us-east-005.backblazeb2.com
+ cl07143.tmweb.ru
+ cl08401.tmweb.ru
+ cl40574.tmweb.ru
+@@ -11241,12 +11282,14 @@ cp65039.tmweb.ru
+ cp78679.tmweb.ru
+ cpb.mastercashinvst.xyz
+ cpgpzc.com
++cpkkjk.s3.us-east-005.backblazeb2.com
+ cpl20.czpro.site
+ cpowia.pl
+ cpp-discord.com
+ cppa.top
+ cpread.xyz
+ cpro.chatpros.site
++cpxdfx.s3.us-east-005.backblazeb2.com
+ cpygaldywb5.digital
+ cpzj8.top
+ cq47293.tmweb.ru
+@@ -11331,6 +11374,7 @@ criptomanager.za.com
+ crisis-pl.site
+ crisis-plp.site
+ crissy.moe
++cristal2017.argo.host
+ cristianavilacoach.com
+ criticisedduennaships.info
+ criticiw.pl
+@@ -11465,6 +11509,7 @@ csh4bjyvemznlgr.iecza.vip
+ cshe.fallz.click
+ csimonbolivar.cl
+ csmatchgo.com
++csme.caricom.org
+ csprocup.com
+ css.money
+ cstno.co.pl
+@@ -11529,6 +11574,7 @@ curdlerc.pl
+ cureapeq1.digital
+ curitiba.mouramadeiras.com
+ curitiss.com
++curityfeaturethacan.s3.us-west-004.backblazeb2.com
+ curlastray.top
+ curlierint.pl
+ curlybites.net
+@@ -11722,6 +11768,7 @@ d-pd.3450094.xyz
+ d-pd.3450096.xyz
+ d-pd.3450097.xyz
+ d-pd.3450098.xyz
++d-pd.48272947.xyz
+ d-pd.523333222.xyz
+ d-pd.6367562.xyz
+ d-pd.6367563.xyz
+@@ -11754,10 +11801,12 @@ d03307.top
+ d03c2910e79aae3181008ea3b7a1717a.hospla.co.pl
+ d059cdbbc8999948f4a753ea76c63113.alldom.co.pl
+ d0694d099d20413287388e8f36f8b37a.hospla.co.pl
++d083ef46bd9.chefs-kitchen.co.uk
+ d0a4e3c46a58f7232de2057a855a7172.krokla.co.pl
+ d0aab25834369102f017772e8e722165.ats.co.pl
+ d0add6863d6a6cbb5940fafc47739696.krokla.co.pl
+ d0b676d50923291ea5d98b9981849850.hospla.co.pl
++d0b70605.bakerstreetfinance.tv
+ d0f2f48158ca5aafda964e39f2012ad1.apl.co.pl
+ d0f8656ebd45db4c4a64831bae59f358.alldom.co.pl
+ d0stawadhi.com
+@@ -13181,6 +13230,7 @@ d5756.kisspark.info
+ d586965ede3782716f7ed8eadc227e64.krokla.co.pl
+ d5a0313a48ea0765516c247792d7f046.hospla.co.pl
+ d5bbad7521db2ab13b491f147d3d8eb1.apl.co.pl
++d5eab3c9eb2.bakerstreet.uk.com
+ d5eaf54863fb2532f4d887113fe8bf87.alldom.co.pl
+ d5ed547bd83a2664688e3043e999656f.homvie.co.pl
+ d5f7obcyjvy4y.cloudfront.net
+@@ -13193,6 +13243,7 @@ d631.hamdandates.com
+ d63a939b5f2e2c3313b03c41f5c5d7aa.alldom.co.pl
+ d642.paidtomoney.com
+ d6534e3c344d50bf02bc107daea91d23.ats.co.pl
++d664c220c3c.chefs-kitchen.co.uk
+ d678bffd66a80736a4f96507521de170.alldom.co.pl
+ d681.paidtomoney.com
+ d68219.paidtomoney.com
+@@ -13202,6 +13253,7 @@ d6a06878843c1134efa5c2b93e30ae12.krokla.co.pl
+ d6b79f15733d84c8df8062bfd0db3201.mail-bnpparibas-pl.online
+ d6bwmymz83ob5.cloudfront.net
+ d6d64cc56736d62f2f3047bed744004d.alldom.co.pl
++d6dee72a0b6.chefs-kitchen.co.uk
+ d6f32c5f33ba9b8d50abd14db2889117.alldom.co.pl
+ d6sdrygslyc0g.cloudfront.net
+ d6ums5s0qsrpw.cloudfront.net
+@@ -13639,6 +13691,7 @@ dd675.shopmuopios.online
+ dd703.dichvummo.xyz
+ dd712.dichvummo.xyz
+ dd712.shopmuopios.online
++dd721d92ef9.chefs-kitchen.co.uk
+ dd8.nasilorulur.com
+ dd82xtn58ba6q.cloudfront.net
+ dd875.shopmuopios.online
+@@ -13704,6 +13757,7 @@ de1.pltrade-prog3.site
+ de1.syst-pltrade6.site
+ de3.pltrade-prog3.site
+ de4.pltrade-projekt2.xyz
++de46de14.cftvpinheiro.com.br
+ de7o82mzreipe.cloudfront.net
+ de827a8a-ci27a7z.faiwotu.co.pl
+ de934c77d9d9099c4cfd7ed5b46e242e.alldom.co.pl
+@@ -15057,6 +15111,7 @@ dnilz35omy1n9.cloudfront.net
+ dnluwo2v52.digital
+ dnr1nhb7aeqe.cloudfront.net
+ dns-eu-east-32.xyz
++dns.bregy.it
+ dns.klewmedia.com
+ dnsfordomains.ru
+ dnsrobotuptime.ru
+@@ -16375,6 +16430,7 @@ ds4hg7hlkyywj.cloudfront.net
+ ds5p06ayhpfz3.cloudfront.net
+ dscare4u.com
+ dsdkkdarfbcf9.cloudfront.net
++dsffsdd.s3.us-east-005.backblazeb2.com
+ dsgl8.top
+ dsgvblx0z.digital
+ dshsy.top
+@@ -16853,13 +16909,16 @@ e05fb74ccefc9068cf385b8d0f0f99ad.hospla.co.pl
+ e07847a7fc90f38c871c83b8c04568f1.kklmn.co.pl
+ e0c0e08d079e2666ed035f5c5a010bae.krokla.co.pl
+ e0ea23d0294cd879ac2ab2a33130c7f4.hospla.co.pl
++e10339fd102.bakerstreet.uk.com
+ e117323059c86b8b1f9c011da3d13d01.hospla.co.pl
+ e176a241d3166b536fa54afdae861351.desploag.co.pl
++e185d23d94d.chefs-kitchen.co.uk
+ e18f198c3b48f33f119ed505d0befd12.hospla.co.pl
+ e19c4e5875bc51f99127c10730968535.krokla.co.pl
+ e1a20.com
+ e1e750c13414402e817e49bf18e3b6e2.hospla.co.pl
+ e24gwaltfakt.pl
++e2581764c7a.chefs-kitchen.co.uk
+ e25c915a0f0eff0ae25c915a0f0eff0a.azureedge.net
+ e29215118634843eebcf4e481c8a902f.krokla.co.pl
+ e29c9da78ddc37fcf1abe30b32760464.krokla.co.pl
+@@ -16870,13 +16929,16 @@ e42c2a9473fdcb3be7628d6bd02986e0.hospla.co.pl
+ e440a076f93feb0edb6253ddfe26eef9.hospla.co.pl
+ e46cca264868fb4d14fd248aebf39abf.hospla.co.pl
+ e4916bcba6dcb081a4fc77bc47649cb6.hospla.co.pl
++e4b6c1ace87.chefs-kitchen.co.uk
+ e4e3e73edd6c6cd3c324fefd7ba2eeef.krokla.co.pl
++e512cca889a.chefs-kitchen.co.uk
+ e54628381b758990d560f0d5cec64861.hospla.co.pl
+ e578498221a61b005f8efd330ebf74b8.krokla.co.pl
+ e5a025e6448bc5de2d652010a24dca32.krokla.co.pl
+ e628976be8ad02889546e24d40fa335f.hospla.co.pl
+ e63774c948fe30298c4b80117ba81bbd.hospla.co.pl
+ e65d1fc9a70a857c23b2966d26b5cbc4.hospla.co.pl
++e67a585393e.chefs-kitchen.co.uk
+ e6aaf3c069cd5fd1fd00af1475c6c872.hospla.co.pl
+ e704f67656826426848a7de87a052ba2.hospla.co.pl
+ e72a85217d3964ca218532782ee314d4.krokla.co.pl
+@@ -16894,9 +16956,11 @@ e9165256d6a00525ee538d73f9e131b8.hospla.co.pl
+ e918fadc467bc8119e72f237b0869150.hospla.co.pl
+ e926dbffd5078ce4897e705ad95180dd.hospla.co.pl
+ e961e240c2e22ecae71b949fa4237f2b.krokla.co.pl
++e9ca484f3b1.chefs-kitchen.co.uk
+ e9cdac8f867d9e355b177d782d3955ae.hospla.co.pl
+ e9eb37288e0a77ec591aca7e5d17266d.krokla.co.pl
+ ea0bd212b54b9de03b47ab5280e259bf.hospla.co.pl
++ea12c49bf0b.chefs-kitchen.co.uk
+ ea15968413984481020b173369d6f9a7.hospla.co.pl
+ ea64bb9a28996b86edb8b1d35b711f71.hospla.co.pl
+ ea7319517c10d555e66eff0ae1eb9223.krokla.co.pl
+@@ -16950,6 +17014,7 @@ eauto-online.pl
+ eayfhyzs5l0.digital
+ eazaha4mvr.digital
+ eb13896fe2c024c46ec33ba70c4e19e6.krokla.co.pl
++eb2c2672359.chefs-kitchen.co.uk
+ eb57e58b84e4e779eb57e58b84e4e779.azureedge.net
+ eba-p2mfzmvt.us-east-2.elasticbeanstalk.com
+ eba3f682e92e0c484795337fbc43c741.krokla.co.pl
+@@ -16984,6 +17049,8 @@ ecbc85f351bc6cf5b112417d8f6275fa.krokla.co.pl
+ ecclhh35fw.digital
+ eccokampala.com
+ eccooutletpolska.pl
++ecdfvv.s3.us-east-005.backblazeb2.com
++ecdghx.s3.us-east-005.backblazeb2.com
+ ecetuy.com
+ ecfipora.tk
+ echar.tk
+@@ -17046,6 +17113,7 @@ ecuahabitat.com
+ ecunitt.com
+ eczechow.net.pl
+ ed17fe45b177a6d549c7aeb65d7a90f8.krokla.co.pl
++ed27f4b99d3.chefs-kitchen.co.uk
+ ed29ae398ca6138a08308e55fb46c927.hospla.co.pl
+ ed6c33040756146862c97fa3abaaaf75.hospla.co.pl
+ ed7c95dc.seuestiloseucarater.com.br
+@@ -17054,6 +17122,7 @@ edamcorp.com
+ edd8146b39270379e6423a5a725fdf37.krokla.co.pl
+ eddateodora.pl
+ eddyhooey.pl
++ede1484e61b.chefs-kitchen.co.uk
+ edenchoice.com
+ edenm.xyz
+ edfany.com
+@@ -17099,6 +17168,7 @@ ee.mellonpatchinn.com
+ ee188e32226080ef636f09f126ef74b3.krokla.co.pl
+ ee58f42deb16f18751645c4129db816e.hospla.co.pl
+ ee8f2cc3b8260318ae844926f32d87cc.krokla.co.pl
++ee911e17b70.chefs-kitchen.co.uk
+ eecakesconf.at
+ eegnylt.paidtomoney.com
+ eenerg.b20power.com
+@@ -17125,6 +17195,7 @@ efaktygwalt.site
+ efaktygwalt.waw.pl
+ efaktyludziepieniadze.pl
+ efasoy1100.top
++efcdxz.s3.us-east-005.backblazeb2.com
+ efektwowdekor.pl
+ efes.site
+ effacement.xyz
+@@ -17135,7 +17206,9 @@ effluvialmayflowers.com
+ efibt.hamdandates.com
+ efoteczka.eu
+ efqx-shrt.one
++eftgvp.s3.us-east-005.backblazeb2.com
+ eftionfas.com
++efwcdx.s3.us-east-005.backblazeb2.com
+ efza.net
+ efzd-text.xyz
+ egalandrog.pl
+@@ -17144,6 +17217,7 @@ eggeres.com
+ eggheadspooled.info
+ egiftepremeume.com
+ egiptibis.com.pl
++egjlwuajme.astroverse.city
+ eglndaftq8.digital
+ egocentri.com
+ egotistica.com
+@@ -17159,6 +17233,7 @@ ehret.pl
+ ehufeh.com
+ ehyygebahu.es
+ eiboer.xyz
++eidjuki.s3.us-west-004.backblazeb2.com
+ eight.bugaros.com
+ eight.damstonges.com
+ eight.sunyclouds.com
+@@ -17995,6 +18070,7 @@ extremest.live
+ extrinsication.info
+ exuberantl.pl
+ exultantun.com
++ey9hjl.s3.us-east-005.backblazeb2.com
+ eya.superfecly.xyz
+ eyd1.firecantrade.site
+ eyd2.firecantrade.site
+@@ -18019,6 +18095,7 @@ eys12.firecantrade.site
+ eys4.firecantrade.site
+ eys8.firecantrade.site
+ eys9.firecantrade.site
++eyykmk.s3.us-east-005.backblazeb2.com
+ eyz1.firecantrade.site
+ eyz2.firecantrade.site
+ ez-pays.ru
+@@ -18046,6 +18123,7 @@ f139.paidtomoney.com
+ f142wmvzls.blob.core.windows.net
+ f16273.kisspark.info
+ f1c940889ecd39524e6f2e119b96791a.hospla.co.pl
++f232fbaa289.chefs-kitchen.co.uk
+ f23657.paidtomoney.com
+ f24.site
+ f24info.pl
+@@ -18118,6 +18196,7 @@ f785.paidtomoney.com
+ f78526.kisspark.info
+ f7a758238b53636f8a5fa1c00434fa15.hospla.co.pl
+ f7c2b8bc151ac121f7c2b8bc151ac121.azureedge.net
++f7db48289eb.bakerstreet.uk.com
+ f7e1ce79651d2319c0e98f216d9f2666.hospla.co.pl
+ f82918.hamdandates.com
+ f836.paidtomoney.com
+@@ -18137,6 +18216,7 @@ f92f3707e3d4a19a234d5e740a81f489.krokla.co.pl
+ f937.paidtomoney.com
+ f93952.paidtomoney.com
+ f952.paidtomoney.com
++f97343a585f.chefs-kitchen.co.uk
+ f980.paidtomoney.com
+ f99209.paidtomoney.com
+ f9b2cd9dc585dd6ff9b2cd9dc585dd6f.azureedge.net
+@@ -18980,6 +19060,7 @@ fcmphotography.com
+ fd.bteslaxilon.xyz
+ fdb-polska.pl
+ fdb330fac663d98a965f32d903d6325b.hospla.co.pl
++fdd52f20.bakerstreetfinance.tv
+ fdefd551d1d00157e8b2d305036381f1.hospla.co.pl
+ fdgdf.fishess.site
+ fdhas.plfcaty.xyz
+@@ -18988,6 +19069,7 @@ fe20979647fd1f096b79c67d65101528.krokla.co.pl
+ fe9209a8z8273s-si2898dsa7z81s.boikals.co.pl
+ fe9dc7b20e801ef03554b7947643c374.hospla.co.pl
+ fea019bf83224d9659101897f3fbdacf.hospla.co.pl
++feab2016.bakerstreetfinance.tv
+ feabal.pl
+ feaball.pl
+ feabaml.pl
+@@ -19435,6 +19517,7 @@ flexcoins.art
+ flexcoins.click
+ flexility.life
+ flexner.fun
++flialio.s3.us-west-004.backblazeb2.com
+ flightpetition.top
+ flimak.com
+ flimsilyst.life
+@@ -19544,6 +19627,7 @@ footloosem.pl
+ footpnthly.xyz
+ foqawe.com
+ for.pl24plus.live
++forallwhatyouhave.builderallwppro.com
+ forast.org
+ forbelyde.cf
+ forblog.prog-max1pro0g.site
+@@ -19769,6 +19853,7 @@ foz.wetss.xyz
+ fozaa.xyz
+ fpccos.com
+ fpcqb.vitamin-ex.com
++fpcxds.s3.us-east-005.backblazeb2.com
+ fpm1.profitguru.online
+ fps.teamviewerp.com
+ fqing.top
+@@ -20280,6 +20365,7 @@ gbedufm.com
+ gc.capitalredf.site
+ gc2hx.top
+ gcgs.info
++gcnkjj.s3.us-east-005.backblazeb2.com
+ gcoin.futureex.site
+ gcumerprofpa.tk
+ gcw8.top
+@@ -20532,8 +20618,10 @@ gewer.site
+ gfaw.plfcaty.xyz
+ gfhds.lareg.site
+ gfhjkldcfvfg.moonfruit.com
++gfhjtv.s3.us-east-005.backblazeb2.com
+ gfsa.foryts.top
+ gftdh.com
++gfxhjk.s3.us-east-005.backblazeb2.com
+ gg.fyberquest.site
+ gg3.d1g1questa.sbs
+ ggaf.pl
+@@ -20548,6 +20636,7 @@ gges.pl
+ ggewgwegwe.001com
+ ggg.douldr.site
+ ggsfueis.link
++ggttcd.s3.us-east-005.backblazeb2.com
+ gguilt.com
+ ggustav.pl
+ ghaaiokl.net
+@@ -20617,6 +20706,7 @@ gieldapojazdow-pruszynski.pl
+ gieldapojazdow48.pl
+ gieldasamochodowa-ptak.pl
+ gienetis.cf
++gietrdi.s3.us-west-004.backblazeb2.com
+ gif-discord.com
+ gife-discorde.com
+ giftboxroyal.com
+@@ -20682,6 +20772,7 @@ gjjgsz.com
+ gjodol.space
+ gkaoe.pl
+ gkaoe.waw.pl
++gkbfgx.s3.us-east-005.backblazeb2.com
+ gkjsajhj5y1.com
+ gklqrdk.top
+ gkmkla.pl
+@@ -21049,6 +21140,7 @@ goonline.bnp-paribaspl.com
+ goonline.bnppaibas.fun
+ goonline.bnppairbas.tech
+ goonline.bnppairlbas.tech
++goonline.bnpparibasbanking.com
+ goonline.bnpparlbas-pl.com
+ goonline.bnpparlbas.pl
+ goonline.bnppnrailbas.gives
+@@ -21407,6 +21499,7 @@ grusuch.space
+ gruszkaopetanie.site
+ gruzja.cyou
+ gruznn.com
++grvvxx.s3.us-east-005.backblazeb2.com
+ grymas.icu
+ gryoplanes.live
+ grzaniecaa.pl
+@@ -21417,6 +21510,7 @@ grzegorzplonkaserwer.pl
+ grzegorzwawrzynek.pl
+ grzelamisiek.pl
+ grzmot.icu
++grzxdv.s3.us-east-005.backblazeb2.com
+ gs.typstade.xyz
+ gsgy.formhh.top
+ gsl.benztrade.xyz
+@@ -21530,6 +21624,7 @@ gwiazdyinfo24grabowski.pl
+ gwinea.cyou
+ gwizdowska.pl
+ gwnv-msg.click
++gwvkjl.s3.us-east-005.backblazeb2.com
+ gwweqasdzxc523dawe.xyz
+ gxfc12.vip
+ gxqsr.brujosychamanesdepanama.com
+@@ -22072,6 +22167,7 @@ hh.poland-hu.site
+ hhcbd.lareg.site
+ hhk.runeww1.site
+ hhkru7784.lisanse.com
++hhtfgv.s3.us-east-005.backblazeb2.com
+ hiansgoew.com
+ hiboard.ir
+ hideyos.live
+@@ -22128,6 +22224,7 @@ hit-informacje24pl.rdl.pl
+ hitchita.info
+ hjdkso.pl
+ hjfjp4aos.digital
++hjgftk.s3.us-east-005.backblazeb2.com
+ hjkotor.site
+ hkatb.com
+ hkg518.com
+@@ -22858,6 +22955,8 @@ home.securepage.info
+ homegte.com
+ homelteam.com
+ homely.pw
++homepaiement-pl-16f9b0fb.arw-rohstoffhandel.com
++homepaiement-pl-258fd91f.arw-rohstoffhandel.com
+ homepl-secure.westmidlandsconcertband.co.uk
+ homepl.waw.pl
+ homepl4l8ik1r.blob.core.windows.net
+@@ -22997,6 +23096,7 @@ hpp.livesketo.site
+ hppmods.vinted.chat
+ hpsl.benztrade.xyz
+ hq9tf1.responsibilitytell.co.in
++hrcbhj.s3.us-east-005.backblazeb2.com
+ hrcmcwcn0f6ey.duckdns.org
+ hrekcustomer.icu
+ hrerheerhher.001com
+@@ -23106,6 +23206,7 @@ huusgaay.com
+ huwobot.com
+ hvfhde.lareg.site
+ hvn.formhh.top
++hvtkjl.s3.us-east-005.backblazeb2.com
+ hx5.artcupproject.com
+ hxwo.top
+ hxxbz.com
+@@ -23822,8 +23923,10 @@ ij3b.in
+ ijabiw.com
+ ijaivapob.de
+ ijanod.com
++ijfcxz.s3.us-east-005.backblazeb2.com
+ ijfkak.pl
+ ijhjk.ltvsistem.site
++ijijiki.s3.us-west-004.backblazeb2.com
+ ijkszvp8t.digital
+ ijnpost-goods.4049408.xyz
+ ijvy700.lisanse.com
+@@ -23831,6 +23934,7 @@ ikanmaskoki.co.vu
+ ikasgok-invest.pro
+ ikbox.org
+ ikcffqy1j.digital
++ikcjhk.s3.us-east-005.backblazeb2.com
+ ikdrloebmafer84.cloud
+ ikiorto-1.live
+ ikiorto-1.one
+@@ -23838,6 +23942,7 @@ ikiorto.xyz
+ ikko-pkobp.com
+ ikko-pkobpi.com
+ ikko-pkobps.com
++iklas.brujoychamanhernan.com
+ iklertgera.com
+ ikmamjk.pl
+ ikmdmak.pl
+@@ -24953,6 +25058,7 @@ informacje-z-polski-48.waw.pl
+ informacje-z-polski-48.website
+ informacje-zaginieni24.eu
+ informacje-ztrasy.pl
++informacje.axecart.com
+ informacje.carolinadunbar.com
+ informacje.h2g.pl
+ informacje.icu
+@@ -29493,6 +29599,7 @@ ivestplbooks.com
+ ivi.pl
+ ivint-pl.otrzymujacy79533.xyz
+ ivirkow.site
++ivjhnf.s3.us-east-005.backblazeb2.com
+ ivnmsk.com
+ ivnuo.top
+ ivodent.org
+@@ -29682,10 +29789,13 @@ jayeola.xyz
+ jayruncone.com
+ jaysprehea.pl
+ jazarabiam.waw.pl
++jbdfgv.s3.us-east-005.backblazeb2.com
++jbkjhk.s3.us-east-005.backblazeb2.com
+ jbokun.pl
+ jbrand.top
+ jccform.jazancci-display.info
+ jchair.xyz
++jcnxhx.s3.us-east-005.backblazeb2.com
+ jcsnoname-go.com
+ jd3s3dp4rhnnzy2jd3s3dp4rhnnzy2.nutracollar.com
+ jd5m.in
+@@ -29822,6 +29932,8 @@ jja.runeww1.site
+ jjbsorder.website
+ jjc-tech.net
+ jjffds.pl
++jjhnbw.s3.us-east-005.backblazeb2.com
++jjhnyy.s3.us-east-005.backblazeb2.com
+ jji.plfcaty.xyz
+ jjnpost.15232612.xyz
+ jjnpost.6524659.xyz
+@@ -29829,6 +29941,7 @@ jjsddff.pl
+ jju.chainreact.xyz
+ jjurzyk1.pl
+ jkazmierczyk.pl
++jkbvcx.s3.us-east-005.backblazeb2.com
+ jkkdib.livesketo.site
+ jkksi.livesketo.site
+ jkl.pattrn-system1.site
+diff --git a/sections/przekrety.txt b/sections/przekrety.txt
+index 7fc4a6b5e..6bb319073 100644
+--- a/sections/przekrety.txt
++++ b/sections/przekrety.txt
+@@ -76,8 +76,6 @@
+ ||0ff1c30nl1ne.swansoninsgroups.com^$all
+ ||0lixshopplatnyprodukt.shop^$all
+ ||0llxkupit24online.shop^$all
+-||0lx.144247.xyz^$all
+-||0lx.144248.xyz^$all
+ ||0lx.9423537.xyz^$all
+ ||0lx.49484121.xyz^$all
+ ||00lx.184181231.xyz^$all
+@@ -2861,9 +2859,7 @@
+ ||allegrolokaline.krussoftrunafi.cf^$all
+ ||allegrolokalkie.$all
+ ||allegrolokallniie.wintili.cf^$all
+-||allegrolokallnnie10.alourin.cf^$all
+ ||allegrolokallnnie40.weitunha.cf^$all
+-||allegrolokallnnie50.askymroopi.cf^$all
+ ||allegrolokallnnie70.reiconsmaro.cf^$all
+ ||allegrolokalne.$all
+ ||allegrolokalne.com.pl^$all
+@@ -4761,7 +4757,6 @@
+ ||awedirectory.com^$all
+ ||aweek.live^$all
+ ||aweernwdpl.site^$all
+-||awefdx.s3.us-east-005.backblazeb2.com^$all
+ ||awegsgyt.com^$all
+ ||awelessness.life^$all
+ ||awer.masteryu.top^$all
+@@ -4810,7 +4805,6 @@
+ ||azaqw.utulo.site^$all
+ ||azare7.online^$all
+ ||azbib.lasorquideashome.com^$all
+-||azbvxj.s3.us-east-005.backblazeb2.com^$all
+ ||azcongo.com^$all
+ ||azcybersec.com^$all
+ ||azdrowieja.site^$all
+@@ -4835,22 +4829,17 @@
+ ||azuredreamscape.site^$all
+ ||azwmscscka.rf.gd^$all
+ ||azwri.com^$all
+-||azyioil.s3.us-west-004.backblazeb2.com^$all
+ ||azzzlakdjcueie.site^$all
+ ||b1.birdhand.xyz^$all
+ ||b1.booksun.live^$all
+-||b1d3b4a8.cftvpinheiro.com.br^$all
+ ||b2.booksun.live^$all
+ ||b2bleadsadda.com^$all
+ ||b2bpartnering.com^$all
+-||b2df0d3e7e1.chefs-kitchen.co.uk^$all
+ ||b2meguy.com^$all
+ ||b3.booksun.live^$all
+ ||b3ab352f9fc5ae2.tuuups.pl^$all
+ ||b4.booksun.live^$all
+ ||b4f6da7fa0fc1b0d.gtw3.link^$all
+-||b4f73c70.bakerstreetfinance.tv^$all
+-||b4f746d5252.chefs-kitchen.co.uk^$all
+ ||b5.booksun.live^$all
+ ||b5c1f8fcea50953468fea9f3c2d01ef6.natoplx.pl^$all
+ ||b6f7f04df12908d93fc1193b10826c5a.marcoprzy.net.pl^$all
+@@ -4859,7 +4848,6 @@
+ ||b9b7916e68c92fca8dc8b3c5f3907064.urszulaprzymuszala.net.pl^$all
+ ||b9f24b2b0e6.johncornell.com^$all
+ ||b12.despachodeabogadosmcr.com^$all
+-||b21fc393.chefs-kitchen.co.uk^$all
+ ||b24-0fwdtd.bitrix24.site^$all
+ ||b24-00gj2c.bitrix24.site^$all
+ ||b24-1ftqhc.bitrix24.site^$all
+@@ -4904,10 +4892,8 @@
+ ||b44.espn365.com^$all
+ ||b57dd129e4985e03b1eb76f3945eb859.boawgr.pl^$all
+ ||b061f6b112d.chefs-kitchen.co.uk^$all
+-||b67ada6f7ad.chefs-kitchen.co.uk^$all
+ ||b71c.com^$all
+ ||b83dde1a1ec79cc3e1a0d2e40ab04e89.niflos.pl^$all
+-||b88a56a6.bakerstreetfinance.tv^$all
+ ||b91.despachodeabogadosmcr.com^$all
+ ||b107.info^$all
+ ||b159.espn365.com^$all
+@@ -4974,9 +4960,7 @@
+ ||b5216.kanuassociates.com^$all
+ ||b5456.kanuassociates.com^$all
+ ||b6534.kanuassociates.com^$all
+-||b6744e37736.chefs-kitchen.co.uk^$all
+ ||b6785.hostingkampanya.com^$all
+-||b7105e86.bakerstreetfinance.tv^$all
+ ||b7409.24houcryptowatcher.com^$all
+ ||b7958ed7b24.bakerstreet.uk.com^$all
+ ||b8443.aimedia.lk^$all
+@@ -5046,7 +5030,6 @@
+ ||b668890e52d9.ngrok.io^$all
+ ||b876879f.sibforms.com^$all
+ ||b9259371.cftvpinheiro.com.br^$all
+-||b39150067c6.chefs-kitchen.co.uk^$all
+ ||b-blog2.intproject.xyz^$all
+ ||b-ofsun.xyz^$all
+ ||b-pl.intproject.xyz^$all
+@@ -5084,7 +5067,6 @@
+ ||babofashion.com^$all
+ ||babuqeogie.live^$all
+ ||babybery.com^$all
+-||babygang.builderallwppro.com^$all
+ ||babyjetyoung.com^$all
+ ||backbenchersventures.com^$all
+ ||backend.pse8.com^$all
+@@ -5628,7 +5610,6 @@
+ ||basketrys.xyz^$all
+ ||basletow.shop^$all
+ ||basn.utulo.site^$all
+-||basos-zamowienie11.alourin.cf^$all
+ ||basr.apprety.site^$all
+ ||basse.meetttaa-prog.top^$all
+ ||bassew.libiaa.site^$all
+@@ -5784,7 +5765,6 @@
+ ||bbcgayporn.com^$all
+ ||bbcpromo.com^$all
+ ||bbeekajyyfdaruirjjdi.site^$all
+-||bbfxxx.s3.us-east-005.backblazeb2.com^$all
+ ||bbgc.pasvar.xyz^$all
+ ||bbj.startto.top^$all
+ ||bbllnews.com^$all
+@@ -5918,7 +5898,6 @@
+ ||beetetr.xyz^$all
+ ||beetleheaded.org^$all
+ ||beevibehq.com^$all
+-||bef4c46d.bcdashboards.com.br^$all
+ ||befeir.site^$all
+ ||befolmorldisill.site^$all
+ ||befountauseek.site^$all
+@@ -6614,7 +6593,6 @@
+ ||bkisenkith.com^$all
+ ||bkkoz.inventnamb.click^$all
+ ||bkmctrl.webd.pro^$all
+-||bkmgft.s3.us-east-005.backblazeb2.com^$all
+ ||bkrakowparking.pl^$all
+ ||bkylgs.com^$all
+ ||bl3emder3d.com^$all
+@@ -7210,7 +7188,6 @@
+ ||bpipe1.activeprog3.top^$all
+ ||bpipe-projekt.site^$all
+ ||bpmparidac.com^$all
+-||bpnol.brujoychamanhernan.com^$all
+ ||bpo-elm.com^$all
+ ||bpogn.com^$all
+ ||bpongo.com^$all
+@@ -7285,7 +7262,6 @@
+ ||brassy-grandiose-juravenator.glitch.me^$all
+ ||brattishantimusic.com^$all
+ ||brave-browser.edudlplomss.com^$all
+-||brave-mestorf.79-133-56-170.plesk.page^$all
+ ||bravebrowsersafe.com^$all
+ ||braves-apps.org^$all
+ ||bravoada.pl^$all
+@@ -7405,7 +7381,6 @@
+ ||brovintesd.wintili.cf^$all
+ ||brovlixn.com^$all
+ ||browny.homes^$all
+-||brpbhw.s3.us-east-005.backblazeb2.com^$all
+ ||brrok65.xyz^$all
+ ||bruainvest.press^$all
+ ||bruceleenguyen.com^$all
+@@ -7741,7 +7716,6 @@
+ ||bwgmaska.mllight.top^$all
+ ||bwpqe.edistolife.com^$all
+ ||bxcreative.com^$all
+-||bxebvf.s3.us-east-005.backblazeb2.com^$all
+ ||bxs5.tentaklsistem.click^$all
+ ||by-sms.pw^$all
+ ||byalice.shop^$all
+@@ -7766,7 +7740,6 @@
+ ||bytebangla.com^$all
+ ||bytecollective.com^$all
+ ||bythechimneywithflair.com^$all
+-||bzdxjx.s3.us-east-005.backblazeb2.com^$all
+ ||bzg-bmdparigas.com^$all
+ ||bzmm.byseniscon.top^$all
+ ||bzt.allsslpl.pl^$all
+@@ -7796,7 +7769,6 @@
+ ||c50.despachodeabogadosmcr.com^$all
+ ||c67.despachodeabogadosmcr.com^$all
+ ||c84bc6a9b1580a33222467368b.tuuups.pl^$all
+-||c93f5814e20.chefs-kitchen.co.uk^$all
+ ||c96.cetusinvestmentsbtc.com^$all
+ ||c97d1ab9dd9.chefs-kitchen.co.uk^$all
+ ||c112.espn365.com^$all
+@@ -7817,7 +7789,6 @@
+ ||c307.despachodeabogadosmcr.com^$all
+ ||c344.despachodeabogadosmcr.com^$all
+ ||c354.despachodeabogadosmcr.com^$all
+-||c368a1f3929.chefs-kitchen.co.uk^$all
+ ||c398.espn365.com^$all
+ ||c399.despachodeabogadosmcr.com^$all
+ ||c409.espn365.com^$all
+@@ -7849,7 +7820,6 @@
+ ||c698.info^$all
+ ||c704.despachodeabogadosmcr.com^$all
+ ||c716.info^$all
+-||c719a035a0a.chefs-kitchen.co.uk^$all
+ ||c720.despachodeabogadosmcr.com^$all
+ ||c724.despachodeabogadosmcr.com^$all
+ ||c744.despachodeabogadosmcr.com^$all
+@@ -7933,9 +7903,7 @@
+ ||c99569.covidvcfund.com^$all
+ ||c99853.eliteoftokens.com^$all
+ ||c129140b74f89635e5cb781457d37e96.btntls.pl^$all
+-||c550327e.cftvpinheiro.com.br^$all
+ ||c8908857.sibforms.com^$all
+-||c9866905306.chefs-kitchen.co.uk^$all
+ ||c*.tmweb.ru/weryfikacja/$all
+ ||c-43gd.cfd^$all
+ ||c.baltic-power.pw^$all
+@@ -8282,7 +8250,6 @@
+ ||castnscout.com^$all
+ ||casualgems.com^$all
+ ||catalegmusicavalenciana.com^$all
+-||catalog.cdek-opt.ru^$all
+ ||catalykloc.com^$all
+ ||catalyst-holding.com^$all
+ ||catarahrc.com^$all
+@@ -8337,7 +8304,6 @@
+ ||cbsmarket.co^$all
+ ||cbtsmaskristen2soe.my.id^$all
+ ||cbvz2.codetop1a.click^$all
+-||cbzhjx.s3.us-east-005.backblazeb2.com^$all
+ ||cc0ed3dcae1.bakerstreet.uk.com^$all
+ ||cc29.dichvummo.xyz^$all
+ ||cc72.dichvummo.xyz^$all
+@@ -8766,7 +8732,6 @@
+ ||charlotteeng.com^$all
+ ||charm.networkbr.info^$all
+ ||charm.originality.trade^$all
+-||charming-northcutt.193-42-36-172.plesk.page^$all
+ ||charmingmyanmar.com^$all
+ ||charms-tech.com^$all
+ ||charsingha.info^$all
+@@ -8829,7 +8794,6 @@
+ ||check.diia-gov.in.net^$all
+ ||check.whozyourdoula.com^$all
+ ||checkbasket.com^$all
+-||checkingmailserver.pages.dev^$all
+ ||checkmaildetail1.validatehbk.repl.co^$all
+ ||checkmaildetail2.validatehbk.repl.co^$all
+ ||checkmaildetail3.validatehbk.repl.co^$all
+@@ -9042,7 +9006,6 @@
+ ||ciezkieczasy.is-best.net^$all
+ ||cigbinserverreverceenginecipbinlogarrtaebtic.servermanas.repl.co^$all
+ ||ciieplakurtka.site^$all
+-||cijijik.s3.us-west-004.backblazeb2.com^$all
+ ||cikdugoa.com^$all
+ ||ciklo.vertysbos.top^$all
+ ||cikoas.everadpro.click^$all
+@@ -9121,7 +9084,6 @@
+ ||cjfkjn.s3.us-east-005.backblazeb2.com^$all
+ ||cjghezcee.com^$all
+ ||cjjkakdjhhhcjjdhdre.site^$all
+-||cjpfhk.s3.us-east-005.backblazeb2.com^$all
+ ||ckbi.pw^$all
+ ||ckfotjtt.online^$all
+ ||ckgo5.cfd^$all
+@@ -9131,7 +9093,6 @@
+ ||cklomah.online^$all
+ ||ckof.hoccs.xyz^$all
+ ||ckpsensor.com^$all
+-||ckxjkk.s3.us-east-005.backblazeb2.com^$all
+ ||cl90234.tmweb.ru^$all
+ ||cl.clps.top^$all
+ ||cl.coolplattf.top^$all
+@@ -10024,7 +9985,6 @@
+ ||cpcleanserversion598734541cgyby34872545v23452345.netlify.app^$all
+ ||cpfto.michaelbhrad.com^$all
+ ||cpgcircuits.com^$all
+-||cpkkjk.s3.us-east-005.backblazeb2.com^$all
+ ||cpm1.plsttrade.top^$all
+ ||cpm2.plsttrade.top^$all
+ ||cpotesoft.com^$all
+@@ -10034,7 +9994,6 @@
+ ||cpprinter.com^$all
+ ||cproperties.site^$all
+ ||cputheory.com^$all
+-||cpxdfx.s3.us-east-005.backblazeb2.com^$all
+ ||cq.coolplattf.top^$all
+ ||cqbfitness.com^$all
+ ||cqfmx.hiddenmasters.com^$all
+@@ -10156,7 +10115,6 @@
+ ||crisky.cfd^$all
+ ||crisphmri.space^$all
+ ||crisprgenics.com^$all
+-||cristal2017.argo.host^$all
+ ||cristionasyooge.info^$all
+ ||criteasy.com^$all
+ ||criteriia.sbs^$all
+@@ -10367,7 +10325,6 @@
+ ||csgosource2.pro^$all
+ ||csgotradesociety.com^$all
+ ||csgozloty.com^$all
+-||csme.caricom.org^$all
+ ||csmgdynia.com^$all
+ ||csmintl.com^$all
+ ||csounny.site^$all
+@@ -10437,7 +10394,6 @@
+ ||curiouniversity.com^$all
+ ||curioworlds.com^$all
+ ||curist.net^$all
+-||curityfeaturethacan.s3.us-west-004.backblazeb2.com^$all
+ ||curney.info^$all
+ ||currentlineee.site^$all
+ ||currentlyat-106842.square.site^$all
+@@ -10583,7 +10539,6 @@
+ ||czytooszustwo.pl^$all
+ ||czywitalnosczraz.beauty^$all
+ ||czywyjazddo.space^$all
+-||d0b70605.bakerstreetfinance.tv^$all
+ ||d0k1.com^$all
+ ||d0mainpo.weebly.com^$all
+ ||d1.doorcat.quest^$all
+@@ -10599,10 +10554,8 @@
+ ||d4-vbm.cfd^$all
+ ||d5.doorcat.quest^$all
+ ||d5c36bf4420.chefs-kitchen.co.uk^$all
+-||d5eab3c9eb2.bakerstreet.uk.com^$all
+ ||d05fd1ecb597edabdb29e55d78e.tlsens.pl^$all
+ ||d6avyoeqmy.shop^$all
+-||d6dee72a0b6.chefs-kitchen.co.uk^$all
+ ||d7rb.com^$all
+ ||d8k8yw18dq88h.cloudfront.net^$all
+ ||d15n68k9x054qg.cloudfront.net^$all
+@@ -10616,7 +10569,6 @@
+ ||d36.despachodeabogadosmcr.com^$all
+ ||d36nbgnuno71tn.cloudfront.net^$all
+ ||d38a364ca7ddd5371c15c260047382b6.molekewa.net.pl^$all
+-||d083ef46bd9.chefs-kitchen.co.uk^$all
+ ||d123.despachodeabogadosmcr.com^$all
+ ||d141.espn365.com^$all
+ ||d142.despachodeabogadosmcr.com^$all
+@@ -10655,7 +10607,6 @@
+ ||d606.despachodeabogadosmcr.com^$all
+ ||d617.despachodeabogadosmcr.com^$all
+ ||d618.despachodeabogadosmcr.com^$all
+-||d664c220c3c.chefs-kitchen.co.uk^$all
+ ||d669.espn365.com^$all
+ ||d673.awicksin.com^$all
+ ||d673.espn365.com^$all
+@@ -10763,7 +10714,6 @@
+ ||d06668706.wixsite.com^$all
+ ||d583249782c126d82582793190125379.forgro.pl^$all
+ ||d-boxing.on.fleek.co^$all
+-||d-pd.48272947.xyz^$all
+ ||d-simple-api.com^$all
+ ||d.alpstationcles.com^$all
+ ||d.baltic-power.pw^$all
+@@ -11087,7 +11037,6 @@
+ ||dd90.dichvummo.xyz^$all
+ ||dd203.dichvummo.xyz^$all
+ ||dd585.dichvummo.xyz^$all
+-||dd721d92ef9.chefs-kitchen.co.uk^$all
+ ||dd727.dichvummo.xyz^$all
+ ||dd748.dichvummo.xyz^$all
+ ||dd752.dichvummo.xyz^$all
+@@ -11125,7 +11074,6 @@
+ ||ddwuupn.cn^$all
+ ||ddy.autos^$all
+ ||de6af8febb61eb5c987d57634cb3dbc7.marcoprzy.net.pl^$all
+-||de46de14.cftvpinheiro.com.br^$all
+ ||de4028227d3eb9e2165e6d8648250fa4.boawgr.pl^$all
+ ||de-ing-access.com^$all
+ ||de-lening-voor-iedereen.com^$all
+@@ -12173,7 +12121,6 @@
+ ||dno.tentaklsistem.click^$all
+ ||dnolm.kompromisdizajn.com^$all
+ ||dnparibas.site^$all
+-||dns.bregy.it^$all
+ ||dnstul.com^$all
+ ||dnvkqkqlemdppqruo.com^$all
+ ||dnvxhbwfktrgeqa.com^$all
+@@ -12565,7 +12512,6 @@
+ ||dpd-polska-sdj42k1.poiuy5y.top^$all
+ ||dpd-s.id-9431.me^$all
+ ||dpd-zamoweienie42.weitunha.cf^$all
+-||dpd-zamoweienie52.askymroopi.cf^$all
+ ||dpd-zamowiienie22.souplaifor.cf^$all
+ ||dpd.18454221.xyz^$all
+ ||dpd.ip-648342.pw^$all
+@@ -12871,7 +12817,6 @@
+ ||dsefd5d.cc^$all
+ ||dsfdssdfsdf.pages.pro.br^$all
+ ||dsfefdc.sbs^$all
+-||dsffsdd.s3.us-east-005.backblazeb2.com^$all
+ ||dsfsdfd.s3.us-west-004.backblazeb2.com^$all
+ ||dsgsdfdsffdfsdfsfsdffdfsd.weebly.com^$all
+ ||dshe.balzz.click^$all
+@@ -13046,31 +12991,24 @@
+ ||e2d3m1.com^$all
+ ||e2enwwmuiw.shop^$all
+ ||e2y.beauty^$all
+-||e4b6c1ace87.chefs-kitchen.co.uk^$all
+ ||e4openings.com^$all
+ ||e5-b644dc.ingress-earth.ewp.live^$all
+ ||e5b8c68ffaf84f0d5266ca13effd3517.boawgr.pl^$all
+ ||e8b6aa42b7265948abf4ca0162b3e46d.actgro.pl^$all
+ ||e8f5c37d0bd.chefs-kitchen.co.uk^$all
+ ||e9-gkl.cfd^$all
+-||e9ca484f3b1.chefs-kitchen.co.uk^$all
+ ||e9f42.padariamorgado.pt^$all
+ ||e051.info^$all
+-||e67a585393e.chefs-kitchen.co.uk^$all
+ ||e122.info^$all
+-||e185d23d94d.chefs-kitchen.co.uk^$all
+ ||e188.info^$all
+ ||e327f2f1f114c82.allbiuro.pl^$all
+ ||e355.info^$all
+-||e512cca889a.chefs-kitchen.co.uk^$all
+ ||e595.info^$all
+ ||e843.cfd^$all
+ ||e2146ebabbe6bfdeb7472524303c5572.kontlso.pl^$all
+ ||e6255d091a9116cf1c444fe294ae17b4.marcoprzy.net.pl^$all
+ ||e7178bf184a89c7735006d8136821dee.maxgro.pl^$all
+-||e10339fd102.bakerstreet.uk.com^$all
+ ||e272620fe6d.johncornell.com^$all
+-||e2581764c7a.chefs-kitchen.co.uk^$all
+ ||e71073799b3a2fd38f75dbbb79ee0cfc.lisapwa.pl^$all
+ ||e-3fe.cfd^$all
+ ||e-autopomysl.pl^$all
+@@ -13119,7 +13057,6 @@
+ ||e.geo-in.pw^$all
+ ||e.gpt-tradebot.pw^$all
+ ||e.hypnosisandfitness.com^$all
+-||ea12c49bf0b.chefs-kitchen.co.uk^$all
+ ||ea858fba7a2.johncornell.com^$all
+ ||eaarrnwwall.online^$all
+ ||eaastwood88.com^$all
+@@ -13203,7 +13140,6 @@
+ ||eaux.abp-photo.com^$all
+ ||eavjvhold.site^$all
+ ||eawcn.tiger8investment.com^$all
+-||eb2c2672359.chefs-kitchen.co.uk^$all
+ ||eb99e6283316f77075250a6743368010.grazynakami.pl^$all
+ ||ebapl.com^$all
+ ||ebas.utulo.site^$all
+@@ -13242,8 +13178,6 @@
+ ||ecbibottplunnewsdea.ml^$all
+ ||ecchifusion.com^$all
+ ||ecda.pl^$all
+-||ecdfvv.s3.us-east-005.backblazeb2.com^$all
+-||ecdghx.s3.us-east-005.backblazeb2.com^$all
+ ||ecfb83abc6c12d76dedc8ae13955e4d8.boawgr.pl^$all
+ ||echangessubversifsglobaux.com^$all
+ ||eche.life^$all
+@@ -13300,7 +13234,6 @@
+ ||ecuadorcubensis.com^$all
+ ||eczematee.com^$all
+ ||ed3a048b3a111be01bfb809d42a8b294.klsmt.eu^$all
+-||ed27f4b99d3.chefs-kitchen.co.uk^$all
+ ||ed851739e22.skfds.eu^$all
+ ||ed89012341.wixsite.com^$all
+ ||ed-4.cfd^$all
+@@ -13311,7 +13244,6 @@
+ ||edbadev.com^$all
+ ||edbtopsttool.com^$all
+ ||eddyspaansen.com^$all
+-||ede1484e61b.chefs-kitchen.co.uk^$all
+ ||edeefaeacd1.chefs-kitchen.co.uk^$all
+ ||edeline.info^$all
+ ||edelmiramejiaterapeutacosmica.com^$all
+@@ -13366,7 +13298,6 @@
+ ||edydlplomsa.com^$all
+ ||edyoh.morinsconstruction.com^$all
+ ||ee008.info^$all
+-||ee911e17b70.chefs-kitchen.co.uk^$all
+ ||ee0580198250d0eb99ba40f5ac1a1681.mistrox.pl^$all
+ ||ee-login.com^$all
+ ||ee.coolplattf.top^$all
+@@ -13394,7 +13325,6 @@
+ ||ef92-d2.cfd^$all
+ ||ef24874db98402421c97165a4cf1c434.actgro.pl^$all
+ ||ef-24d.cfd^$all
+-||efcdxz.s3.us-east-005.backblazeb2.com^$all
+ ||efd.tradepeoplexf.top^$all
+ ||efe.coolplattf.top^$all
+ ||efed9f7a91b9c44b217c7301a33c13eb.marcoprzy.net.pl^$all
+@@ -13422,9 +13352,7 @@
+ ||efs2.freepl.top^$all
+ ||efs2.plsttrade.top^$all
+ ||efsaneotolastik.com^$all
+-||eftgvp.s3.us-east-005.backblazeb2.com^$all
+ ||efunzo.com^$all
+-||efwcdx.s3.us-east-005.backblazeb2.com^$all
+ ||eg84-531k.cfd^$all
+ ||egardis.online^$all
+ ||egazeta-24ee.cleverapps.io^$all
+@@ -13436,7 +13364,6 @@
+ ||egeeked.com^$all
+ ||egenegivens.com^$all
+ ||egi84-g.cfd^$all
+-||egjlwuajme.astroverse.city^$all
+ ||egk.life^$all
+ ||eglelda-moto.pl^$all
+ ||egmsl.kafanda.com^$all
+@@ -13473,7 +13400,6 @@
+ ||ei0z.com^$all
+ ||ei-23.homes^$all
+ ||ei-48mf.cfd^$all
+-||eidjuki.s3.us-west-004.backblazeb2.com^$all
+ ||eieiikajdmcnnd.site^$all
+ ||eieoieodjdadanjxjsjs.site^$all
+ ||eig.beauty^$all
+@@ -14570,7 +14496,6 @@
+ ||exultant-bathroom.sa.com^$all
+ ||exutr.shivamgmt.com^$all
+ ||exuwedu.weebly.com^$all
+-||ey9hjl.s3.us-east-005.backblazeb2.com^$all
+ ||ey43u.cfd^$all
+ ||eyaeya31.za.com^$all
+ ||eyc3.canmaxiprog.site^$all
+@@ -14600,7 +14525,6 @@
+ ||eyuts.phweditorial.com^$all
+ ||eyxspmbjxh.web.app^$all
+ ||eyyaa.com^$all
+-||eyykmk.s3.us-east-005.backblazeb2.com^$all
+ ||ez-erc-business.com^$all
+ ||ezalukaj*.$doc
+ ||ezbuy-promotion.com^$all
+@@ -14642,7 +14566,6 @@
+ ||f6ul.ovh^$all
+ ||f7a512f462a.chefs-kitchen.co.uk^$all
+ ||f7ae247f4033b709906e1eebf82e39b4.mistrox.pl^$all
+-||f7db48289eb.bakerstreet.uk.com^$all
+ ||f7dc1d0a54d9c0e1832c848ba85ef6fe.urszulaprzymuszala.net.pl^$all
+ ||f8b73816f856db11f6eecbca812d48a9.nicfus.pl^$all
+ ||f8dg.com^$all
+@@ -14676,7 +14599,6 @@
+ ||f206.despachodeabogadosmcr.com^$all
+ ||f212.despachodeabogadosmcr.com^$all
+ ||f214.despachodeabogadosmcr.com^$all
+-||f232fbaa289.chefs-kitchen.co.uk^$all
+ ||f242.despachodeabogadosmcr.com^$all
+ ||f254.despachodeabogadosmcr.com^$all
+ ||f257.espn365.com^$all
+@@ -14809,7 +14731,6 @@
+ ||f87196.flymetothevenus.com^$all
+ ||f91152.awicksin.com^$all
+ ||f94864.eliteoftokens.com^$all
+-||f97343a585f.chefs-kitchen.co.uk^$all
+ ||f0097386a5592cbd7cf.allpomoc.pl^$all
+ ||f99575.aimedia.lk^$all
+ ||f0574089.xsph.ru^$all
+@@ -15253,7 +15174,6 @@
+ ||fd.pro1wrld.top^$all
+ ||fd.propl.top^$all
+ ||fdcuk.net^$all
+-||fdd52f20.bakerstreetfinance.tv^$all
+ ||fddc35e8fd4.chefs-kitchen.co.uk^$all
+ ||fdevcmpwtyjk.com^$all
+ ||fdf.pltradelife.top^$all
+@@ -15278,7 +15198,6 @@
+ ||fe9ed993ed5.chefs-kitchen.co.uk^$all
+ ||fe3679a17f7.chefs-kitchen.co.uk^$all
+ ||feaa242198b.chefs-kitchen.co.uk^$all
+-||feab2016.bakerstreetfinance.tv^$all
+ ||fear1esstodo.life^$all
+ ||fearaug.com^$all
+ ||fearlessdevotion.com^$all
+@@ -16024,7 +15943,6 @@
+ ||fleurforall.com^$all
+ ||fleximovers.me^$all
+ ||flexosamineoneit.site^$all
+-||flialio.s3.us-west-004.backblazeb2.com^$all
+ ||flickzi.com^$all
+ ||flife.onlineact1.site^$all
+ ||flightmanagementsystems.com^$all
+@@ -16204,7 +16122,6 @@
+ ||for.well-2ness.life^$all
+ ||foradoll.com^$all
+ ||foragamedep.site^$all
+-||forallwhatyouhave.builderallwppro.com^$all
+ ||foranoplspg.com^$all
+ ||forayedfo.xyz^$all
+ ||forbtv.com^$all
+@@ -16357,7 +16274,6 @@
+ ||fozd.vallz.click^$all
+ ||fp-calculator.com^$all
+ ||fp.newaistar.top^$all
+-||fpcxds.s3.us-east-005.backblazeb2.com^$all
+ ||fpjqr.infoplss.pl^$all
+ ||fpower.castamasta.cloud^$all
+ ||fpxvg5.xyz^$all
+@@ -16664,8 +16580,6 @@
+ ||funnelconsultants.com^$all
+ ||funnelscripts.com^$all
+ ||funnelsxpert.com^$all
+-||funny-payne.145-239-93-70.plesk.page^$all
+-||funny-visvesvaraya.161-35-11-34.plesk.page^$all
+ ||funnymayday.com^$all
+ ||funnystrange.com^$all
+ ||funnyv.sbs^$all
+@@ -17048,7 +16962,6 @@
+ ||gclmobilewallet.com^$all
+ ||gclub000.com^$all
+ ||gclub8000.com^$all
+-||gcnkjj.s3.us-east-005.backblazeb2.com^$all
+ ||gcropp.com^$all
+ ||gcyfs.morinsconstructionaz.com^$all
+ ||gd-4kd.cfd^$all
+@@ -17309,7 +17222,6 @@
+ ||gfa.polkrew.site^$all
+ ||gfcad.com^$all
+ ||gfgeometry.lat^$all
+-||gfhjtv.s3.us-east-005.backblazeb2.com^$all
+ ||gfhy.cfd^$all
+ ||gfin11.info^$all
+ ||gfinance.life^$all
+@@ -17323,7 +17235,6 @@
+ ||gfsv.formew.top^$all
+ ||gftgrty56.obs.ap-southeast-1.myhuaweicloud.com^$all
+ ||gfx24.net^$all
+-||gfxhjk.s3.us-east-005.backblazeb2.com^$all
+ ||gfxroyal.com^$all
+ ||gg1.pics^$all
+ ||gg2win.pro^$all
+@@ -17367,7 +17278,6 @@
+ ||ggleone.castamasta.cloud^$all
+ ||ggmlimited.com^$all
+ ||ggsez.notbuilttosit.com^$all
+-||ggttcd.s3.us-east-005.backblazeb2.com^$all
+ ||gh2gft.s3.us-east-005.backblazeb2.com^$all
+ ||ghbwq.marathoncoursephotos.com^$all
+ ||ghdlm.com^$all
+@@ -17408,7 +17318,6 @@
+ ||gieldapolska.site^$all
+ ||gieldapolsksa.site^$all
+ ||gieldapolsksdc.site^$all
+-||gietrdi.s3.us-west-004.backblazeb2.com^$all
+ ||gift2card.com^$all
+ ||gift-hypixel-claim.com^$all
+ ||gift.bestylife.online^$all
+@@ -17502,7 +17411,6 @@
+ ||gk-works.com^$all
+ ||gk.eutrty.top^$all
+ ||gk.newsteps.top^$all
+-||gkbfgx.s3.us-east-005.backblazeb2.com^$all
+ ||gkcreationyt.com^$all
+ ||gklma.piwylefubefu.top^$all
+ ||gkoty.com^$all
+@@ -17977,7 +17885,6 @@
+ ||goonline-bnpparlbas.eu^$all
+ ||goonline-bnppraibas.online^$all
+ ||goonline-logowanie-bnpprailbas.top^$all
+-||goonline.bnpparibasbanking.com^$all
+ ||goonline.cloud^$all
+ ||goonlinebiznes.biz^$all
+ ||goonlinebiznes.info^$all
+@@ -18356,14 +18263,12 @@
+ ||grupoteficon.com^$all
+ ||grupozuksa.com^$all
+ ||grv1.weebly.com^$all
+-||grvvxx.s3.us-east-005.backblazeb2.com^$all
+ ||gry-dopobrania.pl^$all
+ ||gryfield.com^$all
+ ||gryndolf-com.preview-domain.com^$all
+ ||gryourprize.com^$all
+ ||grzegorz.monikajoanna.pl^$all
+ ||grzepustek.waldemarnikodem.pl^$all
+-||grzxdv.s3.us-east-005.backblazeb2.com^$all
+ ||gs24zabrze.pl^$all
+ ||gs-43g.cfd^$all
+ ||gsasty.jasewr.site^$all
+@@ -18483,7 +18388,6 @@
+ ||gwiezdny-projektor-pl.com^$all
+ ||gwotelf.site^$all
+ ||gwssml.com^$all
+-||gwvkjl.s3.us-east-005.backblazeb2.com^$all
+ ||gwwarantowanydochod.site^$all
+ ||gwx-11054-ybk.web.app^$all
+ ||gx.moristre.pl^$all
+@@ -18719,7 +18623,6 @@
+ ||happdnsnfeconed.site^$all
+ ||happy12l4fe.life^$all
+ ||happy25x8z.xyz^$all
+-||happy-meitner.31-172-83-146.plesk.page^$all
+ ||happyablelife.com^$all
+ ||happyfaamily.site^$all
+ ||happyfindingss.com^$all
+@@ -19142,7 +19045,6 @@
+ ||hhhharahil.com^$all
+ ||hhivacationrental.com^$all
+ ||hhr.yourchance.top^$all
+-||hhtfgv.s3.us-east-005.backblazeb2.com^$all
+ ||hhvuh.everadpro.click^$all
+ ||hhx.stormx.top^$all
+ ||hhyas.laqwer.online^$all
+@@ -19247,7 +19149,6 @@
+ ||hjecco.com^$all
+ ||hjfkldsjoooeuq.site^$all
+ ||hjfmfgb.godaddysites.com^$all
+-||hjgftk.s3.us-east-005.backblazeb2.com^$all
+ ||hjid.tentaklsistem.click^$all
+ ||hjjxz.shop^$all
+ ||hjkslddow.site^$all
+@@ -19346,8 +19247,6 @@
+ ||homemademusicalinstrumentfestival.com^$all
+ ||homemoonshine.com^$all
+ ||homeofloveclt.com^$all
+-||homepaiement-pl-16f9b0fb.arw-rohstoffhandel.com^$all
+-||homepaiement-pl-258fd91f.arw-rohstoffhandel.com^$all
+ ||homepaiement-pl-*.*.$all,domain=at|com
+ ||homepay-pl-48d33c44.rpm-technik.at^$all
+ ||homepay-pl-*.*.$all,domain=at|com
+@@ -19522,7 +19421,6 @@
+ ||hracles.com^$all
+ ||hramvintesd.hynige.cf^$all
+ ||hrappella.site^$all
+-||hrcbhj.s3.us-east-005.backblazeb2.com^$all
+ ||hreadtidve.site^$all
+ ||hreandoal.site^$all
+ ||hrfvusx427nhwq6zi75q3yp6j5aipdmvgr6erxa5qeneoqni-ipfs-w3s-link.translate.goog^$all
+@@ -19640,7 +19538,6 @@
+ ||huzhouyun.com^$all
+ ||hvjug.formew.top^$all
+ ||hvrut.xyz^$all
+-||hvtkjl.s3.us-east-005.backblazeb2.com^$all
+ ||hvtugrhtgtjgituuherguithg.weebly.com^$all
+ ||hvvstjohn.com^$all
+ ||hwfusion.com^$all
+@@ -19970,12 +19867,9 @@
+ ||iiukowre.site^$all
+ ||ij-34id.cfd^$all
+ ||ij-starts-canon.com^$all
+-||ijfcxz.s3.us-east-005.backblazeb2.com^$all
+-||ijijiki.s3.us-west-004.backblazeb2.com^$all
+ ||ik2.smilemobile.pt^$all
+ ||ikares.space^$all
+ ||ikasv.laqwer.online^$all
+-||ikcjhk.s3.us-east-005.backblazeb2.com^$all
+ ||ikea.fi-kampanjoita.com^$all
+ ||ikea.kampanj-se.com^$all
+ ||ikedseeed.click^$all
+@@ -19983,7 +19877,6 @@
+ ||ikici.com^$all
+ ||ikikili.s3.us-west-004.backblazeb2.com^$all
+ ||ikiorto-1.xyz^$all
+-||iklas.brujoychamanhernan.com^$all
+ ||ikloa.lixprog.click^$all
+ ||iknowapornstar.com^$all
+ ||iko-pkobp.online^$all
+@@ -20450,7 +20343,6 @@
+ ||informacje-pl.top^$all
+ ||informacje-polska-24.linuxpl.eu^$all
+ ||informacje-tvp.net^$all
+-||informacje.axecart.com^$all
+ ||informacje.space^$all
+ ||informacjednia.click^$all
+ ||informacjedrogowe.click^$all
+@@ -21468,7 +21360,6 @@
+ ||ivanwakeup.com^$all
+ ||ivemsy.sbs^$all
+ ||iveq.sashakuznetsova.com^$all
+-||ivjhnf.s3.us-east-005.backblazeb2.com^$all
+ ||ivniejeojwovrworvwollk.com^$all
+ ||ivniioskrrvororwpwjv.site^$all
+ ||ivohengartner.com^$all
+@@ -21672,17 +21563,14 @@
+ ||jazzysfishandchips.com.au^$all
+ ||jb.eutrty.top^$all
+ ||jbah.pro^$all
+-||jbdfgv.s3.us-east-005.backblazeb2.com^$all
+ ||jbfilmyseriale.pl^$all
+ ||jbiden.poliakosta.online^$all
+ ||jbjdhba.s3.us-east-005.backblazeb2.com^$all
+-||jbkjhk.s3.us-east-005.backblazeb2.com^$all
+ ||jbmgjoas.online^$all
+ ||jbo-global.com^$all
+ ||jcasarru.com^$all
+ ||jcketa.com^$all
+ ||jclub1688.com^$all
+-||jcnxhx.s3.us-east-005.backblazeb2.com^$all
+ ||jcpatronr.com^$all
+ ||jcreanfineart.com^$all
+ ||jd990i.web.app^$all
+@@ -21855,8 +21743,6 @@
+ ||jjdjdkswqieo.site^$all
+ ||jjeh16y.web.app^$all
+ ||jjhempdispensary.net^$all
+-||jjhnbw.s3.us-east-005.backblazeb2.com^$all
+-||jjhnyy.s3.us-east-005.backblazeb2.com^$all
+ ||jjiiim.tentaklsistem.click^$all
+ ||jjkkkaopo.vertysbos.top^$all
+ ||jjmas.apprety.site^$all
+@@ -21869,7 +21755,6 @@
+ ||jk.newplatf.top^$all
+ ||jk.propeople.top^$all
+ ||jk.prowrld.top^$all
+-||jkbvcx.s3.us-east-005.backblazeb2.com^$all
+ ||jkeac.com^$all
+ ||jkfkonet.weebly.com^$all
+ ||jkjh.ubpages.com^$all
+@@ -22042,7 +21927,6 @@
+ ||jovaughnpowell.com^$all
+ ||jovial-banach-ff628b.netlify.app^$all
+ ||jovial-rabanadas-50bc7d.netlify.app^$all
+-||jovial-villani.79-133-56-170.plesk.page^$all
+ ||jovialdirt.info^$all
+ ||jowarclimb.club^$all
+ ||jowunoolao.com^$all
+@@ -32677,11 +32561,9 @@
+ ||pocztapl.net^$all
+ ||pocztapl.top^$all
+ ||pocztapl.vip^$all
+-||pocztaplska15.alourin.cf^$all
+ ||pocztaplska25.souplaifor.cf^$all
+ ||pocztaplska35.predsesifi.cf^$all
+ ||pocztaplska45.weitunha.cf^$all
+-||pocztaplska55.askymroopi.cf^$all
+ ||pocztaplska65.viefoxtpracaparpae.cf^$all
+ ||pocztaplska75.reiconsmaro.cf^$all
+ ||pocztapol.site^$all
+@@ -42640,7 +42522,6 @@
+ ||viewpointhh.top^$all
+ ||viewpointhh.xyz^$all
+ ||vigilanceattorneys.com^$all
+-||vigilant-ptolemy.79-133-56-170.plesk.page^$all
+ ||vigilantisms.org^$all
+ ||vigilsigil.store^$all
+ ||vigivig.s3.us-west-004.backblazeb2.com^$all
