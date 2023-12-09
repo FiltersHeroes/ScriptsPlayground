@@ -1,0 +1,2087 @@
+diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
+index 670d57bfc..79f244cc9 100644
+--- a/exclusions/CERT_expired.txt
++++ b/exclusions/CERT_expired.txt
+@@ -85,6 +85,7 @@
+ 00lx-shopping.7568744.xyz
+ 00lx.12313124.xyz
+ 00lx.1515484.xyz
++00lx.184181231.xyz
+ 00lx.23321236.xyz
+ 00lx.23321237.xyz
+ 00lx.24151154.xyz
+@@ -860,6 +861,7 @@
+ 0olx.6790046.xyz
+ 0olx.6790048.xyz
+ 0oooo.xyz
++0op20a-pow02.zuelab.pl
+ 0pg8njfh.azureedge.net
+ 0r1en.bigbosspl.site
+ 0r1en.rndnkwp.site
+@@ -1493,6 +1495,9 @@
+ 24faktowowazne.pl
+ 24faktwazne.pl
+ 24fakty.pl
++24faktyinfo.epizy.com
++24faktywarszawa.rf.gd
++24faktywmiescie.epizy.com
+ 24faktywmiescie.pl
+ 24gazeta.eu
+ 24gazetainfo.pl
+@@ -1521,6 +1526,7 @@
+ 24info-wypadki.pl
+ 24info24.pl
+ 24infogz.pl
++24infolive.rf.gd
+ 24informacjegazeta.pl
+ 24informacjegz.pl
+ 24interia.azureedge.net
+@@ -1555,6 +1561,8 @@
+ 24t.doit-online24.xyz
+ 24transakcja.pl
+ 24tygodnik.pl
++24warszawa.rf.gd
++24wazne.epizy.com
+ 24wazne.pl
+ 24wazneinformacje.pl
+ 24waznewydarzenia.pl
+@@ -3418,6 +3426,7 @@ a69al.lomt.xyz
+ a69d.lomt.xyz
+ a69w.lomt.xyz
+ a7.wetss.xyz
++a70391.sadeceis.com
+ a71954.kisspark.info
+ a73d.lomt.xyz
+ a74694.kisspark.info
+@@ -3427,6 +3436,7 @@ a7m.wetss.xyz
+ a7w.wetss.xyz
+ a81230.kisspark.info
+ a813.paidtomoney.com
++a81915.sadeceis.com
+ a82-allegro-pl.zewdrew.pl
+ a85525.hamdandates.com
+ a8582b6b0f53eb53594859d2b5065137.finangro.co.pl
+@@ -4577,6 +4587,7 @@ allegro.lokallnie.fun
+ allegro.lokallnie.online
+ allegro.lokallnie.site
+ allegro.lokalnie-dostawa.fun
++allegro.lokalniepay24.pl
+ allegro.lokalniepayu.pl
+ allegro.mojllokalnie.online
+ allegro.mojlokalnie.online
+@@ -4608,6 +4619,8 @@ allegro.sbs
+ allegro.std95214.click
+ allegro.to
+ allegro.wozr.pl
++allegro.zakupy-247.pl
++allegro.zakupy24-7.pl
+ allegro0lokalnie.675645437.xyz
+ allegro1-0kalnie.7560909.xyz
+ allegro1-okalnie.2312339.xyz
+@@ -4765,6 +4778,7 @@ allegrolokalnie-pl-3dsafe.notification-sender.xyz
+ allegrolokalnie-pl-3dsecure.id-safety.click
+ allegrolokalnie-pl-3dsecure.id-safety.co
+ allegrolokalnie-pl-3dsecure.id-safety.sbs
++allegrolokalnie-pl-3dseif.dostawa-id.live
+ allegrolokalnie-pl-ns.id-43051.xyz
+ allegrolokalnie-pl-ns.id-safety.co
+ allegrolokalnie-pl-safe.dostawa-safe.online
+@@ -5072,10 +5086,13 @@ allegrolokalnie.site
+ allegrolokalnie.store
+ allegrolokalnie.su
+ allegrolokalnie.surf
++allegrolokalnie.szybka-przesylka.pl
++allegrolokalnie.szybka-transkacja.pl
+ allegrolokalnie.tech
+ allegrolokalnie.tk
+ allegrolokalnie.vip
+ allegrolokalnie.work
++allegrolokalnie.zakupybezpieczne-24.pl
+ allegrolokalnie24-7.pl
+ allegrolokalnie24h-7.pl
+ allegrolokalnie24h.pl
+@@ -5683,6 +5700,7 @@ applnpost.net
+ applocalads.site
+ applocalsolutions.site
+ applocaltech.site
++apply-for-review-123.epizy.com
+ apply-moderations.com
+ apply-moderators.com
+ applyeco-cq.xyz
+@@ -6728,6 +6746,7 @@ avmoo.top
+ avnets.org
+ avortxm3.com
+ avpqsnyw5.gq
++avrszc.rf.gd
+ avtomobilnyj.email
+ aw.chatonline.site
+ awachiwich.pl
+@@ -6771,6 +6790,7 @@ axemorketr.com
+ axieinfilnity.com
+ aximpoilc.com
+ axjpzjepvxoqd2glv339rgzrw552.iecza.vip
++axnzsvmz.rf.gd
+ axon-core.com
+ axonicanserous.info
+ axonicaxonic.info
+@@ -6801,6 +6821,7 @@ azoty-pl.site
+ azowel.com
+ azsxxf3rm.digital
+ azurhabits.com
++azwmscscka.rf.gd
+ azwpikiran.co.vu
+ azx.takilon.top
+ azyioil.s3.us-west-004.backblazeb2.com
+@@ -6884,6 +6905,7 @@ b5c520684c551fe1e8615527e0248570.alldom.co.pl
+ b5e5a7299726b83fb5e5a7299726b83f.azureedge.net
+ b5f5853f0e3a4479ecd5811d74e68bea.acalgo.co.pl
+ b602.paidtomoney.com
++b60561.sadeceis.com
+ b6110025bf951f2e0c03557300ecd37d.a-pl.co.pl
+ b6251.paidtomoney.com
+ b64399.paidtomoney.com
+@@ -6941,6 +6963,7 @@ babm.tradslim.top
+ babn.tradslim.top
+ babosiki.buzz
+ babyaccords.com
++babyboss.com.uy
+ babycompfort.com
+ babygang.builderallwppro.com
+ bacc66666.net
+@@ -7867,6 +7890,7 @@ biateldicamweinuck.ga
+ bib.clypokloroe.xyz
+ bibircastello.co.vu
+ bibircastello.tarungdrajatsiokalama.com
++bibirkenahujan.rf.gd
+ bibliadaseducaooficial.com
+ bibliopegy.pl
+ bibliophil.pl
+@@ -7890,6 +7914,7 @@ bielatowicz.com.pl
+ bielik.cyou
+ bielinskawsz.pl
+ bielsko-biala.aq2e.com
++bierzacefakty24.epizy.com
+ bierzemy-udzialy.eu
+ bifaguan.uno
+ bifinprojectcart.com
+@@ -9617,6 +9642,7 @@ ca15018.tmweb.ru
+ ca1a37fb9682b14bca1a37fb9682b14b.azureedge.net
+ ca1ad8f9135fe13dbdd1088bee5610d4.alldom.co.pl
+ ca1bf4419cd7554c1c3d297fdfe34efd.kklmn.co.pl
++ca24-credit-agricole-pl.78vegas.net
+ ca24-credit-agricole-pl.arcanarpg.com
+ ca24-credit-agricole-pl.cricketcrown11.com
+ ca24-credit-agricole-pl.manxthrivesociety.org
+@@ -10173,6 +10199,7 @@ centraldecknews.com
+ centraldecursos-online.com
+ centrasenioralne.pl
+ centre.ng
++centreaccounts.rf.gd
+ centreapp.co.pl
+ centreapptv.co.pl
+ centrelinkhold.myftp.org
+@@ -11235,6 +11262,7 @@ correctinnovation.life
+ correctinnovation.top
+ correctinvest.info
+ correctinvest.life
++correosprepago.makitravel.com
+ correspondtyu.online
+ corroborat.pl
+ corsetries.pl
+@@ -11283,6 +11311,7 @@ coud.fun
+ couldestbr.com
+ coulome.eu
+ coundly.link
++countappchkpoin.rf.gd
+ counter.strike2-release.com
+ counterdem.pl
+ countervai.xyz
+@@ -11897,10 +11926,12 @@ d11q5y9exhlkai.cloudfront.net
+ d11vkfwll30jro.cloudfront.net
+ d11yzayg3u1yh6.cloudfront.net
+ d11yzy2guaaju1.cloudfront.net
++d12023.sadeceis.com
+ d121lj3ic2jzkq.cloudfront.net
+ d125urpu7g5len.cloudfront.net
+ d126jrntbygbj6.cloudfront.net
+ d128xibclnq36p.cloudfront.net
++d12950.sadeceis.com
+ d129yeylzbe6ez.cloudfront.net
+ d12anys7z4p1k5.cloudfront.net
+ d12ezckiej24ba.cloudfront.net
+@@ -11927,6 +11958,7 @@ d13sef6b8sjqq8.cloudfront.net
+ d13ub5kvqkmcvg.cloudfront.net
+ d13va49v6tj218.cloudfront.net
+ d141yjm7ig0pqx.cloudfront.net
++d14354.sadeceis.com
+ d1448w0ygxt67v.cloudfront.net
+ d14a8j8yk3d772.cloudfront.net
+ d14lf3r68k8ptq.cloudfront.net
+@@ -15050,6 +15082,7 @@ dkg8xa0s66kk8.cloudfront.net
+ dkhhesmp29qwr.cloudfront.net
+ dkkls.livesketo.site
+ dkksialaban.co.vu
++dkksitanggang.liveblog365.com
+ dkm8hrrh4o7bz.cloudfront.net
+ dkmnfde.eu
+ dkrd8fu4ww4rz.cloudfront.net
+@@ -15846,14 +15879,17 @@ dpd-formshop.num59021.click
+ dpd-formshop.tjyjnf.click
+ dpd-gax.id9030.me
+ dpd-hee.id4736556.com
++dpd-hroz.id86-92.me
+ dpd-i.id79976.me
+ dpd-inf0biz.managingpaypage.xyz
+ dpd-info.info
+ dpd-info.page-delivery.xyz
+ dpd-infodelivery.xyz
++dpd-jwez.id-info004.me
+ dpd-k.dostawa-official.me
+ dpd-lnfodelibery.site
+ dpd-local-tracking-redelivery.com
++dpd-lwa.id-info229.me
+ dpd-m.id847363.me
+ dpd-market.7453421.xyz
+ dpd-mobile.co.uk
+@@ -15933,6 +15969,7 @@ dpd-pl.gomoch.online
+ dpd-pl.hajs-onekax.click
+ dpd-pl.hjkg-4o12.one
+ dpd-pl.id-07974130575.buzz
++dpd-pl.id-3489.me
+ dpd-pl.id-7241922.site
+ dpd-pl.id-safety.sbs
+ dpd-pl.id-safety.xyz
+@@ -15945,6 +15982,7 @@ dpd-pl.info-chanpol6533.com
+ dpd-pl.info-trackcode-id578461.xyz
+ dpd-pl.joqpwi41y2.click
+ dpd-pl.jto-oq12z.cyou
++dpd-pl.kkytni.site
+ dpd-pl.klas-tutja1.icu
+ dpd-pl.kois-oius1.best
+ dpd-pl.konto-klasyczne.best
+@@ -16008,6 +16046,7 @@ dpd-przesylki.pl
+ dpd-purchase.205430.xyz
+ dpd-redirect-parcel-secure-user-address.dpd-parcel.com
+ dpd-redirect-parcel-secure-user-address.halloween-quiz.co.uk
++dpd-s.id-9431.me
+ dpd-shipment.xyz
+ dpd-shop-dispatch.9076242.xyz
+ dpd-shop.08452122.xyz
+@@ -16256,6 +16295,7 @@ dpd.toghujkase.org
+ dpd.tojkedhas.org
+ dpd.transpay-67584.space
+ dpd.transpay-85495.space
++dpd.tubomec.org
+ dpd.turgads.org
+ dpd.ubedasojaw.org
+ dpd.udwutasker.org
+@@ -16519,6 +16559,7 @@ dstwa-do-rak-wlasnych.xyz
+ dsw8jvs2jf1m1.cloudfront.net
+ dswdd.top
+ dswj6vzp9lacv.cloudfront.net
++dsy-disneyplus.ikwb.com
+ dsydb.com
+ dsyxuog2w7vdz.cloudfront.net
+ dt2m.co
+@@ -17657,6 +17698,7 @@ energylandia24.pl
+ energylandiaa.waw.pl
+ energylandiia.waw.pl
+ energypark-vido.waw.pl
++energyrozrwyka.awesomeerictech.com
+ energyy-ladnia.waw.pl
+ energyylandia.pl
+ enerreplo.online
+@@ -18227,6 +18269,7 @@ f2eb4b3f09bd01bdcc7e3bcc1bc88e9d.hospla.co.pl
+ f322.paidtomoney.com
+ f330.paidtomoney.com
+ f3376fe18c300b7fc7c12c2626b3becd.kklmn.co.pl
++f35223.sadeceis.com
+ f35707.paidtomoney.com
+ f37f6123f784648ef69debf2bb8730bc.hospla.co.pl
+ f3889cf3c58b22a13c4c705d1e404052.finangro.co.pl
+@@ -18767,6 +18810,7 @@ fakty24gazeta.pl
+ fakty24h.eu
+ fakty24hnadobe.waw.pl
+ fakty24inf.pl
++fakty24info.epizy.com
+ fakty24info.pl
+ fakty24informacje-24.pl
+ fakty24informacje-online.pl
+@@ -18781,6 +18825,7 @@ fakty24online.pl
+ fakty24onlinee.net.pl
+ fakty24onlineee.pl
+ fakty24onnlinee.pl
++fakty24onnnline.rf.gd
+ fakty24polska.azureedge.net
+ fakty24swiat.pl
+ fakty24wazneinfo.pl
+@@ -20518,6 +20563,7 @@ gektorpaypl.top
+ gektrpay.top
+ gel.feelinge.xyz
+ gelacademi.pl
++gelastungis.rf.gd
+ gelista.pl
+ gelistirirken.com
+ gemarslot77.com
+@@ -24117,6 +24163,7 @@ im-post7shop.5767089.xyz
+ im-post99.312323.xyz
+ im-postproduct.9678821.xyz
+ im-postshop.3243231.xyz
++im.mvslive.com
+ im3unit.site
+ image-obraz.eu
+ imagehear.com
+@@ -24770,6 +24817,7 @@ info24.bydgoszcz.pl
+ info24.fundacionacuario.com
+ info247-pl.com
+ info24echo.awesomeerictech.com
++info24fakty.epizy.com
+ info24faktywazne.pl
+ info24ffkt.pl
+ info24gazeta.pl
+@@ -24905,6 +24953,7 @@ infomacje-6.azureedge.net
+ infomacje-7.azureedge.net
+ infomacje-8.azureedge.net
+ infomacje-9.azureedge.net
++infomacjeonline.rf.gd
+ infomaster.depiinv.xyz
+ infomaxiz.torgsystem.space
+ infomazowsze-24.xyz
+@@ -25197,6 +25246,7 @@ informacje4you.pl
+ informacjecodziennie.pl
+ informacjeczestochowa.xyz
+ informacjefakty24.pl
++informacjefakty24.rf.gd
+ informacjefakty24online.pl
+ informacjefkty24.pl
+ informacjegazeta24.pl
+@@ -25232,9 +25282,11 @@ informacyjne24wiadomosci.pl
+ informacyjnefk24.pl
+ informacyjnefkty24.pl
+ informacyjneinfo24.pl
++informacyjnemiasto24.rf.gd
+ informacyjni-polscy.pl
+ informacyjnie.elk.pl
+ informacyjnie.radom.pl
++informacyjnie24.rf.gd
+ informacyjnie24gazeta.pl
+ informacyjniefakty.pl
+ informacyjniefk24.pl
+@@ -25702,6 +25754,7 @@ inp0st.32666575.xyz
+ inp0st.32666577.xyz
+ inp0st.32666578.xyz
+ inp0st.34088000.xyz
++inp0st.3423568.xyz
+ inp0st.3453462.xyz
+ inp0st.3523491.xyz
+ inp0st.3523492.xyz
+@@ -26729,6 +26782,7 @@ inpost-pl.eisfrei.pics
+ inpost-pl.elgnis.pics
+ inpost-pl.eristica.online
+ inpost-pl.ernjotq.pw
++inpost-pl.etlyarn.online
+ inpost-pl.eurothereum.xyz
+ inpost-pl.eurythmic.xyz
+ inpost-pl.evenz.online
+@@ -26744,6 +26798,7 @@ inpost-pl.fiscalfx.shop
+ inpost-pl.fisfuss.pics
+ inpost-pl.fisker.online
+ inpost-pl.fjoiar.pw
++inpost-pl.flikon.pw
+ inpost-pl.flll.pics
+ inpost-pl.fmekit.online
+ inpost-pl.fonsecaatleticoclube.shop
+@@ -27263,6 +27318,7 @@ inpost-polska-rjv.orders849.info
+ inpost-polska-rmp.orders88515.info
+ inpost-polska-rtn.order122.info
+ inpost-polska-rx.order267.info
++inpost-polska-rzh.neworder44799.info
+ inpost-polska-sbq.order2539.info
+ inpost-polska-sdq.order2349.info
+ inpost-polska-sh.order941.info
+@@ -27276,6 +27332,7 @@ inpost-polska-tn.order919.info
+ inpost-polska-tp.orders83930.info
+ inpost-polska-ubk.23421.me
+ inpost-polska-uca.order122.info
++inpost-polska-ufc.neworder44799.info
+ inpost-polska-uiu.orders83930.info
+ inpost-polska-um.order708.info
+ inpost-polska-up.orders83930.info
+@@ -29194,6 +29251,7 @@ inv-program.site
+ inv-space.info
+ inv.encouragementapp.cfd
+ inv.globalpro.space
++inv.nlandings.com
+ inv1pl-budimnew.info
+ inv2xz.xyz
+ invalidationshypertrophying.com
+@@ -29461,6 +29519,7 @@ ionetporwanie.pl
+ ionetporwanie.site
+ ionetporwanie.waw.pl
+ iono.website
++ionos-hef0qf8k4.sendserver.email
+ ionos-rdr.com
+ iop.maymaxy.xyz
+ iorber.com
+@@ -30011,6 +30070,7 @@ jezyk.solushow.com
+ jezzellichodziiommnie.club
+ jfoastidon4937.shop
+ jfvpoikhhga.digital
++jfytcsjlphdgjnfdeymiytre.rf.gd
+ jgfxsi.promotetouch.co.in
+ jgrupungeo.cfolks.pl
+ jhangle.xyz
+@@ -32424,6 +32484,7 @@ live-news-63561213047.azureedge.net
+ live-news-63922671214.azureedge.net
+ live.rich24online.quest
+ live1program.site
++live24info.rf.gd
+ live2air.shop
+ liveboxs.org
+ livechat.account-quality-business-help.com
+@@ -32779,6 +32840,7 @@ lnpost.erosscross.xyz
+ lnpost.eviva.help
+ lnpost.exabit.website
+ lnpost.ezjax.pw
++lnpost.ferosh.online
+ lnpost.fisker.online
+ lnpost.fjoiar.pw
+ lnpost.flina.pw
+@@ -34161,6 +34223,7 @@ marhadaphadapan.co.vu
+ marhadaphadapan.tarungdrajatsiokalama.com
+ marhadaphadapansamaerik.co.vu
+ marhitasuragit.co.vu
++marhujanpagi.rf.gd
+ mari.pro-fit.host
+ mari1.inprog.top
+ maria-blog.urrencypl.site
+@@ -35066,6 +35129,7 @@ miastoinformacje.click
+ miastoinformacje.hekko24.pl
+ miastosprawa.hekko24.pl
+ miastoswiatinfo24h.pl
++miastowazne.rf.gd
+ miastowe-aktualnosci.waw.pl
+ miastowe-info.waw.pl
+ miastowe-informacje.waw.pl
+@@ -35196,6 +35260,7 @@ migticomjeumerdust.tk
+ migtivilbi.cf
+ migyxip.site
+ mihidra.cl
++miicroflonine.hostfree.pw
+ miina.xyz
+ miinor.site
+ miirta.xyz
+@@ -35412,6 +35477,7 @@ mmaklwqw.pl
+ mmalkusm.pl
+ mmalsopa.pl
+ mmb.proqt.top
++mmi.mvslive.com
+ mmmag.mastyh.life
+ mmmmms.livesketo.site
+ mmte-ir.com
+@@ -35535,6 +35601,7 @@ moja-paczka-pl-myid576xs.trhd74erf.top
+ moja-paczka-pl-myid576xs.vungtau.life
+ moja-paczka-pl-myid576xs.whpak.xyz
+ moja-paczka-pl-myid576xs.zshde.xyz
++moja-paczka.com
+ moja-praca.waw.pl
+ moja-spolecznosc.eu
+ moja.solushow.com
+@@ -37105,6 +37172,7 @@ new483.paidtomoney.com
+ new493.paidtomoney.com
+ new50322.epinlock.com
+ new54212.paidtomoney.com
++new54818.sadeceis.com
+ new59045.kisspark.info
+ new61568.paidtomoney.com
+ new62.paidtomoney.com
+@@ -38366,6 +38434,7 @@ o1x.0598122.xyz
+ o1x.08451511.xyz
+ o1x.08515151.xyz
+ o1x.0894515.xyz
++o1x.089765275.xyz
+ o1x.09998093.xyz
+ o1x.10512002.xyz
+ o1x.11111420.xyz
+@@ -38458,6 +38527,7 @@ o1x.79007089.xyz
+ o1x.8451515.xyz
+ o1x.847154512.xyz
+ o1x.85194.xyz
++o1x.90725365.xyz
+ o1x.95455155.xyz
+ o1x.9598122.xyz
+ o1x.97655648.xyz
+@@ -39801,6 +39871,7 @@ ollx.0782317.xyz
+ ollx.0846955.xyz
+ ollx.085121552.xyz
+ ollx.09463312.xyz
++ollx.09577236.xyz
+ ollx.096761.xyz
+ ollx.096762.xyz
+ ollx.096763.xyz
+@@ -39813,6 +39884,7 @@ ollx.1324305.xyz
+ ollx.13243089.xyz
+ ollx.14166152.xyz
+ ollx.14515151.xyz
++ollx.1471246.xyz
+ ollx.14851184.xyz
+ ollx.15184122.xyz
+ ollx.15320000.xyz
+@@ -39971,6 +40043,7 @@ ollx.6851215.xyz
+ ollx.68654682.xyz
+ ollx.68654688.xyz
+ ollx.68654689.xyz
++ollx.7024727.xyz
+ ollx.7195512.xyz
+ ollx.72123214.xyz
+ ollx.756132.xyz
+@@ -43128,6 +43201,7 @@ olx.safe-pay.store
+ olx.seeypay.xyz
+ olx.shlinks.me
+ olx.shop-delivery.xyz
++olx.sinomaxy.org
+ olx.skedelen.org
+ olx.sklep.pl
+ olx.so
+@@ -43415,6 +43489,7 @@ onet-gdansk.xyz
+ onet-informacja.xyz
+ onet-informacje.online
+ onet-informacje.xyz
++onet-informacjemiasto24h.com.pl
+ onet-katowice.xyz
+ onet-kielce.xyz
+ onet-lodz.xyz
+@@ -43557,6 +43632,7 @@ online.xn--mbnk-6q5a.com
+ online247fakty.com.pl
+ online247fakty.pl
+ online24fakt.pl
++online24fakty.epizy.com
+ online24fakty.pl
+ online365account.biz
+ online365account.business
+@@ -43608,6 +43684,7 @@ onlypays.su
+ onlyprorev.site
+ onmenbr1.xyz
+ onmusigdziessbyc.website
++onnnline24fakty.epizy.com
+ onomil.xyz
+ onpolska.space
+ onreduslim.xyz
+@@ -44301,6 +44378,7 @@ orl-prog.poland-plpro.site
+ orl.edealand.pro
+ orl.lukoil-inv.xyz
+ orl.moctrade.site
++orl.nlandings.com
+ orl.poland-plpro.site
+ orl1-inv.work
+ orl3n.bigbosspl.site
+@@ -44323,6 +44401,7 @@ orlen-news.biz
+ orlen-news.us
+ orlen-nt.site
+ orlen-oil.online
++orlen-pl.harmlessmoney.com
+ orlen-pl.pigdorian.com
+ orlen-pl.roscoc.site
+ orlen-pl.top
+@@ -44816,6 +44895,7 @@ outlaw3.com
+ outlean.info
+ outllook.d2atqhl3y7gl5p.amplifyapp.com
+ outlook-accounts.com
++outlook.office3655.liveblog365.com
+ outlook1.19i67.com
+ outpacesun.pl
+ outpraised.com
+@@ -45127,6 +45207,7 @@ paganizeb.com
+ page-cargotransport.xyz
+ page-jhpost.756878.xyz
+ page-jnpost.45220021.xyz
++page-market.tygyro.com
+ page-pl.xyz
+ page-productdeparture.xyz
+ page.ga
+@@ -48381,6 +48462,7 @@ pl.tesprogram3.xyz
+ pl.tesprogram8.site
+ pl.theorydetermin.cc
+ pl.thirteenpleasant.cc
++pl.tradenewsinvesting.com
+ pl.tryfeast.com
+ pl.trygetall.guru
+ pl.unfaircontrol.cc
+@@ -49044,6 +49126,7 @@ poczta-polska-pl.deliveries-order.icu
+ poczta-polska-pl.fenixc.buzz
+ poczta-polska-pl.id756586.space
+ poczta-polska-pl.us
++poczta-polska-pl.webnetworke.com
+ poczta-polska-pl.zenco.top
+ poczta-polska-pl.zyxrec.top
+ poczta-polska-ziliska.azurewebsites.net
+@@ -49057,6 +49140,7 @@ poczta-polska.eu
+ poczta-polska.me
+ poczta-polska.net.pl
+ poczta-polska.one
++poczta-polska.rf.gd
+ poczta-polska.services
+ poczta-polska.us
+ poczta-polska.work
+@@ -49084,6 +49168,7 @@ poczta-regulamin.com
+ poczta-regulamin.us
+ poczta-tracking.com
+ poczta-wp-konto.eu
++poczta-wp.epizy.com
+ poczta-wp.pl
+ poczta-wp.session-71273.online
+ poczta-wp.support
+@@ -49096,6 +49181,7 @@ poczta.2466872.xyz
+ poczta.43553537.xyz
+ poczta.4451122.xyz
+ poczta.4534656.xyz
++poczta.48272946.xyz
+ poczta.5235124.xyz
+ poczta.5324579.xyz
+ poczta.6367561.xyz
+@@ -49630,6 +49716,7 @@ polsatnevsy.pl
+ polsce-fx.site
+ polscy-informacyjni.pl
+ polscyinformacyjni.pl
++polscysportowcy24.pl
+ polsest.top
+ polsfaer.com
+ polsh.in
+@@ -50698,6 +50785,7 @@ post-cz.xyz
+ post-derive.com
+ post-dostawa.com
+ post-office-parcel.cfolks.pl
++post-polska.com
+ post-renew.xyz
+ post-send-24.xyz
+ post-send.host
+@@ -50967,12 +51055,14 @@ pozt.xyz
+ pozwalajmy-glosowac.eu
+ pozyczac.site
+ pozytywne-wybieranie.eu
++pp-90214950.hostfree.pw
+ pp-id8322.com
+ ppaco.xyz
+ ppav79791.top
+ ppay.site
+ ppc.org.pl
+ ppconz7of.digital
++ppdmfa.pl
+ ppdos.capitalnoster.site
+ ppl.doitstroy24.live
+ ppl.plpsc.top
+@@ -51000,6 +51090,7 @@ praca-dla-ciebie.co.pl
+ praca-dom.waw.pl
+ praca-info.agro.pl
+ praca-info.co.pl
++praca-nr1.waw.pl
+ praca-olx.azureedge.net
+ praca-w-domu.azureedge.net
+ praca-w-miastach.com
+@@ -51013,6 +51104,7 @@ pracaonline.co.pl
+ pracapolska.xyz
+ pracaradom.xyz
+ pracavanglicku.com
++pracawdomu.waw.pl
+ pracawgrecji.com
+ pracawre.com
+ pracawyszukaj.pl
+@@ -51022,6 +51114,7 @@ pracewanie.xyz
+ pracuj-aplikuj.azureedge.net
+ pracuj-info.waw.pl
+ pracuj-pl.pl
++pracuj-samodzielnie.waw.pl
+ pracuj-w-domu.azureedge.net
+ pracuj-w-domu.co.pl
+ pracuj.agro.pl
+@@ -51813,8 +51906,10 @@ prywatna-rezerwacja.pl
+ prywatna-sesja.eu
+ prywatne-kupowanie.pl
+ prywatne-oferty.pl
++prywatne-oferty247.pl
+ prywatne-ogloszenia24.pl
+ prywatne-ogloszenie24h.pl
++prywatne-platnosci.pl
+ prywatne-samochody.pl
+ prywatne-transakcje.pl
+ prywatne-zakup24.pl
+@@ -51987,6 +52082,7 @@ przyjazne-przesylki.pl
+ przyjazne-zakupom.pl
+ przyjazne-zakupy.pl
+ przyjazne-zakupy24.pl
++przyjazne-zamowienia.pl
+ przyjazny-zakup.pl
+ przyjmeoddamzamienie.pl
+ przyjrzyjsiesampolska.website
+@@ -52310,6 +52406,7 @@ quatebirding.com
+ qudianbo.com
+ que.programaticeu.xyz
+ queacerbagagesch.tk
++quebocalyalbum.byethost6.com
+ queensberrys.live
+ queernesse.pl
+ quentbuity.space
+@@ -53449,6 +53546,8 @@ roskosm.eu-dep.club
+ roslom-invest.pro
+ rosms.xyz
+ rossmanie.xyz
++rossmann-2022-wakacje.vastserve.com
++rossmann-wygrrywaj.vastserve.com
+ roswindetflog.passioshop.top
+ rosyjskainwazja-swiatinfo.eu
+ rotaalquiler.com
+@@ -54268,6 +54367,7 @@ security-control.top
+ security-control.xyz
+ security-online.info
+ security-online.pt
++security-settings-account.42web.io
+ security-web-assist.com
+ security.gamingqogs.life
+ security.get.inpost.codes
+@@ -54555,6 +54655,7 @@ serwer2199047.home.pl
+ serwer2224158.home.pl
+ serwer2249864.home.pl
+ serwer2291177.home.pl
++serwer2319941.home.pl
+ serwer7292.blob.core.windows.net
+ serwer823486.blob.core.windows.net
+ serwis-24-57224498711.azureedge.net
+@@ -55155,6 +55256,7 @@ sirmakulasingsd.co.vu
+ sirmakulasingsd.tarungdrajatsiokalama.com
+ sirmakutlusti.co.vu
+ sirmakutlusti.tarungdrajatsiokalama.com
++sirtampulis.rf.gd
+ sirusfx.com
+ sirwadin.space
+ sisasolgui.tk
+@@ -55988,6 +56090,7 @@ sprawdzona-platnosc.pl
+ sprawdzone-infa.pl
+ sprawdzone-info.waw.pl
+ sprawdzone-informacje.pl
++sprawdzone-platnosci.pl
+ sprawdzoneinfa.pl
+ sprawdzoneinfo.pl
+ sprawdzto.cal24.pl
+@@ -57645,6 +57748,7 @@ techmessanger.com
+ technika-zarabiania.waw.pl
+ techniquesk.com
+ techno-news.space
++technologies-vulnerable-inform-tobago.trycloudflare.com
+ technology-tesla.biz
+ technologyeras.com
+ technosoft-deutschland-staging.nl
+@@ -58552,6 +58656,7 @@ todosiebiiepassuje.club
+ todovideosmusicales.es
+ todziendobry.com
+ tofakty.waw.pl
++togakmandang.unaux.com
+ togdynia.xyz
+ togliwice.xyz
+ toi.futurethey.xyz
+@@ -59580,6 +59685,7 @@ trustorlen.us
+ trustpoopin.xyz
+ trustsignjapan.com
+ trustus.beauty
++trustwallet-program.epizy.com
+ trustwallet.elabed.org
+ trustwalletapp.cfolks.pl
+ trustworthy-media.com
+@@ -59639,6 +59745,7 @@ tsl-finansprog.tslxinv.site
+ tsl-ofert.cardmr.site
+ tsl-pl.co.pl
+ tsl-pro.gertrader.xyz
++tsl.mvslive.com
+ tsl.newwprogramm3.xyz
+ tsl.profinstall.site
+ tsla-coin.xyz
+@@ -60685,6 +60792,7 @@ uprowadzniezdworca.pl
+ uprowadzniezdworca.waw.pl
+ uprzejmosc-live.eu
+ ups-help.pl
++ups-my-package.net
+ ups-parcel-support.info
+ ups-trackingexpress.com.cplemaire.net
+ ups.address-modification.com
+@@ -61243,6 +61351,7 @@ vi-mtedstore.delivery1site.xyz
+ vi-nted-delivery.869565666.xyz
+ vi-nted.3423218.xyz
+ vi-nted.7556655.xyz
++vi-nted.85292923.xyz
+ vi828a9sd782az8-rt828a8x91s.balswpa.co.pl
+ via.peaknext.co
+ viadi.pl
+@@ -62554,6 +62663,7 @@ vinted.wwallet.space
+ vinted2349.in
+ vintedcz.cell120.online
+ vintedcz.info21.pw
++vintedcz.odrer876.online
+ vintedcz.order123.pw
+ vintedcz.order127.com
+ vintedcz.order146.online
+@@ -62565,6 +62675,7 @@ vintedcz.order342.com
+ vintedcz.order343.com
+ vintedcz.order345.online
+ vintedcz.order364.com
++vintedcz.order374.com
+ vintedcz.order435.pw
+ vintedcz.order45.pw
+ vintedcz.order467.com
+@@ -63199,11 +63310,16 @@ vlnted-gb.abigol.info
+ vlnted-gb.abilg.info
+ vlnted-gb.abiogl.info
+ vlnted-gb.aciox.info
++vlnted-gb.agegl.info
++vlnted-gb.aggeg.info
+ vlnted-gb.agglg.info
++vlnted-gb.aggwe.info
+ vlnted-gb.agibl.info
+ vlnted-gb.aglbe.info
+ vlnted-gb.aioge.info
+ vlnted-gb.akiji.info
++vlnted-gb.ayiuk.info
++vlnted-gb.ggegl.info
+ vlnted-gb.hopal.info
+ vlnted-gb.ikomd.info
+ vlnted-gb.kontkt.info
+@@ -63322,6 +63438,7 @@ voteforme-hypesquad.com
+ voteme-lodzkie.vot.pl
+ voterradiant.top
+ voting-xrp.net
++votingconstest.epizy.com
+ votingxrp.net
+ vouchsafedalleged.com
+ vouchsafeo.com
+@@ -63582,6 +63699,9 @@ warszawa-samochody.pl
+ warszawa-sklep.pl
+ warszawa-sprzedajemy.pl
+ warszawa-sprzedaz.pl
++warszawa.epizy.com
++warszawainfo.rf.gd
++warszawainfo24.rf.gd
+ warta-pomocy.pl
+ warta-sw.pl
+ wartimes.info
+@@ -64808,11 +64928,13 @@ wlasnietutajesitodzieje.cyou
+ wlcesaug.com
+ wlcesquiz.com
+ wlfsf.top
++wlnqi.stanrichard.com
+ wlodarskaagnieszka.eu
+ wloguje-teraz.xyz
+ wlunword.com
+ wmawianie-ludzie.eu
+ wmessage.pw
++wmiescie24.epizy.com
+ wmiescie24gazeta.pl
+ wmiescie24gz.pl
+ wmiescie24wazne.pl
+@@ -65133,6 +65255,7 @@ wrongdoers.pl
+ wrtyu.nikasr.xyz
+ wrybniku.xyz
+ wryneckdro.com
++wrzesien-pomponik.tokoapril.com
+ wrzeszowie.xyz
+ wrzucanie-fot.eu
+ wrzucogloszeniedosieci.pl
+@@ -65226,6 +65349,14 @@ wvw-oix.pl
+ wvw-olx.pl
+ ww.gnlenders.com
+ ww.plsystem0.xyz
++ww16.rpn.com.pl
++ww16.weryfikacja-sms.com
++ww17.weryfikacja-sms.com
++ww25.epargne-retraite-entreprises-bnpparibas.com
++ww25.prp.com.pl
++ww38.epargne-retraite-entreprises-bnpparibas.com
++ww38.freerobux247.pl
++ww38.weryfikacja-sms.com
+ wwa-informacje.co.pl
+ wwtj.xyz
+ wwv-olx.pl
+@@ -65350,6 +65481,7 @@ wygeneruj-kody.net
+ wygeneruj.net
+ wygodatamtauroda.website
+ wygodna-paczka.pl
++wygodna-platnosc.pl
+ wygodne-platnosci.pl
+ wygodnie.site
+ wygodny-zakup.pl
+@@ -65360,6 +65492,7 @@ wygrajjzyciie.site
+ wygrana-glosami.eu
+ wygranecov.net
+ wygranego-losu.eu
++wygrywaj-w-rossmann.vastserve.com
+ wyjasnicdajacyplon.site
+ wyjatek-glosik.eu
+ wyjazdtakimpraca.skin
+@@ -65445,6 +65578,7 @@ wypadek-wosp.pl
+ wypadek-zakopianka.waw.pl
+ wypadekenergia.waw.pl
+ wypadekmarcina.eu
++wypadeknews.awesomeerictech.com
+ wypadki-drogowe.azurewebsites.net
+ wypadki-drogowe.waw.pl
+ wypadki-drogowe.xyz
+@@ -65505,6 +65639,7 @@ wysylka-kup-olx.pl
+ wysylka-nadwa.com
+ wysylka-olx.me
+ wysylka-olx.pl
++wysylka-online.pl
+ wysylka.cc
+ wysylka.live
+ wysylka.me
+@@ -65645,6 +65780,7 @@ xbvhbnj4744v555vvvvv.top
+ xcelpropertyservices.com
+ xcena.xyz
+ xclients.online
++xcx-disneyplus.dynssl.com
+ xcxc7.top
+ xdhsu1o6v.digital
+ xdxc-msg.us
+@@ -65790,6 +65926,7 @@ xnhv3385.lisanse.com
+ xnvf4258.paidtomoney.com
+ xoayco5of.digital
+ xob.lomt.xyz
++xocndefremexz.hostfree.pw
+ xoehsnako.com
+ xoifored.site
+ xoifored.uno
+@@ -65909,6 +66046,7 @@ yavzkiri.host
+ yb49.top
+ ybfgsa.xyz
+ yboreje.site
++ycdsp.stanrichard.com
+ ycrnnin2qol.digital
+ ydiso3um4ao3ifj.rdl.pl
+ yealingsmy.xyz
+@@ -66200,12 +66338,14 @@ zakup-natychmiastowy.pl
+ zakup-olx.pl
+ zakup-online24h.pl
+ zakup-payu.pl
++zakup-produkt.pl
+ zakup-prywatny.pl
+ zakup-przez-internet.pl
+ zakup-teraz24.pl
+ zakup-teraz24h.pl
+ zakup-z-gwarancja.pl
+ zakup-z-ochrona.pl
++zakup-zweryfikowany.pl
+ zakup24-allegrolokalnie.pl
+ zakupchroniony.pl
+ zakupowe-bystrzaki.click
+@@ -66266,8 +66406,11 @@ zamow-dzisiaj24.pl
+ zamow-internetowo.pl
+ zamow-online24.pl
+ zamow-online24h.pl
++zamow-produkt.pl
++zamow-przedmiot.pl
+ zamow-przedmioty24.pl
+ zamow-przesylka.pl
++zamow-przesylke.pl
+ zamow-szybko.pl
+ zamow-taniej.pl
+ zamow-tanio.pl
+@@ -66360,18 +66503,21 @@ zapisz-kompendium.eu
+ zapisz.biz
+ zapiszu.live
+ zaplac-24h.pl
++zaplac-bezpieczenie.pl
+ zaplac-bezpiecznie.pl
+ zaplac-bezpiecznie24.pl
+ zaplac-bezpieczniej.pl
+ zaplac-da-paczke24.xyz
+ zaplac-online.in.net
+ zaplac-online.xyz
++zaplac-online24.pl
+ zaplac-online24h.pl
+ zaplac-paczkomat24.xyz
+ zaplac-teraz-24.site
+ zaplac-teraz.link
+ zaplac-teraz.live
+ zaplac-teraz.pl
++zaplac-teraz24.pl
+ zaplac-teraz24h.pl
+ zaplac-wygodnie.pl
+ zaplac-za-paczke.space
+@@ -66678,9 +66824,17 @@ ziguards.live
+ zihu1.top
+ zilustrowanie-akt.eu
+ zimb.space
++zimbr-token.x24hr.com
+ zimbra.y2kportfolio.com
++zimbraa-authz.x24hr.com
++zimbraauth.x24hr.com
++zimbraauthz.x24hr.com
++zimbraautz.x24hr.com
+ zimbraloginportalservices.trudeljohnston.com
+ zimbraloginservices.eyepal.sa.com
++zimbratoken.x24hr.com
++zimbratokenx.x24hr.com
++zimbratokenz.x24hr.com
+ zimbrawebmailcilient.moonfruit.com
+ zimeiti.live
+ zincoidscr.com
+@@ -66802,6 +66956,7 @@ zobaczmy-sprawe.eu
+ zobaczmy-tekst.eu
+ zobaczone-strona.eu
+ zobaczone-strony.eu
++zobaczteraz00001zawiadomienie.awesomeerictech.com
+ zobaczymyczyjjeszczesieuad.space
+ zobapla.pl
+ zobihafnjw.cfolks.pl
+diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
+index 3a05d6b87..9a5b7173a 100644
+--- a/exclusions/LWS_expired.txt
++++ b/exclusions/LWS_expired.txt
+@@ -540,6 +540,7 @@ kupilem.eu
+ kupujemy.to
+ kupujemy24.net
+ kurtkaspyderpolska.com
++kurtkiwyprzedaz.pl
+ kwaterapodgruszka.pl
+ labartin6.com
+ lacostepoland.pl
+@@ -1109,7 +1110,9 @@ wszystkododomu.net
+ wyjazd24.pl
+ wylewkibetonowe.com.pl
+ wylogujsiezmatrixa.pl
++wypoczywajunas.pl
+ wyspa-maitri.pl
++x-tronik.pl
+ xamak10.com
+ xeroshoespolska.pw
+ xeroshoespolsks.com
+@@ -1142,4 +1145,5 @@ zielony-bazarek.pl
+ zielonydizajn.pl
+ zkinstal.pl
+ zs-czajkowski.pl
++zskleczany.pl
+ zwierzoszop.com
+diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
+index c33891c92..f64552aae 100644
+--- a/sections/podejrzane_inne_oszustwa.txt
++++ b/sections/podejrzane_inne_oszustwa.txt
+@@ -916,7 +916,6 @@
+ ||kurdely.com^$all
+ ||kuriero.pl^$all
+ ||kurtka-hhsklep.com^$all
+-||kurtkiwyprzedaz.pl^$all
+ ||kvalita.shop^$all
+ ||kviastyunfi.com^$all
+ ||kwaterowanie.pl^$all
+@@ -1530,7 +1529,6 @@
+ ||scheanet.com^$all
+ ||schutzpolska.pl^$all
+ ||seans24.com.pl^$all
+-||sebastea.pl^$all
+ ||seci-unsa.com^$all
+ ||secretwish.pl^$all
+ ||selfcarezone.eu^$all
+@@ -1977,10 +1975,8 @@
+ ||wifiprotector.com^$all
+ ||wilkiewicz.pl^$all
+ ||willapasym.pl^$all
+-||windgrojec.pl^$all
+ ||winfactory.pl^$all
+ ||winoandfriends.pl^$all
+-||wirtualnetargi.com.pl^$all
+ ||wirtuozseksu.pl^$all
+ ||wisebanc.com^$all
+ ||witsrce.com^$all
+@@ -2000,16 +1996,11 @@
+ ||wuggaa.shop^$all
+ ||www.eleganteea.com^$all
+ ||wybierzgdansk.pl^$all
+-||wydawnictwo-systherm.pl^$all
+ ||wyjasniamy.eu^$all
+ ||wyleczpc.pl^$all
+-||wypoczywajunas.pl^$all
+-||wyposazeniedomow.com.pl^$all
+ ||wypsikaj.pl^$all
+ ||wytypowany-zwyciezca.com^$all
+ ||wytypowany-zwyciezca.pl^$all
+-||x-alp.pl^$all
+-||x-tronik.pl^$all
+ ||xaroma.pl^$all
+ ||xbox360emulator.com^$all
+ ||xeroshoespolska.com^$all
+@@ -2025,7 +2016,6 @@
+ ||yesiibuy.com^$all
+ ||yeyaeo.com^$all
+ ||ynvceh.com^$all
+-||yoofancy.pl^$all
+ ||yotafiles.com^$all
+ ||you-and-me.pl^$all
+ ||yourpayment.online^$all
+@@ -2034,13 +2024,10 @@
+ ||yummymobile.pl^$all
+ ||yusicoun.shop^$all
+ ||z-promo.com^$all
+-||za5zl.pl^$all
+ ||zabawkowo.fun^$all
+-||zabiczyn.pl^$all
+ ||zadanimshop.com^$all
+ ||zahida-kebab.pl^$all
+ ||zaho.pl^$all
+-||zajazdbanderoza.pl^$all
+ ||zajazduzenka.pl^$all
+ ||zalandovip.shop^$all
+ ||zalukajfilmy.pl^$all
+@@ -2050,7 +2037,6 @@
+ ||zapakapl.com^$all
+ ||zaprojektujiwybuduj.pl^$all
+ ||zarobek4u.com^$all
+-||zarowkideco.pl^$all
+ ||zasnik.pl^$all
+ ||zazynek.pl^$all
+ ||zbadajswojsluch.pl^$all
+@@ -2077,16 +2063,10 @@
+ ||znajdzprzetargi.pl^$all
+ ||zobacz24.pl^$all
+ ||zofiabutik.com^$all
+-||zognia.pl^$all
+-||zorajka.pl^$all
+ ||zosprp-wagrowiec.pl^$all
+-||zostanfitjakja.pl^$all
+ ||zpafiska.pl^$all
+ ||zrobswiatlo.pl^$all
+ ||zrxvw.shop^$all
+-||zskleczany.pl^$all
+-||zsporchowo.pl^$all
+ ||zuhiog.com^$all
+ ||zukiewicz.com^$all
+-||zulano.pl^$all
+ ||zycie.shop^$all
+diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
+index f3dd287f9..47e9141f6 100644
+--- a/sections/przekierowujace_do_przekretow.txt
++++ b/sections/przekierowujace_do_przekretow.txt
+@@ -227,7 +227,6 @@
+ ||vvegas-today.com^$all
+ ||weyewweg.mypi.co^$all
+ ||wikmostwantedxc.pl^$all
+-||wykonajzadanie.pl^$all
+ ||wyszukiwarkafilmow.pl^$all
+ ||xn--21955-gya.biz^$all
+ ||xn--22455-udb.biz^$all
+diff --git a/sections/przekrety.txt b/sections/przekrety.txt
+index 2b68b6e7f..20c36026f 100644
+--- a/sections/przekrety.txt
++++ b/sections/przekrety.txt
+@@ -78,7 +78,6 @@
+ ||0lx.9423537.xyz^$all
+ ||0lx.49484121.xyz^$all
+ ||0lx.93847372.xyz^$all
+-||00lx.184181231.xyz^$all
+ ||0nli0e0uest1ng.life^$all
+ ||0nline0083948399030894.0077499942833800742.com^$all
+ ||0nllnebnqparibqs.tech^$all
+@@ -88,7 +87,6 @@
+ ||0oloj.art^$all
+ ||0olut8.cn^$all
+ ||0olx.847575634.xyz^$all
+-||0op20a-pow02.zuelab.pl^$all
+ ||0payme-nt.xyz^$all
+ ||0pen.page^$all
+ ||0shop-dispatch.xyz^$all
+@@ -720,11 +718,7 @@
+ ||24daydenegpls.shop^$all
+ ||24dzis.b-cdn.net^$all
+ ||24eu.store^$all
+-||24faktyinfo.epizy.com^$all
+-||24faktywarszawa.rf.gd^$all
+-||24faktywmiescie.epizy.com^$all
+ ||24gov-pl.online^$all
+-||24infolive.rf.gd^$all
+ ||24jgd.cfd^$all
+ ||24joyme.com^$all
+ ||24kazmun.info^$all
+@@ -738,8 +732,6 @@
+ ||24to7bankdostava.shop^$all
+ ||24us.info^$all
+ ||24vintsistem.shop^$all
+-||24warszawa.rf.gd^$all
+-||24wazne.epizy.com^$all
+ ||24x7wecare.com^$all
+ ||24xforex.com^$all
+ ||25-sgp5.cfd^$all
+@@ -1690,7 +1682,6 @@
+ ||a64904.flymetothevenus.com^$all
+ ||a66963.aimedia.lk^$all
+ ||a68023.kanuassociates.com^$all
+-||a70391.sadeceis.com^$all
+ ||a70618.bkktothemoon.com^$all
+ ||a70907.cetusinvestmentsbtc.com^$all
+ ||a71049.awicksin.com^$all
+@@ -1701,7 +1692,6 @@
+ ||a76830.awicksin.com^$all
+ ||a80721.awicksin.com^$all
+ ||a81062.24houcryptowatcher.com^$all
+-||a81915.sadeceis.com^$all
+ ||a82143.cetusinvestmentsbtc.com^$all
+ ||a82300.columbabkkfund.com^$all
+ ||a83542.kanuassociates.com^$all
+@@ -2827,7 +2817,6 @@
+ ||allegro.kupuj-payu24.pl^$all
+ ||allegro.kupujacy-pomoc.eu^$all
+ ||allegro.kupzpayu24.pl^$all
+-||allegro.lokalniepay24.pl^$all
+ ||allegro.net^$all
+ ||allegro.ochrona24-7.pl^$all
+ ||allegro.oferta247.pl^$all
+@@ -2838,8 +2827,6 @@
+ ||allegro.platnosci247.pl^$all
+ ||allegro.su^$all
+ ||allegro.ttsl.pl^$all
+-||allegro.zakupy24-7.pl^$all
+-||allegro.zakupy-247.pl^$all
+ ||allegro.zfsr.pl^$all
+ ||allegrobuy.live^$all
+ ||allegrocash.com^$all
+@@ -2865,7 +2852,6 @@
+ ||allegrolokalnie-payuu.pl^$all
+ ||allegrolokalnie-pl-3dsafe.dostawa-id.live^$all
+ ||allegrolokalnie-pl-3dsecure.dostawa-id.live^$all
+-||allegrolokalnie-pl-3dseif.dostawa-id.live^$all
+ ||allegrolokalnie-pl.$all,domain=~translate.goog|~translate.google.*
+ ||allegrolokalnie-pl.payregisway.pw^$all
+ ||allegrolokalnie-zakupy.pl^$all
+@@ -2990,32 +2976,15 @@
+ ||allegrolokalnie.platnosci-payu24.pl^$all
+ ||allegrolokalnie.platnoscwsieci.pl^$all
+ ||allegrolokalnie.promowaneaukcje.pl^$all
+-||allegrolokalnie.prywatne-oferty247.pl^$all
+-||allegrolokalnie.prywatne-platnosci.pl^$all
+-||allegrolokalnie.przyjazne-zamowienia.pl^$all
+-||allegrolokalnie.sprawdzone-platnosci.pl^$all
+ ||allegrolokalnie.szybka-paczka.pl^$all
+-||allegrolokalnie.szybka-przesylka.pl^$all
+-||allegrolokalnie.szybka-transkacja.pl^$all
+ ||allegrolokalnie.szybkie-aukcje.pl^$all
+ ||allegrolokalnie.szybkie-kupno.pl^$all
+ ||allegrolokalnie.teraz-payu24.pl^$all
+-||allegrolokalnie.wygodna-platnosc.pl^$all
+-||allegrolokalnie.wysylka-online.pl^$all
+ ||allegrolokalnie.zakup24.pl^$all
+-||allegrolokalnie.zakup-produkt.pl^$all
+-||allegrolokalnie.zakup-zweryfikowany.pl^$all
+ ||allegrolokalnie.zakupujonline.pl^$all
+ ||allegrolokalnie.zakupw-sieci.pl^$all
+ ||allegrolokalnie.zakupy-online24.pl^$all
+-||allegrolokalnie.zakupybezpieczne-24.pl^$all
+ ||allegrolokalnie.zakupyonline-24.pl^$all
+-||allegrolokalnie.zamow-produkt.pl^$all
+-||allegrolokalnie.zamow-przedmiot.pl^$all
+-||allegrolokalnie.zamow-przesylke.pl^$all
+-||allegrolokalnie.zaplac-bezpieczenie.pl^$all
+-||allegrolokalnie.zaplac-online24.pl^$all
+-||allegrolokalnie.zaplac-teraz24.pl^$all
+ ||allegrolokalniie.0841512.xyz^$all
+ ||allegrolokalniie.1948415.xyz^$all
+ ||allegrolokalniie.6948415.xyz^$all
+@@ -3793,7 +3762,6 @@
+ ||appliedbtc.com^$all
+ ||applitraq.com^$all
+ ||apply-56c95.web.app^$all
+-||apply-for-review-123.epizy.com^$all
+ ||apply.mylevels.store^$all
+ ||applybd.com^$all
+ ||appmail-stock-epos-lgazo1212826929.codeanyapp.com^$all
+@@ -4712,7 +4680,6 @@
+ ||avomed.hu^$all
+ ||avondaleazbeecontrol.com^$all
+ ||avondelray.com^$all
+-||avrszc.rf.gd^$all
+ ||avuewwunwvbwoub.site^$all
+ ||avv-prod.web.app^$all
+ ||avveng.com^$all
+@@ -4763,7 +4730,6 @@
+ ||axionlab.com^$all
+ ||axisrelay.com^$all
+ ||axlesys.in^$all
+-||axnzsvmz.rf.gd^$all
+ ||axoniasqqber.life^$all
+ ||axonsoftware.co.za^$all
+ ||axqs.liopah.top^$all
+@@ -4809,7 +4775,6 @@
+ ||azure-org-microsofteam.codeplex.pe^$all
+ ||azurec.cfd^$all
+ ||azuredreamscape.site^$all
+-||azwmscscka.rf.gd^$all
+ ||azwri.com^$all
+ ||azzzlakdjcueie.site^$all
+ ||b1.birdhand.xyz^$all
+@@ -4971,7 +4936,6 @@
+ ||b53714.cetusinvestmentsbtc.com^$all
+ ||b57146.24houcryptowatcher.com^$all
+ ||b60529.eliteoftokens.com^$all
+-||b60561.sadeceis.com^$all
+ ||b61290.cetusinvestmentsbtc.com^$all
+ ||b61681ea.vinylfence.uk^$all
+ ||b63155.kanuassociates.com^$all
+@@ -5285,7 +5249,6 @@
+ ||baltic-pipe-pl.site^$all
+ ||baltic-pipe-pl.space^$all
+ ||baltic-pipe-pro.site^$all
+-||baltic-pipe.avlator.com^$all
+ ||baltic-pipe.digital^$all
+ ||baltic-pipe.ltd^$all
+ ||baltic-pipe.net^$all
+@@ -6225,7 +6188,6 @@
+ ||biansdesign.nl^$all
+ ||biaurijfwt.xyz^$all
+ ||bibijoux.com^$all
+-||bibirkenahujan.rf.gd^$all
+ ||biblse.sbs^$all
+ ||bibnscip.site^$all
+ ||bibtu.com^$all
+@@ -6253,7 +6215,6 @@
+ ||bienal-news.site^$all
+ ||biendebien.com^$all
+ ||biers1.site^$all
+-||bierzacefakty24.epizy.com^$all
+ ||bierzemy-udzial.eu^$all
+ ||biezace-wypadki24h.eu5.net^$all
+ ||bifortis.com^$all
+@@ -7898,7 +7859,6 @@
+ ||ca2b0.padariamorgado.pt^$all
+ ||ca24-agricole.com^$all
+ ||ca24-agrlcolle.pw^$all
+-||ca24-credit-agricole-pl.78vegas.net^$all
+ ||ca9295aca2944edad5e800d8a358e8c5.niflos.pl^$all
+ ||ca-info.cloud^$all
+ ||ca-info.help^$all
+@@ -8511,7 +8471,6 @@
+ ||centralphoenixhomes.com^$all
+ ||centralspc.com^$all
+ ||centram24.pl^$all
+-||centreaccounts.rf.gd^$all
+ ||centrelinksecurity.myftp.org^$all
+ ||centreslap.online^$all
+ ||centricsun.online^$all
+@@ -9800,7 +9759,6 @@
+ ||correos-suz.top^$all
+ ||correospl.top^$all
+ ||correosposts.top^$all
+-||correosprepago.makitravel.com^$all
+ ||correses.buzz^$all
+ ||correspondence.ima-lb.com^$all
+ ||corrientesenelaire.com^$all
+@@ -9838,7 +9796,6 @@
+ ||coui.zfttr.pl^$all
+ ||counnowin.site^$all
+ ||counselingbusinesshelp.com^$all
+-||countappchkpoin.rf.gd^$all
+ ||countdown.cfd^$all
+ ||counter2strike.org^$all
+ ||counter-strike2csbeta.com^$all
+@@ -10618,11 +10575,8 @@
+ ||d6662.covidvcfund.com^$all
+ ||d7777.kanuassociates.com^$all
+ ||d9067cdd96edc29c62241d0c494.tlsens.pl^$all
+-||d12023.sadeceis.com^$all
+-||d12950.sadeceis.com^$all
+ ||d13778.awicksin.com^$all
+ ||d13914.24houcryptowatcher.com^$all
+-||d14354.sadeceis.com^$all
+ ||d19385.24houcryptowatcher.com^$all
+ ||d20738.aimedia.lk^$all
+ ||d23640.bkktothemoon.com^$all
+@@ -11949,7 +11903,6 @@
+ ||dkf.hair^$all
+ ||dkherold.com^$all
+ ||dkhj3nv8symt.com^$all
+-||dkksitanggang.liveblog365.com^$all
+ ||dkley.lodeseas.com^$all
+ ||dklso.lixprog.click^$all
+ ||dkxddtkwxhpcdsp.com^$all
+@@ -12393,24 +12346,18 @@
+ ||dpd-dostvvka132.extelnist.cf^$all
+ ||dpd-dstrowka112.stenhymojusgi.cf^$all
+ ||dpd-formshop.num28965.click^$all
+-||dpd-hroz.id86-92.me^$all
+ ||dpd-hu.life^$all
+-||dpd-jwez.id-info004.me^$all
+-||dpd-lwa.id-info229.me^$all
+ ||dpd-pl-ed213.muanha.xyz^$all
+ ||dpd-pl-pl.monster^$all
+ ||dpd-pl-pl.top^$all
+ ||dpd-pl.dostawa-id.live^$all
+ ||dpd-pl.hghbulkph.store^$all
+-||dpd-pl.id-3489.me^$all
+-||dpd-pl.kkytni.site^$all
+ ||dpd-pl.mfcell.store^$all
+ ||dpd-pl.ownan.store^$all
+ ||dpd-pl.smtown.store^$all
+ ||dpd-pl.xyz^$all
+ ||dpd-polska-njg.neworder44799.info^$all
+ ||dpd-polska-sdj42k1.poiuy5y.top^$all
+-||dpd-s.id-9431.me^$all
+ ||dpd-zamoweienie42.weitunha.cf^$all
+ ||dpd-zamowiienie22.souplaifor.cf^$all
+ ||dpd.18454221.xyz^$all
+@@ -12418,7 +12365,6 @@
+ ||dpd.jnbay.online^$all
+ ||dpd.maxpeoplepl.top^$all
+ ||dpd.neu.paketversand.51-116-111-97.cprapid.com^$all
+-||dpd.tubomec.org^$all
+ ||dpd.xe317990.com^$all
+ ||dpdbbmx.spottisupo.cf^$all
+ ||dpdbor.tiokickrenimb.cf^$all
+@@ -12682,7 +12628,6 @@
+ ||dsr3d.cc^$all
+ ||dsrpplan.com^$all
+ ||dsworkart.it^$all
+-||dsy-disneyplus.ikwb.com^$all
+ ||dtdcf.sunddip.com^$all
+ ||dth70.cfd^$all
+ ||dtherapyservice.com^$all
+@@ -13676,7 +13621,6 @@
+ ||energyclub.xyz^$all
+ ||energydrinkadverts.com^$all
+ ||energyis.net^$all
+-||energyrozrwyka.awesomeerictech.com^$all
+ ||energystarbuilders.com^$all
+ ||energystorage.cfd^$all
+ ||energystre4amkgoaljpv.xyz^$all
+@@ -14541,7 +14485,6 @@
+ ||f30921.24houcryptowatcher.com^$all
+ ||f32807.cetusinvestmentsbtc.com^$all
+ ||f35006.24houcryptowatcher.com^$all
+-||f35223.sadeceis.com^$all
+ ||f35312.cetusinvestmentsbtc.com^$all
+ ||f35413.24houcryptowatcher.com^$all
+ ||f36277.aimedia.lk^$all
+@@ -14711,8 +14654,6 @@
+ ||fakty24-powiat.dm64543.domenomania.eu^$all
+ ||fakty24.you2.pl^$all
+ ||fakty24h.eu5.net^$all
+-||fakty24info.epizy.com^$all
+-||fakty24onnnline.rf.gd^$all
+ ||fakty-info.com^$all
+ ||fakty-informacje24.you2.pl^$all
+ ||fakty-miasto.x9.eu^$all
+@@ -16857,7 +16798,6 @@
+ ||gejp-24kf.cfd^$all
+ ||gekariflod.com^$all
+ ||gelarexfast.shop^$all
+-||gelastungis.rf.gd^$all
+ ||gelatine.sbs^$all
+ ||geldgames.com^$all
+ ||gelityopuu.info^$all
+@@ -19784,7 +19724,6 @@
+ ||im-proj.web.app^$all
+ ||im-sb.com^$all
+ ||im.marcukesh.top^$all
+-||im.mvslive.com^$all
+ ||im.progrbest.top^$all
+ ||imacfacility.com^$all
+ ||imagefirstservices.com^$all
+@@ -20082,7 +20021,6 @@
+ ||info2polska.site^$all
+ ||info03.pl^$all
+ ||info24.b-cdn.net^$all
+-||info24fakty.epizy.com^$all
+ ||info8610.com^$all
+ ||info394290.wixsite.com^$all
+ ||info-24.b-cdn.net^$all
+@@ -20137,7 +20075,6 @@
+ ||infokaroz.atthost24.pl^$all
+ ||infokolizje24h.click^$all
+ ||infokolizje.click^$all
+-||infomacjeonline.rf.gd^$all
+ ||infomaibiz.info^$all
+ ||infomaibiz.life^$all
+ ||infomaibiz.top^$all
+@@ -20195,13 +20132,10 @@
+ ||informacje.space^$all
+ ||informacjednia.click^$all
+ ||informacjedrogowe.click^$all
+-||informacjefakty24.rf.gd^$all
+ ||informacjeofaktach.click^$all
+ ||informacjeonline.click^$all
+ ||informacjepomorze-24h.eu^$all
+ ||informacjezyciowe.click^$all
+-||informacyjnemiasto24.rf.gd^$all
+-||informacyjnie24.rf.gd^$all
+ ||informacyjnie-2.ct8.pl^$all
+ ||informacyjnyportal.click^$all
+ ||informacyjnysmak.click^$all
+@@ -20351,7 +20285,6 @@
+ ||inoskydive.pl^$all
+ ||inovationpipe.store^$all
+ ||inovium.net^$all
+-||inp0st.3423568.xyz^$all
+ ||inp-t.sbs^$all
+ ||inpasta.top^$all
+ ||inpasta.xyz^$all
+@@ -20442,8 +20375,6 @@
+ ||inpost-pl.cmpanda.online^$all
+ ||inpost-pl.covey.life^$all
+ ||inpost-pl.entelo.bio^$all
+-||inpost-pl.etlyarn.online^$all
+-||inpost-pl.flikon.pw^$all
+ ||inpost-pl.fun^$all
+ ||inpost-pl.guru^$all
+ ||inpost-pl.harinezumi.top^$all
+@@ -20499,10 +20430,8 @@
+ ||inpost-polska-owj.neworder44799.info^$all
+ ||inpost-polska-pj.neworder44799.info^$all
+ ||inpost-polska-rw.neworder44799.info^$all
+-||inpost-polska-rzh.neworder44799.info^$all
+ ||inpost-polska-sb.neworder44799.info^$all
+ ||inpost-polska-std.orders94851.info^$all
+-||inpost-polska-ufc.neworder44799.info^$all
+ ||inpost-polska-utz.neworder44799.info^$all
+ ||inpost-polska-vrr.neworder44799.info^$all
+ ||inpost-polska-wn.order9351.ph^$all
+@@ -20787,7 +20716,6 @@
+ ||inv-pos.web.app^$all
+ ||inv-pro.web.app^$all
+ ||inv-proc.web.app^$all
+-||inv.nlandings.com^$all
+ ||invbulcompf.com^$all
+ ||invec-t.web.app^$all
+ ||invecomplessibs.com^$all
+@@ -21015,7 +20943,6 @@
+ ||ionclash.com^$all
+ ||ionetporwanie.$all
+ ||ionos-3uol16b56.sendserver.email^$all
+-||ionos-hef0qf8k4.sendserver.email^$all
+ ||ionos-notificaciones.com^$all
+ ||iooa.inventnamb.click^$all
+ ||iooda.tentaklsistem.click^$all
+@@ -21534,7 +21461,6 @@
+ ||jfg-86.cfd^$all
+ ||jfhd.inventnamb.click^$all
+ ||jfolde.tk^$all
+-||jfytcsjlphdgjnfdeymiytre.rf.gd^$all
+ ||jg5l.com^$all
+ ||jg.newstry.top^$all
+ ||jgdakrygfd.web.app^$all
+@@ -24212,7 +24138,6 @@
+ ||liudevit.piotrgm.pl^$all
+ ||liv.infosyst.site^$all
+ ||livagea.info^$all
+-||live24info.rf.gd^$all
+ ||live-anexo-files.node.cloudlets.zone^$all
+ ||live-info.online^$all
+ ||live-map-location.cloud^$all
+@@ -24325,7 +24250,6 @@
+ ||lnpost.createu.shop^$all
+ ||lnpost.daisyfx.shop^$all
+ ||lnpost.discountvacations.xyz^$all
+-||lnpost.ferosh.online^$all
+ ||lnpost.firona.pw^$all
+ ||lnpost.h-yuan.top^$all
+ ||lnpost.hashapi.pw^$all
+@@ -25306,7 +25230,6 @@
+ ||marginelite.com^$all
+ ||margulan-sos.com^$all
+ ||margulninvst.club^$all
+-||marhujanpagi.rf.gd^$all
+ ||mari.onlineact1.site^$all
+ ||maria.activeprog3.top^$all
+ ||maria.cztessl.live^$all
+@@ -26116,7 +26039,6 @@
+ ||miastoalarm24h.click^$all
+ ||miastoalarmuje24.click^$all
+ ||miastoalarmuje24h.click^$all
+-||miastowazne.rf.gd^$all
+ ||miastowezguby.click^$all
+ ||miboxdigital.com^$all
+ ||miccjsky.000webhostapp.com^$all
+@@ -26183,7 +26105,6 @@
+ ||miguel.krzysio.info.pl^$all
+ ||miguelcantonzetina.com^$all
+ ||miguemerloz.com^$all
+-||miicroflonine.hostfree.pw^$all
+ ||miilion.gooplays.top^$all
+ ||miioioi.s3.us-west-004.backblazeb2.com^$all
+ ||miixo.com^$all
+@@ -26461,7 +26382,6 @@
+ ||mmc-wp.com^$all
+ ||mmcarsfinder.com^$all
+ ||mmesar.tayki.site^$all
+-||mmi.mvslive.com^$all
+ ||mmjj1e.web.app^$all
+ ||mmnb.formpr.top^$all
+ ||mmphxz.s3.us-east-005.backblazeb2.com^$all
+@@ -26579,7 +26499,6 @@
+ ||moja-paczka-pl-myid576xs.farmed.life^$all
+ ||moja-paczka-pl-myid576xs.ganool.cc^$all
+ ||moja-paczka-pl-myid576xs.savona.top^$all
+-||moja-paczka.com^$all
+ ||moja-paczka.pl^$all
+ ||mojakambodza.pl^$all
+ ||mojapaczka.net^$all
+@@ -27459,7 +27378,6 @@
+ ||nameian.com^$all
+ ||nameless-way.com^$all
+ ||namenews.fun^$all
+-||names-co-uk.babyboss.com.uy^$all
+ ||namierz-telefon.pl^$all
+ ||namlusolution.com^$all
+ ||namovno.site^$all
+@@ -27788,7 +27706,6 @@
+ ||neeik.com^$all
+ ||neelys.info^$all
+ ||neermoks-xyz.preview-domain.com^$all
+-||neettv.pl^$all
+ ||neevanfoundation.com^$all
+ ||neew.proone1.top^$all
+ ||neewsweek.com.pl^$all
+@@ -28099,7 +28016,6 @@
+ ||new49580.cetusinvestmentsbtc.com^$all
+ ||new53980.aimedia.lk^$all
+ ||new54092.hostingkampanya.com^$all
+-||new54818.sadeceis.com^$all
+ ||new56758.columbabkkfund.com^$all
+ ||new59040.awicksin.com^$all
+ ||new60318.kanuassociates.com^$all
+@@ -29038,8 +28954,6 @@
+ ||o1dschool.site^$all
+ ||o1leexereding.cfd^$all
+ ||o1wr4.xyz^$all
+-||o1x.089765275.xyz^$all
+-||o1x.90725365.xyz^$all
+ ||o2mail00login11page.weebly.com^$all
+ ||o2poczta.com.pl^$all
+ ||o7ur.com^$all
+@@ -29469,9 +29383,6 @@
+ ||ollixenderdoing.shop^$all
+ ||ollixxenderperding.buzz^$all
+ ||olliytreoidhnvcudr.shop^$all
+-||ollx.1471246.xyz^$all
+-||ollx.7024727.xyz^$all
+-||ollx.09577236.xyz^$all
+ ||ollx.58745121.xyz^$all
+ ||ollxcushzanossending.shop^$all
+ ||ollyhomeschool.com^$all
+@@ -29606,7 +29517,6 @@
+ ||olx.plkonstosa.club^$all
+ ||olx.prostaprzesylka.pl^$all
+ ||olx.request-confirm.pw^$all
+-||olx.sinomaxy.org^$all
+ ||olx.swell-redirect.pw^$all
+ ||olx.themilitia.shop^$all
+ ||olx.torina.top^$all
+@@ -29704,7 +29614,6 @@
+ ||onet1111.webd.pro^$all
+ ||onet-102543.square.site^$all
+ ||onet-htm7.onrender.com^$all
+-||onet-informacjemiasto24h.com.pl^$all
+ ||onet-news.com^$all
+ ||onet-o24.herokuapp.com^$all
+ ||onet-poczta.dcms.site^$all
+@@ -29742,7 +29651,6 @@
+ ||onl2ne6ques2.life^$all
+ ||onlibisues8.com^$all
+ ||online2finans.site^$all
+-||online24fakty.epizy.com^$all
+ ||online48tech2hub.life^$all
+ ||online-cda.pl^$all
+ ||online-connected.com^$all
+@@ -29816,7 +29724,6 @@
+ ||onmatotajot.click^$all
+ ||onneinnforrm.shop^$all
+ ||onnerodis.site^$all
+-||onnnline24fakty.epizy.com^$all
+ ||onpointeevents.com^$all
+ ||onpurposeprint.com^$all
+ ||onrelost.space^$all
+@@ -30028,7 +29935,6 @@
+ ||orl-invest-pl.web.app^$all
+ ||orl-pl-inv.web.app^$all
+ ||orl-place.web.app^$all
+-||orl.nlandings.com^$all
+ ||orlahall.com^$all
+ ||orlan-r.surge.sh^$all
+ ||orlandobestguide.com^$all
+@@ -30055,7 +29961,6 @@
+ ||orlen-pkn1.bitrix24.site^$all
+ ||orlen-pknm.bitrix24.site^$all
+ ||orlen-pl1.web.app^$all
+-||orlen-pl.harmlessmoney.com^$all
+ ||orlen-pl.web.app^$all
+ ||orlen-pro.web.app^$all
+ ||orlen-proj.web.app^$all
+@@ -30217,7 +30122,6 @@
+ ||outlier.sbs^$all
+ ||outlokaccountsetti.wixsite.com^$all
+ ||outlook86.wixsite.com^$all
+-||outlook.office3655.liveblog365.com^$all
+ ||outlookintel.com^$all
+ ||outlookverify.com^$all
+ ||outofficepos.com^$all
+@@ -30412,7 +30316,6 @@
+ ||page89.xyz^$all
+ ||page-help.case3-violation.click^$all
+ ||page-inform.xyz^$all
+-||page-market.tygyro.com^$all
+ ||pagehelp.me^$all
+ ||pagehelpcenter.org^$all
+ ||pagemanagersupport.com^$all
+@@ -31776,7 +31679,6 @@
+ ||pl.stanikzai.com^$all
+ ||pl.theinvestingstrat.xyz^$all
+ ||pl.thrkgx.com^$all
+-||pl.tradenewsinvesting.com^$all
+ ||pl.tubeyou.cam^$all
+ ||pl.tvplusnewtab.com^$all
+ ||pl.uosde.otzo.com^$all
+@@ -31916,7 +31818,6 @@
+ ||pleaspow.com^$all
+ ||pleatsdiary.com^$all
+ ||pleawyb.site^$all
+-||plebiscyt-krakow.v00.pl^$all
+ ||pleise.com^$all
+ ||plejada-gwiazd.eu^$all
+ ||plejada-gwiazd.tv^$all
+@@ -32227,7 +32128,6 @@
+ ||poczta-polska-pl.icu^$all
+ ||poczta-polska-pl.net^$all
+ ||poczta-polska-pl.top^$all
+-||poczta-polska-pl.webnetworke.com^$all
+ ||poczta-polska-pl.xyz^$all
+ ||poczta-polska-ppl.xyz^$all
+ ||poczta-polska-track.com^$all
+@@ -32242,7 +32142,6 @@
+ ||poczta-polska.link^$all
+ ||poczta-polska.live^$all
+ ||poczta-polska.net^$all
+-||poczta-polska.rf.gd^$all
+ ||poczta-polska.s3.us-east-005.backblazeb2.com^$all
+ ||poczta-polska.sistemaventas.pe^$all
+ ||poczta-polska.support^$all
+@@ -32291,10 +32190,8 @@
+ ||poczta-vp.dcms.site^$all
+ ||poczta-werification-faktura.online^$all
+ ||poczta-wp.cc^$all
+-||poczta-wp.epizy.com^$all
+ ||poczta-wp.pw^$all
+ ||poczta-wsparcie.com^$all
+-||poczta.48272946.xyz^$all
+ ||poczta.dcms.site^$all
+ ||poczta.eduelo.fr^$all
+ ||poczta.hopp.to^$all
+@@ -32650,7 +32547,6 @@
+ ||polsc-inv.web.app^$all
+ ||polscapostawa211.shop^$all
+ ||polscykibice.e-kei.pl^$all
+-||polscysportowcy24.pl^$all
+ ||polsees.top^$all
+ ||polshipster.jimdofree.com^$all
+ ||polshiw.host^$all
+@@ -32975,7 +32871,6 @@
+ ||post-pl-pl.xyz^$all
+ ||post-pl.top^$all
+ ||post-polska-delivery.com^$all
+-||post-polska.com^$all
+ ||post-query.top^$all
+ ||post-tel-me.icu^$all
+ ||post-tel-me.top^$all
+@@ -33147,7 +33042,6 @@
+ ||poznanpeak.com^$all
+ ||pozosdlagodne.web.app^$all
+ ||pozytywnoscczasprzygoda.mom^$all
+-||pp-90214950.hostfree.pw^$all
+ ||pp.progrr.top^$all
+ ||pp.propl.top^$all
+ ||pp.wond3r.xyz^$all
+@@ -33155,7 +33049,6 @@
+ ||ppam-offers.com^$all
+ ||ppamz.newyorksalsabachatafestival.com^$all
+ ||ppatg.laqwer.online^$all
+-||ppdmfa.pl^$all
+ ||ppelfbd.weebly.com^$all
+ ||pphuwanika.lenorasp.pl^$all
+ ||ppiothi.s3.us-west-004.backblazeb2.com^$all
+@@ -33193,7 +33086,6 @@
+ ||praca-dla-kazdego.xyz^$all
+ ||praca-dryg.eu^$all
+ ||praca-logowanie-4.ct8.pl^$all
+-||praca-nr1.waw.pl^$all
+ ||praca-pl.click^$all
+ ||praca-pl.online^$all
+ ||praca-pl.site^$all
+@@ -33205,7 +33097,6 @@
+ ||pracall.pl^$all
+ ||pracapl.online^$all
+ ||pracawdomu24.online^$all
+-||pracawdomu.waw.pl^$all
+ ||pracowac-trzeba.xyz^$all
+ ||pracowanka-2023.ct8.pl^$all
+ ||pracowanka.ct8.pl^$all
+@@ -33224,7 +33115,6 @@
+ ||practikpacks.com^$all
+ ||practiseplateau.cn^$all
+ ||pracuj-aplikacja.eu^$all
+-||pracuj-samodzielnie.waw.pl^$all
+ ||pracujemy-madrze.website^$all
+ ||pracujemy.click^$all
+ ||pracujemy.shop^$all
+@@ -34301,7 +34191,6 @@
+ ||qubittech.dev^$all
+ ||qucewuka.com^$all
+ ||quease.xyz^$all
+-||quebocalyalbum.byethost6.com^$all
+ ||quedosh.com^$all
+ ||quedsadsast.com^$all
+ ||queenzipper.top^$all
+@@ -35578,8 +35467,6 @@
+ ||ross.slwiastore.pl^$all
+ ||ross.zbigniewkaluga.pl^$all
+ ||rossalober.xyz^$all
+-||rossmann-2022-wakacje.vastserve.com^$all
+-||rossmann-wygrrywaj.vastserve.com^$all
+ ||rossmannbonyzakupowe.grvdc.eu^$all
+ ||rost-bet.com^$all
+ ||rostislav.maciejdominiak.pl^$all
+@@ -36337,7 +36224,6 @@
+ ||security-control-microsoftonline.catgrammy.com^$all
+ ||security-doge.com^$all
+ ||security-pl.info^$all
+-||security-settings-account.42web.io^$all
+ ||security-support-qualify-5ac16.firebaseapp.com^$all
+ ||security-user-case-a9a7e.firebaseapp.com^$all
+ ||security-user-warning-cbb2e.firebaseapp.com^$all
+@@ -36681,7 +36567,6 @@
+ ||serwer2079424.home.pl^$all
+ ||serwer2290674.home.pl^$all
+ ||serwer2318563.home.pl^$all
+-||serwer2319941.home.pl^$all
+ ||serwer2329873.home.pl^$all
+ ||serwer2331672.home.pl^$all
+ ||serwer2353493.home.pl^$all
+@@ -37164,7 +37049,6 @@
+ ||sipoftheseason.com^$all
+ ||sirbids.com^$all
+ ||sirold.space^$all
+-||sirtampulis.rf.gd^$all
+ ||sirvangonva.com^$all
+ ||sis.worldpeoplefx.top^$all
+ ||sistemappch.com^$all
+@@ -39276,7 +39160,6 @@
+ ||technokraft.autos^$all
+ ||technologiczneinnowacje.site^$all
+ ||technologicznerewolucje.site^$all
+-||technologies-vulnerable-inform-tobago.trycloudflare.com^$all
+ ||technology-revolutionary.xyz^$all
+ ||technologyysite.site^$all
+ ||technoloophole.digital^$all
+@@ -40168,7 +40051,6 @@
+ ||todyhuafao.live^$all
+ ||toe-corrector-pl.com^$all
+ ||tofefyejoi.life^$all
+-||togakmandang.unaux.com^$all
+ ||tognajy.info^$all
+ ||tognink.site^$all
+ ||togunh2plus.com^$all
+@@ -40879,7 +40761,6 @@
+ ||trustsre.com^$all
+ ||trusttenergia.site^$all
+ ||trustthisnazva.site^$all
+-||trustwallet-program.epizy.com^$all
+ ||trustwallet.busy-burnell.143-198-165-133.plesk.page^$all
+ ||trustwalverify.com^$all
+ ||truthneverregreet.site^$all
+@@ -40935,7 +40816,6 @@
+ ||tsl-coin.world^$all
+ ||tsl.coddes.top^$all
+ ||tsl.life^$all
+-||tsl.mvslive.com^$all
+ ||tsla-prog.shop^$all
+ ||tsla-proj.art^$all
+ ||tsla-proj.xyz^$all
+@@ -41659,7 +41539,6 @@
+ ||ups-info-tracking.com^$all
+ ||ups-login.com^$all
+ ||ups-logistics.com^$all
+-||ups-my-package.net^$all
+ ||ups-mytracking-package.com^$all
+ ||ups-online.pl^$all
+ ||ups-order-tracking.com^$all
+@@ -42205,7 +42084,6 @@
+ ||vhawpyojr.es^$all
+ ||vholskjw.site^$all
+ ||vhruwoiwripwieekdkdfk.com^$all
+-||vi-nted.85292923.xyz^$all
+ ||vi.marcukesh.top^$all
+ ||viacexreal.site^$all
+ ||viaksako.host^$all
+@@ -42476,9 +42354,7 @@
+ ||vinted.today^$all
+ ||vinted.view687.bid^$all
+ ||vinted.vip^$all
+-||vintedcz.odrer876.online^$all
+ ||vintedcz.order281.com^$all
+-||vintedcz.order374.com^$all
+ ||vintedcz.order382.eu^$all
+ ||vintedcz.order1692.eu^$all
+ ||vintedcz.order2974.eu^$all
+@@ -42661,9 +42537,6 @@
+ ||vlahsno.link^$all
+ ||vli89.cfd^$all
+ ||vlnted-gb.abiol.info^$all
+-||vlnted-gb.agegl.info^$all
+-||vlnted-gb.aggeg.info^$all
+-||vlnted-gb.aggwe.info^$all
+ ||vlnted-gb.aiiok.info^$all
+ ||vlnted-gb.aille.info^$all
+ ||vlnted-gb.aiolj.info^$all
+@@ -42674,8 +42547,6 @@
+ ||vlnted-gb.asaop.info^$all
+ ||vlnted-gb.auiok.info^$all
+ ||vlnted-gb.auion.info^$all
+-||vlnted-gb.ayiuk.info^$all
+-||vlnted-gb.ggegl.info^$all
+ ||vlnted-gb.ijiol.info^$all
+ ||vlnted-hu.request8542.cloud^$all
+ ||vlnted-info.byt-bobta.shop^$all
+@@ -42776,7 +42647,6 @@
+ ||vospedi.com^$all
+ ||voteamilewilson.com^$all
+ ||votegrem.online^$all
+-||votingconstest.epizy.com^$all
+ ||votingmauve.com^$all
+ ||votov1ewed13.sbs^$all
+ ||votre-cle-digitale-bnpparibas.fr^$all
+@@ -43017,9 +42887,6 @@
+ ||warsawwdamage.site^$all
+ ||warshaw.pl^$all
+ ||warszawa-news.webnode.page^$all
+-||warszawa.epizy.com^$all
+-||warszawainfo24.rf.gd^$all
+-||warszawainfo.rf.gd^$all
+ ||wartdron-xyz.preview-domain.com^$all
+ ||warteequeenttens.site^$all
+ ||wartoba.pl^$all
+@@ -43770,11 +43637,9 @@
+ ||wlagunskaya.com^$all
+ ||wlife.activeprog3.top^$all
+ ||wljsiljos5fp1mgs2n56be31.sportbrute.com^$all
+-||wlnqi.stanrichard.com^$all
+ ||wloglnqw.logiinaawebisir.repl.co^$all
+ ||wloskies.space^$all
+ ||wlqlu.glenngrech.com^$all
+-||wmiescie24.epizy.com^$all
+ ||wmnmy.womenforum.top^$all
+ ||wn1.boats^$all
+ ||wn4.boats^$all
+@@ -44028,7 +43893,6 @@
+ ||wrxao.com^$all
+ ||wrzesien-gazeta.tokoapril.com^$all
+ ||wrzesien-onet.tokoapril.com^$all
+-||wrzesien-pomponik.tokoapril.com^$all
+ ||wrzesien-wiadomosci.tokoapril.com^$all
+ ||wrzesien-wp.tokoapril.com^$all
+ ||wrzucane-foto.eu^$all
+@@ -44098,14 +43962,6 @@
+ ||wvw-roblox.de^$all
+ ||wvw-robox.com^$all
+ ||ww6v.com^$all
+-||ww16.rpn.com.pl^$all
+-||ww16.weryfikacja-sms.com^$all
+-||ww17.weryfikacja-sms.com^$all
+-||ww25.epargne-retraite-entreprises-bnpparibas.com^$all
+-||ww25.prp.com.pl^$all
+-||ww38.epargne-retraite-entreprises-bnpparibas.com^$all
+-||ww38.freerobux247.pl^$all
+-||ww38.weryfikacja-sms.com^$all
+ ||ww.limitnes.com^$all
+ ||wwe.indepn.site^$all
+ ||wweueiwwiueujdkso.site^$all
+@@ -44158,7 +44014,6 @@
+ ||wygraj-dzisiaj.com^$all
+ ||wygraj-iphone-x.tujest.pl^$all
+ ||wygraj-super-nagrode.com^$all
+-||wygrywaj-w-rossmann.vastserve.com^$all
+ ||wyhanyatey.live^$all
+ ||wyjatkowa-szansa.top^$all
+ ||wykaz.5p.pl^$all
+@@ -44175,7 +44030,6 @@
+ ||wypadek-info24news.pl^$all
+ ||wypadek-videosy.eu^$all
+ ||wypadek-wp.eu5.net^$all
+-||wypadeknews.awesomeerictech.com^$all
+ ||wypadekpolicja.click^$all
+ ||wypadekprzedszkola.click^$all
+ ||wypadeksmiertelny.click^$all
+@@ -44259,7 +44113,6 @@
+ ||xbiosys.com^$all
+ ||xbufx.gazeta-regionalna.com^$all
+ ||xcnehjfrutr.site^$all
+-||xcx-disneyplus.dynssl.com^$all
+ ||xcztuvxyz.us^$all
+ ||xednsk-online.preview-domain.com^$all
+ ||xedysuesou.org^$all
+@@ -44360,7 +44213,6 @@
+ ||xndhw.com^$all
+ ||xnmail.000webhostapp.com^$all
+ ||xobucyevao.live^$all
+-||xocndefremexz.hostfree.pw^$all
+ ||xoeriik.space^$all
+ ||xofipeijie.info^$all
+ ||xolinera.me^$all
+@@ -44482,7 +44334,6 @@
+ ||ybahs.inventnamb.click^$all
+ ||ybdatasolutions.com^$all
+ ||ybu.dichvummo.xyz^$all
+-||ycdsp.stanrichard.com^$all
+ ||ycfus.org^$all
+ ||yclawcollegepune.org^$all
+ ||yclhwh.com^$all
+@@ -45066,7 +44917,6 @@
+ ||zikzag.agency^$all
+ ||zil-io.web.app^$all
+ ||zim-web23.glitch.me^$all
+-||zimbr-token.x24hr.com^$all
+ ||zimbra231.000webhostapp.com^$all
+ ||zimbra566.000webhostapp.com^$all
+ ||zimbra09543t20.000webhostapp.com^$all
+@@ -45074,16 +44924,9 @@
+ ||zimbra-email-update.phoenixsongsbio.net^$all
+ ||zimbra.funnelconsultants.com^$all
+ ||zimbra.mackenzieco.co.uk^$all
+-||zimbraa-authz.x24hr.com^$all
+ ||zimbraac51.000webhostapp.com^$all
+-||zimbraauth.x24hr.com^$all
+-||zimbraauthz.x24hr.com^$all
+-||zimbraautz.x24hr.com^$all
+ ||zimbraazu.000webhostapp.com^$all
+ ||zimbramail1111.000webhostapp.com^$all
+-||zimbratoken.x24hr.com^$all
+-||zimbratokenx.x24hr.com^$all
+-||zimbratokenz.x24hr.com^$all
+ ||zimbraweblogg.weebly.com^$all
+ ||zimbuai.000webhostapp.com^$all
+ ||zimgrae.site^$all
+@@ -45158,7 +45001,6 @@
+ ||zoakne.site^$all
+ ||zobacz-film.pl^$all
+ ||zobacz-gazeta.tokoapril.com^$all
+-||zobaczteraz00001zawiadomienie.awesomeerictech.com^$all
+ ||zobistik.fun^$all
+ ||zocequiqea.live^$all
+ ||zocohome.info^$all
+diff --git a/sections/szybko_wygaszajace.txt b/sections/szybko_wygaszajace.txt
+index 19baf0ccd..ff478dda2 100644
+--- a/sections/szybko_wygaszajace.txt
++++ b/sections/szybko_wygaszajace.txt
+@@ -40,7 +40,6 @@
+ ||face-vip.ujm.pl^$all
+ ||facebook-color.5v.pl^$all
+ ||facebookszpieg.glt.pl^$all
+-||fb-szpieguj.likesyou.org^$all
+ ||fizjoterapia.5v.pl^$all
+ ||fun-clix.com^$all
+ ||funfone.me^$all
+@@ -86,7 +85,6 @@
+ ||st.acstnst.com^$all
+ ||steamgifts.5v.pl^$all
+ ||tapxchange.com^$all
+-||telefon-50-zl.is-best.net^$all
+ ||testo.5v.pl^$all
+ ||titan-man.pro^$all
+ ||tylko-dla-ciebie.com^$all
