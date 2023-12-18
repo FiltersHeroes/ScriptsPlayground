@@ -24,27 +24,27 @@ jobs:
           touch ./expired-d/test-3.txt
           touch ./expired-d/test-4.txt
           touch ./expired-d/test-5.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_01
           path: |
             expired-d/test-1.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_02
           path: |
             expired-d/test-2.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_03
           path: |
             expired-d/test-3.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_04
           path: |
             expired-d/test-4.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_05
           path: |
