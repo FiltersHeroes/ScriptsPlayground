@@ -32,12 +32,12 @@ jobs:
           echo "$NUMBER_OF_KAD_JOBS"
           numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KAD
           numberParts="$NUMBER_OF_KADHOSTS_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhosts
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_S
           path: |
             split/KAD_*
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KADH_S
           path: |
@@ -66,7 +66,7 @@ jobs:
           echo "$(./scripts/CI/getFileListForED.sh $KADfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
           echo "currentKADName=E_$KADfile" >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.currentKADName }}
           path: |
@@ -92,7 +92,7 @@ jobs:
           echo "$(./scripts/CI/getFileListForED.sh $KADHfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
           echo "currentKADHName=E_$KADHfile" >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.currentKADHName }}
           path: |
@@ -126,7 +126,7 @@ jobs:
           PAF_scrolling_videos_supp \
           PAF_tagged_internal_links)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_PAF
           path: |
@@ -143,7 +143,7 @@ jobs:
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_SOCIAL
           path: |
@@ -159,7 +159,7 @@ jobs:
           echo 'E_COOKIES<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh adblock_cookies cookies_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_COOKIES
           path: |
@@ -184,7 +184,7 @@ jobs:
           echo 'E_KAD<<EOF' >> $GITHUB_ENV
           echo "$(./scripts/CI/getFileListForED.sh KAD)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: E_KAD
           path: |
