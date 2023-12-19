@@ -174,7 +174,7 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/getArtifactNamesForED.py KAD
-      - uses: hawkeye116477/download-multiple-artifacts-action@v1
+      - uses: hawkeye116477/download-multiple-artifacts-action@v2
         with:
           names: |
             ${{ env.E_KAD_NAMES }}
@@ -202,7 +202,7 @@ jobs:
       - continue-on-error: true
         run: ./scripts/CI/getArtifactNamesForED.py KADhosts
       - continue-on-error: true
-        uses: hawkeye116477/download-multiple-artifacts-action@v1
+        uses: hawkeye116477/download-multiple-artifacts-action@v2
         with:
           names: |
             ${{ env.E_KADhosts_NAMES }}
