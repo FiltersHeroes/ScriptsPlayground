@@ -55,10 +55,14 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: hawkeye116477/download-multiple-artifacts-action@v2
         with:
-          pattern: E_KAD_*
-          merge-multiple: true
+          names: |
+            E_KAD_01
+            E_KAD_02
+            E_KAD_03
+            E_KAD_04
+            E_KAD_05
           path: expired-d
       - run: |
           ls -l ./expired-d
