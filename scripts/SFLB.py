@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.11"
+SCRIPT_VERSION = "3.0.12"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -234,7 +234,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 EP_I_PAT = re.compile(r'@exclusionsPath (.*)$')
                 EE_I_PAT = re.compile(r'@exclusionsExt (.*)$')
                 VALID_INSTRUCTIONS_PAT = re.compile(
-                    r'^@((sections|exclusions)(Path|Ext)|(HOSTS|DOMAINS|PH|B?NWL)?include)')
+                    r'^@((sections|exclusions)(Path|Ext)|(HOSTS|DOMAINS|PH|DNSMASQ|B?NWL)?include)')
                 INSTRUCTIONS_START_PAT = re.compile(r'^@')
                 for lineT in tf:
                     if not VALID_INSTRUCTIONS_PAT.match(lineT) and INSTRUCTIONS_START_PAT.match(lineT):
@@ -454,21 +454,35 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                            external_temp.name)
                             section = external_temp.name
 
-                        if re.match(r"(HOSTS|DOMAINS|PH|B?NWL)include", instruction):
+                        if re.match(r"(DNSMASQ|HOSTS|DOMAINS|PH|B?NWL)include", instruction):
                             with open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp_final:
                                 unsortedLinesC = []
                                 for lineC in section_content:
                                     lineCwww = ""
                                     convertItems = ""
-                                    if instruction in ("HOSTSinclude", "DOMAINSinclude"):
+                                    if instruction in ("DNSMASQinclude", "HOSTSinclude", "DOMAINSinclude"):
                                         if not re.match(r"^(0\.0\.0\.0.*|\|\|(?!.*\/).*\^(\$all)?$)", lineC) or re.match(r"\*|\/", lineC):
                                             lineC = ""
                                         else:
                                             convertItems = [
-                                                (r"\$all$", ""),
-                                                (r"[\^]", ""),
-                                                (r".*\*(.*)?", "")
+                                                (r"[\^]", "")
                                             ]
+                                            if instruction != "DNSMASQinclude":
+                                                convertItems.extend(
+                                                    [
+                                                        (r".*\*(.*)?", ""),
+                                                        (r"\$all$", "")
+                                                    ]
+                                                )
+                                            if instruction == "DNSMASQinclude":
+                                                convertItems.extend(
+                                                    [
+                                                        (r"\$all$", "/"),
+                                                        (r"^[|][|]",
+                                                         "address=/"),
+                                                        (r"^address=\/[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9]\.[0-9]?[0-9]?[0-9](.*)?", "")
+                                                    ]
+                                                )
                                             if instruction == "DOMAINSinclude":
                                                 convertItems.append(
                                                     [r"^[|][|]", ""])
