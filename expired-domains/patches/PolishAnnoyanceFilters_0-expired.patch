@@ -1,0 +1,62 @@
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index aa57fe1c6..2fe134335 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -705,7 +705,6 @@ housebrand.com##.containerNl
+ housebrand.com##.footer-newsletter-form
+ hoyavision.com##.footer__subscribe
+ humint.pl##.widget_custom_html.widget-footer.widget-default.widget.widget_text
+-hurtowezakupy.com##.footer-container > div > .row > div:nth-of-type(4)
+ hurtownia-format.pl##.footer.row > .col-md-4
+ hurtownia-spozywcza.pl###accordion_footer > div.list-group.foot-group:nth-of-type(4)
+ hurtowniabartel.pl###dor_custom_newsletter_block
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index fadc3c0e8..adcf88c2d 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -1,8 +1,8 @@
+ ~1login.wp.pl,~poczta.wp.pl,wp.pl,~www.wp.pl##div[data-st-area="gallery-gallery"] div[class*=" "][style*="background-color:"]
+ 2x45.info,agro-hurt.eu,decoratorium.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,naziemna.info,peskiadmin.ru,pl.delfi.lt,satservice.co.uk,sciezkimojegoswiata.com###scrollUp
+ 3dom.pro,agrosam.eu,alget.pl,antbs.co.uk,domator24.com,harposoftware.com,laroxy.com,odszewca.pl,opakowania24.eu,swiatroslin.eu##.top_button
+-3dom.pro,akwarystyczny.eu,anmur.eu,greenfelix.eu,homedoors.eu,homehood.eu,hurtowezakupy.com,hydrosan.eu,hykker.com,lambre.eu,limonkowy.com,magazynkuchenny.com,media-tech.eu,motogron.com,narzedziowy24.eu,opakowania24.eu,pasmanteria.eu,poid.eu,stolmot.com,zyjzdrowo.info###to-top
+-3i-store.com,agro-bis.eu,aleokulary.com,antrans.com.pl,baranowscy.eu,bejbi.eu,bioevolution.com,bizserver.eu,domkorkowy.com,ferguson-digital.eu,gembird.com,greenmousestudio.com,grzechhair.com,holender.info,home-you.com,huaweimobileservices.com,kamilbelz.com,kiddyfave.com,konin24.info,krzywcza.eu,kuradomowa.net,majbus.eu,mixremedia.eu,naszekielce.com,naszesprawy.eu,nieidealnaanna.com,nowosci-mp3.eu,nowyzmigrod.eu,osheeshop.eu,outhorn.com,pl.softoware.org,podstacja.com,poldruk.com,polskaekologia.org,programtv.naziemna.info,redge.com,ristorio.com,rocketpoland.com,savethefloppy.com,sklep.regalia.eu,sklepdlalekarza.com,spodlady.com,stopwiatrakom.eu,sweet.tv,szema.eu,typeofweb.com,vikking.eu,weddingdream.com,weganskie-zakupy.blogspot.com,zakupersi.com,zielenina.eu,zippedshoes.com,zlotarybka24.com,znicze.net###toTop
++3dom.pro,akwarystyczny.eu,anmur.eu,greenfelix.eu,homedoors.eu,homehood.eu,hydrosan.eu,hykker.com,lambre.eu,limonkowy.com,magazynkuchenny.com,media-tech.eu,motogron.com,narzedziowy24.eu,opakowania24.eu,pasmanteria.eu,poid.eu,stolmot.com,zyjzdrowo.info###to-top
++3i-store.com,agro-bis.eu,aleokulary.com,antrans.com.pl,baranowscy.eu,bejbi.eu,bioevolution.com,bizserver.eu,domkorkowy.com,ferguson-digital.eu,gembird.com,greenmousestudio.com,grzechhair.com,holender.info,home-you.com,huaweimobileservices.com,kamilbelz.com,kiddyfave.com,konin24.info,krzywcza.eu,kuradomowa.net,majbus.eu,mixremedia.eu,naszekielce.com,naszesprawy.eu,nieidealnaanna.com,nowosci-mp3.eu,nowyzmigrod.eu,osheeshop.eu,outhorn.com,pl.softoware.org,podstacja.com,poldruk.com,polskaekologia.org,programtv.naziemna.info,redge.com,ristorio.com,rocketpoland.com,savethefloppy.com,sklep.regalia.eu,sklepdlalekarza.com,spodlady.com,stopwiatrakom.eu,sweet.tv,szema.eu,typeofweb.com,vikking.eu,weddingdream.com,weganskie-zakupy.blogspot.com,zakupersi.com,zielenina.eu,zippedshoes.com,zlotarybka24.com###toTop
+ 4funkids.pl###scroll_up
+ 4programmers.net,alezabawki.co,andrzejgrzyb.eu,beautikon.com,cholewinski.com,finnair.com,happy-surfer.com,integracja.org,malygeniusz.org,nasze.fm,oknarolety.com,orion.fm,pl.coccodrillo.eu,praisethewear.com,shipgratis.eu,sklep.mptech.eu###scroll-to-top
+ 6paknutrition.com,partner-panele.pl,proficook.pl,skleprowerowy.pl###scrolltopbtn
+@@ -72,7 +72,7 @@ alko-garden.pl,pl.assmann.shop###jumptotop
+ alkomaty-sklep.eu,muzyczny.eu,staypoland.com,wieszaki.info###to_top
+ allegro.pl##button[data-analytics-interaction-label="scrollToTop"], button[title="Do góry"]
+ allegro.pl##div[data-box-name="Scroll Top"], div[data-box-name="allegro.navigation.scrollTop"]
+-allpaka.eu,asimexplus.com,eperfumy.pl,influencja.pl,siapre.pl,sklep.druk-pak.com,vivosklep.pl###do_gory
++allpaka.eu,asimexplus.com,eperfumy.pl,influencja.pl,siapre.pl,vivosklep.pl###do_gory
+ alltube.tv##.fa-angle-double-up
+ alter24.pl###page ~ div[id^="anb"]
+ aluprof.eu##.sidebar__link--top
+@@ -340,7 +340,7 @@ elmas.com.pl##.rise-to-top
+ encycolorpedia.pl,fama.org.pl,jakzarabiaconline.blogspot.com,podemski.info###top
+ enel.pl###afario-back-top
+ enetproduction.com##div.vued-custom-scroll_to_top
+-enowiny.pl,getlevel.info,mobileworld24.pl##.mnmd-go-top
++enowiny.pl,mobileworld24.pl##.mnmd-go-top
+ epoqum.io,mettosport.eu,opieka.farm,simplyyourself.online###ast-scroll-top
+ erhem.pl,inwestinfo.pl,lift.pl,maximedia.pl,prawdziweswieta.pl,scie24.pl,wdrodze.pl,yellow.place###up
+ erkado.pl##.skip--top
+diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
+index 9b9d4eb04..07b534b06 100644
+--- a/PPB/uBO_AG/popupy_suplement.txt
++++ b/PPB/uBO_AG/popupy_suplement.txt
+@@ -43,9 +43,9 @@ akademiaversum.pl###newsletter-pp
+ akademiaversum.pl##body.with-overlay:style(overflow: auto !important)
+ aktualnyodpis.pl##iframe[src^="//quic.pl/popups/"]
+ aktualnyodpis.pl,arslege.pl,befado.pl,instagram.com,kler.eu,logitechg.com,nowyobywatel.pl,www.microsoft.com##body[style*="hidden"]:style(overflow: auto !important)
+-akuakcesoria.pl,bedziepieklo.pl,hurtowezakupy.com,media-tech.eu,mulan.pl,opakowania24.eu,pakomat.pl,urwisydwa.sklep.pl,wetro.pl##.swal2-container
+-akuakcesoria.pl,bedziepieklo.pl,hurtowezakupy.com,media-tech.eu,mulan.pl,urwisydwa.sklep.pl,wetro.pl##body[style]:style(padding-right: 0 !important)
+-akuakcesoria.pl,bedziepieklo.pl,hurtowezakupy.com,media-tech.eu,pasmanteria.eu##html.prevent-scroll-desktop:style(overflow: auto !important)
++akuakcesoria.pl,bedziepieklo.pl,media-tech.eu,mulan.pl,opakowania24.eu,pakomat.pl,urwisydwa.sklep.pl,wetro.pl##.swal2-container
++akuakcesoria.pl,bedziepieklo.pl,media-tech.eu,mulan.pl,urwisydwa.sklep.pl,wetro.pl##body[style]:style(padding-right: 0 !important)
++akuakcesoria.pl,bedziepieklo.pl,media-tech.eu,pasmanteria.eu##html.prevent-scroll-desktop:style(overflow: auto !important)
+ alerabat.com,arslege.pl,nowyobywatel.pl##.jquery-modal
+ alerabat.com,mobileclick.pl,sanbetdevelopment.pl##body:style(overflow-y: auto !important)
+ alesoczewki.com,bezokularow.pl,campingshop.pl,dedekor.pl,intershoe.com.pl,nife.pl,pinsola.pl###news_popup, .modal-backdrop
