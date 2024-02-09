@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.13"
+SCRIPT_VERSION = "3.0.14"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -534,11 +534,17 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                             if "##+js" in lineC:
                                                 funcArgs = lineC.split(
                                                     "##+js(")[1].strip().replace(')', '').split(", ")
-                                                for arg in funcArgs:
-                                                    lineC = lineC.replace(
+                                                search_words = re.search(DOMAIN_PAT, lineC)
+                                                domain = search_words.group(1)
+                                                lineC = f"{domain}#%#//scriptlet("
+                                                for i, arg in enumerate(funcArgs):
+                                                    arg = arg.replace(
                                                         arg, f"'{arg}'", 1)
-                                                lineC = lineC.replace(
-                                                    "##+js", "#%#//scriptlet")
+                                                    if i == len(funcArgs) - 1:
+                                                        lineC += f"{arg})"
+                                                    else:
+                                                        lineC += f"{arg}, "
+                                                lineC += "\n"
                                             elif ":remove-attr" or ":remove-class" or "##^" in lineC:
                                                 search_words = re.search(
                                                     DOMAIN_PAT, lineC)
