@@ -3,7 +3,7 @@ FROM python:3-slim
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV SFLB_tag="SFLB-3.0.12"
+ENV SFLB_tag="SFLB-3.0.13"
 ENV SFLB_LOCALES_PATH="/usr/share/locale"
 ENV FOP_tag="FOP-3.32"
 

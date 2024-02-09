@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.12"
+SCRIPT_VERSION = "3.0.13"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -234,7 +234,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 EP_I_PAT = re.compile(r'@exclusionsPath (.*)$')
                 EE_I_PAT = re.compile(r'@exclusionsExt (.*)$')
                 VALID_INSTRUCTIONS_PAT = re.compile(
-                    r'^@((sections|exclusions)(Path|Ext)|(HOSTS|DOMAINS|PH|DNSMASQ|B?NWL)?include)')
+                    r'^@((sections|exclusions)(Path|Ext)|(HOSTS|DOMAINS|PH|DNSMASQ|AG|B?NWL)?include)')
                 INSTRUCTIONS_START_PAT = re.compile(r'^@')
                 for lineT in tf:
                     if not VALID_INSTRUCTIONS_PAT.match(lineT) and INSTRUCTIONS_START_PAT.match(lineT):
@@ -288,6 +288,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                 r"^(! Checksum)|(!#include)|(\[Adblock Plus 2.0\])|(! Dołączenie listy)")
             USELESS_I_PAT = re.compile(
                 r'@(sections|exclusions)(Path|Ext) (.*)$')
+            DOMAIN_PAT = re.compile(
+                r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
 
             for lineF in f_final:
                 if INCLUDE_I_PAT.search(lineF):
@@ -454,7 +456,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                            external_temp.name)
                             section = external_temp.name
 
-                        if re.match(r"(DNSMASQ|HOSTS|DOMAINS|PH|B?NWL)include", instruction):
+                        if re.match(r"(DNSMASQ|HOSTS|DOMAINS|PH|AG|B?NWL)include", instruction):
                             with open(section, "r", encoding='utf-8') as section_content, NamedTemporaryFile(dir=tempDir, delete=False, mode="w", encoding="utf-8") as external_temp_final:
                                 unsortedLinesC = []
                                 for lineC in section_content:
@@ -525,6 +527,76 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                         lineC = re.sub(old, new, lineC)
                                     lineC = re.sub(
                                         r'(?m)^[ \t]*$\n?', '', lineC)
+                                    if instruction == "AGinclude":
+                                        if all(item not in lineC for item in ["##+js", ":remove-attr", ":remove-class", "##^"]) or ":watch-attr" in lineC:
+                                            lineC = ""
+                                        else:
+                                            if "##+js" in lineC:
+                                                funcArgs = lineC.split(
+                                                    "##+js(")[1].strip().replace(')', '').split(", ")
+                                                for arg in funcArgs:
+                                                    lineC = lineC.replace(
+                                                        arg, f"'{arg}'", 1)
+                                                lineC = lineC.replace(
+                                                    "##+js", "#%#//scriptlet")
+                                            elif ":remove-attr" or ":remove-class" or "##^" in lineC:
+                                                search_words = re.search(
+                                                    DOMAIN_PAT, lineC)
+                                                domain = search_words.group(1)
+                                                if not "##^" in lineC:
+                                                    splitted_lineC = search_words.group(
+                                                        3).split(":")
+                                                    selector = splitted_lineC[0]
+                                                    if ":remove-attr" in lineC:
+                                                        r_attribute = splitted_lineC[1].replace(
+                                                            "remove-attr(", "").replace(')', "")
+                                                        lineC = f"{domain}#%#//scriptlet('remove-attr', '{r_attribute}', '{selector}')\n"
+                                                    else:
+                                                        r_class = splitted_lineC[1].replace(
+                                                            "remove-class(", "").replace(')', "")
+                                                        lineC = f"{domain}#%#//scriptlet('remove-class', '{r_class}', '{selector}')\n"
+                                                else:
+                                                    splitted_lineC = search_words.group(
+                                                        3)
+                                                    e_type = ""
+                                                    if re.search('\^(\.|#)', splitted_lineC):
+                                                        if "^." in splitted_lineC:
+                                                            e_type = 'class'
+                                                        if "^#" in splitted_lineC:
+                                                            e_type = 'id'
+                                                        e_name = splitted_lineC.replace(
+                                                            "^.", "").replace("^#", "")
+                                                        lineC = f'{domain}$$[{e_type}="{e_name}"]\n'
+                                                    else:
+                                                        e_name = splitted_lineC.replace(
+                                                            "^", "")
+                                                        lineC = f'{domain}$$'
+                                                        if ":has-text" in e_name:
+                                                            splitted_element = e_name.split(
+                                                                ":")
+                                                            e_name = splitted_element[0]
+                                                            e_text = splitted_element[1].replace(
+                                                                "has-text(", "").replace(")", "")
+                                                            lineC += f'{e_name}[tag-content="{e_text}"]'
+                                                        else:
+                                                            if "." in e_name:
+                                                                splitted_element = e_name.split(
+                                                                    ".")
+                                                                for _class in splitted_element[1:]:
+                                                                    e_name = e_name.replace(
+                                                                        _class, f'[class="{_class}"]', 1)
+                                                                e_name = e_name.replace(
+                                                                    ".", "")
+                                                            elif "#" in e_name:
+                                                                splitted_element = e_name.split(
+                                                                    "#")
+                                                                for _id in splitted_element[1:]:
+                                                                    e_name = e_name.replace(
+                                                                        _id, f'[id="{_id}"]', 1)
+                                                                e_name = e_name.replace(
+                                                                    "#", "")
+                                                            lineC += e_name
+                                                        lineC += '\n'
                                     if lineC:
                                         if instruction == "HOSTSinclude":
                                             if not re.match(r"^0\.0\.0\.0 (www\.|www[0-9]\.|www\-|pl\.|pl[0-9]\.)", lineC):
@@ -540,6 +612,8 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     "include", "").lower()
                                 if instruction == "PHinclude":
                                     cType = "Pi-hole RegEx"
+                                elif instruction == "AGinclude":
+                                    cType = "AdGuard"
                                 for i, sortedLineC in enumerate(natsorted(sorted(set(unsortedLinesC)), alg=ns.IGNORECASE, key=special_chars_first)):
                                     if i == 0:
                                         commentSourceStart = "#@ >>>>>>>> "+external
