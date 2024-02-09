@@ -17,7 +17,7 @@ jobs:
         include:
           - dfile: "SFLB"
             imname: "sflb"
-            version: "3.0.14"
+            version: "3.0.15"
           - dfile: "ED"
             imname: "expired_domains"
             version: "1"
@@ -77,10 +77,10 @@ jobs:
         include:
           - dfile: "KAD"
             imname: "kad"
-            version: "3.0.14"
+            version: "3.0.15"
           - dfile: "RTM"
             imname: "rtm"
-            version: "3.0.14"
+            version: "3.0.15"
     needs: docker_sflb_ed
     steps:
       - name: Check out the repo

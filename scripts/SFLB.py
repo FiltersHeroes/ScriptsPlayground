@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.14"
+SCRIPT_VERSION = "3.0.15"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -289,7 +289,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
             USELESS_I_PAT = re.compile(
                 r'@(sections|exclusions)(Path|Ext) (.*)$')
             DOMAIN_PAT = re.compile(
-                r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
+                r"^([^\/\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
 
             for lineF in f_final:
                 if INCLUDE_I_PAT.search(lineF):
