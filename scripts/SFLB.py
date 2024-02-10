@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.15"
+SCRIPT_VERSION = "3.0.16"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -528,13 +528,12 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                     lineC = re.sub(
                                         r'(?m)^[ \t]*$\n?', '', lineC)
                                     if instruction == "AGinclude":
-                                        if all(item not in lineC for item in ["##+js", ":remove-attr", ":remove-class", "##^"]) or ":watch-attr" in lineC:
-                                            lineC = ""
-                                        else:
+                                        if any(item in lineC for item in ["##+js", ":remove-attr", ":remove-class", "##^"]) and not ":watch-attr" in lineC:
                                             if "##+js" in lineC:
                                                 funcArgs = lineC.split(
                                                     "##+js(")[1].strip().replace(')', '').split(", ")
-                                                search_words = re.search(DOMAIN_PAT, lineC)
+                                                search_words = re.search(
+                                                    DOMAIN_PAT, lineC)
                                                 domain = search_words.group(1)
                                                 lineC = f"{domain}#%#//scriptlet("
                                                 for i, arg in enumerate(funcArgs):
@@ -564,45 +563,43 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                 else:
                                                     splitted_lineC = search_words.group(
                                                         3)
-                                                    e_type = ""
-                                                    if re.search('\^(\.|#)', splitted_lineC):
-                                                        if "^." in splitted_lineC:
-                                                            e_type = 'class'
-                                                        if "^#" in splitted_lineC:
-                                                            e_type = 'id'
-                                                        e_name = splitted_lineC.replace(
-                                                            "^.", "").replace("^#", "")
-                                                        lineC = f'{domain}$$[{e_type}="{e_name}"]\n'
-                                                    else:
-                                                        e_name = splitted_lineC.replace(
-                                                            "^", "")
-                                                        lineC = f'{domain}$$'
-                                                        if ":has-text" in e_name:
-                                                            splitted_element = e_name.split(
-                                                                ":")
-                                                            e_name = splitted_element[0]
-                                                            e_text = splitted_element[1].replace(
-                                                                "has-text(", "").replace(")", "")
-                                                            lineC += f'{e_name}[tag-content="{e_text}"]'
-                                                        else:
-                                                            if "." in e_name:
-                                                                splitted_element = e_name.split(
-                                                                    ".")
-                                                                for _class in splitted_element[1:]:
-                                                                    e_name = e_name.replace(
-                                                                        _class, f'[class="{_class}"]', 1)
-                                                                e_name = e_name.replace(
-                                                                    ".", "")
-                                                            elif "#" in e_name:
-                                                                splitted_element = e_name.split(
-                                                                    "#")
-                                                                for _id in splitted_element[1:]:
-                                                                    e_name = e_name.replace(
-                                                                        _id, f'[id="{_id}"]', 1)
-                                                                e_name = e_name.replace(
-                                                                    "#", "")
-                                                            lineC += e_name
-                                                        lineC += '\n'
+                                                    e_name = splitted_lineC.replace(
+                                                        "^", "")
+                                                    lineC = f'{domain}$$'
+                                                    if ":has-text" in e_name:
+                                                        splitted_element = e_name.split(
+                                                            ":")
+                                                        e_text = splitted_element[1].replace(
+                                                            "has-text(", "").replace(")", "")
+                                                        e_name = e_name.replace(
+                                                            ":", "")
+                                                        e_name = e_name.replace(
+                                                            splitted_element[1], f'[tag-content="{e_text}"]')
+                                                    if "." in e_name:
+                                                        e_name_f = e_name
+                                                        if "[" in e_name:
+                                                            splitted_element = e_name.split("[")[
+                                                                0]
+                                                            e_name_f = splitted_element
+                                                        splitted_element = e_name_f.split(
+                                                            ".")
+                                                        for _class in splitted_element[1:]:
+                                                            e_name = e_name.replace(
+                                                                f'.{_class}', f'[class="{_class}"]', 1)
+                                                    if "#" in e_name:
+                                                        e_name_f = e_name
+                                                        if "[" in e_name:
+                                                            splitted_element = e_name.split("[")[
+                                                                0]
+                                                            e_name_f = splitted_element
+                                                        splitted_element = e_name_f.split(
+                                                            "#")
+                                                        for _id in splitted_element[1:]:
+                                                            e_name = e_name.replace(
+                                                                _id, f'[id="{_id}"]', 1)
+                                                        e_name = e_name.replace(
+                                                            "#", "")
+                                                    lineC += f"{e_name}\n"
                                     if lineC:
                                         if instruction == "HOSTSinclude":
                                             if not re.match(r"^0\.0\.0\.0 (www\.|www[0-9]\.|www\-|pl\.|pl[0-9]\.)", lineC):
