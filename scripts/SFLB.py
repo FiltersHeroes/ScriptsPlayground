@@ -43,7 +43,7 @@ except ImportError:
     FOP = None
 
 # Version number
-SCRIPT_VERSION = "3.0.16"
+SCRIPT_VERSION = "3.0.17"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -596,9 +596,7 @@ def main(pathToFinalLists, forced, saveChangedFN):
                                                             "#")
                                                         for _id in splitted_element[1:]:
                                                             e_name = e_name.replace(
-                                                                _id, f'[id="{_id}"]', 1)
-                                                        e_name = e_name.replace(
-                                                            "#", "")
+                                                                f'#{_id}', f'[id="{_id}"]', 1)
                                                     lineC += f"{e_name}\n"
                                     if lineC:
                                         if instruction == "HOSTSinclude":
