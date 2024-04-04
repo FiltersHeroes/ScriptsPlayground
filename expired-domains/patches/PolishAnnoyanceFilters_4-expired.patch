@@ -1,0 +1,12 @@
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index da99e0eab..7ada7b14b 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1022,7 +1022,6 @@ mp.pl##.box-newsletter-pacjent
+ mpk.poznan.pl##.rnd.module:nth-of-type(4)
+ mr-fix.pl##.six
+ mragowo.pl##div[class*="footer"] > .container > .row[class*="footer"] > div:nth-of-type(4)
+-mrowka24.eu###block_newsletter_footer
+ multiform.pl###mainContact .writeToUs
+ muratorplus.pl##.right > form > button
+ muve.pl##.newsl-box

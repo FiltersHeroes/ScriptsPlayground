@@ -1,0 +1,9 @@
+diff --git a/PPB/popupy_ogolne_sieciowe.txt b/PPB/popupy_ogolne_sieciowe.txt
+index 5501bfae6..3ce32f1e2 100644
+--- a/PPB/popupy_ogolne_sieciowe.txt
++++ b/PPB/popupy_ogolne_sieciowe.txt
+@@ -16,4 +16,3 @@
+ ||s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js
+ ||s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js
+ ||salesmanago.pl/dynamic/*/popups.js
+-||widget.contactleader.pl^$script,third-party

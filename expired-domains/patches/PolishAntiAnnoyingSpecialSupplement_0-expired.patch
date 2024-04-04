@@ -1,0 +1,10 @@
+diff --git a/sections/specyficzne_blokujace.txt b/sections/specyficzne_blokujace.txt
+index 9c76699..24be20b 100644
+--- a/sections/specyficzne_blokujace.txt
++++ b/sections/specyficzne_blokujace.txt
+@@ -1,4 +1,4 @@
+-/feed.png$domain=booklips.pl|cdtracker.co.pl|dzeta.com.pl|marcinmazurek.com.pl
++/feed.png$domain=booklips.pl|dzeta.com.pl|marcinmazurek.com.pl
+ /ico_rss.
+ /images/index_r.png$domain=deblin24.eu|lipsko24.pl|pionki24.pl
+ /layouts/_sources/panel/img/icons/panel_rss.gif$domain=spzaduszniki.pl|superszkolna.pl
