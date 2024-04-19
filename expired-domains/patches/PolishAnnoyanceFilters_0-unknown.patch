@@ -221,7 +221,7 @@ index eca12656b..e69de29bb 100644
 -||tabletowo.pl/wp-content/uploads/2020/06/banner-10-lecie-tabletowo-magazyn.png
 -||ztm.gda.pl/images/MZKZG_przystanek_metropolitalny.jpg$image
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index d142b8b29..c191d7820 100644
+index 2463dc95a..bab0ae5b6 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -1,65 +1,65 @@
@@ -326,7 +326,7 @@ index d142b8b29..c191d7820 100644
  antyweb.pl##header.header ~ div.wrapper > div[data-fetch-key*="PostProxy"] > div:not([id]):not([class]) > div.pb-12 ~ div.pb-12
  apis-sklep.pl##.cursor
  apkmirror.com###bottom-slider.apkm-timed-slider
-@@ -82,70 +82,70 @@ applemobile.pl##.cactus-post-suggestion > .post-suggestion-content
+@@ -82,71 +82,71 @@ applemobile.pl##.cactus-post-suggestion > .post-suggestion-content
  apptoyou.pl##.column.flex.bubble-r-container.floating-group.CustomElement.bubble-element > .clickable-element.row.flex.bubble-r-container.Group.bubble-element
  aprmedia.pl##.et_bloom_header_outer
  apsdata.pl###slide_box
@@ -359,6 +359,7 @@ index d142b8b29..c191d7820 100644
  audio.com.pl##.rightbox__wrapper > .rightbox
 -audioforte.com.pl,master1.pl##.floating-menu
 +audioforte.com.plpl##.floating-menu
+ audiopolis.pl##.modFixedParallaxLike
  audycje.tokfm.pl##.app-top-popup
 -augustow24.pl##.menu_oglo, .sonda
 +augustow24.pl##.menu_oglo .sonda
@@ -428,7 +429,7 @@ index d142b8b29..c191d7820 100644
  biomak.eu###leaselinkSlideButton1
  bissole.pl##.email.mini-contacts[href*="#bottom-bar"]
  bithub.pl##.st-comment
-@@ -161,66 +161,66 @@ blog.siegnijpozdrowie.org##.limk-widget
+@@ -162,66 +162,66 @@ blog.siegnijpozdrowie.org##.limk-widget
  bluecity.pl##.js-loader.loader
  blueskypolska.pl###iai_mraty
  bodyshock.pro##div[id^="___ratingbadge_"]
@@ -520,7 +521,7 @@ index d142b8b29..c191d7820 100644
  czytamyetykiety.pl##.metaslider
  czyztak.pl##.header__patronite
  dailyweb.pl##.promo-bar-box
-@@ -233,34 +233,34 @@ defence24.pl##.header-bottom-link-widget
+@@ -234,34 +234,34 @@ defence24.pl##.header-bottom-link-widget
  dekavit.pl##.dekavit-kids-button
  dekordia.pl##.koszyk.right
  depilconcept.pl##.badge-voucher
@@ -564,7 +565,7 @@ index d142b8b29..c191d7820 100644
  doz.pl###salesmanagoPopupContainer
  doz.pl##.app-redirect
  doz.pl##.bhr-social-proof
-@@ -273,41 +273,41 @@ drogeria-ekologiczna.pl##section.rightbar_wrap:nth-of-type(n+2):nth-of-type(-n+3
+@@ -274,41 +274,41 @@ drogeria-ekologiczna.pl##section.rightbar_wrap:nth-of-type(n+2):nth-of-type(-n+3
  drogerielaboo.pl###panelmojagazetka
  drogerienatura.pl###pb
  drzwipartnerkrakow.pl##.storefront-product-pagination > a
@@ -617,7 +618,7 @@ index d142b8b29..c191d7820 100644
  elle.pl##.prev-next-item
  elnino-parfum.pl##.StickyBar
  elportal.pl##.sticky-newsletter
-@@ -325,52 +325,52 @@ enfamil.pl##li.float-shop
+@@ -326,52 +326,52 @@ enfamil.pl##li.float-shop
  envelo.pl###user-notification
  eobuwie.com.pl##.header-callout
  eobuwie.com.pl##.promotion-widget
@@ -686,7 +687,7 @@ index d142b8b29..c191d7820 100644
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com#?#.cTopicPostArea:-abp-has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -381,7 +381,7 @@ gaia.com.pl###smAddonSizes
+@@ -382,7 +382,7 @@ gaia.com.pl###smAddonSizes
  galeriamorena.pl###nav-aside
  gamerweb.pl###essb-postbar
  gamingsociety.pl##.hshop
@@ -695,7 +696,7 @@ index d142b8b29..c191d7820 100644
  garneczki.pl###barcelona-shortcode-4
  garneczki.pl###barcelona-shortcode-5
  garneczki.pl##.autoplay.slider
-@@ -391,40 +391,40 @@ garneczki.pl##.widget--fixed.js-banner__sticky.filters__item--extend
+@@ -392,40 +392,40 @@ garneczki.pl##.widget--fixed.js-banner__sticky.filters__item--extend
  garneczki.pl##div.sc-gbaner:nth-of-type(2)
  gastro-pol.pl###bar-firma
  gazeta.pl##.redirect
@@ -746,7 +747,7 @@ index d142b8b29..c191d7820 100644
  gorzow24.pl###nasze_serwisy
  gosc.pl##.fixedBottom
  gospodarkamorska.pl##.tb-gmtv
-@@ -432,12 +432,12 @@ gowork.pl##.js-banner-hate-aside
+@@ -433,12 +433,12 @@ gowork.pl##.js-banner-hate-aside
  grafithotel.pl##.newsButton
  grupa.unimet.pl###ht-preloader-wrap
  grupapietrzak.pl##.buyout
@@ -763,7 +764,7 @@ index d142b8b29..c191d7820 100644
  hefra.pl###social-widget-main
  helloangielski.pl###icegram_messages_container
  hellogadzet.pl##.newsletter_sidewidget
-@@ -454,7 +454,7 @@ home.biedronka.pl##.everyday-promo
+@@ -455,7 +455,7 @@ home.biedronka.pl##.everyday-promo
  home.biedronka.pl##.floating-banner
  home.pl###bottom-box
  home.pl###buttonizer-button
@@ -772,7 +773,7 @@ index d142b8b29..c191d7820 100644
  hostgrafia.pl##.side-tab-widget > a[href="jak-dzialamy.html"]
  hoteladler.com##.bookingfixedtop.book-online-button
  hotelbonifacio.pl##.corner-pop-up
-@@ -464,7 +464,7 @@ hrstandard.pl###float-posts-nav
+@@ -465,7 +465,7 @@ hrstandard.pl###float-posts-nav
  hubkolektyw.pl##.panel-boczny
  hurtowniarolnicza.pl##.recruitment
  hushaaabye.pl##.blog-pager-item
@@ -781,7 +782,7 @@ index d142b8b29..c191d7820 100644
  i-ekosystem.pl###wptime-plugin-preloader
  ican.pl###drawer_bar
  iglazura24.pl##.sold-item-popup
-@@ -473,9 +473,9 @@ ilewazy.pl##.calculator-widget
+@@ -474,9 +474,9 @@ ilewazy.pl##.calculator-widget
  iloveradio.pl##.single_bottom_fixed
  independenttrader.pl###limited-account
  industrial.pl##.page-overlay-loader
@@ -793,7 +794,7 @@ index d142b8b29..c191d7820 100644
  infodent24.pl##referal-btn
  infor.pl###prenumerata2018
  inforfk.pl###reka-box-banner-mobile
-@@ -486,33 +486,33 @@ inspro.org.pl##.donate
+@@ -487,33 +487,33 @@ inspro.org.pl##.donate
  instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class*=" "]:-abp-has(div[class*=" "][role="button"]:-abp-contains(Pobierz aplikację))
  instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) > div[class*=" "] > div[class]:not([class*=" "]) > div:not([class]) > div[class]:not([class*=" "]) > div[class*=" "][style*="width:"]:-abp-has(a[href^="/accounts/emailsignup/"])
  instalaton.pl###pd_cs_box
@@ -838,7 +839,7 @@ index d142b8b29..c191d7820 100644
  kastu.pl##.anketa-button-mobile
  kaufland.pl##.o-info-overlay
  kawa.pl###shopify-section-announcement
-@@ -520,51 +520,51 @@ kawaly.tja.pl###div_wysuwany_pomoc
+@@ -521,51 +521,51 @@ kawaly.tja.pl###div_wysuwany_pomoc
  kawro.pl###title
  ketodietetyk.pl##img[src*="/banner_ebook.png"]
  kettei.pl###powrot
@@ -903,7 +904,7 @@ index d142b8b29..c191d7820 100644
  kurkanielotka.pl##.recipe-floating-box
  kuzniazdrowia.pl##.icon_zamow
  kuzniewski.pl###banner_left
-@@ -573,12 +573,12 @@ l24.lt###scr
+@@ -574,12 +574,12 @@ l24.lt###scr
  lajfhaki.pl##.add_hack_box
  lamaglama.pl##.c-side-buttons__tab
  latarki.pl##.floatingdeal
@@ -919,7 +920,7 @@ index d142b8b29..c191d7820 100644
  leki.pl###floating-nextprev
  lento.pl##a[href^="https://www.lento.pl/dodaj-ogloszenie.html"] > img[src]
  lesniow.pl##.socialTabs-tab--pogoda
-@@ -587,11 +587,11 @@ lfspareparts724.pl##.banner-app
+@@ -588,11 +588,11 @@ lfspareparts724.pl##.banner-app
  lg.com##.new-quick-menu
  lideria.pl##.slidingbasket
  lidia.pl##.ceneo
@@ -935,7 +936,7 @@ index d142b8b29..c191d7820 100644
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
  login.ingbank.pl###smart-app-banner-region
-@@ -608,27 +608,27 @@ maciej.je##.related-posts
+@@ -609,27 +609,27 @@ maciej.je##.related-posts
  mall.pl##.flt-bnr
  mamabezrecepty.pl##footer > .tips
  manada.pl##.sidebar-banners
@@ -972,7 +973,7 @@ index d142b8b29..c191d7820 100644
  mediaexpert.pl##.bottomrightbanner.snrs-modal
  mediaexpert.pl##.dynamic-social-proof
  mediarun.com##.jeg_popup_post
-@@ -636,10 +636,10 @@ mediasystem-tdi.pl##.right.ltr.a11y-toolbar
+@@ -637,10 +637,10 @@ mediasystem-tdi.pl##.right.ltr.a11y-toolbar
  medme.pl##.back-button
  medonet.pl#?#.artList li:-abp-has(a[href*="utm_campaign=back_to_onet_bullet"])
  medseven.eu###contactable_inner
@@ -986,7 +987,7 @@ index d142b8b29..c191d7820 100644
  meskiegacie.pl###counter_holder_top.counter_container[style^="position: fixed;"]
  mettosport.eu###wpbs_slider
  mgotuje.pl###ajaxsearchpro2_1
-@@ -649,17 +649,17 @@ miastopoznaj.pl###similarArticle
+@@ -650,17 +650,17 @@ miastopoznaj.pl###similarArticle
  microsoft.com##.epb-container.f-information[class*="alert"]
  miedzyrzec.info###pasekDolny
  miedzyrzec.info##.newsticker
@@ -1011,7 +1012,7 @@ index d142b8b29..c191d7820 100644
  mixmedia.pl###place3_v3
  mmorpg.org.pl#?##__next > header + div > div > div > aside > div:-abp-has(h4:-abp-contains(Ankieta))
  mobileclick.pl##.essb-postbar
-@@ -672,26 +672,26 @@ moja-gazeta.com.pl##.header-advertise
+@@ -673,26 +673,26 @@ moja-gazeta.com.pl##.header-advertise
  mojataxi24.pl##h4#phone:nth-of-type(2) > .wiszacy
  mojebambino.pl##.baner
  mojebambino.pl##.widget-fast-navigation-container
@@ -1045,7 +1046,7 @@ index d142b8b29..c191d7820 100644
  muzykazreklam.pl###see-also
  myapple.pl###announcement
  mydevil.net###promo-code
-@@ -700,17 +700,17 @@ myfitnessplace.pl##.app-ico
+@@ -701,17 +701,17 @@ myfitnessplace.pl##.app-ico
  myspeed.pl###load.ring-loader
  nadmorski24.pl##.popup-see-more
  naekranie.pl###prezentownik
@@ -1067,7 +1068,7 @@ index d142b8b29..c191d7820 100644
  naukajazdy-kowalik.pl##.side-tab-widget > a[href="kierowcy.html"]
  nbi.com.pl###pasek_bottom
  nbportal.pl###show-tools
-@@ -721,35 +721,35 @@ nestbank.pl##.fixed-label
+@@ -722,35 +722,35 @@ nestbank.pl##.fixed-label
  netbiel.pl##.smartlib-pre-loader
  nettg.pl##.side-panel
  netto.pl##.leaflet-sticky-btn
@@ -1114,7 +1115,7 @@ index d142b8b29..c191d7820 100644
  olx.pl##.favourites-bar
  ombre.pl###menu_buttons3 > .bxslider > li:nth-of-type(2)
  omega.om.pl##.right.ecp-button
-@@ -765,37 +765,37 @@ opoczno.eu##.js-toggle-list.button
+@@ -766,37 +766,37 @@ opoczno.eu##.js-toggle-list.button
  oponeo.pl###checkOrderStatus
  orange.pl##.payback-floating-sidebar__trigger
  ostatniatawerna.pl##.wp-post-nav > a > [id]
@@ -1161,7 +1162,7 @@ index d142b8b29..c191d7820 100644
  pl.aliexpress.com##.top-banner-container
  pl.hotels.com##.signin-signup-notification-container
  pl.jooble.org##._3fEpKH
-@@ -807,17 +807,17 @@ plotek.pl##.related_quiz
+@@ -808,17 +808,17 @@ plotek.pl##.related_quiz
  plus.pl##.disney-sg-banner
  pneumat.com.pl###wrapper > .sideButtons-tagCont > .sideButtons-tagWhite
  poczta.interia.pl##.app-promo-plywak
@@ -1183,7 +1184,7 @@ index d142b8b29..c191d7820 100644
  polskicaravaning.pl###\35 3419
  polstor.pl##.tax-free-shopping
  pomocedlaseniora.pl##.justreview-badge
-@@ -828,11 +828,11 @@ porta.com.pl###popup-questionnaire
+@@ -829,11 +829,11 @@ porta.com.pl###popup-questionnaire
  portal.librus.pl#?##synergiaLogin + div[class]:-abp-has(picture > source[srcset] ~ img[src])
  portalhodowcy.pl##.kac-sm-panel > ul:first-of-type
  portalmorski.pl###clause-info-mobile
@@ -1197,7 +1198,7 @@ index d142b8b29..c191d7820 100644
  profitroom.pl##.js-info-box.info-box-hld
  programyzadarmo.net.pl##.notice--dark.js-notice.notice
  promocjomat.pl##.mkdf-blog-single-navigation
-@@ -842,10 +842,10 @@ przeglad-finansowy.pl###mobile_sticker-sticky-wrapper
+@@ -843,10 +843,10 @@ przeglad-finansowy.pl###mobile_sticker-sticky-wrapper
  przepisy.pl###recentlySeenWidget
  przewodnikmp.pl##.slide-dock-on.slide-dock.widget
  pswbp.pl###accessibility-links
@@ -1211,7 +1212,7 @@ index d142b8b29..c191d7820 100644
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
  pzw.org.pl###body_google_play
-@@ -857,31 +857,31 @@ radiozet.pl##div[class*="_article_"] p ~ div[class*="poll"]
+@@ -858,31 +858,31 @@ radiozet.pl##div[class*="_article_"] p ~ div[class*="poll"]
  radomsko.pl###media > ul > li > .tooltipMedia
  raiffeisenpolbank.com###pomocne_menu > ul > li:nth-child(-n+2)
  rajbud.biz##.psb
@@ -1251,7 +1252,7 @@ index d142b8b29..c191d7820 100644
  rynekpierwotny.pl#?#.profile-tooltip:-abp-contains(ulubionych ofert)
  salon24.pl##.article-bookstore
  saluti.pl###delivery-costs
-@@ -891,7 +891,7 @@ scroll.morele.net#?#article[id^="post"].post .wp-block-image:-abp-has(figcaption
+@@ -892,7 +892,7 @@ scroll.morele.net#?#article[id^="post"].post .wp-block-image:-abp-has(figcaption
  segafredo.pl##.rstboxes .eb-popup.rstbox
  sekurak.pl##.callout-box
  selkar.pl##.my-open.side-banner
@@ -1260,7 +1261,7 @@ index d142b8b29..c191d7820 100644
  send.firefox.com##send-promo
  seniorka-z-plecakiem.pl###preloader-container
  serialomaniak.pl##.join-us
-@@ -899,7 +899,7 @@ servecom.pl###sliders_right
+@@ -900,7 +900,7 @@ servecom.pl###sliders_right
  serwiswloclawek.pl##.et-visible.et_pb_side_nav
  sfd.pl##.search-cloud
  sfd.pl##.wrapper-banner.wrapper a[href*="sklep.sfd.pl/"]
@@ -1269,7 +1270,7 @@ index d142b8b29..c191d7820 100644
  sferis.pl###TopBarScroll
  shareinfo.pl###install-button
  shipgratis.eu###soutez-wrapper
-@@ -910,10 +910,10 @@ siglo.pl##.lws-widget-container
+@@ -911,10 +911,10 @@ siglo.pl##.lws-widget-container
  silesion.pl##.art-tripwire-big
  skarbyroztocza.com##.resetcss.box
  skladaniekomputera.pl###dgd_scrollbox-10511
@@ -1282,7 +1283,7 @@ index d142b8b29..c191d7820 100644
  sklep.farmona.pl##.tabs > section.product_link_nav
  sklep.pakrol.pl##.suggest-slider
  sklep.polskieradio.pl###tm-widget-lemur
-@@ -926,7 +926,7 @@ sky-shop.pl###promo-banner
+@@ -927,7 +927,7 @@ sky-shop.pl###promo-banner
  sky-shop.pl##.guide-popup.webinar_widget
  sky-shop.pl##.numberOfShopsCreatedToday
  slippersfamily.com###widget_shop8
@@ -1291,7 +1292,7 @@ index d142b8b29..c191d7820 100644
  slupsk.pl##.alertMessage
  sluzby-ratownicze.pl###af-preloader > #loader-wrapper
  sluzby-ur.pl##.gotologowanie
-@@ -942,21 +942,21 @@ spidersweb.pl##.havetoread
+@@ -943,21 +943,21 @@ spidersweb.pl##.havetoread
  spidersweb.pl##.main--post.main > div + div > .product-placement
  spidersweb.pl##div.loading-title
  spolem.olawa.pl##.elementor-widget-icon[alt*="Aktualne oferty pracy"]
@@ -1319,7 +1320,7 @@ index d142b8b29..c191d7820 100644
  styl.pl##.mobile-topbar-container
  stylowydruk.pl##.kac-sm-mail
  suchylas.pl###jPanel_619
-@@ -972,7 +972,7 @@ swiatrolnika.info##.sonda .mod-sppoll
+@@ -973,7 +973,7 @@ swiatrolnika.info##.sonda .mod-sppoll
  swiatrolnika.info##.sonda > .akt
  sympatia.onet.pl###iconsBar
  syngenta.pl##.pane-menu-menu-sticky-menu
@@ -1328,7 +1329,7 @@ index d142b8b29..c191d7820 100644
  szkolnastrona.pl##.btn-fav
  sznyt.pl##.recommended-articles
  szpitalepomorskie.eu###loftloader-wrapper
-@@ -980,13 +980,13 @@ tablety.pl##p > .wp-embedded-content
+@@ -981,13 +981,13 @@ tablety.pl##p > .wp-embedded-content
  tamaj.pl###allwidget
  taniefototapety.eu##.opinions_badge
  tanienurkowanie.pl##.mf-notification-iframe
@@ -1344,7 +1345,7 @@ index d142b8b29..c191d7820 100644
  techno-senior.com##.subscribe-button-1.subscribe-wrap.slide-in-box
  technologiczna.pl##.td-main-sidebar
  techpedia.pl##.border_header2
-@@ -1009,7 +1009,7 @@ transfering.pl##.ramka_przeczytaj_rowniez_container
+@@ -1010,7 +1010,7 @@ transfering.pl##.ramka_przeczytaj_rowniez_container
  trojmiasto.pl##.AnkietaNews
  trumpeters.pl###banner_div_empty
  tube.ad##.nav
@@ -1353,7 +1354,7 @@ index d142b8b29..c191d7820 100644
  tulodz.pl##.page__right__box--sonda
  tuwiazowna.pl##.belka
  tvdzierzgon.pl##.offbox-articles
-@@ -1018,16 +1018,16 @@ tvn.pl##.detail-next
+@@ -1019,16 +1019,16 @@ tvn.pl##.detail-next
  tvokazje.pl##.call-popup-newslater
  twitch.tv#?##twilight-sticky-footer-root:-abp-contains(Zarejestruj się)
  twitter.com#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
@@ -1374,7 +1375,7 @@ index d142b8b29..c191d7820 100644
  veganbanda.pl##.rcps-next-prev
  vibez.pl##a[class][title*=" "]:not([href]) > svg[aria-labelledby="drop down arrow"]
  vice.com##.up-next
-@@ -1041,13 +1041,13 @@ virustotal.com##span[slot="header"] > div + a[href^="https://developers.virustot
+@@ -1042,13 +1042,13 @@ virustotal.com##span[slot="header"] > div + a[href^="https://developers.virustot
  vod.tvp.pl###plywaczek
  vox.pl###fiszka
  vox.pl##.nearplace-frame
@@ -1390,7 +1391,7 @@ index d142b8b29..c191d7820 100644
  wartapoznan.pl##.pko-side-widget
  wasserman.eu##.jss372
  waze.com##.wz-downloadbar
-@@ -1074,23 +1074,23 @@ wronki.pl##.mVote
+@@ -1075,24 +1075,24 @@ wronki.pl##.mVote
  wsse-poznan.pl###pwebbox216_toggler
  www.gazeta.pl##div[data-alias="weekend"]
  www.goldenline.pl##.fixed-modal
@@ -1418,12 +1419,14 @@ index d142b8b29..c191d7820 100644
  xn--usugi24-ojb.pl###dodaj_ogloszenie_tab
 -youtube-nocookie.com,youtube.com##.ytp-ce-element
 -youtube-nocookie.com,youtube.com##.ytp-pause-overlay, .show-video-thumbnail-button, #rvid
+-youtube.com#?#tp-yt-paper-dialog:-abp-has(yt-mealbar-promo-renderer:-abp-contains(/Odblokuj bonusy specjalne|Przedstawiamy Sample|Zacznij wspierać ten kanał|Szukasz więcej funkcji muzycznych/))
 +youtube-nocookie.comcom##.ytp-ce-element
 +youtube-nocookie.comcom##.ytp-pause-overlay .show-video-thumbnail-button #rvid
- youtube.com#?#tp-yt-paper-dialog:-abp-has(yt-mealbar-promo-renderer:-abp-contains(Odblokuj bonusy specjalne))
- youtube.com#?#tp-yt-paper-dialog:-abp-has(yt-mealbar-promo-renderer:-abp-contains(Przedstawiamy Sample))
- youtube.com#?#tp-yt-paper-dialog:-abp-has(yt-mealbar-promo-renderer:-abp-contains(Zacznij wspierać ten kanał))
-@@ -1106,9 +1106,9 @@ zdrowyportal.org##.floatBottom
++youtube.com#?#tp-yt-paper-dialog:-abp-has(yt-mealbar-promo-renderer:-abp-contains(/Odblokuj bonusy specjalnePrzedstawiamy SampleZacznij wspierać ten kanałSzukasz więcej funkcji muzycznych/))
+ yves-rocher.pl##.layout-banner__top.layout-banner
+ z-hotel.com###repuso_floating
+ zadowolenie.pl##.b-bragLabel
+@@ -1105,9 +1105,9 @@ zdrowyportal.org##.floatBottom
  zeberka.pl###gallery-widget
  zenox.pl##.toast-container.toast-bottom-right
  zimowynarodowy.pl##.ticket
@@ -1539,7 +1542,7 @@ index 80eb6beea..778e72c10 100644
 +/js/snowfall.min.js$scriptdomain=sklep.delia.pl
 +/wp-content/plugins/wp-snow-effect/public/js/jsnow.js$scriptdomain=www.klimacold.com.pl
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 3b1406972..df6f3e801 100644
+index f6e7f1bef..d5a09089e 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -1,39 +1,39 @@
@@ -1680,7 +1683,7 @@ index 3b1406972..df6f3e801 100644
  architektura.info###PopupSignupForm_0
  archiup.com##footer#footer.footer > div:first-child > div > div > div:nth-child(4) > div:nth-child(2)
  ardant.pl##.Newsletter_footer
-@@ -125,16 +125,16 @@ astoreo.pl###newsletterFormgRecaptcha
+@@ -125,9 +125,9 @@ astoreo.pl###newsletterFormgRecaptcha
  astratex.pl###MailNewsForm
  atakto.pl##.sidebar-newsletter-wrapper
  atlastours.pl##div[style*="newsletter.png"]
@@ -1692,15 +1695,16 @@ index 3b1406972..df6f3e801 100644
  atriumsystem.eu##.box-newsletter.box
  attipas.pl##div.col-sm-6.col-md-3:nth-of-type(4) > .widget
  auchan.pl##a[href="/newsletter/ref/box"]
- auchanhetmanska.pl##.o-Footer-colNews > :nth-child(-n+2)
+@@ -135,7 +135,7 @@ auchanhetmanska.pl##.o-Footer-colNews > :nth-child(-n+2)
  auchanhetmanska.pl##div[class*="trends" i] center div[style*="border"]
  audio.com.pl##.sticky-newsletter
+ audiopolis.pl###mod_Newsletter
 -audytel.pl,eko-ue.pl##.fixed-newsletter
 +audytel.plpl##.fixed-newsletter
  australiangoldshop.pl###formNewsletterFooter > div:nth-child(3)
  austria.info##.sonata\.block\.service\.newsletter.u-section
  autodoc.pl##.subscribe_us
-@@ -145,21 +145,21 @@ autopart.pl##.footer-top .form-cover
+@@ -146,21 +146,21 @@ autopart.pl##.footer-top .form-cover
  ava-kosmetyki.pl##footer .row > .py--gutter:first-child
  avans.pl##.b-main_newsletter
  avaro.pl##.smsapi-sidetitle
@@ -1727,7 +1731,7 @@ index 3b1406972..df6f3e801 100644
  bartekwpodrozy.pl##.elementor-element-67c43fd
  bartoszkrawczykdemczuk.pl###tve_editor
  basenymineralne.pl##.foo-box-mid
-@@ -167,11 +167,11 @@ baseuspolska.pl##.newsletter-home
+@@ -168,11 +168,11 @@ baseuspolska.pl##.newsletter-home
  bass-sklep.pl###box-5
  batorygdynia.com.pl##footer .menu_bottom1.row > .a_right
  bbhomeonline.pl##.footer_links_newsletter
@@ -1741,7 +1745,7 @@ index 3b1406972..df6f3e801 100644
  beincrypto.pl##.footer-subscribe-form
  bellemaison.pl##.em-newsletter
  belmeb.pl##.newsletter_content
-@@ -181,10 +181,10 @@ bestbody.com.pl###footer-top
+@@ -182,10 +182,10 @@ bestbody.com.pl###footer-top
  bestcena.pl##div[class^="newsletter-box"]
  bestprezenty.pl###snippet-newsletter-newsletter
  bezgluten.pl###footer > div:first-of-type > div:first-of-type
@@ -1754,7 +1758,7 @@ index 3b1406972..df6f3e801 100644
  biblioteka.gliwice.pl###fm_form_2 > .form_container > .freshmail_form_2.form_subscribe
  biblioteki.org##.sidebar > form
  biedronka.pl##.ico-zapisz-newslletter
-@@ -193,43 +193,43 @@ biegambolubie.com.pl##.cp-info-bar-wrapper
+@@ -194,43 +194,43 @@ biegambolubie.com.pl##.cp-info-bar-wrapper
  bierhalle.pl###Mod89
  bigstar.pl##.ma-home-newsletter
  bigstar.pl##footer > section ma-accordion-item:nth-of-type(4)
@@ -1815,7 +1819,7 @@ index 3b1406972..df6f3e801 100644
  bonvoyage.pl##.box_newsletter
  booking.com##.emk_footer_update
  booking.com##.newsletter_subscribe
-@@ -239,37 +239,37 @@ born86.pl##.nadstopa2
+@@ -240,37 +240,37 @@ born86.pl##.nadstopa2
  borniak.pl##.mgz-element-newsletter_form
  bosch-professional.com##.m-newsletter_signup-a
  braclowiecka.pl##div.widget:nth-of-type(3)
@@ -1863,7 +1867,7 @@ index 3b1406972..df6f3e801 100644
  cashless.pl###footer footer > div > div:nth-child(5)
  cashless.pl#?#header ~ div.container > div:-abp-has(> h2 ~ div.text-newsletter)
  castorama.pl###newsletterLabel
-@@ -278,7 +278,7 @@ cba.pl##.links > div > div:nth-of-type(4)
+@@ -279,7 +279,7 @@ cba.pl##.links > div > div:nth-of-type(4)
  ccpartners.pl##.nl
  cebit.pl##a[href="http://net.cebit.pl/newsletter/"]
  centos.com.pl##form:first-of-type
@@ -1872,7 +1876,7 @@ index 3b1406972..df6f3e801 100644
  centrum-terapii.pl###sml_subscribe_widget
  centrumdialogu.com##.clearfix.bd-no-margins.hidden-xs.bd-layoutbox-9
  centrumhandlowerobi.pl##.footer-container div.col-xxs:nth-of-type(4)
-@@ -290,10 +290,10 @@ centrumxp.pl##.foot-nav__right
+@@ -291,10 +291,10 @@ centrumxp.pl##.foot-nav__right
  cersanit.com.pl###footer-page .js-medium-col-1.medium-4.small-6.columns
  cezal.lublin.pl###footgroup3
  cezar.eu##.container > div.col50.kolumna:nth-of-type(2)
@@ -1885,7 +1889,7 @@ index 3b1406972..df6f3e801 100644
  chcemybycrodzicami.pl##.single-post-newsletter-wrap
  checiny.pl###div_newsletter
  chillglobal.pl###tmpl-content-sortable_1196
-@@ -306,7 +306,7 @@ cholewinski.com##.cho-subscribe
+@@ -307,7 +307,7 @@ cholewinski.com##.cho-subscribe
  ciara.pl##.col-md-4.col-sm-12.col-xs-12.footer-widgets-area.footer-widgets-area-4
  ciekawostkihistoryczne.pl##.footer-fixed
  citroen.pl##.column_50.columns:first-of-type
@@ -1894,7 +1898,7 @@ index 3b1406972..df6f3e801 100644
  ckmuza.eu###wysija-3
  ckr.pl##.sliding-newsletter
  ckzamek.pl##.footer__newsletter-btn
-@@ -316,14 +316,14 @@ clevo-computer.com##.column--newsletter
+@@ -317,14 +317,14 @@ clevo-computer.com##.column--newsletter
  clinic4car.pl###add_to_newslettter_form
  clinic4car.pl##footer .row > div:first-child
  cobi.pl##.block-DefaultSubskrypcja
@@ -1913,7 +1917,7 @@ index 3b1406972..df6f3e801 100644
  confero.pl##.confero_newsletter_form
  consumer.huawei.com##.title + .subscribe
  controlling.info.pl##.newletter
-@@ -334,30 +334,30 @@ cottonina.pl##.in-viewport.t-alt.relative
+@@ -335,30 +335,30 @@ cottonina.pl##.in-viewport.t-alt.relative
  cozaile.pl##.c-guide-newsletter
  crocs.pl##.footer-email-signup
  crolove.pl##div.footer-container .widget_mc4wp_form_widget.widget
@@ -1956,7 +1960,7 @@ index 3b1406972..df6f3e801 100644
  dadelo.pl##.col-xs-1.col-s-1.col-md-2.col-xl-4:nth-of-type(4) > .item
  daemon-tools.cc###send-mail
  dagmara.pl###links_footer_3
-@@ -365,32 +365,32 @@ dajar.pl##div.css-770vd2:nth-of-type(12)
+@@ -366,32 +366,32 @@ dajar.pl##div.css-770vd2:nth-of-type(12)
  danko.pl##.nl-holder
  darymex.pl##.wce_footerinfo
  deccoria.pl##.dc-action-regiser-newsletter
@@ -1998,7 +2002,7 @@ index 3b1406972..df6f3e801 100644
  direct-sender.com###section-8 > .container > .row > div.col-lg-6:first-of-type
  dji-ars.pl###newsletter-bottom-banner
  dlabystrzakow.pl##.footer-form-newsletter
-@@ -410,14 +410,14 @@ domar.pl##.footer-newsletter__section
+@@ -411,14 +411,14 @@ domar.pl##.footer-newsletter__section
  domena.pl##.section-newsletter-front div[class*="green"]
  dominospizza.pl##.m-Newsletter__formContainer
  domisad.pl###wrap-newsletter
@@ -2017,7 +2021,7 @@ index 3b1406972..df6f3e801 100644
  dorotafilipiuk.pl##.footer > .container > div.row:first-child > div:nth-child(2)
  douglas.pl##.newsletter-confirmation__wrapper
  douglas.pl##.rd__footer__block--newsletter
-@@ -431,26 +431,26 @@ drewno.pl###nl_sticky
+@@ -432,26 +432,26 @@ drewno.pl###nl_sticky
  drmaxdrogeria.pl##.subscription-wrapper
  drogeriausa.pl###newsletter_el
  drogerienatura.pl##img[src*="/subscribe/bg.jpg"]
@@ -2049,7 +2053,7 @@ index 3b1406972..df6f3e801 100644
  e-korepetycje.net##.offer-sidebar-banner
  e-kwiaty.pl##.mnewsletter
  e-militaria.pl##.st_news_letter
-@@ -459,13 +459,13 @@ e-pies.eu###m_footer_newsletter#mc-embedded-subscribe-form
+@@ -460,13 +460,13 @@ e-pies.eu###m_footer_newsletter#mc-embedded-subscribe-form
  e-prawnik.pl##.boxA2
  e-sas.pl###fbbok
  e-security.com.pl###footerTopPasek
@@ -2066,7 +2070,7 @@ index 3b1406972..df6f3e801 100644
  ecr.pl###sidebar > #mc_signup
  ecr.pl###sidebar > h3:nth-of-type(2)
  ecr.pl##.footer-content > div.tt-column.one_third:nth-of-type(2)
-@@ -473,22 +473,22 @@ edbak.com##div.columns.large-6.medium-6
+@@ -474,22 +474,22 @@ edbak.com##div.columns.large-6.medium-6
  edgecam.pl##.Columns3_4 > .custompod.FeaturePod > .pod-box
  edgecam.pl##.Columns3_4 > .custompod.FeaturePod > p
  edrone.me###newsletter-form-bottom
@@ -2098,7 +2102,7 @@ index 3b1406972..df6f3e801 100644
  eldomagd.eu##.pro-footer-newsletter
  elektroguru.com##.footer-main__box--newsletter
  elektromeks.pl##.newsletter_stopka
-@@ -496,26 +496,26 @@ elektronik-service.com.pl###form_newsletter_down
+@@ -497,26 +497,26 @@ elektronik-service.com.pl###form_newsletter_down
  elektroniksc.com.pl##.tpl-newsletter-form-widget
  elektrostymulatory.net###newsletter-fm
  elektrykapradnietyka.com##a[href="http://elektrykapradnietyka.com/newsletter/"]
@@ -2132,7 +2136,7 @@ index 3b1406972..df6f3e801 100644
  eskk.pl###footer-up > .container > div.col-xs-12.col-md-4:nth-of-type(3) > h4
  eskk.pl###main-container-newsletter
  esklep.agroas.pl##.newsletter-homepage-ui
-@@ -536,12 +536,12 @@ etsy.com##.not-signed-in.subscribe-form
+@@ -537,12 +537,12 @@ etsy.com##.not-signed-in.subscribe-form
  etuo.pl##.footer__col--join-newsletter
  etuo.pl##section.sec--home.sec li.list__item > a[href="https://www.etuo.pl/newsletter"]
  eu.dlink.com##.newsletter-sign-up__container.container
@@ -2147,7 +2151,7 @@ index 3b1406972..df6f3e801 100644
  eveline.pl##.subscribe-to-news
  evenea.pl###subscribe-section
  evertiq.pl##.register.index.news
-@@ -550,8 +550,8 @@ evertourist.com##div.col-md-6.col-xs-12
+@@ -551,8 +551,8 @@ evertourist.com##div.col-md-6.col-xs-12
  ewakacje.pl##footer div.classPageGenerator_default_container:nth-of-type(2) > .classPageGenerator_default_bottom_box1
  expondo.pl##.footer--newsletter-wrapper
  express.pl##.footerBanner_el-newsletter
@@ -2158,7 +2162,7 @@ index 3b1406972..df6f3e801 100644
  fabrykazabawek.eu##.col-md-3.trzecia
  faceandlook.pl##.newsletter-right-block
  faceoffice.pl##div.col-md-12.col-sm-24:nth-of-type(2) > .row > div.col-md-12.col-sm-12:nth-of-type(2)
-@@ -560,11 +560,11 @@ fajne.life##.post div[class*="form"][data-success_action_details]
+@@ -561,11 +561,11 @@ fajne.life##.post div[class*="form"][data-success_action_details]
  fajowo.eu###footer.row > div[class*="col"]:first-of-type
  faktyozywnosci.pl##.column-first.vmag-footer-widget
  fanbook.store##.abs-newsletter-panel
@@ -2175,7 +2179,7 @@ index 3b1406972..df6f3e801 100644
  felixcom.net##.ftop > .container > .right
  feniks.wroc.pl##.newsletter-wr
  festool.pl##.newsletter__footer
-@@ -586,15 +586,15 @@ foodsbyann.com##.custom_footer__box--left.custom_footer__box
+@@ -587,15 +587,15 @@ foodsbyann.com##.custom_footer__box--left.custom_footer__box
  foodyas.com##footer > div > .row > div.col-lg-4:nth-of-type(3)
  forbot.pl###powiadomieniaMailowe
  foreo.com###block-subscriptionblock
@@ -2194,7 +2198,7 @@ index 3b1406972..df6f3e801 100644
  franczyzainfo.pl##footer > .container > div:first-child > .footer-box > .footer-form
  frenchtouchlabellevie.pl##.newsletter-mail
  fresh-market.pl###kolp > .ramka.box_p
-@@ -606,7 +606,7 @@ fundacjajoannyradziwill.pl###custom_html-4 .custom-html-widget.textwidget > h4.w
+@@ -607,7 +607,7 @@ fundacjajoannyradziwill.pl###custom_html-4 .custom-html-widget.textwidget > h4.w
  fundacjajoannyradziwill.pl###custom_html-4 a[href="//fundacjajoannyradziwill.pl/#newsletter"]
  fundacjawolnosci.org###email-subscription
  funnycase.pl###footer-top-newsletter
@@ -2203,7 +2207,7 @@ index 3b1406972..df6f3e801 100644
  gajusz.org.pl###bg-koperta
  galeria-warminska.pl##.nwsltr.box
  galeriakatowicka.eu##.footer-cta__newsletter
-@@ -614,37 +614,37 @@ galeriakatowicka.eu##.metka
+@@ -615,37 +615,37 @@ galeriakatowicka.eu##.metka
  galeriakazimierz.pl###newsletterSignUp
  galerialucznik.pl###top-footer div.lucznik-top-footer-element:first-of-type
  galeriapolnocna.pl##.footer-right > .newsletter-top
@@ -2252,7 +2256,7 @@ index 3b1406972..df6f3e801 100644
  gomobi.pl##.zapiszsiedonewslettera
  goodram.com##footer > div > .row > .col:last-child
  gorlice.pl##.sdbar-newsletter-cont
-@@ -666,37 +666,37 @@ greenfelix.eu##.footer-container div[class]:nth-of-type(4)
+@@ -667,37 +667,37 @@ greenfelix.eu##.footer-container div[class]:nth-of-type(4)
  grene.pl###pollSlider-button
  grillmix.pl##.col-sm-3:nth-of-type(5)
  grobonet.com##.footer-right-site form
@@ -2300,7 +2304,7 @@ index 3b1406972..df6f3e801 100644
  hotelkrynica.eu##.module-footer-newsletter
  hotmed.pl###tm-bottom-c > div:nth-of-type(3) > .uk-panel
  housebrand.com##.containerNl
-@@ -706,22 +706,22 @@ humint.pl##.widget_custom_html.widget-footer.widget-default.widget.widget_text
+@@ -707,22 +707,22 @@ humint.pl##.widget_custom_html.widget-footer.widget-default.widget.widget_text
  hurtownia-format.pl##.footer.row > .col-md-4
  hurtownia-spozywcza.pl###accordion_footer > div.list-group.foot-group:nth-of-type(4)
  hurtowniabartel.pl###dor_custom_newsletter_block
@@ -2330,7 +2334,7 @@ index 3b1406972..df6f3e801 100644
  inpostpay.pl##.newsletterBar
  insert.com.pl##li:nth-of-type(2) > .info-channel
  instalki.pl###Mod286 > div > div > div
-@@ -729,7 +729,7 @@ instytutoka.pl##.Footer__nav > div > div:last-child
+@@ -730,7 +730,7 @@ instytutoka.pl##.Footer__nav > div > div:last-child
  interaktywnie.com###rightContainer > div:nth-of-type(3)
  interaktywnie.com###wrapper > .grid_5 > div.categoryBox:nth-of-type(5)
  interaktywnie.com##.all-demo > a[href="https://interaktywnie.com/rejestracja"]
@@ -2339,7 +2343,7 @@ index 3b1406972..df6f3e801 100644
  intexpc.pl##.newsletter-form-wrapper
  intimissimi.com##.border-right.footer-box.align-center-middle.grid-x.large-5.cell
  inzynier-medyczny.pl###sidebar #fm_form_1
-@@ -745,7 +745,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
+@@ -746,7 +746,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
  izba-lekarska.pl##.add-to-newsletter-button
  izigsm.pl###footer > .footMenu > .color.columnBox
  jackjones.com##.js-customer-club__signup
@@ -2348,7 +2352,7 @@ index 3b1406972..df6f3e801 100644
  jagodnik.pl##.td_uid_52_5f019c1f4f05b_rand.vc_widget_sidebar.td_block_wrap.wpb_wrapper
  jagodnik.pl##.textwidget
  jagodnik.pl##.widget_text > .block-title
-@@ -754,19 +754,19 @@ jak.tv##.nav-newsletter
+@@ -755,19 +755,19 @@ jak.tv##.nav-newsletter
  jakiwniosek.pl##.footer > div > div > div:first-child > :nth-last-child(n+2):nth-last-child(-n+4)
  jakrobicmarketing.pl###\31 -2
  jaroslawiak.pl###nwslBoxCnt
@@ -2374,7 +2378,7 @@ index 3b1406972..df6f3e801 100644
  kam-sport.pl##footer div.col-sm-4.vc_column_container.wpb_column.nm_column:nth-of-type(2) > .vc_column-inner
  kappahl.com###news-footer
  karakter.pl##.newsletter-promo
-@@ -777,13 +777,13 @@ karpiowy.pl##.newsletter-group > .container
+@@ -778,13 +778,13 @@ karpiowy.pl##.newsletter-group > .container
  kasastefczyka.pl###InteliwiseSaaSModule_win_wrapper
  katalogmarzen.pl##.bottom-box.content-box > .container > .row > div:nth-of-type(2)
  katowice24.info##.top-footer > div.col-md-3.col-sm-12:nth-of-type(3)
@@ -2390,7 +2394,7 @@ index 3b1406972..df6f3e801 100644
  kidsb2b.pl##div.footer-box:nth-of-type(3)
  kierunekspozywczy.pl###sb-newsletter
  kim24.pl###fboxNewsletter
-@@ -793,7 +793,7 @@ kingston.com##.s-footer__email
+@@ -794,7 +794,7 @@ kingston.com##.s-footer__email
  kiosk.ruch.com.pl##.footer-section--newsletter
  kioskpolis.pl##footer section div form.form[action*="freshmail"]
  klasycznebuty.pl###myfooter div.f-grid-4:nth-of-type(2) > h3:nth-of-type(2)
@@ -2399,7 +2403,7 @@ index 3b1406972..df6f3e801 100644
  klinikaagd.pl##.stoka_newsletter .stoka_newsletter_btn
  klinikaagd.pl##.stoka_newsletter > div:nth-child(-n+3)
  klinikamiracki.pl##.km-newsletter
-@@ -823,7 +823,7 @@ krainazabawy.pl###footer .col-md-3
+@@ -824,7 +824,7 @@ krainazabawy.pl###footer .col-md-3
  krasiczyn.com.pl##.side_newsletter
  kreatorium.com###nsl
  kross.eu##.is-newsletter.c-group_row
@@ -2408,7 +2412,7 @@ index 3b1406972..df6f3e801 100644
  krzywydomek.info###main > .row2.col1
  ks.pl###nwsltr.extnewsletter
  ks.pl##a[href*="#nwsltr"]
-@@ -838,7 +838,7 @@ kulinarne.info##.form-newsletter
+@@ -839,7 +839,7 @@ kulinarne.info##.form-newsletter
  kulturalnysklep.pl##.b-banner-newsletter
  kupbilecik.pl##.blinkGray.boxTopInfo
  kupiec.pl###vnlab-footer-before
@@ -2417,7 +2421,7 @@ index 3b1406972..df6f3e801 100644
  kurasinski.com##.newsletter-link
  kurencja.com##.page-newsletter
  kurierhistoryczny.pl##div.newsletter__col:nth-of-type(6)
-@@ -856,10 +856,10 @@ lancut4u.pl##.lsvr-mailchimp-subscribe
+@@ -857,10 +857,10 @@ lancut4u.pl##.lsvr-mailchimp-subscribe
  languagetool.org###newsletter_reg
  laptopypoznan.pl##.ps-spotlight5
  laroche-posay.pl##.ctn_newsletter
@@ -2430,7 +2434,7 @@ index 3b1406972..df6f3e801 100644
  lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
  lebork24.info###newsletterAdd
  lechia.pl##div.foot-cols.row:nth-of-type(2) > div.col-item:nth-of-type(3)
-@@ -875,36 +875,36 @@ libra.pl##.footer-bg #block-12
+@@ -876,36 +876,36 @@ libra.pl##.footer-bg #block-12
  lideria.pl###box_newsletter_text_books
  liderpojezierza.pl##div.projekt65spot:nth-of-type(2) > .clear.container > .row > .col-md-12 > div.module:first-of-type
  lidl-sklep.pl###footer-newsletter-content
@@ -2477,7 +2481,7 @@ index 3b1406972..df6f3e801 100644
  makita.sklep.pl##.ModulNewsletterDol
  mam-serce.org##div.uk-section.uk-section-default:nth-of-type(10)
  mamaplus.pl###mc_embed_signup
-@@ -923,41 +923,41 @@ manta.com.pl##.col-md-6.news_right
+@@ -924,41 +924,41 @@ manta.com.pl##.col-md-6.news_right
  marbo-sport.pl###top_newsletter
  marcoshoes.eu##.footer_newsletter_form
  marketbio.pl##.item-newsletter.item
@@ -2530,7 +2534,7 @@ index 3b1406972..df6f3e801 100644
  mentel.com.pl##.news_link2
  mentel.com.pl##.news_link
  meritum.gda.pl##.w234.fleft:nth-of-type(6)
-@@ -970,17 +970,17 @@ mi.com##.site-footer__connect
+@@ -971,17 +971,17 @@ mi.com##.site-footer__connect
  mi.com##.span12.customer-relationship
  miastodzieci.pl##.pull-left > a[href="/zapisz"]
  midar.net.pl##.pomaranczowy.boks:nth-of-type(4)
@@ -2553,7 +2557,7 @@ index 3b1406972..df6f3e801 100644
  mlodytechnik.pl##[href="/newsletter"]
  mmo.pl###newsletter_subscriber
  mobileclick.pl##.essb_mailform
-@@ -1007,10 +1007,10 @@ monsterpolska.pl###twoColumnEmailWidget
+@@ -1008,10 +1008,10 @@ monsterpolska.pl###twoColumnEmailWidget
  morele.net##.col-md-9.col-sm-7
  mosir.org.pl###wysuwane1
  motherhood.pl###stopka > .container > div > .twothird
@@ -2567,7 +2571,7 @@ index 3b1406972..df6f3e801 100644
  motocyklowysklep24.pl##.NewsletterStrona
  motogen.pl##.region-7 > .blok-jasny:nth-of-type(3)
  moyamatcha.com###custom_html-6
-@@ -1047,22 +1047,22 @@ narzedziowy24.eu##.footer-container .row > div[class]:nth-of-type(4)
+@@ -1048,22 +1048,22 @@ narzedziowy24.eu##.footer-container .row > div[class]:nth-of-type(4)
  nastopy.pl###newslettersignup
  naszarola.pl##.avia-builder-el-103.first.av_one_third
  naszerecenzje.wordpress.com###blog_subscription-4
@@ -2594,7 +2598,7 @@ index 3b1406972..df6f3e801 100644
  netgear.com###footer-email-signup
  netmoda.pl###bk_wstawka_R
  nettg.pl##.input-newsletter1
-@@ -1070,12 +1070,12 @@ nettg.pl##.section-content > .heading
+@@ -1071,12 +1071,12 @@ nettg.pl##.section-content > .heading
  netto.pl##.newsletter-subscription
  newcraft.eu##.block-subscribe
  newled.pl###footernewsletter
@@ -2609,7 +2613,7 @@ index 3b1406972..df6f3e801 100644
  niebieski.net##.top-newsletter
  niebonatalerzu.pl##.footer div.col-md-1:nth-of-type(3)
  niedziela.pl##div.text-center.background-gray3:has(> p > a[href*="newsletter"])
-@@ -1084,7 +1084,7 @@ nieznanyswiat.pl###Mod169
+@@ -1085,7 +1085,7 @@ nieznanyswiat.pl###Mod169
  nivea.pl##.nx-newsletter
  nk.com.pl###formNewsletterMiniEmailRegBox
  nokia.com###signup > div[class*="Email"] > div[class*="Email"]
@@ -2618,7 +2622,7 @@ index 3b1406972..df6f3e801 100644
  nono-store.pl##div.vc_row-fluid.wpb_row.vc_row:nth-of-type(10)
  norauto.pl##div.s-info_item:first-of-type
  north.pl###contact-newsletter
-@@ -1092,20 +1092,20 @@ noskinoski.pl##.footer__block-item--newsletter
+@@ -1093,20 +1093,20 @@ noskinoski.pl##.footer__block-item--newsletter
  notino.pl##.exponea-popup-banner.exponea-banner
  notino.pl##.footer-subscribeWrapper
  nowakonfederacja.pl###newsletter-header-box
@@ -2644,7 +2648,7 @@ index 3b1406972..df6f3e801 100644
  oaza-palmy.pl##.gm-freshmailFooter-modify
  obi.pl##.disc-footer > section:first-child > * > * > *
  obi.pl##.nl-sign
-@@ -1140,35 +1140,35 @@ onebid.pl##.leftmainmenu.hidden-sm.hidden-xs.col-lg-3.col-md-3.col-xs-12 > .hidd
+@@ -1141,35 +1141,35 @@ onebid.pl##.leftmainmenu.hidden-sm.hidden-xs.col-lg-3.col-md-3.col-xs-12 > .hidd
  onebid.pl##footer .footer-nav :nth-of-type(4)
  onexstore.pl##.footer-col--subscription
  oohmagazine.pl##div.widget_anthemes_video.widget:nth-of-type(3)
@@ -2686,7 +2690,7 @@ index 3b1406972..df6f3e801 100644
  pakamera.pl##.nws
  palacmierzecin.pl##.newsletter-hld
  paleosmak.pl###emailSub-form
-@@ -1176,15 +1176,15 @@ pangrono.pl##.sidebar > .widget_bloomwidget.widget
+@@ -1177,15 +1177,15 @@ pangrono.pl##.sidebar > .widget_bloomwidget.widget
  pannaannabiega.pl##.zl_newsletter
  panoptykon.org##.social_n
  pantabletka.pl##.ds-newsletter
@@ -2706,7 +2710,7 @@ index 3b1406972..df6f3e801 100644
  parkofpoland.com###newsletter-footer
  paroc.pl##.newsletter-subscription-popup
  pasazer.com##.\].slidein.\[.box
-@@ -1212,14 +1212,14 @@ photonrobot.com##.qodef-contact-form-7-widget
+@@ -1213,14 +1213,14 @@ photonrobot.com##.qodef-contact-form-7-widget
  picantecooking.com##.newsletter-block
  picodi.com##.newsletterContainer
  piekielko.com##._newsletter
@@ -2723,7 +2727,7 @@ index 3b1406972..df6f3e801 100644
  pl.ejo-online.eu###footer > div > div.threecol:nth-of-type(2)
  pl.farnell.com##.sign-up-form
  pl.malwarebytes.com##.newsletter-refresh
-@@ -1228,14 +1228,14 @@ pl.oriflame.com##.ui-newsletter-container
+@@ -1229,14 +1229,14 @@ pl.oriflame.com##.ui-newsletter-container
  pl.pandora.net##.bottom-email-signup
  pl.pandora.net##.Footer__newsletter
  pl.primo.com##footer .p-columns:nth-of-type(2)
@@ -2740,7 +2744,7 @@ index 3b1406972..df6f3e801 100644
  planet.pl###zapis-do-newsletter
  platforma.org##.footer > .newsletter-container
  plk.pl##footer div:first-of-type > h3:nth-of-type(2)
-@@ -1246,7 +1246,7 @@ podrywaj.org###block-block-34
+@@ -1247,7 +1247,7 @@ podrywaj.org###block-block-34
  podyplomie.pl##.footer > .section > .row > div:first-of-type > .form-flex
  podyplomie.pl##.navbar ~ .container ~ .section > .container > .row > div:first-of-type > .form-flex
  podyplomie.pl##.section .mb-lg-0.mb-2.col-lg-6.col-xl-5 > .form-flex:first-of-type
@@ -2749,7 +2753,7 @@ index 3b1406972..df6f3e801 100644
  pol-nor.com##.formk
  pol-nor.com##.mtz > form
  polakpotrafi.pl##.w3.block:nth-of-type(3)
-@@ -1263,7 +1263,7 @@ polnox.pl##ul:nth-of-type(3)
+@@ -1264,7 +1264,7 @@ polnox.pl##ul:nth-of-type(3)
  polska.travel##.fixed-elements
  polskacanada.com###alo_easymail_widget_form
  polskieradio.com##.post-widget.widget:nth-of-type(4) > .post-widget.widget
@@ -2758,7 +2762,7 @@ index 3b1406972..df6f3e801 100644
  polskiprzemysl.com.pl##.prenumerata-heder
  polszczyzna.pl##.eltdf-column:nth-of-type(4)
  polszczyzna.pl##.widget_yikes_easy_mc_widget
-@@ -1277,9 +1277,9 @@ porozmawiajmy.tv###text-36
+@@ -1278,9 +1278,9 @@ porozmawiajmy.tv###text-36
  portal-sadownik.pl##div.box:nth-of-type(3)
  portalgames.pl##.columns.mimi-form.widget
  portalkryminalny.pl##footer > .container > div.row:nth-of-type(2) > div:nth-last-of-type(1)
@@ -2770,7 +2774,7 @@ index 3b1406972..df6f3e801 100644
  portalspozywczy.pl##.newsletter > .pageWidth > span:first-of-type
  portalspozywczy.pl##.right > div[class*="box"] ~ div[class*="box"] ~ div[class*="box"] .navi > a:nth-child(6)
  portalspozywczy.pl##.right > div[class*="box"] ~ div[class*="box"] ~ div[class*="box"] .tabs-1 > .panes > .one:nth-child(6)
-@@ -1287,7 +1287,7 @@ portalspozywczy.pl##.v2.newsletter > .pageWidth > form
+@@ -1288,7 +1288,7 @@ portalspozywczy.pl##.v2.newsletter > .pageWidth > form
  posbistro.com##div[aria-label="Zapisz się na gastronomiczny NEWSLETTER"]
  poscielone.pl##.newsletter-forms
  posnania.eu##.footer__form > div[id^="wpf-contact-form"]
@@ -2779,7 +2783,7 @@ index 3b1406972..df6f3e801 100644
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl
  poznan.factory.pl##.pane-2.pane-custom.panel-pane
-@@ -1295,7 +1295,7 @@ praca.antyweb.pl##.bg-blue.hero
+@@ -1296,7 +1296,7 @@ praca.antyweb.pl##.bg-blue.hero
  praisethewear.com##.elementor-element-5311d84
  prawo.pl##.wkNewsletterBlock
  prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
@@ -2788,7 +2792,7 @@ index 3b1406972..df6f3e801 100644
  prawokonsumenckie.pl##.g-bg-secondary
  press.pl##.pressletter
  prestashop.com##.footer-nl
-@@ -1305,8 +1305,8 @@ primavika.pl##.container-inner.bottom > .box3.box
+@@ -1306,8 +1306,8 @@ primavika.pl##.container-inner.bottom > .box3.box
  primocappuccino.pl##.sidebar-box > div.widget-box:nth-of-type(10)
  print-me.pl##.elementor-element-856293d
  printexpress.pl##.widget_bloomwidget.et_pb_widget
@@ -2799,7 +2803,7 @@ index 3b1406972..df6f3e801 100644
  profinfo.pl##.newsletter__main
  projektowanie-wnetrz-online.pl##.e-container.e-container--column.elementor-element-fe48947.elementor-element
  promapolska.pl###newsletter_footer_form_ajax
-@@ -1322,14 +1322,14 @@ pryskaj.pl##.fx-newsletter
+@@ -1323,14 +1323,14 @@ pryskaj.pl##.fx-newsletter
  przepis-na-lo.pl###sidebar > div.widget:nth-of-type(3)
  przepisnazdrowie.eu##.newsletter-mod
  przepisy.pl##.newsletter-wrapper-inner
@@ -2817,7 +2821,7 @@ index 3b1406972..df6f3e801 100644
  publicat.pl###section-right-newsletter
  publolek.pl##.footer-widget-2.widget-column
  pulshr.pl##.box-1 > p:first-of-type
-@@ -1344,9 +1344,9 @@ pyrkon.pl##.c-tnp__subscription-minimal
+@@ -1345,9 +1345,9 @@ pyrkon.pl##.c-tnp__subscription-minimal
  pzlsedziszow.pl###newsletter_pzl-2
  qagile.pl##div.footer-widget:nth-of-type(2)
  qnapclub.eu##.footer-block.col-xs12.col-sm-6.col-md-3
@@ -2829,7 +2833,7 @@ index 3b1406972..df6f3e801 100644
  r-gol.com##.wrapper--newsletter
  r.pl##.newsletter-footer-box
  rabat-detal.pl##.newsletter-title
-@@ -1394,15 +1394,15 @@ rynek-rolny.pl##.punica-newsletter-widget.widget
+@@ -1395,15 +1395,15 @@ rynek-rolny.pl##.punica-newsletter-widget.widget
  rytmynatury.pl###custom_html-11
  rywalbp.pl###sliding_box1
  sadyogrody.pl###col2 .tabs .social.mail
@@ -2848,7 +2852,7 @@ index 3b1406972..df6f3e801 100644
  sdk.waw.pl##.mod_acymailing
  segway-polska.pl###email-alert-signup
  sekurak.pl##.widget_text.widget:nth-of-type(4)
-@@ -1415,7 +1415,7 @@ senetic.pl##.nwsBlock
+@@ -1416,7 +1416,7 @@ senetic.pl##.nwsBlock
  seniorplus.edu.pl###boczne_ikonki > a[href$="newsletter"]
  sfinks.info##.t_align_r.m_xs_bottom_30.m_bottom_20.m_xs_top_0.m_top_40.col-sm-6.col-md-6.col-lg-6
  shop.albione.eu###newsletter-slide
@@ -2857,7 +2861,7 @@ index 3b1406972..df6f3e801 100644
  shop.prettyone.pl##.container-fluid:nth-of-type(2) > .doubleBox > .container > .row > .col-xs-6:nth-of-type(2) > h2
  shopgracz.pl##.newsletter_footer_block li:nth-child(-n+2)
  showroom.pl##.news-signup
-@@ -1425,7 +1425,7 @@ sinsay.com##.home-ss20-newsletter
+@@ -1426,7 +1426,7 @@ sinsay.com##.home-ss20-newsletter
  sipma.pl###newslet
  site-call.pl##.wpc-subcribe .form-subscribe
  skionline.pl##.boks_tytul_out_cp:nth-of-type(3)
@@ -2866,7 +2870,7 @@ index 3b1406972..df6f3e801 100644
  skionline.pl##td:nth-of-type(2) > .boks:nth-of-type(3) > tbody
  sklep-agrohandel.pl##.footer_top_area
  sklep-elektron.com###newsletter-form
-@@ -1435,12 +1435,12 @@ sklep-rolnicze.eu##.col-xs-12.col-sm-12.col-md-4.col-lg-4:nth-of-type(2)
+@@ -1436,12 +1436,12 @@ sklep-rolnicze.eu##.col-xs-12.col-sm-12.col-md-4.col-lg-4:nth-of-type(2)
  sklep.audiopunkt.com.pl###sec-newsletter > .banertab
  sklep.autopart.pl###newsletterPanel.abs-newsletter-panel
  sklep.barcikowscy.eu##.blocknewsletter
@@ -2881,7 +2885,7 @@ index 3b1406972..df6f3e801 100644
  sklep.jelp.pl###freshmail > .pull-left
  sklep.kawa.pl##.NewsletterPopup
  sklep.kotrak.com##.newsletter1-wrapper > * > *
-@@ -1449,7 +1449,7 @@ sklep.lemoniade.pl##.container > .row > div.col-md-6.col-sm-6.col-xs-12:nth-of-t
+@@ -1450,7 +1450,7 @@ sklep.lemoniade.pl##.container > .row > div.col-md-6.col-sm-6.col-xs-12:nth-of-t
  sklep.lobos.pl##.form.col-md-8 > form
  sklep.mariall.pl##.NewsletterTlo
  sklep.maximus-solaria.pl##.heading-subscribe
@@ -2890,7 +2894,7 @@ index 3b1406972..df6f3e801 100644
  sklep.nowaera.pl##.button__newsletter
  sklep.olekmotocykle.pl##.footer-col4 > h3.footer-colTitle:first-of-type
  sklep.polityka.pl###sidebar1 > div:nth-of-type(2)
-@@ -1467,25 +1467,25 @@ sklepagnex.pl###box_custom99 > div
+@@ -1468,25 +1468,25 @@ sklepagnex.pl###box_custom99 > div
  sklepkoszykarza.pl###footer__newsletter
  sklepkupiec.pl##.footer-block.newsllt
  sklepmarka.pl##.newletter-header
@@ -2920,7 +2924,7 @@ index 3b1406972..df6f3e801 100644
  soczko.pl##.subscribe_f
  sodexo.pl###content > #sg-form-row
  sofly.club##.newsletter-widget-1
-@@ -1544,7 +1544,7 @@ suwalki24.pl###content_right > .box:nth-of-type(7)
+@@ -1545,7 +1545,7 @@ suwalki24.pl###content_right > .box:nth-of-type(7)
  suwalki24.pl##.box:nth-of-type(5)
  suwalszczyzna.com.pl##.widget_recent_news
  swappie.com##.newsletter-subscription-box
@@ -2929,7 +2933,7 @@ index 3b1406972..df6f3e801 100644
  swiatbaterii.pl##div.col-md-4:nth-of-type(3) > div:first-of-type
  swiatkoszy.eu##.footer-newsletter > .container > div.row:first-of-type
  swiatkoszy.eu##.footer-newsletter__left
-@@ -1555,7 +1555,7 @@ symbiosis.com.pl##.m-footer_newsletterContainer
+@@ -1556,7 +1556,7 @@ symbiosis.com.pl##.m-footer_newsletterContainer
  sypien.pl###pum-4229
  szachownica.com.pl###footer-secondary
  szachownica.com.pl##.square-newsletter
@@ -2938,7 +2942,7 @@ index 3b1406972..df6f3e801 100644
  szaron.pl###blocknewsletter-panel
  szarotka.eu##.Footer_L
  szerokadroga.pl##.gum_footer_widget.widget:nth-of-type(3)
-@@ -1564,11 +1564,11 @@ szopi.pl##footer .widget_mc4wp_form_widget.scisco-widget
+@@ -1565,11 +1565,11 @@ szopi.pl##footer .widget_mc4wp_form_widget.scisco-widget
  szukampracownika.monsterpolska.pl###mailreg_cont
  szybkanauka.pro##.tcb-flex-center.tcb--cols--3.tcb-flex-row > div.tcb-flex-col.tve_empty_dropzone:nth-of-type(3)
  tabelaofert.pl###newsletter_stopka
@@ -2952,7 +2956,7 @@ index 3b1406972..df6f3e801 100644
  taniekomputery.pl###BottomBox .column-last.column
  tanienurkowanie.pl###mauticform_oknewsletternurkowanie
  tanio.co##.page-dashboard-home__newsletter-primary
-@@ -1589,7 +1589,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
+@@ -1590,7 +1590,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
  teksciory.interia.pl##.newsroom
  telekarma.pl###footerInfo > .row div.box5:nth-of-type(3)
  telekarma.pl###footerInfo-newsletter
@@ -2961,7 +2965,7 @@ index 3b1406972..df6f3e801 100644
  telepolska.pl###box_1
  teletropiciel.pl## .krotkie__zapytanie
  telewizja-cyfrowa.com##.textwidget > p:nth-of-type(2)
-@@ -1609,7 +1609,7 @@ thermomix.vorwerk.pl##.footer__newsletterform
+@@ -1610,7 +1610,7 @@ thermomix.vorwerk.pl##.footer__newsletterform
  thomas-krenn.com##.tk-footer-newsletter
  tim.pl###newsletter-component-footer
  tiptop.com.pl###content > .row > #bg_orange
@@ -2970,7 +2974,7 @@ index 3b1406972..df6f3e801 100644
  tkom.pl###panelNEWS
  tme.eu##.c-newsletter
  tokfm.pl##.container > ul > li:nth-of-type(3)
-@@ -1626,7 +1626,7 @@ travelplanet.pl##.col-footer-newsletter-block
+@@ -1627,7 +1627,7 @@ travelplanet.pl##.col-footer-newsletter-block
  trec.pl##.b-footer-top__newsletter > :nth-child(-n+3)
  triny.pl##.newsletter-sub-box
  trivago.pl###js-newsletter-registration
@@ -2979,7 +2983,7 @@ index 3b1406972..df6f3e801 100644
  trojmiejska.com###st_news_letter_1
  tropy.pl##.footer-collumn-6
  trybawaryjny.pl###gr-form
-@@ -1634,9 +1634,9 @@ tsintegracje.com##.contNewsletter
+@@ -1635,9 +1635,9 @@ tsintegracje.com##.contNewsletter
  tucholanin.pl###sidebar-bottom > ul.widget-container:first-of-type
  tuolawa.pl##footer#app-footer > div > div:first-child > div > div > div:nth-child(3) > *
  tustolica.pl###menumini > li:nth-of-type(3)
@@ -2991,7 +2995,7 @@ index 3b1406972..df6f3e801 100644
  twardepierniki.pl##.newsletter-panel
  twojahistoria.pl##.pb_wysija
  twojakoszulka.eu##.stopka .trzecia
-@@ -1651,14 +1651,14 @@ tylkogrecja.com##.subscribe-email-wrapper
+@@ -1652,14 +1652,14 @@ tylkogrecja.com##.subscribe-email-wrapper
  u-jazdowski.pl###popup_banner > [href="/newsletter"]
  ubierzfona.pl##.medium--one-half.large--one-half.grid__item:nth-of-type(2)
  uchwyt.pl###newsletterdiv
@@ -3009,7 +3013,7 @@ index 3b1406972..df6f3e801 100644
  upacjenta.pl##.newsletter-wp
  upominki24.pl##.footer-container > div > .row > div[class]:nth-of-type(4)
  urbancity.pl##.box2
-@@ -1709,9 +1709,9 @@ walutomat.pl###newsletter-signup-box
+@@ -1710,9 +1710,9 @@ walutomat.pl###newsletter-signup-box
  wamiz.pl##footer > div:nth-child(2)
  warsztatowski.com##div.footer_block.links.col-md-4:nth-of-type(4)
  waszaturystyka.pl##.platform-content:nth-of-type(2)
@@ -3022,7 +3026,7 @@ index 3b1406972..df6f3e801 100644
  webcamera.pl###footer-newsletter-box
  webinsider.pl##.gofollow[onclick*=Newsletter]
  websiteplanet.com##.sub-newsletter
-@@ -1719,7 +1719,7 @@ wegannerd.blogspot.com###HTML7
+@@ -1720,7 +1720,7 @@ wegannerd.blogspot.com###HTML7
  wegeguru.pl##.bs-standard.home-header > div > .form.col
  wenahome.pl##.offer-bar--blue-to-red-gradient.offer-bar--shown.offer-bar
  wenahome.pl##div.footer__column:nth-of-type(5)
@@ -3031,7 +3035,7 @@ index 3b1406972..df6f3e801 100644
  werandacountry.pl##div.gkmod-3.box:first-of-type > .header
  werandafamily.com##.home-nesletter
  werandaweekend.pl##.right > div.title:first-of-type
-@@ -1744,7 +1744,7 @@ wirtualnyspac3r.pl###footerGroupLayer_pl ~ #element_2218
+@@ -1745,7 +1745,7 @@ wirtualnyspac3r.pl###footerGroupLayer_pl ~ #element_2218
  wiszniowka.pl##[id^="fm_form_"]
  witcherschool.com##.formularz
  wittchen.com###app-footer-newsletter
@@ -3040,7 +3044,7 @@ index 3b1406972..df6f3e801 100644
  wkret-met.com##.block-simplenews.block
  wloczkiwarmii.pl###\#newslatter
  wndcomp.pl###PrawaKolumnaPrzerwa > .CalyBox:nth-of-type(3)
-@@ -1761,7 +1761,7 @@ wprost.pl##.newsletter-plugin
+@@ -1762,7 +1762,7 @@ wprost.pl##.newsletter-plugin
  wprost.pl##.stay-updated
  wroclaw.pl##.boxNewsletterRegister
  wroclawfashionoutlet.com##.via-footer__newsletter-signup
@@ -3049,7 +3053,7 @@ index 3b1406972..df6f3e801 100644
  wrp.pl##.vc_general.vc_cta3
  wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
  wseit.edu.pl###btn-newsletter
-@@ -1779,37 +1779,37 @@ www.mazury.pl##.footer .stopka-prawa
+@@ -1780,37 +1780,37 @@ www.mazury.pl##.footer .stopka-prawa
  www.milmag.pl##.formNewsletter
  www.milmag.pl##div.foldMid.span_4_of_12.col:nth-of-type(2) > h3.footerLabel:nth-of-type(2)
  www.onet.pl##.popupNotif > .bellIcon
@@ -3095,7 +3099,7 @@ index 3b1406972..df6f3e801 100644
  yves-rocher.pl##.l-footer__services div.service__column:nth-of-type(2) > div.service__box:nth-of-type(2)
  yves-rocher.pl##.service__column:nth-of-type(2) > .service__box:first-of-type
  zadowolenie.pl###NewsletterLP
-@@ -1823,7 +1823,7 @@ zakupywm1.pl##.hidden-xs.row > .col-sm-4:nth-of-type(3)
+@@ -1824,7 +1824,7 @@ zakupywm1.pl##.hidden-xs.row > .col-sm-4:nth-of-type(3)
  zamek-krolewski.pl###footer_top
  zapiskizeswiata.pl###mc_embed_signup > #mc-embedded-subscribe-form
  zara.com##.layout-footer-newsletter
@@ -3104,7 +3108,7 @@ index 3b1406972..df6f3e801 100644
  zarzadcy.com.pl##.menu_right > div:first-of-type
  zawady.com.pl###subscribe
  zdobadzkobiete.pl###access
-@@ -1839,7 +1839,7 @@ zielonepogotowie.pl###footgroup_newsletter
+@@ -1840,7 +1840,7 @@ zielonepogotowie.pl###footgroup_newsletter
  zielonyogrodek.pl##.acymailing_module_form
  zikom.pl##.vertical-button
  zlotoryjska.pl##a[href="/newsletter.html"]
@@ -3159,7 +3163,7 @@ index 1e40b212a..e69de29bb 100644
 -||zadowolenie.pl/media/cache/*/zdw-newsletter-
 -||zooplus.pl/magazyn/wp-content/uploads/20*/*/*Newsletter_Promotion_$image
 diff --git a/PPB/newslettery_ogolne.txt b/PPB/newslettery_ogolne.txt
-index 9e3d6e11e..986e5db52 100644
+index 3ef52ec55..40769c5a2 100644
 --- a/PPB/newslettery_ogolne.txt
 +++ b/PPB/newslettery_ogolne.txt
 @@ -1,15 +1,15 @@
@@ -3190,10 +3194,10 @@ index 9e3d6e11e..986e5db52 100644
  ~pl###box_newsletter:lang(pl)
  ~pl###menu_newsletter:lang(pl)
  ~pl###newsletter:not(.modal):not(input):lang(pl)
-@@ -135,4 +135,4 @@ pl##.widget_newsletterwidget
- pl##.widget_newsletterwidgeter_box
+@@ -136,4 +136,4 @@ pl##.widget_newsletterwidgeter_box
  pl##.widget_newsletterwidgetminimal
  pl##:not(#newsletter-overlay) #newsletter-box
+ pl##div[id*="tws_i_"]:has(#menu_newsletterwidget)
 -pl,~znak.com.pl##.newsletter-container
 +pl~znak.com.pl##.newsletter-container
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
@@ -4893,34 +4897,32 @@ index 6ed35f9f0..6f7657df0 100644
 -polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetect
 +polishannoyancefilters.netlify.appcom###pafdetect
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 04c7383e2..37377bf86 100644
+index 05ac469f8..6f28558c4 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -1,226 +1,226 @@
+@@ -1,225 +1,225 @@
 -~1login.wp.pl,~poczta.wp.pl,wp.pl,~www.wp.pl##div[data-st-area="gallery-gallery"] div[class*=" "][style*="background-color:"]
 -3dom.pro,agrosam.eu,alget.pl,antbs.co.uk,domator24.com,harposoftware.com,laroxy.com,odszewca.pl,opakowania24.eu,swiatroslin.eu##.top_button
 -3dom.pro,akwarystyczny.eu,anmur.eu,greenfelix.eu,homedoors.eu,homehood.eu,hydrosan.eu,hykker.com,lambre.eu,limonkowy.com,magazynkuchenny.com,media-tech.eu,motogron.com,narzedziowy24.eu,opakowania24.eu,pasmanteria.eu,poid.eu,stolmot.com,zyjzdrowo.info###to-top
 -3i-store.com,agro-bis.eu,aleokulary.com,antrans.com.pl,baranowscy.eu,bejbi.eu,bioevolution.com,bizserver.eu,domkorkowy.com,eipro.de,ferguson-digital.eu,gembird.com,greenmousestudio.com,grzechhair.com,holender.info,home-you.com,huaweimobileservices.com,kamilbelz.com,kiddyfave.com,konin24.info,krzywcza.eu,kuradomowa.net,majbus.eu,mixremedia.eu,naszekielce.com,naszesprawy.eu,nieidealnaanna.com,nowyzmigrod.eu,osheeshop.eu,outhorn.com,pl.softoware.org,podstacja.com,poldruk.com,polskaekologia.org,programtv.naziemna.info,redge.com,ristorio.com,rocketpoland.com,savethefloppy.com,sklep.regalia.eu,sklepdlalekarza.com,spodlady.com,stopwiatrakom.eu,sweet.tv,szema.eu,typeofweb.com,vikking.eu,weddingdream.com,weganskie-zakupy.blogspot.com,zakupersi.com,zielenina.eu,zippedshoes.com,zlotarybka24.com###toTop
-+~1login.wp.pl~poczta.wp.plpl~www.wp.pl##div[data-st-area="gallery-gallery"] div[class*=" "][style*="background-color:"]
-+3dom.proeuplukcomcomcompleueu##.top_button
-+3dom.proeueueueueueucomeucomcomeucomeueueueucominfo###to-top
-+3i-store.comeucompleueucomeucomdeeucomcomcominfocomcomcomcominfoeuneteueucomeucomeueucomorgcomcomorginfocomcomcomcomeucomcomeutveucomeucomcomcomeucomcom###toTop
- 4funkids.pl###scroll_up
+-4funkids.pl,mri-lab.pl###scroll_up
 -4programmers.net,alezabawki.co,andrzejgrzyb.eu,beautikon.com,cholewinski.com,finnair.com,happy-surfer.com,integracja.org,malygeniusz.org,nasze.fm,oknarolety.com,orion.fm,pl.coccodrillo.eu,praisethewear.com,shipgratis.eu,sklep.mptech.eu,www.livescore.in###scroll-to-top
 -6paknutrition.com,aparatsluchowy.com,e-sonido.pl,partner-panele.pl,proficook.pl,skleprowerowy.pl###scrolltopbtn
 -24hurt.pl,haftpasja.pl,mirjan24.pl,pm-m.pl,polagriparts.pl,uczyibawi.pl###wt_scroll_top
 -50style.pl,agatameble.pl,e-timberland.pl,galeriamarek.pl,sklep.sizeer.com,vobis.pl###js-scrollTop
--51.75.43.155,aforyzmy-cytaty.pl###topBtn
++~1login.wp.pl~poczta.wp.plpl~www.wp.pl##div[data-st-area="gallery-gallery"] div[class*=" "][style*="background-color:"]
++3dom.proeuplukcomcomcompleueu##.top_button
++3dom.proeueueueueueucomeucomcomeucomeueueueucominfo###to-top
++3i-store.comeucompleueucomeucomdeeucomcomcominfocomcomcomcominfoeuneteueucomeucomeueucomorgcomcomorginfocomcomcomcomeucomcomeutveucomeucomcomcomeucomcom###toTop
++4funkids.plpl###scroll_up
 +4programmers.netcoeucomcomcomcomorgorgfmcomfmeucomeueuin###scroll-to-top
 +6paknutrition.comcomplplplpl###scrolltopbtn
 +24hurt.plplplplplpl###wt_scroll_top
 +50style.plplplplcompl###js-scrollTop
-+51.75.43.155pl###topBtn
  80dni.pl###backtotop_wpv
 -123tlumacz.pl,reklamy-arek.pl###back-to-top-fixed
 +123tlumacz.plpl###back-to-top-fixed
- 51015kids.eu##.js--scroll-to-top
- 51015kids.eu##div:nth-of-type(22)
+ 51015kids.eu##div[suppresshydrationwarning] div[class=""] button[type="button"][class]
 -a1komputery.pl,fundacjadominikana.org,wp-piast.pl,wspkorczak.eu##.sp-totop
 -abonamenty.pl,agripel.pl,felixcom.net,lulek.tv,magicznyswiatksiazki.pl,naszekluski.pl,wszystkookotach.pl###scrollup
 +a1komputery.plorgpleu##.sp-totop
@@ -4947,6 +4949,7 @@ index 04c7383e2..37377bf86 100644
 +aeg.plplpl##.navigate-to-top
 +aeromixer.eueueucom###scroll-top-link
  afgmarket.pl##.button-sticky-top
+ aforyzmy-cytaty.pl###topBtn
  aftermarket.pl###scroll-bottom
  aga-toma.pl##.pow_start
 -agkoperty.com.pl,eurobit.pl,komlogo.pl###totop-scroller
@@ -5121,8 +5124,8 @@ index 04c7383e2..37377bf86 100644
 -axeprim.eu,brytol.com,gdanskstrefa.com,ochrona24.info,placesandplants.com,posbistro.com,rrs24.net,skawina.eu,sp18.lublin.eu,sportdziennik.com,sportowiec.info,stalmielec.com,swiebodzice.info,targowek.info,tarnobrzeg.info,techno-senior.com,wachtyrz.eu,wiskitki.org,zs12lublin.eu###scroll-up
 +axeprim.eucomcominfocomcomneteueucominfocominfoinfoinfocomeuorgeu###scroll-up
  axtechnology.pl##.show_scroll
--b2b.metal-bud.eu,bat.pl,esklep.agroas.pl,hmb.pl,sklep.elus.pl,wisko.eu##.go-to-top-ui
-+b2b.metal-bud.euplplplpleu##.go-to-top-ui
+-b2b.metal-bud.eu,bat.pl,esklep.agroas.pl,hmb.pl,mak24h.pl,sklep.elus.pl,wisko.eu##.go-to-top-ui
++b2b.metal-bud.euplplplplpleu##.go-to-top-ui
  b2btrade.eu##.back-to-top-arrow
 -b2net.pl,elus.pl,rower.com.pl,sprzedaz-mieszkanie-czestochowa.wgn.pl,telefon.info.pl##a#top
 +b2net.plplplplpl##a#top
@@ -5253,7 +5256,7 @@ index 04c7383e2..37377bf86 100644
  centrumdom.info##.tm-my-totop-scroller
  centrumxp.pl##.OnTop
  cepik.gov.pl##.btn__scroll-top
-@@ -228,210 +228,210 @@ cewe.pl##cwc-to-top-button
+@@ -227,210 +227,210 @@ cewe.pl##cwc-to-top-button
  chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
@@ -5551,7 +5554,7 @@ index 04c7383e2..37377bf86 100644
  gryna2.pl###back
  gsbk.pl##.scroll-link
  gunb.gov.pl##.slide-to-top
-@@ -450,15 +450,15 @@ hikoki-narzedzia.pl##.j-scroll_pagetop.footer-pagetop
+@@ -449,15 +449,15 @@ hikoki-narzedzia.pl##.j-scroll_pagetop.footer-pagetop
  hilti.pl##.m-nav-totop
  homesi.pl###button-btt
  honda.pl##.buttonWrap
@@ -5570,22 +5573,22 @@ index 04c7383e2..37377bf86 100644
  i-apteka.pl##.n60972_main_cop_right
  iautomatyka.pl##.pf-up-but
  ibif.pl##.js-up.up
-@@ -467,10 +467,10 @@ idream.pl##.ab__scroll_to_top_button
+@@ -466,10 +466,10 @@ idream.pl##.ab__scroll_to_top_button
  igimag.pl##.up-square
  ikc.pl##.ak-back-top
  ikea.com###btn-back-to-top
 -industriehof.com,sportisimo.pl###jumptop
--info-tips.de,medion.com,morfikov.github.io,onlinevideoconverter.com,pcsupport.lenovo.com,support.lenovo.com##.back-to-top
+-info-tips.de,medion.com,morfikov.github.io,onlinevideoconverter.com,pcsupport.lenovo.com,sklepmedyczny.com,support.lenovo.com##.back-to-top
 -infoaudio.pl,infomusic.pl,obiektyspa.com###slideup
 -infolinia.info.pl,memento.com.pl,mpolski.pl,pense.pl##.arrow
 +industriehof.compl###jumptop
-+info-tips.decomiocomcomcom##.back-to-top
++info-tips.decomiocomcomcomcom##.back-to-top
 +infoaudio.plplcom###slideup
 +infolinia.info.plplplpl##.arrow
  infoplanet.pl##.goup-container
  infores.net###icon-mobile-scroll-top
  informacjakredytowa.com###move-to-top
-@@ -478,33 +478,33 @@ informatique-mania.com##.go-to-top-button
+@@ -477,33 +477,33 @@ informatique-mania.com##.go-to-top-button
  inpost.pl##.footerMatToTop
  inspirander.pl##.htheme_icon_backtop
  intereffective.pl##.c-button-top
@@ -5627,7 +5630,7 @@ index 04c7383e2..37377bf86 100644
  katowice.kwpsp.gov.pl###go-to-up
  kaufland.pl##.a-back-to-top__button
  kfc.pl##.main-scroll
-@@ -516,8 +516,8 @@ kitsune-subs.anime-odcinki.pl##.smoothscroll-top
+@@ -515,8 +515,8 @@ kitsune-subs.anime-odcinki.pl##.smoothscroll-top
  klarta.pl##.slide-up-btn
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
@@ -5638,7 +5641,7 @@ index 04c7383e2..37377bf86 100644
  kolibra.pl##.progress-wrap
  komed.pl###el-top
  komornik-marchaj.pl##.rstpl-go-top
-@@ -534,7 +534,7 @@ kufer.poznajemyswiat.pl##.fa-arrow-up.ssttbutton-symbol
+@@ -533,7 +533,7 @@ kufer.poznajemyswiat.pl##.fa-arrow-up.ssttbutton-symbol
  kulinarnastronamocy.pl##.stick.stnsvn-btt
  kultura.krasnik.eu###skip_to
  kulturadostepna.pl###btn-scroll-to-top
@@ -5647,7 +5650,7 @@ index 04c7383e2..37377bf86 100644
  kuriergalicyjski.com###matina-news-scroll-to-top
  kurzyniec.pl###topPage
  kwantowo.pl##.go_up_btn
-@@ -550,28 +550,28 @@ lampy.pl##.scrollBack
+@@ -549,28 +549,28 @@ lampy.pl##.scrollBack
  laserland.com.pl##.sec_btn
  lasery.pl##.t4c_go_top
  lca.pl###page > #container_logo > #myBtn
@@ -5663,8 +5666,9 @@ index 04c7383e2..37377bf86 100644
 +leclerc-online.plplplplcomplpl##.arrow-to-top
 +legalnakultura.plplplpl###goUp
  legalniewsieci.pl##.float-news-nav
- lenovo.com##.backToTop
+-lenovo.com,pl.remington-europe.com##.backToTop
 -lfspareparts724.pl##.up.move, .down.move
++lenovo.comcom##.backToTop
 +lfspareparts724.pl##.up.move .down.move
  lgensol.pl##.footer-up
 -liderlamp.pl,podatki.gov.pl###scrollDown
@@ -5686,7 +5690,7 @@ index 04c7383e2..37377bf86 100644
  lubimyczytac.pl###js-btn-scroll-top.btn-scroll-up
  lubliniec.starostwo.gov.pl##.przycisk_dogory2
  lurker.pl###scrollTopBtn
-@@ -580,40 +580,40 @@ lysamowi.pl##.wishbone_backtotop
+@@ -579,40 +579,40 @@ lysamowi.pl##.wishbone_backtotop
  m3system.pl##.ish-back_to_top
  m.digitalcamerapolska.pl###gtop
  m.wirtualnemedia.pl##.button_up
@@ -5740,7 +5744,7 @@ index 04c7383e2..37377bf86 100644
  milicka.eu##.td-scroll-up
  millymally.pl##.page-up
  milmag.pl##.doScrollTop
-@@ -628,27 +628,27 @@ modernbusiness.com.pl##.luxento-goto-top
+@@ -627,27 +627,27 @@ modernbusiness.com.pl##.luxento-goto-top
  modne-gniazdka.pl###rightbar
  moja.biedronka.pl##.menu-bar > .btn-top
  mojebambino.pl##.scroll-up-plugin
@@ -5775,7 +5779,7 @@ index 04c7383e2..37377bf86 100644
  muzeummw.pl##.site
  mywspieramy.org##.kadence-scroll-to-top
  nagaba.pl###fixed_top
-@@ -659,10 +659,10 @@ nasz-gabinet.pl##.back-to-top-bttn
+@@ -658,10 +658,10 @@ nasz-gabinet.pl##.back-to-top-bttn
  naszesmieci.mos.gov.pl##.nav_up
  naszoptyk.pl##.icon-backToTop
  nazwa.pl##.arrowUp__wrapper
@@ -5789,7 +5793,7 @@ index 04c7383e2..37377bf86 100644
  news.samsung.com###btn_top
  newtonmedia.pl##.take-me-up
  nfon.com##.page-back-to-top
-@@ -670,7 +670,7 @@ njumobile.pl###back-to-top-of-page
+@@ -669,7 +669,7 @@ njumobile.pl###back-to-top-of-page
  norwegian.com##.button--right.button--large.button
  novamed.pl##.consultant.up-text
  nowagenetyka.pl##.go-top-page
@@ -5798,7 +5802,7 @@ index 04c7383e2..37377bf86 100644
  nowiny.com.pl###scroolTOP
  numo.pl###kliktop
  nuty.eu###back-to-top-button
-@@ -690,12 +690,12 @@ onebid.pl###movetotop
+@@ -689,12 +689,12 @@ onebid.pl###movetotop
  opera.com##.hf--nav > .hf--width-holder > .hf--back
  opiekunki24.pl##.up-link
  opoltrans.com.pl##.scroll-to-up
@@ -5817,7 +5821,7 @@ index 04c7383e2..37377bf86 100644
  ox.pl##.navIcons__scroll
  p2mforum.info###uix_jumpToFixed
  p.lodz.pl##.pageUp
-@@ -705,7 +705,7 @@ panasonic.com##.holdings-footer__pagetop
+@@ -704,7 +704,7 @@ panasonic.com##.holdings-footer__pagetop
  panasonic.com##.pagetop
  pantuniestal.com##.tgm-to-the-top
  papu.io##.footer-scroll-top
@@ -5826,7 +5830,7 @@ index 04c7383e2..37377bf86 100644
  pasmanteria-atlasek.pl###nasa-back-to-top
  paweltkaczyk.com##.johannes-goto-top
  payback.pl##.pb-back-to-top
-@@ -714,21 +714,21 @@ pepper.pl#?#header ~ div > button:-abp-has(> span[style*="ArrowUp"])
+@@ -713,21 +713,21 @@ pepper.pl#?#header ~ div > button:-abp-has(> span[style*="ArrowUp"])
  peryskop.studio##a.arrow-only
  peugeot.pl##.toplink
  pgi.gov.pl##.site-btn-tool-scroll-top
@@ -5853,7 +5857,7 @@ index 04c7383e2..37377bf86 100644
  pkw.gov.pl##.to_up
  pl.akyga.com###jumpUpBtn
  pl.ccm.net###jGoTop
-@@ -737,15 +737,15 @@ pl.depositphotos.com##.top-button-wrapper
+@@ -736,16 +736,16 @@ pl.depositphotos.com##.top-button-wrapper
  pl.hisense.com###pageNavCorner_top
  pl.msi.com##[title="Go to top"][onclick="topFunction()"]
  pl.trip.com##.mod-back-top-block
@@ -5866,13 +5870,15 @@ index 04c7383e2..37377bf86 100644
  poczta.gazeta.pl##button[title="Wróć na początek strony"]
  pod24.info###ybscrollup
  podforak.rzeszow.pl##.nav-up
+-polaridad.es,promenada.com,radiofon.fm##.scroll-up
++polaridad.escomfm##.scroll-up
  polkurier.pl##.mouse
 -polona.pl,skycash.com##.js-to-top
 +polona.plcom##.js-to-top
  polot.net##.plane-to-top
  polsatnews.pl###fab
  polski-optyk.pl##a > [src="img/top.png"]
-@@ -768,17 +768,17 @@ pracawsieci.net###ruby-back-top
+@@ -768,16 +768,16 @@ pracawsieci.net###ruby-back-top
  pracownia.org.pl##body > a[href="#"].btn
  pracowniakresek.pl##.cd-vertical-nav
  prestizowakuchnia.pl###page-scroll-up
@@ -5880,9 +5886,7 @@ index 04c7383e2..37377bf86 100644
 +profinamiot.plcom##.back-to-top-button
  profitroom.pl##.arrow-back-to-top
 -programyzadarmo.net.pl,xboxforum.pl##.js-scrollButtons
--promenada.com,radiofon.fm##.scroll-up
 +programyzadarmo.net.plpl##.js-scrollButtons
-+promenada.comfm##.scroll-up
  prosportowy.pl###rb-back-top
  proveg.com##.back-to-inner
  przedszkoledzierzgon.pl###btn-scroll-up
@@ -5894,7 +5898,7 @@ index 04c7383e2..37377bf86 100644
  puck.naszemiasto.pl###kotwica
  pyszne.pl##button[data-qa="scroll-top"]
  pyszne.pl##div[data-qa="scroll-top"]
-@@ -797,7 +797,7 @@ redcoon.pl##.icon-i_arr_up
+@@ -796,7 +796,7 @@ redcoon.pl##.icon-i_arr_up
  redditch.pl###astroid-backtotop
  redosystem.com.pl##.scrollToDown
  refreszing.pl###gpToTop
@@ -5903,7 +5907,7 @@ index 04c7383e2..37377bf86 100644
  rexona.com##.c-back-to-top-cta
  ricoh.pl##.page-link-top
  rodzice.pl##.rehub_scroll
-@@ -810,12 +810,12 @@ sadzonki-truskawek.eu###ak-top
+@@ -809,12 +809,12 @@ sadzonki-truskawek.eu###ak-top
  safegroup.pl##button[data-id="scroll-to-top-button"]
  sakolife.pl###powrot-do-gory
  salon-informacyjny.pl##.hotwp-scroll-top
@@ -5918,7 +5922,7 @@ index 04c7383e2..37377bf86 100644
  scottiego.com###to_top_scrollup
  screamit.pl###div_go_top
  secure.e-konsulat.gov.pl##.go-up-button
-@@ -846,7 +846,7 @@ soselectronic.pl###btn-top
+@@ -844,7 +844,7 @@ soselectronic.pl###btn-top
  sosen-blog.pl##.topbutton
  spolecznosc.allegro.pl##.li-common-scroll-to-wrapper
  stalowa.info##.to-top-arrow
@@ -5927,7 +5931,7 @@ index 04c7383e2..37377bf86 100644
  stareforumpoly.pl##.u-scrollButtons
  start24.pl###bottom
  stawiszynski.org##.jupiterx-scrolled
-@@ -858,13 +858,13 @@ store.ubi.com##.scroll-top-button-wrapper
+@@ -856,13 +856,13 @@ store.ubi.com##.scroll-top-button-wrapper
  stylem.pl##.v-btn.goToTop
  sumin.com.pl###gpToTop.gp-back-to-top
  swatt.pl##.gmfbtop
@@ -5944,7 +5948,7 @@ index 04c7383e2..37377bf86 100644
  szklanedrzwi.pl###GO_TOP
  szopi.pl###scisco-gototop
  szukajwarchiwach.gov.pl###scroolButton
-@@ -878,13 +878,13 @@ tchibo.pl##.js-tp-backtotop
+@@ -876,13 +876,13 @@ tchibo.pl##.js-tp-backtotop
  tcl.com##.scroll-fab
  teamviewer.com###back_to_top_button
  teksty.ovh##.toTop-show
@@ -5960,9 +5964,9 @@ index 04c7383e2..37377bf86 100644
 -thermomix.vorwerk.pl,worldoftanks.eu##.button-top
 +thermomix.vorwerk.pleu##.button-top
  tiktok.com##div[class*="VideoDetailContainer"] ~ div[class*="Bottom"] button[class*="IconContainer"]
+ tintadlaplastykow.pl###arrowScroll
  tme.eu##.o-arrow-up__wrapper
- tor-konferencje.pl##.tk-goto-top
-@@ -909,7 +909,7 @@ uroda.in##.trigger
+@@ -908,7 +908,7 @@ uroda.in##.trigger
  valtra.pl##.sticky-footer__back-to-top
  vanpur.com.pl###scroll_arrow
  velux.pl###ReturnToTop
@@ -5971,7 +5975,7 @@ index 04c7383e2..37377bf86 100644
  videotesty.pl##.go_up_v3
  vigantoletten.pl###banderole > .box-toggler > #box-toggler
  villeroy-boch.pl###btn--page_up
-@@ -932,7 +932,7 @@ whatnext.pl###back-to-up
+@@ -931,7 +931,7 @@ whatnext.pl###back-to-up
  wiadomoscihandlowe.pl##.scroll-up-box
  wielkahistoria.pl###johannes-goto-top
  wiesci.com.pl###divGoToTop
@@ -5980,7 +5984,7 @@ index 04c7383e2..37377bf86 100644
  wilkuchnia.pl##.show-up
  winers.pl##.upToScroll.buttonScrollUp
  winterpol.eu##.s5_scrolltotop
-@@ -942,7 +942,7 @@ wiskitki.org##.page-scroll-buttons
+@@ -941,7 +941,7 @@ wiskitki.org##.page-scroll-buttons
  wit.edu.pl###fixed-totop
  witchen.com##.btn-goto-top
  witkowo.eu##.jscroll-to-top_link
@@ -7381,10 +7385,10 @@ index 4339e7a0e..af77adf34 100644
 -~1login.wp.pl,abczdrowie.pl,autocentrum.pl,autokult.pl,benchmark.pl,fotoblogia.pl,gadzetomania.pl,genialne.pl,komorkomania.pl,money.pl,o2.pl,parenting.pl,~poczta.o2.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,pysznosci.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.floating[id^="Player"], .sticky[id^="Player"]:not(.floating), .randomplayer--floating[id*="player"] > div[class*="wrap"]:style(visibility: hidden !important)
 +~1login.wp.plplplplplplplplplplplpl~poczta.o2.pl~poczta.wp.plplplplplpl~www.wp.pl##.floating[id^="Player"] .sticky[id^="Player"]:not(.floating) .randomplayer--floating[id*="player"] > div[class*="wrap"]:style(visibility: hidden !important)
 diff --git a/PPB/uBO_AG/scroll_film_suplement.txt b/PPB/uBO_AG/scroll_film_suplement.txt
-index fc10b2565..dc8e26c92 100644
+index 909025fbf..186fb9215 100644
 --- a/PPB/uBO_AG/scroll_film_suplement.txt
 +++ b/PPB/uBO_AG/scroll_film_suplement.txt
-@@ -1,31 +1,31 @@
+@@ -1,33 +1,33 @@
 -!elle.pl,glamour.pl,gotujmy.pl,ilewazy.pl,kobieta.pl,mamotoja.pl,mojegotowanie.pl,mojpieknyogrod.pl,national-geographic.pl,party.pl,polki.pl,przyslijprzepis.pl,viva.pl,wizaz.pl##.ediplayer-video:not(.ediplayer-ui-fullscreen) .ediplayer-aspect-padding:style(padding-top: 100% !important)
 -bezpiecznystrazak.pl##+js(ra, autoplay, video)
 -bezpiecznystrazak.pl##+js(ra, autoplay, video, asap)
@@ -7438,6 +7442,8 @@ index fc10b2565..dc8e26c92 100644
 +sport.interia.plpl#@#div[class*="video"] div[class="vjs-fixedmonitor-wrapper"] > div[class="vjs-fixedmonitor-wrapper-fixed vjs-fixedmonitor-fixed"]
 +sportowefakty.wp.pl###randomplayer[class*="fixed"] #randomplayer[class*="fixed"] *:style(visibility: hidden !important)
  store.steampowered.com##[class^="broadcast_embeddable_broadcast_floating"]:style(position: static !important)
+ swiatgwiazd.pl###player-container .veedmo-video-player .vjs-layout-small *:style(visibility: hidden !important)
+ swiatgwiazd.pl###player-container .veedmo-video-player .vjs-layout-small:style(visibility: hidden !important)
 -topagrar.pl##+js(aeld, scroll, [native code])
 +topagrar.pl##+js(aeld scroll [native code])
  wzielonej.pl###the-sticky-video.video-is-sticky:style(visibility: hidden !important)
@@ -7465,12 +7471,13 @@ index f494a822e..a93755349 100644
 -polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com##+js(set, pafDetect, true)
 +polishannoyancefilters.netlify.appcom##+js(set pafDetect true)
 diff --git a/PPB/uBO_AG/tla_autoreklamy_suplement.txt b/PPB/uBO_AG/tla_autoreklamy_suplement.txt
-index bb5177f1e..9a18d9d8c 100644
+index d5d43e738..834ac4401 100644
 --- a/PPB/uBO_AG/tla_autoreklamy_suplement.txt
 +++ b/PPB/uBO_AG/tla_autoreklamy_suplement.txt
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
  grawerowanie.org.pl##body[style*="background-image"]:style(background-image: none !important)
  mediamarkt.pl##body[style*="background:"]:style(background-image: none !important)
+ proshop.pl##body:style(background-image: none !important;)
 -reklamy-arek.blogspot.com,znak.com.pl##body:style(background-image: none !important)
 -twojahistoria.pl##.single, .home:style(background-image: none !important)
 +reklamy-arek.blogspot.compl##body:style(background-image: none !important)
@@ -7484,7 +7491,7 @@ index 45a500e52..87125cff1 100644
 +al.topl###react-portals > div[class^="sc-"] > button[class^="sc-"] > span > svg[viewBox="0 0 56 56"]:upward(button)
  orange.pl##iframe#OPLWCI[style*=": 115px"][style*=": 112px"]:style(visibility: hidden !important)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 5fec5d737..7e452f6e1 100644
+index dbd63aa3e..46da85219 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -1,56 +1,56 @@
@@ -7780,9 +7787,10 @@ index 5fec5d737..7e452f6e1 100644
  ewozki.eu##div[id] > iframe[title="chat widget"]
 -expressit.pl###lz_eye_catcher, #lz_overlay_wm
 -fachowcy.pl###fav-callback-wrapper, #liveChatContainer
+-fakturownia.pl,inspiro.online,sugester.pl##.sugester_callback_widget_outline
 +expressit.pl###lz_eye_catcher #lz_overlay_wm
 +fachowcy.pl###fav-callback-wrapper #liveChatContainer
- fakturownia.pl##.sugester_callback_widget_outline
++fakturownia.plonlinepl##.sugester_callback_widget_outline
  fantasyliga.wp.pl##.show-chat
  farmer.pl##.box-40
 -fdm.pl##.rate-product, [id^="fcc-sitecall-"]
@@ -8113,8 +8121,8 @@ index 5fec5d737..7e452f6e1 100644
 +strefawystawcy.pl##.contact-button .contact-message
  strimi.pl##.bugs
  studiofabryka.pl##.callme
- sugester.pl###sugester_widget_selector_1
-@@ -605,19 +605,19 @@ support.microsoft.com###smc-survey-external-feedback-button
+ sumiennyksiegowy.pl##.kontakt-vert-button
+@@ -604,19 +604,19 @@ support.microsoft.com###smc-survey-external-feedback-button
  swiat-laptopow.pl###superOfferCallUs
  swiatekspresow.pl##.w-short-contact
  systell.pl##.rocketchat-widget
@@ -8137,7 +8145,7 @@ index 5fec5d737..7e452f6e1 100644
  telmor.pl##.contact-float-wrapper
  tesa.com##.js-open-contact.icon-mail
  the-first.pl###side_social_icons > ul > li:nth-of-type(2)
-@@ -640,7 +640,7 @@ twojekwiaty.pl###motion-chat-iframe-tab
+@@ -639,7 +639,7 @@ twojekwiaty.pl###motion-chat-iframe-tab
  twojemeble.pl###reve-chat-container-div
  ucando.pl##.call-us
  ukrainashop.com###oiOpinionWidget
@@ -8146,7 +8154,7 @@ index 5fec5d737..7e452f6e1 100644
  unia.pl###opiniac_blk
  union-investment.pl###woa-widget
  uzbira.pl###reviewsWidgetButton
-@@ -667,7 +667,7 @@ wizjamed.pl###callbutton
+@@ -666,7 +666,7 @@ wizjamed.pl###callbutton
  wnt.com##.sticky-contact
  woliniusz.pl##div[id$="_czater"]
  wolnekonopie.org##.kleo-quick-contact-link
@@ -8155,7 +8163,7 @@ index 5fec5d737..7e452f6e1 100644
  wseit.edu.pl###btn-tel
  wspieram.to###staff-chat-button
  www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
-@@ -675,7 +675,7 @@ www.ibm.com###contact-module
+@@ -674,7 +674,7 @@ www.ibm.com###contact-module
  www.ideafairplay.pl###userlike-tab
  www.microsoft.com##.feedback-dialog-opener
  www.philips.pl##.ph-contactus__toggler
