@@ -1,8 +1,8 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index f6e7f1bef..70e2bdc3b 100644
+index 5122d31f7..c2f4ad6e5 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1414,7 +1414,6 @@ selgros.pl##.home-box3
+@@ -1416,7 +1416,6 @@ selgros.pl##.home-box3
  senetic.pl##.nws-popup__wrapper
  senetic.pl##.nwsBlock
  seniorplus.edu.pl###boczne_ikonki > a[href$="newsletter"]
@@ -10,11 +10,32 @@ index f6e7f1bef..70e2bdc3b 100644
  shop.albione.eu###newsletter-slide
  shop.massdnm.com,taniefototapety.eu###menu_newsletter
  shop.prettyone.pl##.container-fluid:nth-of-type(2) > .doubleBox > .container > .row > .col-xs-6:nth-of-type(2) > h2
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index a487bd6d8..c24047566 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -573,7 +573,6 @@ olsztyn24.com###top_layer
+ ombre.pl###tws_c_0
+ omeda.pl###window1
+ onet.pl##div[data-run-module*="stayOnServicePopup"]
+-ono24.info##.bts-popup
+ opencard.pl###trialModal, .modal-backdrop
+ opensubtitles.org###fadeSub, #lightSub
+ opiekunkaradzi.pl##.esPopupWrapper, .b-modal
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 97c096291..bad95f795 100644
+index 1ee1f2050..5243f448d 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -820,7 +820,6 @@ screamit.pl###div_go_top
+@@ -32,7 +32,7 @@ aga-toma.pl##.pow_start
+ agkoperty.com.pl,eurobit.pl,komlogo.pl###totop-scroller
+ agmarprzewozy.pl,agrosklad.com.pl,lalorraine.pl,ppe.pl,smartpozyczka.pl##.toTop, .toTopRWD
+ agora.pl,alfasan.pl,alltronix.pl,domczasuhurt.pl,forcell.pl,kulig.pl,margoshoes.pl,mia-manu.com,oleksy.pl,pl.techinfus.com,pogotowie-komputerowe.org.pl,skladprosty.pl,sklep.zielonyogrodek.pl##.up
+-agrarius.eu,dictionary.cambridge.org,infobeskidy.eu,mediam.eu,mediatrust.ro,niezlomni.com,olympia-electronics.com,ono24.info,radioznin.fm,sempre.eu.com,wkret-met.com###backtotop
++agrarius.eu,dictionary.cambridge.org,infobeskidy.eu,mediam.eu,mediatrust.ro,niezlomni.com,olympia-electronics.com,radioznin.fm,sempre.eu.com,wkret-met.com###backtotop
+ agricom.pl##.bd-backtotop-5
+ agriculture.newholland.com,ipa-katowice.org,lakiernictwo.net,medianarodowe.com,porozmawiajmy.tv,pulawy.eu,roztocze.net,swiatopon.info###gototop
+ agro-eko.com.pl##.scrollIcon
+@@ -822,7 +822,6 @@ screamit.pl###div_go_top
  secure.e-konsulat.gov.pl##.go-up-button
  seoheroes.pl##.clb-scroll-top-holder
  serafin-maszyny.com##.back_to_top
