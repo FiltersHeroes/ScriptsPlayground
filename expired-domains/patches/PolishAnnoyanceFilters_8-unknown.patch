@@ -1,12 +1,22 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 8a9a8f745..5f19cf2c4 100644
+index fd4bc5ba7..61c79805b 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -393,7 +393,6 @@ jakbudowac.plpl##.exit-popup.dialog .overlay
- jakdojade.pl###container > starting-screen.ng-isolate-scope
- janssen.tv##.fancybox-wrap .fancybox-overlay-fixed.fancybox-overlay
- kalkulatorkalorii.net###getresponse .modal-backdrop
--kameshop.pl##.background #tws_s_100001 #tws_i_100001
- kapitalni.orgpl##.exit-popup
- karpiowy.pl##.newletter-popup .b-modal
- kasotronik.plplplpl###popupEmailPhone
+@@ -39,7 +39,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+ agrohandel.com.pl###jcemediabox-popup-page
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agromix.agro.pl##.nivo-lightbox-overlay
+-agropolska.pl,auto-gdansk.com.pl,blancz.pl,bookmaster.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,masa-honda.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
++agropolska.pl,auto-gdansk.com.pl,blancz.pl,bookmaster.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
+ agrosiec.pl,angelgold.pl,bolix.pl##.modal
+ agrotopparts.pl###kartka, #kartka ~ #tlo
+ airport.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,pl.canalplus.com,romantycznyweekend.eu,zus.pox.pl###fancybox-overlay, #fancybox-wrap
+@@ -465,7 +465,7 @@ linguajob.pl##.popup, #get-similar-offers
+ linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
+ listymikolaja.pl###newsletter_layer
+ loanme.pl##.exit-popup-block
+-lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
++lodzkietargi.pl,slaskietargi.pl###popup_mlm
+ lomilowka.pl###modalRazemRazniej
+ lomilowka.pl,pkwieruszow.pl##.modal-backdrop
+ longterm.pl###list-builder
