@@ -1,12 +1,46 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 0b19cf18c..c685f0bb5 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -151,7 +151,6 @@ bilbordy.info,unitrailer.pl###tab
- biomak.eu###leaselinkSlideButton1
- bissole.pl##.email.mini-contacts[href*="#bottom-bar"]
- bithub.pl##.st-comment
--bitland-b2c.platforma.ab.pl###rightBoxes
- biuronet.com###biuronetTsBadgeStatic.biuronet-ts-badge
- biuronet.com##.gift-banner-box
- biuroprasowe.play.pl##.floating-icon
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 1228efe0f..1aa800477 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -5,7 +5,7 @@
+ 4kdownload.com##.footer__section > .footer__col--updates
+ 4kom.pl##.newsletter-custom
+ 4lapki.eu,annalovestravelspl.wordpress.com,infomiasto.eu,kulinarnamuza.wordpress.com,kwadranszpodkopem.com,podkop.com,pskrk.com,tabloidonline.blog,techno-senior.com,zabieganamama.com,zpamietnikabuntownika.wordpress.com##.jetpack_subscription_widget
+-4spaw.pl,bydgoszczak.pl,kaliszak.pl,katowiczak.pl,krakusik.pl,pro-jex.pl##.mini-newsletter
++bydgoszczak.pl,kaliszak.pl,katowiczak.pl,krakusik.pl,pro-jex.pl##.mini-newsletter
+ 4trucks.pl##.sInfo > .m209.box
+ 9c.com.pl##footer .col-md-auto.col-12
+ 9design.pl##.top_newsletter
+@@ -45,7 +45,7 @@ agrodoradca24.pl##.newsletter-online
+ agromat.pl##.column-double.content > .flex
+ agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
+ agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
+-agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mumla.pl,naukawpolsce.pl,obuwiestyl.pl,pakomat.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,topsecret.pl,trzymajsiecieplo.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,www.naszapraca.com,znak.com.pl,znomet.pl,zycierolnika.pl##.newsletter
++agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mumla.pl,naukawpolsce.pl,obuwiestyl.pl,pakomat.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,topsecret.pl,trzymajsiecieplo.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,www.naszapraca.com,znak.com.pl,zycierolnika.pl##.newsletter
+ agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
+ agrosklad.com.pl,agrotuszyn.pl##.zostaw_numer
+ ahe.lodz.pl###company-newsletter-column
+@@ -385,7 +385,6 @@ devmentor.pl##.mailerlite-form
+ devstyle.pl###post-2135 > .ck_inline.ck_form_container
+ devstyle.pl##li.widget_text.col-4.widget:nth-of-type(3)
+ deweloper-interes.pl,niebieskimigdal.pl###text-2
+-dewocjonalia-niedziela.pl###footer_boxs > li:nth-of-type(4)
+ dexpol.com##.stopka2_center > div.box_info:first-of-type
+ di.com.pl##.footcol:nth-of-type(5) > form, .footcol:nth-of-type(5) > p, .footcol:nth-of-type(5) > .footnag:first-of-type
+ diag.pl##.diag-newsletter
+@@ -773,7 +772,6 @@ johndog.pl##.promo-newsletter
+ johndog.pl##div[style*="newsletter"][class*="container"]
+ joom.com##div[class*="promoCorner_"]
+ jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
+-jupi24.pl##.rc-box-newsletter
+ justbefit.pl#?##new_footer > div > div:-abp-has(> div:nth-child(2) .news-form)
+ kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
+ kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
+@@ -1442,7 +1440,6 @@ silesiasem.pl##.entry-content > form
+ silesion.pl##.pageFooter__newsletter
+ sinsay.com##.home-ss20-newsletter
+ sipma.pl###newslet
+-site-call.pl##.wpc-subcribe .form-subscribe
+ skalnik.pl##.newsletter_content.footer
+ skionline.pl##.boks_tytul_out_cp:nth-of-type(3)
+ skionline.pl##.boks_tytul_out_cs, .okno_gl_s > .boks

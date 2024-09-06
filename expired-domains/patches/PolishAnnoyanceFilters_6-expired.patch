@@ -1,12 +1,22 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 94ba2b8dc..0b19cf18c 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -468,7 +468,6 @@ hotellogos.pl##.widget-container
- hrstandard.pl###float-posts-nav
- hubkolektyw.pl##.panel-boczny
- hurtowniarolnicza.pl##.recruitment
--hushaaabye.pl##.blog-pager-item
- i-apteka.pl,rolmarket.pl###menu_hotspot_zone3
- i-ekosystem.pl###wptime-plugin-preloader
- ican.pl###drawer_bar
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 5b706078e..1228efe0f 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -261,7 +261,7 @@ buslapidus.pl,pasja-informatyki.pl##.widget_1
+ butybuty.pl,delis.pl,diamir.sklep.pl,telefony-gdansk.pl,wetro.pl##div.col-md-3.col-sm-6.col-xs-12.col-xxs:nth-of-type(4)
+ butyjana.pl##.bjNewsletterText
+ butyraj.pl##.hidden-phone.top_toplayer
+-bydgoszcz.com,ct.jaworzno.pl,damitv.pl,e-widuchowa.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
++bydgoszcz.com,ct.jaworzno.pl,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
+ byinsomnia.com,mniammniam.com,opakowania24.eu,pl,r-gol.com,rylko.com,stoprocent.com##.newsletter-container
+ bytom.com.pl##[translate="main.footer.newsletter.header"]
+ c-and-a.com##.footer__mail-form
+@@ -692,7 +692,7 @@ hermessk.pl###sliding_box_submit1
+ hirschmann.pl##.subscribe-line
+ histmag.org###calculatedSocials > a[href*="#newsletter"]
+ histmag.org##.css-nil > a[href="https://old.histmag.org/#registerlink"]
+-histografy.pl,swobodnie.eu###wysija-2
++histografy.pl###wysija-2
+ hoegert.com##.moduletable
+ home.pl###nlForm
+ homeoffice360.pl###footerColumn2 > h3:nth-of-type(2), #newsletterForm
