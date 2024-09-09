@@ -8,7 +8,7 @@
 # ECODFF - Expiration Check Of Domains From Filterlists
 """MIT License
 
-Copyright (c) 2023 Filters Heroes
+Copyright (c) 2024 Filters Heroes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.22"
+SCRIPT_VERSION = "2.0.23"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -77,7 +77,7 @@ if not os.path.isdir(EXPIRED_DIR):
     with open(pj(EXPIRED_DIR, ".keep"), 'w', encoding="utf-8") as fp:
         pass
 
-DNS_a = ["8.8.8.8", "8.8.4.4"]
+DNS_a = ["9.9.9.10", "149.112.112.10"]
 
 for path_to_file in args.path_to_file:
     FILTERLIST = os.path.splitext(os.path.basename(path_to_file))[0]
@@ -121,8 +121,12 @@ for path_to_file in args.path_to_file:
     pages = sorted(
         {i for i in pages if PAGE_PAT.search(i) and not IP_PAT.match(i)})
 
-    PARKED_PAT = re.compile(
-        r"fastpark\.net|parkingcrew\.net|parklogic\.com|sedoparking\.com")
+
+    PARKED_PAT = []
+    with open(pj(main_path, "domainParking.txt"), "r", encoding='utf-8') as parkersFile:
+        for park_line in parkersFile:
+            PARKED_PAT.append(park_line.strip())
+
     parked_domains = []
     offline_pages = []
     sem_value = args.connections
@@ -145,8 +149,9 @@ for path_to_file in args.path_to_file:
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
             else:
-                if any((PARKED_PAT.search(str(answer)) for answer in answers_NS)):
-                    status = "parked"
+                for answer in answers_NS:
+                    if any(parked_d in (str(answer)) for parked_d in PARKED_PAT):
+                        status = "parked"
             finally:
                 result = f"{domain} {status}"
                 await asyncio.sleep(1)
