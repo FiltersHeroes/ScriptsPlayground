@@ -1,0 +1,37 @@
+diff --git a/sections/specyficzne_blokujace.txt b/sections/specyficzne_blokujace.txt
+index b647cf5..d18023f 100644
+--- a/sections/specyficzne_blokujace.txt
++++ b/sections/specyficzne_blokujace.txt
+@@ -26,7 +26,6 @@
+ ||muzeumwp.pl/images/logo-rss.jpg
+ ||naekranie.pl/dist/images/google-telegram.$image
+ ||naekranie.pl/dist/images/google-threads.$image
+-||nowaruda.info/img/rss_
+ ||packaging-polska.pl/include/templates/www/img/icon_rss.gif
+ ||parkslaski.pl/modules/mod_cckrss/rss-ico.png
+ ||plfoto.com/gfx/rss_icon.png
+diff --git a/sections/specyficzne_ukrywajace.txt b/sections/specyficzne_ukrywajace.txt
+index 1269be4..dcde2b5 100644
+--- a/sections/specyficzne_ukrywajace.txt
++++ b/sections/specyficzne_ukrywajace.txt
+@@ -11,10 +11,10 @@ dns.pl##.follow-icon__rss
+ 40ton.net##.clearfix.sidebar-box:nth-of-type(6)
+ actaenergetica.org##a[href*="/rss/pl"]
+ adex.pisz.pl,alejasztuki.com,forum-brukarskie.pl,gazetawiecborska.eu,ozonowanie-powietrza.pl,parafia.mechnica.pl,przeclaw24.pl,ringpolska.pl,smwarmia.pl,stosunki-miedzynarodowe.pl,xn--bolesawiec-e0b.pl##.art-rss-tag-icon
+-agencja-informacyjna.com,bip.dzialdowo.eu,bip.gig.eu,boleslawiec.tv,centrum.fm,channel9.msdn.com,cooltura24.co.uk,debica24.eu,e-plytki.eu,ec.europa.eu,echotygodnik.info,gorlice.tv,interia.tv,jawor.tv,kadantiscam.netlify.app,limanowa.in,lokalna.news,lubelska.tv,mmpk.info,mzuim.chorzow.eu,olesnica24.com,piroart.eu,pl.ambafrance.org,pl.near-place.com,radiomalbork.fm,sejny.info,siatka.org,slubice.tv,strzelec.info,swiebodzin.tv,tarnowska.tv,truso.tv,tvdami.eu,wejherowo24.info,wielkabrytaniaonline.co.uk##.rss
++agencja-informacyjna.com,bip.dzialdowo.eu,bip.gig.eu,boleslawiec.tv,centrum.fm,channel9.msdn.com,cooltura24.co.uk,debica24.eu,e-plytki.eu,ec.europa.eu,echotygodnik.info,gorlice.tv,interia.tv,jawor.tv,kadantiscam.netlify.app,limanowa.in,lokalna.news,lubelska.tv,mmpk.info,mzuim.chorzow.eu,olesnica24.com,piroart.eu,pl.ambafrance.org,pl.near-place.com,radiomalbork.fm,sejny.info,siatka.org,slubice.tv,strzelec.info,tarnowska.tv,truso.tv,tvdami.eu,wejherowo24.info,wielkabrytaniaonline.co.uk##.rss
+ agnieszkawielobob.pl,glitch.com.pl,jsdn.pl,kuchniatruckera.pl,mvno-gsm.pl,prabuty.pl,webinsider.pl,zary24.pl##.widget_rss_links
+ agora.pl,chceauto.pl,cmrev.com,copernicuscenter.edu.pl,copernicusfestival.com,eurogamer.pl,filozofiawnauce.pl,lookcam.com,lublin24.pl,mmorpg.org.pl,naukaireligia.pl##a[href^="/rss"]
+-aiocollective.pl,boleslawiec.tv,bydgoszcz.com,cooltura24.co.uk,debica24.eu,djoles.com,dziennik.com,echotygodnik.info,gorlice.tv,halogorlice.info,koscierzyna24.info,kwidzyn1.pl,lokalna.news,lubelska.tv,namyslow.eu,narew.info,olesnica24.com,pkobp.pl,portalpomorza.pl,poznan.pl,projektpraca.eu,sejny.info,srem.pl,strzelec.info,swiebodzin.tv,tarnowska.tv,tczewska.pl,telepolis.pl,truso.tv,tvdami.eu,tvmaster.eu,wejherowo24.info##.icon-rss
++aiocollective.pl,boleslawiec.tv,bydgoszcz.com,cooltura24.co.uk,debica24.eu,djoles.com,dziennik.com,echotygodnik.info,gorlice.tv,halogorlice.info,koscierzyna24.info,kwidzyn1.pl,lokalna.news,lubelska.tv,namyslow.eu,narew.info,olesnica24.com,pkobp.pl,portalpomorza.pl,poznan.pl,projektpraca.eu,sejny.info,srem.pl,strzelec.info,tarnowska.tv,tczewska.pl,telepolis.pl,truso.tv,tvdami.eu,tvmaster.eu,wejherowo24.info##.icon-rss
+ aleksandrow-lodzki.pl,konkretny.pl,kosmogadka.pl,oswiecim.pl##a[href*="/feed/"]
+ alicjawkrainiegarow.blogspot.com###Subscribe1
+ aliholik.pl###text-12
+@@ -227,7 +227,6 @@ ipn.gov.pl##.opcje a[href*="/rss"]
+ istotne.pl##.icon_rss
+ iwanowice.malopolska.pl,iwanowice.pl##.rss-wrapper
+ izigsm.pl###sectionRight > div.stdBoxContainer:nth-of-type(3) > div.item:nth-of-type(5)
+-jak.tv##a[href^="/feed/rss"]
+ janpawel2.pl##a[href^="/index.php"][href*="rss"][href*="feed"]
+ jezowe.pl##a[href*="jezowe.pl/index.php/homepage/wszystkie-aktualnosci"]
+ joannapachla.com##.newsletter-section-new
