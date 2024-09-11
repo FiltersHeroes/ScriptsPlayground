@@ -85,6 +85,9 @@ for item in git_filerlist_repo.index.diff(None):
 
 if sectionsWereModified:
     git_filerlist_repo.git.add(sections_path)
+    if sys.argv[1] == "KAD":
+        exclusions_path = pn(pj(filerlist_path, "exclusions"))
+        git_filerlist_repo.git.add(exclusions_path)
     git_filerlist_repo.index.commit("Wygasłe domeny\n[ci skip]")
     GIT_SLUG = git_filerlist_repo.remotes.origin.url.replace(
         'https://', "").replace("git@", "").replace(":", "/")
