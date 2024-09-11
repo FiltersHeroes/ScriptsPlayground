@@ -1,0 +1,31 @@
+name: "Remove Expired Domains From Filterlists"
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "55 23 * * 6"
+jobs:
+  KAD:
+    runs-on: ubuntu-latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
+    strategy:
+      matrix:
+        repo: ["KAD", "KADhosts", "PolishAnnoyanceFilters", "PolishAntiAnnoyingSpecialSupplement", "PolishSocialCookiesFiltersDev"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ScriptsPlayground
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.repo }}
+          path: KAD
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: 994739
+          private-key: ${{ secrets.PRIVATE_APP_HELPER_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ matrix.repo }}
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ls -l ./ScriptsPlayground
