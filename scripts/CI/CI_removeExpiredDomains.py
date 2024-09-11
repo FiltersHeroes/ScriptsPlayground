@@ -62,11 +62,12 @@ for expiredType in ["expired", "parked"]:
             expiredListFiles.append(f"{psc_list}-{expiredType}.txt")
 
 for expiredListFile in expiredListFiles:
-    if os.path.exists(expiredListFile):
-        subprocess.run(["python3", pj(main_path, "scripts", "EDRFF.py"), sections_path, pj(main_path, "expired-domains", expiredListFile)])
+    expiredListFilePath = pj(main_path, "expired-domains", expiredListFile)
+    if os.path.exists(expiredListFilePath):
+        subprocess.run(["python3", pj(main_path, "scripts", "EDRFF.py"), sections_path, expiredListFilePath])
         if sys.argv[1] == "KAD":
             for tpName in ["CERT", "LWS"]:
-                subprocess.run(["python3", pj(filerlist_path, "scripts", "update3pExpired.py"), tpName, pj(main_path, "expired-domains", expiredListFile)])
+                subprocess.run(["python3", pj(filerlist_path, "scripts", "update3pExpired.py"), tpName, expiredListFilePath])
 
 mail = os.environ["CI_EMAIL"]
 name = os.environ["CI_USERNAME"]
@@ -76,10 +77,15 @@ with git_filerlist_repo.config_writer() as cw:
     cw.set_value("user", "name", name).release()
     cw.set_value("user", "email", mail).release()
 
-print(mail)
-print(name)
-git_filerlist_repo.git.add(sections_path)
-git_filerlist_repo.index.commit("Wygasłe domeny\n[ci skip]")
-GIT_SLUG = git_filerlist_repo.remotes.origin.url.replace(
+M_S_PAT = re.compile(r"^"+re.escape(os.path.relpath(sections_path, start=filerlist_path) + "/"))
+sectionsWereModified = ""
+for item in git_filerlist_repo.index.diff(None):
+    if M_S_PAT.search(item.a_path):
+         sectionsWereModified = "true"
+
+if sectionsWereModified:
+    git_filerlist_repo.git.add(sections_path)
+    git_filerlist_repo.index.commit("Wygasłe domeny\n[ci skip]")
+    GIT_SLUG = git_filerlist_repo.remotes.origin.url.replace(
         'https://', "").replace("git@", "").replace(":", "/")
-git_filerlist_repo.git.push(f"https://{name}:{os.environ['GIT_TOKEN']}@{GIT_SLUG}")
+    git_filerlist_repo.git.push(f"https://{name}:{os.environ['GIT_TOKEN']}@{GIT_SLUG}")
