@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.24"
+SCRIPT_VERSION = "2.0.25"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -325,7 +325,7 @@ for path_to_file in args.path_to_file:
                             status_code = "200"
                 else:
                     status_code = "000"
-            except (aiohttp.ClientOSError, asyncio.TimeoutError) as ex2:
+            except (aiohttp.ClientOSError, asyncio.TimeoutError, aiohttp.ServerDisconnectedError) as ex2:
                 print(ex2)
                 await asyncio.sleep(1)
                 try:
