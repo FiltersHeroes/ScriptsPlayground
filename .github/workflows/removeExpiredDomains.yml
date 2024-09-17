@@ -2,8 +2,8 @@ name: "Remove Expired Domains From Filterlists"
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "55 23 * * 6"
+  schedule:
+    - cron: "55 23 * * 0"
 jobs:
   letsgo:
     runs-on: ubuntu-latest
