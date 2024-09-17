@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.23"
+SCRIPT_VERSION = "2.0.24"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -129,6 +129,8 @@ for path_to_file in args.path_to_file:
 
     parked_domains = []
     offline_pages = []
+    online_pages = []
+
     sem_value = args.connections
 
     custom_resolver = dns.asyncresolver.Resolver()
@@ -144,7 +146,7 @@ for path_to_file in args.path_to_file:
                 status = "offline"
             except (NoAnswer, NoNameservers):
                 try:
-                    print(f"Checking the status of {domain}...")
+                    print(f"Checking the status of {domain} again...")
                     await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
@@ -166,6 +168,8 @@ for path_to_file in args.path_to_file:
                 offline_pages.append(splitted_result[0])
             elif splitted_result[1] == "parked":
                 parked_domains.append(splitted_result[0])
+            else:
+                online_pages.append(splitted_result[0])
 
     asyncio.run(bulk_domain_dns_check(sem_value))
 
@@ -355,9 +359,13 @@ for path_to_file in args.path_to_file:
                 for status in statuses:
                     print(status)
                     if len(status.split()) > 1:
-                        if status.split()[1] != "200":
+                        status_code = status.split()[1]
+                        if status_code != "200":
                             u_f.write(f"{status}\n")
 
+    if online_pages:
+        for online_page in online_pages:
+            unknown_pages.append(online_page)
     if unknown_pages:
         asyncio.run(save_status_code(10, sem_value))
 
