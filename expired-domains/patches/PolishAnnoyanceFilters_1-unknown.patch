@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 9ec93df80..cb5131e9a 100644
+index dda20edad..38ec5620e 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -880,7 +880,7 @@ pswbp.pl###accessibility-links
+@@ -879,7 +879,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -11,7 +11,7 @@ index 9ec93df80..cb5131e9a 100644
  pyszne.pl##div[data-qa="app-banner"]
  pysznieczyprzepysznie.pl##.next-post, .previous-post
  pytamy.pl##.fixFooter
-@@ -1146,7 +1146,6 @@ zimowynarodowy.pl##.ticket
+@@ -1143,7 +1143,6 @@ zimowynarodowy.pl##.ticket
  zmiksowani.pl,zrobisztosam.com##.socialContainerRrssb.fixed
  znamlek.pl###mobileAndroidAppPage > *
  zoo.torun.pl##div.torun-rp, .bip-rp
@@ -20,10 +20,18 @@ index 9ec93df80..cb5131e9a 100644
  ztm.gda.pl###mobile
  zut.com.pl###priceList
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 7efac0d59..65c0fe6b3 100644
+index 7efac0d59..2d90a3d70 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1235,7 +1235,6 @@ pksszczecin.info##.k7_newsletter
+@@ -1041,7 +1041,6 @@ muzyczneradio.pl##.newsletter.col-md-3
+ muzykotekaszkolna.pl##.nl-subscribe
+ mw.org.pl###wpsb
+ mydevil.net##body > .white-bg
+-myjki.com###newsletter_block
+ myloview.pl###submitMe
+ mymeest.pl###newsletterSection
+ myphone.pl##div.stayInContact__item:nth-of-type(3)
+@@ -1235,7 +1234,6 @@ pksszczecin.info##.k7_newsletter
  pl-eu.puma.com##.footer-logo-email
  pl.aleteia.org###logo-newsletter-follow, .module-newsletter-form
  pl.ejo-online.eu###footer > div > div.threecol:nth-of-type(2)
@@ -31,7 +39,17 @@ index 7efac0d59..65c0fe6b3 100644
  pl.huel.com##.EmailSignup
  pl.malwarebytes.com##.newsletter-refresh
  pl.nowystyl.com###freshmail-button.freshmail__button
-@@ -1784,7 +1783,6 @@ woolloop.pl###text-10
+@@ -1485,9 +1483,6 @@ sklepkupiec.pl##.footer-block.newsllt
+ sklepmarka.pl##.newletter-header
+ sklepsaturn.pl,sprzet-fryzjerski.pl###social > a[href="/newsletter/add"]
+ skorzany.com###zapisz-sie
+-skrivanek.pl###custom_html-3 > div > a[href*="newsletter"]
+-skrivanek.pl#?##custom_html-3 > div > p:-abp-contains(newslettera)
+-skrivanek.pl#?##custom_html-3 > h3:-abp-contains(Newsletter)
+ skuteczneraporty.pl##.post .wf2-embedded.grwf2-wrapper
+ slaskietrendy.pl##.kp-newsletter-widget.widget
+ slawomirzawislak.pl##.moduletable-newsletter
+@@ -1784,7 +1779,6 @@ woolloop.pl###text-10
  worldbank.org##.lp__footersearch_section
  wprost.pl##.newsletter-plugin
  wprost.pl##.stay-updated
@@ -40,7 +58,7 @@ index 7efac0d59..65c0fe6b3 100644
  wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
  wrp.pl##.vc_general.vc_cta3
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index dace96c37..f974bbb3a 100644
+index 170705c02..902d40038 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -6,7 +6,7 @@ biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl#
@@ -52,7 +70,7 @@ index dace96c37..f974bbb3a 100644
  1000dni.pl###news-popup
  51015kids.eu,lee.pl,willsoor.pl###newsletter_popup
  aasapolska.pl###leave-page-modal
-@@ -683,7 +683,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -682,7 +682,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
  retailnet.pl,rp.pl##tqwidget
@@ -60,6 +78,19 @@ index dace96c37..f974bbb3a 100644
  rms.pl##.sj-popup-container
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index b9448455e..7685f0dbf 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -84,7 +84,7 @@ androidowy.pl,brodatyzbir.pl,coffeedesk.pl,jaktodaleko.pl,kalejdoskopbudowlany.p
+ anetaduk.com,liletink.pl,lukasiewicz.gov.pl,moto.lca.pl,potplayerclub.pl###myBtn
+ animalistka.pl,faltusdesign.wordpress.com,rygalo.com##.tothetop
+ anmarniemcz.pl,apia.pl,icrow.pl,nat.pl,odrzanska.eu,ti-ksiaz.iap.pl##.page-scroll-up
+-answear.com,myjki.com,myjki.eu,radiopoznan.fm,wielkishoe.com###scrollTop
++answear.com,myjki.eu,radiopoznan.fm,wielkishoe.com###scrollTop
+ anton-paar.com,brand.ceo,gregsoft.com.pl,ore.edu.pl,salami.pl,sokolow.pl,teb.pl,zgruntudobre.com##.gototop
+ antrax.com.pl###nawTop
+ antykikoneser.pl,lajkifb.pl,likefb.pl###jas-backtop
 diff --git a/PPB/uBO_AG/inne_Chromium.txt b/PPB/uBO_AG/inne_Chromium.txt
 index a78b1daf6..c8cd77691 100644
 --- a/PPB/uBO_AG/inne_Chromium.txt
@@ -74,8 +105,21 @@ index a78b1daf6..c8cd77691 100644
  youtube.com###guide-inner-content::-webkit-scrollbar:style(width: 7px !important)
  youtube.com##html:not([dark]) #guide-inner-content::-webkit-scrollbar-thumb:style(background: #fff !important)
  youtube.com##html[dark] #guide-inner-content::-webkit-scrollbar-thumb:style(background: #999 !important)
+diff --git a/PPB/uBO_AG/powrotowe_tytuly.txt b/PPB/uBO_AG/powrotowe_tytuly.txt
+index efa1629ae..327fb0353 100644
+--- a/PPB/uBO_AG/powrotowe_tytuly.txt
++++ b/PPB/uBO_AG/powrotowe_tytuly.txt
+@@ -4,7 +4,7 @@
+ 123lazienka.pl,keko.pl,www.pocztowy.pl##+js(aopr, document.title)
+ ach-te-internety.pl##+js(acis, currentTitle, document.title)
+ agroalex.pl##+js(aopr, x13favicon_title_text)
+-asta-net.pl,atthost.pl,csi.pl,e-baseus.com,elementstore.pl,~mail.asta-net.pl,~mail.atthost.pl,~mailer.asta-net.pl,marionex.pl,myjki.com,~panel.atthost.pl,rybnik.eu,~secure.atthost.pl,~webmail.atthost.pl##+js(aopw, document.title)
++asta-net.pl,atthost.pl,csi.pl,e-baseus.com,elementstore.pl,~mail.asta-net.pl,~mail.atthost.pl,~mailer.asta-net.pl,marionex.pl,~panel.atthost.pl,rybnik.eu,~secure.atthost.pl,~webmail.atthost.pl##+js(aopw, document.title)
+ bludshop.com,sportclub.com.pl##+js(acis, window.onblur, Wróć na )
+ casedrop.eu##+js(aeld, blur, title_on_blur)
+ czasnabuty.pl##+js(set, cnbtitle_ch, false)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 57491e564..aee18168d 100644
+index 70e3d7f30..499fa3e29 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -45,7 +45,6 @@ apartamentyzdrowie.pl###aside a:not(.Facebook)
@@ -101,8 +145,12 @@ index 57491e564..aee18168d 100644
  clineo.pl###contact_widget
  cmolmed.pl###footer > .module:last-child
  cmp.med.pl###altar-eye-catcher-div-container
-@@ -143,7 +142,7 @@ csi.pl,mesco.com.pl##div[id^="bazo_form_callback"]
- cyberbajt.pl,karchercenter-ocean.pl,klinikasnu.pl,merida.com.pl,swiss.com.pl,wspa.pl,yachtguru.pl###lhc_status_container
+@@ -140,10 +139,10 @@ corona-fishing.pl##.baner-right-sliding
+ creative.media.pl##.side_contact_us
+ credit-agricole.pl##.modal__button.link--chatbot.chatbot-img
+ csi.pl,mesco.com.pl##div[id^="bazo_form_callback"]
+-cyberbajt.pl,karchercenter-ocean.pl,klinikasnu.pl,merida.com.pl,swiss.com.pl,wspa.pl,yachtguru.pl###lhc_status_container
++cyberbajt.pl,klinikasnu.pl,merida.com.pl,swiss.com.pl,wspa.pl,yachtguru.pl###lhc_status_container
  cyberfolks.pl###livechat_close_btn
  cyberfolks.pl##div[id^="phplive_"], span[id^="phplive_"]
 -czasnaherbate.net,doz.pl,wroclaw.pl##div[class*="kodabots-promo"], div[class*="kodabots-widget"]
@@ -160,7 +208,15 @@ index 57491e564..aee18168d 100644
  komfort.pl###chatbase-bubble-window, #chatbase-bubble-button
  kompan.pl###circleWrap
  komputerswiat.pl##iframe[src^="https://cdn.brandmetrics.com/"][style*="fixed"]
-@@ -445,7 +440,6 @@ nvt.pl##.buttonWycena
+@@ -423,7 +418,6 @@ multinorfinans.no##.mod-contact-widget
+ murapol.pl###webchat
+ muzykanawesela.pl###sugeester
+ mwmskansen.pl,routery.pl##.chaty-widget
+-myjki.com###zamow-rozmowe-btn, #lhc_status_container
+ myownconference.pl##.fzom
+ mytrendyphone.pl###custom_fc_button
+ nafciarze.info###suggest-news
+@@ -445,7 +439,6 @@ nvt.pl##.buttonWycena
  odnowa.jezuici.pl##.tab-contact
  omeda.pl##.boxRight:not(.fb)
  operon.pl##.contact-trigger
@@ -168,7 +224,7 @@ index 57491e564..aee18168d 100644
  oponeo.pl##.contactOnline
  optitaxi.pl###uptocall-mini
  oracle.com##.ochat_slideout, .cw21help
-@@ -475,7 +469,6 @@ pl.000webhost.com##div[style="cursor: pointer;"]
+@@ -475,7 +468,6 @@ pl.000webhost.com##div[style="cursor: pointer;"]
  pl.canalplus.com###button-call, #button-lead
  pl.canalplus.com##.AsideButtons
  pl.factcool.com###daktela-web
@@ -176,7 +232,7 @@ index 57491e564..aee18168d 100644
  pl.malwarebytes.com###cta-feedback-flyout-en
  pl.pons.com###hj-feedback
  pl.trip.com##.mod-back-top-chat
-@@ -490,7 +483,7 @@ polish.wifilterouter.com##.chat-button-content
+@@ -490,7 +482,7 @@ polish.wifilterouter.com##.chat-button-content
  polkurier.pl##.pk-chat-container
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
@@ -185,7 +241,7 @@ index 57491e564..aee18168d 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -511,7 +504,6 @@ proshop.pl###dixa-widget-wrapper, #dixa-iframe-wrapper
+@@ -511,7 +503,6 @@ proshop.pl###dixa-widget-wrapper, #dixa-iframe-wrapper
  proshop.pl##.solvemate-widget-button
  psprices.com###chatra
  punkta.pl##.callback-widget
@@ -193,7 +249,7 @@ index 57491e564..aee18168d 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -548,7 +540,6 @@ screennetwork.pl##.button_info_box
+@@ -548,7 +539,6 @@ screennetwork.pl##.button_info_box
  scyzoryki.net###widget_shop1
  seat.pl##div[id^="wb_drag_wrapper"]
  selly.pl,x-lander.com###kayako-messenger
@@ -201,19 +257,21 @@ index 57491e564..aee18168d 100644
  semcore.pl###LeadboosterContainer, .proactiveChat
  semhub.pl##.no-text.arcu-message-button
  semmelrock.pl###float_mail, #float_phone
-@@ -577,7 +568,6 @@ sklep.grupamagnum.eu###gr-spnotifications
- sklep.nowaera.pl###ASEE_chat_chatbutton
- sklep.polsatbox.pl###__layout .hydrated
- sklep.siapre.pl###btn_telefon
--sklep.uchowanca.pl###tm-widget-lemur
+@@ -581,9 +571,6 @@ sklep.uchowanca.pl###tm-widget-lemur
  sklep.zielonyogrodek.pl##.contact-sidebar__btn
  sklephonda.pl###phone_widget
  skoda-auto.pl##div[id^="wb"] > iframe[id^="wframe"]
+-skrivanek.pl###ssb-btn-0
+-skrivanek.pl##.rplg-badge_left-fixed.rplg-badge-cnt
+-skrivanek.pl##chat-bot
+ sky-shop.pl,toyota-centrum.pl###livechat-eye-catcher
+ slusarczyk-bmw.pl###musli > li:nth-of-type(4)
+ smartney.pl##app-smartney-float-button
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-index b05bb8f88..1dd76636f 100644
+index b05bb8f88..9fbc20127 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-@@ -3,7 +3,6 @@
+@@ -3,14 +3,12 @@
  ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
  ||app.chatwoot.com/packs/js/sdk.js$script,domain=pl
  ||cdn.inbox.shoplo.com/chat.html$third-party
@@ -221,11 +279,18 @@ index b05bb8f88..1dd76636f 100644
  ||chatbro.com^$third-party,domain=pl
  ||chatwoot.*/packs/js/sdk.js$script
  ||code.tidio.co^$third-party
+ ||facebook.com/v*/plugins/customerchat.php$third-party
+ ||jivosite.com^$third-party,domain=pl
+ ||mylivechat.com/livechat2/livechat2.aspx$third-party
+-||opineo.pl/shop/slider.js.php$third-party
+ ||ssl.ceneo.pl/shops/sw.js$third-party
+ ||ssl.ceneo.pl/shops/v*/script.js$third-party
+ ||tenantpluginapiserver*.conpeek.*/cdn
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
-index f9bd5b8e4..193ecc168 100644
+index f9bd5b8e4..44abe4700 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
-@@ -2,10 +2,8 @@
+@@ -2,15 +2,12 @@
  ||airport.com.pl/livezilla/server.php
  ||amazonaws.com/app*.sugester.com/*/chat/*/widget.js$script,domain=www.dwdomel.pl
  ||amazonaws.com/inteliwise-client/saas/embed/*$script,domain=modbis.pl
@@ -236,3 +301,16 @@ index f9bd5b8e4..193ecc168 100644
  ||client.crisp.chat/l.js$script,domain=totalbet.pl
  ||client.crisp.chat/static/javascripts/client.js$script,domain=puccini.pl|www.fabrykawafelkow.pl
  ||clivio.pl/wp-content/themes/clivio/img/cursor.png
+ ||clivio.pl/wp-content/themes/clivio/img/cursorhover.png
+-||collect.chat/forms-question/*$xmlhttprequest,domain=gilotynka.pl
+ ||connect.facebook.net/en_US/sdk/xfbml.customerchat.js$domain=www.salonroman.pl
+ ||cxel.fcc-online.pl/chat/widget.js
+ ||czater.pl/assets/modules/chat/js/chat.js
+@@ -24,7 +21,6 @@
+ ||livesupport.pl/chat/createFloat*.js
+ ||livesupport.pl/chat/user*.js$script,domain=ekskluzywna.pl
+ ||niszczarki.org/templates/standard/images/jestesmy_na_allegro.jpg
+-||opineo.pl/gfx/frontend/side_slider_gfx.png
+ ||papis.pl/livechat/php/app.php
+ ||projektowanie-wnetrz-online.pl/wp-content/uploads/*/*/*-Wyslij-Zapytanie*$image
+ ||qdecor.pl/img/ceneo-widget.png

@@ -17,7 +17,7 @@ index 2a5a2d0..ab932eb 100644
  ||jak-zdobyc-dziewczyne.pl/wp-content/uploads/*/xrss.jpg
  ||katalogmsp.pl/components/com_sobi2/images/feed.gif
 diff --git a/sections/specyficzne_ukrywajace.txt b/sections/specyficzne_ukrywajace.txt
-index d33f584..c3f175f 100644
+index d33f584..f02e657 100644
 --- a/sections/specyficzne_ukrywajace.txt
 +++ b/sections/specyficzne_ukrywajace.txt
 @@ -1,7 +1,7 @@
@@ -29,26 +29,21 @@ index d33f584..c3f175f 100644
  24kato.pl,24zaglebie.pl,bytomski.pl,chorzowski.pl,glivice.pl,ngs24.pl,nowinytyskie.pl,piekary.info,rudzianin.pl,tarnowskiegory.info,zabrzenews.pl##.social-bar a[href*="xml"]
  24kurier.pl##.footData:first-of-type > ul > li:nth-of-type(8)
  24opole.pl##.rss_main
-@@ -10,9 +10,9 @@
+@@ -10,7 +10,7 @@
  40ton.net##.clearfix.sidebar-box:nth-of-type(6)
  actaenergetica.org##a[href*="/rss/pl"]
  adex.pisz.pl,alejasztuki.com,forum-brukarskie.pl,gazetawiecborska.eu,ozonowanie-powietrza.pl,parafia.mechnica.pl,przeclaw24.pl,ringpolska.pl,smwarmia.pl,stosunki-miedzynarodowe.pl,xn--bolesawiec-e0b.pl##.art-rss-tag-icon
 -agencja-informacyjna.com,bip.dzialdowo.eu,bip.gig.eu,boleslawiec.tv,centrum.fm,channel9.msdn.com,cooltura24.co.uk,debica24.eu,e-plytki.eu,ec.europa.eu,echotygodnik.info,gorlice.tv,interia.tv,kadantiscam.netlify.app,limanowa.in,lokalna.news,lubelska.tv,mmpk.info,mzuim.chorzow.eu,olesnica24.com,piroart.eu,pl.ambafrance.org,pl.near-place.com,radiomalbork.fm,sejny.info,siatka.org,slubice.tv,strzelec.info,tarnowska.tv,truso.tv,tvdami.eu,wejherowo24.info,wielkabrytaniaonline.co.uk##.rss
 +agencja-informacyjna.com,bip.dzialdowo.eu,bip.gig.eu,boleslawiec.tv,centrum.fm,channel9.msdn.com,cooltura24.co.uk,debica24.eu,e-plytki.eu,ec.europa.eu,echotygodnik.info,gorlice.tv,interia.tv,kadantiscam.netlify.app,limanowa.in,lokalna.news,lubelska.tv,mmpk.info,mzuim.chorzow.eu,olesnica24.com,piroart.eu,pl.ambafrance.org,pl.near-place.com,radiomalbork.fm,sejny.info,siatka.org,slubice.tv,strzelec.info,tarnowska.tv,truso.tv,tvdami.eu,wejherowo24.info##.rss
  agnieszkawielobob.pl,glitch.com.pl,jsdn.pl,kuchniatruckera.pl,mvno-gsm.pl,prabuty.pl,webinsider.pl,zary24.pl##.widget_rss_links
--agora.pl,chceauto.pl,cmrev.com,copernicuscenter.edu.pl,copernicusfestival.com,eurogamer.pl,filozofiawnauce.pl,lookcam.com,lublin24.pl,mmorpg.org.pl,naukaireligia.pl##a[href^="/rss"]
-+chceauto.pl,cmrev.com,copernicuscenter.edu.pl,copernicusfestival.com,eurogamer.pl,filozofiawnauce.pl,lookcam.com,lublin24.pl,mmorpg.org.pl,naukaireligia.pl##a[href^="/rss"]
+ agora.pl,chceauto.pl,cmrev.com,copernicuscenter.edu.pl,copernicusfestival.com,eurogamer.pl,filozofiawnauce.pl,lookcam.com,lublin24.pl,mmorpg.org.pl,naukaireligia.pl##a[href^="/rss"]
  aiocollective.pl,boleslawiec.tv,bydgoszcz.com,cooltura24.co.uk,debica24.eu,djoles.com,dziennik.com,echotygodnik.info,gorlice.tv,halogorlice.info,koscierzyna24.info,kwidzyn1.pl,lokalna.news,lubelska.tv,namyslow.eu,narew.info,olesnica24.com,pkobp.pl,portalpomorza.pl,poznan.pl,projektpraca.eu,sejny.info,srem.pl,strzelec.info,tarnowska.tv,tczewska.pl,telepolis.pl,truso.tv,tvdami.eu,tvmaster.eu,wejherowo24.info##.icon-rss
- aleksandrow-lodzki.pl,konkretny.pl,kosmogadka.pl,oswiecim.pl##a[href*="/feed/"]
- alicjawkrainiegarow.blogspot.com###Subscribe1
-@@ -45,12 +45,11 @@ autor.pl##.rssocial-icons.rssocial-container
- axa.pl##.has-socials
+@@ -46,11 +46,10 @@ axa.pl##.has-socials
  aztecas.eu##.stopka > div[class*="stopka2"] > a[href$="/feed/"]
  bankbps.pl,silesiabank.pl##.rss-link
--bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,gazeta.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,moto.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to##footer a[href*="/rss/"]
+ bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,gazeta.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,moto.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to##footer a[href*="/rss/"]
 -bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,gazeta.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,moto.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to,wrc.net.pl,wroclaw.pl##.googleNews
-+bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to##footer a[href*="/rss/"]
-+bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to,wrc.net.pl##.googleNews
++bankier.pl,bryla.pl,claudia.pl,czterykaty.pl,dyskusje24.pl,edziecko.pl,gazeta.pl,haps.pl,infoladnydom.pl,infozdrowie24.pl,kobieta.pl,moto.pl,plotek.pl,sport.pl,tokfm.pl,transfery.info,ugotuj.to,wrc.net.pl##.googleNews
  banzaj.pl###foot_monika
  barbelo.com.pl###topmenuright > li:first-of-type
  bazatelefonow.pl###rightpane > div:first-of-type
@@ -91,15 +86,7 @@ index d33f584..c3f175f 100644
  em.kielce.pl##.page-right > .stick
  emanta.pl##.footer-newsletter-social-box
  emea.flow.microsoft.com##.c-hyperlink[title="RSS"]
-@@ -157,7 +153,6 @@ florydziak.com###float_feed_box
- forbes.pl##.rs
- forexrev.pl##.ca_socialswidget
- forsal.pl##a[href*="/.feed"]
--forum.archlinux.org.pl###feedlinks
- forum.benchmark.pl,forum.komputerswiat.pl,forum.satkurier.pl,paranormalne.pl,rolnik-forum.pl###rss_feed
- forum.linuxmint.pl###button_rss
- forum.paramythology.pl##.footermenu > ul > li:nth-of-type(4) > a[href*="forum.paramythology.pl/misc.php"]
-@@ -187,7 +182,6 @@ gminasiedlce.pl##a[href^="/?rss"]
+@@ -187,7 +183,6 @@ gminasiedlce.pl##a[href^="/?rss"]
  godne-polecenia.pl###block-block-9 > .clearfix.block-inner > .clearfix.block-content > div
  goleniow.pl##.menu > .item7
  gorenje.pl##.sprite-socialIcon-rss
@@ -107,7 +94,7 @@ index d33f584..c3f175f 100644
  gospodarz.tv,kurier.pap.pl,powiatkamienski.pl##a[href="/rss.xml"]
  gpw.pl,gpwcatalyst.pl,newconnect.pl##a[href="/_rss"]
  grebocice.com.pl##a.footer_more_site_link:nth-of-type(2)
-@@ -220,7 +214,6 @@ interia.pl,pomponik.pl##.google-news-container
+@@ -220,7 +215,6 @@ interia.pl,pomponik.pl##.google-news-container
  interia.pl,pomponik.pl##.google-news-social-btn
  interia.pl,~poczta.interia.pl,pomponik.pl#?##react_component_article div[width="9"] div p:-abp-has(b:-abp-contains(Bądź na bieżąco) ~ a[href*="news.google.com/publications/"])
  interpretacje-podatkowe.org###hi
@@ -115,7 +102,32 @@ index d33f584..c3f175f 100644
  investors.pl###home-box-comments a.additional-link:first-of-type
  inwestycje.pl##.ico-foot-rss
  inzynieria.com##.cd-nav-social.list-inline > li:nth-of-type(6), .nav-social-top > li:nth-of-type(6)
-@@ -363,7 +356,6 @@ pepper.pl##footer#footer.footer > div:nth-child(3) > div > section:nth-child(4)
+@@ -301,8 +295,6 @@ mattomatti.com##a[href="rss"]
+ media.netflix.com##.signup-for-blog
+ media.pkobp.pl##.pko-menu__section > .pko-menu__social-icons > .pko-icon.pko-icon--rss
+ media.poczta-polska.pl##.subscribe-section__rss
+-medonet.pl#?#p.additional-article-bottom-text + .additional-article-bottom-text:-abp-has(> a[href*="news.google.com/"])
+-medonet.pl#?#p.additional-article-bottom-text:-abp-has(+ .additional-article-bottom-text a[href*="news.google.com/"])
+ megascena.pl###footer > #subscribe-out
+ melagu.pl##.ty-footer-grid > div:first-of-type > div[class*="footer-"].span16
+ mi-home.pl###newsletter_block_left
+@@ -321,7 +313,6 @@ motorola.com##.checkout-footer-social
+ mototube.pl##a[href*="mototube.pl/rss/najnowsze/"]
+ mpk.krakow.pl##a[href="/pl/kanaly-rss/"]
+ mvno-gsm.pl###nav_menu-12
+-mynaszlaku.pl##.socicon-rss
+ n1ghtwish.no-ip.pl##.footer_links_external.footer_links > a[href*="rss"]
+ nafrontendzie.pl##div.icon:nth-of-type(3)
+ namyslow.pl##.overflowFix.footerBox:nth-of-type(3) > .footerBoxHeader
+@@ -337,7 +328,6 @@ neuca.pl##a[href="o-nas/centrum-prasowe/rss"]
+ news.astronet.pl##.sc-rss
+ news.samsung.com##.sns_rss
+ newseria.pl##.ist_rss
+-newsweek.pl##.socialList .rs
+ niebezpiecznik.pl###text-3 > .textwidget > p
+ niedziela.pl##a > .mdi-rss-box.mdi
+ nj24.pl###footer-feed-icon
+@@ -363,7 +353,6 @@ pepper.pl##footer#footer.footer > div:nth-child(3) > div > section:nth-child(4)
  pepsieliot.com##.pepsi-more > .wrapper > h2
  pepsieliot.com,rybyakwariowe.eu##.rss-button
  phpcodex.com###fotter .lico, #fotter .sico
@@ -123,7 +135,7 @@ index d33f584..c3f175f 100644
  pism.pl##.boxy_poziom > ul > li:nth-of-type(4)
  pixelophobia.pl##.footer-social > h4
  pl.aliexpress.com##.product-fix-wrap
-@@ -380,7 +372,6 @@ podkasty.info##.social > li:first-of-type
+@@ -380,7 +369,6 @@ podkasty.info##.social > li:first-of-type
  policja.pl###social > li:first-of-type
  polsatnews.pl##.nav__item--rss, .container__layout.container__box:nth-of-type(3) > .section > .section__header
  polskikarting.pl##div#social-nav
@@ -131,7 +143,7 @@ index d33f584..c3f175f 100644
  porozmawiajmyoit.pl##.buzz_rss
  portalautomatyki.pl,portalrolniczy.info##.ninjarss-_rss_css a[href^="/component/ninjarsssyndicator/"]
  portalmedialny.pl##.rss_subscription
-@@ -401,7 +392,6 @@ propertynews.pl##.social-box-title, .social-box-list-link[href*="rss"]
+@@ -401,7 +389,6 @@ propertynews.pl##.social-box-title, .social-box-list-link[href*="rss"]
  przeglad-finansowy.pl###HTML3 > .widget-content > center
  przepisownia.pl###tmrcSocialTabs a[href*="/rss"]
  przysucha.pl##.mikona a[href="_private/rss.xml"]
@@ -139,7 +151,7 @@ index d33f584..c3f175f 100644
  pswbp.pl##.module-content > a[href^="/index.php/pl"]
  pszczyna.pl##.komunikacja
  pudelek.pl##a[href*="pudelek.pl/rss2.xml"]
-@@ -461,7 +451,6 @@ sneakershop.pl###links_footer_3 > li > .footer_links_sub > li:nth-of-type(2)
+@@ -461,7 +448,6 @@ sneakershop.pl###links_footer_3 > li > .footer_links_sub > li:nth-of-type(2)
  socialpress.pl##.follow_us.container-fluid
  socialpress.pl##a.header_second_row__social_search__sm:nth-of-type(4)
  sp4.pisz.pl##.er-rss-tag-icon
@@ -147,7 +159,7 @@ index d33f584..c3f175f 100644
  sp36.bytom.pl##a[href*="/feed/"] .icon-feed
  spece.it##.group.sidebar-top > p
  spece.it##.social-links > li:nth-of-type(3)
-@@ -542,7 +531,6 @@ wolnemedia.net##ul > a[href*="wolnemedia.net/kanaly-rss/"]
+@@ -542,7 +528,6 @@ wolnemedia.net##ul > a[href*="wolnemedia.net/kanaly-rss/"]
  wolnemedia.net#?##menu-icon li:nth-of-type(2):-abp-has(a[href*="/kanaly-rss/"])
  wp.pl##a[href*="//rss.wp.pl"]
  wprost.pl##.soc-buttons
