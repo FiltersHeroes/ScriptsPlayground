@@ -43,7 +43,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.25"
+SCRIPT_VERSION = "2.0.26"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -306,27 +306,8 @@ for path_to_file in args.path_to_file:
                         "Location': \'")[1].split("\'")[0]
                     if url in location:
                         status_code = 200
-            except aiohttp.ClientConnectorError as ex:
-                print(ex)
-                if "reset by peer" in str(ex):
-                    await asyncio.sleep(1)
-                    try:
-                        print(f"Checking the status of {url} again...")
-                        resp = await session.head(f"http://{url}", allow_redirects=False)
-                        status_code = resp.status
-                        if status_code in (301, 302, 307, 308):
-                            location = str(resp).split("Location': \'")[1].split("\'")[0]
-                            if url in location:
-                                status_code = 200
-                    except Exception as ex3:
-                        if not "reset by peer" in str(ex3):
-                            status_code = "000"
-                        else:
-                            status_code = "200"
-                else:
-                    status_code = "000"
-            except (aiohttp.ClientOSError, asyncio.TimeoutError, aiohttp.ServerDisconnectedError) as ex2:
-                print(ex2)
+            except (aiohttp.ClientOSError, asyncio.TimeoutError, aiohttp.ClientConnectorError, aiohttp.ServerDisconnectedError) as ex:
+                print(f"{ex} ({url})")
                 await asyncio.sleep(1)
                 try:
                     print(f"Checking the status of {url} again...")
@@ -336,8 +317,9 @@ for path_to_file in args.path_to_file:
                         location = str(resp).split("Location': \'")[1].split("\'")[0]
                         if url in location:
                             status_code = 200
-                except Exception as ex3:
-                    if not "reset by peer" in str(ex3):
+                except Exception as ex2:
+                    print(f"{ex2} ({url})")
+                    if "reset by peer" not in str(ex2):
                         status_code = "000"
                     else:
                         status_code = "200"
