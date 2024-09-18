@@ -1,44 +1,73 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 371289c4..81191813 100644
+index c1eada07..302681dd 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -13,7 +13,6 @@
+@@ -4,7 +4,6 @@
+ ||a36a438502.cache.server560960.nazwa.pl^
+ ||adpro.futurenet.club^
+ ||adsheads.go2affise.com^
+-||affiliate.playhub.store^
+ ||aoc.teleaudio.pl^
+ ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
- ||az2.expensivesurvey.click^
- ||b.connectcupids.fun^
--||bahbfce.localcamsfinder.com^
- ||bb0407d1e2.sptzoom.info^
- ||biedronka-zamyka-sklepy.24.eu^
- ||biedronkowe-karty.24.eu^
-@@ -26,7 +25,6 @@
- ||bonswiateczny.24.eu^
- ||buzz.mobiapp-games.com^
- ||c.connectcupids.fun^
--||cdnrep.reimageplus.com^
- ||ce.wielkanagroda.com^
- ||ce.wielkaniespodzianka.pl^
- ||ce.winfreetoday.com^
-@@ -90,7 +88,6 @@
- ||fcolors.blogspot.com^
- ||fejs-colors.blogspot.com^
- ||fejsopodgladacz.blogspot.com^
--||findyourlovenow5.com^
- ||fotaonline.24.eu^
- ||foto-zdjecia.24.eu^
- ||free.apps.co.pl^
-@@ -139,7 +136,6 @@
- ||netflix.apps.co.pl^
- ||new.instagramki.pl.wd.content.f81241f2e1.cache.server560960.nazwa.pl^
- ||news24.ushoppyworld.com^
--||newweb.windmedia88.com^
- ||odbieramy-karty.24.eu^
- ||odzyskajsnapy.blogspot.com^
+@@ -112,12 +111,10 @@
+ ||lakeside-fishandchips.com^
+ ||loan.arrow-finance.pl^
+ ||lp.investingops.com^
+-||lp.trade360.com^
+ ||m.pl.failmobile.net^
+ ||miasto-wiadomosci-24h.x9.eu^
+ ||microcam.ushoppyworld.com^
+ ||msu.expensivesurvey.click^
+-||mwmmwv.spiendidates.com^
+ ||myorlenblog.myfreesites.net^
+ ||naszemiasto-fakty24.x9.eu^
+ ||naszemiasto-wiadomosci24.x9.eu^
+@@ -129,30 +126,21 @@
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
-@@ -151,7 +147,6 @@
+ ||pakiety-lte-5gb.blogspot.com^
+ ||pakiety-pokemon-go.blogspot.com^
+-||parcel.duejun4sfy51ggf.nildenaksoy.com^
+ ||ping.ublock.org^
+ ||pl1.detoxic.net^
  ||pl1.maralgel.pro^
- ||pl1a.bestshopping-voucher.com^
+-||pl1a.bestshopping-voucher.com^
  ||pl2.detoxic.net^
--||pl2.xfreepresent.com^
  ||pl3.detoxic.net^
- ||pl4.yournewphones.com^
  ||pl.fxgm.com^
+ ||pl.gamemine.com^
+ ||pl.health-line.me^
+-||pl.mobile-redirection.com^
+ ||pl.thepawland.com^
+ ||pl.wd.content.2c25a9925b.cache.server560960.nazwa.pl^
+ ||pl.wd.content.51c7b93f64.cache.server560960.nazwa.pl^
+ ||pl.wd.content.9373550162.cache.server560960.nazwa.pl^
+ ||pl.wd.content.a36a438502.cache.server560960.nazwa.pl^
+ ||pl.wd.content.f81241f2e1.cache.server560960.nazwa.pl^
+-||plalg0.yourfreeshoppingvoucher.com^
+-||play.leadzu.com^
+-||plde.bestshopping-voucher.com^
+-||plmm16.bestshopping-voucher.com^
+-||plrm.bestshopping-voucher.com^
+ ||pocztapolska24.pl^
+-||polska.enchantevent.com^
+ ||portal.pl.wd.content.51c7b93f64.cache.server560960.nazwa.pl^
+ ||portalrandkowy.c.pl^
+ ||powiekszgo.c.pl^
+@@ -205,7 +193,6 @@
+ ||wiadomosci.ttva7.pl.wd.content.a36a438502.cache.server560960.nazwa.pl^
+ ||wiadomosci.tvg2.pl.wd.content.2c25a9925b.cache.server560960.nazwa.pl^
+ ||wiadomosci.tvs23.pl.wd.content.9373550162.cache.server560960.nazwa.pl^
+-||winner.giftprizewinner.com^
+ ||witamina.c.pl^
+ ||ww1.e-kino.tv^
+ ||ww2.xn--30986-udb.biz^
+@@ -230,8 +217,6 @@
+ ||zalukaj.5v.pl^
+ ||zalukaj.cam^
+ ||zalukaj.cc^
+-||zalukaj.com.pl^
+-||zalukaj.com^
+ ||zalukaj.org^
+ ||zalukaj.ws^
+ ||zalukajtv.pl^

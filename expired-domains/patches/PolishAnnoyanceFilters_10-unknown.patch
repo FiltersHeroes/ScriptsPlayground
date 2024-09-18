@@ -1,13 +1,12 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index a4ae7ccd7..aec6aa4bb 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -96,7 +96,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
- astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
- astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
- astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
--atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
-+atat.pl,bananki.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
- atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
- atrexpress.com.pl,ch24.pl###popup-box, #list-builder
- atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
+diff --git a/PPB/uBO_AG/scroll_film_suplement.txt b/PPB/uBO_AG/scroll_film_suplement.txt
+index 59f0773b8..940b29b77 100644
+--- a/PPB/uBO_AG/scroll_film_suplement.txt
++++ b/PPB/uBO_AG/scroll_film_suplement.txt
+@@ -19,7 +19,6 @@ meczyki.pl##.vi-stories-social-share-button
+ medianarodowe.com,parkiet.com,rp.pl##.component-tv__video:style(position: static !important)
+ medianarodowe.com,parkiet.com,rp.pl##.linear-tv__iframe:style(position: static !important)
+ onet.pl,~poczta.onet.pl,~www.onet.pl##div[class="player-mvp-wrap js-player-mvp-wrap active"]:style(visibility: hidden !important)
+-przegladsportowy.onet.p###videoPlayer.sticky[style*="top"]:remove-attr(style)
+ sport.interia.pl,wydarzenia.interia.pl##.vjs-fixedmonitor-wrapper-fixed:not(.vjs-fixedmonitor-fixed-slide-down):has(+ .vjs-fixedmonitor-placeholder.visible)
+ sport.interia.pl,wydarzenia.interia.pl#@#div[class*="video"] div[class="vjs-fixedmonitor-wrapper"] > div[class="vjs-fixedmonitor-wrapper-fixed vjs-fixedmonitor-fixed vjs-fixedmonitor-fixed-slide-down"]:style(visibility: hidden !important)
+ sport.interia.pl,wydarzenia.interia.pl#@#div[class*="video"] div[class="vjs-fixedmonitor-wrapper"] > div[class="vjs-fixedmonitor-wrapper-fixed vjs-fixedmonitor-fixed"]
