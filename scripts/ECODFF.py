@@ -29,6 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
 import os
+import sys
 import argparse
 import re
 import subprocess
@@ -37,11 +38,12 @@ import asyncio
 from tempfile import NamedTemporaryFile
 import importlib.util
 import dns.asyncresolver
+from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, Timeout
 import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.29"
+SCRIPT_VERSION = "2.0.30"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -126,88 +128,76 @@ for path_to_file in args.path_to_file:
             PARKED_PAT.append(park_line.strip())
 
     parked_domains = []
-    offline_webpages = []
-    online_webpages = []
-    unknown_webpages = []
+    offline_pages = []
+    online_pages = []
+    unknown_pages = []
 
     sem_value = args.connections
 
-    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
+    custom_resolver = dns.asyncresolver.Resolver()
+    custom_resolver.nameservers = DNS_a
+
+    SUB_PAT = re.compile(r"(.+\.)+.+\..+$")
+
+    async def domain_dns_check(domain, limit):
         async with limit:
+            status = "online"
             try:
-                print(f"Checking the status of {url}...")
-                resp = await session.head(f"http://{url}", allow_redirects=False)
-                status_code = resp.status
-                if status_code in (301, 302, 307, 308):
-                    location = str(resp).split(
-                        "Location': \'")[1].split("\'")[0]
-                    if url in location:
-                        status_code = 200
-            except (aiohttp.ClientOSError, asyncio.TimeoutError, aiohttp.ClientConnectorError, aiohttp.ServerDisconnectedError) as ex:
-                print(f"{ex} ({url})")
-                if type(ex).__name__ == aiohttp.ServerDisconnectedError or "reset by peer" in str(ex):
-                    try:
-                        await asyncio.sleep(1)
-                        print(f"Checking the status of {url} again...")
-                        resp = await session.head(f"http://{url}", allow_redirects=False)
-                        status_code = resp.status
-                        if status_code in (301, 302, 307, 308):
-                            location = str(resp).split("Location': \'")[1].split("\'")[0]
-                            if url in location:
-                                status_code = 200
-                    except Exception as ex2:
-                        print(f"{ex2} ({url})")
-                        if "reset by peer" not in str(ex2):
-                            status_code = "000"
-                        else:
-                            status_code = "200"
-                else:
-                    status_code = "000"
+                print(f"Checking the status of {domain}...")
+                answers_NS = await custom_resolver.resolve(domain, "NS")
+            except (NXDOMAIN, Timeout):
+                status = "offline"
+            except (NoAnswer, NoNameservers):
+                try:
+                    print(f"Checking the status of {domain} again...")
+                    await custom_resolver.resolve(domain)
+                except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
+                    status = "offline"
+            else:
+                for answer in answers_NS:
+                    if any(parked_d in (str(answer)) for parked_d in PARKED_PAT):
+                        status = "parked"
             finally:
-                result = ""
-                if "status_code" in locals():
-                    result = f"{str(url)} {str(status_code)}"
+                result = f"{domain} {status}"
                 await asyncio.sleep(1)
         return result
 
-    async def save_status_code(timeout_time, limit_value):
-        session_timeout = aiohttp.ClientTimeout(
-            total=None, sock_connect=timeout_time, sock_read=timeout_time)
+    async def bulk_domain_dns_check(limit_value):
         limit = asyncio.Semaphore(limit_value)
-        resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
-        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver)) as session:
-            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in pages])
-            for status in statuses:
-                print(status)
-                if len(status.split()) > 1:
-                    status_code = status.split()[1]
-                    if not (200 <= int(status_code) <= 299) and not status_code == "000":
-                        unknown_webpages.append(f"{status}")
-                    elif status_code == "000":
-                        offline_webpages.append(status.split()[0])
-                    else:
-                        online_webpages.append(status.split()[0])
+        entries = await asyncio.gather(*[domain_dns_check(domain, limit) for domain in pages])
+        for result in entries:
+            splitted_result = result.split()
+            if splitted_result[1] == "offline":
+                offline_pages.append(splitted_result[0])
+            elif splitted_result[1] == "parked":
+                parked_domains.append(splitted_result[0])
+            elif SUB_PAT.search(splitted_result[0]):
+                online_pages.append(splitted_result[0])
 
-    asyncio.run(save_status_code(10, sem_value))
+    asyncio.run(bulk_domain_dns_check(sem_value))
+
+    if parked_domains:
+        with open(PARKED_FILE, 'w', encoding="utf-8") as p_f:
+            for parked_domain in parked_domains:
+                p_f.write(f"{parked_domain}\n")
+        del parked_domains
 
     if os.path.exists(temp_path):
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
 
     # Copying URLs containing subdomains
-    SUB_PAT = re.compile(r"(.+\.)+.+\..+$")
-    with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
-        for page in offline_webpages:
-            if SUB_PAT.search(page):
-                sub_temp_file.write(f"{page}\n")
+    if offline_pages:
+        with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
+            for page in offline_pages:
+                if SUB_PAT.search(page):
+                    sub_temp_file.write(f"{page}\n")
 
-    spec = importlib.util.spec_from_file_location(
-        "Sd2D", pj(script_path, "Sd2D.py"))
-    Sd2D = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(Sd2D)
-
-    if offline_webpages:
-        results_Sd2D = sorted(set(Sd2D.main(offline_webpages)))
+        spec = importlib.util.spec_from_file_location(
+            "Sd2D", pj(script_path, "Sd2D.py"))
+        Sd2D = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(Sd2D)
+        results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
 
         with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as Sd2D_result_file:
             Sd2D_result_file.write('\n'.join(results_Sd2D))
@@ -227,7 +217,7 @@ for path_to_file in args.path_to_file:
 
         if DSC_decoded_result:
             print(DSC_decoded_result)
-            with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_webpages_temp_file:
+            with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file:
                 for entry in DSC_decoded_result.strip().splitlines():
                     splitted_entry = entry.split()
                     if splitted_entry[1] in EXPIRED_SW:
@@ -235,13 +225,13 @@ for path_to_file in args.path_to_file:
                     elif splitted_entry[1] == "Limit_exceeded":
                         l_f.write(f"{splitted_entry[0]}\n")
                     elif splitted_entry[1] == "Unknown":
-                        unknown_webpages.append(f"{splitted_entry[0]} 000")
+                        unknown_pages.append(splitted_entry[0])
                     elif splitted_entry[1] == "No_internet":
                         no_internet_temp_file.write(
                             f"{splitted_entry[0]}\n")
                     # We need to know which domains of subdomains are working
                     elif splitted_entry[1] == "Valid":
-                        valid_webpages_temp_file.write(
+                        valid_pages_temp_file.write(
                             f"{splitted_entry[0]}\n")
             del DSC_decoded_result, DSC_result
 
@@ -249,15 +239,15 @@ for path_to_file in args.path_to_file:
             DSC_result = subprocess.run(
                 DSC + ["-f", no_internet_temp_file.name], check=False, capture_output=True, text=True)
             DSC_decoded_result = DSC_result.stdout
-    
+
             os.remove(no_internet_temp_file.name)
-    
+
             if DSC_error := DSC_result.stderr:
                 print(DSC_error)
-    
+
             if DSC_decoded_result:
                 print(DSC_decoded_result)
-                with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_webpages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
+                with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
                     for entry in DSC_decoded_result.strip().splitlines():
                         splitted_entry = entry.split()
                         if splitted_entry[1] in EXPIRED_SW:
@@ -265,7 +255,7 @@ for path_to_file in args.path_to_file:
                         elif splitted_entry[1] == "Limit_exceeded":
                             l_f.write(f"{splitted_entry[0]}\n")
                         elif splitted_entry[1] == "Unknown":
-                            unknown_webpages.append(f"{splitted_entry[0]} 000")
+                            unknown_pages.append(splitted_entry[0])
                         elif splitted_entry[1] == "No_internet":
                             no_i_f.write(f"{splitted_entry[0]}\n")
                         # We need to know which domains of subdomains are working
@@ -273,10 +263,10 @@ for path_to_file in args.path_to_file:
                             valid_temp_file.write(
                                 f"{splitted_entry[0]}\n")
 
-        if os.path.isfile(valid_webpages_temp_file.name) and os.path.isfile(sub_temp_file.name):
+        if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
             valid_domains = []
             regex_domains = ""
-            with open(valid_webpages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
+            with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
                 for entry in valid_tmp_file:
                     if entry := entry.strip():
                         valid_domains.append(entry)
@@ -290,56 +280,115 @@ for path_to_file in args.path_to_file:
                         # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
                         if regex_domains.search(sub_entry):
                             if not sub_entry in valid_domains:
-                                unknown_webpages.append(f"{sub_entry} 000")
+                                unknown_pages.append(sub_entry)
             os.remove(sub_temp_file.name)
-            for valid_domain in valid_domains:
-                online_webpages.append(valid_domain)
             del valid_domains
 
-    if unknown_webpages:
-        with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
-            for unknown_webpage in unknown_webpages:
-                u_f.write(f"{unknown_webpage}\n")
-    del unknown_webpages
-
-    if online_webpages:
-        custom_resolver = dns.asyncresolver.Resolver()
-        custom_resolver.nameservers = DNS_a
-
-        async def domain_dns_check(domain, limit):
-            async with limit:
-                status = "online"
-                try:
-                    print(f"Checking the status of {domain}...")
-                    answers_NS = await custom_resolver.resolve(domain, "NS")
-                except Exception as ex:
-                    print(f"{ex} ({domain})")
+    request_headers = {
+        'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+        'Connection': 'keep-alive',
+    }
+    
+    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
+        async with limit:
+            try:
+                print(f"Checking the status of {url}...")
+                resp = await session.get(f"http://{url}", allow_redirects=False)
+                status_code = resp.status
+                if (400 <= int(status_code) <= 499) and SUB_PAT.search(url):
+                    print(f"Checking the status of {url} again...")
+                    resp = await session.get(f"https://{url}", allow_redirects=False)
+                    status_code = resp.status
+                if status_code in (301, 302, 307, 308):
+                    location = str(resp).split(
+                        "Location': \'")[1].split("\'")[0]
+                    if url in location:
+                        status_code = 200
+            except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
+                print(f"{ex} ({url})")
+                if "reset by peer" in str(ex):
+                    try:
+                        await asyncio.sleep(1)
+                        print(f"Checking the status of {url} again...")
+                        resp = await session.get(f"http://{url}", allow_redirects=False)
+                        status_code = resp.status
+                        if status_code in (301, 302, 307, 308):
+                            location = str(resp).split("Location': \'")[1].split("\'")[0]
+                            if url in location:
+                                status_code = 200
+                    except Exception as ex2:
+                        print(f"{ex2} ({url})")
+                        if "reset by peer" not in str(ex2):
+                            status_code = "000"
+                        else:
+                            status_code = "200"
                 else:
-                    for answer in answers_NS:
-                        if any(parked_d in (str(answer)) for parked_d in PARKED_PAT):
-                            status = "parked"
-                finally:
-                    result = f"{domain} {status}"
+                    status_code = "000"
+            except (aiohttp.ServerDisconnectedError, asyncio.TimeoutError) as ex:
+                print(f"{ex} ({url})")
+                try:
                     await asyncio.sleep(1)
-            return result
+                    print(f"Checking the status of {url} again...")
+                    resp = await session.get(f"https://{url}", allow_redirects=False)
+                    status_code = resp.status
+                    if status_code in (301, 302, 307, 308):
+                        location = str(resp).split("Location': \'")[1].split("\'")[0]
+                        if url in location:
+                            status_code = 200
+                except Exception as ex2:
+                    print(f"{ex2} ({url})")
+                    if "reset by peer" not in str(ex2):
+                        status_code = "000"
+                    else:
+                        status_code = "200"
+            except aiohttp.client_exceptions.ClientResponseError as ex:
+                print(f"{ex} ({url})")
+                status_code = "000"
+            finally:
+                result = ""
+                if "status_code" in locals():
+                    result = f"{str(url)} {str(status_code)}"
+                await asyncio.sleep(1)
+        return result
 
-        async def bulk_domain_dns_check(limit_value):
-            limit = asyncio.Semaphore(limit_value)
-            entries = await asyncio.gather(*[domain_dns_check(domain, limit) for domain in online_webpages])
-            for result in entries:
-                splitted_result = result.split()
-                if splitted_result[1] == "parked":
-                    parked_domains.append(splitted_result[0])
+    async def save_status_code(timeout_time, limit_value, chosen_pages):
+        session_timeout = aiohttp.ClientTimeout(
+            total=None, sock_connect=timeout_time, sock_read=timeout_time)
+        limit = asyncio.Semaphore(limit_value)
+        resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
+        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in chosen_pages])
+            with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
+                for status in statuses:
+                    print(status)
+                    if len(status.split()) > 1:
+                        status_code = status.split()[1]
+                        if not (200 <= int(status_code) <= 299):
+                            u_f.write(f"{status}\n")
 
-        asyncio.run(bulk_domain_dns_check(sem_value))
+    new_unknown_pages = sorted(set(unknown_pages))
+    unknown_pages = new_unknown_pages
+    del new_unknown_pages
+    if unknown_pages:
+        asyncio.run(save_status_code(10, sem_value, unknown_pages))
 
-    if parked_domains:
-        with open(PARKED_FILE, 'w', encoding="utf-8") as p_f:
-            for parked_domain in parked_domains:
-                p_f.write(f"{parked_domain}\n")
-        del parked_domains
+    async def save_status_code2(timeout_time, limit_value, chosen_pages):
+        session_timeout = aiohttp.ClientTimeout(
+            total=None, sock_connect=timeout_time, sock_read=timeout_time)
+        limit = asyncio.Semaphore(limit_value)
+        resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
+        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in chosen_pages])
+            with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
+                for status in statuses:
+                    if len(status.split()) > 1:
+                        status_code = status.split()[1]
+                        if not (200 <= int(status_code) <= 299) and status_code != "000":
+                            print(status)
+                            u_f.write(f"{status}\n")
 
-    del pages, offline_webpages
+    if online_pages:
+        asyncio.run(save_status_code2(10, sem_value, online_pages))
 
     # Sort and remove duplicated domains
     for e_file in [EXPIRED_FILE, UNKNOWN_FILE, LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]:
