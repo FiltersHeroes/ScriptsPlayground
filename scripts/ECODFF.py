@@ -42,7 +42,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.33"
+SCRIPT_VERSION = "2.0.34"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -144,13 +144,13 @@ for path_to_file in args.path_to_file:
             try:
                 print(f"Checking the status of {domain}...")
                 answers_NS = await custom_resolver.resolve(domain, "NS")
-            except (NXDOMAIN, Timeout) as ex:
-                print(f"{ex} ({domain})")
+            except NXDOMAIN:
                 status = "offline"
-            except (NoAnswer, NoNameservers) as ex:
+            except (NoAnswer, NoNameservers, Timeout) as ex:
                 try:
                     print(f"{ex} ({domain})")
                     print(f"Checking the status of {domain} again...")
+                    await asyncio.sleep(1)
                     await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
@@ -160,7 +160,7 @@ for path_to_file in args.path_to_file:
                         status = "parked"
             finally:
                 result = f"{domain} {status}"
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(1)
         return result
 
     async def bulk_domain_dns_check(limit_value):
@@ -353,7 +353,7 @@ for path_to_file in args.path_to_file:
                 result = ""
                 if "status_code" in locals():
                     result = f"{str(url)} {str(status_code)}"
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(1)
         return result
 
     async def save_status_code(timeout_time, limit_value):
