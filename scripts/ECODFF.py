@@ -42,7 +42,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.32"
+SCRIPT_VERSION = "2.0.33"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -144,10 +144,12 @@ for path_to_file in args.path_to_file:
             try:
                 print(f"Checking the status of {domain}...")
                 answers_NS = await custom_resolver.resolve(domain, "NS")
-            except (NXDOMAIN, Timeout):
+            except (NXDOMAIN, Timeout) as ex:
+                print(f"{ex} ({domain})")
                 status = "offline"
-            except (NoAnswer, NoNameservers):
+            except (NoAnswer, NoNameservers) as ex:
                 try:
+                    print(f"{ex} ({domain})")
                     print(f"Checking the status of {domain} again...")
                     await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
@@ -306,11 +308,14 @@ for path_to_file in args.path_to_file:
                         status_code = 200
             except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
                 print(f"{ex} ({url})")
-                if "reset by peer" in str(ex):
+                if "reset by peer" in str(ex) or (not SUB_PAT.search(url) and not WWW_PAT.search(url)):
                     try:
                         await asyncio.sleep(1)
                         print(f"Checking the status of {url} again...")
-                        resp = await session.get(f"http://{url}", allow_redirects=False)
+                        newUrl = f"http://{url}"
+                        if not SUB_PAT.search(url) and not WWW_PAT.search(url):
+                            newUrl = f"http://www.{url}"
+                        resp = await session.get(newUrl, allow_redirects=False)
                         status_code = resp.status
                         if status_code in (301, 302, 307, 308):
                             location = str(resp).split("Location': \'")[1].split("\'")[0]
