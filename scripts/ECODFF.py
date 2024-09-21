@@ -42,7 +42,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.34"
+SCRIPT_VERSION = "2.0.35"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -50,6 +50,7 @@ parser.add_argument('path_to_file', type=str, nargs='+', action='store')
 parser.add_argument("-c", "--connections", type=int, action='store', default=20)
 parser.add_argument("-v", "--version", action='version',
                     version="ECODFF" + ' ' + SCRIPT_VERSION)
+parser.add_argument("--dns", action='store', type=str, nargs="+")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -76,7 +77,9 @@ if not os.path.isdir(EXPIRED_DIR):
     with open(pj(EXPIRED_DIR, ".keep"), 'w', encoding="utf-8") as fp:
         pass
 
-DNS_a = ["9.9.9.10", "149.112.112.10"]
+DNS_a = ""
+if args.dns:
+    DNS_a = args.dns
 
 for path_to_file in args.path_to_file:
     FILTERLIST = os.path.splitext(os.path.basename(path_to_file))[0]
@@ -134,7 +137,8 @@ for path_to_file in args.path_to_file:
     sem_value = args.connections
 
     custom_resolver = dns.asyncresolver.Resolver()
-    custom_resolver.nameservers = DNS_a
+    if DNS_a:
+        custom_resolver.nameservers = DNS_a
 
     SUB_PAT = re.compile(r"(.+\.)+.+\..+$")
 
@@ -143,6 +147,7 @@ for path_to_file in args.path_to_file:
             status = "online"
             try:
                 print(f"Checking the status of {domain}...")
+                await asyncio.sleep(1)
                 answers_NS = await custom_resolver.resolve(domain, "NS")
             except NXDOMAIN:
                 status = "offline"
@@ -160,7 +165,6 @@ for path_to_file in args.path_to_file:
                         status = "parked"
             finally:
                 result = f"{domain} {status}"
-                await asyncio.sleep(1)
         return result
 
     async def bulk_domain_dns_check(limit_value):
@@ -294,6 +298,7 @@ for path_to_file in args.path_to_file:
         async with limit:
             try:
                 print(f"Checking the status of {url}...")
+                await asyncio.sleep(1)
                 resp = await session.get(f"http://{url}", allow_redirects=False)
                 status_code = resp.status
                 if (400 <= int(status_code) <= 499) and SUB_PAT.search(url):
@@ -353,14 +358,15 @@ for path_to_file in args.path_to_file:
                 result = ""
                 if "status_code" in locals():
                     result = f"{str(url)} {str(status_code)}"
-                await asyncio.sleep(1)
         return result
 
     async def save_status_code(timeout_time, limit_value):
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
-        resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
+        resolver = aiohttp.AsyncResolver()
+        if DNS_a:
+            resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
         async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
             statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
