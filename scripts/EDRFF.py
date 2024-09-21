@@ -3,15 +3,15 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.7.5
+# v1.8
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
 import sys
 import shutil
 import re
-from tempfile import NamedTemporaryFile
 from multiprocessing import Pool
+import subprocess
 
 pj = os.path.join
 pn = os.path.normpath
@@ -93,3 +93,12 @@ with Pool() as p:
 
 os.chdir(main_path)
 os.rmdir(temp_path)
+
+if "KAD" in sections_path and not "KADhosts" in sections_path:
+    tp_names = ["CERT", "LWS"]
+    main_path = pn(pj(sections_path, ".."))
+    for tp_name in tp_names:
+        U3E_result = subprocess.run([pj(main_path, "scripts", "update3pExpired.py"), tp_name, sys.argv[2]], check=False, capture_output=True, text=True)
+        print(U3E_result.stdout)
+        if U3E_result := U3E_result:
+            print(U3E_result)
