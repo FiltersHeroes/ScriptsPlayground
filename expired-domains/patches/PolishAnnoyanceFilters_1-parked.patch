@@ -1,24 +1,13 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 775cc5aa3..8c4542e5b 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -155,7 +155,7 @@ bluecity.pl##.popupContent
- bluecity.pl,oponeo.pl,wearmedicine.com,word.czest.pl###cboxOverlay
- blueskypolska.pl###tws_i_0.mobile_toplayer
- bodyland.pl,hairstore.pl###newsletter-lightbox-holder
--boleslawiec.tv,bydgoszcz.com,echotygodnik.info,gorlice.tv,halogorlice.info,kociewiak.pl,koscierzyna24.info,kwidzyn1.pl,lokalna24.pl,lokalnatelewizja.pl,narew.info,naszrynek.pl,nasztomaszow.pl,obserwatorlokalny.pl,olesnica24.com,portalpomorza.pl,portalwloclawek.pl,radiobonton.pl,regatv.pl,rolnik.pl,sandomierztv.pl,starachowice.pl,supertydzien.pl,swiebodzin.tv,tczewska.pl,telewizjazary.pl,tv-kwidzyn.pl,tvmorag.pl,wagner-polska.com.pl##.toplayer
-+boleslawiec.tv,bydgoszcz.com,echotygodnik.info,gorlice.tv,halogorlice.info,kociewiak.pl,koscierzyna24.info,kwidzyn1.pl,lokalna24.pl,lokalnatelewizja.pl,narew.info,naszrynek.pl,nasztomaszow.pl,obserwatorlokalny.pl,olesnica24.com,portalpomorza.pl,portalwloclawek.pl,radiobonton.pl,regatv.pl,rolnik.pl,sandomierztv.pl,starachowice.pl,supertydzien.pl,tczewska.pl,telewizjazary.pl,tv-kwidzyn.pl,tvmorag.pl,wagner-polska.com.pl##.toplayer
- bolix.pl,pushpushgo.com###ebook-popup
- bonprix.pl,dragonmask.pl,dziergaczkowo.pl,virtualo.pl,walizkazabawek.pl,webcamera.pl##body:not(.modal-open) .newsletter-modal, .modal-backdrop
- born2be.pl,butysportowe.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl##.snrs-modal-wrapper
-diff --git a/PPB/tla_autoreklamy.txt b/PPB/tla_autoreklamy.txt
-index 2c47f5523..d4f8dec5c 100644
---- a/PPB/tla_autoreklamy.txt
-+++ b/PPB/tla_autoreklamy.txt
-@@ -1,5 +1,5 @@
- aptekagemini.pl,gemini.pl##.background-advertisement
--boleslawiec.tv,bydgoszcz.com,echotygodnik.info,halogorlice.info,korso24.pl,koscierzyna24.info,lokalna24.pl,lokalnatelewizja.pl,narew.info,naszrynek.pl,nasztomaszow.pl,obserwatorlokalny.pl,olesnica24.com,radiobonton.pl,regatv.pl,sandomierztv.pl,starachowice.pl,supertydzien.pl,swiebodzin.tv,telewizjazary.pl,tv-kwidzyn.pl,tvmorag.pl##.bgad
-+boleslawiec.tv,bydgoszcz.com,echotygodnik.info,halogorlice.info,korso24.pl,koscierzyna24.info,lokalna24.pl,lokalnatelewizja.pl,narew.info,naszrynek.pl,nasztomaszow.pl,obserwatorlokalny.pl,olesnica24.com,radiobonton.pl,regatv.pl,sandomierztv.pl,starachowice.pl,supertydzien.pl,telewizjazary.pl,tv-kwidzyn.pl,tvmorag.pl##.bgad
- czary.pl###klikalne_tlo_calosci a[href="https://sklepmagiczny.pl/pl/p/Astrologia-mundalna/88"]
- czarymary.pl###checkWidthFullMain1
- ebok.vectra.pl###main-container > .login__custom-bg
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index ea27cc8d3..b050c5b7a 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -55,7 +55,7 @@ agrotuszyn.pl,forum.gazeta.pl,niepodlegla.dzieje.pl,rozklad.klosok.eu##.toTop
+ agtom.eu###scroll_to_top
+ airbuy.pl##.js-gotop
+ airwick.pl###top-btn
+-akacja.eu,baltyk.com,biosmaak.nl,biuronet.com,blogspot.com,cemom.fr,drzwionline.net,fajne.life,fesswybitnie.com,inzynieria.com,kapitalni.org,ksiazwielki.eu,l37.eu,megasat.tv,showmag.info,stoicway.net,widoczni.com,www.etychy.org,www.rybnik.eu,zapieksy.com,zlomowisko.info##.scrollToTop
++akacja.eu,baltyk.com,biuronet.com,blogspot.com,cemom.fr,drzwionline.net,fajne.life,fesswybitnie.com,inzynieria.com,kapitalni.org,ksiazwielki.eu,l37.eu,megasat.tv,showmag.info,stoicway.net,widoczni.com,www.etychy.org,www.rybnik.eu,zapieksy.com,zlomowisko.info##.scrollToTop
+ akademia.nask.pl,gorzow.com,poczet.com,saferinternet.pl,sklep.lobos.pl,spaeden.pl###dogory
+ akardo.pl##.btn-scroll-up
+ akariaryaca.com,domtuiteraz.eu,egger.com,gettinenglish.com,infoprzasnysz.com,retailmarketexperts.com,sklepelektroniczny.com,warsztatowski.com,wynalazca.tv,zamow.online##.back-top
