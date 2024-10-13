@@ -1,8 +1,8 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 18140b1cd..3b4ce75e8 100644
+index 4adbcb919..3926a4f85 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -889,12 +889,14 @@ a1gro.com
+@@ -880,12 +880,14 @@ a1gro.com
  a1legrolokalnie.58364736.xyz
  a1legrolokalnie.6393849.xyz
  a1researchsolution.com
@@ -17,15 +17,15 @@ index 18140b1cd..3b4ce75e8 100644
  a49.95eb.icu
  a63520d957b9e21935d.from-pa.com
  a6p.poy0.lat
-@@ -904,6 +906,7 @@ a8989w8921j3131378ede-hjbhukhjk.in
+@@ -895,6 +897,7 @@ a8989w8921j3131378ede-hjbhukhjk.in
  a8y.56hn.lat
  a9b.y22n.lat
  a9f.iu4r.top
 +a9teqo.bond
  a9y.ikc7.cfd
  aa.ipgh.lat
- aaa.amwaytrade.com
-@@ -1028,6 +1031,7 @@ agencysorted.com
+ aacx.activprogg.xyz
+@@ -1019,6 +1022,7 @@ agencysorted.com
  agentpwa.deipwmix.org
  aggarwalservices.com
  agi.2jgc.lat
@@ -33,7 +33,7 @@ index 18140b1cd..3b4ce75e8 100644
  agrandatehora.com
  agrawaldryfruits.com
  agreedd-good-319057619-6a1h1qa1.netlify.app
-@@ -1269,6 +1273,7 @@ alumnosa.com
+@@ -1259,6 +1263,7 @@ alumnosa.com
  alureavenue.com
  am.kqfd.lat
  am.proinspolska.net
@@ -41,7 +41,7 @@ index 18140b1cd..3b4ce75e8 100644
  amafuture.com
  amandamarek.pl
  amazing-maamoul-1d1508.netlify.app
-@@ -1518,6 +1523,7 @@ b.buuda.xyz
+@@ -1505,6 +1510,7 @@ b.buuda.xyz
  b.proflivee.top
  b08.q2sb.top
  b0o.zhbt.skin
@@ -49,15 +49,15 @@ index 18140b1cd..3b4ce75e8 100644
  b2s.9odp.skin
  b3i.vg0w.skin
  b3u.cusu.skin
-@@ -1815,6 +1821,7 @@ borl.jfsdx.top
+@@ -1803,6 +1809,7 @@ borl.jfsdx.top
  borntoexpress.com
  bosa.adtrackr2.com
  bosepolska.pl
 +bosevi.pl
  bost.silishg.site
+ boston1773.com
  bosu.easysurveytracker.com
- bourus.com
-@@ -1994,6 +2001,7 @@ c.proflivee.top
+@@ -1986,6 +1993,7 @@ c.proflivee.top
  c0-29-cg-21.pl
  c1k.dln2.lat
  c1ldya.skin
@@ -65,7 +65,7 @@ index 18140b1cd..3b4ce75e8 100644
  c2i.nb2i.icu
  c2x9y3.brokedownbodymoshpitmind.com
  c3slal.lat
-@@ -2014,6 +2022,7 @@ c8c.x8af.icu
+@@ -2006,6 +2014,7 @@ c8c.x8af.icu
  c98a20.pl
  c9a8200da.pl
  c9l.1anw.top
@@ -73,7 +73,15 @@ index 18140b1cd..3b4ce75e8 100644
  ca-indeed.com
  ca.bxgv.top
  ca9.knr7.skin
-@@ -2213,6 +2222,7 @@ civilarcho.com
+@@ -2110,6 +2119,7 @@ centralna-tv.pl
+ centralna-tv24.pl
+ centrum-ogloszenia.pl
+ centrum-ogloszeniowe.pl
++centrum24-pl.es
+ centrum24-poland.info
+ centrum24-web.itsaol.com
+ centrum24polska.info
+@@ -2198,6 +2208,7 @@ civilarcho.com
  cj3axg.hair
  cje.d2b0.skin
  ck.vxfc.lat
@@ -81,7 +89,15 @@ index 18140b1cd..3b4ce75e8 100644
  cl.bzrf.skin
  cl.nqvb.skin
  cl.postlasonb.shop
-@@ -2782,6 +2792,7 @@ dilanrose.com
+@@ -2270,6 +2281,7 @@ com-rezerwacja73161.pl
+ comboofferbd.com
+ commonsenseafricasblog.com
+ communitybusinesspage.com
++communityhelpsmanagerpage.com
+ communitypagehelp-privacypolicypage.website
+ companykhartor.com
+ competclna.space
+@@ -2757,6 +2769,7 @@ dilanrose.com
  dilshansilvaholdings.com
  dim.gq45.sbs
  dimitrasweet50s.com
@@ -89,7 +105,15 @@ index 18140b1cd..3b4ce75e8 100644
  dirksimon.pl
  dirleddan.humming.quest
  disappointment.kentro-prolipsis.com
-@@ -3063,6 +3074,7 @@ e6y.zhbt.skin
+@@ -2813,6 +2826,7 @@ do.dypi.skin
+ do.ebxx.skin
+ do.fixetpostogrm-jcb.xyz
+ do4.9odp.skin
++do4cbd.top
+ dobro.rymedai4.monster
+ docs-login-access.codaaudlo.com
+ doctor-stanley.com
+@@ -3037,6 +3051,7 @@ e6y.zhbt.skin
  e8o.l6ft.lat
  e8s.y22n.lat
  e953py.top
@@ -97,9 +121,9 @@ index 18140b1cd..3b4ce75e8 100644
  e9h2t4.norway-iran.com
  e9t.y22n.lat
  ea.vxfc.lat
-@@ -3650,12 +3662,14 @@ f1a.poy0.lat
+@@ -3612,11 +3627,13 @@ f04.boph.lat
+ f1a.poy0.lat
  f1q5m424f3ar.digital-marketing-insights.icu
- f1r3fl0w3r2sun.browsing-assistant-request.cfd
  f2s.2epo.lat
 +f3hduq.one
  f3i.a5x7.icu
@@ -107,12 +131,11 @@ index 18140b1cd..3b4ce75e8 100644
  f5r.1mqo.top
  f68.9odp.skin
  f6d.9odp.skin
- f6f991-28165.portmap.io
 +f6fklf.top
  f6n.04d7.cc
+ f7b344.cfd
  f7v.knr7.skin
- f7z.zhbt.skin
-@@ -4098,6 +4112,7 @@ ggk.papiashvili.top
+@@ -4056,6 +4073,7 @@ ggk.papiashvili.top
  ggs.n29w.top
  gh.avlw.top
  gh.fapu.skin
@@ -120,7 +143,7 @@ index 18140b1cd..3b4ce75e8 100644
  gha.1mqo.top
  ghfjf.ninstrument.com
  ghhd.sbes.top
-@@ -4198,6 +4213,7 @@ govau-refund.cfolks.pl
+@@ -4158,6 +4176,7 @@ govau-refund.cfolks.pl
  govdep.eumashd.top
  goxi.mailpulseprso.com
  goyo.adgravity.xyz
@@ -128,38 +151,23 @@ index 18140b1cd..3b4ce75e8 100644
  gpe.plprogpltes.site
  gpfy.adyv.skin
  gptautotrader.com
-@@ -4714,6 +4730,7 @@ ihpost.809537.xyz
- ihpost.82632523.xyz
+@@ -4682,6 +4701,7 @@ ihpost.68236247.xyz
+ ihpost.809537.xyz
  ihpost.8632745.xyz
  ii.pzqe.lat
 +ii4uhg.skin
  iiel.svxdl.lat
  iigvikm.circumlocution.quest
  iiipbt.circumlocution.quest
-@@ -5002,12 +5019,14 @@ inpostedpapps.skin
- inposteeiapps.bond
- inpostes.sbs
- inposti-pl.icu
-+inpostill.buzz
- inposto.buzz
- inpostoagapp.skin
- inpostoagapp.world
- inpostoffice.lol
- inpostpl.efinitionnecklace.info
- inpostpl.elinquishscholar.info
-+inpostplvs.buzz
- inpostps.icu
- inpostt.life
- inpostv.buzz
-@@ -6024,6 +6043,7 @@ m-uu5t.icu
+@@ -5951,6 +5971,7 @@ m-tex.ofisls-pro.xyz
+ m-uu5t.icu
  m.trdingplatform.xyz
  m04.oqlf.pro
- m1st3r10us.browsing-assistant-request.cfd
 +m1zmzq.cyou
  m2.slendernpv.com
  m2j.jafv.skin
  m2wflhn43yvxo5.siptar.com
-@@ -6102,6 +6122,9 @@ mall.belenyk.site
+@@ -6027,6 +6048,9 @@ malinaborowski.pl
  malx.saigow.top
  manager.estbsher.com
  managerss-fanpager-detectesesd.online
@@ -169,7 +177,7 @@ index 18140b1cd..3b4ce75e8 100644
  manamortgages.com
  manecouit.manasan.top
  manergon.manasan.top
-@@ -6186,6 +6209,7 @@ maydrama.com
+@@ -6108,6 +6132,7 @@ maydrama.com
  mayfairaasaan.com
  mayolee.com
  maytaygou.manasan.top
@@ -177,7 +185,7 @@ index 18140b1cd..3b4ce75e8 100644
  mbl.xhbk.skin
  mbxd.bpwx.lat
  mc.ltnk.skin
-@@ -6607,6 +6631,7 @@ n9k.aely.skin
+@@ -6542,6 +6567,7 @@ n9k.aely.skin
  n9y.vmy0.icu
  n9z.im3q.icu
  na-celowniku.pl
@@ -185,7 +193,7 @@ index 18140b1cd..3b4ce75e8 100644
  na.dasj.lat
  na5.im3q.icu
  nab.speailln.top
-@@ -6752,6 +6777,7 @@ nfr.k7rv.icu
+@@ -6687,6 +6713,7 @@ nfr.k7rv.icu
  ngirw.pl
  ngochuyenkhoahocso.com
  nh.uzwl.lat
@@ -193,7 +201,7 @@ index 18140b1cd..3b4ce75e8 100644
  nhf.1mqo.top
  nhfblhl63q0b.metrics-transformation-point.cfd
  nhso.bpwx.lat
-@@ -6964,6 +6990,7 @@ o7w.vab5.cfd
+@@ -6895,6 +6922,7 @@ o7w.vab5.cfd
  o8jgbe.bond
  o8s.twe1.icu
  o96.osac.top
@@ -201,7 +209,15 @@ index 18140b1cd..3b4ce75e8 100644
  oa-com.us.kg
  oa-handles.us.kg
  oa-inhandle.us.kg
-@@ -7747,6 +7774,8 @@ pa.neda-news.com
+@@ -7073,6 +7101,7 @@ offerboffer.com
+ official.riversal.site
+ officialselfcare.com
+ officiated.info
++ofreta-698123.xyz
+ og.gjud.top
+ og.rliq.lat
+ ogiiioszeniie218753445x.pl
+@@ -7661,6 +7690,8 @@ pa.neda-news.com
  pa.pcig.lat
  pac.ginimya3.cfd
  pacifyhub.com
@@ -210,15 +226,15 @@ index 18140b1cd..3b4ce75e8 100644
  paddyabu.com
  paes.prog-x.xyz
  page-19.pl
-@@ -7891,6 +7920,7 @@ pifa.surveymonitorhub.com
+@@ -7809,6 +7840,7 @@ pifa.surveymonitorhub.com
  piga.adtrackr2.com
  pihvure.graspgovernment.com
  pil.silishg.site
 +pilnainterwencja.xyz
  pilne24-2872220107236.azureedge.net
  pilne24-6864337801438.azureedge.net
- pin.fobenae4.online
-@@ -8998,6 +9028,7 @@ secure.oldschool.com-ea.ru
+ pin.topprogit.xyz
+@@ -8899,6 +8931,7 @@ secure.oldschool.com-ea.ru
  secure2451.pl
  secured-notification.991397.com
  secureguru.icushop.sellmya36.com
@@ -226,7 +242,7 @@ index 18140b1cd..3b4ce75e8 100644
  secureupi.com
  sedgrab.weebly.com
  seed-hardcover-eagles-waiver.trycloudflare.com
-@@ -9455,6 +9486,7 @@ t5u.2hzr.icu
+@@ -9370,6 +9403,7 @@ t5u.2hzr.icu
  t69.ahnq.top
  t6b.7qob.pro
  t6lzxe.cfd
@@ -234,23 +250,15 @@ index 18140b1cd..3b4ce75e8 100644
  t6pmnj.lat
  t7l.56hn.lat
  t8o.ow7m.top
-@@ -9945,6 +9977,7 @@ ttdrs.weebly.com
- ttk.aely.skin
- tu.ajji.skin
- tu.kqfd.lat
-+tu3yap.top
- tu6.k7rv.icu
- tuanleketnoiyeuthuong.com
- tubular-khapse-f58a80.netlify.app
-@@ -10015,6 +10048,7 @@ u2l.obx3.cfd
- u3s.2s4f.one
+@@ -9932,6 +9966,7 @@ u1f.xhbk.skin
+ u2l.obx3.cfd
  u4r.poy0.lat
  u4z.2epo.lat
 +u5cxag.hair
  u5p.xhbk.skin
  u6e.s9lh.icu
  u7351105.ct.sendgrid.net
-@@ -10058,6 +10092,7 @@ ugvv.depprogg.top
+@@ -9974,6 +10009,7 @@ ugvv.depprogg.top
  uhgg.infoprog.xyz
  uht.y5gs.top
  uhw.xe1v.lat
@@ -259,10 +267,10 @@ index 18140b1cd..3b4ce75e8 100644
  uidd.czproggrm.xyz
  uiee.infoprog.xyz
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index c1ac4db78..f87bf4fac 100644
+index f75c97bdc..5e29fdd83 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -221,7 +221,6 @@
+@@ -217,7 +217,6 @@
  ||clarkswyprzedaz.com^$all
  ||cleeble.pl^$all
  ||cloudtokenwallet.com^$all
@@ -270,7 +278,7 @@ index c1ac4db78..f87bf4fac 100644
  ||cocoopt.com^$all
  ||codeandwork.pl^$all
  ||colody.pl^$all
-@@ -236,7 +235,6 @@
+@@ -232,7 +231,6 @@
  ||cool-technology.com^$all
  ||coolbox24.com^$all
  ||coramoon.com^$all
@@ -279,7 +287,7 @@ index c1ac4db78..f87bf4fac 100644
  ||coscus.shop^$all
  ||cossiekroi.pl^$all
 diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
-index 92b25a0c3..ea51c5bb0 100644
+index 18434c039..4c1987310 100644
 --- a/sections/przekierowujace_do_przekretow.txt
 +++ b/sections/przekierowujace_do_przekretow.txt
 @@ -45,7 +45,6 @@
@@ -291,10 +299,70 @@ index 92b25a0c3..ea51c5bb0 100644
  ||bitiqapp.com^$all
  ||bmscooperation.com^$doc
 diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index 09eae2dbc..db4b1673c 100644
+index 64df2c405..7c793ab13 100644
 --- a/sections/przekrety.txt
 +++ b/sections/przekrety.txt
-@@ -674,7 +674,6 @@
+@@ -141,9 +141,7 @@
+ ||3-84e9.cfd^$all
+ ||03-c1h.sbs^$all
+ ||3-hvq6.icu^$all
+-||03b847ca5d3b6ea4c2d5.centrum24-pl.es^$all
+ ||3bandar.com^$all
+-||3bd99d26f8b5b3ac0980.centrum24-pl.es^$all
+ ||3celestialcanvas.quest^$all
+ ||3d54fr.cc^$all
+ ||3dprinterltd.com^$all
+@@ -256,7 +254,6 @@
+ ||6-aa8y.cfd^$all
+ ||6-do5l.cfd^$all
+ ||6arb.cfd^$all
+-||6c429ad298a42aa420c8.centrum24-pl.es^$all
+ ||6c-dpy.lat^$all
+ ||6ca9pwwpu.top^$all
+ ||6df7601o1.top^$all
+@@ -412,7 +409,6 @@
+ ||37-myf.lat^$all
+ ||38s5ec.cc^$all
+ ||39-hnx.cfd^$all
+-||40fa3b99d0a03f96ad7c.centrum24-pl.es^$all
+ ||40wpaids.com^$all
+ ||41luxoverts.com^$all
+ ||42lp.cfd^$all
+@@ -487,7 +483,6 @@
+ ||91betorspin.com^$all
+ ||93ai9.top^$all
+ ||95yd.skin^$all
+-||96ab5d4733fd869c4baa.centrum24-pl.es^$all
+ ||96betorspin.com^$all
+ ||97betorspin.com^$all
+ ||99.versex.top^$all
+@@ -542,9 +537,7 @@
+ ||245betunlim.com^$all
+ ||247emergencyplumberedinburgh.com^$all
+ ||254filmaker.com^$all
+-||00312b765b15c4f66718.centrum24-pl.es^$all
+ ||312mobilya.com^$all
+-||315c25c0d5012f500aa1.centrum24-pl.es^$all
+ ||333boi.com^$all
+ ||350linemerch.com^$all
+ ||360businesssconsults.com^$all
+@@ -618,7 +611,6 @@
+ ||7900-logowania-nastepny.noahcze.eu^$all
+ ||8441.www3centrum24-pl.es^$all
+ ||8824e7f7b3c4417a96d5-wwwcentrum24-pl.nk1-no.es^$all
+-||8824e7f7b3c4417a96d5.centrum24-pl.es^$all
+ ||8876xx1.cc^$all
+ ||10331.ream.top^$all
+ ||10580e1a9bc4b30e08a242a2e19957fa.serveo.net^$all
+@@ -628,7 +620,6 @@
+ ||22469.top^$all
+ ||22639.top^$all
+ ||042896.com^$all
+-||50347bfda100c6a3104a.centrum24-pl.es^$all
+ ||071324.com^$all
+ ||77328e7b.session-ctls.pages.dev^$all
+ ||79593b68.augustoxs.com^$all
+@@ -684,7 +675,6 @@
  ||a0o2.cfd^$all
  ||a0tomotion.xyz^$all
  ||a1ohds.com^$all
@@ -302,7 +370,7 @@ index 09eae2dbc..db4b1673c 100644
  ||a1zwxo.top^$all
  ||a2carsdartford.com^$all
  ||a2loan.com^$all
-@@ -684,7 +683,6 @@
+@@ -694,7 +684,6 @@
  ||a2zpreowned.com^$all
  ||a2zvintage.com^$all
  ||a3qpgn.top^$all
@@ -310,15 +378,23 @@ index 09eae2dbc..db4b1673c 100644
  ||a3wfncy21wl7.cfd^$all
  ||a3zjxq.bond^$all
  ||a4ffqv.one^$all
-@@ -702,7 +700,6 @@
- ||a8dhee.sbs^$all
+@@ -714,7 +703,6 @@
  ||a8tuhn.lol^$all
  ||a9cdlq.lol^$all
+ ||a9qfhp.cyou^$all
 -||a9teqo.bond^$all
  ||a11post.com^$all
  ||a12b.cfd^$all
  ||a15dp7gw.forms.app^$all
-@@ -1088,7 +1085,6 @@
+@@ -1032,7 +1020,6 @@
+ ||aetherialhub.com^$all
+ ||aethershapes.com^$all
+ ||afb88asia.com^$all
+-||afbc807c0753a9327955.centrum24-pl.es^$all
+ ||afckolhapur.com^$all
+ ||afen.beblon.com^$all
+ ||afetosmile.com^$all
+@@ -1107,7 +1094,6 @@
  ||agn.digitkin.top^$all
  ||agn.newpol.xyz^$all
  ||agnieszka-surowiec-fotografia-rodzinna.myfreesites.net^$all
@@ -326,7 +402,7 @@ index 09eae2dbc..db4b1673c 100644
  ||ago.monster^$all
  ||agomy.org^$all
  ||agostinodeangelis.com^$all
-@@ -1776,7 +1772,6 @@
+@@ -1849,7 +1835,6 @@
  ||alydewji.com^$all
  ||alyssummarketing.com^$all
  ||am0r0usadv6ntures.sbs^$all
@@ -334,7 +410,7 @@ index 09eae2dbc..db4b1673c 100644
  ||am6wbo.lol^$all
  ||am8djv.skin^$all
  ||am.aqhx.top^$all
-@@ -2809,7 +2804,6 @@
+@@ -2889,7 +2874,6 @@
  ||b1xfff.one^$all
  ||b2bdailybuzz.com^$all
  ||b2bglobalroutes.com^$all
@@ -342,7 +418,7 @@ index 09eae2dbc..db4b1673c 100644
  ||b2mhde.rest^$all
  ||b3am.xyz^$all
  ||b3lvmx.rest^$all
-@@ -2899,7 +2893,6 @@
+@@ -2979,7 +2963,6 @@
  ||baderexpress.com^$all
  ||badgermountainsupply.com^$all
  ||badgesign.store^$all
@@ -350,7 +426,23 @@ index 09eae2dbc..db4b1673c 100644
  ||badohman.com^$all
  ||badrmotion.com^$all
  ||badycao8.online^$all
-@@ -3949,7 +3942,6 @@
+@@ -3212,7 +3195,6 @@
+ ||bbuuddaa.tilda.ws^$all
+ ||bbwkitten.com^$all
+ ||bbwsites.biz^$all
+-||bc1ddac1a78f98749f1a.centrum24-pl.es^$all
+ ||bc-trueinfo.xyz^$all
+ ||bc.forrum.top^$all
+ ||bccilive.com^$all
+@@ -3223,7 +3205,6 @@
+ ||bcsautoglass.com^$all
+ ||bcufojzz.formester.com^$all
+ ||bcvs.thenextstep.top^$all
+-||bd7e37f76fb11889ff0d.centrum24-pl.es^$all
+ ||bd.digitkin.top^$all
+ ||bd.newpol.xyz^$all
+ ||bd.waagge.top^$all
+@@ -4047,7 +4028,6 @@
  ||bortnei.xyz^$all
  ||bosch-eu.shop^$all
  ||bosch-lidl.shop^$all
@@ -358,15 +450,15 @@ index 09eae2dbc..db4b1673c 100644
  ||bosphorusboutiques.online^$all
  ||bosquesdebavaria.com^$all
  ||bosratu338.sbs^$all
-@@ -4634,7 +4626,6 @@
+@@ -4731,7 +4711,6 @@
  ||c1dercelebrati0n.xyz^$all
  ||c1nnam1nchar1m.xyz^$all
  ||c1nrwz.cyou^$all
 -||c1zdrh.hair^$all
  ||c1ze804bhlccomw.highway-kly.com^$all
  ||c2darcelestial.xyz^$all
- ||c2ivtv.lol^$all
-@@ -4649,7 +4640,6 @@
+ ||c2dmax.hair^$all
+@@ -4749,7 +4728,6 @@
  ||c8wvsz.rest^$all
  ||c9-b69.cfd^$all
  ||c9bu.lat^$all
@@ -374,7 +466,15 @@ index 09eae2dbc..db4b1673c 100644
  ||c9pfxz.cyou^$all
  ||c9tgrs.cyou^$all
  ||c34d.cfd^$all
-@@ -5568,7 +5558,6 @@
+@@ -5196,7 +5174,6 @@
+ ||centrodelchevrolet.com^$all
+ ||centrolinguisticorobert.com^$all
+ ||centropj.com^$all
+-||centrum24-pl.es^$all
+ ||centrum24login.com^$all
+ ||centrum-aparatow-sluchowych.pl^$all
+ ||centrum-badan.pl^$all
+@@ -5677,7 +5654,6 @@
  ||cjfyvcsa.mypi.co^$all
  ||cjzq65.csb.app^$all
  ||ck1ecraz3.xyz^$all
@@ -382,7 +482,23 @@ index 09eae2dbc..db4b1673c 100644
  ||ck6r.lat^$all
  ||ck.mtom.skin^$all
  ||ck.waptrad.top^$all
-@@ -6859,7 +6848,6 @@
+@@ -6028,7 +6004,6 @@
+ ||commonreqb.monster^$all
+ ||community-helpcenter-page1.me^$all
+ ||community.imap.contoh.ilmubaru.com^$all
+-||communityhelpsmanagerpage.com^$all
+ ||comorien.com^$all
+ ||comovamitolu.com^$all
+ ||compagnievinted.wixsite.com^$all
+@@ -6851,7 +6826,6 @@
+ ||d21li9ba0z0pmp.cloudfront.net^$all
+ ||d28sggrzet2w5e.cloudfront.net^$all
+ ||d32bl8f5hnayrn.cloudfront.net^$all
+-||d44bfc5902277389f680.centrum24-pl.es^$all
+ ||d287zd4qy.top^$all
+ ||d14001f4973a2e995fc913d5c25b509f.vultvl.pl^$all
+ ||d48110e7d1101b8326c07d73ac100a22.liamartem.pl^$all
+@@ -6988,7 +6962,6 @@
  ||daqumao.xyz^$all
  ||dar.versex.top^$all
  ||daralawi.com^$all
@@ -390,7 +506,29 @@ index 09eae2dbc..db4b1673c 100644
  ||dardaniafilm.com^$all
  ||darfet.com^$all
  ||daridark.com^$all
-@@ -8265,7 +8253,6 @@
+@@ -7079,7 +7052,6 @@
+ ||db.ahwb.top^$all
+ ||db.mtom.skin^$all
+ ||db.poxj.skin^$all
+-||dbdb815fc9cd75f885de.centrum24-pl.es^$all
+ ||dbkreations.com^$all
+ ||dbs-yes.com^$all
+ ||dbu.wodmell.top^$all
+@@ -7908,7 +7880,6 @@
+ ||dnsprolongation.pro^$all
+ ||dnsprolongationarchitecture.online^$all
+ ||do2iiw.bond^$all
+-||do4cbd.top^$all
+ ||do.aofw.top^$all
+ ||do.nwmw.skin^$all
+ ||dob.folos.top^$all
+@@ -8431,13 +8402,11 @@
+ ||e4-ij7.sbs^$all
+ ||e4lfoz.bond^$all
+ ||e4roms.cfd^$all
+-||e5deb232b897ae1aa4e5.centrum24-pl.es^$all
+ ||e5llnv.cyou^$all
+ ||e6atmi.one^$all
  ||e7-6dt.pages.dev^$all
  ||e7nude.lol^$all
  ||e8ssvn.cyou^$all
@@ -398,7 +536,7 @@ index 09eae2dbc..db4b1673c 100644
  ||e9gon879e6.pages.dev^$all
  ||e9rkop.top^$all
  ||e38c.skin^$all
-@@ -9451,11 +9438,9 @@
+@@ -9640,11 +9609,9 @@
  ||f0res11ta.xyz^$all
  ||f0restfern.xyz^$all
  ||f2tujb.one^$all
@@ -409,13 +547,8 @@ index 09eae2dbc..db4b1673c 100644
 -||f6fklf.top^$all
  ||f6twuh.bond^$all
  ||f7-4bf.icu^$all
- ||f7b344.cfd^$all
-@@ -9911,12 +9896,10 @@
- ||filmblog.rest^$all
- ||filmdopobraniacbd92.ek1.pl^$all
- ||filmen.pl^$all
--||filmest.pl^$all
- ||filmhit.pl^$all
+ ||f7pemn.icu^$all
+@@ -10108,7 +10075,6 @@
  ||filmiarentals.com^$all
  ||filmikeedey.com^$all
  ||filmikino.pl^$all
@@ -423,15 +556,15 @@ index 09eae2dbc..db4b1673c 100644
  ||filminginturkey.com^$all
  ||filmingtape.site^$all
  ||filmiser.pl^$all
-@@ -11212,7 +11195,6 @@
+@@ -11416,7 +11382,6 @@
  ||ggrengaarnish.cam^$all
  ||ggu0.cfd^$all
  ||ggutofs.com^$all
 -||gh1zmv.lol^$all
- ||ghanapsofi.top^$all
  ||ghaytqakj.xyz^$all
  ||ghaziabadmarket.com^$all
-@@ -11663,7 +11645,6 @@
+ ||ghdissocial.shop^$all
+@@ -11855,7 +11820,6 @@
  ||goyous.com^$all
  ||goyouxuan.shop^$all
  ||gozakiproducts.com^$all
@@ -439,7 +572,7 @@ index 09eae2dbc..db4b1673c 100644
  ||gp.inmq.lat^$all
  ||gp.nwmw.skin^$all
  ||gp.vbax.top^$all
-@@ -13210,7 +13191,6 @@
+@@ -13417,7 +13381,6 @@
  ||hydrangeahues.store^$all
  ||hydrocentrumkoszalin.sergiuszmarcin.pl^$all
  ||hydrogenxyz.xyz^$all
@@ -447,7 +580,7 @@ index 09eae2dbc..db4b1673c 100644
  ||hydroxychloroquineonline.com^$all
  ||hygge-books.com^$all
  ||hyhfsj.com^$all
-@@ -13419,7 +13399,6 @@
+@@ -13638,7 +13601,6 @@
  ||ihpost.632659235.xyz^$all
  ||ihpost.732659235.xyz^$all
  ||ihpostc.xyz^$all
@@ -455,23 +588,7 @@ index 09eae2dbc..db4b1673c 100644
  ||ii-inpost-pl-ii.top^$all
  ||ii-inpost-pl-ll.top^$all
  ||ii-post-lt.top^$all
-@@ -14228,7 +14207,6 @@
- ||inposthue.buzz^$all
- ||inposti.com^$all
- ||inposti.cyou^$all
--||inpostill.buzz^$all
- ||inpostin.xyz^$all
- ||inposting.one^$all
- ||inposting.sbs^$all
-@@ -14318,7 +14296,6 @@
- ||inpostpln.help^$all
- ||inpostplon.top^$all
- ||inpostplte.top^$all
--||inpostplvs.buzz^$all
- ||inpostpol.buzz^$all
- ||inpostpol.cfd^$all
- ||inpostpol.help^$all
-@@ -17448,7 +17425,6 @@
+@@ -17729,7 +17691,6 @@
  ||m1arsmyst1que.cam^$all
  ||m1stym0rnings.xyz^$all
  ||m1xior.cyou^$all
@@ -479,7 +596,7 @@ index 09eae2dbc..db4b1673c 100644
  ||m2lc.skin^$all
  ||m2m.tedmcgrathbrands.com^$all
  ||m2oyac.bond^$all
-@@ -17719,9 +17695,6 @@
+@@ -18003,9 +17964,6 @@
  ||manager-fanpage-detectara.website^$all
  ||manager-privates-pages.cloud^$all
  ||managerinfo91473.cfd^$all
@@ -489,7 +606,7 @@ index 09eae2dbc..db4b1673c 100644
  ||managerss-policiess.online^$all
  ||manajemenrisiko.com^$all
  ||manapanchayathi.com^$all
-@@ -18000,7 +17973,6 @@
+@@ -18285,7 +18243,6 @@
  ||maysdigitalgem.com^$all
  ||mazda-mydinh.com^$all
  ||mazowieckieinfo.eu^$all
@@ -497,7 +614,7 @@ index 09eae2dbc..db4b1673c 100644
  ||mb.qsse.lat^$all
  ||mb.vazba.top^$all
  ||mba.ream.top^$all
-@@ -19445,7 +19417,6 @@
+@@ -19724,7 +19681,6 @@
  ||na1urenook.xyz^$all
  ||na1urenour11sh.xyz^$all
  ||na-grp.com^$all
@@ -505,7 +622,7 @@ index 09eae2dbc..db4b1673c 100644
  ||na.systsuc.com^$all
  ||naadnapeks.shop^$all
  ||naaval.com^$all
-@@ -19917,7 +19888,6 @@
+@@ -20206,7 +20162,6 @@
  ||nggrskio.pro^$all
  ||ngscore18.com^$all
  ||nguyendieuhuong.com^$all
@@ -513,15 +630,23 @@ index 09eae2dbc..db4b1673c 100644
  ||nh50plus.com^$all
  ||nh.perf.top^$all
  ||nhacaiuytinab77.com^$all
-@@ -20328,7 +20298,6 @@
+@@ -20629,7 +20584,6 @@
  ||o8fbkg.skin^$all
  ||o8rsbg.lat^$all
  ||o8vsck.lol^$all
 -||o9bgju.one^$all
+ ||o9ngui.lat^$all
  ||o9tzuk.top^$all
  ||o9yhvi.skin^$all
- ||o50n.com^$all
-@@ -21770,8 +21739,6 @@
+@@ -21453,7 +21407,6 @@
+ ||olx.offer36901.com^$all
+ ||olx.offer-view.shop^$all
+ ||olx.officially-market.shop^$all
+-||olx.ofreta-698123.xyz^$all
+ ||olx.ogloszenie-z-przesylka.pl^$all
+ ||olx.ohuganfe.shop^$all
+ ||olx.oloxarfe.lol^$all
+@@ -22223,8 +22176,6 @@
  ||pacochaa.store^$all
  ||pacota-postil.icu^$all
  ||pacots-postil.icu^$all
@@ -530,7 +655,7 @@ index 09eae2dbc..db4b1673c 100644
  ||pacsafepolska.com^$all
  ||paczkipocztowe24.mom^$all
  ||paczkipocztowe24.top^$all
-@@ -22026,7 +21993,6 @@
+@@ -22478,7 +22429,6 @@
  ||pawlink.online^$all
  ||pawnacampbooking.com^$all
  ||pawsomeparis.com^$all
@@ -538,7 +663,7 @@ index 09eae2dbc..db4b1673c 100644
  ||pay-pl.icu^$all
  ||pay.amzon-bills.ijsidw.com^$all
  ||payback-int.com^$all
-@@ -22363,7 +22329,6 @@
+@@ -22820,7 +22770,6 @@
  ||pilna-informacja.info^$all
  ||pilnaakcja.homes^$all
  ||pilnaakcja.rest^$all
@@ -546,7 +671,7 @@ index 09eae2dbc..db4b1673c 100644
  ||pilnaintwerwencja.pics^$all
  ||pilnedoniesienie.homes^$all
  ||pilnedoniesienie.rest^$all
-@@ -26107,7 +26072,6 @@
+@@ -26690,7 +26639,6 @@
  ||secured-delicate-waterfall-d125.t765t4bj8df.workers.dev^$all
  ||secured-file.com^$all
  ||secureguardiancam.xyz^$all
@@ -554,7 +679,7 @@ index 09eae2dbc..db4b1673c 100644
  ||secureminderzone.cam^$all
  ||secureppc.com^$all
  ||securespherehub.cam^$all
-@@ -27642,7 +27606,6 @@
+@@ -28264,7 +28212,6 @@
  ||steamconmumnnity.com^$all
  ||steamconmunjty.com^$all
  ||steaminventoryhelp.com^$all
@@ -562,7 +687,7 @@ index 09eae2dbc..db4b1673c 100644
  ||steammcommunuti.ru^$all
  ||steamnconmunity.ru^$all
  ||steamproxy.net^$all
-@@ -28239,7 +28202,6 @@
+@@ -28855,7 +28802,6 @@
  ||symerex.com^$all
  ||symphonystarfruit.xyz^$all
  ||symphonyvu.sbs^$all
@@ -570,23 +695,15 @@ index 09eae2dbc..db4b1673c 100644
  ||symyfea9.pro^$all
  ||synapsechyk.com^$all
  ||synapselinkhub.top^$all
-@@ -28318,7 +28280,6 @@
+@@ -28934,7 +28880,6 @@
  ||t4fgyw.one^$all
  ||t5bumg.rest^$all
  ||t5m6.cfd^$all
 -||t6nhjb.cyou^$all
+ ||t6pkum.lat^$all
  ||t7jfrx.icu^$all
  ||t7lec9mtra2lb.sbs^$all
- ||t7p0.top^$all
-@@ -30005,7 +29966,6 @@
- ||tttserv.com^$all
- ||ttysfsfvzsfwrfwedvd.cfd^$all
- ||tu1iptr3nd70.store^$all
--||tu3yap.top^$all
- ||tu4xfj.hair^$all
- ||tuabewer.top^$all
- ||tuatarasupply.com^$all
-@@ -30220,7 +30180,6 @@
+@@ -30844,7 +30789,6 @@
  ||u2thmc.rest^$all
  ||u4fypc.cyou^$all
  ||u4pwlf.top^$all
@@ -594,7 +711,7 @@ index 09eae2dbc..db4b1673c 100644
  ||u5ette.cyou^$all
  ||u5gkdt1he.top^$all
  ||u5wryw.hair^$all
-@@ -30308,7 +30267,6 @@
+@@ -30937,7 +30881,6 @@
  ||uhohdisco.com^$all
  ||uhuddigital.com^$all
  ||uhvc.activdep.top^$all
