@@ -1,115 +1,13 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 55b6f6f8d..47575ded3 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -283,7 +283,6 @@ cba.pl##.links > div > div:nth-of-type(4)
- ccpartners.pl##.nl
- cebit.pl##a[href="http://net.cebit.pl/newsletter/"]
- centos.com.pl##form:first-of-type
--centrum-marino.com###stay-connected, #footer-social-icons
- centrum-terapii.pl###sml_subscribe_widget
- centrumdialogu.com##.clearfix.bd-no-margins.hidden-xs.bd-layoutbox-9
- centrumhandlowerobi.pl##.footer-container div.col-xxs:nth-of-type(4)
-@@ -1076,7 +1075,7 @@ nazwa.pl###news_content
- nbsklep.pl##.subscribe_newsletter
- nck.pl##.footer-banners-wrapper a.has-icon[href*="/newsletter"]
- neo24.pl##a[class^="joinNewsletter"]
--neon24.info,nowyekran24.com##.flickr-widget.widget
-+neon24.info##.flickr-widget.widget
- neonet.pl##.joinNewsletterDesktop-root-2Mr
- neonet.pl##section[class*="joinNewsletter"]
- neonet.pl,wydawnictwokobiece.pl###newsletter-home
-@@ -1436,7 +1435,6 @@ selgros.pl##.home-box3
- senetic.pl##.nws-popup__wrapper
- senetic.pl##.nwsBlock
- seniorplus.edu.pl###boczne_ikonki > a[href$="newsletter"]
--sfinks.info##.t_align_r.m_xs_bottom_30.m_bottom_20.m_xs_top_0.m_top_40.col-sm-6.col-md-6.col-lg-6
- shop.albione.eu###newsletter-slide
- shop.massdnm.com,taniefototapety.eu###menu_newsletter
- shop.prettyone.pl##.container-fluid:nth-of-type(2) > .doubleBox > .container > .row > .col-xs-6:nth-of-type(2) > h2
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index e51c20737..775cc5aa3 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -198,7 +198,7 @@ cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
- chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
- chronpesel.pl##.wh-popUp-overlay
- chrzypsko.pl,metaltech.com.pl,vas.com.pl###dhtml_popup
--ciechocinek.biz,drawskopomorskie.com,gniewkowo.eu,ki24.info,kolniak24.eu,lowiczanin.info,nizanskie.info,roztocze.net##.hejhej.hey-outer
-+ciechocinek.biz,gniewkowo.eu,ki24.info,kolniak24.eu,lowiczanin.info,nizanskie.info,roztocze.net##.hejhej.hey-outer
- ciekawe.org,cyfrowyszpital.pl,expressit.pl,gdanskstrefa.com,gracz.org,jestok.eu,polskacanada.com,reporters.pl,westhill.pl##html:not([style*="overflow"]) .boxzilla, .boxzilla-overlay
- cieszanowrockfestiwal.pl,wantmore.pl##.et_bloom_trigger_bottom.et_bloom_popup
- citroen-shop.eu##.cp-popup, .cp-popup-overlay
-@@ -578,7 +578,6 @@ olsztyn24.com###top_layer
- ombre.pl###tws_c_0
- omeda.pl###window1
- onet.pl##div[data-run-module*="stayOnServicePopup"]
--ono24.info##.bts-popup
- opencard.pl###trialModal, .modal-backdrop
- opensubtitles.org###fadeSub, #lightSub
- opiekunkaradzi.pl##.esPopupWrapper, .b-modal
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 6294f9927..b3079b284 100644
+index 237ecb7f8..e95dc7189 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -33,7 +33,7 @@ aga-toma.pl##.pow_start
- agkoperty.com.pl,eurobit.pl,komlogo.pl###totop-scroller
- agmarprzewozy.pl,agrosklad.com.pl,lalorraine.pl,ppe.pl,smartpozyczka.pl##.toTop, .toTopRWD
- agora.pl,alfasan.pl,alltronix.pl,cicius.pl,domczasuhurt.pl,forcell.pl,kulig.pl,margoshoes.pl,mia-manu.com,oleksy.pl,pl.techinfus.com,pogotowie-komputerowe.org.pl,skladprosty.pl,sklep.zielonyogrodek.pl##.up
--agrarius.eu,dictionary.cambridge.org,infobeskidy.eu,mediam.eu,mediatrust.ro,niezlomni.com,olympia-electronics.com,ono24.info,radioznin.fm,sempre.eu.com,wkret-met.com###backtotop
-+agrarius.eu,dictionary.cambridge.org,infobeskidy.eu,mediam.eu,mediatrust.ro,niezlomni.com,olympia-electronics.com,radioznin.fm,sempre.eu.com,wkret-met.com###backtotop
- agricom.pl,bychawa.pl,centrumdialogu.com,ets2mods.com,iwp.pl,oknaibramy.eu,rynek.de##div a[class*="bd-backtotop-"]
- agriculture.newholland.com,ipa-katowice.org,lakiernictwo.net,medianarodowe.com,porozmawiajmy.tv,pulawy.eu,roztocze.net,swiatopon.info###gototop
- agro-eko.com.pl##.scrollIcon
-@@ -223,7 +223,7 @@ cds-lider.com.pl,polsero.pl,www.nowiny.gliwice.pl##.btn-up
- cedynia.pl,napisy24.pl,wegemaluch.pl###smoothtop
- cellbes.pl,www.akademiareklamy.edu.pl###topscroller
- centralne.co,decobazaar.com,racjonalista.tv,sarzyna.info,strajk.eu,ztedevices.com##.gotop
--centrum-marino.com,systempartnerski.pl,ubraniadooddania.pl###scroll-up-button
-+systempartnerski.pl,ubraniadooddania.pl###scroll-up-button
- centrumdom.info##.tm-my-totop-scroller
- centrumxp.pl##.OnTop
- cepik.gov.pl##.btn__scroll-top
-@@ -232,7 +232,7 @@ chimmo.pl###arrow-up
- chmielnik.com###na_gore
- choinka-sztuczna.pl###ico_up
- choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
--ciechocinek.biz,drawskopomorskie.com,gniewkowo.eu,i-tec.pro,ki24.info,kolniak24.eu,lowiczanin.info,mohito.com,nizanskie.info,roztocze.net##.scroll-down
-+ciechocinek.biz,gniewkowo.eu,i-tec.pro,ki24.info,kolniak24.eu,lowiczanin.info,mohito.com,nizanskie.info,roztocze.net##.scroll-down
- citroen.pl,domkulturywkodniu.pl,infocrypto.pl,ipon.pl,zhp.pl###scrolltop
- citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl##.gw-grux-backToTop
- citymask.eu,gagadget.com,globalna.info,gogosmart.pro,lubawka.info##.scrolltop
-@@ -256,7 +256,7 @@ cosmed24.pl##div#page ~ a#myBtn
- crast.net,eurowizja.org,mediarun.com,zebrra.tv##.jscroll-to-top
- credit-suisse.com##.mod_scroll_to_top
- ctb.com.pl,movieway.pl,oryginalnysmak.pl,phunetcom.pl,portal.sklep.pl,prokomp-bochnia.pl,slotlodz.pl###tc-footer-btt-wrapper
--cukiernia-danuta.pl,stalremdrzwi.pl,swiatbaterii.pl,thebat.com.pl##.right.czr-btta.czr-btt.btn
-+cukiernia-danuta.pl,stalremdrzwi.pl,swiatbaterii.pl##.right.czr-btta.czr-btt.btn
- cyberplac.pl,strona24.pl,swietawdomu.pl,wynajmijdostawczaka.pl###tg-scroll-to-top
- cyberrescue.info,osram.pl,pum.edu.pl##.jump-to-top
- cyclonis.com,pantofelek24.pl###ScrollToTop
-@@ -542,7 +542,6 @@ krainaoszczedzania.pl###finoScroll
- krakow.pl###footer-scroll-up
- krasnystaw.eu##.js-up
- krd.pl##.krd-footer-scroller
--kropleinternetu.biz###gora
- kufer.poznajemyswiat.pl##.fa-arrow-up.ssttbutton-symbol
- kulinarnastronamocy.pl##.stick.stnsvn-btt
- kultura.krasnik.eu###skip_to
-@@ -676,7 +675,7 @@ naszesmieci.mos.gov.pl##.nav_up
- naszoptyk.pl##.icon-backToTop
- nazwa.pl##.arrowUp__wrapper
- neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
--neon24.info,nowyekran24.com###button-top
-+neon24.info###button-top
- neonet.pl##div[class^="scrollTopArrow-wrapper"]
- network-systems.pl,sp124.nazwa.pl,wypozyczalniachoinek.eu,zawisza.szkola.pl##.enigma_scrollup
- news.samsung.com###btn_top
-@@ -839,7 +838,6 @@ screamit.pl###div_go_top
- secure.e-konsulat.gov.pl##.go-up-button
- seoheroes.pl##.clb-scroll-top-holder
- serafin-maszyny.com##.back_to_top
--sfinks.info###go_to_top
- sfmeble.pl###chatBtn ~ div > button.w-color-orange
- sgb.pl##.jsScrollToTop
- shell.pl##.site-footer__back-to-top
+@@ -42,7 +42,7 @@ agro-factory2.eu,amfetamina.promo,diavolo-meble.eu,eosnl.eu,historiasportu.info,
+ agro-hurt.eu,decoratorium.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,naziemna.info,peskiadmin.ru,pl.delfi.lt,satservice.co.uk,sciezkimojegoswiata.com###scrollUp
+ agroas.pl##.to-the-top-link
+ agrofakt.pl##.go-down
+-agrogajda.pl,elektronik-service.com.pl,pomalujmy.pl,sklepfarmer.pl###search_scroll_mini
++agrogajda.pl,elektronik-service.com.pl,sklepfarmer.pl###search_scroll_mini
+ agrohandel.com.pl,dietlux.pl,eljacht.pl,opgj.pl,pruszczgdanski.pl,resztamamy.pl,shindaiwa.pl,smart-power.pl##.tm-totop-scroller
+ agrohandler.pl,betterland.pl,porcja.eu,strefaucznia.pl,swiece-zaplonowe.pl###to_top_wrap
+ agrojd.com,audioservice.com,chelmski.eu,dobresystemy.eu,domnowoczesny.com,dronefilmfestival.eu,empik.com,esklep.brandvital.eu,fantasy.ekstraklasa.org,fuchs.com,hakpol.info,kappahl.com,knowband.com,krokdozdrowia.com,memi.eu,mirat.eu,myanimals.com,nowy-sacz.info,nprofit.net,pk-invest.eu,pl.ecco.com,polski-supermarket.de,pozytywni.info,pzsnstart.eu,sklep.mebloart.eu,tedi.com,tp-link.com,widex.com##.scroll-to-top

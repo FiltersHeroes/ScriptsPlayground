@@ -1,14 +1,34 @@
-diff --git a/PPB/e_gazety.txt b/PPB/e_gazety.txt
-index fbc700a6c..1bac80f05 100644
---- a/PPB/e_gazety.txt
-+++ b/PPB/e_gazety.txt
-@@ -311,9 +311,6 @@ www.konstrukcjeinzynierskie.pl###g-aside > div.g-grid:nth-of-type(2)
- wyszkowiak.pl##.introCurrentIssue
- xn--przesy-energii-lnc.pl###custom_html-9
- zielonyogrodek.pl##.open.gardeners-promo
--znaczkipocztowe-kolekcja.pl###intro
--znaczkipocztowe-kolekcja.pl###subscription
--znaczkipocztowe-kolekcja.pl##aside
- zobraczkaczybez.pl###custom_html-5
- zobraczkaczybez.pl###execphp-2
- zw.com.pl##.list_share > li a[href*="/temat/81"]
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 80582e41e..c9da5fe90 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -682,7 +682,6 @@ rckik.poznan.pl###popup, #popupBg
+ realme.com##.subscribe
+ reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
+ retailnet.pl,rp.pl##tqwidget
+-rivieraparkmarvipol.pl##.fastcall_popup
+ rms.pl##.sj-popup-container
+ robojet.pl###modal_home_page, .modal-backdrop
+ rosenthal.pl###cac_popup_tlo, #cac_popup_obr
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 57c338f64..978e9f809 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -127,7 +127,7 @@ ceneo.pl###recent-activity-toast
+ centrumelektroniki.pl,technikarolna.pl##.b24-widget-button-visible
+ centrumpapieru.pl##.sb-chat-btn
+ cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
+-choinkowo.pl,olini.pl,pluszowasowa.pl,wearethecoffee.com###appReviewsWidgetWrapper
++choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
+ cinema3d.pl###popupBoxInvitation
+ cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
+ citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
+@@ -215,7 +215,7 @@ eitca.pl###block-views-Opinie_EITCA-block_2
+ ekantor.pl##.slideout-btn
+ eko-life.pl###__ChatoBeeWidget__window
+ eko-ue.pl##.fixed-right-menu
+-ekookna.pl,gerdex.com.pl,polnord.pl,rivieraparkmarvipol.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
++ekookna.pl,gerdex.com.pl,polnord.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
+ ekorekta24.pl##.opineo-link
+ ekorekta24.pl,multilampy.pl##.opineo
+ electro.pl##.is-complaintReport
