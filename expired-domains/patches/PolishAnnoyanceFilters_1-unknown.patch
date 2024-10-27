@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index f3086ceac..ba06c5c6b 100644
+index 760c29dcf..a0a74d275 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -1044,7 +1044,6 @@ trafica.eu##.shop__access
+@@ -1052,7 +1052,6 @@ trafica.eu##.shop__access
  transfering.pl##.ramka_przeczytaj_rowniez_container
  trojmiasto.pl##.AnkietaNews
  trumpeters.pl###banner_div_empty
@@ -11,7 +11,7 @@ index f3086ceac..ba06c5c6b 100644
  tulodz.pl##.page__right__box--sonda
  tuwiazowna.pl##.belka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 8ae01b733..64fa7ed95 100644
+index aecb16fd2..0b1a320e6 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -48,7 +48,7 @@ agromat.pl##.column-double.content > .flex
@@ -23,16 +23,7 @@ index 8ae01b733..64fa7ed95 100644
  ahe.lodz.pl###company-newsletter-column
  airstop.pl###snippet-newsletterSubscription-newsletterSubscription
  ajk-opakowania.eu,linktransport.eu,mierzeja.com###newsletter
-@@ -920,7 +920,7 @@ luxfood.pl###Left > .nyroModal:first-of-type
- luxmed-diagnostyka.pl##.newesletter-box
- lycamobile.pl##.lm-footer-container > div > .lm-footer__body > .row > div:first-child > :not(:last-child)
- maciej.je##p:nth-of-type(47)
--magazif.com,mamkomputer.info,mirat.eu,stoicway.net,tlp.is##.newsletter-form
-+magazif.com,mamkomputer.info,mirat.eu,stoicway.net##.newsletter-form
- magnapolonia.org##.tnp-subscription
- magnatfarby.pl##.newsletter-sign-in-btn
- magnatfarby.pl##.sn-newsletter--homepage.sn-newsletter
-@@ -1624,7 +1624,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
+@@ -1618,7 +1618,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
  teksciory.interia.pl##.newsroom
  telekarma.pl###footerInfo > .row div.box5:nth-of-type(3)
  telekarma.pl###footerInfo-newsletter
@@ -42,7 +33,7 @@ index 8ae01b733..64fa7ed95 100644
  teletropiciel.pl## .krotkie__zapytanie
  telewizja-cyfrowa.com##.textwidget > p:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index e95dc7189..d87131fb7 100644
+index 1bef6610e..997593e97 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -3,7 +3,7 @@
@@ -81,7 +72,7 @@ index e95dc7189..d87131fb7 100644
  drillo.co,jelenia.tv,kostes.eu,krasiczyn.info,pastebin.com,proveg.com,serwis-zamkow.com,szklomal.eu##.cd-top
  drweb-av.pl###scrollup_button
  drzwi-cal.pl##.js-site-scroll-up.site-scroll-up
-@@ -455,7 +455,6 @@ heuristic.pl###backtotop-box
+@@ -456,7 +456,6 @@ heuristic.pl###backtotop-box
  hihonor.com##.go-back-top
  hikoki-narzedzia.pl##.j-scroll_pagetop.footer-pagetop
  hilti.pl##.m-nav-totop
@@ -89,7 +80,7 @@ index e95dc7189..d87131fb7 100644
  honda.pl##.buttonWrap
  hondanews.eu,woblink.com###backToTopBtn
  honia.pl###conj-scroll-to-top__btn
-@@ -486,7 +485,6 @@ informacjakredytowa.com###move-to-top
+@@ -487,7 +486,6 @@ informacjakredytowa.com###move-to-top
  informatique-mania.com##.go-to-top-button
  inpost.pl##.footerMatToTop
  inspirander.pl##.htheme_icon_backtop
@@ -97,7 +88,7 @@ index e95dc7189..d87131fb7 100644
  intergama.pl,support.kaspersky.com##.up-arrow
  interia.pl##.top-of-site-link
  intermarche.pl##.trigger--page-up
-@@ -816,7 +814,7 @@ redcoon.pl##.icon-i_arr_up
+@@ -818,7 +816,7 @@ redcoon.pl##.icon-i_arr_up
  redditch.pl###astroid-backtotop
  redosystem.com.pl##.scrollToDown
  refreszing.pl###gpToTop
@@ -106,7 +97,7 @@ index e95dc7189..d87131fb7 100644
  rexona.com##.c-back-to-top-cta
  ricoh.pl##.page-link-top
  rodzice.pl##.rehub_scroll
-@@ -836,7 +834,6 @@ santander.pl##.footer__scrollUpBtn--fixed
+@@ -838,7 +836,6 @@ santander.pl##.footer__scrollUpBtn--fixed
  savio.net.pl##.scrollup-button
  schiedel.com,weknowhow.tech,zlotegory.com##.mk-go-top
  scottiego.com###to_top_scrollup
@@ -114,7 +105,7 @@ index e95dc7189..d87131fb7 100644
  secure.e-konsulat.gov.pl##.go-up-button
  seoheroes.pl##.clb-scroll-top-holder
  serafin-maszyny.com##.back_to_top
-@@ -898,7 +895,7 @@ tchibo.pl##.js-tp-backtotop
+@@ -900,7 +897,7 @@ tchibo.pl##.js-tp-backtotop
  tcl.com##.scroll-fab
  teamviewer.com###back_to_top_button
  teksty.ovh##.toTop-show
@@ -124,10 +115,10 @@ index e95dc7189..d87131fb7 100644
  teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop
  termodomplus.pl,tfiagro.pl##.top-arrow
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 5b92b9fc8..3ef726cc4 100644
+index a870fc6a3..fafe3c876 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -24,7 +24,7 @@ agrarada.pl###basic-modal-content, .modal-backdrop
+@@ -25,7 +25,7 @@ agrarada.pl###basic-modal-content, .modal-backdrop
  agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,husse.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
  agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-lock > body, html.fancybox-lock:style(overflow-y: auto !important)
  agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-margin:style(margin-right: 0 !important)
@@ -136,7 +127,7 @@ index 5b92b9fc8..3ef726cc4 100644
  agro-top.com.pl,poznan.factory.pl##.region-popup
  agroalex.pl,beautysupply.pl,ekogram.pl,porcja.eu,salonydenon.pl,wildcar.pl###x13popup-container, #x13popup-cover, #x13popup-container
  agroalex.pl,beautysupply.pl,ekogram.pl,porcja.eu,salonydenon.pl,wildcar.pl##.x13popup-open:style(overflow-y: auto !important)
-@@ -92,7 +92,7 @@ beta.netia.pl##body[style="hidden"]:style(overflow-y: auto !important)
+@@ -93,7 +93,7 @@ beta.netia.pl##body[style="hidden"]:style(overflow-y: auto !important)
  bezokularow.pl##body.gr-body-popup-open:style(overflow-y: auto !important)
  bezokularow.pl##div[data-gr="popup-container"]
  bikemia.com##.fancybox-lock:style(overflow-y: auto !important)
@@ -145,7 +136,7 @@ index 5b92b9fc8..3ef726cc4 100644
  bilety24.pl,moliera2.com,quiosque.pl###newsletter-popup, .modal-backdrop
  bilkom.pl###promopopup, .modal-backdrop
  biofemina.pl,rajsoczewek.pl,vebo.pl,wokularach.pl###news_popup, #news_popup ~ .modal-backdrop
-@@ -140,7 +140,7 @@ dobredrzwi.pl##.lock-scroll:style(overflow-y: auto !important)
+@@ -141,7 +141,7 @@ dobredrzwi.pl##.lock-scroll:style(overflow-y: auto !important)
  dobresofty.pl,galeriapolnocna.pl,giacomo.pl,grantthornton.pl,miastakobiet.pl,teamquest.pl###newsletterModal, .modal-backdrop
  dolasu.pl,greenpoint.pl##.st_news_letter_popup_wrap.modal, .modal-backdrop
  domodi.pl##+js(set, PWA_adbd, 2)
@@ -155,10 +146,10 @@ index 5b92b9fc8..3ef726cc4 100644
  drzwi-cal.pl###bio_ep, #bio_ep_bg
  drzwi-cal.pl,mbmeganarzedzia.pl,medonetmarket.pl,parkmania.pl,pl.wizcase.com,pozyczkabezbanku.pl##+js(nostif, bioEp.showPopup)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 52d88b4ac..57c338f64 100644
+index 36f93f64e..a4532f97b 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -634,7 +634,7 @@ teb.pl##.fab-contact.fab
+@@ -636,7 +636,7 @@ teb.pl##.fab-contact.fab
  tefal24.pl###widget-button
  teleaudio.pl##.pulse
  telekarma.pl###flyHelp

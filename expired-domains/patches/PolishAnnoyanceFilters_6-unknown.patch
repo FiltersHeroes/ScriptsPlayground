@@ -1,8 +1,8 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index c9da5fe90..899eb7b53 100644
+index 2c383faa1..912313875 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -40,7 +40,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+@@ -43,7 +43,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
  agrohandel.com.pl###jcemediabox-popup-page
  agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
  agromix.agro.pl##.nivo-lightbox-overlay
@@ -11,7 +11,7 @@ index c9da5fe90..899eb7b53 100644
  agrosiec.pl,angelgold.pl,bolix.pl##.modal
  agrotopparts.pl###kartka, #kartka ~ #tlo
  airport.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,pl.canalplus.com,romantycznyweekend.eu,zus.pox.pl###fancybox-overlay, #fancybox-wrap
-@@ -97,7 +97,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+@@ -100,7 +100,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
  astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
@@ -20,7 +20,7 @@ index c9da5fe90..899eb7b53 100644
  atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
  atrexpress.com.pl,ch24.pl###popup-box, #list-builder
  atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
-@@ -277,7 +277,7 @@ e-insportline.pl###vivpopup-collapsed
+@@ -278,7 +278,7 @@ e-insportline.pl###vivpopup-collapsed
  e-kidsplanet.com##.banner, .banner-curtain
  e-kwiaty.pl###exitpopup-newsletter
  e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
@@ -29,7 +29,7 @@ index c9da5fe90..899eb7b53 100644
  e-sas.pl##.in.fade.modal
  e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
  e-spar.com.pl###modal-welcome
-@@ -467,7 +467,7 @@ linguajob.pl##.popup, #get-similar-offers
+@@ -466,7 +466,7 @@ linguajob.pl##.popup, #get-similar-offers
  linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
  listymikolaja.pl###newsletter_layer
  loanme.pl##.exit-popup-block

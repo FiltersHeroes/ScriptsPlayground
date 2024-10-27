@@ -1,0 +1,34 @@
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 16b1cce94..2c383faa1 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -681,7 +681,6 @@ rckik.poznan.pl###popup, #popupBg
+ realme.com##.subscribe
+ reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
+ retailnet.pl,rp.pl##tqwidget
+-rivieraparkmarvipol.pl##.fastcall_popup
+ rms.pl##.sj-popup-container
+ robojet.pl###modal_home_page, .modal-backdrop
+ rosenthal.pl###cac_popup_tlo, #cac_popup_obr
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index a4532f97b..d51caf77d 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -127,7 +127,7 @@ ceneo.pl###recent-activity-toast
+ centrumelektroniki.pl,technikarolna.pl##.b24-widget-button-visible
+ centrumpapieru.pl##.sb-chat-btn
+ cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
+-choinkowo.pl,olini.pl,pluszowasowa.pl,wearethecoffee.com###appReviewsWidgetWrapper
++choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
+ cinema3d.pl###popupBoxInvitation
+ cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
+ citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
+@@ -215,7 +215,7 @@ eitca.pl###block-views-Opinie_EITCA-block_2
+ ekantor.pl##.slideout-btn
+ eko-life.pl###__ChatoBeeWidget__window
+ eko-ue.pl##.fixed-right-menu
+-ekookna.pl,gerdex.com.pl,polnord.pl,rivieraparkmarvipol.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
++ekookna.pl,gerdex.com.pl,polnord.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
+ ekorekta24.pl##.opineo-link
+ ekorekta24.pl,multilampy.pl##.opineo
+ electro.pl##.is-complaintReport
