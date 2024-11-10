@@ -1,12 +1,13 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 1bef6610e..1191a9b57 100644
+index 1191a9b57..0873ae2ce 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -999,7 +999,6 @@ zalando.pl##main ~ button:has(span + i[role="presentation"][aria-hidden="true"])
- zalecane.pl##.g1-teaser
- zaufane-apteki.pl###btn-scroll-top
- zbudujforme.com.pl##.cmsmasters_theme_icon_slide_top
--ziemkiewicz.info##.back-to-start
- zjedz.my##.scroll_top_arrow
- znamlek.pl##.btnScroll
- zooplus.pl###topbutton
+@@ -188,7 +188,7 @@ blog.noblehealth.pl##footer .slide-up
+ blog.polskiekino.com.pl##.tidymag-scroll-top
+ blog.spacetronik.eu,moneygrabbing.co.uk,szeffer.expert##.sh-back-to-top
+ blogzapetytem.pl##.tc-btt-wrapper
+-bluestilo.com,bombkichoinkowe.com,bombkisklep.com##.btn-to-top
++bombkichoinkowe.com,bombkisklep.com##.btn-to-top
+ bodybuilder.scania.com,maxelektro.pl###button-to-top
+ bodzio.pl,browserwall.com,cezar.eu,henderson.pl##.scroll-up-btn
+ bodzio.pl,wswiat.pl##.top-scroll
