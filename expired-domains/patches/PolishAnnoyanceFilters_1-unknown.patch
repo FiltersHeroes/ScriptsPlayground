@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 51aee5647..8d9cf4f2a 100644
+index 4bd168b63..c1d671f07 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -1053,7 +1053,6 @@ trafica.eu##.shop__access
+@@ -1055,7 +1055,6 @@ trafica.eu##.shop__access
  transfering.pl##.ramka_przeczytaj_rowniez_container
  trojmiasto.pl##.AnkietaNews
  trumpeters.pl###banner_div_empty
@@ -11,10 +11,10 @@ index 51aee5647..8d9cf4f2a 100644
  tulodz.pl##.page__right__box--sonda
  tuwiazowna.pl##.belka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 89ce57f3e..cb33dbb47 100644
+index bc6797a11..357ccbdb9 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -48,7 +48,7 @@ agromat.pl##.column-double.content > .flex
+@@ -47,7 +47,7 @@ agromat.pl##.column-double.content > .flex
  agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
  agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
  agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
@@ -33,18 +33,27 @@ index 89ce57f3e..cb33dbb47 100644
  teletropiciel.pl## .krotkie__zapytanie
  telewizja-cyfrowa.com##.textwidget > p:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 0873ae2ce..e0c69fb3b 100644
+index 5906170f2..fa0e158d1 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -3,7 +3,7 @@
  3dom.pro,akwarystyczny.eu,anmur.eu,greenfelix.eu,homedoors.eu,homehood.eu,hydrosan.eu,hykker.com,lambre.eu,limonkowy.com,magazynkuchenny.com,media-tech.eu,motogron.com,narzedziowy24.eu,opakowania24.eu,pasmanteria.eu,poid.eu,stolmot.com,zyjzdrowo.info###to-top
- 3i-store.com,agro-bis.eu,aleokulary.com,all.biz,antrans.com.pl,baranowscy.eu,bejbi.eu,bioevolution.com,bizserver.eu,domkorkowy.com,eipro.de,ferguson-digital.eu,gembird.com,greenmousestudio.com,grzechhair.com,holender.info,home-you.com,huaweimobileservices.com,kamilbelz.com,kiddyfave.com,konin24.info,krzywcza.eu,kuradomowa.net,majbus.eu,mixremedia.eu,naszesprawy.eu,nieidealnaanna.com,nowyzmigrod.eu,osheeshop.eu,outhorn.com,pl.softoware.org,podstacja.com,poldruk.com,polskaekologia.org,programtv.naziemna.info,redge.com,ristorio.com,rocketpoland.com,savethefloppy.com,sklep.regalia.eu,sklepdlalekarza.com,spodlady.com,stopwiatrakom.eu,sweet.tv,szema.eu,typeofweb.com,vikking.eu,weddingdream.com,weganskie-zakupy.blogspot.com,zakupersi.com,zielenina.eu,zippedshoes.com,zlotarybka24.com###toTop
+ agro-bis.eu,aleokulary.com,all.biz,antrans.com.pl,baranowscy.eu,bejbi.eu,bioevolution.com,bizserver.eu,domkorkowy.com,eipro.de,ferguson-digital.eu,gembird.com,greenmousestudio.com,grzechhair.com,holender.info,home-you.com,huaweimobileservices.com,kamilbelz.com,kiddyfave.com,konin24.info,krzywcza.eu,kuradomowa.net,majbus.eu,mixremedia.eu,naszesprawy.eu,nieidealnaanna.com,nowyzmigrod.eu,osheeshop.eu,outhorn.com,pl.softoware.org,podstacja.com,poldruk.com,polskaekologia.org,programtv.naziemna.info,redge.com,ristorio.com,rocketpoland.com,savethefloppy.com,sklep.regalia.eu,sklepdlalekarza.com,spodlady.com,stopwiatrakom.eu,sweet.tv,szema.eu,typeofweb.com,vikking.eu,weddingdream.com,weganskie-zakupy.blogspot.com,zakupersi.com,zielenina.eu,zippedshoes.com,zlotarybka24.com###toTop
  4funkids.pl,mri-lab.pl###scroll_up
 -4programmers.net,alezabawki.co,andrzejgrzyb.eu,beautikon.com,cholewinski.com,finnair.com,happy-surfer.com,integracja.org,malygeniusz.org,nasze.fm,oknarolety.com,orion.fm,pl.coccodrillo.eu,praisethewear.com,shipgratis.eu,sklep.mptech.eu,www.livescore.in###scroll-to-top
 +4programmers.net,alezabawki.co,andrzejgrzyb.eu,beautikon.com,cholewinski.com,finnair.com,integracja.org,malygeniusz.org,nasze.fm,oknarolety.com,orion.fm,pl.coccodrillo.eu,praisethewear.com,shipgratis.eu,sklep.mptech.eu,www.livescore.in###scroll-to-top
  6paknutrition.com,aparatsluchowy.com,e-sonido.pl,oneorganic.eu,partner-panele.pl,proficook.pl,skleprowerowy.pl###scrolltopbtn
  7box.eu###btnScrollTo
  24hurt.pl,haftpasja.pl,mirjan24.pl,pm-m.pl,polagriparts.pl,uczyibawi.pl###wt_scroll_top
+@@ -43,7 +43,7 @@ agro-hurt.eu,decoratorium.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,nazie
+ agroas.pl##.to-the-top-link
+ agrofakt.pl##.go-down
+ agrogajda.pl,elektronik-service.com.pl,sklepfarmer.pl###search_scroll_mini
+-agrohandel.com.pl,dietlux.pl,eljacht.pl,opgj.pl,pruszczgdanski.pl,resztamamy.pl,shindaiwa.pl,smart-power.pl##.tm-totop-scroller
++agrohandel.com.pl,dietlux.pl,eljacht.pl,opgj.pl,pruszczgdanski.pl,shindaiwa.pl,smart-power.pl##.tm-totop-scroller
+ agrohandler.pl,betterland.pl,porcja.eu,strefaucznia.pl,swiece-zaplonowe.pl###to_top_wrap
+ agrojd.com,audioservice.com,chelmski.eu,dobresystemy.eu,domnowoczesny.com,dronefilmfestival.eu,empik.com,esklep.brandvital.eu,fantasy.ekstraklasa.org,fuchs.com,hakpol.info,kappahl.com,knowband.com,krokdozdrowia.com,memi.eu,mirat.eu,myanimals.com,nowy-sacz.info,nprofit.net,pk-invest.eu,pl.ecco.com,polski-supermarket.de,pozytywni.info,pzsnstart.eu,sklep.mebloart.eu,tedi.com,tp-link.com,widex.com##.scroll-to-top
+ agromasa.com,fonepaw.com,fotostori.es,koscian.net,neway.mobi##.totop
 @@ -52,7 +52,7 @@ agroperfekt.pl,czemarol.pl,kunert.com.pl,naturio.eu,partnerokno.eu,radiator-serv
  agrosimex.pl##.vue-back-to-top
  agrosystems.pl##.footer-utilities-back

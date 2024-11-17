@@ -1,25 +1,25 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 7132995c2..a4ae7ccd7 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -411,7 +411,6 @@ kasotronik.pl,medpozyczka.pl,okmoneta.pl,pozyczymyci.pl###popupEmailPhone
- kataloog.info###mask, #lorem
- katowice-airport.com###carwash-banner-c
- katowice.jumpcity.pl##.reveal-modal
--kegel-aj.com##div[style="display: block; position: fixed; width: 100%; min-height: 100%; background-color: rgba(0, 0, 0, 0.5); overflow: hidden; z-index: 10000; inset: 0px;"]
- ketodietetyk.pl##.popup-custom.popup-delayed
- kfd.pl###popupslider, #dimBackgrnd
- kierunekspozywczy.pl###skycrapper
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 995b2d6db..914ace87d 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -77,7 +77,7 @@ bezpieczny.pl###call_phone
- bike-parts-honda.pl###fleche_popin_contact
- bilgorajska.pl##.pod_feedback
- bilgorajska.pl,bobbyburger.pl,godealla.pl,majsterkowo.pl,unisono.eu,venezia.pl##.feedback
--bitrix24.pl,kegel-aj.com,upominki24.pl,webiso.pl##div[class*="-widget-button-wrapper"]
-+bitrix24.pl,upominki24.pl,webiso.pl##div[class*="-widget-button-wrapper"]
- biznes.gov.pl,decathlon.pl,dollarro.com,mediaexpert.pl,uniqa.pl,vox.pl,wodociagi.krakow.pl###InteliwiseSaaSModule_win_wrapper
- bizuteria-eshop.pl###IMS_box1
- blendberg.com###collect-chat-launcher-container
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 357ccbdb9..42aa9d653 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -398,7 +398,6 @@ dlabystrzakow.pl##.footer-form-newsletter
+ dlh.pl##.footer_left_newsletter
+ dobiegania.pl##.superMailing
+ dobrarelacja.pl##.elementor-element-783e75a2
+-dobre-driny.pl###newsletter > div
+ dobredomy.pl###footerForm
+ dobremiejsce.org##.popupaoc-button
+ dobreprogramy.pl###phContent_SubscriptionsControl_lnkNewsletter
+diff --git a/PPB/newslettery_ogolne.txt b/PPB/newslettery_ogolne.txt
+index 1f5584e07..ef3cb171a 100644
+--- a/PPB/newslettery_ogolne.txt
++++ b/PPB/newslettery_ogolne.txt
+@@ -9,7 +9,7 @@
+ ~activejet.pl,pl##.newsletterBox
+ ~aurum-optics.pl,pl##.footer-newsletter
+ ~automatykab2b.pl,~ekodrogeria.pl,~gazeta.pl,pl,~wyborcza.pl##.newsletter-box
+-~budus.pl,~carrefour.pl,~dobre-driny.pl,~olx.pl,pl###newsletter:not(.modal):not(input)
++~budus.pl,~carrefour.pl,~~olx.pl,pl###newsletter:not(.modal):not(input)
+ ~dietyodbrokula.pl,~ekodrogeria.pl,~mediaexpert.pl,~muzyczneradio.pl,pl##.newsletter-form
+ ~drogeriaolmed.pl,pl##.newsletter-btn
+ ~dron.pl,pl##.widget_wysija
