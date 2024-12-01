@@ -1,24 +1,13 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 500107d56..454b1892b 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -26,7 +26,6 @@ adamkuncicki.pl###listfusion_popup_lightbox_main
- adamspa.pl,alkalicznystylzycia.com,angelius.pl,elektoralna.pl,horeca.ban-food.pl,hospicjum-podkarpackie.pl,inspiringsolutions.pl,kompleksowausluga.pl,passion.pl,qagile.pl##.ppsPopupShell, #ppsPopupBgOverlay
- addhost.pl##.fsp-wrapper
- addons.opera.com,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
--adeste.eu##.cp-direct-download-container
- admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
- adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,sulmierzyce.info,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
- adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
-diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index f722735c4..03b643342 100644
---- a/PPB/popupy_sieciowe.txt
-+++ b/PPB/popupy_sieciowe.txt
-@@ -20,7 +20,6 @@
- /wp-content/plugins/wordpress-popup/js/public.min.js$domain=dobremiejsce.org|kwiaciarnia-rikka.pl
- /wp-includes/js/backbone.min.js$script,~third-party,domain=expander.pl
- ||a-masterlease.youlead.pl/api/query/popup/SettingsForPopups$script,domain=master1.pl
--||adeste.eu/wp-content/plugins/convertplug/modules/modal/assets/css/modal.min.css
- ||apaczka.pl/theme/default/lightbox.min.css
- ||app.sendbean.pl/api/widget/init$xmlhttprequest,domain=baccata.com.pl|www.angelsadvertising.pl|www.sendbean.pl
- ||audio.com.pl/media/jui/js/jquery.cookie.min.js
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index c53fa7d47..9e45a1402 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -103,7 +103,7 @@ arms.com.pl,chipkomputery.pl,mdron.pl###basketslider
+ artelis.pl##.art-navstripe
+ artlazienkowe.pl###widget_shop1 > div:nth-of-type(2)
+ asport.pl##.hit-tygodnia
+-astronomia.media.pl,globalna.info,mocnezarcie.pl,pysznieczyprzepysznie.pl,szybkaprzemiana.pl,waterpikpolska.pl,wegecentrum.pl##.single-navigation[class*="post"]
++astronomia.media.pl,globalna.info,pysznieczyprzepysznie.pl,szybkaprzemiana.pl,waterpikpolska.pl,wegecentrum.pl##.single-navigation[class*="post"]
+ ataksja.org.pl,przyszloscdladzieci.org##.fm-teaser
+ atrakcjenaimprezy.pl###boxes
+ atthost.pl,~mail.atthost.pl,~panel.atthost.pl,~secure.atthost.pl,~webmail.atthost.pl##.hosting_info

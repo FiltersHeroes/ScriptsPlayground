@@ -1,13 +1,21 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 718b01eb8..1bef6610e 100644
+index 73e187a69..91b542e7e 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -142,7 +142,7 @@ avast.com###slide-top
- axeprim.eu,brytol.com,gdanskstrefa.com,ochrona24.info,placesandplants.com,posbistro.com,rrs24.net,skawina.eu,sp18.lublin.eu,sportdziennik.com,sportowiec.info,stalmielec.com,swiebodzice.info,targowek.info,tarnobrzeg.info,techno-senior.com,wachtyrz.eu,wiskitki.org,zs12lublin.eu###scroll-up
- axtechnology.pl##.show_scroll
- b2b.fen.pl,hurt.techrol.com##.rollup
--b2b.metal-bud.eu,bat.pl,esklep.agroas.pl,hmb.pl,mak24h.pl,sklep.elus.pl,wisko.eu##.go-to-top-ui
-+b2b.metal-bud.eu,bat.pl,esklep.agroas.pl,hmb.pl,mak24h.pl,sklep.elus.pl##.go-to-top-ui
- b2btrade.eu##.back-to-top-arrow
- b2net.pl,elus.pl,rower.com.pl,sprzedaz-mieszkanie-czestochowa.wgn.pl,telefon.info.pl##a#top
- baborow.pl###btn-totop
+@@ -86,7 +86,7 @@ ams.edu.pl,apteka-natura.eu,bludshop.com,cyberpower.com,ehurt.eu,ene-due.eu,pako
+ amway.pl##div[class*="scroll-to-top--"]
+ androidayuda.com,desdelinux.net,iphonea2.com,todoandroid.es,ubunlog.com###toplink
+ androidowy.pl,brodatyzbir.pl,coffeedesk.pl,jaktodaleko.pl,kalejdoskopbudowlany.pl,kasiapszonicka.pl,lifemanagerka.pl,linux.pl,rootblog.pl,zebza.net##.pk-scroll-to-top
+-anetaduk.com,liletink.pl,lukasiewicz.gov.pl,moto.lca.pl,potplayerclub.pl###myBtn
++anetaduk.com,liletink.pl,lukasiewicz.gov.pl,moto.lca.pl###myBtn
+ animalistka.pl,faltusdesign.wordpress.com,rygalo.com##.tothetop
+ anmarniemcz.pl,apia.pl,icrow.pl,nat.pl,odrzanska.eu,ti-ksiaz.iap.pl##.page-scroll-up
+ answear.com,myjki.com,myjki.eu,radiopoznan.fm,wielkishoe.com###scrollTop
+@@ -725,7 +725,6 @@ panasonic.com##.pagetop
+ pantuniestal.com##.tgm-to-the-top
+ papu.io,warsawhome.eu##.footer-scroll-top
+ paradise-rpg.pl,sat-4-all.com###lk_gototop
+-pasmanteria-atlasek.pl###nasa-back-to-top
+ paweltkaczyk.com##.johannes-goto-top
+ payback.pl##.pb-back-to-top
+ pepper.pl##.btn--moveToTop

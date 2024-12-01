@@ -1,0 +1,12 @@
+diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
+index 6483b14a2..8b0145e2b 100644
+--- a/sections/przekierowujace_do_przekretow.txt
++++ b/sections/przekierowujace_do_przekretow.txt
+@@ -102,7 +102,6 @@
+ ||lazieneczka.pl^$all
+ ||lds.xyz/*&sbtag=$doc,to=xyz
+ ||lds.xyz/*?sbtag=$doc,to=xyz
+-||lilustriousdate.com^$all
+ ||listaglawo.com^$all
+ ||lockeddeal.com^$all
+ ||logowaniepl.pl^$all

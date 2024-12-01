@@ -1,25 +1,12 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 357ccbdb9..42aa9d653 100644
+index c5b6e2fcf..0bc241417 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -398,7 +398,6 @@ dlabystrzakow.pl##.footer-form-newsletter
- dlh.pl##.footer_left_newsletter
- dobiegania.pl##.superMailing
- dobrarelacja.pl##.elementor-element-783e75a2
--dobre-driny.pl###newsletter > div
- dobredomy.pl###footerForm
- dobremiejsce.org##.popupaoc-button
- dobreprogramy.pl###phContent_SubscriptionsControl_lnkNewsletter
-diff --git a/PPB/newslettery_ogolne.txt b/PPB/newslettery_ogolne.txt
-index 1f5584e07..ef3cb171a 100644
---- a/PPB/newslettery_ogolne.txt
-+++ b/PPB/newslettery_ogolne.txt
-@@ -9,7 +9,7 @@
- ~activejet.pl,pl##.newsletterBox
- ~aurum-optics.pl,pl##.footer-newsletter
- ~automatykab2b.pl,~ekodrogeria.pl,~gazeta.pl,pl,~wyborcza.pl##.newsletter-box
--~budus.pl,~carrefour.pl,~dobre-driny.pl,~olx.pl,pl###newsletter:not(.modal):not(input)
-+~budus.pl,~carrefour.pl,~~olx.pl,pl###newsletter:not(.modal):not(input)
- ~dietyodbrokula.pl,~ekodrogeria.pl,~mediaexpert.pl,~muzyczneradio.pl,pl##.newsletter-form
- ~drogeriaolmed.pl,pl##.newsletter-btn
- ~dron.pl,pl##.widget_wysija
+@@ -378,7 +378,6 @@ deon.pl##.sl > li:nth-of-type(5)
+ designconcept.pl###nl-popup, #Blok-3
+ devcode.pl##.et_bloom_optin
+ device.pl##.subscribe-to-newsletter
+-deviceranking.pl##.subscr-widget
+ devmentor.pl##.mailerlite-form
+ devstyle.pl###post-2135 > .ck_inline.ck_form_container
+ devstyle.pl##li.widget_text.col-4.widget:nth-of-type(3)
