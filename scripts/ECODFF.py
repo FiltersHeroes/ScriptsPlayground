@@ -42,7 +42,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.35"
+SCRIPT_VERSION = "2.0.36"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -311,6 +311,10 @@ for path_to_file in args.path_to_file:
                         "Location': \'")[1].split("\'")[0]
                     if url in location:
                         status_code = 200
+                        if SUB_PAT.search(url):
+                            resp = await session.get(f"{location}")
+                            if resp.status != "000":
+                                status_code = resp.status
             except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
                 print(f"{ex} ({url})")
                 if "reset by peer" in str(ex) or (not SUB_PAT.search(url) and not WWW_PAT.search(url)):
@@ -326,6 +330,10 @@ for path_to_file in args.path_to_file:
                             location = str(resp).split("Location': \'")[1].split("\'")[0]
                             if url in location:
                                 status_code = 200
+                                if SUB_PAT.search(url):
+                                    resp = await session.get(f"{location}")
+                                    if resp.status != "000":
+                                        status_code = resp.status
                     except Exception as ex2:
                         print(f"{ex2} ({url})")
                         if "reset by peer" not in str(ex2):
@@ -345,6 +353,10 @@ for path_to_file in args.path_to_file:
                         location = str(resp).split("Location': \'")[1].split("\'")[0]
                         if url in location:
                             status_code = 200
+                            if SUB_PAT.search(url):
+                                resp = await session.get(f"{location}")
+                                if resp.status != "000":
+                                    status_code = resp.status
                 except Exception as ex2:
                     print(f"{ex2} ({url})")
                     if "reset by peer" not in str(ex2):
