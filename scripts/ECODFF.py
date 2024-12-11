@@ -42,7 +42,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.36"
+SCRIPT_VERSION = "2.0.37"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -51,6 +51,8 @@ parser.add_argument("-c", "--connections", type=int, action='store', default=20)
 parser.add_argument("-v", "--version", action='version',
                     version="ECODFF" + ' ' + SCRIPT_VERSION)
 parser.add_argument("--dns", action='store', type=str, nargs="+")
+parser.add_argument("--ar", "--allow-redirects", action='store_true')
+
 args = parser.parse_args()
 
 pj = os.path.join
@@ -294,16 +296,16 @@ for path_to_file in args.path_to_file:
         'Connection': 'keep-alive',
     }
 
-    async def get_status_code(session: aiohttp.ClientSession, url: str, limit):
+    async def get_status_code(session: aiohttp.ClientSession, url: str, limit, redirect: bool):
         async with limit:
             try:
                 print(f"Checking the status of {url}...")
                 await asyncio.sleep(1)
-                resp = await session.get(f"http://{url}", allow_redirects=False)
+                resp = await session.get(f"http://{url}", allow_redirects=redirect)
                 status_code = resp.status
                 if (400 <= int(status_code) <= 499) and SUB_PAT.search(url):
                     print(f"Checking the status of {url} again...")
-                    resp = await session.get(f"https://{url}", allow_redirects=False)
+                    resp = await session.get(f"https://{url}", allow_redirects=redirect)
                     if resp.status != "000":
                         status_code = resp.status
                 if status_code in (301, 302, 307, 308):
@@ -311,10 +313,6 @@ for path_to_file in args.path_to_file:
                         "Location': \'")[1].split("\'")[0]
                     if url in location:
                         status_code = 200
-                        if SUB_PAT.search(url):
-                            resp = await session.get(f"{location}")
-                            if resp.status != "000":
-                                status_code = resp.status
             except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
                 print(f"{ex} ({url})")
                 if "reset by peer" in str(ex) or (not SUB_PAT.search(url) and not WWW_PAT.search(url)):
@@ -324,16 +322,12 @@ for path_to_file in args.path_to_file:
                         newUrl = f"http://{url}"
                         if not SUB_PAT.search(url) and not WWW_PAT.search(url):
                             newUrl = f"http://www.{url}"
-                        resp = await session.get(newUrl, allow_redirects=False)
+                        resp = await session.get(newUrl, allow_redirects=redirect)
                         status_code = resp.status
                         if status_code in (301, 302, 307, 308):
                             location = str(resp).split("Location': \'")[1].split("\'")[0]
                             if url in location:
                                 status_code = 200
-                                if SUB_PAT.search(url):
-                                    resp = await session.get(f"{location}")
-                                    if resp.status != "000":
-                                        status_code = resp.status
                     except Exception as ex2:
                         print(f"{ex2} ({url})")
                         if "reset by peer" not in str(ex2):
@@ -347,16 +341,12 @@ for path_to_file in args.path_to_file:
                 try:
                     await asyncio.sleep(1)
                     print(f"Checking the status of {url} again...")
-                    resp = await session.get(f"http://{url}", allow_redirects=False)
+                    resp = await session.get(f"http://{url}", allow_redirects=redirect)
                     status_code = resp.status
                     if status_code in (301, 302, 307, 308):
                         location = str(resp).split("Location': \'")[1].split("\'")[0]
                         if url in location:
                             status_code = 200
-                            if SUB_PAT.search(url):
-                                resp = await session.get(f"{location}")
-                                if resp.status != "000":
-                                    status_code = resp.status
                 except Exception as ex2:
                     print(f"{ex2} ({url})")
                     if "reset by peer" not in str(ex2):
@@ -380,7 +370,10 @@ for path_to_file in args.path_to_file:
         if DNS_a:
             resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
         async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
-            statuses = await asyncio.gather(*[get_status_code(session, url, limit) for url in unknown_pages])
+            allow_redirects = False
+            if args.ar:
+                allow_redirects = True
+            statuses = await asyncio.gather(*[get_status_code(session, url, limit, allow_redirects) for url in unknown_pages])
             with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
                 for status in statuses:
                     print(status)
