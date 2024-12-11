@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index f56384ba0..c53fa7d47 100644
+index 1a4badc1c..9e45a1402 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -1055,7 +1055,6 @@ trafica.eu##.shop__access
@@ -11,10 +11,10 @@ index f56384ba0..c53fa7d47 100644
  tulodz.pl##.page__right__box--sonda
  tuwiazowna.pl##.belka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 446a073af..c5b6e2fcf 100644
+index 70d82b2f0..cbf4d1024 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -47,7 +47,7 @@ agromat.pl##.column-double.content > .flex
+@@ -48,7 +48,7 @@ agromat.pl##.column-double.content > .flex
  agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
  agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
  agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
@@ -23,7 +23,7 @@ index 446a073af..c5b6e2fcf 100644
  ahe.lodz.pl###company-newsletter-column
  airstop.pl###snippet-newsletterSubscription-newsletterSubscription
  ajk-opakowania.eu,linktransport.eu,mierzeja.com###newsletter
-@@ -1624,7 +1624,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
+@@ -1630,7 +1630,7 @@ techsterowniki.pl##.col-sm-8.col-xl-3.col-lg-4.col-md-6
  teksciory.interia.pl##.newsroom
  telekarma.pl###footerInfo > .row div.box5:nth-of-type(3)
  telekarma.pl###footerInfo-newsletter
@@ -33,10 +33,10 @@ index 446a073af..c5b6e2fcf 100644
  teletropiciel.pl## .krotkie__zapytanie
  telewizja-cyfrowa.com##.textwidget > p:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 91b542e7e..e630897f4 100644
+index fa5ae32cc..36ff59218 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -2,7 +2,7 @@
+@@ -3,7 +3,7 @@
  3dom.pro,agrosam.eu,alget.pl,antbs.co.uk,domator24.com,harposoftware.com,laroxy.com,odszewca.pl,opakowania24.eu,swiatroslin.eu##.top_button
  3dom.pro,akwarystyczny.eu,anmur.eu,greenfelix.eu,homedoors.eu,homehood.eu,hydrosan.eu,hykker.com,lambre.eu,limonkowy.com,magazynkuchenny.com,media-tech.eu,motogron.com,narzedziowy24.eu,opakowania24.eu,pasmanteria.eu,poid.eu,stolmot.com,zyjzdrowo.info###to-top
  4funkids.pl,mri-lab.pl###scroll_up
@@ -45,7 +45,7 @@ index 91b542e7e..e630897f4 100644
  6paknutrition.com,aparatsluchowy.com,e-sonido.pl,oneorganic.eu,partner-panele.pl,proficook.pl,skleprowerowy.pl###scrolltopbtn
  7box.eu###btnScrollTo
  8a.pl,tasmuj.pl##.sm-goTop
-@@ -44,7 +44,7 @@ agro-hurt.eu,decoratorium.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,nazie
+@@ -45,7 +45,7 @@ agro-hurt.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,naziemna.info,peskiad
  agroas.pl##.to-the-top-link
  agrofakt.pl##.go-down
  agrogajda.pl,elektronik-service.com.pl,sklepfarmer.pl###search_scroll_mini
@@ -54,16 +54,16 @@ index 91b542e7e..e630897f4 100644
  agrohandler.pl,betterland.pl,porcja.eu,strefaucznia.pl,swiece-zaplonowe.pl###to_top_wrap
  agrojd.com,audioservice.com,chelmski.eu,dobresystemy.eu,domnowoczesny.com,dronefilmfestival.eu,empik.com,esklep.brandvital.eu,fantasy.ekstraklasa.org,fuchs.com,hakpol.info,kappahl.com,knowband.com,krokdozdrowia.com,memi.eu,mirat.eu,myanimals.com,nowy-sacz.info,nprofit.net,pk-invest.eu,pl.ecco.com,polski-supermarket.de,pozytywni.info,pzsnstart.eu,sklep.mebloart.eu,tedi.com,tp-link.com,widex.com##.scroll-to-top
  agromasa.com,fonepaw.com,fotostori.es,koscian.net,neway.mobi##.totop
-@@ -53,7 +53,7 @@ agroperfekt.pl,czemarol.pl,kunert.com.pl,naturio.eu,partnerokno.eu,radiator-serv
+@@ -54,7 +54,7 @@ agroperfekt.pl,czemarol.pl,kunert.com.pl,naturio.eu,partnerokno.eu,radiator-serv
  agrosimex.pl##.vue-back-to-top
  agrosystems.pl##.footer-utilities-back
  agrotechnika.co,bravebeaver.pl,byvioleta.com,drobne.fm,giszowiec.org,inteligentnydom.co,justyna.kowalcze.eu,kalendarzonline.com,kasz-bus.info,nowicka-misiewicz.com,nowy-sacz.info,polukr.net,presta.eu.org,rankingkont.org,sledcza24.tv,zdrowyportal.org###topcontrol
--agrotuszyn.pl,forum.gazeta.pl,niepodlegla.dzieje.pl,rozklad.klosok.eu##.toTop
-+forum.gazeta.pl,niepodlegla.dzieje.pl,rozklad.klosok.eu##.toTop
+-agrotuszyn.pl,anteny-wroclaw.com,forum.gazeta.pl,niepodlegla.dzieje.pl,rozklad.klosok.eu##.toTop
++anteny-wroclaw.com,forum.gazeta.pl,niepodlegla.dzieje.pl,rozklad.klosok.eu##.toTop
  agtom.eu###scroll_to_top
  airbuy.pl##.js-gotop
  airwick.pl###top-btn
-@@ -182,7 +182,6 @@ biznesplan.net.pl##.ta_upscr
+@@ -183,7 +183,6 @@ biznesplan.net.pl##.ta_upscr
  blasty.pl,hulaka.pl###widget-back-to-top
  blix.pl##.rewindTopButton.footer__rewind-button
  blizejciebie.pl##.quicknav-to-top
@@ -71,7 +71,7 @@ index 91b542e7e..e630897f4 100644
  blog.cochlear.com,wojciechpietrzak.com.pl##.scrollUp
  blog.doktortusz.pl##.mb-to-top
  blog.lh.pl,bookowska.pl,dekoelectronics.com,muzyczny-krakow.eu##.ct-back-to-top
-@@ -311,7 +310,7 @@ doradcasmaku.pl,porta.com.pl##.floating_scroll_top
+@@ -312,7 +311,7 @@ doradcasmaku.pl,porta.com.pl##.floating_scroll_top
  dotd.pl###arrow_up
  douglas.pl##.rd__back-to-top
  dpm.eu,muovitech.com,poettinger.at,sendgb.com,spolkacywilna.info,zinkpower.com###gotoTop
@@ -80,7 +80,7 @@ index 91b542e7e..e630897f4 100644
  drillo.co,jelenia.tv,kostes.eu,krasiczyn.info,pastebin.com,proveg.com,serwis-zamkow.com,szklomal.eu##.cd-top
  drweb-av.pl###scrollup_button
  drzwi-cal.pl##.js-site-scroll-up.site-scroll-up
-@@ -459,7 +458,6 @@ heuristic.pl###backtotop-box
+@@ -462,7 +461,6 @@ heuristic.pl###backtotop-box
  hihonor.com##.go-back-top
  hikoki-narzedzia.pl##.j-scroll_pagetop.footer-pagetop
  hilti.pl##.m-nav-totop
@@ -88,15 +88,15 @@ index 91b542e7e..e630897f4 100644
  honda.pl##.buttonWrap
  hondanews.eu,woblink.com###backToTopBtn
  honia.pl###conj-scroll-to-top__btn
-@@ -490,7 +488,6 @@ informacjakredytowa.com###move-to-top
- informatique-mania.com##.go-to-top-button
+@@ -494,7 +492,6 @@ informatique-mania.com##.go-to-top-button
+ inlago.pl,sklep.maxkuchnie.pl##.button-scroll
  inpost.pl##.footerMatToTop
  inspirander.pl##.htheme_icon_backtop
 -intereffective.pl##.c-button-top
  intergama.pl,support.kaspersky.com##.up-arrow
  interia.pl##.top-of-site-link
  intermarche.pl##.trigger--page-up
-@@ -819,7 +816,7 @@ redcoon.pl##.icon-i_arr_up
+@@ -824,7 +821,7 @@ redcoon.pl##.icon-i_arr_up
  redditch.pl###astroid-backtotop
  redosystem.com.pl##.scrollToDown
  refreszing.pl###gpToTop
@@ -105,7 +105,7 @@ index 91b542e7e..e630897f4 100644
  rexona.com##.c-back-to-top-cta
  ricoh.pl##.page-link-top
  rodzice.pl##.rehub_scroll
-@@ -839,7 +836,6 @@ santander.pl##.footer__scrollUpBtn--fixed
+@@ -844,7 +841,6 @@ santander.pl##.footer__scrollUpBtn--fixed
  savio.net.pl##.scrollup-button
  schiedel.com,weknowhow.tech,zlotegory.com##.mk-go-top
  scottiego.com###to_top_scrollup
@@ -113,7 +113,7 @@ index 91b542e7e..e630897f4 100644
  secure.e-konsulat.gov.pl##.go-up-button
  seoheroes.pl##.clb-scroll-top-holder
  serafin-maszyny.com##.back_to_top
-@@ -900,7 +896,7 @@ tchibo.pl##.js-tp-backtotop
+@@ -905,7 +901,7 @@ tchibo.pl##.js-tp-backtotop
  tcl.com##.scroll-fab
  teamviewer.com###back_to_top_button
  teksty.ovh##.toTop-show
@@ -123,7 +123,7 @@ index 91b542e7e..e630897f4 100644
  teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop
  termodomplus.pl,tfiagro.pl##.top-arrow
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 5064bfe97..d9d4f0680 100644
+index 428690e90..4ea215f45 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -25,7 +25,7 @@ agrarada.pl###basic-modal-content, .modal-backdrop
