@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 1a4badc1c..9e45a1402 100644
+index 0fd1f3a89..6fd9246cd 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -1055,7 +1055,6 @@ trafica.eu##.shop__access
@@ -33,7 +33,7 @@ index 40d39b89a..fa07fe97f 100644
  teletropiciel.pl## .krotkie__zapytanie
  telewizja-cyfrowa.com##.textwidget > p:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 9427ec34f..db5311ab3 100644
+index e8015f277..09fd1d4c7 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -3,7 +3,7 @@
@@ -45,7 +45,7 @@ index 9427ec34f..db5311ab3 100644
  6paknutrition.com,aparatsluchowy.com,e-sonido.pl,oneorganic.eu,partner-panele.pl,proficook.pl,skleprowerowy.pl###scrolltopbtn
  7box.eu###btnScrollTo
  8a.pl,tasmuj.pl##.sm-goTop
-@@ -45,7 +45,7 @@ agro-hurt.eu,decoratorium.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,nazie
+@@ -45,7 +45,7 @@ agro-hurt.eu,ichi.pro,luxorna.com,mojewypiekiinietylko.com,naziemna.info,peskiad
  agroas.pl##.to-the-top-link
  agrofakt.pl##.go-down
  agrogajda.pl,elektronik-service.com.pl,sklepfarmer.pl###search_scroll_mini
@@ -154,10 +154,10 @@ index 428690e90..4ea215f45 100644
  drzwi-cal.pl###bio_ep, #bio_ep_bg
  drzwi-cal.pl,mbmeganarzedzia.pl,medonetmarket.pl,parkmania.pl,pl.wizcase.com,pozyczkabezbanku.pl##+js(nostif, bioEp.showPopup)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 287544e71..72f3855d7 100644
+index 85cef882b..e0dfbba04 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -640,7 +640,7 @@ teb.pl##.fab-contact.fab
+@@ -641,7 +641,7 @@ teb.pl##.fab-contact.fab
  tefal24.pl###widget-button
  teleaudio.pl##.pulse
  telekarma.pl###flyHelp

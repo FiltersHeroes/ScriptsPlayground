@@ -1,20 +1,28 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 05632fc4..572b2a56 100644
+index f4d415bb..e73b6da7 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -30,7 +30,6 @@
- ||dating-heart1.com^
- ||dev.apps.co.pl^
- ||dlaczegoomega3.natural.pl^
--||dotpay.pocztapolska24.pl^
- ||download.apps.co.pl^
- ||download.file.co.pl^
- ||dziennik-info.x9.eu^
-@@ -138,7 +137,6 @@
- ||plde.bestshopping-voucher.com^
- ||plmm16.bestshopping-voucher.com^
- ||plrm.bestshopping-voucher.com^
--||pocztapolska24.pl^
- ||polska.enchantevent.com^
- ||portal.pl.wd.content.51c7b93f64.cache.server560960.nazwa.pl^
- ||portalrandkowy.c.pl^
+@@ -164,7 +164,6 @@
+ ||ping.ublock.org^
+ ||pl1-germivir.great-goods.org^
+ ||pl1.alcozarsale.com^
+-||pl1.colladioxprosale.com^
+ ||pl1.intensv.com^
+ ||pl1.landnob.com^
+ ||pl1.landofm.com^
+@@ -172,7 +171,6 @@
+ ||pl1.landtrov.com^
+ ||pl1.landurt.com^
+ ||pl2.alcozarsale.com^
+-||pl2.colladioxprosale.com^
+ ||pl2.intensv.com^
+ ||pl2.landnob.com^
+ ||pl2.landofm.com^
+@@ -181,7 +179,6 @@
+ ||pl2.landunv.com^
+ ||pl2.landurt.com^
+ ||pl3.alcozarsale.com^
+-||pl3.colladioxprosale.com^
+ ||pl3.intensv.com^
+ ||pl3.landnob.com^
+ ||pl3.landofm.com^
