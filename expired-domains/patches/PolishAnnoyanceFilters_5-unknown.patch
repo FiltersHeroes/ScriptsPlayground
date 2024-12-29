@@ -1,49 +1,40 @@
-diff --git a/PPB/uBO_AG/inne_suplement.txt b/PPB/uBO_AG/inne_suplement.txt
-index 71b44678b..245b93b39 100644
---- a/PPB/uBO_AG/inne_suplement.txt
-+++ b/PPB/uBO_AG/inne_suplement.txt
-@@ -133,7 +133,6 @@ poczta.o2.pl,poczta.wp.pl##:matches-path(/login/login.html) body[class*=" _"]:re
- poligamia.pl,www.dobreprogramy.pl###komentarze div[id^="komentarz-"] div[id^="komentarz-"]:has(p:has-text(/^Komentarz ukryty$/)):style(opacity: 0.3 !important)
- poligamia.pl,www.dobreprogramy.pl###komentarze div[id^="komentarz-"]:has(p:has-text(/^Komentarz ukryty$/)):not(:has(div[id^="komentarz-"])):style(opacity: 0.3 !important)
- polsatnews.pl##.series__item:remove()
--portalpogrzebowy.pl##.center ~ .baner:style(margin-right: 0 !important)
- posnania.eu##.customScroll__bar
- proline.pl##blockquote:style(transform: unset !important; rotate: unset !important)
- przepisy.pl##.animation:style(animation: none !important)
-diff --git a/PPB/uBO_AG/newslettery_suplement.txt b/PPB/uBO_AG/newslettery_suplement.txt
-index e51d45ae6..b7d64a213 100644
---- a/PPB/uBO_AG/newslettery_suplement.txt
-+++ b/PPB/uBO_AG/newslettery_suplement.txt
-@@ -30,7 +30,6 @@ muzyczny.eu##.wpb_wrapper > .wpb_content_element > .wpb_wrapper > .widget_newsle
- nammakeup.com##.block_newsletter > .container:style(visibility: hidden !important)
- nowymarketing.pl##.accessInfoBox
- nowymarketing.pl##.blured:style(filter: none !important)
--portalpogrzebowy.pl##.footer_title_2, #img > form:style(visibility: hidden !important)
- promocje.al.to,promocje.x-kom.pl##div > h3 + .newsletter:upward(div)
- styl-sklep.pl###subReqForm > div > form > .description:style(font-size: 0 !important)
- szybkanauka.pro##+js(ra, style, body)
-diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 4ea215f45..9c9e58937 100644
---- a/PPB/uBO_AG/popupy_suplement.txt
-+++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -22,9 +22,9 @@ agatabielen.com##html.remodal_lock, body.remodal_lock:style(overflow-y: auto !im
- agatabielen.com,cyberdefence24.pl,energetyka24.com,infosecurity24.pl,nowyrp.pl,polonia.edu.pl,space24.pl,wishbone.pl##body:style(padding-right: 0 !important)
- agrarada.pl###basic-modal-content iframe[src*="autoplay=1"]:remove()
- agrarada.pl###basic-modal-content, .modal-backdrop
--agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,husse.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
--agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-lock > body, html.fancybox-lock:style(overflow-y: auto !important)
--agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,portalpogrzebowy.pl,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-margin:style(margin-right: 0 !important)
-+agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,husse.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
-+agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-lock > body, html.fancybox-lock:style(overflow-y: auto !important)
-+agri-truck.pl,ajakarnica.pl,baby.nivea.pl,bambineo.pl,bejeans.pl,betterland.pl,drogeria-ekologiczna.pl,eltkom.pl,eurotech.agro.pl,evertourist.com,fifishop.pl,gromada.pl,habys.pl,harro.pl,hotelbonifacio.pl,oaza-palmy.pl,pakamera.pl,pl.aleteia.org,pupilexpert.pl,royalpark.pl,splacepark.pl,stokrotka.pl,termyszaflary.com,zlotymotocyklowe.pl##html.fancybox-margin:style(margin-right: 0 !important)
- agri-truck.pl,ajakarnica.pl,bejeans.pl,betterland.pl,bikemia.com,eltkom.pl,epione.pl,eurotech.agro.pl,fifishop.pl,harro.pl,hotelbonifacio.pl,opoczno.eu,pch24.pl,royalpark.pl,splacepark.pl,stokrotka.pl,swiece-zaplonowe.pl##.fancybox-overlay-fixed.fancybox-overlay
- agro-top.com.pl,poznan.factory.pl##.region-popup
- agroalex.pl,beautysupply.pl,ekogram.pl,porcja.eu,salonydenon.pl,wildcar.pl###x13popup-container, #x13popup-cover, #x13popup-container
-@@ -376,7 +376,6 @@ portal-polski.pl##html.hustle-no-scroll[class]:style(overflow-y: auto !important
- portal.kartaskup.pl###popup, #popup2:style(overflow-y: scroll !important; max-height: 90vh !important; padding: 5px 15px !important)
- portal.kartaskup.pl###popup, #popup2:style(width: unset !important; height: unset !important; position: static !important; margin: 45px 45px 0 45px !important)
- portaloswiatowy.pl##.modal-open[class] .container:style(filter: none !important)
--portalpogrzebowy.pl##.fancybox-overlay-fixed.fancybox-overlay:has(iframe[src="/gfx/newsletter.jpg"])
- poznan.factory.pl##body.open:style(overflow-y: auto !important)
- ppr.pl###initPPRModal, .modal-backdrop
- prawokonsumenckie.pl##.popup[role]
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index a21189af2..eae455600 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -38,7 +38,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+ agrohandel.com.pl###jcemediabox-popup-page
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agromix.agro.pl##.nivo-lightbox-overlay
+-agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,masa-honda.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
++agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
+ agrosiec.pl,angelgold.pl,bolix.pl##.modal
+ agrotopparts.pl###kartka, #kartka ~ #tlo
+ airport.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,pl.canalplus.com,romantycznyweekend.eu,zus.pox.pl###fancybox-overlay, #fancybox-wrap
+@@ -96,7 +96,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
+-atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
++atat.pl,bananki.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
+ atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
+ atrexpress.com.pl,ch24.pl###popup-box, #list-builder
+ atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
+@@ -279,7 +279,7 @@ e-insportline.pl###vivpopup-collapsed
+ e-kidsplanet.com##.banner, .banner-curtain
+ e-kwiaty.pl###exitpopup-newsletter
+ e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
+-e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
++e-podlogidrzwi.pl###infoPage
+ e-sas.pl##.in.fade.modal
+ e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
+ e-spar.com.pl###modal-welcome
+@@ -468,7 +468,7 @@ linguajob.pl##.popup, #get-similar-offers
+ linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
+ listymikolaja.pl###newsletter_layer
+ loanme.pl##.exit-popup-block
+-lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
++lodzkietargi.pl,slaskietargi.pl###popup_mlm
+ longterm.pl###list-builder
+ longterm.pl###popup-box
+ lookfantastic.pl,myprotein.pl##.emailReengagement

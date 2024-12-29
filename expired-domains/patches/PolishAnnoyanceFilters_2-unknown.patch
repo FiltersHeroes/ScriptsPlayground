@@ -1,8 +1,8 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 123115251..9b5aade4a 100644
+index 3f9b429d3..a21189af2 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -682,7 +682,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -684,7 +684,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
  retailnet.pl,rp.pl##tqwidget
@@ -10,37 +10,3 @@ index 123115251..9b5aade4a 100644
  rms.pl##.sj-popup-container
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index e0dfbba04..c2175946a 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -128,7 +128,7 @@ ceneo.pl###recent-activity-toast
- centrumelektroniki.pl,technikarolna.pl##.b24-widget-button-visible
- centrumpapieru.pl##.sb-chat-btn
- cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
--choinkowo.pl,olini.pl,pluszowasowa.pl,wearethecoffee.com###appReviewsWidgetWrapper
-+choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
- cinema3d.pl###popupBoxInvitation
- cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
- citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
-@@ -216,7 +216,7 @@ eitca.pl###block-views-Opinie_EITCA-block_2
- ekantor.pl##.slideout-btn
- eko-life.pl###__ChatoBeeWidget__window
- eko-ue.pl##.fixed-right-menu
--ekookna.pl,gerdex.com.pl,polnord.pl,rivieraparkmarvipol.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
-+ekookna.pl,gerdex.com.pl,polnord.pl,solidnedrzwiokna.pl,wkret-met.com###fastcall
- ekorekta24.pl##.opineo-link
- ekorekta24.pl,multilampy.pl##.opineo
- electro.pl##.is-complaintReport
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
-index e36d4938e..205fa6a32 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_sieciowe.txt
-@@ -11,7 +11,6 @@
- ||client.crisp.chat/static/javascripts/client.js$script,domain=puccini.pl|www.fabrykawafelkow.pl
- ||clivio.pl/wp-content/themes/clivio/img/cursor.png
- ||clivio.pl/wp-content/themes/clivio/img/cursorhover.png
--||collect.chat/forms-question/*$xmlhttprequest,domain=gilotynka.pl
- ||connect.facebook.net/en_US/sdk/xfbml.customerchat.js$domain=www.salonroman.pl
- ||cxel.fcc-online.pl/chat/widget.js
- ||czater.pl/assets/modules/chat/js/chat.js
