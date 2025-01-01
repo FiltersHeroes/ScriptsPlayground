@@ -8,7 +8,7 @@
 # ECODFF - Expiration Check Of Domains From Filterlists
 """MIT License
 
-Copyright (c) 2024 Filters Heroes
+Copyright (c) 2025 Filters Heroes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
