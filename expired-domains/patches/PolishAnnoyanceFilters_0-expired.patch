@@ -1,13 +1,12 @@
-diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 27a604e50..701ffed77 100644
---- a/PPB/strzalki.txt
-+++ b/PPB/strzalki.txt
-@@ -100,7 +100,7 @@ apartamenty.nawyspie.eu##.roll
- aplikuj.pl,apteline.pl,bebiklub.pl,craftincode.com,funnycat.pl,igkm.pl,itcontent.eu,piu.org.pl,purina.pl,quiosque.pl,selectivv.com##.scroll-top-button
- apo-discounter.pl###page_up_button
- apollo.pl##.tt-scroll-up
--apps-on-mac.com,barline.eu,eatyx.com,elektrostymulatory.net,futuryx.eu,gorke.eu,hdtvpolska.com,kasta.news,kielce.eu,kopalniasrebra.com,ogrodniczy.com,osheeshop.eu,pl.genesis-zone.com,polako.eu,rockwool.com,szopienice.org,tablica.com,tacohemingway.store,twojcel.to,wbrew.org##.go-to-top
-+apps-on-mac.com,barline.eu,eatyx.com,elektrostymulatory.net,futuryx.eu,gorke.eu,hdtvpolska.com,kasta.news,kielce.eu,kopalniasrebra.com,ogrodniczy.com,osheeshop.eu,pl.genesis-zone.com,polako.eu,rockwool.com,tablica.com,tacohemingway.store,twojcel.to,wbrew.org##.go-to-top
- appsource.microsoft.com##.appSourceScrollToTop
- aptekaolmed.pl###btn-going-top
- aptekazdrowie-24.pl,e-zikoapteka.pl##.site-scrolltop
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index e026ce65a..15ec9c6b7 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1399,7 +1399,6 @@ supertech.pl##.ps-newsletter
+ surojadek.com##.formkit-form.seva-form
+ suwalszczyzna.com.pl##.widget_recent_news
+ swappie.com##.newsletter-subscription-box
+-sweetcbdstore.com##div[class*="footer"] > div > section > div > div > div > div > div > section:has(> div > div > div > div > div > div > div > form)
+ sweetliving.pl##.llg_footer_col_three.col-sm-3 > h4:first-of-type, #llg_newsletter
+ swiatbaterii.pl##div.col-md-4:nth-of-type(3) > div:first-of-type
+ swiatchoinek.com##.newsletter-div
