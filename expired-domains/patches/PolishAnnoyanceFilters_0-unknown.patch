@@ -1,25 +1,11 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 3f9b429d3..a21189af2 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -684,7 +684,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 8f7c129e5..6db91634a 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -271,7 +271,7 @@ gothaer.pl##.callClickBar
- gplshop.pl###snapifyHidden
- grafcraft.pl###wpcs_tab_745
- graff.pl###rocketchat-iframe
--grafiqa.pl,puch-kotlowski.pl,treningkrakow.pl##.side-tab-widget > a[href="kontakt.html"]
-+grafiqa.pl,puch-kotlowski.pl##.side-tab-widget > a[href="kontakt.html"]
- greenhousedevelopment.pl,sew-eurodrive.pl,super-soco.pl##.contact
- groupon.pl,row.hyperx.com##.bcFloat
- grupazero.pl##.contact-btn
+diff --git a/PPB/strzalki_sieciowe.txt b/PPB/strzalki_sieciowe.txt
+index b20edeec9..de4432e6f 100644
+--- a/PPB/strzalki_sieciowe.txt
++++ b/PPB/strzalki_sieciowe.txt
+@@ -1,6 +1,5 @@
+ /common/js/enp/modules/scrollTop.js$domain=mixmedia.pl|mycenter.pl
+ /theme/Dictionary/assets/plugins/back-to-top.min.js$script,domain=encyklopedia.pwn.pl|sjp.pwn.pl|translatica.pl
+-||back-to-top.appspot.$subdocument
+ ||dih.pl/wp-content/themes/twentyseventeen-child/assets/js/topbutton.js
+ ||eu.edu.pl/wp-content/plugins/go-to-top-button/js/scrolltop.js
+ ||greencanoe.pl/wp-content/themes/cookbook/js/jquery.scrollUp.min.js
