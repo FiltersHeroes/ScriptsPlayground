@@ -1,12 +1,13 @@
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index c4e62717e..45aacda8b 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -85,7 +85,6 @@ bilgorajska.pl,bobbyburger.pl,godealla.pl,majsterkowo.pl,unisono.eu,venezia.pl##
- bitrix24.pl,upominki24.pl,webiso.pl##div[class*="-widget-button-wrapper"]
- biznes.gov.pl,decathlon.pl,dollarro.com,mediaexpert.pl,uniqa.pl,vox.pl,wodociagi.krakow.pl###InteliwiseSaaSModule_win_wrapper
- bizuteria-eshop.pl###IMS_box1
--blendberg.com###collect-chat-launcher-container
- blinkee.city,expose.pl###ue_widget > #ue_launcher
- blinkmedia.pl##.phone_widget
- bludshop.com##.trusted_wrapper
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 6b82b3f9a..ae4eb0882 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -190,7 +190,7 @@ bsigroup.com###loading-screen
+ budujemydom.pl##.mod-zajawka, .box-zajawkowe, .monthly-advertisment
+ burbonik.pl,popkulturysci.pl##a.g1-teaser
+ burgerking.pl##.redirect-banner
+-bursiak.pl,flatfeefsbo.com,lionteam.pl,meblosfera.pl,network-interactive.pl,siecportali.pl,uzdrowiska-pgu.pl,wizja.net##.preloader
++bursiak.pl,lionteam.pl,meblosfera.pl,network-interactive.pl,siecportali.pl,uzdrowiska-pgu.pl,wizja.net##.preloader
+ bursztynowa.pl###loader
+ businessinsider.com.pl###goback
+ busko.net.pl###upPrevSlide
