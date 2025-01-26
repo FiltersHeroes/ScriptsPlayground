@@ -1,13 +1,13 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 6b82b3f9a..ae4eb0882 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -190,7 +190,7 @@ bsigroup.com###loading-screen
- budujemydom.pl##.mod-zajawka, .box-zajawkowe, .monthly-advertisment
- burbonik.pl,popkulturysci.pl##a.g1-teaser
- burgerking.pl##.redirect-banner
--bursiak.pl,flatfeefsbo.com,lionteam.pl,meblosfera.pl,network-interactive.pl,siecportali.pl,uzdrowiska-pgu.pl,wizja.net##.preloader
-+bursiak.pl,lionteam.pl,meblosfera.pl,network-interactive.pl,siecportali.pl,uzdrowiska-pgu.pl,wizja.net##.preloader
- bursztynowa.pl###loader
- businessinsider.com.pl###goback
- busko.net.pl###upPrevSlide
+diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
+index e9f59b0c3..d9cbc2c1a 100644
+--- a/PPB/popupy_sieciowe.txt
++++ b/PPB/popupy_sieciowe.txt
+@@ -14,7 +14,7 @@
+ /wp-content/plugins/popup-builder/javascript/jquery.sgcolorbox-min.js$domain=bobbyburger.pl|fenixmotors.com|plportal.pl|ticker.pl|tygodnikprzeglad.pl
+ /wp-content/plugins/popup-builder/public/sound/*$media,object,domain=polska-ie.com
+ /wp-content/plugins/popup-maker/assets/js/site.min.js$domain=stressfree.pl
+-/wp-content/plugins/popupally/resource/frontend/popup.min.js$domain=forum-oddluzanie.pl|gazetagazeta.com|naszekluski.pl
++/wp-content/plugins/popupally/resource/frontend/popup.min.js$domain=forum-oddluzanie.pl|gazetagazeta.com
+ /wp-content/plugins/popups/public/assets/js/min/public-min.js$domain=adrenalina-kielce.pl|businesstraveller.pl|hykker.com|instalnet.pl|portal.nysa.pl
+ /wp-content/plugins/popups/public/assets/js/public.js$domain=pierwsze-kroki.com|ps4site.pl
+ /wp-content/plugins/wordpress-popup/js/public.min.js$domain=dobremiejsce.org|kwiaciarnia-rikka.pl

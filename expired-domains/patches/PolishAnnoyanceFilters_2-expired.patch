@@ -1,12 +1,13 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 5f7cdf338..fe6111925 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -893,7 +893,6 @@ mirat.eu,ursus.com##.box-newsletter
- misterminit.eu##.blue-banner .banner-wrapper h3, .blue-banner .banner-wrapper h3 + div > a
- mixmedia.pl,mycenter.pl##.b-footerNewsletter
- mksklep.pl##div.CalyBox:nth-of-type(7)
--mlodeasyparkietow.pl##.foot_tit, .foot_news_info
- mlodytechnik.pl##[href="/newsletter"]
- mmo.pl###newsletter_subscriber
- mobileclick.pl###text-37
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 0205d6eb2..0feaa30b2 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -170,7 +170,7 @@ blog.doktortusz.pl##.code-block-5.code-block
+ blog.doktortusz.pl##[href^="https://drtusz.pl"]
+ blog.siegnijpozdrowie.org##.limk-widget
+ bluecity.pl##.js-loader.loader
+-bluelife.pl,pieknojestwtobie.com,zbiorowy.info##.more-stories
++bluelife.pl,zbiorowy.info##.more-stories
+ blueskypolska.pl###iai_mraty
+ bodyshock.pro##div[id^="___ratingbadge_"]
+ bodyshock.pro,e-baseus.com,e-dewocjonalia.eu,trainingshowroom.com,wentsystem.com,zielonysklep.com###socialproof-container

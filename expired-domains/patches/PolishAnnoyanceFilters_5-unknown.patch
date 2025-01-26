@@ -1,12 +1,56 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 4482b55b8..2128334e9 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -1058,7 +1058,6 @@ trafica.eu##.shop__access
- transfering.pl##.ramka_przeczytaj_rowniez_container
- trojmiasto.pl##.AnkietaNews
- trumpeters.pl###banner_div_empty
--tube.ad##.nav
- tugazeta.pl###sort_button, #koment_button
- tulodz.pl##.page__right__box--sonda
- tuwiazowna.pl##.belka
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 209ae08a0..1bd6529f6 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -40,7 +40,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+ agrohandel.com.pl###jcemediabox-popup-page
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agromix.agro.pl##.nivo-lightbox-overlay
+-agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,masa-honda.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
++agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
+ agrosiec.pl,angelgold.pl,bolix.pl##.modal
+ agrotopparts.pl###kartka, #kartka ~ #tlo
+ airport.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,pl.canalplus.com,romantycznyweekend.eu,zus.pox.pl###fancybox-overlay, #fancybox-wrap
+@@ -101,7 +101,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
+-atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
++atat.pl,bananki.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
+ atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
+ atrexpress.com.pl,ch24.pl###popup-box, #list-builder
+ atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
+@@ -182,7 +182,6 @@ bssztum.pl###fireworks
+ btlstomatologia.pl###widget-19, .widget-dark-background2
+ budujemydom.pl###byebye
+ budujemydom.pl,prenumerata.ruch.com.pl##.modal-wrapper
+-butymarkowe.pl###pop_up_module
+ bwfelix.pl###tp-popup
+ byann.pl,domisad.pl,feriogaj.com,tpi.com.pl##.popup-overlay
+ byinsomnia.com,goshico.com,hitobuwie.pl,miyomakeup.com###esns_background_layer
+@@ -284,7 +283,7 @@ e-insportline.pl###vivpopup-collapsed
+ e-kidsplanet.com##.banner, .banner-curtain
+ e-kwiaty.pl###exitpopup-newsletter
+ e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
+-e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
++e-podlogidrzwi.pl###infoPage
+ e-sas.pl##.in.fade.modal
+ e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
+ e-spar.com.pl###modal-welcome
+@@ -473,7 +472,7 @@ linguajob.pl##.popup, #get-similar-offers
+ linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
+ listymikolaja.pl###newsletter_layer
+ loanme.pl##.exit-popup-block
+-lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
++lodzkietargi.pl,slaskietargi.pl###popup_mlm
+ longterm.pl###list-builder
+ longterm.pl###popup-box
+ lookfantastic.pl,myprotein.pl##.emailReengagement
+@@ -689,7 +688,6 @@ rckik.poznan.pl###popup, #popupBg
+ realme.com##.subscribe
+ reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
+ retailnet.pl,rp.pl##tqwidget
+-rivieraparkmarvipol.pl##.fastcall_popup
+ rms.pl##.sj-popup-container
+ robojet.pl###modal_home_page, .modal-backdrop
+ rosenthal.pl###cac_popup_tlo, #cac_popup_obr
