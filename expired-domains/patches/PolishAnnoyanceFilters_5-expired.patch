@@ -1,13 +1,12 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 9b5aade4a..a5b7eef64 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -49,7 +49,7 @@ akson.pl###eventPopup
- albo24.pl##body > div:not([class]):not([id]) > div[class][style*="z-index"][style*="position"][style*="fixed"]
- aledobre.pl,mniammniam.com###universal-popup-wrapper
- aleleki.pl,florini.pl###fancybox-overlay
--alget.pl,ganjamafiashop.com,kontaktowe.pl,polskiesolitery.pl###jOverlayContent, #jOverlay
-+alget.pl,kontaktowe.pl,polskiesolitery.pl###jOverlayContent, #jOverlay
- aliexpress.com##.coupon-poplayer-modal
- aliexpress.com##.drogue-poplayer-modal
- aliexpress.com##.image-poplayer-modal
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 0781722af..4722d853c 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -596,7 +596,6 @@ lebork24.info###bottom-banner, #news_feed_container
+ lebork24.info##.cp-slidein
+ legalnakultura.pl###konkursy-plugin-button
+ legalniewsieci.pl##.more-news-bar
+-lejtmotyw.info###related-wrap, .ib-nav
+ leki.pl###floating-nextprev
+ lento.pl##a[href^="https://www.lento.pl/dodaj-ogloszenie.html"] > img[src]
+ lesniow.pl##.socialTabs-tab--pogoda

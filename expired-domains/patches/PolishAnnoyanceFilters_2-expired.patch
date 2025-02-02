@@ -1,13 +1,25 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 0205d6eb2..0feaa30b2 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -170,7 +170,7 @@ blog.doktortusz.pl##.code-block-5.code-block
- blog.doktortusz.pl##[href^="https://drtusz.pl"]
- blog.siegnijpozdrowie.org##.limk-widget
- bluecity.pl##.js-loader.loader
--bluelife.pl,pieknojestwtobie.com,zbiorowy.info##.more-stories
-+bluelife.pl,zbiorowy.info##.more-stories
- blueskypolska.pl###iai_mraty
- bodyshock.pro##div[id^="___ratingbadge_"]
- bodyshock.pro,e-baseus.com,e-dewocjonalia.eu,trainingshowroom.com,wentsystem.com,zielonysklep.com###socialproof-container
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 9b248a31e..a5cbc8d06 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1243,7 +1243,6 @@ remprodex.com.pl##.col_three.footer_widget
+ rena.pl###newsletterBottomForm
+ renowa.pl##.col-4.col-sm-6.col-md-3
+ reserved.com##.footer-links > .accordion > li.accordion-cat:first-of-type > .accordion-cat-title
+-resortpro.ht-int.com###i-username
+ rfbenchmark.pl##.col-lg-3.col-md-3.col-sm-4.col-xs-12
+ ridex.pl##.mcSignupModule
+ rik.pl##.footer_col_4 > div:nth-of-type(3)
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index c356d73d8..8a3b3223a 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -330,7 +330,7 @@ fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.
+ farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
+ farmer.pl###axnBodyContainer
+ fashionata.pl##.nlpwContainer, .pwShade
+-fashionpost.pl,resortpro.ht-int.com##.newsletter-overall
++fashionpost.pl##.newsletter-overall
+ finanseodkuchni.pl##.fca_eoi_featherlight
+ floslek.pl###closeModal
+ follynail.com###tloPopUp, #oknoPopUp
