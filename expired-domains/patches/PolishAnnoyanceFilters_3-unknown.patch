@@ -1,55 +1,40 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index a5cbc8d06..b53250820 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -3,7 +3,7 @@
- 4adstudio.pl,rudeiczarne.pl##.widget_mc4wp_form_widget
- 4kdownload.com##.footer__section > .footer__col--updates
- 4kom.pl##.newsletter-custom
--4spaw.pl,bydgoszczak.pl,kaliszak.pl,katowiczak.pl,krakusik.pl,pro-jex.pl##.mini-newsletter
-+bydgoszczak.pl,kaliszak.pl,katowiczak.pl,krakusik.pl,pro-jex.pl##.mini-newsletter
- 4trucks.pl##.sInfo > .m209.box
- 9c.com.pl##footer .col-md-auto.col-12
- 9design.pl,evertourist.com##.top_newsletter
-@@ -19,7 +19,7 @@
- 300gospodarka.pl,ccnews.pl,faktyozywnosci.pl,warzywapolowe.pl###custom_html-5
- 360studio.org,brykizameryki.pl##.nks_cc_trigger_tabs
- 365dowolnosci.pl###getall_widget-3
--abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,fresh-market.pl,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mrdiy.com,mumla.pl,nestor.com.pl,obuwiestyl.pl,pakomat.pl,portalspozywczy.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,www.naszapraca.com,yves-rocher.pl,znak.com.pl,znomet.pl,zycierolnika.pl##.newsletter
-+abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,fresh-market.pl,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mrdiy.com,mumla.pl,nestor.com.pl,obuwiestyl.pl,pakomat.pl,portalspozywczy.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,www.naszapraca.com,yves-rocher.pl,znak.com.pl,zycierolnika.pl##.newsletter
- abmax.eu,latarki.pl,multimaszyny.eu,shopsisters.eu###newsletter_block_left
- ac.com.pl##.form-group
- action.com##footer div[data-testid="newsletter-section"]
-@@ -49,7 +49,7 @@ agromat.pl##.column-double.content > .flex
- agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
- agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
- agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
--agrosklad.com.pl,agrotuszyn.pl##.zostaw_numer
-+agrosklad.com.pl##.zostaw_numer
- ahe.lodz.pl###company-newsletter-column
- airport.com.pl,deweloper-interes.pl,niebieskimigdal.pl###text-2
- airstop.pl###snippet-newsletterSubscription-newsletterSubscription
-@@ -694,7 +694,6 @@ jobs.pl##.invitation, .notification-submit-box
- joga.org.pl###col2 > .module:nth-of-type(2)
- joom.com##div[class*="promoCorner_"]
- jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
--jupi24.pl##.rc-box-newsletter
- justbefit.pl###new_footer
- kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
- kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -778,7 +777,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
- labotiga.pl##.block_newletter
- ladybusiness.pl##.newsletter-sectionw
- laksystem.pl##.wf2-scroll-box.grwf2-wrapper
--lamisi.pl##.widget-newsletter-subscribe
- lamoda.pl##.min-h-newsletter
- lampy.pl###newsletterbox_1
- lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -1289,7 +1287,6 @@ silesiasem.pl##.entry-content > form
- silesion.pl##.pageFooter__newsletter
- sinsay.com##.home-ss20-newsletter
- sipma.pl###newslet
--site-call.pl##.wpc-subcribe .form-subscribe
- skalnik.pl##.newsletter_content.footer
- skapiec.pl##section.newsletter
- ski4you.pl##footer#footer.footer .widget--signup
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 940d2d548..41b550b68 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -40,7 +40,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+ agrohandel.com.pl###jcemediabox-popup-page
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agromix.agro.pl##.nivo-lightbox-overlay
+-agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,masa-honda.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
++agropolska.pl,auto-gdansk.com.pl,blancz.pl,chinskieprzepisy.pl,holiday.aquila.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,ozptd.pl,promax.media.pl,strzalkowski.pl,www.hamol.pl,www.honda-kemag.pl,www.hondacichonski.com.pl,www.hondamalta.karlik.poznan.pl,www.hondaplaza.pl,zdobadzkobiete.pl###fancybox-wrap, #fancybox-overlay
+ agrosiec.pl,angelgold.pl,bolix.pl##.modal
+ agrotopparts.pl###kartka, #kartka ~ #tlo
+ airport.com.pl,chinskieprzepisy.pl,holiday.aquila.pl,pl.canalplus.com,romantycznyweekend.eu,zus.pox.pl###fancybox-overlay, #fancybox-wrap
+@@ -101,7 +101,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
+ astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
+-atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
++atat.pl,bananki.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
+ atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
+ atrexpress.com.pl,ch24.pl###popup-box, #list-builder
+ atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
+@@ -284,7 +284,7 @@ e-insportline.pl###vivpopup-collapsed
+ e-kidsplanet.com##.banner, .banner-curtain
+ e-kwiaty.pl###exitpopup-newsletter
+ e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
+-e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
++e-podlogidrzwi.pl###infoPage
+ e-sas.pl##.in.fade.modal
+ e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
+ e-spar.com.pl###modal-welcome
+@@ -473,7 +473,7 @@ linguajob.pl##.popup, #get-similar-offers
+ linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
+ listymikolaja.pl###newsletter_layer
+ loanme.pl##.exit-popup-block
+-lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
++lodzkietargi.pl,slaskietargi.pl###popup_mlm
+ longterm.pl###list-builder
+ longterm.pl###popup-box
+ lookfantastic.pl,myprotein.pl##.emailReengagement
