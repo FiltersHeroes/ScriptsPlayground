@@ -93,6 +93,8 @@ if "CI" in os.environ:
                 filterlists.append("PolishSocialCookiesFiltersDev")
             if "polish_rss_filters" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
                 filterlists.append("PolishAntiAnnoyingSpecialSupplement")
+            if "PASS_supp" in d.a_path and "PolishAntiAnnoyingSpecialSupplement" not in filterlists:
+                filterlists.append("PolishAntiAnnoyingSpecialSupplement")
             if "cookies" in d.a_path and "PolishSocialCookiesFiltersDev" not in filterlists:
                 filterlists.append("PolishSocialCookiesFiltersDev")
 
@@ -127,7 +129,7 @@ if "CI" in os.environ:
                     expired_files.append(d.a_path)
                 elif d.a_path in ("cookies", "social") and filterlist == "PolishSocialCookiesFiltersDev":
                     expired_files.append(d.a_path)
-                elif "rss" in d.a_path and filterlist == "PolishAntiAnnoyingSpecialSupplement":
+                elif d.a_path in ("rss", "PASS_supp") and filterlist == "PolishAntiAnnoyingSpecialSupplement":
                     expired_files.append(d.a_path)
                 elif "KAD" in d.a_path and filterlist == "KAD" and not "parked" in d.a_path:
                     expired_files.append(d.a_path)

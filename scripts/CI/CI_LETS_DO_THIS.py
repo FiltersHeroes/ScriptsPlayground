@@ -30,8 +30,6 @@ async def lets_go(session: aiohttp.ClientSession, url, limit):
                     file_name = os.path.basename(url)
                     if url == "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus.txt":
                         file_name = "KADhosts.txt"
-                    elif url == "https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt":
-                        file_name = "polish_rss_filters_supp.txt"
                     with open(pj(main_path, file_name), "wb") as fd:
                         async for chunk in resp.content.iter_chunked(10):
                             fd.write(chunk)
@@ -92,7 +90,7 @@ elif sys.argv[1] == "PAF_C":
     urls.extend(PAF_supp_urls)
 elif sys.argv[1] == "PASS":
     urls.extend(["https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/polish_rss_filters.txt",
-                 "https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/sections/suplement.txt"])
+                 "https://raw.githubusercontent.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/master/PASS_supp.txt"])
 elif sys.argv[1] == "Social":
     urls.append(Social_url)
 elif sys.argv[1] == "Social_supp":

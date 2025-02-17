@@ -141,7 +141,7 @@ jobs:
           ./scripts/CI/CI_LETS_DO_THIS.py Social_C
           ./scripts/CI/CI_LETS_DO_THIS.py PASS
           echo 'E_SOCIAL<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters polish_rss_filters_supp adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh polish_rss_filters PASS_supp adblock_social_list social_filters_uB_AG)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
       - uses: actions/upload-artifact@v4
         with:
