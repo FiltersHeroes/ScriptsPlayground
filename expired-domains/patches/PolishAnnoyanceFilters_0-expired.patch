@@ -1,12 +1,13 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 7a5edfd15..756e7fd2e 100644
+index 1a282edb9..88ac7cfb3 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -509,7 +509,6 @@ mil.link,psycholog-pisze.pl##.buttontop-top
- millymally.pl##.page-up
- milmag.pl##.doScrollTop
- miloohome.pl,szymonbrodziak.com###js-btn-gotop
--misjaangielski.pl##.ast-scroll-to-top-right
- mmp24.pl##.jquery-back-to-top
- mmpartners.eu##.przewijak
- mobilevikings.pl##.bottom-right img[src*="arrow"]
+@@ -77,7 +77,7 @@ auchanhetmanska.pl##.a-ScrollTop
+ audilo.pl,douglas.pl,eadamex.pl,mediaexpert.pl##.scroll-to-top-button
+ audio.com.pl###return-btn
+ audiocare.pl##.yydev-back-to-top
+-audioklan.pl,eenergy.com.pl##.back-top-btn
++audioklan.pl##.back-top-btn
+ austria.info##.has-ScrollHint.b-scroll-hint
+ autoplaza.com.pl###gw_footerSticky__backToTop
+ ava-kosmetyki.pl##.icon-scroll

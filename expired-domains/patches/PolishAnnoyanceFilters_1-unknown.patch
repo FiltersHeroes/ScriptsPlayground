@@ -1,24 +1,9 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 6c2ee4357..834ceb6a7 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -690,7 +690,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- reporteryoung.pl##.fancybox-wrap, .fancybox-overlay
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 0de7a6b83..0784b95c7 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -100,7 +100,6 @@ brandvital.eu,ciagutek.pl###callnowbutton
- brief.pl##.fab-desktop
- brw.pl##.brw_opineo.icon-menu
- bssztum.pl###widget_social2
--bulwaryksiazece.pl##.ask-form
- buy-it.pl###crisp-chatbox
- cadenas.de##.notification_bar_content > .item.contact
- cadsoft.pl##.arrow-seeMe
+diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
+index 779b52ac2..1b0cd3adc 100644
+--- a/PPB/strzalki_ogolne_sieciowe.txt
++++ b/PPB/strzalki_ogolne_sieciowe.txt
+@@ -2,4 +2,3 @@
+ /wp-content/*/wpfront-scroll-top.$script
+ /wp-content/plugins/dynamic-to-top/js/dynamic.to.top.min.js
+ /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
+-||back-to-top.appspot.*^$subdocument
