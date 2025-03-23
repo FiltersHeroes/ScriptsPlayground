@@ -1,21 +1,11 @@
-diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 73e187a69..91b542e7e 100644
---- a/PPB/strzalki.txt
-+++ b/PPB/strzalki.txt
-@@ -86,7 +86,7 @@ ams.edu.pl,apteka-natura.eu,bludshop.com,cyberpower.com,ehurt.eu,ene-due.eu,pako
- amway.pl##div[class*="scroll-to-top--"]
- androidayuda.com,desdelinux.net,iphonea2.com,todoandroid.es,ubunlog.com###toplink
- androidowy.pl,brodatyzbir.pl,coffeedesk.pl,jaktodaleko.pl,kalejdoskopbudowlany.pl,kasiapszonicka.pl,lifemanagerka.pl,linux.pl,rootblog.pl,zebza.net##.pk-scroll-to-top
--anetaduk.com,liletink.pl,lukasiewicz.gov.pl,moto.lca.pl,potplayerclub.pl###myBtn
-+anetaduk.com,liletink.pl,lukasiewicz.gov.pl,moto.lca.pl###myBtn
- animalistka.pl,faltusdesign.wordpress.com,rygalo.com##.tothetop
- anmarniemcz.pl,apia.pl,icrow.pl,nat.pl,odrzanska.eu,ti-ksiaz.iap.pl##.page-scroll-up
- answear.com,myjki.com,myjki.eu,radiopoznan.fm,wielkishoe.com###scrollTop
-@@ -725,7 +725,6 @@ panasonic.com##.pagetop
- pantuniestal.com##.tgm-to-the-top
- papu.io,warsawhome.eu##.footer-scroll-top
- paradise-rpg.pl,sat-4-all.com###lk_gototop
--pasmanteria-atlasek.pl###nasa-back-to-top
- paweltkaczyk.com##.johannes-goto-top
- payback.pl##.pb-back-to-top
- pepper.pl##.btn--moveToTop
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
+index 043bce455..5ae6aa8b1 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
+@@ -1,6 +1,5 @@
+ /livezillachat//script.php
+ /web/live-chat/chatbotize-$script
+-||anymind.com/sdk/widget-sdk.js
+ ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
+ ||app.sugester.pl/tpbocian/widget.js
+ ||cdn.inbox.shoplo.com/chat.html$third-party
