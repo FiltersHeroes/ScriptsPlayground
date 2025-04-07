@@ -21,7 +21,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ matrix.repo }}
           path: ${{ matrix.repo }}
           persist-credentials: false
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: 994739
