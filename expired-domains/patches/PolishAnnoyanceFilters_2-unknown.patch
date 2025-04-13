@@ -1,46 +1,30 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 512dd0d5f..91356d8e6 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -19,7 +19,7 @@
- 300gospodarka.pl,ccnews.pl,faktyozywnosci.pl,warzywapolowe.pl###custom_html-5
- 360studio.org,brykizameryki.pl##.nks_cc_trigger_tabs
- 365dowolnosci.pl###getall_widget-3
--abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,fresh-market.pl,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mrdiy.com,mumla.pl,nestor.com.pl,obuwiestyl.pl,pakomat.pl,portalspozywczy.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,supersklep.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,wroclaw.pl,www.naszapraca.com,yves-rocher.pl,zabawki.esklep.info,znak.com.pl,znomet.pl,zycierolnika.pl##.newsletter
-+abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,eatyx.com,esklep.brandvital.eu,eventory.cc,fresh-market.pl,hbt.com.pl,hegos.eu,lou.pl,mazidla.com,mrdiy.com,mumla.pl,nestor.com.pl,obuwiestyl.pl,pakomat.pl,portalspozywczy.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,supersklep.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,vivelo.pl,wroclaw.pl,www.naszapraca.com,yves-rocher.pl,zabawki.esklep.info,znak.com.pl,zycierolnika.pl##.newsletter
- abmax.eu,latarki.pl,multimaszyny.eu,shopsisters.eu###newsletter_block_left
- ac.com.pl##.form-group
- action.com##section[data-testid="newsletter-section"]
-@@ -49,7 +49,7 @@ agromat.pl##.column-double.content > .flex
- agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
- agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
- agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
--agrosklad.com.pl,agrotuszyn.pl##.zostaw_numer
-+agrosklad.com.pl##.zostaw_numer
- ahe.lodz.pl###company-newsletter-column
- airport.com.pl,deweloper-interes.pl,niebieskimigdal.pl###text-2
- airstop.pl###snippet-newsletterSubscription-newsletterSubscription
-@@ -696,7 +696,6 @@ jobs.pl##.invitation, .notification-submit-box
- joga.org.pl###col2 > .module:nth-of-type(2)
- joom.com##div[class*="promoCorner_"]
- jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
--jupi24.pl##.rc-box-newsletter
- justbefit.pl###new_footer
- kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
- kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -782,7 +781,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
- labotiga.pl##.block_newletter
- ladybusiness.pl##.newsletter-sectionw
- laksystem.pl##.wf2-scroll-box.grwf2-wrapper
--lamisi.pl##.widget-newsletter-subscribe
- lamoda.pl##.min-h-newsletter
- lampy.pl###newsletterbox_1
- lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -1298,7 +1296,6 @@ silesiasem.pl##.entry-content > form
- silesion.pl##.pageFooter__newsletter
- sinsay.com##.home-ss20-newsletter
- sipma.pl###newslet
--site-call.pl##.wpc-subcribe .form-subscribe
- skalnik.pl##.newsletter_content.footer
- skapiec.pl##section.newsletter
- ski4you.pl##footer#footer.footer .widget--signup
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index c11d518d6..924d1227d 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -395,7 +395,7 @@ interia.pl##.top-of-site-link
+ intermarche.pl##.trigger--page-up
+ intertraktor.pl###up_talk0
+ invest.przemysl.eu###totop.goto-top
+-iobit.com,makeupmyday.pl##.backtop
++iobit.com##.backtop
+ irass.pl##body > div.right.btn[class*="czr"]
+ isp.org.pl,marketdino.pl##.icon-arrow-up
+ ita.tools##.ScrollButtonContainer
+@@ -705,7 +705,6 @@ sadeczanin.info###page-scrollup
+ sadzonki-truskawek.eu###ak-top
+ safegroup.pl##button[data-id="scroll-to-top-button"]
+ sakolife.pl###powrot-do-gory
+-salon-informacyjny.pl##.hotwp-scroll-top
+ salonydenon.pl,vvilk.com##.tvbottom-to-top
+ samochody.pl###__next > div[class*="ToTop_totop_"]
+ samsung.com##button[title="Go to Top"]
+diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
+index 779b52ac2..1b0cd3adc 100644
+--- a/PPB/strzalki_ogolne_sieciowe.txt
++++ b/PPB/strzalki_ogolne_sieciowe.txt
+@@ -2,4 +2,3 @@
+ /wp-content/*/wpfront-scroll-top.$script
+ /wp-content/plugins/dynamic-to-top/js/dynamic.to.top.min.js
+ /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
+-||back-to-top.appspot.*^$subdocument
