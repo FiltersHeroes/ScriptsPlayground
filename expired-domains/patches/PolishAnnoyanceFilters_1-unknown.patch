@@ -1,24 +1,32 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 79b0949d2..646f2892c 100644
+index 2c8bad7f8..bfbcb7fbe 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -691,7 +691,6 @@ ravelo.pl###modalAlertMethodNL
- rckik.poznan.pl###popup, #popupBg
+@@ -694,7 +694,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
+ residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
 -rivieraparkmarvipol.pl##.fastcall_popup
  rms.pl##.sj-popup-container
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 0c5eeee08..5fbf4a3be 100644
+index 29ddff720..3b804507d 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -100,7 +100,6 @@ brandvital.eu,ciagutek.pl,twojdent.pl###callnowbutton
- brief.pl##.fab-desktop
+@@ -104,7 +104,6 @@ brief.pl##.fab-desktop
  brw.pl##.brw_opineo.icon-menu
  bssztum.pl###widget_social2
+ budus-developer.pl##.footer-floating-button
 -bulwaryksiazece.pl##.ask-form
  buy-it.pl###crisp-chatbox
  cadenas.de##.notification_bar_content > .item.contact
  cadsoft.pl##.arrow-seeMe
+@@ -377,7 +376,6 @@ link4.pl##.stuck
+ linux-magazine.pl###floater-tel
+ lispol.com##.msgsDV
+ listwy-dekoracyjne.pl###kontaktbox
+-lizengo.pl##.userlike-chatbutton
+ lnb.pl###opinionIco
+ lokalnyrolnik.pl##.help-button
+ lozaszydercow.com###rtl-shopify-init
