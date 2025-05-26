@@ -1,11 +1,24 @@
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-index 043bce455..5ae6aa8b1 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-@@ -1,6 +1,5 @@
- /livezillachat//script.php
- /web/live-chat/chatbotize-$script
--||anymind.com/sdk/widget-sdk.js
- ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
- ||app.sugester.pl/tpbocian/widget.js
- ||cdn.inbox.shoplo.com/chat.html$third-party
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index 69776b282..195a9682b 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -481,7 +481,6 @@ lfspareparts724.pl##.up.move, .down.move
+ lgensol.pl##.footer-up
+ liderlamp.pl,podatki.gov.pl###scrollDown
+ lidl.pl##.base-to-top-button
+-lightonline.pl##.returnTop
+ limango.pl###footer-container ~ div[class*="shop"][style]
+ linuxiarze.pl##.fa-chevron-up
+ littleforest.pl##.smoothscroll
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 3ef9bead9..5817baa6a 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -371,7 +371,6 @@ libertex.com###sherlockWidget
+ lidl.pl##.feedback-flyout__button-box
+ lighting.philips.pl##aside[class$="support-contact-details"]
+ lightingcenter.pl,mniammniam.com,sklephonda.pl###o-widget-lws
+-lightonline.pl###fixedBtn > .savBtn
+ lincoln.edu.pl##.s_kontakt
+ link4.pl##.stuck
+ linux-magazine.pl###floater-tel

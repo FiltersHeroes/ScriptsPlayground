@@ -1,32 +1,39 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 2c8bad7f8..bfbcb7fbe 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -694,7 +694,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- residenza.cz##.modal--newsletter
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 29ddff720..3b804507d 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -104,7 +104,6 @@ brief.pl##.fab-desktop
- brw.pl##.brw_opineo.icon-menu
- bssztum.pl###widget_social2
- budus-developer.pl##.footer-floating-button
--bulwaryksiazece.pl##.ask-form
- buy-it.pl###crisp-chatbox
- cadenas.de##.notification_bar_content > .item.contact
- cadsoft.pl##.arrow-seeMe
-@@ -377,7 +376,6 @@ link4.pl##.stuck
- linux-magazine.pl###floater-tel
- lispol.com##.msgsDV
- listwy-dekoracyjne.pl###kontaktbox
--lizengo.pl##.userlike-chatbutton
- lnb.pl###opinionIco
- lokalnyrolnik.pl##.help-button
- lozaszydercow.com###rtl-shopify-init
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index 195a9682b..33cff9bfb 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -404,7 +404,7 @@ interia.pl##.top-of-site-link
+ intermarche.pl##.trigger--page-up
+ intertraktor.pl###up_talk0
+ invest.przemysl.eu###totop.goto-top
+-iobit.com,makeupmyday.pl##.backtop
++iobit.com##.backtop
+ irass.pl##body > div.right.btn[class*="czr"]
+ isp.org.pl,marketdino.pl##.icon-arrow-up
+ ita.tools##.ScrollButtonContainer
+@@ -716,7 +716,6 @@ sadeczanin.info###page-scrollup
+ sadzonki-truskawek.eu###ak-top
+ safegroup.pl##button[data-id="scroll-to-top-button"]
+ sakolife.pl###powrot-do-gory
+-salon-informacyjny.pl##.hotwp-scroll-top
+ samochody.pl###__next > div[class*="ToTop_totop_"]
+ samsung.com##button[title="Go to Top"]
+ santander.pl##.footer__scrollUpBtn--fixed
+@@ -790,7 +789,7 @@ teksty.ovh##.toTop-show
+ telepolis.pl##.footer-top
+ teletorium.pl###gototopBtn
+ teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop
+-termodomplus.pl,tfiagro.pl##.top-arrow
++tfiagro.pl##.top-arrow
+ the-first.pl###side_social_icons > ul > li:first-of-type
+ thebodyshop.pl###back_top
+ thermomix.vorwerk.pl,worldoftanks.eu##.button-top
+diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
+index 779b52ac2..1b0cd3adc 100644
+--- a/PPB/strzalki_ogolne_sieciowe.txt
++++ b/PPB/strzalki_ogolne_sieciowe.txt
+@@ -2,4 +2,3 @@
+ /wp-content/*/wpfront-scroll-top.$script
+ /wp-content/plugins/dynamic-to-top/js/dynamic.to.top.min.js
+ /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
+-||back-to-top.appspot.*^$subdocument
