@@ -42,17 +42,19 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.37"
+SCRIPT_VERSION = "2.0.38"
 
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('path_to_file', type=str, nargs='+', action='store')
-parser.add_argument("-c", "--connections", type=int, action='store', default=20)
+parser.add_argument("-c", "--connections", type=int,
+                    action='store', default=20)
 parser.add_argument("-v", "--version", action='version',
                     version="ECODFF" + ' ' + SCRIPT_VERSION)
 parser.add_argument("--dns", action='store', type=str, nargs="+")
 parser.add_argument("--ar", "--allow-redirects", action='store_true')
-
+parser.add_argument("--www-only", action='store_true',
+                    help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.sh.")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -103,28 +105,42 @@ for path_to_file in args.path_to_file:
     PAGE_COMMA_PAT = re.compile(r"^([a-z0-9-~][^\/\*\|\@\"\!]*?)(#|\$\$)")
     PAGE_HOSTS_PAT = re.compile(r"^.*?\d+\.\d+\.\d+\.\d+ (.*)")
 
-    pages = []
+    temp_domains_for_processing = []
+    WWW_PAT = re.compile(r"^(www[0-9]\.|www\.)")
+    IP_PAT = re.compile(r"\d+\.\d+\.\d+\.\d+")
+    PAGE_PAT = re.compile(r".*(?<!\*)\..*(?<!\*)$")
+
     if os.path.isfile(path_to_file):
         with open(path_to_file, "r", encoding="utf-8") as lf:
             for line_lf in lf:
+                temp_extracted_domains = []
                 if match_2p := PAGE_DOUBLE_PIPE_PAT.match(line_lf):
-                    pages.append(match_2p.group(1))
+                    temp_extracted_domains.append(match_2p.group(1))
                 if match_p := PAGE_PIPE_PAT.search(line_lf):
-                    pages.extend(match_p.group(2).split("|"))
+                    temp_extracted_domains.extend(match_p.group(2).split("|"))
                 if match_c := PAGE_COMMA_PAT.match(line_lf):
-                    pages.extend(match_c.group(1).split(","))
+                    temp_extracted_domains.extend(match_c.group(1).split(","))
                 if match_h := PAGE_HOSTS_PAT.match(line_lf):
-                    pages.append(match_h.group(1))
+                    temp_extracted_domains.append(match_h.group(1))
 
-    WWW_PAT = re.compile(r"^(www[0-9]\.|www\.)")
-    for i, page in enumerate(pages):
-        pages[i] = re.sub(WWW_PAT, "", page.replace("~", ""), count=1)
+                for domain_candidate in temp_extracted_domains:
+                    domain_candidate = domain_candidate.replace(
+                        "~", "")  # Always remove tilde
+                    if PAGE_PAT.search(domain_candidate) and not IP_PAT.match(domain_candidate):
+                        if args.www_only:
+                            # If --www-only is active, only add domains that start with www
+                            # and retain the www prefix.
+                            if WWW_PAT.match(domain_candidate):
+                                temp_domains_for_processing.append(
+                                    domain_candidate)
+                        else:
+                            # If --www-only is NOT active, remove www and add all valid domains.
+                            temp_domains_for_processing.append(
+                                re.sub(WWW_PAT, "", domain_candidate, count=1))
 
-    PAGE_PAT = re.compile(r".*(?<!\*)\..*(?<!\*)$")
-    IP_PAT = re.compile(r"\d+\.\d+\.\d+\.\d+")
+    # Filter and sort the main 'pages' list after all domains are collected
     pages = sorted(
-        {i for i in pages if PAGE_PAT.search(i) and not IP_PAT.match(i)})
-
+        {i for i in temp_domains_for_processing if PAGE_PAT.search(i) and not IP_PAT.match(i)})
 
     PARKED_PAT = []
     with open(pj(main_path, "domainParking.txt"), "r", encoding='utf-8') as parkersFile:
@@ -193,68 +209,40 @@ for path_to_file in args.path_to_file:
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
 
-    # Copying URLs containing subdomains
-    if offline_pages:
-        with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
-            for page in offline_pages:
-                if SUB_PAT.search(page):
-                    sub_temp_file.write(f"{page}\n")
+    # Conditionally execute DSC.sh processing
+    if not args.www_only:  # DSC.sh is only run if --www-only is NOT active
+        # Copying URLs containing subdomains
+        if offline_pages:
+            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
+                for page in offline_pages:
+                    if SUB_PAT.search(page):
+                        sub_temp_file.write(f"{page}\n")
 
-        spec = importlib.util.spec_from_file_location(
-            "Sd2D", pj(script_path, "Sd2D.py"))
-        Sd2D = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(Sd2D)
-        results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
+            spec = importlib.util.spec_from_file_location(
+                "Sd2D", pj(script_path, "Sd2D.py"))
+            Sd2D = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(Sd2D)
+            results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
 
-        with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as Sd2D_result_file:
-            Sd2D_result_file.write('\n'.join(results_Sd2D))
-            Sd2D_result_file.write('\n')
+            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as Sd2D_result_file:
+                Sd2D_result_file.write('\n'.join(results_Sd2D))
+                Sd2D_result_file.write('\n')
 
-        DSC_result = subprocess.run(
-            DSC + ["-f", Sd2D_result_file.name], check=False, capture_output=True, text=True)
-        DSC_decoded_result = DSC_result.stdout
-
-        os.remove(Sd2D_result_file.name)
-
-        EXPIRED_SW = ["Expired", "Book_blocked", "Suspended", "Removed",
-                    "Free", "Redemption_period", "Suspended_or_reserved"]
-
-        if DSC_error := DSC_result.stderr:
-            print(DSC_error)
-
-        if DSC_decoded_result:
-            print(DSC_decoded_result)
-            with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file:
-                for entry in DSC_decoded_result.strip().splitlines():
-                    splitted_entry = entry.split()
-                    if splitted_entry[1] in EXPIRED_SW:
-                        e_f.write(f"{splitted_entry[0]}\n")
-                    elif splitted_entry[1] == "Limit_exceeded":
-                        l_f.write(f"{splitted_entry[0]}\n")
-                    elif splitted_entry[1] == "Unknown":
-                        unknown_pages.append(splitted_entry[0])
-                    elif splitted_entry[1] == "No_internet":
-                        no_internet_temp_file.write(
-                            f"{splitted_entry[0]}\n")
-                    # We need to know which domains of subdomains are working
-                    elif splitted_entry[1] == "Valid":
-                        valid_pages_temp_file.write(
-                            f"{splitted_entry[0]}\n")
-            del DSC_decoded_result, DSC_result
-
-        if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
             DSC_result = subprocess.run(
-                DSC + ["-f", no_internet_temp_file.name], check=False, capture_output=True, text=True)
+                DSC + ["-f", Sd2D_result_file.name], check=False, capture_output=True, text=True)
             DSC_decoded_result = DSC_result.stdout
 
-            os.remove(no_internet_temp_file.name)
+            os.remove(Sd2D_result_file.name)
+
+            EXPIRED_SW = ["Expired", "Book_blocked", "Suspended", "Removed",
+                          "Free", "Redemption_period", "Suspended_or_reserved"]
 
             if DSC_error := DSC_result.stderr:
                 print(DSC_error)
 
             if DSC_decoded_result:
                 print(DSC_decoded_result)
-                with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
+                with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file:
                     for entry in DSC_decoded_result.strip().splitlines():
                         splitted_entry = entry.split()
                         if splitted_entry[1] in EXPIRED_SW:
@@ -264,32 +252,62 @@ for path_to_file in args.path_to_file:
                         elif splitted_entry[1] == "Unknown":
                             unknown_pages.append(splitted_entry[0])
                         elif splitted_entry[1] == "No_internet":
-                            no_i_f.write(f"{splitted_entry[0]}\n")
+                            no_internet_temp_file.write(
+                                f"{splitted_entry[0]}\n")
                         # We need to know which domains of subdomains are working
                         elif splitted_entry[1] == "Valid":
-                            valid_temp_file.write(
+                            valid_pages_temp_file.write(
                                 f"{splitted_entry[0]}\n")
+                del DSC_decoded_result, DSC_result
 
-        if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
-            valid_domains = []
-            regex_domains = ""
-            with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
-                for entry in valid_tmp_file:
-                    if entry := entry.strip():
-                        valid_domains.append(entry)
-            if valid_domains:
-                regex_domains = re.compile(f"({'|'.join(valid_domains)})")
+            if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
+                DSC_result = subprocess.run(
+                    DSC + ["-f", no_internet_temp_file.name], check=False, capture_output=True, text=True)
+                DSC_decoded_result = DSC_result.stdout
 
-        with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file:
-            if regex_domains:
-                for sub_entry in sub_tmp_file:
-                    sub_entry = sub_entry.strip()
-                    # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
-                    if regex_domains.search(sub_entry):
-                        if not sub_entry in valid_domains:
-                            unknown_pages.append(sub_entry)
-        os.remove(sub_temp_file.name)
-        del valid_domains
+                os.remove(no_internet_temp_file.name)
+
+                if DSC_error := DSC_result.stderr:
+                    print(DSC_error)
+
+                if DSC_decoded_result:
+                    print(DSC_decoded_result)
+                    with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
+                        for entry in DSC_decoded_result.strip().splitlines():
+                            splitted_entry = entry.split()
+                            if splitted_entry[1] in EXPIRED_SW:
+                                e_f.write(f"{splitted_entry[0]}\n")
+                            elif splitted_entry[1] == "Limit_exceeded":
+                                l_f.write(f"{splitted_entry[0]}\n")
+                            elif splitted_entry[1] == "Unknown":
+                                unknown_pages.append(splitted_entry[0])
+                            elif splitted_entry[1] == "No_internet":
+                                no_i_f.write(f"{splitted_entry[0]}\n")
+                            # We need to know which domains of subdomains are working
+                            elif splitted_entry[1] == "Valid":
+                                valid_temp_file.write(
+                                    f"{splitted_entry[0]}\n")
+
+            if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
+                valid_domains = []
+                regex_domains = ""
+                with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
+                    for entry in valid_tmp_file:
+                        if entry := entry.strip():
+                            valid_domains.append(entry)
+                if valid_domains:
+                    regex_domains = re.compile(f"({'|'.join(valid_domains)})")
+
+            with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file:
+                if regex_domains:
+                    for sub_entry in sub_tmp_file:
+                        sub_entry = sub_entry.strip()
+                        # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
+                        if regex_domains.search(sub_entry):
+                            if not sub_entry in valid_domains:
+                                unknown_pages.append(sub_entry)
+            os.remove(sub_temp_file.name)
+            del valid_domains
 
     request_headers = {
         'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
@@ -315,17 +333,18 @@ for path_to_file in args.path_to_file:
                         status_code = 200
             except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
                 print(f"{ex} ({url})")
-                if "reset by peer" in str(ex) or (not SUB_PAT.search(url) and not WWW_PAT.search(url)):
+                if "reset by peer" in str(ex) or (not SUB_PAT.search(url)):
                     try:
                         await asyncio.sleep(1)
                         print(f"Checking the status of {url} again...")
                         newUrl = f"http://{url}"
-                        if not SUB_PAT.search(url) and not WWW_PAT.search(url):
+                        if not SUB_PAT.search(url) and not WWW_PAT.search(url) and not args.www_only:
                             newUrl = f"http://www.{url}"
                         resp = await session.get(newUrl, allow_redirects=redirect)
                         status_code = resp.status
                         if status_code in (301, 302, 307, 308):
-                            location = str(resp).split("Location': \'")[1].split("\'")[0]
+                            location = str(resp).split(
+                                "Location': \'")[1].split("\'")[0]
                             if url in location:
                                 status_code = 200
                     except Exception as ex2:
@@ -344,7 +363,8 @@ for path_to_file in args.path_to_file:
                     resp = await session.get(f"http://{url}", allow_redirects=redirect)
                     status_code = resp.status
                     if status_code in (301, 302, 307, 308):
-                        location = str(resp).split("Location': \'")[1].split("\'")[0]
+                        location = str(resp).split(
+                            "Location': \'")[1].split("\'")[0]
                         if url in location:
                             status_code = 200
                 except Exception as ex2:
@@ -388,7 +408,7 @@ for path_to_file in args.path_to_file:
         for online_page in online_pages:
             unknown_pages.append(online_page)
         del online_pages
-    
+
     if unknown_pages:
         new_unknown_pages = sorted(set(unknown_pages))
         unknown_pages = new_unknown_pages
