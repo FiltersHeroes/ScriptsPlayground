@@ -40,9 +40,46 @@ import dns.asyncresolver
 from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, Timeout
 import aiohttp
 import git
+import json
+from pathlib import Path
+import sys
 
 # Version number
-SCRIPT_VERSION = "2.0.38"
+SCRIPT_VERSION = "2.0.39"
+
+# Helper function to parse time strings to seconds
+def parse_time_to_seconds(time_str):
+    """
+    Parses a human-readable time string (e.g., "2 hours", "30 minutes", "3600") into seconds.
+    Supports "seconds", "minutes", "hours", "days".
+    If only a number is provided, it's assumed to be in seconds.
+    """
+    time_str = time_str.strip().lower()
+    parts = time_str.split()
+
+    if len(parts) == 1:
+        try:
+            return int(parts[0]) # Assume it's already in seconds if just a number
+        except ValueError:
+            pass # Fall through to more complex parsing if not a simple int
+
+    if len(parts) >= 2:
+        try:
+            value = int(parts[0])
+            unit = parts[1]
+            if unit.startswith("second"):
+                return value
+            elif unit.startswith("minute"):
+                return value * 60
+            elif unit.startswith("hour"):
+                return value * 3600
+            elif unit.startswith("day"):
+                return value * 86400
+        except ValueError:
+            pass # Invalid number format or unit
+
+    raise ValueError(f"Invalid time format for CI_TIME_LIMIT: '{time_str}'. Expected format like '3600', '2 hours', '30 minutes', or '1 day'.")
+
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -54,7 +91,7 @@ parser.add_argument("-v", "--version", action='version',
 parser.add_argument("--dns", action='store', type=str, nargs="+")
 parser.add_argument("--ar", "--allow-redirects", action='store_true')
 parser.add_argument("--www-only", action='store_true',
-                    help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.sh.")
+                    help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.py.")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -70,10 +107,18 @@ temp_path = pj(main_path, "temp")
 
 os.chdir(main_path)
 
-DSC = [pj(script_path, "DSC.sh")]
+DSC_CMD_PREFIX = [sys.executable, pj(script_path, "DSC.py")]
+DSC_COMMON_ARGS = ["--json-output", "--quiet"]
 
 if "CI_TIME_LIMIT" in os.environ:
-    DSC += ["-t", os.getenv("CI_TIME_LIMIT")]
+    ci_time_limit_str = os.getenv("CI_TIME_LIMIT")
+    try:
+        time_limit_seconds = parse_time_to_seconds(ci_time_limit_str)
+        DSC_COMMON_ARGS.extend(["-t", str(time_limit_seconds)])
+    except ValueError as e:
+        print(f"Error parsing CI_TIME_LIMIT: {e}", file=sys.stderr)
+        print("Proceeding without a time limit for DSC.py.", file=sys.stderr)
+
 
 EXPIRED_DIR = pj(main_path, "expired-domains")
 if not os.path.isdir(EXPIRED_DIR):
@@ -209,11 +254,11 @@ for path_to_file in args.path_to_file:
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
 
-    # Conditionally execute DSC.sh processing
-    if not args.www_only:  # DSC.sh is only run if --www-only is NOT active
+    # Conditionally execute DSC.py processing
+    if not args.www_only:
         # Copying URLs containing subdomains
         if offline_pages:
-            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as sub_temp_file:
+            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as sub_temp_file:
                 for page in offline_pages:
                     if SUB_PAT.search(page):
                         sub_temp_file.write(f"{page}\n")
@@ -224,13 +269,14 @@ for path_to_file in args.path_to_file:
             spec.loader.exec_module(Sd2D)
             results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
 
-            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as Sd2D_result_file:
+            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as Sd2D_result_file:
                 Sd2D_result_file.write('\n'.join(results_Sd2D))
                 Sd2D_result_file.write('\n')
 
+            dsc_command = DSC_CMD_PREFIX + ["-f", Sd2D_result_file.name] + DSC_COMMON_ARGS
             DSC_result = subprocess.run(
-                DSC + ["-f", Sd2D_result_file.name], check=False, capture_output=True, text=True)
-            DSC_decoded_result = DSC_result.stdout
+                dsc_command, check=False, capture_output=True, text=True, encoding="utf-8")
+            DSC_raw_output = DSC_result.stdout
 
             os.remove(Sd2D_result_file.name)
 
@@ -240,55 +286,102 @@ for path_to_file in args.path_to_file:
             if DSC_error := DSC_result.stderr:
                 print(DSC_error)
 
-            if DSC_decoded_result:
-                print(DSC_decoded_result)
-                with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as no_internet_temp_file, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as valid_pages_temp_file:
-                    for entry in DSC_decoded_result.strip().splitlines():
+            if DSC_raw_output:
+                try:
+                    dsc_results_json = json.loads(DSC_raw_output)
+                    DSC_processed_results = []
+                    for item in dsc_results_json:
+                        domain = item.get("domain", "N/A")
+                        status = item.get("status", "N/A")
+                        DSC_processed_results.append(f"{domain} {status}")
+                        print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
+                except json.JSONDecodeError as e:
+                    print(f"ERROR: Could not decode JSON from DSC.py output: {e}", file=sys.stderr)
+                    print(f"Raw DSC.py output: \n{DSC_raw_output}", file=sys.stderr)
+                    DSC_processed_results = []
+
+                with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, \
+                     open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, \
+                     NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as no_internet_temp_file, \
+                     NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as valid_pages_temp_file:
+                    for entry in DSC_processed_results:
                         splitted_entry = entry.split()
-                        if splitted_entry[1] in EXPIRED_SW:
-                            e_f.write(f"{splitted_entry[0]}\n")
-                        elif splitted_entry[1] == "Limit_exceeded":
-                            l_f.write(f"{splitted_entry[0]}\n")
-                        elif splitted_entry[1] == "Unknown":
-                            unknown_pages.append(splitted_entry[0])
-                        elif splitted_entry[1] == "No_internet":
+                        if len(splitted_entry) < 2:
+                            continue
+                        
+                        domain_val = splitted_entry[0]
+                        status_val = splitted_entry[1]
+
+                        if status_val in EXPIRED_SW:
+                            e_f.write(f"{domain_val}\n")
+                        elif status_val == "Limit_exceeded":
+                            l_f.write(f"{domain_val}\n")
+                        elif status_val == "Unknown":
+                            unknown_pages.append(domain_val)
+                        elif status_val == "No_internet":
                             no_internet_temp_file.write(
-                                f"{splitted_entry[0]}\n")
+                                f"{domain_val}\n")
                         # We need to know which domains of subdomains are working
-                        elif splitted_entry[1] == "Valid":
+                        elif status_val == "Valid":
                             valid_pages_temp_file.write(
-                                f"{splitted_entry[0]}\n")
-                del DSC_decoded_result, DSC_result
+                                f"{domain_val}\n")
+                del DSC_raw_output
+                del dsc_results_json
+                del DSC_processed_results
 
             if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
-                DSC_result = subprocess.run(
-                    DSC + ["-f", no_internet_temp_file.name], check=False, capture_output=True, text=True)
-                DSC_decoded_result = DSC_result.stdout
+                dsc_command_retry = DSC_CMD_PREFIX + ["-f", no_internet_temp_file.name] + DSC_COMMON_ARGS
+                DSC_result_retry = subprocess.run(
+                    dsc_command_retry, check=False, capture_output=True, text=True, encoding="utf-8")
+                DSC_raw_output_retry = DSC_result_retry.stdout
 
                 os.remove(no_internet_temp_file.name)
 
-                if DSC_error := DSC_result.stderr:
-                    print(DSC_error)
+                if DSC_error_retry := DSC_result_retry.stderr:
+                    print(DSC_error_retry)
 
-                if DSC_decoded_result:
-                    print(DSC_decoded_result)
-                    with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
-                        for entry in DSC_decoded_result.strip().splitlines():
+                if DSC_raw_output_retry:
+                    try:
+                        dsc_results_json_retry = json.loads(DSC_raw_output_retry)
+                        DSC_processed_results_retry = []
+                        for item in dsc_results_json_retry:
+                            domain = item.get("domain", "N/A")
+                            status = item.get("status", "N/A")
+                            DSC_processed_results_retry.append(f"{domain} {status}")
+                            print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
+
+                    except json.JSONDecodeError as e:
+                        print(f"ERROR: Could not decode JSON from DSC.py retry output: {e}", file=sys.stderr)
+                        print(f"Raw DSC.py retry output: \n{DSC_raw_output_retry}", file=sys.stderr)
+                        DSC_processed_results_retry = []
+
+                    with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, \
+                         open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, \
+                         open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, \
+                         open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
+                        for entry in DSC_processed_results_retry:
                             splitted_entry = entry.split()
-                            if splitted_entry[1] in EXPIRED_SW:
-                                e_f.write(f"{splitted_entry[0]}\n")
-                            elif splitted_entry[1] == "Limit_exceeded":
-                                l_f.write(f"{splitted_entry[0]}\n")
-                            elif splitted_entry[1] == "Unknown":
-                                unknown_pages.append(splitted_entry[0])
-                            elif splitted_entry[1] == "No_internet":
-                                no_i_f.write(f"{splitted_entry[0]}\n")
-                            # We need to know which domains of subdomains are working
-                            elif splitted_entry[1] == "Valid":
-                                valid_temp_file.write(
-                                    f"{splitted_entry[0]}\n")
+                            if len(splitted_entry) < 2:
+                                continue
+                            
+                            domain_val = splitted_entry[0]
+                            status_val = splitted_entry[1]
 
-            if os.path.isfile(valid_pages_temp_file.name) and os.path.isfile(sub_temp_file.name):
+                            if status_val in EXPIRED_SW:
+                                e_f.write(f"{domain_val}\n")
+                            elif status_val == "Limit_exceeded":
+                                l_f.write(f"{domain_val}\n")
+                            elif status_val == "Unknown":
+                                unknown_pages.append(domain_val)
+                            elif status_val == "No_internet":
+                                no_i_f.write(f"{domain_val}\n")
+                            # We need to know which domains of subdomains are working
+                            elif status_val == "Valid":
+                                valid_temp_file.write(
+                                    f"{domain_val}\n")
+
+            if os.path.isfile(valid_pages_temp_file.name) and os.path.getsize(valid_pages_temp_file.name) > 0 and \
+               os.path.isfile(sub_temp_file.name) and os.path.getsize(sub_temp_file.name) > 0:
                 valid_domains = []
                 regex_domains = ""
                 with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
@@ -296,18 +389,19 @@ for path_to_file in args.path_to_file:
                         if entry := entry.strip():
                             valid_domains.append(entry)
                 if valid_domains:
-                    regex_domains = re.compile(f"({'|'.join(valid_domains)})")
+                    regex_domains = re.compile(f"({'|'.join(re.escape(d) for d in valid_domains)})")
 
-            with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file:
-                if regex_domains:
-                    for sub_entry in sub_tmp_file:
-                        sub_entry = sub_entry.strip()
-                        # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
-                        if regex_domains.search(sub_entry):
-                            if not sub_entry in valid_domains:
-                                unknown_pages.append(sub_entry)
+                with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file:
+                    if regex_domains:
+                        for sub_entry in sub_tmp_file:
+                            sub_entry = sub_entry.strip()
+                            # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
+                            if regex_domains.search(sub_entry):
+                                if not sub_entry in valid_domains:
+                                    unknown_pages.append(sub_entry)
             os.remove(sub_temp_file.name)
-            del valid_domains
+            if os.path.exists(valid_pages_temp_file.name):
+                os.remove(valid_pages_temp_file.name)
 
     request_headers = {
         'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
@@ -418,7 +512,7 @@ for path_to_file in args.path_to_file:
     # Sort and remove duplicated domains
     for e_file in [EXPIRED_FILE, UNKNOWN_FILE, LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]:
         if os.path.isfile(e_file):
-            with open(e_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
+            with open(e_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as f_t:
                 for line in sorted(set(f_f)):
                     if line:
                         f_t.write(f"{line.strip()}\n")
