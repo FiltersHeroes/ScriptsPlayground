@@ -9,7 +9,7 @@
 # (https://github.com/click0/domain-check-2/graphs/contributors) !
 #
 #
-# Current Version: 1.0.23
+# Current Version: 1.0.24
 #
 #
 # Purpose:
@@ -23,7 +23,7 @@
 #
 #
 # Requirements:
-#  Requires whois
+#  Requires 'whois'. 'netcat' ('nc') is recommended for extended internet checks, 'timeout' command is also required. 'jq' is recommended for JSON output.
 #
 # Installation:
 #  Copy the shell script to a suitable location
@@ -32,27 +32,34 @@
 #  Refer to the usage() sub-routine, or invoke DSC
 #  with the "-h" option.
 #
+
 # Global configuration variables:
 WARNDAYS=30           # Number of days in the warning threshold (cmdline: -x)
-QUIET="FALSE"         # If TRUE, don't print anything on the console (cmdline: -q)
-VERSIONENABLE="FALSE" # Don't show the version of the script by default (cmdline: -V)
-VERBOSE="FALSE"       # Don't show debug information by default (cmdline: -vv)
+QUIET="FALSE"         # If TRUE, suppress console output (cmdline: -q)
+VERSIONENABLE="FALSE" # If TRUE, show script version and exit (cmdline: -V)
+VERBOSE="FALSE"       # If TRUE, show debug information (cmdline: -v)
+JSON_OUTPUT="FALSE"   # If TRUE, output results in JSON format (cmdline: --json-output)
+RATE_LIMIT_DELAY=0.5  # Default delay in seconds between WHOIS/cURL queries to avoid rate limiting (cmdline: -i)
 VERSION=$(awk -F': ' '/^# Current Version:/ {print $2; exit}' "$0")
 VARUSERAGENT="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
-MAX_DEFAULT_PARALLEL_JOBS=5 # Max default parallel jobs, can be changed here
+MAX_DEFAULT_PARALLEL_JOBS=5 # Max default parallel jobs
+JQ_PATH=$(command -v jq) # Check if jq is available
+
+# Variables for CI Timeout (used with -t)
+END_TIME="" # Global variable to store the timestamp when the script should stop
+START_TIME=$(date +%s) # Script start time in seconds since epoch
 
 # Detect number of CPU cores for parallel processing
-CPU_CORES=$(nproc)
-# Fallback if nproc is not available (e.g., macOS, or very minimal Linux env)
+CPU_CORES=$(nproc 2>/dev/null)
+# Fallback if nproc is not available
 if [ -z "$CPU_CORES" ] || [ "$CPU_CORES" -eq 0 ]; then
-    # Attempt to use grep on /proc/cpuinfo if it exists (Linux-specific)
     if [ -f /proc/cpuinfo ]; then
         CPU_CORES=$(grep -c ^processor /proc/cpuinfo)
         if [ -z "$CPU_CORES" ] || [ "$CPU_CORES" -eq 0 ]; then
-            CPU_CORES=4 # Final fallback
+            CPU_CORES=4
         fi
     else
-        CPU_CORES=4 # Default if nproc and /proc/cpuinfo are unavailable
+        CPU_CORES=4
     fi
 fi
 
@@ -62,8 +69,7 @@ if [ "$PARALLEL_JOBS" -gt "$MAX_DEFAULT_PARALLEL_JOBS" ]; then
     PARALLEL_JOBS="$MAX_DEFAULT_PARALLEL_JOBS"
 fi
 
-# Variable to hold the user-defined cap from -j flag, will be processed after getopts
-USER_JOB_CAP=""
+USER_JOB_CAP="" # Variable to hold the user-defined cap from -j flag
 
 #####################################################################
 # Purpose: Print a line with the expiration interval details.
@@ -74,7 +80,7 @@ USER_JOB_CAP=""
 #   $4 -> Days left until the domain will expire
 #####################################################################
 prints() {
-    if [ "${QUIET}" != "TRUE" ]; then
+    if [ "${QUIET}" != "TRUE" ] && [ "${JSON_OUTPUT}" != "TRUE" ]; then
         MIN_DATE=$(echo "$3" | awk '{ print $1, $2, $4 }')
         printf "%-35s %-21s %-31s %-5s\n" "$1" "$2" "$MIN_DATE" "$4"
     fi
@@ -85,7 +91,7 @@ prints() {
 # Arguments: None
 ####################################################
 print_heading() {
-    if [ "${QUIET}" != "TRUE" ]; then
+    if [ "${QUIET}" != "TRUE" ] && [ "${JSON_OUTPUT}" != "TRUE" ]; then
         printf "\n%-35s %-21s %-31s %-5s\n" "Domain" "Status" "Expires" "Days Left"
         echo "----------------------------------- --------------------- ------------------------------- ---------"
     fi
@@ -95,93 +101,149 @@ print_heading() {
 # Purpose: Access whois data to grab the expiration date and determine domain status.
 # Arguments:
 #   $1 -> Domain to check
+#   $2 -> Global END_TIME (epoch seconds) for CI timeout
+#   $3 -> Flag for internet_connected (TRUE/FALSE)
+#   $4 -> Flag for JSON_OUTPUT (TRUE/FALSE)
 ##################################################################
 check_domain_status() {
-    # Define WHOIS_TMP and WHOIS_2_TMP unique to each parallel process.
-    WHOIS_TMP="/var/tmp/whois.$$"
-    WHOIS_2_TMP="/var/tmp/whois_2.$$"
+    local DOMAIN="$1"
+    local SCRIPT_END_TIME="$2"
+    local INTERNET_CONNECTED="$3"
+    local IS_JSON_OUTPUT="$4"
 
-    NOW=${EPOCHSECONDS:-$(date +%s)}
-
-    # Avoid failing whole job on CI/gracefully fail script
-    if [ "$CI" = "true" ]; then
-        if [ "$NOW" -ge "$END_TIME" ]; then
-            echo "Maximum time limit reached for running on CI."
-            exit 0
+    if [ "${INTERNET_CONNECTED}" != "TRUE" ]; then
+        if [ "${IS_JSON_OUTPUT}" == "TRUE" ]; then
+            echo "{\"domain\": \"${DOMAIN}\", \"status\": \"No_internet\", \"expiry_date\": \"N/A\", \"days_left\": \"N/A\"}"
+        else
+            prints "${DOMAIN}" "No_internet" "N/A" "N/A"
         fi
+        return 0
     fi
 
-    # Avoid WHOIS LIMIT EXCEEDED - slowdown our whois client by adding 1 sec.
-    # This sleep is per individual whois query.
-    sleep 1
+    # Check against the script-wide time limit
+    if [ -n "$SCRIPT_END_TIME" ] && [ "$(date +%s)" -ge "$SCRIPT_END_TIME" ]; then
+        if [ "${IS_JSON_OUTPUT}" == "TRUE" ]; then
+             echo "{\"domain\": \"${DOMAIN}\", \"status\": \"Timed_out\", \"expiry_date\": \"N/A\", \"days_left\": \"N/A\"}"
+        else
+            prints "${DOMAIN}" "Timed_out" "N/A" "N/A"
+        fi
+        return 0
+    fi
 
-    DOMAIN=${1}
-    TLDTYPE=$(echo "${DOMAIN}" | awk -F. '{print tolower($NF);}')
+    local WHOIS_TMP="/var/tmp/whois.$$.${RANDOM}"
+    local WHOIS_2_TMP="/var/tmp/whois_2.$$.${RANDOM}"
+    local NOW_EPOCH=$(date +%s)
+
+    local DOMAIN="${1}"
+    local TLDTYPE=$(echo "${DOMAIN}" | awk -F. '{print tolower($NF);}')
     if [ "${TLDTYPE}" == "" ]; then
         TLDTYPE=$(echo "${DOMAIN}" | awk -F. '{print tolower($(NF-1));}')
     fi
     if [ "${TLDTYPE}" == "ua" -o "${TLDTYPE}" == "pl" -o "${TLDTYPE}" == "net" ]; then
-        SUBTLDTYPE=$(echo "${DOMAIN}" | awk -F. '{print tolower($(NF-1)"."$(NF));}')
+        local SUBTLDTYPE=$(echo "${DOMAIN}" | awk -F. '{print tolower($(NF-1)"."$(NF));}')
     fi
 
-    # Invoke whois or curl to fetch domain information.
+    local WHOIS_CMD=""
+    local CURL_CMD=""
+    local WHOIS_TIMEOUT=20 # Timeout for individual whois/curl commands
+
     if [ "${TLDTYPE}" == "kz" ]; then
-        curl -s -A "$VARUSERAGENT" "https://www.ps.kz/domains/whois/result?q=${1}" |
-            env LC_CTYPE=C LC_ALL=C tr -d "\r" >"${WHOIS_2_TMP}"
+        CURL_CMD="timeout ${WHOIS_TIMEOUT} curl -s -A \"${VARUSERAGENT}\" \"https://www.ps.kz/domains/whois/result?q=${DOMAIN}\""
+        if ! eval "${CURL_CMD}" >"${WHOIS_2_TMP}" 2>/dev/null; then
+            if [ "${VERBOSE}" == "TRUE" ]; then echo "DEBUG: curl failed for ${DOMAIN} (kz)." >&2; fi
+            rm -f "${WHOIS_2_TMP}"
+            if [ "$(date +%s)" -ge "$((NOW_EPOCH + WHOIS_TIMEOUT))" ]; then
+                FINAL_STATUS="Timeout"
+            else
+                FINAL_STATUS="Network_Issue"
+            fi
+            if [ "${IS_JSON_OUTPUT}" == "TRUE" ]; then
+                echo "{\"domain\": \"${DOMAIN}\", \"status\": \"${FINAL_STATUS}\", \"expiry_date\": \"Unknown\", \"days_left\": \"Unknown\"}"
+            else
+                prints "${DOMAIN}" "${FINAL_STATUS}" "Unknown" "Unknown"
+            fi
+            # Add a delay after a failed or timed out query
+            sleep "${RATE_LIMIT_DELAY}"
+            return 0
+        fi
     else
-        whois "${1}" | env LC_CTYPE=C LC_ALL=C tr -d "\r" >"${WHOIS_TMP}"
-    fi
-
-    removed=""
-    # Check for domain removal/availability status from WHOIS output.
-    if [ -f "${WHOIS_TMP}" ]; then
-        removed=$(cat "${WHOIS_TMP}" | grep -Ei "(The queried object does not exist: previous registration|is available for registration|Status: AVAILABLE$)")
+        WHOIS_CMD="timeout ${WHOIS_TIMEOUT} whois \"${DOMAIN}\""
+        if ! eval "${WHOIS_CMD}" | env LC_CTYPE=C LC_ALL=C tr -d "\r" >"${WHOIS_TMP}" 2>/dev/null; then
+            if [ "${VERBOSE}" == "TRUE" ]; then echo "DEBUG: whois command failed for ${DOMAIN}." >&2; fi
+            rm -f "${WHOIS_TMP}"
+            if [ "$(date +%s)" -ge "$((NOW_EPOCH + WHOIS_TIMEOUT))" ]; then
+                FINAL_STATUS="Timeout"
+            else
+                FINAL_STATUS="Tool_Failed"
+            fi
+            if [ "${IS_JSON_OUTPUT}" == "TRUE" ]; then
+                echo "{\"domain\": \"${DOMAIN}\", \"status\": \"${FINAL_STATUS}\", \"expiry_date\": \"Unknown\", \"days_left\": \"Unknown\"}"
+            else
+                prints "${DOMAIN}" "${FINAL_STATUS}" "Unknown" "Unknown"
+            fi
+            # Add a delay after a failed or timed out query
+            sleep "${RATE_LIMIT_DELAY}"
+            return 0
+        fi
     fi
 
     # Set locale for consistent date parsing.
     export LC_ALL=en_US.UTF-8
 
-    adate=""
-    date="" # Variable name restored to 'date' as per original script
-    DOMAINDATE=""
-    DOMAINDIFF=""
+    local adate=""
+    local parsed_date_epoch=""
+    local DOMAINDATE="Unknown"
+    local DOMAINDIFF="Unknown"
+    local FINAL_STATUS="Unknown"
 
     # Attempt to extract expiration date from WHOIS output.
-    if [ -f "${WHOIS_TMP}" ] && adate=$(cat "${WHOIS_TMP}" | grep -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento|exp date|validity|vencimiento|registry fee due|fecha de corte)(.*)(:|\])'); then
-        adate=$(echo "$adate" | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
+    if [ -f "${WHOIS_TMP}" ]; then
+        adate=$(cat "${WHOIS_TMP}" | grep -Ei '(expiration|expires|expiry|renewal|expire|paid-till|valid until|exp date|vencimiento|exp date|validity|vencimiento|registry fee due|fecha de corte)(.*)(:|\])' | head -n 1 | sed -n 's/^[^]:]\+[]:][.[:blank:]]*//p')
         adate=${adate%.}
-        if date=$(date -u -d "$adate" 2>&1) || date=$(date -u -d "${adate//./-}" 2>&1) || date=$(date -u -d "${adate//.//}" 2>&1) || date=$(date -u -d "$(echo "${adate//./-}" | awk -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" 2>&1); then
-            DOMAINDATE=$(date -d "$date" +"%d-%b-%Y-%T-%Z")
-            sec=$(($(date -d "$date" +%s) - NOW))
-            DOMAINDIFF=$((sec / 86400))
-        else
-            DOMAINDATE="Unknown ($adate)"
-            DOMAINDIFF="Unknown"
+
+        if [ -n "$adate" ]; then
+            if parsed_date_epoch=$(date -u -d "$adate" +%s 2>/dev/null) || \
+               parsed_date_epoch=$(date -u -d "${adate//./-}" +%s 2>/dev/null) || \
+               parsed_date_epoch=$(date -u -d "${adate//.//}" +%s 2>/dev/null) || \
+               parsed_date_epoch=$(date -u -d "$(echo "${adate//./-}" | awk -F'[/-]' '{for(i=NF;i>0;i--) printf "%s%s",$i,(i==1?"\n":"-")}')" +%s 2>/dev/null); then
+                DOMAINDATE=$(date -d "@${parsed_date_epoch}" +"%d-%b-%Y-%H:%M:%S-UTC")
+                DOMAINDIFF=$(((parsed_date_epoch - NOW_EPOCH) / 86400))
+            else
+                DOMAINDATE="Unknown ($adate)"
+                DOMAINDIFF="Unknown"
+            fi
         fi
-    elif [ "${TLDTYPE}" == "kz" ] && [ -f "${WHOIS_2_TMP}" ]; then # Special handling for .kz TLD
+    fi
+
+    # Special handling for .kz TLD
+    if [ "${TLDTYPE}" == "kz" ] && [ -f "${WHOIS_2_TMP}" ] && [ -z "$parsed_date_epoch" ]; then
         adate=$(grep -A 2 'Дата окончания:' "${WHOIS_2_TMP}" | tail -n 1 | awk '{print $1;}' | awk -FT '{print $1}')
-        DOMAINDATE=$(date -d "${adate}" +"%d-%b-%Y-%T-%Z")
-        sec=$(($(date -d "$date" +%s) - NOW))
-        DOMAINDIFF=$((sec / 86400))
-    elif [ -n "$removed" ] && [ -f "${WHOIS_TMP}" ]; then # Handle "purged" status
-        adate=$(grep -oP -m 1 "was purged on \K.*" "${WHOIS_TMP}" | awk -F\" '{print $1;}')
-        DOMAINDATE=$(date -d "${adate}" +"%d-%b-%Y-%T-%Z")
-        sec=$(($(date -d "$date" +%s) - NOW))
-        DOMAINDIFF=$((sec / 86400))
-    else
-        DOMAINDATE="Unknown"
-        DOMAINDIFF="Unknown"
+        if [ -n "$adate" ]; then
+            if parsed_date_epoch=$(date -u -d "${adate}" +%s 2>/dev/null); then
+                DOMAINDATE=$(date -d "@${parsed_date_epoch}" +"%d-%b-%Y-%H:%M:%S-UTC")
+                DOMAINDIFF=$(((parsed_date_epoch - NOW_EPOCH) / 86400))
+            else
+                DOMAINDATE="Unknown (kz: $adate)"
+                DOMAINDIFF="Unknown"
+            fi
+        fi
+    fi
+
+    # Check for domain removal/availability status from WHOIS output.
+    local removed=""
+    if [ -f "${WHOIS_TMP}" ]; then
+        removed=$(cat "${WHOIS_TMP}" | grep -Ei "(The queried object does not exist: previous registration|is available for registration|Status: AVAILABLE$)")
     fi
 
     # Initialize variables for various domain statuses.
-    book_blocked=""
-    suspended=""
-    active=""
-    free=""
-    suspended_reserved=""
-    redemption_period=""
-    reserved=""
-    limit_exceeded=""
+    local book_blocked=""
+    local suspended=""
+    local active=""
+    local free=""
+    local suspended_reserved=""
+    local redemption_period=""
+    local reserved=""
+    local limit_exceeded=""
 
     # Check for various domain status indicators in WHOIS output.
     if [ -f "${WHOIS_TMP}" ]; then
@@ -197,36 +259,126 @@ check_domain_status() {
 
     # Determine and print the domain status based on checks.
     if [ -n "$removed" ]; then
-        prints "${DOMAIN}" "Removed" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Removed"
     elif [ -n "$suspended_reserved" ]; then
-        prints "${DOMAIN}" "Suspended_or_reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Suspended_or_reserved"
     elif [ -n "$suspended" ]; then
-        prints "${DOMAIN}" "Suspended" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Suspended"
     elif [ -n "$book_blocked" ]; then
-        prints "${DOMAIN}" "Book_blocked" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Book_blocked"
     elif [ -n "$reserved" ]; then
-        prints "${DOMAIN}" "Reserved" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! "${DOMAINDIFF}" == "Unknown" ] && [ "${DOMAINDIFF}" -lt 0 ]; then
-        prints "${DOMAIN}" "Expired" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Reserved"
+    elif [ "${DOMAINDIFF}" != "Unknown" ] && [ "${DOMAINDIFF}" -lt 0 ]; then
+        FINAL_STATUS="Expired"
     elif [ -n "${redemption_period}" ]; then
-        prints "${DOMAIN}" "Redemption_period" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! "${DOMAINDIFF}" == "Unknown" ] && [ "${DOMAINDIFF}" -lt "${WARNDAYS}" ]; then
-        prints "${DOMAIN}" "Expiring" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Redemption_period"
+    elif [ "${DOMAINDIFF}" != "Unknown" ] && [ "${DOMAINDIFF}" -lt "${WARNDAYS}" ]; then
+        FINAL_STATUS="Expiring"
     elif [ -n "${free}" ]; then
-        prints "${DOMAIN}" "Free" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Free"
     elif [ -n "${limit_exceeded}" ] && [ "$DOMAINDATE" == "Unknown" ]; then
-        prints "${DOMAIN}" "Limit_exceeded" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ ! -s "${WHOIS_TMP}" ] && [ ! -s "${WHOIS_2_TMP}" ]; then
-        prints "${DOMAIN}" "No_internet" "${DOMAINDATE}" "${DOMAINDIFF}"
-    elif [ "${DOMAINDATE}" == "Unknown" ] || [ "${DOMAINDATE}" == "Unknown ($adate)" ] && [ -z "$active" ]; then
-        prints "${DOMAIN}" "Unknown" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Limit_exceeded"
+    elif [ "${DOMAINDATE}" == "Unknown" ] && [ -z "$active" ]; then
+        FINAL_STATUS="Unknown"
     else
-        prints "${DOMAIN}" "Valid" "${DOMAINDATE}" "${DOMAINDIFF}"
+        FINAL_STATUS="Valid"
     fi
+
+    if [ "${IS_JSON_OUTPUT}" == "TRUE" ]; then
+        # Escape double quotes and backslashes in domain and date for JSON
+        local ESCAPED_DOMAIN=$(printf %s "$DOMAIN" | sed 's/"/\\"/g' | sed 's/\\/\\\\/g')
+        local ESCAPED_DOMAINDATE=$(printf %s "$DOMAINDATE" | sed 's/"/\\"/g' | sed 's/\\/\\\\/g')
+        echo "{\"domain\": \"${ESCAPED_DOMAIN}\", \"status\": \"${FINAL_STATUS}\", \"expiry_date\": \"${ESCAPED_DOMAINDATE}\", \"days_left\": \"${DOMAINDIFF}\"}"
+    else
+        prints "${DOMAIN}" "${FINAL_STATUS}" "${DOMAINDATE}" "${DOMAINDIFF}"
+    fi
+
+    # Add a delay after each successful or processed query to avoid hitting WHOIS server rate limits.
+    # This sleep applies per individual whois/curl query processed by each parallel job.
+    sleep "${RATE_LIMIT_DELAY}"
 
     # Clean up temporary files unique to this process.
     [ -f "${WHOIS_TMP}" ] && rm -f "${WHOIS_TMP}"
     [ -f "${WHOIS_2_TMP}" ] && rm -f "${WHOIS_2_TMP}"
+}
+
+####################################################
+# Purpose: Check for internet connectivity.
+# Returns: 0 if connected, 1 if not.
+####################################################
+check_internet_connection() {
+    local PING_HOST="8.8.8.8"
+    local CURL_URL="http://www.google.com/generate_204"
+    local TIMEOUT_SECONDS=5 # Timeout for ping and curl
+
+    # Try ping first (ICMP)
+    if ping -c 1 -W 1 "${PING_HOST}" >/dev/null 2>&1; then
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: Ping to ${PING_HOST} successful." >&2
+        return 0
+    else
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: Ping to ${PING_HOST} failed." >&2
+    fi
+
+    # Try curl to a known HTTP endpoint (HTTP over TCP)
+    if curl --head --silent --fail --max-time "${TIMEOUT_SECONDS}" "${CURL_URL}" >/dev/null 2>&1; then
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: HTTP HEAD to ${CURL_URL} successful." >&2
+        return 0
+    else
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: HTTP HEAD to ${CURL_URL} failed." >&2
+    fi
+
+    # Define targets for TCP checks.
+    local TCP_TARGETS=(
+        "8.8.8.8 53 TCP_DNS"      # Google Public DNS
+        "1.1.1.1 53 TCP_DNS"      # Cloudflare DNS
+        "8.8.8.8 80 TCP_HTTP"     # Google Public DNS
+        "google.com 80 TCP_HTTP"  # Google HTTP
+        "google.com 443 TCP_HTTPS" # Google HTTPS
+    )
+
+    local NC_FOUND=false
+    # Check if 'nc' (netcat) command is available.
+    if command -v nc >/dev/null; then
+        NC_FOUND=true
+        local NC_TIMEOUT=3 # Shorter timeout for individual nc attempts
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: nc (netcat) found. Using nc for advanced TCP checks." >&2
+    else
+        local DEV_TCP_TIMEOUT=3 # Shorter timeout for individual /dev/tcp attempts
+        [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: nc (netcat) not found. Falling back to /dev/tcp for TCP checks." >&2
+    fi
+
+
+    for target_info in "${TCP_TARGETS[@]}"; do
+        read -r host port protocol_type <<< "$target_info" # Parse host, port, protocol_type
+
+        # Prefer 'nc' for TCP checks if available.
+        if "${NC_FOUND}"; then
+            [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: Trying TCP ${protocol_type} to ${host}:${port} using nc..." >&2
+            if nc -zvw"${NC_TIMEOUT}" "${host}" "${port}" >/dev/null 2>&1; then
+                [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: TCP ${protocol_type} to ${host}:${port} successful." >&2
+                return 0 # Connection successful
+            else
+                [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: TCP ${protocol_type} to ${host}:${port} failed." >&2
+            fi
+        # Fallback to /dev/tcp if 'nc' is not found.
+        else
+            [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: Trying TCP ${protocol_type} to ${host}:${port} using /dev/tcp..." >&2
+            # Attempt TCP connection using /dev/tcp (Bash built-in feature) with 'timeout' command to prevent hanging.
+            # 'cat < /dev/null' is used to initiate the connection and immediately close it without sending data.
+            if timeout "${DEV_TCP_TIMEOUT}" bash -c "cat < /dev/null > /dev/tcp/${host}/${port}" >/dev/null 2>&1; then
+                [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: TCP ${protocol_type} to ${host}:${port} successful." >&2
+                return 0 # Connection successful
+            else
+                [ "${VERBOSE}" == "TRUE" ] && echo "DEBUG: Internet check: TCP ${protocol_type} to ${host}:${port} failed." >&2
+            fi
+        fi
+    done
+
+    # If all checks fail, declare no internet
+    if [ "${QUIET}" == "FALSE" ] && [ "${JSON_OUTPUT}" == "FALSE" ]; then
+        echo "General internet connection check failed after trying all strategies. Domains will be marked as 'No_internet'." >&2
+    fi
+    return 1
 }
 
 ##########################################
@@ -234,38 +386,46 @@ check_domain_status() {
 # Arguments: None
 ##########################################
 usage() {
-    echo "Usage: $0 [ -x expir_days ] [ -s whois server ] [ -q ] [ -h ] [ -v ] [ -V ] [ -t time limit] [ -j jobs_cap ]"
+    echo "Usage: $0 [ -x expir_days ] [ -q ] [ -h ] [ -v ] [ -V ] [ -t time_limit ] [ -j jobs_cap ] [ -i delay_seconds ] [ --json-output ]"
     echo "    {[ -d domain_namee ]} || { -f domainfile}"
     echo ""
     echo "  -d domain        : Domain to analyze (interactive mode)"
     echo "  -f domain file   : File with a list of domains"
     echo "  -h               : Print this screen"
-    echo "  -q               : Don't print anything on the console"
+    echo "  -q               : Don't print anything on the console (overrides text output when --json-output is used)"
     echo "  -x days          : Domain expiration interval (e.g., if domain_date < days)"
     echo "  -v               : Show debug information when running script"
     echo "  -V               : Print version of the script"
-    echo "  -t time limit    : Time limit for running script on CI"
+    echo "  -t time limit    : Time limit for running script on CI (in seconds). Stops processing new domains after this limit."
     echo "  -j jobs_cap      : Maximum number of parallel jobs (caps the default, currently min(CPU_CORES, ${MAX_DEFAULT_PARALLEL_JOBS}) is ${PARALLEL_JOBS})"
+    echo "  -i delay_seconds : Delay in seconds between WHOIS/cURL queries to avoid rate limiting (default: ${RATE_LIMIT_DELAY})"
+    echo "  --json-output    : Output results in JSON format. Requires 'jq' for pretty printing if installed."
     echo ""
 }
 
-# Export functions for parallel execution with xargs.
+# Export global variables and functions for parallel execution with xargs.
 export -f check_domain_status
 export -f prints
 export -f print_heading
+export WARNDAYS QUIET VERBOSE VARUSERAGENT JQ_PATH END_TIME START_TIME RATE_LIMIT_DELAY
 
 # Evaluate the options passed on the command line.
-while getopts d:f:s:qx:t:vVj: option; do
+while getopts d:f:x:t:vVj:qi:-: option; do
     case "${option}" in
-
     d) DOMAIN=${OPTARG} ;;
     f) SERVERFILE=$OPTARG ;;
-    t) END_TIME=$(date -d "+$OPTARG" +%s) ;;
+    t) END_TIME=$(( START_TIME + OPTARG )) ;;
     q) QUIET="TRUE" ;;
     x) WARNDAYS=$OPTARG ;;
     v) VERBOSE="TRUE" ;;
     V) VERSIONENABLE="TRUE" ;;
-    j) USER_JOB_CAP=$OPTARG ;; # Store the user-defined cap
+    j) USER_JOB_CAP=$OPTARG ;;
+    i) RATE_LIMIT_DELAY=${OPTARG} ;;
+    -) # Handle long options
+        case "${OPTARG}" in
+            json-output) JSON_OUTPUT="TRUE" ;;
+            *) echo "ERROR: Unknown option --${OPTARG}"; usage; exit 1 ;;
+        esac ;;
     \?)
         usage
         exit 1
@@ -276,8 +436,13 @@ done
 # Apply user-defined cap if provided and it's lower than the current PARALLEL_JOBS
 if [ -n "$USER_JOB_CAP" ]; then
     if [ "$USER_JOB_CAP" -lt "$PARALLEL_JOBS" ]; then
-        PARALLEL_JOBS=$USER_JOB_CAP
+        PARALLEL_JOBS="$USER_JOB_CAP"
     fi
+fi
+
+# If JSON output is requested, force QUIET to TRUE for text output
+if [ "${JSON_OUTPUT}" == "TRUE" ]; then
+    QUIET="TRUE"
 fi
 
 # Show debug information if VERBOSE is true.
@@ -287,32 +452,105 @@ fi
 
 # Print script version if VERSIONENABLE is true.
 if [ "${VERSIONENABLE}" == "TRUE" ]; then
-    printf "%-15s %-10s\n" "Script version: " "${VERSION}"
-    exit 1
+    if [ "${JSON_OUTPUT}" == "TRUE" ]; then
+        echo "{\"version\": \"${VERSION}\"}"
+    else
+        printf "%-15s %-10s\n" "Script version: " "${VERSION}"
+    fi
+    exit 0
 fi
 
 # Main execution block.
-if [ "${DOMAIN}" != "" ]; then
-    print_heading
-    check_domain_status "${DOMAIN}"
-elif [ -f "${SERVERFILE}" ]; then
-    print_heading
-    # Export global variables needed by functions in subshells.
-    export WARNDAYS QUIET VERBOSE VARUSERAGENT END_TIME CI
+# ALL_RESULTS array is only populated for JSON output collection.
+# If JSON_OUTPUT is TRUE, results are collected into ALL_RESULTS and printed at the end.
+# If JSON_OUTPUT is FALSE, check_domain_status will print directly.
+ALL_RESULTS=() # Initialized once globally.
 
-    # Process domains from file in parallel using xargs.
-    # -P ${PARALLEL_JOBS}: Use the calculated or user-capped number of parallel processes.
-    # -n 1: Pass one domain at a time to each process.
-    # bash -c '...' : Execute a shell command string in a new bash instance.
-    # check_domain_status "$1" : Call the exported function with the domain.
-    # _ : This argument sets $0 for the bash -c subshell, preventing unintended behavior.
-    cat "${SERVERFILE}" | xargs -P "${PARALLEL_JOBS}" -n 1 bash -c 'check_domain_status "$1"' _
+# Perform initial internet connection check
+INTERNET_OK="TRUE"
+if ! check_internet_connection; then
+    INTERNET_OK="FALSE"
+    if [ "${QUIET}" == "FALSE" ] && [ "${JSON_OUTPUT}" == "FALSE" ]; then
+        echo "Warning: No internet connection detected. All domains will be marked as 'No_internet'." >&2
+    fi
+fi
+
+if [ "${DOMAIN}" != "" ]; then
+    if [ "${JSON_OUTPUT}" != "TRUE" ]; then
+        print_heading
+        check_domain_status "${DOMAIN}" "${END_TIME}" "${INTERNET_OK}" "${JSON_OUTPUT}"
+    else
+        RESULT=$(check_domain_status "${DOMAIN}" "${END_TIME}" "${INTERNET_OK}" "${JSON_OUTPUT}")
+        ALL_RESULTS+=("${RESULT}")
+    fi
+elif [ -f "${SERVERFILE}" ]; then
+    if [ "${JSON_OUTPUT}" != "TRUE" ]; then
+        print_heading
+    fi
+
+    DOMAINS_TO_PROCESS=()
+    while IFS= read -r line || [[ -n "$line" ]]; do
+        line=$(echo "$line" | sed 's/^#.*//' | xargs)
+        if [ -n "$line" ]; then
+            DOMAINS_TO_PROCESS+=("$line")
+        fi
+    done < "${SERVERFILE}"
+
+    # Check if time limit has already expired before starting tasks
+    if [ -n "$END_TIME" ] && [ "$(date +%s)" -ge "$END_TIME" ]; then
+        if [ "${QUIET}" == "FALSE" ] && [ "${JSON_OUTPUT}" == "FALSE" ]; then
+            echo -e "\nTime limit of $((END_TIME - START_TIME)) seconds already elapsed. No domains will be processed." >&2
+        fi
+        if [ "${JSON_OUTPUT}" == "TRUE" ]; then
+            for d in "${DOMAINS_TO_PROCESS[@]}"; do
+                ALL_RESULTS+=("{\"domain\": \"${d}\", \"status\": \"Timed_out\", \"expiry_date\": \"N/A\", \"days_left\": \"N/A\"}")
+            done
+        fi
+    else
+        if [ "${JSON_OUTPUT}" == "TRUE" ]; then
+            TMP_RESULTS_FILE=$(mktemp)
+            trap "rm -f ${TMP_RESULTS_FILE}" EXIT
+
+            printf "%s\n" "${DOMAINS_TO_PROCESS[@]}" | xargs -I {} -P "${PARALLEL_JOBS}" \
+                bash -c 'check_domain_status "$1" "$2" "$3" "$4" >> "$5"' _ {} "${END_TIME}" "${INTERNET_OK}" "${JSON_OUTPUT}" "${TMP_RESULTS_FILE}"
+
+            while IFS= read -r line || [[ -n "$line" ]]; do
+                ALL_RESULTS+=("$line")
+            done < "${TMP_RESULTS_FILE}"
+        else
+            printf "%s\n" "${DOMAINS_TO_PROCESS[@]}" | xargs -I {} -P "${PARALLEL_JOBS}" \
+                bash -c 'check_domain_status "$1" "$2" "$3" "$4"' _ {} "${END_TIME}" "${INTERNET_OK}" "${JSON_OUTPUT}"
+        fi
+    fi
 
 else
     usage
     exit 1
 fi
 
-echo # Add an extra newline for cleaner output.
+# Final JSON output (if requested)
+if [ "${JSON_OUTPUT}" == "TRUE" ]; then
+    if [ -n "$JQ_PATH" ]; then
+        printf '%s\n' "${ALL_RESULTS[@]}" | ${JQ_PATH} -s '.'
+    else
+        echo "["
+        FIRST=true
+        for res in "${ALL_RESULTS[@]}"; do
+            if [ "$FIRST" = true ]; then
+                echo "  ${res}"
+                FIRST=false
+            else
+                echo ", ${res}"
+            fi
+        done
+        echo "]"
+        echo "Warning: 'jq' is not installed. JSON output is not pretty-printed." >&2
+    fi
+fi
+
+# Add an extra newline for cleaner output if not JSON
+if [ "${JSON_OUTPUT}" != "TRUE" ]; then
+    echo
+fi
 
 exit 0

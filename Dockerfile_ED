@@ -3,7 +3,7 @@ FROM python:3.11-slim
 # make Apt non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y locales git openssh-client ca-certificates wget tzdata gettext-base whois curl gcc --no-install-recommends && pip install GitPython dnspython aiohttp tldextract aiodns beautifulsoup4 requests natsort --no-cache-dir
+RUN apt-get update && apt-get install -y netcat-openbsd coreutils iputils-ping jq locales git openssh-client ca-certificates wget tzdata gettext-base whois curl gcc --no-install-recommends && pip install GitPython dnspython aiohttp tldextract aiodns beautifulsoup4 requests natsort --no-cache-dir
 
 # uncomment chosen locale to enable it's generation
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sed -i -e 's/# pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen

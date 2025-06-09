@@ -45,7 +45,7 @@ from pathlib import Path
 import sys
 
 # Version number
-SCRIPT_VERSION = "2.0.39"
+SCRIPT_VERSION = "2.0.41"
 
 # Helper function to parse time strings to seconds
 def parse_time_to_seconds(time_str):
@@ -91,7 +91,7 @@ parser.add_argument("-v", "--version", action='version',
 parser.add_argument("--dns", action='store', type=str, nargs="+")
 parser.add_argument("--ar", "--allow-redirects", action='store_true')
 parser.add_argument("--www-only", action='store_true',
-                    help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.py.")
+                    help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.sh.")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -107,8 +107,8 @@ temp_path = pj(main_path, "temp")
 
 os.chdir(main_path)
 
-DSC_CMD_PREFIX = [sys.executable, pj(script_path, "DSC.py")]
-DSC_COMMON_ARGS = ["--json-output", "--quiet"]
+DSC_CMD_PREFIX = [pj(script_path, "DSC.sh")]
+DSC_COMMON_ARGS = ["--json-output", "-q"]
 
 if "CI_TIME_LIMIT" in os.environ:
     ci_time_limit_str = os.getenv("CI_TIME_LIMIT")
@@ -117,7 +117,7 @@ if "CI_TIME_LIMIT" in os.environ:
         DSC_COMMON_ARGS.extend(["-t", str(time_limit_seconds)])
     except ValueError as e:
         print(f"Error parsing CI_TIME_LIMIT: {e}", file=sys.stderr)
-        print("Proceeding without a time limit for DSC.py.", file=sys.stderr)
+        print("Proceeding without a time limit for DSC.sh.", file=sys.stderr)
 
 
 EXPIRED_DIR = pj(main_path, "expired-domains")
@@ -254,7 +254,7 @@ for path_to_file in args.path_to_file:
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
 
-    # Conditionally execute DSC.py processing
+    # Conditionally execute DSC.sh processing
     if not args.www_only:
         # Copying URLs containing subdomains
         if offline_pages:
@@ -296,8 +296,8 @@ for path_to_file in args.path_to_file:
                         DSC_processed_results.append(f"{domain} {status}")
                         print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
                 except json.JSONDecodeError as e:
-                    print(f"ERROR: Could not decode JSON from DSC.py output: {e}", file=sys.stderr)
-                    print(f"Raw DSC.py output: \n{DSC_raw_output}", file=sys.stderr)
+                    print(f"ERROR: Could not decode JSON from DSC.sh output: {e}", file=sys.stderr)
+                    print(f"Raw DSC.sh output: \n{DSC_raw_output}", file=sys.stderr)
                     DSC_processed_results = []
 
                 with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, \
@@ -351,8 +351,8 @@ for path_to_file in args.path_to_file:
                             print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
 
                     except json.JSONDecodeError as e:
-                        print(f"ERROR: Could not decode JSON from DSC.py retry output: {e}", file=sys.stderr)
-                        print(f"Raw DSC.py retry output: \n{DSC_raw_output_retry}", file=sys.stderr)
+                        print(f"ERROR: Could not decode JSON from DSC.sh retry output: {e}", file=sys.stderr)
+                        print(f"Raw DSC.sh retry output: \n{DSC_raw_output_retry}", file=sys.stderr)
                         DSC_processed_results_retry = []
 
                     with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, \
@@ -421,9 +421,8 @@ for path_to_file in args.path_to_file:
                     if resp.status != "000":
                         status_code = resp.status
                 if status_code in (301, 302, 307, 308):
-                    location = str(resp).split(
-                        "Location': \'")[1].split("\'")[0]
-                    if url in location:
+                    location = resp.headers.get('Location', '')
+                    if location and url in location:
                         status_code = 200
             except (aiohttp.ClientOSError, aiohttp.ClientConnectorError) as ex:
                 print(f"{ex} ({url})")
@@ -437,8 +436,7 @@ for path_to_file in args.path_to_file:
                         resp = await session.get(newUrl, allow_redirects=redirect)
                         status_code = resp.status
                         if status_code in (301, 302, 307, 308):
-                            location = str(resp).split(
-                                "Location': \'")[1].split("\'")[0]
+                            location = resp.headers.get('Location', '')
                             if url in location:
                                 status_code = 200
                     except Exception as ex2:
@@ -457,8 +455,7 @@ for path_to_file in args.path_to_file:
                     resp = await session.get(f"http://{url}", allow_redirects=redirect)
                     status_code = resp.status
                     if status_code in (301, 302, 307, 308):
-                        location = str(resp).split(
-                            "Location': \'")[1].split("\'")[0]
+                        location = resp.headers.get('Location', '')
                         if url in location:
                             status_code = 200
                 except Exception as ex2:
