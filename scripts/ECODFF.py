@@ -35,17 +35,20 @@ import subprocess
 import shutil
 import asyncio
 from tempfile import NamedTemporaryFile
+import sys
+import time
 import importlib.util
+import json
 import dns.asyncresolver
 from dns.resolver import NoNameservers, NXDOMAIN, NoAnswer, Timeout
 import aiohttp
 import git
-import json
-from pathlib import Path
-import sys
 
 # Version number
-SCRIPT_VERSION = "2.0.41"
+SCRIPT_VERSION = "2.0.42"
+
+# Global variable for sleep delay
+RATE_LIMIT_DELAY = 0.5 # Seconds
 
 # Helper function to parse time strings to seconds
 def parse_time_to_seconds(time_str):
@@ -106,6 +109,19 @@ main_path = git_repo.git.rev_parse("--show-toplevel")
 temp_path = pj(main_path, "temp")
 
 os.chdir(main_path)
+
+# Initialize SCRIPT_END_TIME based on CI_TIME_LIMIT environment variable
+SCRIPT_END_TIME = None
+if "CI_TIME_LIMIT" in os.environ:
+    ci_time_limit_str = os.getenv("CI_TIME_LIMIT")
+    try:
+        time_limit_seconds = parse_time_to_seconds(ci_time_limit_str)
+        SCRIPT_END_TIME = time.time() + time_limit_seconds
+        print(f"CI time limit set for ECODFF: {time_limit_seconds} seconds from now.", file=sys.stderr)
+    except ValueError as e:
+        print(f"Error parsing CI_TIME_LIMIT for ECODFF: {e}", file=sys.stderr)
+        print("ECODFF will proceed without a time limit.", file=sys.stderr)
+
 
 DSC_CMD_PREFIX = [pj(script_path, "DSC.sh")]
 DSC_COMMON_ARGS = ["--json-output", "-q"]
@@ -207,10 +223,14 @@ for path_to_file in args.path_to_file:
 
     async def domain_dns_check(domain, limit):
         async with limit:
+            if SCRIPT_END_TIME and time.time() >= SCRIPT_END_TIME:
+                print(f"Skipping DNS check for {domain} due to time limit.")
+                return f"{domain} Limit_exceeded"
+
             status = "online"
             try:
                 print(f"Checking the status of {domain}...")
-                await asyncio.sleep(1)
+                await asyncio.sleep(RATE_LIMIT_DELAY)
                 answers_NS = await custom_resolver.resolve(domain, "NS")
             except NXDOMAIN:
                 status = "offline"
@@ -218,7 +238,7 @@ for path_to_file in args.path_to_file:
                 try:
                     print(f"{ex} ({domain})")
                     print(f"Checking the status of {domain} again...")
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(RATE_LIMIT_DELAY)
                     await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
@@ -235,12 +255,19 @@ for path_to_file in args.path_to_file:
         entries = await asyncio.gather(*[domain_dns_check(domain, limit) for domain in pages])
         for result in entries:
             splitted_result = result.split()
-            if splitted_result[1] == "offline":
-                offline_pages.append(splitted_result[0])
-            elif splitted_result[1] == "parked":
-                parked_domains.append(splitted_result[0])
-            elif SUB_PAT.search(splitted_result[0]):
-                online_pages.append(splitted_result[0])
+            if len(splitted_result) < 2:
+                continue
+            domain_val = splitted_result[0]
+            status_val = splitted_result[1]
+
+            if status_val == "offline":
+                offline_pages.append(domain_val)
+            elif status_val == "parked":
+                parked_domains.append(domain_val)
+            elif status_val == "Limit_exceeded":
+                unknown_pages.append(domain_val)
+            elif SUB_PAT.search(domain_val):
+                online_pages.append(domain_val)
 
     asyncio.run(bulk_domain_dns_check(sem_value))
 
@@ -314,7 +341,7 @@ for path_to_file in args.path_to_file:
 
                         if status_val in EXPIRED_SW:
                             e_f.write(f"{domain_val}\n")
-                        elif status_val == "Limit_exceeded":
+                        elif status_val in ["Limit_exceeded", "Timed_out", "Timeout"]:
                             l_f.write(f"{domain_val}\n")
                         elif status_val == "Unknown":
                             unknown_pages.append(domain_val)
@@ -369,7 +396,7 @@ for path_to_file in args.path_to_file:
 
                             if status_val in EXPIRED_SW:
                                 e_f.write(f"{domain_val}\n")
-                            elif status_val == "Limit_exceeded":
+                            elif status_val in ["Limit_exceeded", "Timed_out", "Timeout"]:
                                 l_f.write(f"{domain_val}\n")
                             elif status_val == "Unknown":
                                 unknown_pages.append(domain_val)
@@ -410,13 +437,19 @@ for path_to_file in args.path_to_file:
 
     async def get_status_code(session: aiohttp.ClientSession, url: str, limit, redirect: bool):
         async with limit:
+            if SCRIPT_END_TIME and time.time() >= SCRIPT_END_TIME:
+                print(f"Skipping HTTP check for {url} due to time limit.")
+                return f"{url} Limit_exceeded"
+
+            status_code = "000" # Default to '000' for network issues / unhandled exceptions
             try:
                 print(f"Checking the status of {url}...")
-                await asyncio.sleep(1)
+                await asyncio.sleep(RATE_LIMIT_DELAY)
                 resp = await session.get(f"http://{url}", allow_redirects=redirect)
                 status_code = resp.status
                 if (400 <= int(status_code) <= 499) and SUB_PAT.search(url):
                     print(f"Checking the status of {url} again...")
+                    await asyncio.sleep(RATE_LIMIT_DELAY)
                     resp = await session.get(f"https://{url}", allow_redirects=redirect)
                     if resp.status != "000":
                         status_code = resp.status
@@ -428,7 +461,7 @@ for path_to_file in args.path_to_file:
                 print(f"{ex} ({url})")
                 if "reset by peer" in str(ex) or (not SUB_PAT.search(url)):
                     try:
-                        await asyncio.sleep(1)
+                        await asyncio.sleep(RATE_LIMIT_DELAY)
                         print(f"Checking the status of {url} again...")
                         newUrl = f"http://{url}"
                         if not SUB_PAT.search(url) and not WWW_PAT.search(url) and not args.www_only:
@@ -450,7 +483,7 @@ for path_to_file in args.path_to_file:
             except (aiohttp.ServerDisconnectedError, asyncio.TimeoutError) as ex:
                 print(f"{ex} ({url})")
                 try:
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(RATE_LIMIT_DELAY)
                     print(f"Checking the status of {url} again...")
                     resp = await session.get(f"http://{url}", allow_redirects=redirect)
                     status_code = resp.status
@@ -468,32 +501,42 @@ for path_to_file in args.path_to_file:
                 print(f"{ex} ({url})")
                 status_code = "000"
             finally:
-                result = ""
-                if "status_code" in locals():
-                    result = f"{str(url)} {str(status_code)}"
+                result = f"{str(url)} {str(status_code)}"
         return result
 
     async def save_status_code(timeout_time, limit_value):
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
+        
         resolver = aiohttp.AsyncResolver()
         if DNS_a:
             resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
+        
         async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
             allow_redirects = False
             if args.ar:
                 allow_redirects = True
             statuses = await asyncio.gather(*[get_status_code(session, url, limit, allow_redirects) for url in unknown_pages])
-            with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f:
+            unknown_pages.clear()
+            with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f, \
+                 open(LIMIT_FILE, 'a', encoding="utf-8") as l_f:
                 for status in statuses:
                     print(status)
                     if len(status.split()) > 1:
+                        domain_val = status.split()[0]
                         status_code = status.split()[1]
+                        
+                        if status_code == "Limit_exceeded":
+                            l_f.write(f"{domain_val}\n")
+                        
                         if SUB_PAT.search(status) and status_code == "000":
-                            status_code = 200
+                            status_code = "200"
+
                         if not (200 <= int(status_code) <= 299) and status_code != "403":
-                            u_f.write(f"{status}\n")
+                            u_f.write(f"{domain_val} {status_code}\n")
+                    else:
+                        unknown_pages.append(status.strip())
 
     if online_pages:
         for online_page in online_pages:
