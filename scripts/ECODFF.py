@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.44"
+SCRIPT_VERSION = "2.0.45"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -250,12 +250,10 @@ for path_to_file in args.path_to_file:
             domain_val = splitted_result[0]
             status_val = splitted_result[1]
 
-            if status_val == "offline":
+            if status_val in ["Limit_exceeded", "offline"]:
                 offline_pages.append(domain_val)
             elif status_val == "parked":
                 parked_domains.append(domain_val)
-            elif status_val == "Limit_exceeded":
-                unknown_pages.append(domain_val)
             elif SUB_PAT.search(domain_val):
                 online_pages.append(domain_val)
 
@@ -270,6 +268,9 @@ for path_to_file in args.path_to_file:
     if os.path.exists(temp_path):
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
+
+    if args.www_only and offline_pages:
+        unknown_pages.extend(offline_pages)
 
     # Conditionally execute DSC.sh processing
     if not args.www_only:
