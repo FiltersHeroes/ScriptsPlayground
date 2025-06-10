@@ -10,7 +10,7 @@ on:
       number_of_KADh_jobs:
         description: "Quantity of KADhosts jobs"
         required: true
-        default: 2
+        default: 3
   schedule:
     - cron: "55 23 * * 6"
 env:
@@ -46,7 +46,7 @@ jobs:
         run: |
           ./scripts/CI/createMatrixStrategy.py
   KAD:
-    needs: [KAD_S, PAF, SocialPASS, Cookies, KADhosts]
+    needs: [KAD_S]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     strategy:

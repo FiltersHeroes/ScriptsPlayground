@@ -21,6 +21,43 @@ git_repo = git.Repo(script_path, search_parent_directories=True)
 # Main_path is where the root of the repository is located
 main_path = git_repo.git.rev_parse("--show-toplevel")
 
+def get_dynamic_connections(num_jobs_str):
+    """
+    Dynamically adjusts the number of connections per job based on the total number of GitHub Actions jobs.
+    This version uses an inverse relationship with an adjustable scaling factor.
+    """
+    try:
+        num_jobs = int(num_jobs_str)
+    except (ValueError, TypeError):
+        print(f"Warning: NUMBER_OF_KAD_JOBS '{num_jobs_str}' is not a valid integer or not set. Using a sensible default for connections.", file=sys.stderr)
+        return 10 # Fallback to a safe default
+
+    MIN_CONNECTIONS_PER_JOB = 5
+    MAX_CONNECTIONS_PER_JOB = 20 # Max an individual job will ever try
+
+    # Adjust this value to control the decay rate.
+    # A higher value means connections stay higher for more jobs before hitting MIN.
+    # Experiment with values:
+    # 1.0 (original behavior, aggressive decay)
+    # 1.5 (moderate decay, recommended starting point for more speed with few jobs)
+    # 2.0 (slower decay, more aggressive total concurrency)
+    INVERSE_SCALING_FACTOR = 1.5
+
+    if num_jobs > 0:
+        # Multiply MAX_CONNECTIONS_PER_JOB by the scaling factor
+        raw_connections = (MAX_CONNECTIONS_PER_JOB * INVERSE_SCALING_FACTOR) / num_jobs
+    else:
+        raw_connections = MAX_CONNECTIONS_PER_JOB # Fallback if num_jobs somehow is 0 or less
+
+    # Clamp the raw_connections value between MIN and MAX
+    connections = max(MIN_CONNECTIONS_PER_JOB, raw_connections)
+    connections = min(MAX_CONNECTIONS_PER_JOB, connections)
+    
+    # Round to the nearest integer
+    connections = round(connections)
+
+    print(f"Dynamic connections calculation: {num_jobs} jobs -> {connections} connections per job.", file=sys.stderr)
+    return connections
 
 async def lets_go(session: aiohttp.ClientSession, url, limit):
     async with limit:
@@ -41,6 +78,8 @@ async def lets_go(session: aiohttp.ClientSession, url, limit):
 dns_first = "9.9.9.10"
 dns_second = "149.112.112.10"
 
+connections_number = get_dynamic_connections(os.getenv('NUMBER_OF_KAD_JOBS'))
+
 async def bulk_lets_go(limit_value, urls):
     limit = asyncio.Semaphore(limit_value)
     async with aiohttp.ClientSession() as session:
@@ -48,7 +87,7 @@ async def bulk_lets_go(limit_value, urls):
         for result in results:
             if result:
                 ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, result), "-c 20", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+                    main_path, result), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
                 if ECO_error := ECO_result.stderr:
                     print(ECO_error)
                 if ECO_output := ECO_result.stdout:
@@ -136,7 +175,7 @@ elif sys.argv[1] == "KADhosts":
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhosts_"):
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), "--ar", "-c 20", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+        main_path, "split", sys.argv[1]), "--ar", "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:
