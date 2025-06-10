@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.43"
+SCRIPT_VERSION = "2.0.44"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -125,15 +125,6 @@ if "CI_TIME_LIMIT" in os.environ:
 
 DSC_CMD_PREFIX = [pj(script_path, "DSC.sh")]
 DSC_COMMON_ARGS = ["--json-output", "-q"]
-
-if "CI_TIME_LIMIT" in os.environ:
-    ci_time_limit_str = os.getenv("CI_TIME_LIMIT")
-    try:
-        time_limit_seconds = parse_time_to_seconds(ci_time_limit_str)
-        DSC_COMMON_ARGS.extend(["-t", str(time_limit_seconds)])
-    except ValueError as e:
-        print(f"Error parsing CI_TIME_LIMIT: {e}", file=sys.stderr)
-        print("Proceeding without a time limit for DSC.sh.", file=sys.stderr)
 
 
 EXPIRED_DIR = pj(main_path, "expired-domains")
@@ -282,8 +273,8 @@ for path_to_file in args.path_to_file:
 
     # Conditionally execute DSC.sh processing
     if not args.www_only:
-        # Copying URLs containing subdomains
         if offline_pages:
+            # Copying URLs containing subdomains
             with NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as sub_temp_file:
                 for page in offline_pages:
                     if SUB_PAT.search(page):
@@ -295,139 +286,90 @@ for path_to_file in args.path_to_file:
             spec.loader.exec_module(Sd2D)
             results_Sd2D = sorted(set(Sd2D.main(offline_pages)))
 
-            with NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as Sd2D_result_file:
-                Sd2D_result_file.write('\n'.join(results_Sd2D))
-                Sd2D_result_file.write('\n')
+            # Variables for collecting results from individual DSC checks
+            expired_domains_dsc = []
+            limit_domains_dsc = []
+            unknown_domains_dsc_collected = []
+            valid_domains_dsc = []
 
-            dsc_command = DSC_CMD_PREFIX + ["-f", Sd2D_result_file.name] + DSC_COMMON_ARGS
-            DSC_result = subprocess.run(
-                dsc_command, check=False, capture_output=True, text=True, encoding="utf-8")
-            DSC_raw_output = DSC_result.stdout
+            async def domain_dsc_check(domain_to_check, limit):
+                async with limit:
+                    if SCRIPT_END_TIME and time.time() >= SCRIPT_END_TIME:
+                        print(f"Skipping DSC check for {domain_to_check} due to time limit.")
+                        return {"domain": domain_to_check, "status": "Limit_exceeded"}
 
-            os.remove(Sd2D_result_file.name)
+                    await asyncio.sleep(RATE_LIMIT_DELAY)
+
+                    # Calling DSC.sh for a single domain
+                    dsc_command = DSC_CMD_PREFIX + ["-d", domain_to_check] + DSC_COMMON_ARGS
+                    DSC_result = subprocess.run(
+                        dsc_command, check=False, capture_output=True, text=True, encoding="utf-8")
+                    DSC_raw_output = DSC_result.stdout
+
+                    if DSC_error := DSC_result.stderr:
+                        print(f"DSC.sh error for {domain_to_check}: {DSC_error}")
+
+                    if DSC_raw_output:
+                        try:
+                            # Expecting a JSON array with a single item for individual domain checks
+                            dsc_results_json = json.loads(DSC_raw_output)
+                            if dsc_results_json and isinstance(dsc_results_json, list) and len(dsc_results_json) > 0:
+                                item = dsc_results_json[0]
+                                domain = item.get("domain", "N/A")
+                                status = item.get("status", "N/A")
+                                print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
+                                return item
+                        except json.JSONDecodeError as e:
+                            print(f"ERROR: Could not decode JSON from DSC.sh output for {domain_to_check}: {e}", file=sys.stderr)
+                            print(f"Raw DSC.sh output: \n{DSC_raw_output}", file=sys.stderr)
+                            return {"domain": domain_to_check, "status": "JSON_decode_error"}
+                    return {"domain": domain_to_check, "status": "Unknown"}
+
+            async def bulk_domain_dsc_check(domains_to_check, limit_value):
+                limit = asyncio.Semaphore(limit_value)
+                tasks = [domain_dsc_check(domain, limit) for domain in domains_to_check]
+                return await asyncio.gather(*tasks)
+
+            # Run bulk DSC checks
+            dsc_results = asyncio.run(bulk_domain_dsc_check(results_Sd2D, sem_value))
 
             EXPIRED_SW = ["Expired", "Book_blocked", "Suspended", "Removed",
                           "Free", "Redemption_period", "Suspended_or_reserved"]
 
-            if DSC_error := DSC_result.stderr:
-                print(DSC_error)
+            for item in dsc_results:
+                domain = item.get("domain", "N/A")
+                status = item.get("status", "N/A")
 
-            if DSC_raw_output:
-                try:
-                    dsc_results_json = json.loads(DSC_raw_output)
-                    DSC_processed_results = []
-                    for item in dsc_results_json:
-                        domain = item.get("domain", "N/A")
-                        status = item.get("status", "N/A")
-                        DSC_processed_results.append(f"{domain} {status}")
-                        print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
-                except json.JSONDecodeError as e:
-                    print(f"ERROR: Could not decode JSON from DSC.sh output: {e}", file=sys.stderr)
-                    print(f"Raw DSC.sh output: \n{DSC_raw_output}", file=sys.stderr)
-                    DSC_processed_results = []
+                if status in EXPIRED_SW:
+                    expired_domains_dsc.append(domain)
+                elif status in ["Limit_exceeded", "Timed_out", "Timeout", "No_internet", "JSON_decode_error", "Tool_Failed", "Network_Issue"]:
+                    limit_domains_dsc.append(domain)
+                elif status == "Unknown":
+                    unknown_domains_dsc_collected.append(domain)
+                elif status == "Valid":
+                    valid_domains_dsc.append(domain)
 
-                with open(EXPIRED_FILE, 'w', encoding="utf-8") as e_f, \
-                     open(LIMIT_FILE, 'w', encoding="utf-8") as l_f, \
-                     NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as no_internet_temp_file, \
-                     NamedTemporaryFile(dir=temp_path, delete=False, mode="w", encoding="utf-8") as valid_pages_temp_file:
-                    for entry in DSC_processed_results:
-                        splitted_entry = entry.split()
-                        if len(splitted_entry) < 2:
-                            continue
-                        
-                        domain_val = splitted_entry[0]
-                        status_val = splitted_entry[1]
+            # Write collected DSC results to files
+            with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f:
+                for domain in expired_domains_dsc:
+                    e_f.write(f"{domain}\n")
+            with open(LIMIT_FILE, 'a', encoding="utf-8") as l_f:
+                for domain in limit_domains_dsc:
+                    l_f.write(f"{domain}\n")
+            # Unknown pages from DSC are added to global unknown_pages for HTTP checks
+            unknown_pages.extend(unknown_domains_dsc_collected)
 
-                        if status_val in EXPIRED_SW:
-                            e_f.write(f"{domain_val}\n")
-                        elif status_val in ["Limit_exceeded", "Timed_out", "Timeout"]:
-                            l_f.write(f"{domain_val}\n")
-                        elif status_val == "Unknown":
-                            unknown_pages.append(domain_val)
-                        elif status_val == "No_internet":
-                            no_internet_temp_file.write(
-                                f"{domain_val}\n")
-                        # We need to know which domains of subdomains are working
-                        elif status_val == "Valid":
-                            valid_pages_temp_file.write(
-                                f"{domain_val}\n")
-                del DSC_raw_output
-                del dsc_results_json
-                del DSC_processed_results
-
-            if os.path.isfile(no_internet_temp_file.name) and os.path.getsize(no_internet_temp_file.name) > 0:
-                dsc_command_retry = DSC_CMD_PREFIX + ["-f", no_internet_temp_file.name] + DSC_COMMON_ARGS
-                DSC_result_retry = subprocess.run(
-                    dsc_command_retry, check=False, capture_output=True, text=True, encoding="utf-8")
-                DSC_raw_output_retry = DSC_result_retry.stdout
-
-                os.remove(no_internet_temp_file.name)
-
-                if DSC_error_retry := DSC_result_retry.stderr:
-                    print(DSC_error_retry)
-
-                if DSC_raw_output_retry:
-                    try:
-                        dsc_results_json_retry = json.loads(DSC_raw_output_retry)
-                        DSC_processed_results_retry = []
-                        for item in dsc_results_json_retry:
-                            domain = item.get("domain", "N/A")
-                            status = item.get("status", "N/A")
-                            DSC_processed_results_retry.append(f"{domain} {status}")
-                            print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
-
-                    except json.JSONDecodeError as e:
-                        print(f"ERROR: Could not decode JSON from DSC.sh retry output: {e}", file=sys.stderr)
-                        print(f"Raw DSC.sh retry output: \n{DSC_raw_output_retry}", file=sys.stderr)
-                        DSC_processed_results_retry = []
-
-                    with open(EXPIRED_FILE, 'a', encoding="utf-8") as e_f, \
-                         open(LIMIT_FILE, 'a', encoding="utf-8") as l_f, \
-                         open(NO_INTERNET_FILE, 'w', encoding="utf-8") as no_i_f, \
-                         open(valid_pages_temp_file.name, "a", encoding="utf-8") as valid_temp_file:
-                        for entry in DSC_processed_results_retry:
-                            splitted_entry = entry.split()
-                            if len(splitted_entry) < 2:
-                                continue
-                            
-                            domain_val = splitted_entry[0]
-                            status_val = splitted_entry[1]
-
-                            if status_val in EXPIRED_SW:
-                                e_f.write(f"{domain_val}\n")
-                            elif status_val in ["Limit_exceeded", "Timed_out", "Timeout"]:
-                                l_f.write(f"{domain_val}\n")
-                            elif status_val == "Unknown":
-                                unknown_pages.append(domain_val)
-                            elif status_val == "No_internet":
-                                no_i_f.write(f"{domain_val}\n")
-                            # We need to know which domains of subdomains are working
-                            elif status_val == "Valid":
-                                valid_temp_file.write(
-                                    f"{domain_val}\n")
-
-            if os.path.isfile(valid_pages_temp_file.name) and os.path.getsize(valid_pages_temp_file.name) > 0 and \
-               os.path.isfile(sub_temp_file.name) and os.path.getsize(sub_temp_file.name) > 0:
-                valid_domains = []
-                regex_domains = ""
-                with open(valid_pages_temp_file.name, "r", encoding="utf-8") as valid_tmp_file:
-                    for entry in valid_tmp_file:
-                        if entry := entry.strip():
-                            valid_domains.append(entry)
-                if valid_domains:
-                    regex_domains = re.compile(f"({'|'.join(re.escape(d) for d in valid_domains)})")
-
+            if valid_domains_dsc:
+                regex_domains = re.compile(f"({'|'.join(re.escape(d) for d in valid_domains_dsc)})")
                 with open(sub_temp_file.name, "r", encoding="utf-8") as sub_tmp_file:
-                    if regex_domains:
-                        for sub_entry in sub_tmp_file:
-                            sub_entry = sub_entry.strip()
-                            # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
-                            if regex_domains.search(sub_entry):
-                                if not sub_entry in valid_domains:
-                                    unknown_pages.append(sub_entry)
+                    # If subdomains aren't working, but their domains are working, then include subdomains for additional checking
+                    for sub_entry in sub_tmp_file:
+                        sub_entry = sub_entry.strip()
+                        if regex_domains.search(sub_entry):
+                            if not sub_entry in valid_domains_dsc: # Ensure no duplicates
+                                unknown_pages.append(sub_entry)
             os.remove(sub_temp_file.name)
-            if os.path.exists(valid_pages_temp_file.name):
-                os.remove(valid_pages_temp_file.name)
+
 
     request_headers = {
         'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
@@ -507,11 +449,11 @@ for path_to_file in args.path_to_file:
         session_timeout = aiohttp.ClientTimeout(
             total=None, sock_connect=timeout_time, sock_read=timeout_time)
         limit = asyncio.Semaphore(limit_value)
-        
+
         resolver = aiohttp.AsyncResolver()
         if DNS_a:
             resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
-        
+
         async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
             allow_redirects = False
             if args.ar:
@@ -525,11 +467,11 @@ for path_to_file in args.path_to_file:
                     if len(status.split()) > 1:
                         domain_val = status.split()[0]
                         status_code = status.split()[1]
-                        
+
                         if status_code == "Limit_exceeded":
                             l_f.write(f"{domain_val}\n")
                         else: # Only attempt int conversion if not "Limit_exceeded"
-                            if SUB_PAT.search(status) and status_code == "000":
+                            if SUB_PAT.search(domain_val) and status_code == "000":
                                 status_code = "200"
 
                             if not (200 <= int(status_code) <= 299) and status_code != "403":

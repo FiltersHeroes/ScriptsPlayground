@@ -54,13 +54,11 @@ main_expired_file = pj(expired_path, "KAD-expired.txt")
 main_parked_file = pj(expired_path, "KAD-parked.txt")
 main_unknown_file = pj(expired_path, "KAD-unknown.txt")
 main_unknown_limit_file = pj(expired_path, "KAD-unknown_limit.txt")
-main_unknown_no_internet_file = pj(expired_path, "KAD-unknown_no_internet.txt")
 
 expired_pat = re.compile(r"KAD(l)?_\d+-expired\.txt")
 parked_pat = re.compile(r"KAD(l)?_\d+-parked\.txt")
 unknown_pat = re.compile(r"KAD(l)?_\d+-unknown\.txt")
 unknown_limit_pat = re.compile(r"KAD(l)?_\d+-unknown_limit\.txt")
-unknown_no_internet_pat = re.compile(r"KAD(l)?_\d+-unknown_no_internet\.txt")
 
 
 def merge(main_file, files_to_merge_pat):
@@ -79,12 +77,11 @@ merge(main_expired_file, expired_pat)
 merge(main_parked_file, parked_pat)
 merge(main_unknown_file, unknown_pat)
 merge(main_unknown_limit_file, unknown_limit_pat)
-merge(main_unknown_no_internet_file, unknown_no_internet_pat)
 
 # Sort and remove duplicates
 if not os.path.isdir(temp_path):
     os.mkdir(temp_path)
-for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file, main_unknown_no_internet_file]:
+for main_file in [main_expired_file, main_parked_file, main_unknown_file, main_unknown_limit_file]:
     if os.path.isfile(main_file):
         with open(main_file, "r", encoding="utf-8") as f_f, NamedTemporaryFile(dir=temp_path, delete=False, mode="w") as f_t:
             for line in sorted(set(f_f)):
