@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.42"
+SCRIPT_VERSION = "2.0.43"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -88,7 +88,7 @@ def parse_time_to_seconds(time_str):
 parser = argparse.ArgumentParser()
 parser.add_argument('path_to_file', type=str, nargs='+', action='store')
 parser.add_argument("-c", "--connections", type=int,
-                    action='store', default=20)
+                    action='store', default=5)
 parser.add_argument("-v", "--version", action='version',
                     version="ECODFF" + ' ' + SCRIPT_VERSION)
 parser.add_argument("--dns", action='store', type=str, nargs="+")
@@ -226,7 +226,6 @@ for path_to_file in args.path_to_file:
             if SCRIPT_END_TIME and time.time() >= SCRIPT_END_TIME:
                 print(f"Skipping DNS check for {domain} due to time limit.")
                 return f"{domain} Limit_exceeded"
-
             status = "online"
             try:
                 print(f"Checking the status of {domain}...")
@@ -529,12 +528,12 @@ for path_to_file in args.path_to_file:
                         
                         if status_code == "Limit_exceeded":
                             l_f.write(f"{domain_val}\n")
-                        
-                        if SUB_PAT.search(status) and status_code == "000":
-                            status_code = "200"
+                        else: # Only attempt int conversion if not "Limit_exceeded"
+                            if SUB_PAT.search(status) and status_code == "000":
+                                status_code = "200"
 
-                        if not (200 <= int(status_code) <= 299) and status_code != "403":
-                            u_f.write(f"{domain_val} {status_code}\n")
+                            if not (200 <= int(status_code) <= 299) and status_code != "403":
+                                u_f.write(f"{domain_val} {status_code}\n")
                     else:
                         unknown_pages.append(status.strip())
 

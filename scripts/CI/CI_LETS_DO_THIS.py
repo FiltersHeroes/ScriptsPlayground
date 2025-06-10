@@ -48,7 +48,7 @@ async def bulk_lets_go(limit_value, urls):
         for result in results:
             if result:
                 ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, result), "-c 40", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+                    main_path, result), "-c 20", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
                 if ECO_error := ECO_result.stderr:
                     print(ECO_error)
                 if ECO_output := ECO_result.stdout:
@@ -136,7 +136,7 @@ elif sys.argv[1] == "KADhosts":
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhosts_"):
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), "--ar", "-c 40", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+        main_path, "split", sys.argv[1]), "--ar", "-c 20", "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:

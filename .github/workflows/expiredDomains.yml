@@ -6,7 +6,7 @@ on:
       number_of_KAD_jobs:
         description: "Quantity of KAD jobs"
         required: true
-        default: 20
+        default: 5
       number_of_KADh_jobs:
         description: "Quantity of KADhosts jobs"
         required: true
@@ -15,8 +15,8 @@ on:
     - cron: "55 23 * * 6"
 env:
   CI_TIME_LIMIT: "2 hours"
-  NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 4 }}
-  NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs || 2 }}
+  NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
+  NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
 
 jobs:
   KAD_S:
