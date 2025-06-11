@@ -12,7 +12,7 @@ for i in range(1, int(os.getenv("NUMBER_OF_KAD_JOBS")) + 1):
     KAD_matrix_strategy.append(i)
 
 KADhosts_matrix_strategy = []
-for i in range(1, int(os.getenv("NUMBER_OF_KADHOSTS_JOBS")) + 1):
+for i in range(1, int(os.getenv("NUMBER_OF_KADHOSTSWWW_JOBS")) + 1):
     KADhosts_matrix_strategy.append(i)
 
 with open(os.getenv("GITHUB_OUTPUT"), "a") as gho:

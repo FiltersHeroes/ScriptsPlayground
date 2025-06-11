@@ -5,6 +5,7 @@
 # pylint: disable=missing-class-docstring
 # pylint: disable=missing-function-docstring
 import os
+import re
 import sys
 import subprocess
 import asyncio
@@ -20,6 +21,16 @@ script_path = os.path.dirname(os.path.realpath(__file__))
 git_repo = git.Repo(script_path, search_parent_directories=True)
 # Main_path is where the root of the repository is located
 main_path = git_repo.git.rev_parse("--show-toplevel")
+
+def merge(main_file, files_to_merge):
+    with open(main_file, "w", encoding="utf-8") as mf:
+        for file_to_merge in files_to_merge:
+            if os.path.isfile(file_to_merge):
+                if os.path.getsize(file_to_merge) > 0:
+                    with open(file_to_merge, "r", encoding="utf-8") as ef:
+                        for line in ef:
+                            mf.write(f"{line}\n")
+                os.remove(file_to_merge)
 
 def get_dynamic_connections(num_jobs_str):
     """
@@ -166,16 +177,39 @@ if sys.argv[1] == "KAD":
         main_path, "split", "KAD_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(s_result.stdout)
 elif sys.argv[1] == "KADhosts":
-    asyncio.run(download("KADhosts.txt",
+    asyncio.run(download("KADhosts-hostsplus.txt",
                 "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus.txt"))
+    asyncio.run(download("KADhosts-hostsplus-cert.txt",
+                "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus-cert.txt"))
+    merge(pj(main_path, "KADhosts.txt"), [pj(main_path, "KADhosts-hostsplus.txt"), pj(main_path, "KADhosts-hostsplus-cert.txt")])
+    ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
+                    main_path, "KADhosts.txt"), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+    if ECO_error := ECO_result.stderr:
+        print(ECO_error)
+    if ECO_output := ECO_result.stdout:
+        print(ECO_output)
+elif sys.argv[1] == "KADhostsWWW":
+    asyncio.run(download("KADhosts.txt",
+                "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt"))
     if not os.path.isdir(pj(main_path, "split")):
         os.makedirs(pj(main_path, "split"))
-    s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KADhosts.txt"), pj(
-        main_path, "split", "KADhosts_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+    WWW_PAT = re.compile(r"^0\.0\.0\.0 www\.")
+    with open(pj(main_path, "KADhosts.txt"), "r", encoding="utf-8") as khf, open(pj(main_path, "KADhostsWWW.txt"), "w", encoding="utf-8") as khf_www:
+        for line in khf:
+            if WWW_PAT.match(line):
+                khf_www.write(line)
+    os.remove(pj(main_path, "KADhosts.txt"))
+    s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KADhostsWWW.txt"), pj(
+        main_path, "split", "KADhostsWWW_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(s_result.stdout)
-elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhosts_"):
+elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhostsWWW_"):
+    extra_flag = ""
+    if not sys.argv[1].startswith("KADhostsWWW_"):
+        extra_flag = "--ar"
+    else:
+        extra_flag = "--www-only"
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), "--ar", "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+        main_path, "split", sys.argv[1]), extra_flag, "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:

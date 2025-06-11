@@ -13,8 +13,8 @@ needed_env = 2
 
 if sys.argv[1] == "KAD" and "NUMBER_OF_KAD_JOBS" in os.environ:
     needed_env = int(os.getenv("NUMBER_OF_KAD_JOBS"))
-elif sys.argv[1] == "KADhosts" and "NUMBER_OF_KADHOSTS_JOBS" in os.environ:
-    needed_env = int(os.getenv("NUMBER_OF_KADHOSTS_JOBS"))
+elif sys.argv[1] == "KADhostsWWW" and "NUMBER_OF_KADHOSTSWWW_JOBS" in os.environ:
+    needed_env = int(os.getenv("NUMBER_OF_KADHOSTSWWW_JOBS"))
 
 for i in range(1, needed_env + 1):
     if i < 10:

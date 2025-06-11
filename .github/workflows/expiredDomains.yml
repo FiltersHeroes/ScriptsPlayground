@@ -6,17 +6,17 @@ on:
       number_of_KAD_jobs:
         description: "Quantity of KAD jobs"
         required: true
-        default: 5
+        default: 6
       number_of_KADh_jobs:
-        description: "Quantity of KADhosts jobs"
+        description: "Quantity of KADhosts (www) jobs"
         required: true
-        default: 3
+        default: 5
   schedule:
     - cron: "55 23 * * 6"
 env:
-  CI_TIME_LIMIT: "2 hours"
-  NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs }}
-  NUMBER_OF_KADHOSTS_JOBS: ${{ github.event.inputs.number_of_KADh_jobs }}
+  CI_TIME_LIMIT: "3 hours"
+  NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 6 }}
+  NUMBER_OF_KADHOSTSWWW_JOBS: ${{ github.event.inputs.number_of_KADh_jobs || 5 }}
 
 jobs:
   KAD_S:
@@ -31,7 +31,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
           numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KAD
-          numberParts="$NUMBER_OF_KADHOSTS_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhosts
+          numberParts="$NUMBER_OF_KADHOSTSWWW_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhostsWWW
       - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_S
@@ -39,9 +39,9 @@ jobs:
             split/KAD_*
       - uses: actions/upload-artifact@v4
         with:
-          name: E_KADH_S
+          name: E_KADHWWW_S
           path: |
-            split/KADhosts_*
+            split/KADhostsWWW_*
       - id: generate
         run: |
           ./scripts/CI/createMatrixStrategy.py
@@ -72,6 +72,23 @@ jobs:
           path: |
             ${{ env.E_KADS }}
   KADhosts:
+    runs-on: ubuntu-latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/CI_LETS_DO_THIS.py KADhosts
+          echo 'E_KADhosts<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh \
+          KADhosts)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E_KADhosts
+          path: |
+            ${{ env.E_KADhosts }}
+  KADhostsWWW:
     needs: KAD_S
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
@@ -82,21 +99,21 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
-          name: E_KADH_S
+          name: E_KADHWWW_S
           path: split
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          KADHfile=KADhosts_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KADH }} )"
-          ./scripts/CI/CI_LETS_DO_THIS.py "$KADHfile"
-          echo 'E_KADHS<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh $KADHfile)" >> $GITHUB_ENV
+          KADHWWWfile=KADhostsWWW_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KADH }} )"
+          ./scripts/CI/CI_LETS_DO_THIS.py "$KADHWWWfile"
+          echo 'E_KADHWWWS<<EOF' >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh $KADHWWWfile" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-          echo "currentKADHName=E_$KADHfile" >> $GITHUB_ENV
+          echo "currentKADHWWWName=E_$KADHWWWfile" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.currentKADHName }}
+          name: ${{ env.currentKADHWWWName }}
           path: |
-            ${{ env.E_KADHS }}
+            ${{ env.E_KADHWWWS }}
   PAF:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
@@ -200,13 +217,14 @@ jobs:
         with:
           fetch-depth: 0
       - continue-on-error: true
-        run: ./scripts/CI/getArtifactNamesForED.py KADhosts
+        run: ./scripts/CI/getArtifactNamesForED.py KADhostsWWW
       - continue-on-error: true
         uses: hawkeye116477/download-multiple-artifacts-action@v2
         with:
           names: |
-            ${{ env.E_KADhosts_NAMES }}
+            ${{ env.E_KADhostsWWW_NAMES }}
             E_KAD
+            E_KADhosts
             E_PAF
             E_SOCIAL
             E_COOKIES

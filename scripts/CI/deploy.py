@@ -37,20 +37,20 @@ def merge(main_file, files_to_merge):
                 os.remove(file_to_merge)
 
 
-main_expired_file = pj(expired_path, "KADhosts-expired.txt")
-main_parked_file = pj(expired_path, "KADhosts-parked.txt")
-main_unknown_file = pj(expired_path, "KADhosts-unknown.txt")
-main_unknown_limit_file = pj(expired_path, "KADhosts-unknown_limit.txt")
+main_expired_file = pj(expired_path, "KADhostsWWW-expired.txt")
+main_parked_file = pj(expired_path, "KADhostsWWW-parked.txt")
+main_unknown_file = pj(expired_path, "KADhostsWWW-unknown.txt")
+main_unknown_limit_file = pj(expired_path, "KADhostsWWW-unknown_limit.txt")
 main_unknown_no_internet_file = pj(
-    expired_path, "KADhosts-unknown_no_internet.txt")
+    expired_path, "KADhostsWWW-unknown_no_internet.txt")
 
-merge(main_expired_file, glob.glob(pj(expired_path, "KADhosts_*-expired.txt")))
-merge(main_parked_file, glob.glob(pj(expired_path, "KADhosts_*-parked.txt")))
-merge(main_unknown_file, glob.glob(pj(expired_path, "KADhosts_*-unknown.txt")))
+merge(main_expired_file, glob.glob(pj(expired_path, "KADhostsWWW_*-expired.txt")))
+merge(main_parked_file, glob.glob(pj(expired_path, "KADhostsWWW_*-parked.txt")))
+merge(main_unknown_file, glob.glob(pj(expired_path, "KADhostsWWW_*-unknown.txt")))
 merge(main_unknown_limit_file, glob.glob(
-    pj(expired_path, "KADhosts_*-unknown_limit.txt")))
+    pj(expired_path, "KADhostsWWW_*-unknown_limit.txt")))
 merge(main_unknown_no_internet_file, glob.glob(
-    pj(expired_path, "KADhosts_*-unknown_no_internet.txt")))
+    pj(expired_path, "KADhostsWWW_*-unknown_no_internet.txt")))
 
 # Sort and remove duplicates
 temp_path = pj(main_path, "temp")
