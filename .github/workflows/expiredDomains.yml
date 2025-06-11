@@ -106,7 +106,7 @@ jobs:
           KADHWWWfile=KADhostsWWW_"$(./scripts/CI/getFileNumber.sh ${{ matrix.KADH }} )"
           ./scripts/CI/CI_LETS_DO_THIS.py "$KADHWWWfile"
           echo 'E_KADHWWWS<<EOF' >> $GITHUB_ENV
-          echo "$(./scripts/CI/getFileListForED.sh $KADHWWWfile" >> $GITHUB_ENV
+          echo "$(./scripts/CI/getFileListForED.sh $KADHWWWfile)" >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
           echo "currentKADHWWWName=E_$KADHWWWfile" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v4
