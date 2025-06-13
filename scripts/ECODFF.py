@@ -488,7 +488,7 @@ for path_to_file in args.path_to_file:
         if DNS_a:
             resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
 
-        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver, limit=0, headers=request_headers) as session:
+        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver, limit=0), headers=request_headers) as session:
             allow_redirects = False
             if args.ar:
                 allow_redirects = True
