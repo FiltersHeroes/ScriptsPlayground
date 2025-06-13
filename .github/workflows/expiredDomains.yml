@@ -207,7 +207,7 @@ jobs:
           path: |
             ${{ env.E_KAD }}
   deploy:
-    needs: [KAD_limit, KADhosts, PAF, SocialPASS, Cookies]
+    needs: [KAD_limit, KADhosts, PAF, SocialPASS, Cookies, KADhostsWWW]
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     permissions:
