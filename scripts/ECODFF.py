@@ -45,10 +45,14 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.45"
+SCRIPT_VERSION = "2.0.46"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
+
+# Define timeouts
+DNS_TIMEOUT = 10 # Seconds for DNS queries
+HTTP_TIMEOUT = 10 # Seconds for HTTP requests (per connection)
 
 # Helper function to parse time strings to seconds
 def parse_time_to_seconds(time_str):
@@ -203,12 +207,16 @@ for path_to_file in args.path_to_file:
     offline_pages = []
     online_pages = []
     unknown_pages = []
+    limit_pages = []
 
     sem_value = args.connections
 
     custom_resolver = dns.asyncresolver.Resolver()
     if DNS_a:
         custom_resolver.nameservers = DNS_a
+    # Set the global timeout for the resolver
+    custom_resolver.timeout = DNS_TIMEOUT
+    custom_resolver.lifetime = DNS_TIMEOUT
 
     SUB_PAT = re.compile(r"(.+\.)+.+\..+$")
 
@@ -232,6 +240,12 @@ for path_to_file in args.path_to_file:
                     await custom_resolver.resolve(domain)
                 except (NXDOMAIN, Timeout, NoAnswer, NoNameservers):
                     status = "offline"
+                except Exception as e:
+                    print(f"An unexpected error occurred during DNS retry for {domain}: {e}", file=sys.stderr)
+                    status = "offline"
+            except Exception as e: # Catch any other unexpected exceptions
+                print(f"An unexpected error occurred during DNS check for {domain}: {e}", file=sys.stderr)
+                status = "offline"
             else:
                 for answer in answers_NS:
                     if any(parked_d in (str(answer)) for parked_d in PARKED_PAT):
@@ -250,10 +264,12 @@ for path_to_file in args.path_to_file:
             domain_val = splitted_result[0]
             status_val = splitted_result[1]
 
-            if status_val in ["Limit_exceeded", "offline"]:
+            if status_val == "offline":
                 offline_pages.append(domain_val)
             elif status_val == "parked":
                 parked_domains.append(domain_val)
+            elif status_val == "Limit_exceeded":
+                limit_pages.append(domain_val)
             elif SUB_PAT.search(domain_val):
                 online_pages.append(domain_val)
 
@@ -264,6 +280,12 @@ for path_to_file in args.path_to_file:
             for parked_domain in parked_domains:
                 p_f.write(f"{parked_domain}\n")
         del parked_domains
+
+    if limit_pages:
+        with open(LIMIT_FILE, 'a', encoding="utf-8") as l_f:
+            for domain in limit_pages:
+                l_f.write(f"{domain}\n")
+        del limit_pages
 
     if os.path.exists(temp_path):
         shutil.rmtree(temp_path)
@@ -303,28 +325,36 @@ for path_to_file in args.path_to_file:
 
                     # Calling DSC.sh for a single domain
                     dsc_command = DSC_CMD_PREFIX + ["-d", domain_to_check] + DSC_COMMON_ARGS
-                    DSC_result = subprocess.run(
-                        dsc_command, check=False, capture_output=True, text=True, encoding="utf-8")
-                    DSC_raw_output = DSC_result.stdout
+                    try:
+                        DSC_result = subprocess.run(
+                            dsc_command, check=False, capture_output=True, text=True, encoding="utf-8")
+                        DSC_raw_output = DSC_result.stdout
 
-                    if DSC_error := DSC_result.stderr:
-                        print(f"DSC.sh error for {domain_to_check}: {DSC_error}")
+                        if DSC_error := DSC_result.stderr:
+                            print(f"DSC.sh error for {domain_to_check}: {DSC_error}", file=sys.stderr)
 
-                    if DSC_raw_output:
-                        try:
-                            # Expecting a JSON array with a single item for individual domain checks
-                            dsc_results_json = json.loads(DSC_raw_output)
-                            if dsc_results_json and isinstance(dsc_results_json, list) and len(dsc_results_json) > 0:
-                                item = dsc_results_json[0]
-                                domain = item.get("domain", "N/A")
-                                status = item.get("status", "N/A")
-                                print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
-                                return item
-                        except json.JSONDecodeError as e:
-                            print(f"ERROR: Could not decode JSON from DSC.sh output for {domain_to_check}: {e}", file=sys.stderr)
-                            print(f"Raw DSC.sh output: \n{DSC_raw_output}", file=sys.stderr)
-                            return {"domain": domain_to_check, "status": "JSON_decode_error"}
-                    return {"domain": domain_to_check, "status": "Unknown"}
+                        if DSC_raw_output:
+                            try:
+                                # Expecting a JSON array with a single item for individual domain checks
+                                dsc_results_json = json.loads(DSC_raw_output)
+                                if dsc_results_json and isinstance(dsc_results_json, list) and len(dsc_results_json) > 0:
+                                    item = dsc_results_json[0]
+                                    domain = item.get("domain", "N/A")
+                                    status = item.get("status", "N/A")
+                                    print(f"{domain:<35} {status:<21} {item.get('expiry_date', 'Unknown'):<31} {item.get('days_left', 'Unknown'):<5}")
+                                    return item
+                            except json.JSONDecodeError as e:
+                                print(f"ERROR: Could not decode JSON from DSC.sh output for {domain_to_check}: {e}", file=sys.stderr)
+                                print(f"Raw DSC.sh output: \n{DSC_raw_output}", file=sys.stderr)
+                                return {"domain": domain_to_check, "status": "JSON_decode_error"}
+                        return {"domain": domain_to_check, "status": "Unknown"}
+                    except subprocess.TimeoutExpired:
+                        print(f"DSC.sh command timed out for {domain_to_check}", file=sys.stderr)
+                        return {"domain": domain_to_check, "status": "Timed_out"}
+                    except Exception as e:
+                        print(f"An unexpected error occurred running DSC.sh for {domain_to_check}: {e}", file=sys.stderr)
+                        return {"domain": domain_to_check, "status": "Unknown"}
+
 
             async def bulk_domain_dsc_check(domains_to_check, limit_value):
                 limit = asyncio.Semaphore(limit_value)
@@ -369,7 +399,7 @@ for path_to_file in args.path_to_file:
                         if regex_domains.search(sub_entry):
                             if not sub_entry in valid_domains_dsc: # Ensure no duplicates
                                 unknown_pages.append(sub_entry)
-            os.remove(sub_temp_file.name)
+                os.remove(sub_temp_file.name)
 
 
     request_headers = {
@@ -387,12 +417,12 @@ for path_to_file in args.path_to_file:
             try:
                 print(f"Checking the status of {url}...")
                 await asyncio.sleep(RATE_LIMIT_DELAY)
-                resp = await session.get(f"http://{url}", allow_redirects=redirect)
+                resp = await session.get(f"http://{url}", allow_redirects=redirect, timeout=HTTP_TIMEOUT)
                 status_code = resp.status
                 if (400 <= int(status_code) <= 499) and SUB_PAT.search(url):
                     print(f"Checking the status of {url} again...")
                     await asyncio.sleep(RATE_LIMIT_DELAY)
-                    resp = await session.get(f"https://{url}", allow_redirects=redirect)
+                    resp = await session.get(f"https://{url}", allow_redirects=redirect, timeout=HTTP_TIMEOUT)
                     if resp.status != "000":
                         status_code = resp.status
                 if status_code in (301, 302, 307, 308):
@@ -408,14 +438,14 @@ for path_to_file in args.path_to_file:
                         newUrl = f"http://{url}"
                         if not SUB_PAT.search(url) and not WWW_PAT.search(url) and not args.www_only:
                             newUrl = f"http://www.{url}"
-                        resp = await session.get(newUrl, allow_redirects=redirect)
+                        resp = await session.get(newUrl, allow_redirects=redirect, timeout=HTTP_TIMEOUT)
                         status_code = resp.status
                         if status_code in (301, 302, 307, 308):
                             location = resp.headers.get('Location', '')
                             if url in location:
                                 status_code = 200
                     except Exception as ex2:
-                        print(f"{ex2} ({url})")
+                        print(f"Error during HTTP retry for {url}: {ex2}")
                         if "reset by peer" not in str(ex2):
                             status_code = "000"
                         else:
@@ -427,20 +457,23 @@ for path_to_file in args.path_to_file:
                 try:
                     await asyncio.sleep(RATE_LIMIT_DELAY)
                     print(f"Checking the status of {url} again...")
-                    resp = await session.get(f"http://{url}", allow_redirects=redirect)
+                    resp = await session.get(f"http://{url}", allow_redirects=redirect, timeout=HTTP_TIMEOUT)
                     status_code = resp.status
                     if status_code in (301, 302, 307, 308):
                         location = resp.headers.get('Location', '')
                         if url in location:
                             status_code = 200
                 except Exception as ex2:
-                    print(f"{ex2} ({url})")
+                    print(f"Error during HTTP retry for {url}: {ex2}")
                     if "reset by peer" not in str(ex2):
                         status_code = "000"
                     else:
                         status_code = "200"
             except aiohttp.client_exceptions.ClientResponseError as ex:
-                print(f"{ex} ({url})")
+                print(f"Client response error for {url}: {ex}")
+                status_code = "000"
+            except Exception as e:
+                print(f"An unexpected error occurred during HTTP check for {url}: {e}", file=sys.stderr)
                 status_code = "000"
             finally:
                 result = f"{str(url)} {str(status_code)}"
@@ -455,7 +488,7 @@ for path_to_file in args.path_to_file:
         if DNS_a:
             resolver = aiohttp.AsyncResolver(nameservers=DNS_a)
 
-        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver), headers=request_headers) as session:
+        async with aiohttp.ClientSession(timeout=session_timeout, connector=aiohttp.TCPConnector(resolver=resolver, limit=0, headers=request_headers) as session:
             allow_redirects = False
             if args.ar:
                 allow_redirects = True
@@ -472,11 +505,18 @@ for path_to_file in args.path_to_file:
                         if status_code == "Limit_exceeded":
                             l_f.write(f"{domain_val}\n")
                         else: # Only attempt int conversion if not "Limit_exceeded"
-                            if SUB_PAT.search(domain_val) and status_code == "000":
-                                status_code = "200"
-
-                            if not (200 <= int(status_code) <= 299) and status_code != "403":
-                                u_f.write(f"{domain_val} {status_code}\n")
+                            try:
+                                status_code_int = int(status_code)
+                                if SUB_PAT.search(domain_val) and status_code == "000":
+                                    status_code_int = 200 # If it's a subdomain and connection issue, treat as potentially valid for now
+                                if not (200 <= status_code_int <= 299) and status_code_int != 403:
+                                    u_f.write(f"{domain_val} {status_code}\n")
+                            except ValueError:
+                                # Handle cases where status_code is not an integer
+                                if status_code == "Timed_out":
+                                    l_f.write(f"{domain_val}\n")
+                                elif status_code == "000":
+                                    u_f.write(f"{domain_val} {status_code}\n")
                     else:
                         unknown_pages.append(status.strip())
 
@@ -489,7 +529,9 @@ for path_to_file in args.path_to_file:
         new_unknown_pages = sorted(set(unknown_pages))
         unknown_pages = new_unknown_pages
         del new_unknown_pages
-        asyncio.run(save_status_code(10, sem_value))
+        # The HTTP_TIMEOUT constant is passed to save_status_code,
+        # which then configures the aiohttp.ClientTimeout.
+        asyncio.run(save_status_code(HTTP_TIMEOUT, sem_value))
 
     # Sort and remove duplicated domains
     for e_file in [EXPIRED_FILE, UNKNOWN_FILE, LIMIT_FILE, NO_INTERNET_FILE, PARKED_FILE]:
