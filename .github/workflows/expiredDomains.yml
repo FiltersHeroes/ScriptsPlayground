@@ -14,7 +14,7 @@ on:
   schedule:
     - cron: "55 23 * * 6"
 env:
-  CI_TIME_LIMIT: "3 hours"
+  CI_TIME_LIMIT: "5 hours"
   NUMBER_OF_KAD_JOBS: ${{ github.event.inputs.number_of_kad_jobs || 6 }}
   NUMBER_OF_KADHOSTSWWW_JOBS: ${{ github.event.inputs.number_of_KADh_jobs || 5 }}
 
