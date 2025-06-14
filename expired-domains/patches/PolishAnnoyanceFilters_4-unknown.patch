@@ -1,0 +1,65 @@
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 0d81089ad..aef80bdd5 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -47,7 +47,7 @@ agroperfekt.pl##.js-marquee-wrapper
+ ahe.lodz.pl###wysuwane7, #wysuwane2
+ airly.eu##.air-quality, .header__links
+ akademiaap.com###sidebar
+-akson.pl,di-polska.pl###medical-comp-info-bar
++akson.pl###medical-comp-info-bar
+ aktualnyodpis.pl###carq-iframe
+ alablaboratoria.pl###small-pop-up
+ alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
+@@ -146,7 +146,6 @@ bilbordy.info,unitrailer.pl###tab
+ biomak.eu###leaselinkSlideButton1
+ bissole.pl##.email.mini-contacts[href*="#bottom-bar"]
+ bithub.pl##.st-comment
+-bitland-b2c.platforma.ab.pl###rightBoxes
+ biuronet.com###biuronetTsBadgeStatic, .gift-banner-box
+ biuroprasowe.play.pl##.floating-icon
+ biurorekordow.pl##.post_navigation-item
+@@ -358,7 +357,6 @@ forum-bron.pl,trumpeters.pl###tt_mobile_banner
+ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+ forum.dobreprogramy.pl##.header-cloak
+ forum.duolingo.com##.GB_SB
+-forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
+ forum.muratordom.pl###left_circus > .dostepne_mobile
+ forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
+ forum.swiateczne.info##.av-preloader-box
+@@ -555,7 +553,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+ linuxporady.pl,pskrk.com##.crestaPostsBox
+ literackifestiwal.zakopane.eu###g-page-preloader
+ lodzkie.pl##.jj_sl_custom2
+-login.ingbank.pl###smart-app-banner-region
+ losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
+ lvbet.pl##splash-loader
+ m.leroymerlin.pl##.smart-app-banner
+@@ -564,7 +561,6 @@ m.pl.aliexpress.com##.download-bar
+ m.sts.pl##.promo-app-download
+ m.teksciory.interia.pl###bottomPromo
+ m.trojmiasto.pl###floating_more_news[class*="--fixed"]
+-m.zalando.pl#?#div > x-wrapper-re-1-12:has(div:has-text(Przejdź do aplikacji))
+ m.zapytaj.onet.pl##.onet-bar.bottom
+ maciej.je##.related-posts
+ makeup.pl##.banner-about-app-popup
+@@ -869,7 +865,6 @@ sklep-rolnicze.eu###oiTab
+ sklep-wedkarski.info###ClPanelImg
+ sklep.aladyn.pl,sklep.mariall.pl###trzecia
+ sklep.farmona.pl##.tabs > section.product_link_nav
+-sklep.fusic.pl##.fa-google
+ sklep.pakrol.pl##.suggest-slider
+ sklep.vivamix.pl##.main-question-form
+ sklepbaterie.pl##.naskroty
+diff --git a/PPB/inne_sieciowe.txt b/PPB/inne_sieciowe.txt
+index d1f7d9bf1..a6d19fa1f 100644
+--- a/PPB/inne_sieciowe.txt
++++ b/PPB/inne_sieciowe.txt
+@@ -20,7 +20,6 @@
+ ||images.fm.tuba.pl/tuba3/_js/plugin.min.js$domain=junior.sport.pl|polskabiega.sport.pl
+ ||jugrol.pl/wp-content/uploads/20*/0*/ikonka-olx-zielona-footer.jpg$image
+ ||jugrol.pl/wp-content/uploads/20*/0*/olx-ikona-na-www.jpg$image
+-||kariera.infopraca.pl/wp-content/themes/cv-tools/img/pracanaemail.jpg
+ ||niezbednik.mediraty.pl/img/widget_duzy_button_1.png
+ ||niszczarki.org/templates/standard/images/jestesmy_na_allegro.jpg
+ ||ocdn.eu/*/sg-loader.$script,domain=auto-swiat.pl|businessinsider.com.pl|cdn.ampproject.org|fakt.pl|komputerswiat.pl|noizz.pl|ofeminin.pl|onet.pl|plejada.pl

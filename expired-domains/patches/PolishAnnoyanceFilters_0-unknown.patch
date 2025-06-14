@@ -1,5 +1,5 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 924333f56..5f18aef77 100644
+index 924333f56..85bfbfc5d 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -407,7 +407,7 @@ interia.pl##.top-of-site-link
@@ -11,7 +11,39 @@ index 924333f56..5f18aef77 100644
  irass.pl##body > div.right.btn[class*="czr"]
  isp.org.pl,marketdino.pl##.icon-arrow-up
  ita.tools##.ScrollButtonContainer
-@@ -720,7 +720,6 @@ sadeczanin.info###page-scrollup
+@@ -421,7 +421,6 @@ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+ jmlnet.pl##.pi-scroll-top-arrow
+ jomfruland.net##.scrollup__placeholder
+ journals.viamedica.pl##.Back_To_Top_Button
+-juventus-academy.rzeszow.pl###avatar-go-to-top
+ kaercher.com##.fg-totop
+ kajakiem.info##.bttn_up
+ kakadu.pl##.kakadu_scroll_to_top
+@@ -555,7 +554,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+ mojewypieki.com###jumpup
+ mojprzeworsk.pl##.walkerpress-top
+ mojzdrowyfutrzak.elanco.com###Group_1
+-mok.olsztyn.pl###neko-to-top
+ mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
+ molnlycke.pl##.button-sticky-to-top
+ montaz-anten.eu##.topHome
+@@ -573,7 +571,6 @@ najlepszekonto.pl##.footer__to-the-top
+ napad.pl###ssRollTop
+ naprzedwiosniu.waw.pl###zf--top-anchor-container
+ nasz-gabinet.pl##.back-to-top-bttn
+-naszesmieci.mos.gov.pl##.nav_up
+ naszoptyk.pl##.icon-backToTop
+ naturitas.pl##.scroll-page-top
+ nazwa.pl##.arrowUp__wrapper
+@@ -667,7 +664,6 @@ portal-sadownik.pl###arrowtop
+ portalprzemyski.pl##.footer-scroll-to-top
+ portalpszczelarski.pl###APPliftPageUp
+ posnania.eu##.footer__scrollTop
+-powerofus.wp.pl###icoGoTop.ico-go-top
+ powiat-plonski.pl##.fa-stack
+ powiat.kielce.pl##.ikon-up
+ powiat.konin.pl##.upscroll
+@@ -720,7 +716,6 @@ sadeczanin.info###page-scrollup
  sadzonki-truskawek.eu###ak-top
  safegroup.pl##button[data-id="scroll-to-top-button"]
  sakolife.pl###powrot-do-gory
@@ -19,7 +51,7 @@ index 924333f56..5f18aef77 100644
  samochody.pl###__next > div[class*="ToTop_totop_"]
  samsung.com##button[title="Go to Top"]
  santander.pl##.footer__scrollUpBtn--fixed
-@@ -795,7 +794,7 @@ techno-senior.com##.to-top
+@@ -795,7 +790,7 @@ techno-senior.com##.to-top
  teksty.ovh##.toTop-show
  telepolis.pl##.footer-top
  teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop
