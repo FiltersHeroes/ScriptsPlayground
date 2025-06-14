@@ -21,6 +21,7 @@ script_path = os.path.dirname(os.path.realpath(__file__))
 git_repo = git.Repo(script_path, search_parent_directories=True)
 # Main_path is where the root of the repository is located
 main_path = git_repo.git.rev_parse("--show-toplevel")
+expired_path = pj(main_path, "expired-domains")
 
 def merge(main_file, files_to_merge):
     with open(main_file, "w", encoding="utf-8") as mf:
@@ -31,6 +32,17 @@ def merge(main_file, files_to_merge):
                         for line in ef:
                             mf.write(f"{line}\n")
                 os.remove(file_to_merge)
+
+def mergeWithPat(main_file, files_to_merge_pat):
+    with open(main_file, "w", encoding="utf-8") as mf:
+        for expired_file_name in os.listdir(expired_path):
+            if files_to_merge_pat.match(expired_file_name):
+                expired_file = pj(expired_path, expired_file_name)
+                if os.path.getsize(expired_file) > 0:
+                    with open(expired_file, "r", encoding="utf-8") as ef:
+                        for line_m in ef:
+                            mf.write(f"{line_m}\n")
+                    os.remove(expired_file)
 
 def get_dynamic_connections(num_jobs_str):
     """
@@ -189,23 +201,24 @@ elif sys.argv[1] == "KADhosts":
     if ECO_output := ECO_result.stdout:
         print(ECO_output)
 elif sys.argv[1] == "KADhostsWWW":
-    asyncio.run(download("KADhosts.txt",
-                "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt"))
+    online_pat = re.compile(r"KAD(l)?_\d+-online\.txt")
+    mergeWithPat(pj(main_path, "KAD-online.txt"), online_pat)
     if not os.path.isdir(pj(main_path, "split")):
         os.makedirs(pj(main_path, "split"))
-    WWW_PAT = re.compile(r"^0\.0\.0\.0 www\.")
-    with open(pj(main_path, "KADhosts.txt"), "r", encoding="utf-8") as khf, open(pj(main_path, "KADhostsWWW.txt"), "w", encoding="utf-8") as khf_www:
+    WWW_PAT = re.compile(r"^(www[0-9]\.|www\.)")
+    with open(pj(main_path, "KAD-online.txt"), "r", encoding="utf-8") as khf, open(pj(main_path, "KADhostsWWW.txt"), "w", encoding="utf-8") as khf_www:
         for line in khf:
-            if WWW_PAT.match(line):
+            if not WWW_PAT.match(line):
+                line = f"0.0.0.0 www.{line}"
                 khf_www.write(line)
-    os.remove(pj(main_path, "KADhosts.txt"))
+    os.remove(pj(main_path, "KAD-online.txt"))
     s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KADhostsWWW.txt"), pj(
         main_path, "split", "KADhostsWWW_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhostsWWW_"):
     extra_flag = ""
     if not sys.argv[1].startswith("KADhostsWWW_"):
-        extra_flag = "--ar"
+        extra_flag = "--ar --save-online"
     else:
         extra_flag = "--www-only"
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(

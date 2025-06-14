@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.48"
+SCRIPT_VERSION = "2.0.49"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -99,6 +99,8 @@ parser.add_argument("--dns", action='store', type=str, nargs="+")
 parser.add_argument("--ar", "--allow-redirects", action='store_true')
 parser.add_argument("--www-only", action='store_true',
                     help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.sh.")
+parser.add_argument("--save-online", action='store_true',
+                    help="Save online domains from DNS check.")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -144,6 +146,7 @@ if args.dns:
 for path_to_file in args.path_to_file:
     FILTERLIST = os.path.splitext(os.path.basename(path_to_file))[0]
     EXPIRED_FILE = pj(EXPIRED_DIR, FILTERLIST + "-expired.txt")
+    ONLINE_FILE = pj(EXPIRED_DIR, FILTERLIST + "-online.txt")
     UNKNOWN_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown.txt")
     LIMIT_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown_limit.txt")
     NO_INTERNET_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown_no_internet.txt")
@@ -512,6 +515,10 @@ for path_to_file in args.path_to_file:
     if online_pages:
         for online_page in online_pages:
             unknown_pages.append(online_page)
+        if args.save_online:
+            with open(ONLINE_FILE, 'a', encoding="utf-8") as on_f:
+                for online_page in online_pages:
+                    on_f.write(f"{online_page}\n")
         del online_pages
 
     if args.www_only:

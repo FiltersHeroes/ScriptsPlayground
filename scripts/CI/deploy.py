@@ -37,6 +37,11 @@ def merge(main_file, files_to_merge):
                 os.remove(file_to_merge)
 
 
+for filename in os.listdir(expired_path):
+    full_path = os.path.join(expired_path, filename)
+    if os.path.isfile(full_path) and "online" in filename.lower():
+        os.remove(full_path)
+
 main_expired_file = pj(expired_path, "KADhostsWWW-expired.txt")
 main_parked_file = pj(expired_path, "KADhostsWWW-parked.txt")
 main_unknown_file = pj(expired_path, "KADhostsWWW-unknown.txt")

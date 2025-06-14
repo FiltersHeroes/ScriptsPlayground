@@ -24,24 +24,17 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     outputs:
       KAD-strategy-matrix: ${{ steps.generate.outputs.KAD-strategy-matrix }}
-      KADh-strategy-matrix: ${{ steps.generate.outputs.KADh-strategy-matrix }}
     steps:
       - uses: actions/checkout@v4
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
           numberParts="$NUMBER_OF_KAD_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KAD
-          numberParts="$NUMBER_OF_KADHOSTSWWW_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhostsWWW
       - uses: actions/upload-artifact@v4
         with:
           name: E_KAD_S
           path: |
             split/KAD_*
-      - uses: actions/upload-artifact@v4
-        with:
-          name: E_KADHWWW_S
-          path: |
-            split/KADhostsWWW_*
       - id: generate
         run: |
           ./scripts/CI/createMatrixStrategy.py
@@ -88,13 +81,41 @@ jobs:
           name: E_KADhosts
           path: |
             ${{ env.E_KADhosts }}
+  KADHWWW_S:
+    needs: [KAD]
+    runs-on: ubuntu-latest
+    container: ghcr.io/filtersheroes/expired_domains_image:latest
+    outputs:
+      KADh-strategy-matrix: ${{ steps.generate.outputs.KADh-strategy-matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - continue-on-error: true
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          ./scripts/CI/getArtifactNamesForED.py KAD
+      - uses: hawkeye116477/download-multiple-artifacts-action@v2
+        with:
+          names: |
+            ${{ env.E_KAD_NAMES }}
+          path: expired-domains
+      - continue-on-error: true
+        run: |
+          numberParts="$NUMBER_OF_KADHOSTSWWW_JOBS" ./scripts/CI/CI_LETS_DO_THIS.py KADhostsWWW
+      - uses: actions/upload-artifact@v4
+        with:
+          name: E_KADHWWW_S
+          path: |
+            split/KADhostsWWW_*
+      - id: generate
+        run: |
+          ./scripts/CI/createMatrixStrategy.py
   KADhostsWWW:
-    needs: KAD_S
+    needs: KADHWWW_S
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     strategy:
       matrix:
-        KADH: ${{ fromJson(needs.KAD_S.outputs.KADh-strategy-matrix) }}
+        KADH: ${{ fromJson(needs.KADHWWW_S.outputs.KADh-strategy-matrix) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
