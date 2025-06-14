@@ -1,25 +1,12 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 7a318e401..e026ce65a 100644
+index fb5b7dbaf..6970b8c0d 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1332,7 +1332,6 @@ skuteczneraporty.pl##.post .wf2-embedded.grwf2-wrapper
- slaskietrendy.pl##.kp-newsletter-widget.widget
- slawomirzawislak.pl##.moduletable-newsletter
- slepsksuwalki.pl##.site-footer .subscribe-header, .site-footer .subscribe
--slimebox.pl##.newsletter-widget-5
- slimwallet.pl##.newsletter-block-footer
- smaczny.pl##.stopka-smaczny > .col-md-8.col-xs-24:first-of-type
- smaker.pl##.newsletterComponent
-diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 03b643342..e9f59b0c3 100644
---- a/PPB/popupy_sieciowe.txt
-+++ b/PPB/popupy_sieciowe.txt
-@@ -2,7 +2,7 @@
- /common/js/enp/modules/newsletterPopup/newsletterPopup.js$domain=mixmedia.pl|mycenter.pl
- /css/jquery.fancybox.css$domain=fakro.pl|modrzewiowy-dwor.pl
- /js/jquery/plugins/fancybox/jquery.fancybox.js$domain=grawerton.pl|virgobooks.pl
--/js/popup.js$domain=grawitacyjny.pl|meblohaus.pl|mediaexpert.pl|multikurs.pl|slimebox.pl
-+/js/popup.js$domain=grawitacyjny.pl|meblohaus.pl|mediaexpert.pl|multikurs.pl
- /media/system/js/modal.js$domain=gminamoszczenica.eu|nowawrzesnia.pl|perfectdating.pl
- /OneSignalSDKWorker.js$third-party,domain=tech2u.pl
- /plugins/easy-facebook-likebox/*$domain=tvkrosno.pl
+@@ -1597,7 +1597,6 @@ wiadomoscihandlowe.pl,wiadomoscispozywcze.pl##.impressum--newsletter
+ wiadomoscispozywcze.pl###headerNewsletter
+ wiara.pl##.nsl
+ widzialni.pl##.widget_widzialni_newsletter
+-wiedza24h.pl##.roundedCorners5.floatRight.ltPanel
+ wierchomla.com.pl##.footer-top > .center-wrap > .footer-left
+ wiescirolnicze.pl###hp-newsletter
+ wikirose.pl###HTML5
