@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.46"
+SCRIPT_VERSION = "2.0.47"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -273,7 +273,9 @@ for path_to_file in args.path_to_file:
             elif SUB_PAT.search(domain_val):
                 online_pages.append(domain_val)
 
-    asyncio.run(bulk_domain_dns_check(sem_value))
+    if not args.www_only:
+        asyncio.run(bulk_domain_dns_check(sem_value))
+        del pages
 
     if parked_domains:
         with open(PARKED_FILE, 'w', encoding="utf-8") as p_f:
@@ -290,9 +292,6 @@ for path_to_file in args.path_to_file:
     if os.path.exists(temp_path):
         shutil.rmtree(temp_path)
     os.mkdir(temp_path)
-
-    if args.www_only and offline_pages:
-        unknown_pages.extend(offline_pages)
 
     # Conditionally execute DSC.sh processing
     if not args.www_only:
@@ -494,7 +493,7 @@ for path_to_file in args.path_to_file:
                 allow_redirects = True
             statuses = await asyncio.gather(*[get_status_code(session, url, limit, allow_redirects) for url in unknown_pages])
             unknown_pages.clear()
-            with open(UNKNOWN_FILE, 'w', encoding="utf-8") as u_f, \
+            with open(UNKNOWN_FILE, 'a', encoding="utf-8") as u_f, \
                  open(LIMIT_FILE, 'a', encoding="utf-8") as l_f:
                 for status in statuses:
                     print(status)
@@ -507,16 +506,12 @@ for path_to_file in args.path_to_file:
                         else: # Only attempt int conversion if not "Limit_exceeded"
                             try:
                                 status_code_int = int(status_code)
-                                if SUB_PAT.search(domain_val) and status_code == "000":
-                                    status_code_int = 200 # If it's a subdomain and connection issue, treat as potentially valid for now
                                 if not (200 <= status_code_int <= 299) and status_code_int != 403:
                                     u_f.write(f"{domain_val} {status_code}\n")
                             except ValueError:
                                 # Handle cases where status_code is not an integer
                                 if status_code == "Timed_out":
                                     l_f.write(f"{domain_val}\n")
-                                elif status_code == "000":
-                                    u_f.write(f"{domain_val} {status_code}\n")
                     else:
                         unknown_pages.append(status.strip())
 
@@ -524,6 +519,10 @@ for path_to_file in args.path_to_file:
         for online_page in online_pages:
             unknown_pages.append(online_page)
         del online_pages
+
+    if args.www_only:
+        unknown_pages = pages
+        del pages
 
     if unknown_pages:
         new_unknown_pages = sorted(set(unknown_pages))
