@@ -24,6 +24,10 @@ main_path = git_repo.git.rev_parse("--show-toplevel")
 expired_path = pj(main_path, "expired-domains")
 LIMIT_FILES = glob.glob(pj(expired_path, "KAD_*-unknown_*.txt"))
 
+dns_first = "9.9.9.10"
+dns_second = "149.112.112.10"
+connections_count = 60
+
 temp_path = pj(main_path, "temp")
 if not os.path.isdir(temp_path):
     os.mkdir(temp_path)
@@ -45,7 +49,7 @@ os.remove(t_f.name)
 
 if os.path.isfile(pj(main_path, "KADl_01.txt")) and os.path.getsize(pj(main_path, "KADl_01.txt")) > 0:
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "KADl_01.txt"), "-c 200"], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        main_path, "KADl_01.txt"), "-c", str(connections_count), "--dns", dns_first, dns_second], check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     print(ECO_result.stdout)
     os.remove(pj(main_path, "KADl_01.txt"))
 

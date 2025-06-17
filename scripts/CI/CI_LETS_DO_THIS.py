@@ -98,8 +98,8 @@ async def lets_go(session: aiohttp.ClientSession, url, limit):
             print(e)
     return file_name
 
-dns_first = "9.9.9.10"
-dns_second = "149.112.112.10"
+dns_first = "1.1.1.1"
+dns_second = "1.0.0.1"
 
 connections_number = get_dynamic_connections(os.getenv('NUMBER_OF_KAD_JOBS'))
 
