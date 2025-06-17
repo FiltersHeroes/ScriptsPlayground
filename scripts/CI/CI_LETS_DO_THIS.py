@@ -110,11 +110,7 @@ async def bulk_lets_go(limit_value, urls):
         for result in results:
             if result:
                 ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, result), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
-                if ECO_error := ECO_result.stderr:
-                    print(ECO_error)
-                if ECO_output := ECO_result.stdout:
-                    print(ECO_output)
+                    main_path, result), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, stdout=sys.stdout, stderr=sys.stderr)
 
 PAF_base = "https://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/"
 
@@ -186,7 +182,7 @@ if sys.argv[1] == "KAD":
     if not os.path.isdir(pj(main_path, "split")):
         os.makedirs(pj(main_path, "split"))
     s_result = subprocess.run(["split", "--numeric=1", "-d", "-n", f"l/{os.getenv('numberParts')}", pj(main_path, "KAD.txt"), pj(
-        main_path, "split", "KAD_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True)
+        main_path, "split", "KAD_")], check=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     print(s_result.stdout)
 elif sys.argv[1] == "KADhosts":
     asyncio.run(download("KADhosts-hostsplus.txt",
@@ -195,7 +191,7 @@ elif sys.argv[1] == "KADhosts":
                 "https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/sections/hostsplus-cert.txt"))
     merge(pj(main_path, "KADhosts.txt"), [pj(main_path, "KADhosts-hostsplus.txt"), pj(main_path, "KADhosts-hostsplus-cert.txt")])
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-                    main_path, "KADhosts.txt"), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+                    main_path, "KADhosts.txt"), "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, stdout=sys.stdout, stderr=sys.stderr, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:
@@ -222,7 +218,7 @@ elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhostsWWW_"):
     else:
         extra_flag = "--www-only"
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), extra_flag, "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, capture_output=True, text=True)
+        main_path, "split", sys.argv[1]), extra_flag, "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, stdout=sys.stdout, stderr=sys.stderr, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:
