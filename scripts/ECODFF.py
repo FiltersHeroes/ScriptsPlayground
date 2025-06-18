@@ -45,7 +45,7 @@ import aiohttp
 import git
 
 # Version number
-SCRIPT_VERSION = "2.0.49"
+SCRIPT_VERSION = "2.0.47"
 
 # Global variable for sleep delay
 RATE_LIMIT_DELAY = 0.5 # Seconds
@@ -99,8 +99,6 @@ parser.add_argument("--dns", action='store', type=str, nargs="+")
 parser.add_argument("--ar", "--allow-redirects", action='store_true')
 parser.add_argument("--www-only", action='store_true',
                     help="Process only lines containing 'www' and do not remove 'www' prefix. These domains will not be processed with DSC.sh.")
-parser.add_argument("--save-online", action='store_true',
-                    help="Save online domains from DNS check.")
 args = parser.parse_args()
 
 pj = os.path.join
@@ -146,7 +144,6 @@ if args.dns:
 for path_to_file in args.path_to_file:
     FILTERLIST = os.path.splitext(os.path.basename(path_to_file))[0]
     EXPIRED_FILE = pj(EXPIRED_DIR, FILTERLIST + "-expired.txt")
-    ONLINE_FILE = pj(EXPIRED_DIR, FILTERLIST + "-online.txt")
     UNKNOWN_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown.txt")
     LIMIT_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown_limit.txt")
     NO_INTERNET_FILE = pj(EXPIRED_DIR, FILTERLIST + "-unknown_no_internet.txt")
@@ -400,7 +397,7 @@ for path_to_file in args.path_to_file:
                         sub_entry = sub_entry.strip()
                         if regex_domains.search(sub_entry):
                             if not sub_entry in valid_domains_dsc: # Ensure no duplicates
-                                unknown_pages.append(f"{sub_entry} nonZeroStatus")
+                                unknown_pages.append(sub_entry)
                 os.remove(sub_temp_file.name)
 
 
@@ -414,10 +411,8 @@ for path_to_file in args.path_to_file:
             if SCRIPT_END_TIME and time.time() >= SCRIPT_END_TIME:
                 print(f"Skipping HTTP check for {url} due to time limit.")
                 return f"{url} Limit_exceeded"
+
             status_code = "000" # Default to '000' for network issues / unhandled exceptions
-            if len(url.split()) > 1:
-                url = url.split()[0]
-                status_code = "200"
             try:
                 print(f"Checking the status of {url}...")
                 await asyncio.sleep(RATE_LIMIT_DELAY)
@@ -450,8 +445,12 @@ for path_to_file in args.path_to_file:
                                 status_code = 200
                     except Exception as ex2:
                         print(f"Error during HTTP retry for {url}: {ex2}")
-                        if "reset by peer" in str(ex2):
+                        if "reset by peer" not in str(ex2):
+                            status_code = "000"
+                        else:
                             status_code = "200"
+                else:
+                    status_code = "000"
             except (aiohttp.ServerDisconnectedError, asyncio.TimeoutError) as ex:
                 print(f"{ex} ({url})")
                 try:
@@ -465,12 +464,16 @@ for path_to_file in args.path_to_file:
                             status_code = 200
                 except Exception as ex2:
                     print(f"Error during HTTP retry for {url}: {ex2}")
-                    if "reset by peer" in str(ex2):
+                    if "reset by peer" not in str(ex2):
+                        status_code = "000"
+                    else:
                         status_code = "200"
             except aiohttp.client_exceptions.ClientResponseError as ex:
                 print(f"Client response error for {url}: {ex}")
+                status_code = "000"
             except Exception as e:
                 print(f"An unexpected error occurred during HTTP check for {url}: {e}", file=sys.stderr)
+                status_code = "000"
             finally:
                 result = f"{str(url)} {str(status_code)}"
         return result
@@ -515,10 +518,6 @@ for path_to_file in args.path_to_file:
     if online_pages:
         for online_page in online_pages:
             unknown_pages.append(online_page)
-        if args.save_online:
-            with open(ONLINE_FILE, 'a', encoding="utf-8") as on_f:
-                for online_page in online_pages:
-                    on_f.write(f"{online_page}\n")
         del online_pages
 
     if args.www_only:
