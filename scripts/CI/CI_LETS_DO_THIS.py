@@ -214,7 +214,7 @@ elif sys.argv[1] == "KADhostsWWW":
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhostsWWW_"):
     extra_flag = ""
     if not sys.argv[1].startswith("KADhostsWWW_"):
-        extra_flag = "--ar --save-online"
+        extra_flag = ["--ar", "--save-online"]
     else:
         extra_flag = "--www-only"
     ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(

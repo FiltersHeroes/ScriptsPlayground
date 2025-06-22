@@ -12,8 +12,8 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && sed 
 RUN locale-gen
 
 # set system-wide locale settings
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US
 
 # verify modified configuration
 RUN dpkg-reconfigure --frontend noninteractive locales
