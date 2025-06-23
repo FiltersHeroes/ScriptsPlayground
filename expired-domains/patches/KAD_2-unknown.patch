@@ -1,8 +1,8 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 54da10017..1bf92dfa5 100644
+index 04d445caf..8f47ecbb0 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -282,13 +282,24 @@ alebilet.ogloszenie-9029975.shop
+@@ -285,13 +285,24 @@ alebilet.ogloszenie-9029975.shop
  alebilet.ogloszenie-9070954.shop
  alebilet.ogloszenie-9908905.shop
  alebilet.pitbull-patryafterdark.top
@@ -27,7 +27,7 @@ index 54da10017..1bf92dfa5 100644
  alebilet.pl-84382019.rest
  alebilet.pl-8930492.rest
  alebilet.pl-92032932.rest
-@@ -380,11 +391,14 @@ alebilet.pl-oferta6859469.shop
+@@ -383,11 +394,14 @@ alebilet.pl-oferta6859469.shop
  alebilet.pl-oferta7032999.shop
  alebilet.pl-oferta7069474.shop
  alebilet.pl-oferta7444108.com
@@ -42,7 +42,7 @@ index 54da10017..1bf92dfa5 100644
  alebilet.pl-oferta768573.com
  alebilet.pl-oferta781241.shop
  alebilet.pl-oferta7842497.shop
-@@ -394,6 +408,7 @@ alebilet.pl-oferta8117995.shop
+@@ -397,6 +411,7 @@ alebilet.pl-oferta8117995.shop
  alebilet.pl-oferta8245762.shop
  alebilet.pl-oferta82634283.com
  alebilet.pl-oferta8296-playstation.shop
@@ -50,7 +50,7 @@ index 54da10017..1bf92dfa5 100644
  alebilet.pl-oferta8372384.shop
  alebilet.pl-oferta847532.com
  alebilet.pl-oferta85210.icu
-@@ -3458,19 +3473,40 @@ olx.ogloszenie-8734892.shop
+@@ -3546,19 +3561,40 @@ olx.ogloszenie-8734892.shop
  olx.ogloszenie-9029975.shop
  olx.ogloszenie-9070954.shop
  olx.ogloszenie-9908905.shop
@@ -91,7 +91,7 @@ index 54da10017..1bf92dfa5 100644
  olx.pl-8930492.rest
  olx.pl-92032932.rest
  olx.pl-92049021.rest
-@@ -3562,11 +3598,14 @@ olx.pl-oferta6859469.shop
+@@ -3650,11 +3686,14 @@ olx.pl-oferta6859469.shop
  olx.pl-oferta7032999.shop
  olx.pl-oferta7069474.shop
  olx.pl-oferta7444108.com
@@ -106,7 +106,7 @@ index 54da10017..1bf92dfa5 100644
  olx.pl-oferta768573.com
  olx.pl-oferta7842497.shop
  olx.pl-oferta78849382.shop
-@@ -3575,6 +3614,7 @@ olx.pl-oferta8117995.shop
+@@ -3663,6 +3702,7 @@ olx.pl-oferta8117995.shop
  olx.pl-oferta8245762.shop
  olx.pl-oferta82634283.com
  olx.pl-oferta8296-playstation.shop

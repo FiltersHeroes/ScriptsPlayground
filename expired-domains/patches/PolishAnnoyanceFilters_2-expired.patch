@@ -1,11 +1,12 @@
-diff --git a/PPB/inne_sieciowe.txt b/PPB/inne_sieciowe.txt
-index 612561ff6..4b5a7d69b 100644
---- a/PPB/inne_sieciowe.txt
-+++ b/PPB/inne_sieciowe.txt
-@@ -1,5 +1,5 @@
- !/js/jquery.simplr.smoothscroll.min.js$script
--/js/jquery.nicescroll.js$script,domain=akademiabambino.pl|kolczewska.pl|komp-net.eu|sklep.audiopunkt.com.pl
-+/js/jquery.nicescroll.js$script,domain=akademiabambino.pl|kolczewska.pl|sklep.audiopunkt.com.pl
- /js/jquery.nicescroll.min.js$script,domain=doniczki-poznan.pl|podrogach.pl|sercedlazwierzat.pl
- /js/jquery.nicescroll.plus.js$script,domain=doniczki-poznan.pl
- /js/nicescroll-init.js$script,domain=podrogach.pl|sercedlazwierzat.pl
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index a819e66b3..8f02ea8ba 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -766,7 +766,6 @@ stalremdrzwi.pl##.popmake.pum[data-popmake*="porta" i]
+ starter.net.pl###wow-modal-overlay-1
+ stawiszynski.org,weddingdream.com##.jet-popup
+ stili.pl###iai_webpush_toplayer
+-stoicway.net##.pop-up-box
+ stolmet.pl###popup-fx
+ stopfermom.eu##.special-popup
+ stradivarius.com##.newsletter-modal-main-desktop

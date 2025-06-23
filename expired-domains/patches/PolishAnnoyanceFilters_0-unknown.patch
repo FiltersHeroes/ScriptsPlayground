@@ -1,5 +1,5 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 43a548d8a..779f9f6c5 100644
+index 0e539c69a..f94b22ba2 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -408,7 +408,7 @@ interia.pl##.top-of-site-link
@@ -19,15 +19,7 @@ index 43a548d8a..779f9f6c5 100644
  kaercher.com##.fg-totop
  kajakiem.info##.bttn_up
  kakadu.pl##.kakadu_scroll_to_top
-@@ -558,7 +557,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
-@@ -670,7 +668,6 @@ portal-sadownik.pl###arrowtop
+@@ -670,7 +669,6 @@ portal-sadownik.pl###arrowtop
  portalprzemyski.pl##.footer-scroll-to-top
  portalpszczelarski.pl###APPliftPageUp
  posnania.eu##.footer__scrollTop
@@ -35,7 +27,7 @@ index 43a548d8a..779f9f6c5 100644
  powiat-plonski.pl##.fa-stack
  powiat.kielce.pl##.ikon-up
  powiat.konin.pl##.upscroll
-@@ -723,7 +720,6 @@ sadeczanin.info###page-scrollup
+@@ -723,7 +721,6 @@ sadeczanin.info###page-scrollup
  sadzonki-truskawek.eu###ak-top
  safegroup.pl##button[data-id="scroll-to-top-button"]
  sakolife.pl###powrot-do-gory
@@ -43,7 +35,7 @@ index 43a548d8a..779f9f6c5 100644
  samochody.pl###__next > div[class*="ToTop_totop_"]
  samsung.com##button[title="Go to Top"]
  santander.pl##.footer__scrollUpBtn--fixed
-@@ -798,7 +794,7 @@ techno-senior.com##.to-top
+@@ -798,7 +795,7 @@ techno-senior.com##.to-top
  teksty.ovh##.toTop-show
  telepolis.pl##.footer-top
  teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop
