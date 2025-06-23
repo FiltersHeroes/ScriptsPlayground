@@ -213,12 +213,18 @@ elif sys.argv[1] == "KADhostsWWW":
     print(s_result.stdout)
 elif sys.argv[1].startswith("KAD_") or sys.argv[1].startswith("KADhostsWWW_"):
     extra_flag = ""
+
+    ECODFF_args = [pj(main_path, "scripts", "ECODFF.py"), pj(main_path, "split", sys.argv[1])]
+
     if not sys.argv[1].startswith("KADhostsWWW_"):
         extra_flag = ["--ar", "--save-online"]
     else:
-        extra_flag = "--www-only"
-    ECO_result = subprocess.run([pj(main_path, "scripts", "ECODFF.py"), pj(
-        main_path, "split", sys.argv[1]), extra_flag, "-c", str(connections_number), "--dns", dns_first, dns_second], check=False, stdout=sys.stdout, stderr=sys.stderr, text=True)
+        extra_flag = ["--www-only"]
+    ECODFF_args.extend(extra_flag)
+
+    ECODFF_args.extend(["-c", str(connections_number), "--dns", dns_first, dns_second])
+
+    ECO_result = subprocess.run(ECODFF_args, check=False, stdout=sys.stdout, stderr=sys.stderr, text=True)
     if ECO_error := ECO_result.stderr:
         print(ECO_error)
     if ECO_output := ECO_result.stdout:
