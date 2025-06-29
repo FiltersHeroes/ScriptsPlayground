@@ -1,20 +1,13 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 47575ded3..c7e352815 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -762,7 +762,6 @@ jagodnik.pl##.td_uid_52_5f019c1f4f05b_rand.vc_widget_sidebar.td_block_wrap.wpb_w
- jagodnik.pl##.textwidget
- jagodnik.pl##.widget_text > .block-title
- jagodnik.pl##a[href="http://www.jagodnik.pl/newsletter/"]
--jak.tv##.nav-newsletter
- jakiwniosek.pl##.footer > div > div > div:first-child > :nth-last-child(n+2):nth-last-child(-n+4)
- jakrobicmarketing.pl###\31 -2
- jaroslawiak.pl###nwslBoxCnt
-@@ -1451,7 +1450,6 @@ skionline.pl##.boks_tytul_out_cs, .okno_gl_s > .boks
- skionline.pl##td:nth-of-type(2) > .boks:nth-of-type(3) > tbody
- sklep-agrohandel.pl##.footer_top_area
- sklep-elektron.com###newsletter-form
--sklep-milovia.eu###m_footer_bg
- sklep-nasiona.pl##.footer-stay-connected
- sklep-rolnicze.eu##.col-xs-12.col-sm-12.col-md-4.col-lg-4:nth-of-type(2)
- sklep.audiopunkt.com.pl###sec-newsletter > .banertab
+diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
+index d9cbc2c1a..7ecffaca3 100644
+--- a/PPB/popupy_sieciowe.txt
++++ b/PPB/popupy_sieciowe.txt
+@@ -11,7 +11,7 @@
+ /wp-content/plugins/custom-fan-gate-plugin/js/custom-fan-gate.js$domain=jednoslad.pl
+ /wp-content/plugins/exit-popup/js/exit-popup.js$domain=bosonamacie.pl|kulturawplot.pl|magnapolonia.org|zbudujsamdom.pl
+ /wp-content/plugins/layered-popups/js/script.min.js$domain=akademia-internetu.pl|dih.pl|influentiq.pl
+-/wp-content/plugins/popup-builder/javascript/jquery.sgcolorbox-min.js$domain=bobbyburger.pl|fenixmotors.com|plportal.pl|ticker.pl|tygodnikprzeglad.pl
++/wp-content/plugins/popup-builder/javascript/jquery.sgcolorbox-min.js$domain=bobbyburger.pl|plportal.pl|ticker.pl|tygodnikprzeglad.pl
+ /wp-content/plugins/popup-builder/public/sound/*$media,object,domain=polska-ie.com
+ /wp-content/plugins/popup-maker/assets/js/site.min.js$domain=stressfree.pl
+ /wp-content/plugins/popupally/resource/frontend/popup.min.js$domain=forum-oddluzanie.pl|gazetagazeta.com
