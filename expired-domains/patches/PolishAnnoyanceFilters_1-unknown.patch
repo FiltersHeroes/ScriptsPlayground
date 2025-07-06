@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 980d69de7..16e5f9fb9 100644
+index 2dfdd0dd3..b74e6135b 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -19,7 +19,7 @@
@@ -29,7 +29,7 @@ index 980d69de7..16e5f9fb9 100644
  byinsomnia.com,mniammniam.com,opakowania24.eu,r-gol.com,rylko.com,stoprocent.com,unisono.eu##.newsletter-container
  bytom.com.pl##.footer-new__newsletter
  cafago.com,tomtop.com##.m_subscribe_input
-@@ -488,8 +488,6 @@ esaliens.pl##.news-btn.aside-btn
+@@ -489,8 +489,6 @@ esaliens.pl##.news-btn.aside-btn
  escoli.pl##.no-left-padding.col-sm-6 > .footer-block-title, [id^="newsletter-validate-detail"]
  eskk.pl###main-container-newsletter
  esklep.agroas.pl##.newsletter-homepage-ui
@@ -38,15 +38,15 @@ index 980d69de7..16e5f9fb9 100644
  esprit.com.pl##.newsletter-gora
  espritshop.pl###newsletter-registration-form
  esselte.com##.abc-footer__newsletter
-@@ -718,7 +716,6 @@ jobs.pl##.invitation, .notification-submit-box
- joga.org.pl###col2 > .module:nth-of-type(2)
+@@ -720,7 +718,6 @@ joga.org.pl###col2 > .module:nth-of-type(2)
  joom.com##div[class*="promoCorner_"]
  jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
+ jumo.pl##.news-updates
 -jupi24.pl##.rc-box-newsletter
  justbefit.pl###new_footer
  kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
  kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -774,7 +771,6 @@ kozackadrogeria.pl##.block-newsletter-footer
+@@ -776,7 +773,6 @@ kozackadrogeria.pl##.block-newsletter-footer
  kozigrod.pl###newsletterHld
  krainazabawek.com.pl##.sc_section-newsletter > div > div:first-child + div:last-child
  krainazabawy.pl###footer .col-md-3
@@ -54,7 +54,7 @@ index 980d69de7..16e5f9fb9 100644
  krasnal.sklep.pl,nerdstore.pl##.elementor-widget-pos_title:has(+ .elementor-widget-pos-newsletter)
  kratki.com##.cs-newsletter__wrapper
  kreatorium.com###nsl
-@@ -805,7 +801,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
+@@ -807,7 +803,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
  labotiga.pl##.block_newletter
  ladybusiness.pl##.newsletter-sectionw
  laksystem.pl##.wf2-scroll-box.grwf2-wrapper
@@ -62,23 +62,15 @@ index 980d69de7..16e5f9fb9 100644
  lamoda.pl##.min-h-newsletter
  lampy.pl###newsletterbox_1
  lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -1188,7 +1183,6 @@ polygamia.pl###sidebar-footer-top-right
- popvinyl.pl##.xl\:mt-0.mt-6.p-6.shadow-custom
- poradnikhandlowca.com.pl##.section-bar-newsletter
- poradnikogrodniczy.pl##.sidebar-menu > div.block:nth-of-type(4)
--poradybudowlane.com.pl###search2
- porcja.eu###footer-top-news
- porozmawiajmy.tv###text-36
- portal-sadownik.pl##div.box:nth-of-type(3)
-@@ -1206,7 +1200,6 @@ powerman.com.pl##.pm_newsletter
- powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
- powiatlobeski.pl###nl
- poznan.factory.pl##.pane-2.pane-custom.panel-pane
--praca.antyweb.pl##.bg-blue.hero
- praisethewear.com##.elementor-element-5311d84
- prawo.pl##.wkNewsletterBlock
- prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
-@@ -1329,7 +1322,6 @@ silesiasem.pl##.entry-content > form
+@@ -816,7 +811,6 @@ languagetool.org###newsletter_reg
+ lantre.pl##.newsletter.block
+ laptopypoznan.pl##.ps-spotlight5
+ lastowiec.pl##.contact-box:has(img[src="data/images/icon_newsletter.png"])
+-lasuch24.pl###box_biuletyn
+ latarki.pl##.bakedparallax-wrapper
+ latarnia.teatrnn.pl###main_oferta > div:nth-of-type(2), #main_oferta > div:nth-of-type(2) + form
+ lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
+@@ -1331,7 +1325,6 @@ silesiasem.pl##.entry-content > form
  silesion.pl##.pageFooter__newsletter
  sinsay.com##.home-ss20-newsletter
  sipma.pl###newslet
@@ -86,7 +78,15 @@ index 980d69de7..16e5f9fb9 100644
  skalnik.pl##.newsletter_content.footer
  skapiec.pl##section.newsletter
  ski4you.pl##footer#footer.footer .widget--signup
-@@ -1636,7 +1628,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
+@@ -1557,7 +1550,6 @@ upacjenta.pl##.newsletter-wp
+ upominki24.pl##.footer-container > div > .row > div[class]:nth-of-type(4)
+ urbancity.pl##footer .row .text-center:has([class*="-newsletter"])
+ urbnews.pl##.sb-widget:nth-of-type(4)
+-usg.com.pl###panel2
+ ustolema.pl##td:first-of-type > div > div:nth-of-type(3)
+ ustyle.pl###footer-widgets > .col-sm-3:first-of-type
+ uwmfm.pl###ufm-newsletter
+@@ -1639,7 +1631,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
  wrp.pl##.vc_general.vc_cta3
  wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
  wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
@@ -94,7 +94,7 @@ index 980d69de7..16e5f9fb9 100644
  wspieramrozwoj.pl##.newslatter
  wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
  wtk.pl###newsletter-animated-box
-@@ -1695,7 +1686,6 @@ zdrowie.pap.pl##section ~ a[href="/newsletter/form"]
+@@ -1698,7 +1689,6 @@ zdrowie.pap.pl##section ~ a[href="/newsletter/form"]
  zdrowie.wprost.pl##.newsletter-plugin-info
  zegarek.net##footer > .backGroundX.container-fluid > .container
  zegarkiipasja.pl###contactBoxForm

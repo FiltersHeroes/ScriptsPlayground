@@ -1,8 +1,8 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index a8a1c096e..a4565c417 100644
+index 1cdd67837..a66325086 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -408,7 +408,7 @@ interia.pl##.top-of-site-link
+@@ -409,7 +409,7 @@ interia.pl##.top-of-site-link
  intermarche.pl##.trigger--page-up
  intertraktor.pl###up_talk0
  invest.przemysl.eu###totop.goto-top
@@ -11,7 +11,7 @@ index a8a1c096e..a4565c417 100644
  irass.pl##body > div.right.btn[class*="czr"]
  isp.org.pl,marketdino.pl##.icon-arrow-up
  ita.tools##.ScrollButtonContainer
-@@ -422,7 +422,6 @@ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+@@ -423,7 +423,6 @@ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
  jmlnet.pl##.pi-scroll-top-arrow
  jomfruland.net##.scrollup__placeholder
  journals.viamedica.pl##.Back_To_Top_Button
@@ -19,15 +19,15 @@ index a8a1c096e..a4565c417 100644
  kaercher.com##.fg-totop
  kajakiem.info##.bttn_up
  kakadu.pl##.kakadu_scroll_to_top
-@@ -670,7 +669,6 @@ portal-sadownik.pl###arrowtop
- portalprzemyski.pl##.footer-scroll-to-top
+@@ -672,7 +671,6 @@ portalprzemyski.pl##.footer-scroll-to-top
  portalpszczelarski.pl###APPliftPageUp
  posnania.eu##.footer__scrollTop
+ postepmed.pl###scroll-to-top
 -powerofus.wp.pl###icoGoTop.ico-go-top
  powiat-plonski.pl##.fa-stack
  powiat.kielce.pl##.ikon-up
  powiat.konin.pl##.upscroll
-@@ -723,7 +721,6 @@ sadeczanin.info###page-scrollup
+@@ -725,7 +723,6 @@ sadeczanin.info###page-scrollup
  sadzonki-truskawek.eu###ak-top
  safegroup.pl##button[data-id="scroll-to-top-button"]
  sakolife.pl###powrot-do-gory
@@ -35,7 +35,7 @@ index a8a1c096e..a4565c417 100644
  samochody.pl###__next > div[class*="ToTop_totop_"]
  samsung.com##button[title="Go to Top"]
  santander.pl##.footer__scrollUpBtn--fixed
-@@ -798,7 +795,7 @@ techno-senior.com##.to-top
+@@ -801,7 +798,7 @@ techno-senior.com##.to-top
  teksty.ovh##.toTop-show
  telepolis.pl##.footer-top
  teletorium.pl,tkmaxx.pl,unitee.pl,winforum.pl##.scrolltotop

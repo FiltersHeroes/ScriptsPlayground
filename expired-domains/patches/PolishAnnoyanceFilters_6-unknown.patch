@@ -1,5 +1,5 @@
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index ea80e9f1a..6778a5190 100644
+index 025018450..3e2fca41c 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,7 +1,7 @@
@@ -12,7 +12,7 @@ index ea80e9f1a..6778a5190 100644
  360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
  a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
  a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -430,7 +430,6 @@ sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
+@@ -431,7 +431,6 @@ sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
  sklep.delia.pl##div[id^="rg_smartpopup_"]
  sklep.krosno.com.pl##.modalbox
  sklep.krosno.com.pl##.modalbox-is-visible body:style(overflow-y: auto !important)

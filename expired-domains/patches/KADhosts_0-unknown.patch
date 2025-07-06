@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus-cert.txt b/sections/hostsplus-cert.txt
-index b837d72b..76e458e6 100644
+index b837d72b..809094de 100644
 --- a/sections/hostsplus-cert.txt
 +++ b/sections/hostsplus-cert.txt
 @@ -4,17 +4,8 @@
@@ -57,7 +57,15 @@ index b837d72b..76e458e6 100644
  ||alebilet.pl-oferta827590.cfd^
  ||alebilet.pl-oferta834650.cfd^
  ||alebilet.pl-oferta887943.cfd^
-@@ -182,26 +167,11 @@
+@@ -166,7 +151,6 @@
+ ||alebilet.pl-order1093203.cfd^
+ ||alebilet.pl-redirect927.cfd^
+ ||alebilet.pl-redirect8273.icu^
+-||alebilet.pl-redirect-app-13563.cfd^
+ ||alebilet.pl-wyroznione445909.icu^
+ ||olx.pl-4eg5.icu^
+ ||olx.pl-5fe6r.cfd^
+@@ -182,26 +166,10 @@
  ||olx.pl-829.cfd^
  ||olx.pl-952.cfd^
  ||olx.pl-969.icu^
@@ -77,14 +85,14 @@ index b837d72b..76e458e6 100644
 -||olx.pl-5313.icu^
 -||olx.pl-6493.cfd^
 -||olx.pl-7273.cfd^
- ||olx.pl-7573.icu^
+-||olx.pl-7573.icu^
 -||olx.pl-7829.cfd^
 -||olx.pl-8271.cfd^
 -||olx.pl-8372.cfd^
  ||olx.pl-8941.cfd^
  ||olx.pl-09844.icu^
  ||olx.pl-13454.icu^
-@@ -224,18 +194,15 @@
+@@ -224,18 +192,15 @@
  ||olx.pl-79352fh2837ve87gh24gds.icu^
  ||olx.pl-79362.icu^
  ||olx.pl-84232.icu^
@@ -103,7 +111,14 @@ index b837d72b..76e458e6 100644
  ||olx.pl-642642.icu^
  ||olx.pl-643634.icu^
  ||olx.pl-643734.icu^
-@@ -251,14 +218,11 @@
+@@ -244,21 +209,17 @@
+ ||olx.pl-965426.icu^
+ ||olx.pl-965434.icu^
+ ||olx.pl-965766.icu^
+-||olx.pl-4637347.icu^
+ ||olx.pl-5632462.icu^
+ ||olx.pl-6346346.icu^
+ ||olx.pl-6540671.icu^
  ||olx.pl-7168125.icu^
  ||olx.pl-8915216.icu^
  ||olx.pl-9862671.icu^
@@ -118,7 +133,7 @@ index b837d72b..76e458e6 100644
  ||olx.pl-71823452933.cfd^
  ||olx.pl-app-82368.cfd^
  ||olx.pl-aukcja-5774345.icu^
-@@ -271,9 +235,7 @@
+@@ -271,9 +232,7 @@
  ||olx.pl-oferta1862.icu^
  ||olx.pl-oferta3995.cfd^
  ||olx.pl-oferta5243.cfd^
@@ -128,7 +143,7 @@ index b837d72b..76e458e6 100644
  ||olx.pl-oferta8491.cfd^
  ||olx.pl-oferta50455.cfd^
  ||olx.pl-oferta50551.cfd^
-@@ -298,10 +260,8 @@
+@@ -298,10 +257,8 @@
  ||olx.pl-oferta742223.icu^
  ||olx.pl-oferta742235.cfd^
  ||olx.pl-oferta742263.cfd^
@@ -139,8 +154,16 @@ index b837d72b..76e458e6 100644
  ||olx.pl-oferta827590.cfd^
  ||olx.pl-oferta834650.cfd^
  ||olx.pl-oferta887943.cfd^
+@@ -373,7 +330,6 @@
+ ||olx.pl-order1093203.cfd^
+ ||olx.pl-redirect927.cfd^
+ ||olx.pl-redirect8273.icu^
+-||olx.pl-redirect-app-13563.cfd^
+ ||olx.pl-vbnx.icu^
+ ||olx.pl-wyroznione445909.icu^
+ ||olx.pl-yju98nb.cfd^
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 79176b1d..28a45c1b 100644
+index 3fb62f50..88f92b14 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -4,7 +4,6 @@
@@ -151,15 +174,23 @@ index 79176b1d..28a45c1b 100644
  ||aoc.teleaudio.pl^
  ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
-@@ -121,7 +120,6 @@
- ||lmolrbfl.tigarshark.com^
+@@ -20,7 +19,6 @@
+ ||ce.wielkanagroda.com^
+ ||ce.wielkaniespodzianka.pl^
+ ||ce.winfreetoday.com^
+-||chomikuj-new-t1.opx.pl^
+ ||chomikuj.best^
+ ||cloud.file.co.pl^
+ ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
+@@ -122,7 +120,6 @@
  ||loan.arrow-finance.pl^
+ ||lp845.filmo.agency^
  ||lp.investingops.com^
 -||lp.trade360.com^
  ||lpagfafo.strongfitobody.com^
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
-@@ -141,168 +139,29 @@
+@@ -142,168 +139,29 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -328,7 +359,7 @@ index 79176b1d..28a45c1b 100644
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -341,7 +200,6 @@
+@@ -342,7 +200,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
