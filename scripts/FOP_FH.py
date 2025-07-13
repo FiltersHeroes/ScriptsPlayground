@@ -225,13 +225,27 @@ def fopsort(filename):
         # Writes the filter lines to the file
         def writefilters():
             newLineSign = '\n'
-            if elementlines > filterlines:
-                uncombinedFilters = sorted(
-                    set(section), key=lambda rule: re.sub(ELEMENTDOMAINPATTERN, "", rule))
-                outputfile.write(f"{newLineSign.join(combinefilters(uncombinedFilters, ELEMENTDOMAINPATTERN, ","))}\n")
-            else:
-                uncombinedFilters = sorted(set(section), key=str.lower)
-                outputfile.write(f"{newLineSign.join(combinefilters(uncombinedFilters, FILTERDOMAINPATTERN, "|"))}\n")
+            # Separate rules into different categories
+            cosmetic_filters = []
+            network_filters = []
+
+            for rule in section:
+                if re.search(ELEMENTDOMAINPATTERN, rule):
+                    cosmetic_filters.append(rule)
+                else:
+                    network_filters.append(rule)
+
+            # Process cosmetic rules
+            if cosmetic_filters:
+                uncombined_cosmetic_filters = sorted(
+                    set(cosmetic_filters), key=lambda rule: re.sub(ELEMENTDOMAINPATTERN, "", rule))
+                outputfile.write(f"{newLineSign.join(combinefilters(uncombined_cosmetic_filters, ELEMENTDOMAINPATTERN, ','))}\n")
+
+            # Process network rules
+            if network_filters:
+                uncombined_network_filters = sorted(set(network_filters), key=str.lower)
+                outputfile.write(f"{newLineSign.join(combinefilters(uncombined_network_filters, FILTERDOMAINPATTERN, '|'))}\n")
+
 
         for line in inputfile:
             line = line.strip()
