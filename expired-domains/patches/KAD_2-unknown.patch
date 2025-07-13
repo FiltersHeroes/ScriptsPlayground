@@ -1,11 +1,11 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index c5e2a9f05..76bc554a9 100644
+index 5333dbbd5..c34124cb1 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -323,13 +323,24 @@ alebilet.ogloszenie-9070954.shop
+@@ -324,13 +324,24 @@ alebilet.ogloszenie-9029975.shop
+ alebilet.ogloszenie-9070954.shop
  alebilet.ogloszenie-9908905.shop
  alebilet.pitbull-patryafterdark.top
- alebilet.pl-16111.sbs
 +alebilet.pl-2140.cfd
 +alebilet.pl-2141.cfd
 +alebilet.pl-2841.cfd
@@ -27,7 +27,7 @@ index c5e2a9f05..76bc554a9 100644
  alebilet.pl-84382019.rest
  alebilet.pl-8930492.rest
  alebilet.pl-92032932.rest
-@@ -422,11 +433,14 @@ alebilet.pl-oferta6859469.shop
+@@ -425,11 +436,14 @@ alebilet.pl-oferta6859469.shop
  alebilet.pl-oferta7032999.shop
  alebilet.pl-oferta7069474.shop
  alebilet.pl-oferta7444108.com
@@ -42,7 +42,7 @@ index c5e2a9f05..76bc554a9 100644
  alebilet.pl-oferta768573.com
  alebilet.pl-oferta781241.shop
  alebilet.pl-oferta7842497.shop
-@@ -436,6 +450,7 @@ alebilet.pl-oferta8117995.shop
+@@ -443,6 +457,7 @@ alebilet.pl-oferta8117995.shop
  alebilet.pl-oferta8245762.shop
  alebilet.pl-oferta82634283.com
  alebilet.pl-oferta8296-playstation.shop
@@ -50,20 +50,11 @@ index c5e2a9f05..76bc554a9 100644
  alebilet.pl-oferta8372384.shop
  alebilet.pl-oferta847532.com
  alebilet.pl-oferta85210.icu
-@@ -474,6 +489,7 @@ alebilet.pl-okazje-weekendowe-9313.rest
- alebilet.pl-pitbullpartyafterdarktour.top
- alebilet.pl-prywatnie-kup-teraz-93203.shop
- alebilet.pl-r5k72vdx1jcm8lqz94tneo.com
-+alebilet.pl-redirect-app-13563.cfd
- alebilet.pl-rezerwacja09184.click
- alebilet.pl-rezerwacja9112893.shop
- alebilet.pl-w3d61tqz9kbl7jxm42fye9.com
-@@ -3780,24 +3796,47 @@ olx.ogloszenie-8734892.shop
- olx.ogloszenie-9029975.shop
- olx.ogloszenie-9070954.shop
- olx.ogloszenie-9908905.shop
+@@ -2257,6 +2272,31 @@ oknoswiat24.pl
+ oldgoldfilms.com
+ oldtimeerpnte.pro
+ olx-wwa.pl
 +olx.pl-1239.cfd
- olx.pl-16111.sbs
 +olx.pl-2140.cfd
 +olx.pl-2141.cfd
 +olx.pl-2841.cfd
@@ -71,69 +62,23 @@ index c5e2a9f05..76bc554a9 100644
 +olx.pl-3934.cfd
 +olx.pl-4281.cfd
 +olx.pl-4299.cfd
- olx.pl-4329304.shop
 +olx.pl-434663456.shop
- olx.pl-456735ggf54.icu
- olx.pl-456gf.sbs
-+olx.pl-4637347.icu
 +olx.pl-4765.cfd
 +olx.pl-5185.cfd
 +olx.pl-5313.icu
 +olx.pl-53467437.icu
- olx.pl-624h9frnvournh35ouhgdrh.cyou
 +olx.pl-632623.icu
- olx.pl-634ng9u35vsyurdfbdfs.cyou
- olx.pl-634ng9u35vsyurdfbdfs.icu
- olx.pl-63bf9u3435ymdsfdgy.cyou
- olx.pl-63bf9u3435ymdsfdgy.icu
- olx.pl-642gdsve34uhrbdwt32tvc.icu
 +olx.pl-643643262.icu
 +olx.pl-6493.cfd
- olx.pl-65932.sbs
- olx.pl-68569685.shop
- olx.pl-6bv934b5c5y539x4jo3i.icu
- olx.pl-7113942.shop
- olx.pl-718244.rest
 +olx.pl-7273.cfd
-+olx.pl-7573.icu
 +olx.pl-7829.cfd
- olx.pl-78643252.rest
- olx.pl-79391802.rest
 +olx.pl-8271.cfd
 +olx.pl-8372.cfd
- olx.pl-84382019.rest
 +olx.pl-85235.icu
- olx.pl-8930492.rest
- olx.pl-92032932.rest
- olx.pl-92049021.rest
-@@ -3892,11 +3931,14 @@ olx.pl-oferta6859469.shop
- olx.pl-oferta7032999.shop
- olx.pl-oferta7069474.shop
- olx.pl-oferta7444108.com
 +olx.pl-oferta746478.com
- olx.pl-oferta746598.com
 +olx.pl-oferta7491.cfd
- olx.pl-oferta7564803.com
- olx.pl-oferta756893.com
- olx.pl-oferta7613491.shop
- olx.pl-oferta764893.com
 +olx.pl-oferta768473.com
- olx.pl-oferta768573.com
- olx.pl-oferta7842497.shop
- olx.pl-oferta78849382.shop
-@@ -3905,6 +3947,7 @@ olx.pl-oferta8117995.shop
- olx.pl-oferta8245762.shop
- olx.pl-oferta82634283.com
- olx.pl-oferta8296-playstation.shop
 +olx.pl-oferta8349.cfd
- olx.pl-oferta8372384.shop
- olx.pl-oferta847532.com
- olx.pl-oferta8544510.shop
-@@ -3943,6 +3986,7 @@ olx.pl-prywatne-id111.icu
- olx.pl-prywatne-id229.icu
- olx.pl-prywatnie-kup-teraz-93203.shop
- olx.pl-r5k72vdx1jcm8lqz94tneo.com
-+olx.pl-redirect-app-13563.cfd
- olx.pl-rezerwacja09184.click
- olx.pl-rezerwacja9112893.shop
- olx.pl-vnu39rvn3.icu
+ omeagaashares.com
+ onbdlgitalapp.com
+ onceuponadoodlebooks.com
