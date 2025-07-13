@@ -67,7 +67,7 @@ BLANKPATTERN = re.compile(r"^\s*$")
 # Compile a regular expression that describes uBO's scriptlets pattern
 UBO_JS_PATTERN = re.compile(r"^@js\(")
 
-# List all Adblock Plus, uBlock Origin and AdGuard options 
+# List all Adblock Plus, uBlock Origin and AdGuard options
 # (excepting domain, denyallow, from, method, permissions, redirect, redirect-rule, rewrite and to, which is handled separately)
 KNOWNOPTIONS = (
     "document", "elemhide", "font", "genericblock", "generichide", "image", "match-case", "media", "object", "other", "ping", 
@@ -222,15 +222,14 @@ def fopsort(filename):
 
         # Writes the filter lines to the file
         def writefilters():
+            newLineSign = '\n'
             if elementlines > filterlines:
                 uncombinedFilters = sorted(
                     set(section), key=lambda rule: re.sub(ELEMENTDOMAINPATTERN, "", rule))
-                outputfile.write("{filters}\n".format(filters="\n".join(
-                    combinefilters(uncombinedFilters, ELEMENTDOMAINPATTERN, ","))))
+                outputfile.write(f"{newLineSign.join(combinefilters(uncombinedFilters, ELEMENTDOMAINPATTERN, ","))}\n")
             else:
                 uncombinedFilters = sorted(set(section), key=str.lower)
-                outputfile.write("{filters}\n".format(filters="\n".join(
-                    combinefilters(uncombinedFilters, FILTERDOMAINPATTERN, "|"))))
+                outputfile.write(f"{newLineSign.join(combinefilters(uncombinedFilters, FILTERDOMAINPATTERN, "|"))}\n")
 
         for line in inputfile:
             line = line.strip()
