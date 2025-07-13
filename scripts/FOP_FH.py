@@ -75,8 +75,8 @@ KNOWNOPTIONS = (
 
     # uBlock Origin
     "_", "1p", "3p", "all", "badfilter", "cname", "csp", "css", "doc", "ehide", "empty", "first-party", "frame",
-    "ghide", "header", "important", "inline-font", "inline-script", "mp4", "object-subrequest", 
-    "popunder", "shide", "specifichide", "xhr", "strict1p", "strict3p",
+    "ghide", "header", "important", "inline-font", "inline-script", "ipaddress", "match-case", "mp4", "object-subrequest",
+    "popunder", "shide", "specifichide", "xhr", "strict1p", "strict3p", "uritransform", "urlskip"
 
     # AdGuard
     "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "removeparam"
