@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV SFLB_tag="SFLB-3.0.17"
 ENV SFLB_LOCALES_PATH="/usr/share/locale"
-ENV FOP_tag="FOP-3.32"
+ENV FOP_tag="FOP-3.33"
 
 RUN python3 --version && apt-get update && apt-get install -y git locales openssh-client ca-certificates tzdata gettext-base wget --no-install-recommends && pip install GitPython requests natsort --no-cache-dir
 
