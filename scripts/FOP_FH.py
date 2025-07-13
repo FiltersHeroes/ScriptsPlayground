@@ -78,10 +78,10 @@ KNOWNOPTIONS = (
     # uBlock Origin
     "_", "1p", "3p", "all", "badfilter", "cname", "csp", "css", "doc", "ehide", "empty", "first-party", "frame",
     "ghide", "header", "important", "inline-font", "inline-script", "ipaddress", "match-case", "mp4", "object-subrequest",
-    "popunder", "shide", "specifichide", "reason" ,"xhr", "strict1p", "strict3p", "uritransform", "urlskip"
+    "popunder", "reason" ,"shide", "specifichide", "strict1p", "strict3p", "uritransform", "urlskip", "xhr",
 
     # AdGuard
-    "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "urltransform", "removeparam"
+    "app", "content", "cookie", "extension", "jsinject", "network", "removeparam", "replace", "stealth", "urlblock", "urltransform"
 )
 
 # List all methods which should be used together with uBO's method option
