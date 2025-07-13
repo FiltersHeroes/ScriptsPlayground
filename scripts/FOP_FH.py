@@ -27,7 +27,7 @@ import filecmp
 import argparse
 
 # FOP version number
-VERSION = 3.32
+VERSION = 3.33
 
 # Welcome message
 greeting = f"FOP (Filter Orderer and Preener) {VERSION}"
@@ -78,10 +78,10 @@ KNOWNOPTIONS = (
     # uBlock Origin
     "_", "1p", "3p", "all", "badfilter", "cname", "csp", "css", "doc", "ehide", "empty", "first-party", "frame",
     "ghide", "header", "important", "inline-font", "inline-script", "ipaddress", "match-case", "mp4", "object-subrequest",
-    "popunder", "shide", "specifichide", "xhr", "strict1p", "strict3p", "uritransform", "urlskip"
+    "popunder", "shide", "specifichide", "reason" ,"xhr", "strict1p", "strict3p", "uritransform", "urlskip"
 
     # AdGuard
-    "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "removeparam"
+    "app", "content", "cookie", "extension", "jsinject", "network", "replace", "stealth", "urlblock", "urltransform", "removeparam"
 )
 
 # List all methods which should be used together with uBO's method option
