@@ -41,7 +41,7 @@ ap.add_argument("--version", "-v",
 # Compile regular expressions to match important filter parts
 # (derived from Wladimir Palant's Adblock Plus source code)
 ELEMENTDOMAINPATTERN = re.compile(r"^([^\/\*\|\@\"\!]*?)(#|\$)\@?\??\@?(#|\$)")
-FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)(denyallow|domain|from|method|to)\=([^\,\s]+)$")
+FILTERDOMAINPATTERN = re.compile(r"(?:\$|\,)(?:denyallow|domain|from|method|to)\=([^\,\s]+)$")
 ELEMENTPATTERN = re.compile(
     r"^([^\/\*\|\@\"\!]*?)(\$\@?\$|##\@?\$|#[\@\?]?#\+?)(.*)$")
 OPTIONPATTERN = re.compile(
