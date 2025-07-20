@@ -1,39 +1,24 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 5333dbbd5..c34124cb1 100644
+index d190ff981..ea6795167 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -324,13 +324,24 @@ alebilet.ogloszenie-9029975.shop
- alebilet.ogloszenie-9070954.shop
- alebilet.ogloszenie-9908905.shop
+@@ -320,8 +320,10 @@ alebilet.pi1235413.rest
+ alebilet.pi371724.rest
+ alebilet.pi4194157.rest
  alebilet.pitbull-patryafterdark.top
-+alebilet.pl-2140.cfd
-+alebilet.pl-2141.cfd
-+alebilet.pl-2841.cfd
 +alebilet.pl-323232.top
-+alebilet.pl-3934.cfd
-+alebilet.pl-4281.cfd
-+alebilet.pl-4299.cfd
+ alebilet.pl-352463.shop
  alebilet.pl-4329304.shop
 +alebilet.pl-434663456.shop
-+alebilet.pl-5185.cfd
-+alebilet.pl-6493.cfd
+ alebilet.pl-53724.icu
  alebilet.pl-65932.sbs
  alebilet.pl-68569685.shop
- alebilet.pl-7113942.shop
- alebilet.pl-718244.rest
- alebilet.pl-78643252.rest
- alebilet.pl-79391802.rest
-+alebilet.pl-8271.cfd
- alebilet.pl-84382019.rest
- alebilet.pl-8930492.rest
- alebilet.pl-92032932.rest
-@@ -425,11 +436,14 @@ alebilet.pl-oferta6859469.shop
+@@ -433,11 +435,13 @@ alebilet.pl-oferta698356130.cfd
  alebilet.pl-oferta7032999.shop
  alebilet.pl-oferta7069474.shop
  alebilet.pl-oferta7444108.com
 +alebilet.pl-oferta746478.com
  alebilet.pl-oferta746598.com
-+alebilet.pl-oferta7491.cfd
  alebilet.pl-oferta7564803.com
  alebilet.pl-oferta756893.com
  alebilet.pl-oferta7613491.shop
@@ -42,43 +27,24 @@ index 5333dbbd5..c34124cb1 100644
  alebilet.pl-oferta768573.com
  alebilet.pl-oferta781241.shop
  alebilet.pl-oferta7842497.shop
-@@ -443,6 +457,7 @@ alebilet.pl-oferta8117995.shop
- alebilet.pl-oferta8245762.shop
- alebilet.pl-oferta82634283.com
- alebilet.pl-oferta8296-playstation.shop
-+alebilet.pl-oferta8349.cfd
- alebilet.pl-oferta8372384.shop
- alebilet.pl-oferta847532.com
- alebilet.pl-oferta85210.icu
-@@ -2257,6 +2272,31 @@ oknoswiat24.pl
- oldgoldfilms.com
+@@ -2184,6 +2188,20 @@ oftn.pl
+ oikiacapital.com
  oldtimeerpnte.pro
  olx-wwa.pl
 +olx.pl-1239.cfd
-+olx.pl-2140.cfd
-+olx.pl-2141.cfd
-+olx.pl-2841.cfd
 +olx.pl-323232.top
-+olx.pl-3934.cfd
-+olx.pl-4281.cfd
-+olx.pl-4299.cfd
 +olx.pl-434663456.shop
 +olx.pl-4765.cfd
-+olx.pl-5185.cfd
 +olx.pl-5313.icu
 +olx.pl-53467437.icu
 +olx.pl-632623.icu
 +olx.pl-643643262.icu
-+olx.pl-6493.cfd
 +olx.pl-7273.cfd
 +olx.pl-7829.cfd
-+olx.pl-8271.cfd
 +olx.pl-8372.cfd
 +olx.pl-85235.icu
 +olx.pl-oferta746478.com
-+olx.pl-oferta7491.cfd
 +olx.pl-oferta768473.com
-+olx.pl-oferta8349.cfd
+ olyships.com
  omeagaashares.com
- onbdlgitalapp.com
- onceuponadoodlebooks.com
+ omni-aegis.com

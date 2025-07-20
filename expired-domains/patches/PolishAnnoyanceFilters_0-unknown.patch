@@ -1,15 +1,23 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index f84625a70..8b6548653 100644
+index f84625a70..f4e39cb67 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -362,7 +362,6 @@ grupa.unimet.pl,kosciolpalmarianski.org###ht-back-top
- gry-online.pl,muve.pl###return-up
- gryna2.pl,migre.pl###back
- gsbk.pl##.scroll-link
--gunb.gov.pl##.slide-to-top
- gwarek.com.pl###nawigator
- hanamipigments.eu###slide_panel54.return
- handen.pl##.mod_scrolltotop
+@@ -47,7 +47,6 @@ aligator.net.pl##.newslet
+ alko-garden.pl###jumptotop
+ allegro.pl##button[title="Do góry"]
+ allpaka.eu,asimexplus.com,eperfumy.pl,influencja.pl,serygoralskie.pl,siapre.pl,skirace.pl,vivosklep.pl###do_gory
+-alter24.pl###page ~ div[id^="anb"]
+ aluprof.eu##.sidebar__link--top
+ amooco.com###footer-backtop
+ ams.com.pl,bohaterdomu.pl,inforfk.pl###back2top
+@@ -559,7 +558,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+ mojewypieki.com###jumpup
+ mojprzeworsk.pl##.walkerpress-top
+ mojzdrowyfutrzak.elanco.com###Group_1
+-mok.olsztyn.pl###neko-to-top
+ mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
+ molnlycke.pl##.button-sticky-to-top
+ montaz-anten.eu##.topHome
 diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
 index 003cd5bbf..1b0cd3adc 100644
 --- a/PPB/strzalki_ogolne_sieciowe.txt
