@@ -1,5 +1,5 @@
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 8c11319d9..e386692a7 100644
+index 8c11319d9..975b699ae 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,7 +1,7 @@
@@ -12,16 +12,7 @@ index 8c11319d9..e386692a7 100644
  360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
  a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
  a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -200,8 +200,6 @@ hugle.pl###newsletterpopup.newsletterpopup.bingo-modal:not([dimita_lpopup\:1]),
- husse.pl###fancybox-container-1
- husse.pl,royalpark.pl##body.fancybox-active:style(overflow-y: auto !important)
- ibuk.pl###modal-pop, .modal-backdrop
--ideaart.com.pl##.remodal-is-locked, body:style(overflow-y: auto !important)
--ideaart.com.pl##.remodal-wrapper, .remodal-overlay
- ideau.pl##.pum[data-popmake*="nowy-produkt"], .overlay
- idream.pl###modal-getresponse, .modal-backdrop
- ifirma.pl###reklama-overlay
-@@ -435,7 +433,6 @@ sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
+@@ -435,7 +435,6 @@ sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
  sklep.delia.pl##div[id^="rg_smartpopup_"]
  sklep.krosno.com.pl##.modalbox
  sklep.krosno.com.pl##.modalbox-is-visible body:style(overflow-y: auto !important)

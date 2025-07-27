@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 31b9e99d3..c120a4335 100644
+index 26bf858bc..146ca5205 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -6,7 +6,7 @@
@@ -20,12 +20,9 @@ index 31b9e99d3..c120a4335 100644
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -38,9 +38,9 @@ agrobex.pl##div:nth-of-type(6)
- agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
- agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+@@ -40,7 +40,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
  agrohandel.com.pl###jcemediabox-popup-page
--agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
-+betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
  agromix.agro.pl##.nivo-lightbox-overlay
 -agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
 +agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
@@ -93,14 +90,6 @@ index 31b9e99d3..c120a4335 100644
  polish.wifilterouter.com##.leave-message-dialog
  polityka.pl##.cg_subscribe99_banner_apla
  polityka.pl##div[class^="cg_promo"][class$="_popup"]
-@@ -693,7 +691,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- residenza.cz##.modal--newsletter
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
 index 7ecffaca3..28e704676 100644
 --- a/PPB/popupy_sieciowe.txt
