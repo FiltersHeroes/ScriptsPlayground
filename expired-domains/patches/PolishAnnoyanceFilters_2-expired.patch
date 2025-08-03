@@ -1,12 +1,13 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index a819e66b3..8f02ea8ba 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -766,7 +766,6 @@ stalremdrzwi.pl##.popmake.pum[data-popmake*="porta" i]
- starter.net.pl###wow-modal-overlay-1
- stawiszynski.org,weddingdream.com##.jet-popup
- stili.pl###iai_webpush_toplayer
--stoicway.net##.pop-up-box
- stolmet.pl###popup-fx
- stopfermom.eu##.special-popup
- stradivarius.com##.newsletter-modal-main-desktop
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 022c5cb53..839f5d8a0 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -87,7 +87,7 @@ bilgorajska.pl,bobbyburger.pl,godealla.pl,majsterkowo.pl,unisono.eu,venezia.pl##
+ bitrix24.pl,upominki24.pl,webiso.pl##div[class*="-widget-button-wrapper"]
+ biznes.gov.pl,decathlon.pl,dollarro.com,mediaexpert.pl,uniqa.pl,vox.pl,wodociagi.krakow.pl###InteliwiseSaaSModule_win_wrapper
+ bizuteria-eshop.pl###IMS_box1
+-blinkee.city,expose.pl###ue_widget > #ue_launcher
++expose.pl###ue_widget > #ue_launcher
+ blinkmedia.pl##.phone_widget
+ bludshop.com##.trusted_wrapper
+ bmw-slusarczyk.pl##.button-joomly-callback-form

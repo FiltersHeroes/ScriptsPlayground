@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus-cert.txt b/sections/hostsplus-cert.txt
-index e35bc1f4..7e55da5a 100644
+index e35bc1f4..ea918942 100644
 --- a/sections/hostsplus-cert.txt
 +++ b/sections/hostsplus-cert.txt
 @@ -4,17 +4,8 @@
@@ -57,7 +57,15 @@ index e35bc1f4..7e55da5a 100644
  ||alebilet.pl-oferta827590.cfd^
  ||alebilet.pl-oferta834650.cfd^
  ||alebilet.pl-oferta887943.cfd^
-@@ -173,24 +158,9 @@
+@@ -157,7 +142,6 @@
+ ||alebilet.pl-order1093203.cfd^
+ ||alebilet.pl-redirect927.cfd^
+ ||alebilet.pl-redirect8273.icu^
+-||alebilet.pl-redirect-app-13563.cfd^
+ ||alebilet.pl-wyroznione445909.icu^
+ ||olx.pl-4eg5.icu^
+ ||olx.pl-5fe6r.cfd^
+@@ -173,24 +157,9 @@
  ||olx.pl-829.cfd^
  ||olx.pl-952.cfd^
  ||olx.pl-969.icu^
@@ -82,7 +90,7 @@ index e35bc1f4..7e55da5a 100644
  ||olx.pl-09844.icu^
  ||olx.pl-13454.icu^
  ||olx.pl-34284.icu^
-@@ -208,17 +178,14 @@
+@@ -208,17 +177,14 @@
  ||olx.pl-79352fh2837ve87gh24gds.cyou^
  ||olx.pl-79352fh2837ve87gh24gds.icu^
  ||olx.pl-79362.icu^
@@ -100,7 +108,7 @@ index e35bc1f4..7e55da5a 100644
  ||olx.pl-642642.icu^
  ||olx.pl-643634.icu^
  ||olx.pl-643734.icu^
-@@ -234,13 +201,10 @@
+@@ -234,13 +200,10 @@
  ||olx.pl-7168125.icu^
  ||olx.pl-8915216.icu^
  ||olx.pl-9862671.icu^
@@ -114,7 +122,7 @@ index e35bc1f4..7e55da5a 100644
  ||olx.pl-71823452933.cfd^
  ||olx.pl-app-82368.cfd^
  ||olx.pl-aukcja-5774345.icu^
-@@ -252,9 +216,7 @@
+@@ -252,9 +215,7 @@
  ||olx.pl-oferta1862.icu^
  ||olx.pl-oferta3995.cfd^
  ||olx.pl-oferta5243.cfd^
@@ -124,7 +132,7 @@ index e35bc1f4..7e55da5a 100644
  ||olx.pl-oferta8491.cfd^
  ||olx.pl-oferta50455.cfd^
  ||olx.pl-oferta50551.cfd^
-@@ -279,10 +241,8 @@
+@@ -279,10 +240,8 @@
  ||olx.pl-oferta742223.icu^
  ||olx.pl-oferta742235.cfd^
  ||olx.pl-oferta742263.cfd^
@@ -135,8 +143,16 @@ index e35bc1f4..7e55da5a 100644
  ||olx.pl-oferta827590.cfd^
  ||olx.pl-oferta834650.cfd^
  ||olx.pl-oferta887943.cfd^
+@@ -354,7 +313,6 @@
+ ||olx.pl-order1093203.cfd^
+ ||olx.pl-redirect927.cfd^
+ ||olx.pl-redirect8273.icu^
+-||olx.pl-redirect-app-13563.cfd^
+ ||olx.pl-vbnx.icu^
+ ||olx.pl-wyroznione445909.icu^
+ ||olx.pl-yju98nb.cfd^
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 2fa590a2..5d50b73f 100644
+index 6c22e65a..c6678a0c 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -4,7 +4,6 @@
@@ -152,10 +168,10 @@ index 2fa590a2..5d50b73f 100644
  ||ce.wielkaniespodzianka.pl^
  ||ce.winfreetoday.com^
 -||chomikuj-new-t1.opx.pl^
- ||chomikuj.best^
  ||cloud.file.co.pl^
  ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
-@@ -122,7 +120,6 @@
+ ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
+@@ -121,7 +119,6 @@
  ||loan.arrow-finance.pl^
  ||lp845.filmo.agency^
  ||lp.investingops.com^
@@ -163,7 +179,7 @@ index 2fa590a2..5d50b73f 100644
  ||lpagfafo.strongfitobody.com^
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
-@@ -142,7 +139,6 @@
+@@ -141,7 +138,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -171,7 +187,7 @@ index 2fa590a2..5d50b73f 100644
  ||ping.ublock.org^
  ||pl1-germivir.great-goods.org^
  ||pl1.alcozarsale.com^
-@@ -152,7 +148,6 @@
+@@ -151,7 +147,6 @@
  ||pl1.landofm.com^
  ||pl1.landovn.com^
  ||pl1.landtrov.com^
@@ -179,7 +195,7 @@ index 2fa590a2..5d50b73f 100644
  ||pl2.alcozarsale.com^
  ||pl2.colladioxprosale.com^
  ||pl2.intensv.com^
-@@ -161,7 +156,6 @@
+@@ -160,7 +155,6 @@
  ||pl2.landovn.com^
  ||pl2.landtrov.com^
  ||pl2.landunv.com^
@@ -187,7 +203,7 @@ index 2fa590a2..5d50b73f 100644
  ||pl3.alcozarsale.com^
  ||pl3.colladioxprosale.com^
  ||pl3.intensv.com^
-@@ -169,60 +163,48 @@
+@@ -168,60 +162,48 @@
  ||pl3.landofm.com^
  ||pl3.landovn.com^
  ||pl3.landtrov.com^
@@ -248,14 +264,14 @@ index 2fa590a2..5d50b73f 100644
  ||pl15.landofm.com^
  ||pl15.landovn.com^
  ||pl16.landofm.com^
-@@ -295,15 +277,12 @@
+@@ -294,15 +276,11 @@
  ||pl.alkotoxv.com^
  ||pl.fxgm.com^
  ||pl.gamemine.com^
 -||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
- ||pl.mobile-redirection.com^
+-||pl.mobile-redirection.com^
  ||pl.thepawland.com^
  ||pl.wojewodapodlaski.pl^
 -||play.leadzu.com^
@@ -264,7 +280,7 @@ index 2fa590a2..5d50b73f 100644
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -342,7 +321,6 @@
+@@ -341,7 +319,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^

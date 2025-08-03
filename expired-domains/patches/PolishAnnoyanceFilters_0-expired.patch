@@ -1,24 +1,13 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 785b33fd5..1b608fba4 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -216,7 +216,6 @@ bmc-switzerland.pl##div.footer-nav-container:nth-of-type(4)
- bmwsklep.pl##.subscribero
- bochniaisol.pl,digi-tv.pl,podrozezantena.pl,satkurier.pl,solarkurier.pl###newsletterMsg
- bodypak.pl###pts-newsletter
--boguslaw.io##.formkit-sticky-bar
- bold.net.pl##.fm-newsletter
- bolix.pl##.homepage-newsletter-box
- bombkisklep.com##.newsletter-inner
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 083b33cab..2611e66c3 100644
+index 4101c2ecf..27fa66f7d 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -125,7 +125,6 @@ blogzapetytem.pl##.tc-btt-wrapper
- bodybuilder.scania.com,maxelektro.pl###button-to-top
- bodzio.pl,browserwall.com,cezar.eu,henderson.pl##.scroll-up-btn
- bodzio.pl,wswiat.pl##.top-scroll
--boguslaw.io##div[class*="ScrollUpButton"]
- bomameble.eu##img[src="img/top.png"]
- bonavita.pl###ot-jumplist-control
- bonprix.pl##.btn-primary.scroll-to-top-btn
+@@ -717,7 +717,7 @@ rexona.com##.c-back-to-top-cta
+ ricoh.pl##.page-link-top
+ rodzice.pl##.rehub_scroll
+ rol-mech.pl,wnetrzaplusogrody.pl###hs-back-top
+-rolgut.pl,salonydenon.pl,sklepogrodowy.pl,strojesportowe.eu,vvilk.com##.tvbottom-to-top
++rolgut.pl,salonydenon.pl,strojesportowe.eu,vvilk.com##.tvbottom-to-top
+ rossmann.pl##a.fixed[style]:not([href])
+ rowerzysta.pl##.block_newsletter
+ rozetka.pl##rz-top-scroll
