@@ -1,13 +1,12 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 4101c2ecf..27fa66f7d 100644
+index 66e1c996d..6ef206218 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -717,7 +717,7 @@ rexona.com##.c-back-to-top-cta
- ricoh.pl##.page-link-top
- rodzice.pl##.rehub_scroll
- rol-mech.pl,wnetrzaplusogrody.pl###hs-back-top
--rolgut.pl,salonydenon.pl,sklepogrodowy.pl,strojesportowe.eu,vvilk.com##.tvbottom-to-top
-+rolgut.pl,salonydenon.pl,strojesportowe.eu,vvilk.com##.tvbottom-to-top
- rossmann.pl##a.fixed[style]:not([href])
- rowerzysta.pl##.block_newsletter
- rozetka.pl##rz-top-scroll
+@@ -668,7 +668,6 @@ polsatnews.pl###fab
+ polskawliczbach.pl##.scroll-top-wrapper
+ polski-optyk.pl##a > [src="img/top.png"]
+ polskikoszyk.pl###sftScrollToTopButton
+-pomagam.net##.czr-btt
+ poprostuenergia.pl##.scroll_up
+ poradnikbudowlany.eu##.footer-up > .col-md-1.col-xs-12
+ porta-sklep.pl,skleprafa.com.pl##.go_top_btn
