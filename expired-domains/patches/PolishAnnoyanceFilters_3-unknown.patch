@@ -1,97 +1,62 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index c4aa4c68d..679f2dd24 100644
+index 0810d9f81..a8805947e 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -815,7 +815,7 @@ pswbp.pl###accessibility-links
- psy-pies.com,swiatkwiatow.pl###wyskakujaca
- ptakoutlet.pl###kp, .pasek-right
- pultusk24.pl##form[action^="https://poll.pollcode.com/"]
--pup.gliwice.pl,puplegnica.pl###accessKeys
-+puplegnica.pl###accessKeys
- pyszne.pl##div[data-qa="app-banner"]
- pytamy.pl##.fixFooter
- pytanienasniadanie.tvp.pl##.stream-button
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index ca0ca4418..5b5e05d79 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -692,7 +692,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- residenza.cz##.modal--newsletter
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index af08a120d..5345f7e2c 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -105,7 +105,6 @@ brief.pl##.fab-desktop
- brw.pl##.brw_opineo.icon-menu
- bssztum.pl###widget_social2
- budus-developer.pl##.footer-floating-button
--bulwaryksiazece.pl##.ask-form
- buy-it.pl###crisp-chatbox
- cadenas.de##.notification_bar_content > .item.contact
- cadsoft.pl##.arrow-seeMe
-@@ -126,12 +125,12 @@ cdp.pl###customTrustbadge
- cebit.pl,guzik.konin.pl##.fab
- ceneo.pl###recent-activity-toast
- centrumpapieru.pl##.sb-chat-btn
--cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
-+cersanit.com.pl,darnatury.pl,eforia.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
- choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
- cinema3d.pl###popupBoxInvitation
- cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
- citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
--citymotors.pl,eforia.pl,euromobil.com.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
-+citymotors.pl,eforia.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
- clineo.pl###contact_widget
- cmolmed.pl###footer > .module:last-child
- cmp.med.pl###altar-eye-catcher-div-container
-@@ -272,7 +271,6 @@ genway.pl##.leaveContactBtn
- geselle.pl###lz_overlay_wm
- getruck.eu,my-office.pl###zsiq_float.zsiq_float
- giacomo.pl###livechatincBack
--gkstychy.info###error_send
- glosbe.com##app-feedback-button
- go-market.pl###contact-info, #phone-info
- google.com,google.pl##.gws-flights__feedback
-@@ -412,7 +410,6 @@ modelerolnicze.pl###fb-customer-chat
- modivo.pl##.live-chat-button
- mojataxi24.pl##h4#phone:first-of-type > .wiszacy
- mojbank.pl##.uk-grid.uk-flex-middle.uk-grid-row-small.uk-grid-column-collapse.uk-child-width-expand
--moje.pzu.pl##.pak-footer__call-container
- mojehobby.pl##.report-bug
- mojeppk.pl###ppk-cx-webchat-chat-button
- monedo.pl###satellite
-@@ -494,7 +491,7 @@ polkurier.pl##.pk-chat-container
- polnord.pl###contactForm
- poloniawroclaw.pl##body > iframe:first-of-type
- polsatbox.pl##.chat_display
--pomagamy-wszyscy.pl,um-swiecie.pl###formPopupHandler
-+um-swiecie.pl###formPopupHandler
- pomoc.bluemedia.pl##.icon_czat.ribbon
- poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
- porowneo.pl##.agent-avaiable
-@@ -514,7 +511,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
- promopixel.pl###fitcher-container
- przestronnie.pl##a[id*="back"][href^="tel:"]
- psprices.com###chatra
--pup.gliwice.pl###sugestiaForm
- pytamy.pl##.tabZB
- pzu.pl###baner-doradcy, #metka-przycisk
- r.pl##.divCallback
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-index 5ae6aa8b1..272887a78 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-@@ -3,7 +3,6 @@
- ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
- ||app.sugester.pl/tpbocian/widget.js
- ||cdn.inbox.shoplo.com/chat.html$third-party
--||chat.4finance.com^$third-party
- ||chatbro.com^$third-party,domain=pl
- ||chatwoot.*/packs/js/sdk.js$script
- ||code.tidio.co^$third-party
+@@ -47,7 +47,7 @@ agroperfekt.pl##.js-marquee-wrapper
+ ahe.lodz.pl###wysuwane7, #wysuwane2
+ airly.eu##.air-quality, .header__links
+ akademiaap.com###sidebar
+-akson.pl,di-polska.pl###medical-comp-info-bar
++akson.pl###medical-comp-info-bar
+ aktualnyodpis.pl###carq-iframe
+ alablaboratoria.pl###small-pop-up
+ alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
+@@ -210,7 +210,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+ comarch.pl##.widget-detach-right-bar-container
+ context.reverso.net###register-popup-bottom
+ coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
+-covircontrol.pl,likefb.pl###message-purchased
++likefb.pl###message-purchased
+ cowsierscipiszczy.pl##.CampaignType--floating
+ creativecommons.org###deed-donate-slide
+ creativehobby.pl###ch-strip
+@@ -361,7 +361,6 @@ forum-bron.pl,trumpeters.pl###tt_mobile_banner
+ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+ forum.dobreprogramy.pl##.header-cloak
+ forum.duolingo.com##.GB_SB
+-forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
+ forum.muratordom.pl###left_circus > .dostepne_mobile
+ forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
+ forum.swiateczne.info##.av-preloader-box
+@@ -561,7 +560,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+ linuxporady.pl,pskrk.com##.crestaPostsBox
+ literackifestiwal.zakopane.eu###g-page-preloader
+ lodzkie.pl##.jj_sl_custom2
+-login.ingbank.pl###smart-app-banner-region
+ losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
+ lvbet.pl##splash-loader
+ m.leroymerlin.pl##.smart-app-banner
+@@ -784,7 +782,6 @@ pocztazdrowia.pl###baner2
+ pocztowy.pl##.bg-navyBlue
+ podajdalej.info.pl##.sticky
+ podatekvat.pl###SliderBox
+-podlaska.policja.gov.pl##div:nth-of-type(5)
+ poloniawroclaw.pl##.sfl-widget--ribbon__fixed, .ys-sidebar-btn-2
+ polskicaravaning.pl###\35 3419
+ polskieradio24.pl##a[class*="Article_backToMainBtn_"], div[class*="Article_backtoMain_"]
+@@ -794,7 +791,6 @@ poradnikhandlowca.com.pl##.region-page-bottom > #slidead-popup
+ poradyodo.pl##.baner-stopka
+ poranny.pl##a[href*="&utm_campaign=prenumerata-swiateczna"]
+ porta.com.pl###popup-questionnaire
+-portal.librus.pl###synergiaLogin + div[class]:has(picture > source[srcset] ~ img[src])
+ portalhodowcy.pl##.kac-sm-panel > ul:first-of-type
+ portalmorski.pl###clause-info-mobile
+ portalsamorzadowy.pl,portalspozywczy.pl###bottom_slider
+@@ -883,7 +879,6 @@ sklep-rolnicze.eu###oiTab
+ sklep-wedkarski.info###ClPanelImg
+ sklep.aladyn.pl,sklep.mariall.pl###trzecia
+ sklep.farmona.pl##.tabs > section.product_link_nav
+-sklep.fusic.pl##.fa-google
+ sklep.odziez-robocza.com###druga_ikona
+ sklep.pakrol.pl##.suggest-slider
+ sklep.veterynaria.pl###sideTab
