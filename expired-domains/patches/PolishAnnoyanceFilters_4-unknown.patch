@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 3f993776c..ae475ca7e 100644
+index d2b2d5e23..5176296d2 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,7 +5,7 @@
@@ -74,7 +74,7 @@ index 3f993776c..ae475ca7e 100644
  e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
  e-spar.com.pl###modal-welcome
  e-spar.com.pl###modal-welcome[style] ~ .modal-backdrop
-@@ -329,7 +329,6 @@ fabrykawafelkow.pl###someone-purchased
+@@ -330,7 +330,6 @@ fabrykawafelkow.pl###someone-purchased
  fabrykazabawek.eu###helloModal
  faie.pl###searchPopUp
  fajnekonkursy.pl###tnp-modal
@@ -82,7 +82,7 @@ index 3f993776c..ae475ca7e 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
-@@ -477,7 +476,7 @@ linguajob.pl##.popup, #get-similar-offers
+@@ -478,7 +477,7 @@ linguajob.pl##.popup, #get-similar-offers
  linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
  listymikolaja.pl###newsletter_layer
  loanme.pl##.exit-popup-block
@@ -91,14 +91,11 @@ index 3f993776c..ae475ca7e 100644
  longterm.pl###list-builder
  longterm.pl###popup-box
  lookfantastic.pl,myprotein.pl##.emailReengagement
-@@ -636,9 +635,7 @@ podravka.pl##.js-popup
- podrywaj.org##.modal_wrapper
- podworko.nivea.pl###pobierz-apke-popup
+@@ -641,7 +640,6 @@ podworko.nivea.pl###pobierz-apke-popup
  pol-nor.com###boxpopup, #overlay, #popforfirma
--policja.gov.pl###blisko, .modal-backdrop
--policja.gov.pl,policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
+ policja.gov.pl###blisko, .modal-backdrop
+ policja.gov.pl,policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
 -policja.orsip.pl##.jimu-widget.jimu-widget-splash
-+policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
  polish.wifilterouter.com##.leave-message-dialog
  polityka.pl##.cg_subscribe99_banner_apla
  polityka.pl##div[class^="cg_promo"][class$="_popup"]
@@ -115,10 +112,10 @@ index 7ecffaca3..28e704676 100644
  ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
  ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index f7fe5a6c1..2a8ef5923 100644
+index ef0806b9c..b031a2f3d 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -398,7 +398,7 @@ prywatnoscwsieci.pl##.CampaignType--popup.Campaign
+@@ -399,7 +399,7 @@ prywatnoscwsieci.pl##.CampaignType--popup.Campaign
  prywatnoscwsieci.pl##.om-position-popup:style(overflow-y: auto !important)
  przydasie.pl##body > div > .kl-private-reset-css-Xuajs1.needsclick
  pureveg.pl##+js(nostif, #myWorning)
@@ -127,7 +124,7 @@ index f7fe5a6c1..2a8ef5923 100644
  quiosque.pl,trespass.pl##.modals-wrapper
  radziejewska.pl,rolbud.eu,wielkopolskaes.pl###sbox-window, #sbox-overlay
  radziejewska.pl,rolbud.eu,wielkopolskaes.pl##.body-overlayed:style(overflow-y: auto !important)
-@@ -433,7 +433,6 @@ skalnik.pl##.newspopup_ov_hidden:style(overflow-y: auto !important)
+@@ -435,7 +435,6 @@ skalnik.pl##.newspopup_ov_hidden:style(overflow-y: auto !important)
  skalnik.pl##.newspopup_up_bg
  sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
  sklep.delia.pl##div[id^="rg_smartpopup_"]
