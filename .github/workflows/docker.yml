@@ -23,7 +23,7 @@ jobs:
             version: "1"
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
@@ -84,7 +84,7 @@ jobs:
     needs: docker_sflb_ed
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:

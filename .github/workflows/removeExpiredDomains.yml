@@ -12,11 +12,11 @@ jobs:
       matrix:
         repo: ["KAD", "KADhosts", "PolishAnnoyanceFilters", "PolishAntiAnnoyingSpecialSupplement", "PolishSocialCookiesFiltersDev"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           path: ScriptsPlayground
           persist-credentials: false
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ github.repository_owner }}/${{ matrix.repo }}
           path: ${{ matrix.repo }}
