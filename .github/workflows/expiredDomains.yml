@@ -25,7 +25,7 @@ jobs:
     outputs:
       KAD-strategy-matrix: ${{ steps.generate.outputs.KAD-strategy-matrix }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           echo "$NUMBER_OF_KAD_JOBS"
@@ -46,7 +46,7 @@ jobs:
       matrix:
         KAD: ${{ fromJson(needs.KAD_S.outputs.KAD-strategy-matrix) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/download-artifact@v5
         with:
           name: E_KAD_S
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.py KADhosts
@@ -88,7 +88,7 @@ jobs:
     outputs:
       KADh-strategy-matrix: ${{ steps.generate.outputs.KADh-strategy-matrix }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - continue-on-error: true
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -117,7 +117,7 @@ jobs:
       matrix:
         KADH: ${{ fromJson(needs.KADHWWW_S.outputs.KADh-strategy-matrix) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/download-artifact@v5
         with:
           name: E_KADHWWW_S
@@ -139,7 +139,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.py PAF_C
@@ -173,7 +173,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.py Social_C
@@ -190,7 +190,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           ./scripts/CI/CI_LETS_DO_THIS.py Cookies_C
@@ -207,7 +207,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - continue-on-error: true
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -234,7 +234,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - continue-on-error: true
