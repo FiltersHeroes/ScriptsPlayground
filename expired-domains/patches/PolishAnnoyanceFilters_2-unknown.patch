@@ -1,171 +1,106 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 882e7b08c..182ef6210 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -19,7 +19,7 @@
- 300gospodarka.pl,ccnews.pl,faktyozywnosci.pl,warzywapolowe.pl###custom_html-5
- 360studio.org,brykizameryki.pl##.nks_cc_trigger_tabs
- 365dowolnosci.pl###getall_widget-3
--abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,e-clematis.com,eatyx.com,esklep.brandvital.eu,eventory.cc,farmer.pl,fresh-market.pl,hbt.com.pl,hegos.eu,karmazdostawa.pl,lou.pl,mazidla.com,mieszkancy.chorzow.eu,mrdiy.com,mumla.pl,mypewex.com,nestor.com.pl,niespodziewajka.com,obuwiestyl.pl,pakomat.pl,pl.mova.tech,portalspozywczy.pl,pwn.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,supersklep.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,viking-europe.com,vivelo.pl,wroclaw.pl,www.naszapraca.com,yves-rocher.pl,zabawki.esklep.info,znak.com.pl,znomet.pl,zycierolnika.pl##.newsletter
-+abc-zoosklep.pl,aco.com.pl,agrorami.pl,apia.pl,apte.pl,blizejciebie.pl,blog.kurasinski.com,bozecialo.info.pl,dealz.pl,dlabiura24.pl,dlahandlu.pl,doz.pl,drzwi-cal.pl,e-clematis.com,eatyx.com,esklep.brandvital.eu,eventory.cc,farmer.pl,fresh-market.pl,hbt.com.pl,hegos.eu,karmazdostawa.pl,lou.pl,mazidla.com,mieszkancy.chorzow.eu,mrdiy.com,mumla.pl,mypewex.com,nestor.com.pl,niespodziewajka.com,obuwiestyl.pl,pakomat.pl,pl.mova.tech,portalspozywczy.pl,pwn.pl,rynekaptek.pl,rynekseniora.pl,rynekzdrowia.pl,sadyogrody.pl,skin79-sklep.pl,sklep.agroczesci.pl,sklep.dalimex.pl,studiohifi.pl,supersklep.pl,swis-shop.pl,topsecret.pl,trzymajsiecieplo.pl,tutumi.pl,urbangames.pl,vichy.pl,vidaxl.pl,viking-europe.com,vivelo.pl,wroclaw.pl,www.naszapraca.com,yves-rocher.pl,zabawki.esklep.info,znak.com.pl,zycierolnika.pl##.newsletter
- abmax.eu,latarki.pl,multimaszyny.eu,shopsisters.eu###newsletter_block_left
- ac.com.pl##.form-group
- action.com##section[data-testid="newsletter-section"]
-@@ -51,7 +51,7 @@ agromat.pl##.column-double.content > .flex
- agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurtowo.eu##.ModulNewsletter
- agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
- agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
--agrosklad.com.pl,agrotuszyn.pl##.zostaw_numer
-+agrosklad.com.pl##.zostaw_numer
- ahe.lodz.pl###company-newsletter-column
- airfryerprzepisy.pl##.wp-block-kadence-rowlayout.kb-row-layout-wrap:has(> div > div > div > h3 + div.ml-embedded)
- airport.com.pl,deweloper-interes.pl,niebieskimigdal.pl###text-2
-@@ -371,7 +371,6 @@ dexpol.com##.stopka2_center > div.box_info:first-of-type
- di.com.pl##.footcol:nth-of-type(5) > form, .footcol:nth-of-type(5) > p, .footcol:nth-of-type(5) > .footnag:first-of-type
- dialog.mazovia.pl,galeriabronowice.pl##.news
- diamante-wear.com##.footer__blocks__item--newsletter
--digikids.pl##.vc_col-sm-3.vc_column_container.wpb_column:nth-of-type(3)
- dimedic.eu,listymikolaja.pl##.r-newsletter
- dji-ars.pl###newsletter-bottom-banner
- dlabystrzakow.pl##.footer-form-newsletter
-@@ -495,8 +494,6 @@ esaliens.pl##.news-btn.aside-btn
- escoli.pl##.no-left-padding.col-sm-6 > .footer-block-title, [id^="newsletter-validate-detail"]
- eskk.pl###main-container-newsletter
- esklep.agroas.pl##.newsletter-homepage-ui
--esklep.niewiescin.pl##footer > #widgets > .container > div.widget:last-child
--esklep.poczta-polska.pl###footer > div:nth-of-type(3)
- esprit.com.pl##.newsletter-gora
- espritshop.pl###newsletter-registration-form
- esselte.com##.abc-footer__newsletter
-@@ -712,7 +709,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
- izba-lekarska.pl##.add-to-newsletter-button
- izigsm.pl###footer > .footMenu > .color.columnBox
- jackjones.com##.js-customer-club__signup
--jadwizanki.com.pl,opi.org.pl,rosebikes.pl##.newsletterform
-+opi.org.pl,rosebikes.pl##.newsletterform
- jagodnik.pl##.tdi_70.vc_widget_sidebar.td_block_wrap.wpb_wrapper > .widget_text.widget.td_block_template_1
- jakiwniosek.pl##.footer > div > div > div:first-child > :nth-last-child(n+2):nth-last-child(-n+4)
- jakrobicmarketing.pl###\31 -2
-@@ -726,7 +723,6 @@ joga.org.pl###col2 > .module:nth-of-type(2)
- joom.com##div[class*="promoCorner_"]
- jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
- jumo.pl##.news-updates
--jupi24.pl##.rc-box-newsletter
- justbefit.pl###new_footer
- kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
- kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -781,7 +777,6 @@ kozackadrogeria.pl##.block-newsletter-footer
- kozigrod.pl###newsletterHld
- krainazabawek.com.pl##.sc_section-newsletter > div > div:first-child + div:last-child
- krainazabawy.pl###footer .col-md-3
--krasiczyn.com.pl##.side_newsletter
- krasnal.sklep.pl,nerdstore.pl##.elementor-widget-pos_title:has(+ .elementor-widget-pos-newsletter)
- kratki.com##.cs-newsletter__wrapper
- kreatorium.com###nsl
-@@ -812,7 +807,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
- labotiga.pl##.block_newletter
- ladybusiness.pl##.newsletter-sectionw
- laksystem.pl##.wf2-scroll-box.grwf2-wrapper
--lamisi.pl##.widget-newsletter-subscribe
- lamoda.pl##.min-h-newsletter
- lampy.pl###newsletterbox_1
- lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -821,7 +815,6 @@ languagetool.org###newsletter_reg
- lantre.pl##.newsletter.block
- laptopypoznan.pl##.ps-spotlight5
- lastowiec.pl##.contact-box:has(img[src="data/images/icon_newsletter.png"])
--lasuch24.pl###box_biuletyn
- latarki.pl##.bakedparallax-wrapper
- latarnia.teatrnn.pl###main_oferta > div:nth-of-type(2), #main_oferta > div:nth-of-type(2) + form
- lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
-@@ -1153,7 +1146,6 @@ pinkorblue.pl##div.econda-banner-click.stage-small:nth-of-type(2)
- piomax.pasaz24.pl##.newsletter-place
- pitbull.pl##.footer-blocks > .footer-block
- pixel-box.pl##.footer-newsletter-new
--pksszczecin.info##.k7_newsletter
- pl-eu.puma.com##.footer-logo-email
- pl.aleteia.org###logo-newsletter-follow, .module-newsletter-form
- pl.ejo-online.eu###footer > div > div.threecol:nth-of-type(2)
-@@ -1168,8 +1160,6 @@ pl.ryobitools.eu##.Footerstyles__Header-kxuaor-1
- pl.silvexcraft.eu###newslet_section
- pl.sportsdirect.com##.signup-wrapper
- pl.techinfus.com##.subscription
--pl.tommy.com##.newsletter-footer
--pl.weekendmaxmara.com##.newsletter.box
- placesandplants.com###subscribe-blog-blog_subscription-2, footer div.col:first-of-type > div.widget:nth-of-type(3) > .widget-title
- planet.pl###zapis-do-newsletter
- platforma.org##.footer > .newsletter-container
-@@ -1217,7 +1207,6 @@ powerman.com.pl##.pm_newsletter
- powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
- powiatlobeski.pl###nl
- poznan.factory.pl##.pane-2.pane-custom.panel-pane
--praca.antyweb.pl##.bg-blue.hero
- praisethewear.com##.elementor-element-5311d84
- prawo.pl##.wkNewsletterBlock
- prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
-@@ -1343,7 +1332,6 @@ silesiasem.pl##.entry-content > form
- silesion.pl##.pageFooter__newsletter
- sinsay.com##.home-ss20-newsletter
- sipma.pl###newslet
--site-call.pl##.wpc-subcribe .form-subscribe
- skalnik.pl##.newsletter_content.footer
- skapiec.pl##section.newsletter
- ski4you.pl##footer#footer.footer .widget--signup
-@@ -1376,7 +1364,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
- sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
- sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
- sklep.regalia.eu##footer > .row > .footer-block:only-child
--sklep.sizeer.com##.b-footer_newsletter
- sklep.skrypt.com.pl##.footer-conteiner > ul:nth-of-type(3)
- sklep.spidersweb.pl###nslt
- sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
-@@ -1714,7 +1701,6 @@ zdrowie.pap.pl##section ~ a[href="/newsletter/form"]
- zdrowie.wprost.pl##.newsletter-plugin-info
- zegarek.net##footer > .backGroundX.container-fluid > .container
- zegarkiipasja.pl###contactBoxForm
--zeropln.antyweb.pl##div > .relative.bg-grey-light
- zgarden.pl##.col-xs-6.col-sm-5.col-lg2-offset-5.col-lg2-3
- zhp.pl##.static-area.mh-el:nth-of-type(5)
- zielonepogotowie.pl###footgroup_newsletter
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 49d7b87e8..f96abd863 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -820,7 +820,7 @@ pswbp.pl###accessibility-links
+ psy-pies.com,swiatkwiatow.pl###wyskakujaca
+ ptakoutlet.pl###kp, .pasek-right
+ pultusk24.pl##form[action^="https://poll.pollcode.com/"]
+-pup.gliwice.pl,puplegnica.pl###accessKeys
++puplegnica.pl###accessKeys
+ pyszne.pl##div[data-qa="app-banner"]
+ pytamy.pl##.fixFooter
+ pytanienasniadanie.tvp.pl##.stream-button
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 6a4a183be..d2b2d5e23 100644
+index 9e2e310a4..ee97ff843 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -627,7 +627,6 @@ pl.aleteia.org##.newsletter-popups
- pl.geofumadas.com,webmastah.pl##.ulp-window, .ulp-overlay
- pl.hinative.com##.mod_banner_register_float_pc
- pl.kronospan-express.com###modalWindowCMSubscribes, .iziModal-overlay
--pl.weekendmaxmara.com##.newsletter.modal, .jquery-modal
- plakatynasciany.pl###ap-popup, #ap-popup-tlo
- planeta-budowlana.pl##.dialog[id^="window"], #toogas_pop_up
- plk.pl###okienko_yt, .ui-widget-overlay
-diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 234472a69..ef0806b9c 100644
---- a/PPB/uBO_AG/popupy_suplement.txt
-+++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -98,7 +98,7 @@ blog-daneosobowe.pl##+js(nostif, i(), 5000)
- bonami.pl##.blurred:style(filter: none !important)
- bonami.pl##.overlayPan
- bonarka.com.pl##.ReactModalPortal:has(form input[type="email"])
--bonarka.com.pl,hejto.pl,pl.tommy.com##.ReactModal__Body--open:style(overflow-y: auto !important)
-+bonarka.com.pl,hejto.pl##.ReactModal__Body--open:style(overflow-y: auto !important)
- bonprix.pl###newsletter-subscribe, .modal-backdrop
- bookbook.pl,darmarsklep.pl,sklep.polmarkus.com.pl###WebPushAddSubscription, .modal-backdrop
- botland.com.pl###blockcart-modal, .modal-backdrop
-@@ -121,7 +121,7 @@ confronter.pl###cfModal, .modal-backdrop
- confronter.pl,lalorraine.pl,mypersonaltrainer.pl,sw-rita.pl,wishbone.pl##html:style(overflow-y: auto !important)
- cyberdefence24.pl,defence24.com,defence24.pl,energetyka24.com,kidsworld.pl,ncez.pl,politykazdrowotna.com,space24.pl###newsletter-modal
- czytamyetykiety.pl###ebook-popup.ebook-popup
--czytamyetykiety.pl,hejto.pl,megogo.net,newtech.com.pl,pl.tommy.com##body.overflow-hidden, html.overflow-hidden:style(overflow-y: auto !important)
-+czytamyetykiety.pl,hejto.pl,megogo.net,newtech.com.pl##body.overflow-hidden, html.overflow-hidden:style(overflow-y: auto !important)
- dajar.pl##+js(set-cookie, AdvertPopupDisplayed, true)
- deccoria.pl##.dc-layout--modal-active:style(overflow-y: auto !important; touch-action: unset !important)
- deccoria.pl##.dc-layout--modal-active:style(overflow-y: auto !important; touch-action: unset !important; padding-right: 0 !important)
-@@ -368,7 +368,6 @@ pl.hinative.com##+js(set-cookie, fullscreen_app_recommend, true)
- pl.hinative.com##+js(set-cookie, fullscreen_register_recommend, true)
- pl.johnnybet.com##.modals.dimmer.ui:has(.common-offer)
- pl.johnnybet.com##body.dimmable, body.dimmed:style(overflow-y: auto !important)
--pl.tommy.com##.ReactModalPortal:has(.newsletter--modal)
- play.pl##.mobile-map-list .contact-us-modal, .mobile-map-list > .page-wrapper::before
- play.pl##.modal-open[class] > .mobile-map-list:style(overflow-y: auto !important)
- player.pl###nscorepop-wrapper, #nscorepop-content
+@@ -693,7 +693,6 @@ rckik.poznan.pl###popup, #popupBg
+ realme.com##.subscribe
+ residenza.cz##.modal--newsletter
+ retailnet.pl,rp.pl##tqwidget
+-rivieraparkmarvipol.pl##.fastcall_popup
+ rms.pl##.sj-popup-container
+ robojet.pl###modal_home_page, .modal-backdrop
+ rosenthal.pl###cac_popup_tlo, #cac_popup_obr
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 64c72dd27..bf7a73ee6 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -43,7 +43,7 @@ amracing.pl##.sale-contact-box
+ amso.pl##.main-widget
+ andrychow.eu,odzyskamyodszkodowanie.pl,pasmasz.pl,wit-mot.pl###wp-live-chat
+ angelsadvertising.pl,baccata.com.pl,www.sendbean.pl###sendbean
+-aniagemma.com,bboptic.com,cocochoco.com.pl,sbys.pl##iframe[aria-label="Wix Chat"]
++aniagemma.com,bboptic.com,sbys.pl##iframe[aria-label="Wix Chat"]
+ anton-paar.com###footer-contact-us
+ anton-paar.com,bisnode.pl###iframe-designstudio-button
+ antykwariat-amicus.pl###vdz_cb_widget
+@@ -105,7 +105,6 @@ brief.pl##.fab-desktop
+ brw.pl##.brw_opineo.icon-menu
+ bssztum.pl###widget_social2
+ budus-developer.pl##.footer-floating-button
+-bulwaryksiazece.pl##.ask-form
+ buy-it.pl###crisp-chatbox
+ cadenas.de##.notification_bar_content > .item.contact
+ cadsoft.pl##.arrow-seeMe
+@@ -126,12 +125,12 @@ cdp.pl###customTrustbadge
+ cebit.pl,guzik.konin.pl##.fab
+ ceneo.pl###recent-activity-toast
+ centrumpapieru.pl##.sb-chat-btn
+-cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
++cersanit.com.pl,darnatury.pl,eforia.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
+ choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
+ cinema3d.pl###popupBoxInvitation
+ cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
+ citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
+-citymotors.pl,eforia.pl,euromobil.com.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
++citymotors.pl,eforia.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
+ clineo.pl###contact_widget
+ cmolmed.pl###footer > .module:last-child
+ cmp.med.pl###altar-eye-catcher-div-container
+@@ -336,7 +335,6 @@ karmi.pl##.scrolled.homecontact
+ kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
+ ketowpraktyce.pl###chatbox
+ kind.com##.AP_mod--button-symbol
+-king-poligrafia.pl###face-slider
+ klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
+ klinikawitaminowa.pl##.ic-phone-button
+ klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
+@@ -412,7 +410,6 @@ modelerolnicze.pl###fb-customer-chat
+ modivo.pl##.live-chat-button
+ mojataxi24.pl##h4#phone:first-of-type > .wiszacy
+ mojbank.pl##.uk-grid.uk-flex-middle.uk-grid-row-small.uk-grid-column-collapse.uk-child-width-expand
+-moje.pzu.pl##.pak-footer__call-container
+ mojehobby.pl##.report-bug
+ mojeppk.pl###ppk-cx-webchat-chat-button
+ monedo.pl###satellite
+@@ -494,7 +491,7 @@ polkurier.pl##.pk-chat-container
+ polnord.pl###contactForm
+ poloniawroclaw.pl##body > iframe:first-of-type
+ polsatbox.pl##.chat_display
+-pomagamy-wszyscy.pl,um-swiecie.pl###formPopupHandler
++um-swiecie.pl###formPopupHandler
+ pomoc.bluemedia.pl##.icon_czat.ribbon
+ poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
+ porowneo.pl##.agent-avaiable
+@@ -514,7 +511,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+ promopixel.pl###fitcher-container
+ przestronnie.pl##a[id*="back"][href^="tel:"]
+ psprices.com###chatra
+-pup.gliwice.pl###sugestiaForm
+ pytamy.pl##.tabZB
+ pzu.pl###baner-doradcy, #metka-przycisk
+ r.pl##.divCallback
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
+index 5ae6aa8b1..272887a78 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
+@@ -3,7 +3,6 @@
+ ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
+ ||app.sugester.pl/tpbocian/widget.js
+ ||cdn.inbox.shoplo.com/chat.html$third-party
+-||chat.4finance.com^$third-party
+ ||chatbro.com^$third-party,domain=pl
+ ||chatwoot.*/packs/js/sdk.js$script
+ ||code.tidio.co^$third-party

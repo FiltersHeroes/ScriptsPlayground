@@ -1,12 +1,24 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index b4a049015..21f19e366 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -739,7 +739,6 @@ katowice.eu##.newsletter_title, .newsletterTitle
- kawerna.pl##.item-last.span4
- kayak.pl##[class^="Common-Frontdoor-EmailSubscriptionPanel"]
- kdk.pl##div.footer-bottom:first-of-type
--kiddyfave.com##.col-xs-12.col-sm-12.col-md-12 > h3, .subReqForm
- kidsb2b.pl##div.footer-box:nth-of-type(3)
- kierunekspozywczy.pl###sb-newsletter
- kim24.pl###fboxNewsletter
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 37fe383e1..9e2e310a4 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -244,7 +244,6 @@ dadada.pl###newsletterPopup
+ dailyweb.pl,jaworowi.cz,moneygrabbing.co.uk,probasket.pl,swinoujskie.info###snppopup-welcome
+ dalchemyskincare.com###mymodlaNewsletter, .mask
+ darymex.pl,skarbnicapomyslow.pl,wiecznepiora.eu##[data-type-popup="newsletter"]
+-deccomeble.pl###jquery-lightbox, #jquery-overlay
+ decoliving.pl###pop-up-newsletter
+ decoliving.pl,intymna.pl###pop-up-powiadomienia
+ decoliving.pl,intymna.pl,ohso.pl##.pop-up-newsletter-wrapper
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index a794271f8..64c72dd27 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -161,7 +161,6 @@ ddd.com.pl###meeting
+ debowewzgorze.eu,diamentustron.pl,sedna.pl,szarotka.eu,warsawdowntown.pl##iframe[name="ca-review-widget"]
+ decathlon.pl,diag.pl,eobuwie.com.pl,euro.com.pl,oleole.pl###chatbotize
+ decathlon.pl,eltrox.pl,globtroter.pl,gomez.pl,renee.pl###yourcx_blk
+-deccomeble.pl##[href="http://www.deccomeble.pl/kontakt"]
+ decoliving.pl###swifttagdatacontaineraha9azkq59 > div > .hide_on_mobile
+ decoraliki.pl###sideTab
+ dekordia.pl##.info.left.fixed-module
