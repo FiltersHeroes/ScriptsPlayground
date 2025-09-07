@@ -1,15 +1,16 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 4fef1b5a5..5d4d2f55d 100644
+index 204794f96..b0776e2dc 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -564,7 +564,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
+@@ -230,7 +230,7 @@ domowa.pizza##.smoothup
+ domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
+ domusfari.pl,swiatekspresow.pl###back_up
+ domzagadek.pl###scroll_strz
+-dopek.info,zenbox.pl##.scroll-page
++zenbox.pl##.scroll-page
+ doppelherz.pl##.link--scroll-to-top
+ dopracowani.pl###pulse_to_top
+ doradcasmaku.pl,porta.com.pl##.floating_scroll_top
 diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
 index 003cd5bbf..1b0cd3adc 100644
 --- a/PPB/strzalki_ogolne_sieciowe.txt

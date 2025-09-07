@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus-cert.txt b/sections/hostsplus-cert.txt
-index e35bc1f4..5039c04b 100644
+index e35bc1f41..ea9189423 100644
 --- a/sections/hostsplus-cert.txt
 +++ b/sections/hostsplus-cert.txt
 @@ -4,17 +4,8 @@
@@ -57,7 +57,15 @@ index e35bc1f4..5039c04b 100644
  ||alebilet.pl-oferta827590.cfd^
  ||alebilet.pl-oferta834650.cfd^
  ||alebilet.pl-oferta887943.cfd^
-@@ -173,24 +158,9 @@
+@@ -157,7 +142,6 @@
+ ||alebilet.pl-order1093203.cfd^
+ ||alebilet.pl-redirect927.cfd^
+ ||alebilet.pl-redirect8273.icu^
+-||alebilet.pl-redirect-app-13563.cfd^
+ ||alebilet.pl-wyroznione445909.icu^
+ ||olx.pl-4eg5.icu^
+ ||olx.pl-5fe6r.cfd^
+@@ -173,24 +157,9 @@
  ||olx.pl-829.cfd^
  ||olx.pl-952.cfd^
  ||olx.pl-969.icu^
@@ -82,7 +90,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-09844.icu^
  ||olx.pl-13454.icu^
  ||olx.pl-34284.icu^
-@@ -208,17 +178,14 @@
+@@ -208,17 +177,14 @@
  ||olx.pl-79352fh2837ve87gh24gds.cyou^
  ||olx.pl-79352fh2837ve87gh24gds.icu^
  ||olx.pl-79362.icu^
@@ -100,7 +108,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-642642.icu^
  ||olx.pl-643634.icu^
  ||olx.pl-643734.icu^
-@@ -234,13 +201,10 @@
+@@ -234,13 +200,10 @@
  ||olx.pl-7168125.icu^
  ||olx.pl-8915216.icu^
  ||olx.pl-9862671.icu^
@@ -114,7 +122,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-71823452933.cfd^
  ||olx.pl-app-82368.cfd^
  ||olx.pl-aukcja-5774345.icu^
-@@ -252,9 +216,7 @@
+@@ -252,9 +215,7 @@
  ||olx.pl-oferta1862.icu^
  ||olx.pl-oferta3995.cfd^
  ||olx.pl-oferta5243.cfd^
@@ -124,7 +132,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-oferta8491.cfd^
  ||olx.pl-oferta50455.cfd^
  ||olx.pl-oferta50551.cfd^
-@@ -279,10 +241,8 @@
+@@ -279,10 +240,8 @@
  ||olx.pl-oferta742223.icu^
  ||olx.pl-oferta742235.cfd^
  ||olx.pl-oferta742263.cfd^
@@ -135,7 +143,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-oferta827590.cfd^
  ||olx.pl-oferta834650.cfd^
  ||olx.pl-oferta887943.cfd^
-@@ -354,7 +314,6 @@
+@@ -354,7 +313,6 @@
  ||olx.pl-order1093203.cfd^
  ||olx.pl-redirect927.cfd^
  ||olx.pl-redirect8273.icu^
@@ -144,7 +152,7 @@ index e35bc1f4..5039c04b 100644
  ||olx.pl-wyroznione445909.icu^
  ||olx.pl-yju98nb.cfd^
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 6c22e65a..c6678a0c 100644
+index c46867137..15e1e48cc 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -4,7 +4,6 @@
@@ -155,15 +163,7 @@ index 6c22e65a..c6678a0c 100644
  ||aoc.teleaudio.pl^
  ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
-@@ -20,7 +19,6 @@
- ||ce.wielkanagroda.com^
- ||ce.wielkaniespodzianka.pl^
- ||ce.winfreetoday.com^
--||chomikuj-new-t1.opx.pl^
- ||cloud.file.co.pl^
- ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
- ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
-@@ -121,7 +119,6 @@
+@@ -119,7 +118,6 @@
  ||loan.arrow-finance.pl^
  ||lp845.filmo.agency^
  ||lp.investingops.com^
@@ -171,7 +171,7 @@ index 6c22e65a..c6678a0c 100644
  ||lpagfafo.strongfitobody.com^
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
-@@ -141,7 +138,6 @@
+@@ -139,7 +137,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -179,100 +179,19 @@ index 6c22e65a..c6678a0c 100644
  ||ping.ublock.org^
  ||pl1-germivir.great-goods.org^
  ||pl1.alcozarsale.com^
-@@ -151,7 +147,6 @@
- ||pl1.landofm.com^
- ||pl1.landovn.com^
- ||pl1.landtrov.com^
--||pl1.landurt.com^
- ||pl2.alcozarsale.com^
- ||pl2.colladioxprosale.com^
- ||pl2.intensv.com^
-@@ -160,7 +155,6 @@
- ||pl2.landovn.com^
- ||pl2.landtrov.com^
- ||pl2.landunv.com^
--||pl2.landurt.com^
- ||pl3.alcozarsale.com^
- ||pl3.colladioxprosale.com^
- ||pl3.intensv.com^
-@@ -168,60 +162,48 @@
- ||pl3.landofm.com^
- ||pl3.landovn.com^
- ||pl3.landtrov.com^
--||pl3.landurt.com^
- ||pl4.alcozarsale.com^
- ||pl4.intensv.com^
- ||pl4.landnob.com^
- ||pl4.landofm.com^
- ||pl4.landovn.com^
- ||pl4.landtrov.com^
--||pl4.landurt.com^
- ||pl5.alcozarsale.com^
- ||pl5.intensv.com^
- ||pl5.landnob.com^
- ||pl5.landofm.com^
- ||pl5.landovn.com^
- ||pl5.landtrov.com^
--||pl5.landurt.com^
- ||pl6.alcozarsale.com^
- ||pl6.intensv.com^
- ||pl6.landnob.com^
- ||pl6.landofm.com^
- ||pl6.landovn.com^
- ||pl6.landtrov.com^
--||pl6.landurt.com^
- ||pl7.alcozarsale.com^
- ||pl7.intensv.com^
- ||pl7.landnob.com^
- ||pl7.landofm.com^
- ||pl7.landovn.com^
- ||pl7.landtrov.com^
--||pl7.landurt.com^
- ||pl8.alcozarsale.com^
- ||pl8.intensv.com^
- ||pl8.landnob.com^
- ||pl8.landofm.com^
- ||pl8.landovn.com^
--||pl8.landurt.com^
- ||pl9.intensv.com^
- ||pl9.landofm.com^
- ||pl9.landovn.com^
--||pl9.landurt.com^
- ||pl10.landofm.com^
- ||pl10.landovn.com^
--||pl10.landurt.com^
- ||pl11.landofm.com^
- ||pl11.landovn.com^
--||pl11.landurt.com^
- ||pl12.landofm.com^
- ||pl12.landovn.com^
--||pl12.landurt.com^
- ||pl13.landofm.com^
- ||pl13.landovn.com^
--||pl13.landurt.com^
- ||pl14.landofm.com^
- ||pl14.landovn.com^
--||pl14.landurt.com^
- ||pl15.landofm.com^
- ||pl15.landovn.com^
- ||pl16.landofm.com^
-@@ -294,15 +276,11 @@
- ||pl.alkotoxv.com^
- ||pl.fxgm.com^
- ||pl.gamemine.com^
--||pl.gluconv.com^
+@@ -295,11 +292,8 @@
+ ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
 -||pl.mobile-redirection.com^
  ||pl.thepawland.com^
- ||pl.wojewodapodlaski.pl^
 -||play.leadzu.com^
  ||pocztapolska24.pl^
 -||polska.enchantevent.com^
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -341,7 +319,6 @@
+@@ -338,7 +332,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
