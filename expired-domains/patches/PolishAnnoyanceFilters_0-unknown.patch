@@ -1,16 +1,23 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 204794f96..b0776e2dc 100644
+index 6c0a1887e..d4502d147 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -230,7 +230,7 @@ domowa.pizza##.smoothup
- domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
- domusfari.pl,swiatekspresow.pl###back_up
- domzagadek.pl###scroll_strz
--dopek.info,zenbox.pl##.scroll-page
-+zenbox.pl##.scroll-page
- doppelherz.pl##.link--scroll-to-top
- dopracowani.pl###pulse_to_top
- doradcasmaku.pl,porta.com.pl##.floating_scroll_top
+@@ -561,7 +561,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+ mojewypieki.com###jumpup
+ mojprzeworsk.pl##.walkerpress-top
+ mojzdrowyfutrzak.elanco.com###Group_1
+-mok.olsztyn.pl###neko-to-top
+ mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
+ molnlycke.pl##.button-sticky-to-top
+ montaz-anten.eu##.topHome
+@@ -586,7 +585,6 @@ nazwa.pl##.arrowUp__wrapper
+ neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
+ neon24.info###button-top
+ neonet.pl##div[class^="scrollTopArrow-wrapper"]
+-news.samsung.com###btn_top
+ newtonmedia.pl##.take-me-up
+ nfon.com##.page-back-to-top
+ njumobile.pl###back-to-top-of-page
 diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
 index 003cd5bbf..1b0cd3adc 100644
 --- a/PPB/strzalki_ogolne_sieciowe.txt
