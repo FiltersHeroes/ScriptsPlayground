@@ -1,19 +1,12 @@
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index 0cadff23a..bd74d9d35 100644
+index 8e28edaa2..8fd474913 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -96839,14 +96839,11 @@
- ||server.it.boosterthoughts.com^$all
- ||server.juniax.com^$all
- ||server.mahakynthetics.com^$all
--||server.net.www.it.podcastlayers.com^$all
- ||server.oriolehome.com^$all
- ||server.pans.lixintex-cn.com^$all
- ||server.showoffimports.nl^$all
- ||server.to.it.gminmena.com^$all
- ||server.vulcanxxxstart.cfd^$all
--||server.www.maps.google.com.benvixcs.com^$all
+@@ -18515,7 +18515,6 @@
+ ||server363778.nazwa.pl^$all
+ ||server.acedroty.com^$all
+ ||server.subterraprojects.com^$all
 -||server.www.portload.aljazeera.ecoextracta.com^$all
- ||serverapplication.cc^$all
- ||serverapplications.co^$all
  ||serverdeve.lat^$all
+ ||servergorg.site^$all
+ ||servers.bfginternatonal.com^$all

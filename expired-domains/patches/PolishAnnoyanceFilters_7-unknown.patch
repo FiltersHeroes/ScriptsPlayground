@@ -1,17 +1,5 @@
-diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 7ecffaca3..28e704676 100644
---- a/PPB/popupy_sieciowe.txt
-+++ b/PPB/popupy_sieciowe.txt
-@@ -74,7 +74,6 @@
- ||proto.pl/popup_newsletter/settings
- ||regus.pl/Home/OnExitModal$xmlhttprequest
- ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
--||sklep.jack-wolfskin.pl/*/js/newsletter-modal-
- ||sklep.rms.pl/js/rms_copy_copy/popup.js
- ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
- ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 961acea15..5436f8f29 100644
+index 89c92f1df..7154c78e9 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,7 +1,7 @@
@@ -24,20 +12,8 @@ index 961acea15..5436f8f29 100644
  360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
  a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
  a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -399,7 +399,7 @@ prywatnoscwsieci.pl##.CampaignType--popup.Campaign
- prywatnoscwsieci.pl##.om-position-popup:style(overflow-y: auto !important)
- przydasie.pl##body > div > .kl-private-reset-css-Xuajs1.needsclick
- pureveg.pl##+js(nostif, #myWorning)
--quiosque.pl,sklep.jack-wolfskin.pl,trespass.pl##body._has-modal:style(overflow-y: auto !important)
-+quiosque.pl,trespass.pl##body._has-modal:style(overflow-y: auto !important)
- quiosque.pl,trespass.pl##.modals-wrapper
- radziejewska.pl,rolbud.eu,wielkopolskaes.pl###sbox-window, #sbox-overlay
- radziejewska.pl,rolbud.eu,wielkopolskaes.pl##.body-overlayed:style(overflow-y: auto !important)
-@@ -435,10 +435,8 @@ skalnik.pl##.newspopup_ov_hidden:style(overflow-y: auto !important)
- skalnik.pl##.newspopup_up_bg
- sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
+@@ -438,7 +438,6 @@ sklep.delia.pl##.rgModal-active:style(overflow-y: auto !important)
  sklep.delia.pl##div[id^="rg_smartpopup_"]
--sklep.jack-wolfskin.pl##.newsletter-popups-subscribe.modal-popup, .modals-overlay
  sklep.krosno.com.pl##.modalbox
  sklep.krosno.com.pl##.modalbox-is-visible body:style(overflow-y: auto !important)
 -sklep.nextmobile.pl###supper-offer, .modal-backdrop

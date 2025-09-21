@@ -1,16 +1,8 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 6c0a1887e..d4502d147 100644
+index cde688953..01da8bbfd 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -561,7 +561,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
-@@ -586,7 +585,6 @@ nazwa.pl##.arrowUp__wrapper
+@@ -586,7 +586,6 @@ nazwa.pl##.arrowUp__wrapper
  neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
  neon24.info###button-top
  neonet.pl##div[class^="scrollTopArrow-wrapper"]
