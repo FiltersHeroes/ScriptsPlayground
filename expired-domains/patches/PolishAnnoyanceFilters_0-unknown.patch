@@ -1,21 +1,8 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 133b91924..85034e1d6 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -1351,7 +1351,7 @@ skalnik.pl##.newsletter_content.footer
- skapiec.pl##section.newsletter
- ski4you.pl##footer#footer.footer .widget--signup
- sklep-agrohandel.pl##.footer_top_area
--sklep-columbia.pl,trekkersport.com.pl##.footer-border-desktop.mobile-toggle > .accordion > :nth-child(-n+2)
-+sklep-columbia.pl##.footer-border-desktop.mobile-toggle > .accordion > :nth-child(-n+2)
- sklep-elektron.com###newsletter-form
- sklep-nasiona.pl##.footer-stay-connected
- sklep-rolnicze.eu##.col-xs-12.col-sm-12.col-md-4.col-lg-4:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index b40d8fb01..052a457d5 100644
+index 6324c65d3..e49bd0910 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -586,7 +586,6 @@ nazwa.pl##.arrowUp__wrapper
+@@ -587,7 +587,6 @@ nazwa.pl##.arrowUp__wrapper
  neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
  neon24.info###button-top
  neonet.pl##div[class^="scrollTopArrow-wrapper"]
@@ -23,15 +10,6 @@ index b40d8fb01..052a457d5 100644
  newtonmedia.pl##.take-me-up
  nfon.com##.page-back-to-top
  njumobile.pl###back-to-top-of-page
-@@ -750,7 +749,7 @@ sinsay.com###app button + div:has(> svg[viewBox="0 0 24 24"] > path:empty)
- sip.lex.pl##.wk-back-to-top-button
- siriuspro.pl###sp-scroll-to-top-button
- skierniewice.istrefa.com##.circle.jq-elevator
--sklep-columbia.pl,trekkersport.com.pl##button[title="Back To Top"]
-+sklep-columbia.pl##button[title="Back To Top"]
- sklep.agrofor.pl##.block_newsletter_new
- sklep.comarch.pl##.js-go-to-top.footer__btn--goToTop
- sklep.dafi.pl###btn_control_totop
 diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
 index 003cd5bbf..1b0cd3adc 100644
 --- a/PPB/strzalki_ogolne_sieciowe.txt
