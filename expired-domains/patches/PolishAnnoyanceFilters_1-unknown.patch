@@ -1,8 +1,16 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 16dbee74d..9b646da43 100644
+index 88679f029..7f18baa8a 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -821,7 +821,7 @@ pswbp.pl###accessibility-links
+@@ -34,7 +34,6 @@ agroalex.pl,dlaroslin.pl,shopsisters.eu##.hotinfo_top
+ agrohandler.pl##.storderpopup
+ agroma-poznan.pl###panel2, #panel13, #panel14
+ agroperfekt.pl##.js-marquee-wrapper
+-ahe.lodz.pl###wysuwane7, #wysuwane2
+ airly.eu##.air-quality, .header__links
+ akademiaap.com###sidebar
+ akson.pl,di-polska.pl###medical-comp-info-bar
+@@ -811,7 +810,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -12,17 +20,17 @@ index 16dbee74d..9b646da43 100644
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 6e48198f3..df9a6df5f 100644
+index 461640a9e..019aad50a 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1659,7 +1659,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
- wrp.pl##.vc_general.vc_cta3
- wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
- wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
--wseit.edu.pl###btn-newsletter
- wspieramrozwoj.pl##.newslatter
- wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
- wtk.pl###newsletter-animated-box
+@@ -50,7 +50,6 @@ agromr.eu,follynail.com,goldplants.eu,interlumen.com,ogrodzenia24.eu,www.e-hurto
+ agroprofil.pl##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_185.vc_column
+ agrosimex.pl##.p0.tablet-column.col-sm-4.col-xs-12
+ agrosklad.com.pl,agrotuszyn.pl##.zostaw_numer
+-ahe.lodz.pl###company-newsletter-column
+ airfryerprzepisy.pl##.wp-block-kadence-rowlayout.kb-row-layout-wrap:has(> div > div > div > h3 + div.ml-embedded)
+ airport.com.pl,deweloper-interes.pl,niebieskimigdal.pl###text-2
+ airstop.pl###snippet-newsletterSubscription-newsletterSubscription
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
 index cb276fec2..27865e5d5 100644
 --- a/PPB/popupy.txt
@@ -36,10 +44,18 @@ index cb276fec2..27865e5d5 100644
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index d05ebfaf0..b521cf949 100644
+index d05ebfaf0..01b02be0a 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -105,7 +105,6 @@ brief.pl##.fab-desktop
+@@ -25,7 +25,6 @@ agrofakt.pl##.agroreporter
+ agrolsklep.pl,montaz-anten.tv,turio.com.pl,zamow-kontener.pl##.call-now-button
+ agromarek.pl,baronphotography.eu,cukierniabezowa.pl,topsolutions.pl###popup_contact
+ agromat.com.pl###callBack
+-ahe.lodz.pl###chat-invite
+ airgun.pl###popup__toggle
+ al.to,x-kom.pl##div[class*="parts__ChatWrapper"]
+ alejabielany.pl##form > input.floatingWidget
+@@ -105,7 +104,6 @@ brief.pl##.fab-desktop
  brw.pl##.brw_opineo.icon-menu
  bssztum.pl###widget_social2
  budus-developer.pl##.footer-floating-button
@@ -47,7 +63,7 @@ index d05ebfaf0..b521cf949 100644
  buy-it.pl###crisp-chatbox
  cadenas.de##.notification_bar_content > .item.contact
  cadsoft.pl##.arrow-seeMe
-@@ -126,12 +125,12 @@ cdp.pl###customTrustbadge
+@@ -126,12 +124,12 @@ cdp.pl###customTrustbadge
  cebit.pl,guzik.konin.pl##.fab
  ceneo.pl###recent-activity-toast
  centrumpapieru.pl##.sb-chat-btn
@@ -62,7 +78,7 @@ index d05ebfaf0..b521cf949 100644
  clineo.pl###contact_widget
  cmolmed.pl###footer > .module:last-child
  cmp.med.pl###altar-eye-catcher-div-container
-@@ -335,7 +334,6 @@ karmi.pl##.scrolled.homecontact
+@@ -335,7 +333,6 @@ karmi.pl##.scrolled.homecontact
  kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
  ketowpraktyce.pl###chatbox
  kind.com##.AP_mod--button-symbol
@@ -70,7 +86,7 @@ index d05ebfaf0..b521cf949 100644
  klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
  klinikawitaminowa.pl##.ic-phone-button
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
-@@ -411,7 +409,6 @@ modelerolnicze.pl###fb-customer-chat
+@@ -411,7 +408,6 @@ modelerolnicze.pl###fb-customer-chat
  modivo.pl##.live-chat-button
  mojataxi24.pl##h4#phone:first-of-type > .wiszacy
  mojbank.pl##.uk-grid.uk-flex-middle.uk-grid-row-small.uk-grid-column-collapse.uk-child-width-expand
@@ -78,7 +94,7 @@ index d05ebfaf0..b521cf949 100644
  mojehobby.pl##.report-bug
  mojeppk.pl###ppk-cx-webchat-chat-button
  monedo.pl###satellite
-@@ -493,7 +490,7 @@ polkurier.pl##.pk-chat-container
+@@ -493,7 +489,7 @@ polkurier.pl##.pk-chat-container
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -87,7 +103,7 @@ index d05ebfaf0..b521cf949 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -513,7 +510,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -513,7 +509,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -95,14 +111,6 @@ index d05ebfaf0..b521cf949 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -669,7 +665,6 @@ wiked.pl##div[id^="menuboczne"]:nth-of-type(8)
- wizjamed.pl###callbutton
- wnt.com##.sticky-contact
- wolnekonopie.org##.kleo-quick-contact-link
--wseit.edu.pl###btn-tel
- wspieram.to###staff-chat-button
- www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
- www.ibm.com###contact-module
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
 index 5ae6aa8b1..272887a78 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt

@@ -1,8 +1,8 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 6324c65d3..e49bd0910 100644
+index a6e4e6c3c..d10b48450 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -587,7 +587,6 @@ nazwa.pl##.arrowUp__wrapper
+@@ -588,7 +588,6 @@ nazwa.pl##.arrowUp__wrapper
  neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
  neon24.info###button-top
  neonet.pl##div[class^="scrollTopArrow-wrapper"]
@@ -10,6 +10,14 @@ index 6324c65d3..e49bd0910 100644
  newtonmedia.pl##.take-me-up
  nfon.com##.page-back-to-top
  njumobile.pl###back-to-top-of-page
+@@ -862,7 +861,6 @@ vwfs.pl##.c-back-to-top
+ wabisabi-store.jp###shopify-section-back_top
+ wago.com##.scroll-hint
+ wasserman.eu##.ws-elevator-btn
+-wbh.wp.mil.pl##.fi-arrow-up
+ websiteplanet.com###new-vendor-scrolltop-button
+ websyc.pl##.to-top-btn
+ wec.com.pl##.go2top
 diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
 index 003cd5bbf..1b0cd3adc 100644
 --- a/PPB/strzalki_ogolne_sieciowe.txt
