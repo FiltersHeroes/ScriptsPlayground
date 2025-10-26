@@ -1,12 +1,13 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 9692818b3..43f49215a 100644
+index 5eac47158..992a31fa6 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -48,7 +48,6 @@ aligator.net.pl##.newslet
- alko-garden.pl###jumptotop
- allegro.pl##button[title="Do góry"]
- allpaka.eu,asimexplus.com,eperfumy.pl,influencja.pl,serygoralskie.pl,siapre.pl,skirace.pl,vivosklep.pl###do_gory
--alter24.pl###page ~ div[id^="anb"]
- aluprof.eu##.sidebar__link--top
- amooco.com###footer-backtop
- ams.com.pl,bohaterdomu.pl,inforfk.pl###back2top
+@@ -125,7 +125,7 @@ biuropodrozymax.pl###ui-up-arrow
+ biurowazszywka.pl,montaz-anten.tv##.ast-scroll-top-icon
+ biznesomania.com.pl,igomedia.pl,notebooki.pl##.goto-top
+ biznesplan.net.pl##.ta_upscr
+-blasty.pl,hulaka.pl###widget-back-to-top
++blasty.pl###widget-back-to-top
+ blix.pl##.rewindTopButton.footer__rewind-button
+ blizejciebie.pl,seni24.pl##.quicknav-to-top
+ blog.doktortusz.pl##.mb-to-top

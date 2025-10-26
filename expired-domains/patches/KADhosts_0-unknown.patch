@@ -1,0 +1,210 @@
+diff --git a/sections/hostsplus-cert.txt b/sections/hostsplus-cert.txt
+index e35bc1f41..604259170 100644
+--- a/sections/hostsplus-cert.txt
++++ b/sections/hostsplus-cert.txt
+@@ -4,17 +4,8 @@
+ ||alebilet.pl-829.cfd^
+ ||alebilet.pl-952.cfd^
+ ||alebilet.pl-969.icu^
+-||alebilet.pl-2140.cfd^
+-||alebilet.pl-2141.cfd^
+ ||alebilet.pl-2392.cfd^
+-||alebilet.pl-2841.cfd^
+ ||alebilet.pl-3294.cfd^
+-||alebilet.pl-3934.cfd^
+-||alebilet.pl-4281.cfd^
+-||alebilet.pl-4299.cfd^
+-||alebilet.pl-5185.cfd^
+-||alebilet.pl-6493.cfd^
+-||alebilet.pl-8271.cfd^
+ ||alebilet.pl-09844.icu^
+ ||alebilet.pl-13454.icu^
+ ||alebilet.pl-34284.icu^
+@@ -32,7 +23,6 @@
+ ||alebilet.pl-87654.cfd^
+ ||alebilet.pl-98761.icu^
+ ||alebilet.pl-239838id7va8323892.icu^
+-||alebilet.pl-323232.top^
+ ||alebilet.pl-543076.icu^
+ ||alebilet.pl-654701.icu^
+ ||alebilet.pl-676504.icu^
+@@ -43,7 +33,6 @@
+ ||alebilet.pl-7168125.icu^
+ ||alebilet.pl-8915216.icu^
+ ||alebilet.pl-68756671.icu^
+-||alebilet.pl-434663456.shop^
+ ||alebilet.pl-71823452933.cfd^
+ ||alebilet.pl-app-82368.cfd^
+ ||alebilet.pl-aukcja-5774345.icu^
+@@ -55,9 +44,7 @@
+ ||alebilet.pl-oferta2695.online^
+ ||alebilet.pl-oferta3995.cfd^
+ ||alebilet.pl-oferta5243.cfd^
+-||alebilet.pl-oferta7491.cfd^
+ ||alebilet.pl-oferta7544.icu^
+-||alebilet.pl-oferta8349.cfd^
+ ||alebilet.pl-oferta50455.cfd^
+ ||alebilet.pl-oferta50551.cfd^
+ ||alebilet.pl-oferta55401.cfd^
+@@ -82,10 +69,8 @@
+ ||alebilet.pl-oferta742223.icu^
+ ||alebilet.pl-oferta742235.cfd^
+ ||alebilet.pl-oferta742263.cfd^
+-||alebilet.pl-oferta746478.com^
+ ||alebilet.pl-oferta746837.icu^
+ ||alebilet.pl-oferta758469.icu^
+-||alebilet.pl-oferta768473.com^
+ ||alebilet.pl-oferta827590.cfd^
+ ||alebilet.pl-oferta834650.cfd^
+ ||alebilet.pl-oferta887943.cfd^
+@@ -157,7 +142,6 @@
+ ||alebilet.pl-order1093203.cfd^
+ ||alebilet.pl-redirect927.cfd^
+ ||alebilet.pl-redirect8273.icu^
+-||alebilet.pl-redirect-app-13563.cfd^
+ ||alebilet.pl-wyroznione445909.icu^
+ ||olx.pl-4eg5.icu^
+ ||olx.pl-5fe6r.cfd^
+@@ -174,22 +158,12 @@
+ ||olx.pl-952.cfd^
+ ||olx.pl-969.icu^
+ ||olx.pl-1239.cfd^
+-||olx.pl-2140.cfd^
+-||olx.pl-2141.cfd^
+ ||olx.pl-2392.cfd^
+-||olx.pl-2841.cfd^
+ ||olx.pl-3294.cfd^
+-||olx.pl-3934.cfd^
+-||olx.pl-4281.cfd^
+-||olx.pl-4299.cfd^
+ ||olx.pl-4765.cfd^
+-||olx.pl-5185.cfd^
+-||olx.pl-5313.icu^
+-||olx.pl-6493.cfd^
+ ||olx.pl-7273.cfd^
+ ||olx.pl-7573.icu^
+ ||olx.pl-7829.cfd^
+-||olx.pl-8271.cfd^
+ ||olx.pl-8372.cfd^
+ ||olx.pl-09844.icu^
+ ||olx.pl-13454.icu^
+@@ -208,17 +182,14 @@
+ ||olx.pl-79352fh2837ve87gh24gds.cyou^
+ ||olx.pl-79352fh2837ve87gh24gds.icu^
+ ||olx.pl-79362.icu^
+-||olx.pl-85235.icu^
+ ||olx.pl-85341.icu^
+ ||olx.pl-87654.cfd^
+ ||olx.pl-89626.icu^
+ ||olx.pl-98761.icu^
+ ||olx.pl-239838id7va8323892.icu^
+-||olx.pl-323232.top^
+ ||olx.pl-543076.icu^
+ ||olx.pl-632462.icu^
+ ||olx.pl-632623.cyou^
+-||olx.pl-632623.icu^
+ ||olx.pl-642642.icu^
+ ||olx.pl-643634.icu^
+ ||olx.pl-643734.icu^
+@@ -234,13 +205,10 @@
+ ||olx.pl-7168125.icu^
+ ||olx.pl-8915216.icu^
+ ||olx.pl-9862671.icu^
+-||olx.pl-53467437.icu^
+ ||olx.pl-57238523.icu^
+ ||olx.pl-63464367.icu^
+ ||olx.pl-68756671.icu^
+ ||olx.pl-73547347.icu^
+-||olx.pl-434663456.shop^
+-||olx.pl-643643262.icu^
+ ||olx.pl-71823452933.cfd^
+ ||olx.pl-app-82368.cfd^
+ ||olx.pl-aukcja-5774345.icu^
+@@ -252,9 +220,7 @@
+ ||olx.pl-oferta1862.icu^
+ ||olx.pl-oferta3995.cfd^
+ ||olx.pl-oferta5243.cfd^
+-||olx.pl-oferta7491.cfd^
+ ||olx.pl-oferta7544.icu^
+-||olx.pl-oferta8349.cfd^
+ ||olx.pl-oferta8491.cfd^
+ ||olx.pl-oferta50455.cfd^
+ ||olx.pl-oferta50551.cfd^
+@@ -279,10 +245,8 @@
+ ||olx.pl-oferta742223.icu^
+ ||olx.pl-oferta742235.cfd^
+ ||olx.pl-oferta742263.cfd^
+-||olx.pl-oferta746478.com^
+ ||olx.pl-oferta746837.icu^
+ ||olx.pl-oferta758469.icu^
+-||olx.pl-oferta768473.com^
+ ||olx.pl-oferta827590.cfd^
+ ||olx.pl-oferta834650.cfd^
+ ||olx.pl-oferta887943.cfd^
+@@ -354,7 +318,6 @@
+ ||olx.pl-order1093203.cfd^
+ ||olx.pl-redirect927.cfd^
+ ||olx.pl-redirect8273.icu^
+-||olx.pl-redirect-app-13563.cfd^
+ ||olx.pl-vbnx.icu^
+ ||olx.pl-wyroznione445909.icu^
+ ||olx.pl-yju98nb.cfd^
+diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
+index 8c47ea462..0cd44ccf9 100644
+--- a/sections/hostsplus.txt
++++ b/sections/hostsplus.txt
+@@ -4,7 +4,6 @@
+ ||a.ero.bullrun-new.com^
+ ||activestin-pl.great-beauty.org^
+ ||adpro.futurenet.club^
+-||affiliate.playhub.store^
+ ||aoc.teleaudio.pl^
+ ||api.myeforsa.pl^
+ ||app2.mackeeperaffiliates.com^
+@@ -122,20 +121,17 @@
+ ||lp845.filmo.agency^
+ ||lp.bringtheallow.com^
+ ||lp.investingops.com^
+-||lp.trade360.com^
+ ||lpagfafo.strongfitobody.com^
+ ||lrtljmae.profitobody.com^
+ ||lskzwapf.hiragazza.com^
+ ||m.pl.failmobile.net^
+ ||miasto-wiadomosci-24h.x9.eu^
+-||microcam.ushoppyworld.com^
+ ||mob-valgone-pl.fiven-goods.com^
+ ||msu.expensivesurvey.click^
+ ||myorlenblog.myfreesites.net^
+ ||naszemiasto-fakty24.x9.eu^
+ ||naszemiasto-wiadomosci24.x9.eu^
+ ||netflix.apps.co.pl^
+-||news24.ushoppyworld.com^
+ ||noje.topnewsource.com^
+ ||odbieramy-karty.24.eu^
+ ||odzyskajsnapy.blogspot.com^
+@@ -144,7 +140,6 @@
+ ||ostyhealth-pl.few-goods.com^
+ ||paiementhome-pl-5b4f060c.rpm-technik.at^
+ ||pakiety-lte-5gb.blogspot.com^
+-||parcel.duejun4sfy51ggf.nildenaksoy.com^
+ ||ping.ublock.org^
+ ||pl1-germivir.great-goods.org^
+ ||pl1.alcozarsale.com^
+@@ -302,9 +297,7 @@
+ ||pl.hondrostrc.com^
+ ||pl.mobile-redirection.com^
+ ||pl.thepawland.com^
+-||play.leadzu.com^
+ ||pocztapolska24.pl^
+-||polska.enchantevent.com^
+ ||portalrandkowy.c.pl^
+ ||powiekszgo.c.pl^
+ ||preg.viciworld.com^
+@@ -343,7 +336,6 @@
+ ||wez-bon.24.eu^
+ ||wiadomosci-naszemiasto24.x9.eu^
+ ||wiadomosci-web.24.eu^
+-||winner.giftprizewinner.com^
+ ||witamina.c.pl^
+ ||ww1.e-kino.tv^
+ ||ww2.xn--30986-udb.biz^
