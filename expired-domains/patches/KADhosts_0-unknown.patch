@@ -1,16 +1,36 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 8c47ea462..461dce709 100644
+index 8c47ea462..748085658 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,7 +4,6 @@
+@@ -4,9 +4,7 @@
  ||a.ero.bullrun-new.com^
  ||activestin-pl.great-beauty.org^
  ||adpro.futurenet.club^
 -||affiliate.playhub.store^
  ||aoc.teleaudio.pl^
- ||api.myeforsa.pl^
+-||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
-@@ -122,20 +121,17 @@
+ ||az2.expensivesurvey.click^
+ ||biedronka-zamyka-sklepy.24.eu^
+@@ -21,17 +19,13 @@
+ ||ce.wielkaniespodzianka.pl^
+ ||ce.winfreetoday.com^
+ ||chomikuj-new-t1.opx.pl^
+-||cloud.file.co.pl^
+ ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
+ ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
+ ||czas-na-fb.blogspot.com^
+ ||daily.boonovel.com^
+ ||darmowe-bony.24.eu^
+-||dev.apps.co.pl^
+ ||dlaczegoomega3.natural.pl^
+ ||dotpay.pocztapolska24.pl^
+-||download.apps.co.pl^
+-||download.file.co.pl^
+ ||dziennik-info.x9.eu^
+ ||dziennik-polski.x9.eu^
+ ||echo-dnia.24.eu^
+@@ -122,20 +116,17 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -31,7 +51,7 @@ index 8c47ea462..461dce709 100644
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
  ||odzyskajsnapy.blogspot.com^
-@@ -144,7 +140,6 @@
+@@ -144,7 +135,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -39,7 +59,7 @@ index 8c47ea462..461dce709 100644
  ||ping.ublock.org^
  ||pl1-germivir.great-goods.org^
  ||pl1.alcozarsale.com^
-@@ -302,7 +297,6 @@
+@@ -302,7 +292,6 @@
  ||pl.hondrostrc.com^
  ||pl.mobile-redirection.com^
  ||pl.thepawland.com^
@@ -47,7 +67,7 @@ index 8c47ea462..461dce709 100644
  ||pocztapolska24.pl^
  ||polska.enchantevent.com^
  ||portalrandkowy.c.pl^
-@@ -343,7 +337,6 @@
+@@ -343,7 +332,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^

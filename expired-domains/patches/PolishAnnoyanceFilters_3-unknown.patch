@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 5e580e88b..1bd773fcf 100644
+index 17212510b..90797d4c1 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -37,7 +37,7 @@ agroperfekt.pl##.js-marquee-wrapper
+@@ -38,7 +38,7 @@ agroperfekt.pl##.js-marquee-wrapper
  ahe.lodz.pl###wysuwane7, #wysuwane2
  airly.eu##.air-quality, .header__links
  akademiaap.com###sidebar
@@ -11,7 +11,7 @@ index 5e580e88b..1bd773fcf 100644
  aktualnyodpis.pl###carq-iframe
  alablaboratoria.pl###small-pop-up
  alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
-@@ -199,7 +199,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+@@ -200,7 +200,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
  comarch.pl##.widget-detach-right-bar-container
  context.reverso.net###register-popup-bottom
  coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
@@ -20,7 +20,7 @@ index 5e580e88b..1bd773fcf 100644
  cowsierscipiszczy.pl##.CampaignType--floating
  creativecommons.org###deed-donate-slide
  creativehobby.pl###ch-strip
-@@ -351,7 +351,6 @@ forum-bron.pl,trumpeters.pl###tt_mobile_banner
+@@ -352,7 +352,6 @@ forum-bron.pl,trumpeters.pl###tt_mobile_banner
  forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
  forum.dobreprogramy.pl##.header-cloak
  forum.duolingo.com##.GB_SB
@@ -28,24 +28,16 @@ index 5e580e88b..1bd773fcf 100644
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -369,7 +368,6 @@ gandalf.com.pl###check_order, #flcart
- gastro-pol.pl###bar-firma
- gazeta.pl##.redirect
- gazetadywicka.eu,michalowo.eu,nowy.plock.eu,zawidow.eu###pojo-a11y-toolbar
--gazetapodatkowa.gofin.pl###demo-try, .demo-try-color-gray
- gazetapraca.pl##.js-offer-suggested-offer-btn.next-offer-box
- gazetaprawna.pl###redirectionMainPage
- gazetki.pl##.corner-popup-container
-@@ -536,7 +534,7 @@ l24.lt###scr
+@@ -539,7 +538,7 @@ l24.lt###scr
  lajfhaki.pl##.add_hack_box
  lamaglama.pl##.c-side-buttons__tab
  latarki.pl##.floatingdeal
 -laziska.com.pl,m-ce.pl,mojbytom.pl,mojchorzow.pl,mojegliwice.pl,mojekatowice.pl,mojetychy.pl,mojmikolow.pl,orzesze.com.pl,piekaryslaskie.com.pl,pyskowice.com.pl,rudaslaska.com.pl,rybnicki.com,siemianowice.net.pl,sosnowiecki.pl,swiony.pl,wodzislaw.com.pl,zabrze.com.pl,zory.com.pl###next_prev_news
-+laziska.com.pl,m-ce.pl,mojbytom.pl,mojchorzow.pl,mojegliwice.pl,mojekatowice.pl,mojetychy.pl,mojmikolow.pl,orzesze.com.pl,piekaryslaskie.com.pl,rudaslaska.com.pl,rybnicki.com,siemianowice.net.pl,sosnowiecki.pl,swiony.pl,wodzislaw.com.pl,zabrze.com.pl,zory.com.pl###next_prev_news
++laziska.com.pl,m-ce.pl,mojbytom.pl,mojchorzow.pl,mojegliwice.pl,mojekatowice.pl,mojetychy.pl,mojmikolow.pl,orzesze.com.pl,piekaryslaskie.com.pl,pyskowice.com.pl,rudaslaska.com.pl,rybnicki.com,sosnowiecki.pl,swiony.pl,wodzislaw.com.pl,zabrze.com.pl,zory.com.pl###next_prev_news
  legalnakultura.pl###konkursy-plugin-button
  legalniewsieci.pl##.more-news-bar
  leki.pl###floating-nextprev
-@@ -555,7 +553,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+@@ -558,7 +557,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
  linuxporady.pl,pskrk.com##.crestaPostsBox
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
@@ -53,7 +45,16 @@ index 5e580e88b..1bd773fcf 100644
  losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
  lvbet.pl##splash-loader
  m.leroymerlin.pl##.smart-app-banner
-@@ -876,7 +873,6 @@ skladnicaksiegarska.pl##.hotinfo_top, #countdown
+@@ -813,7 +811,7 @@ pswbp.pl###accessibility-links
+ psy-pies.com,swiatkwiatow.pl###wyskakujaca
+ ptakoutlet.pl###kp, .pasek-right
+ pultusk24.pl##form[action^="https://poll.pollcode.com/"]
+-pup.gliwice.pl,puplegnica.pl###accessKeys
++puplegnica.pl###accessKeys
+ pyszne.pl##div[data-qa="app-banner"]
+ pytamy.pl##.fixFooter
+ pytanienasniadanie.tvp.pl##.stream-button
+@@ -879,7 +877,6 @@ skladnicaksiegarska.pl##.hotinfo_top, #countdown
  sklep-wedkarski.info###ClPanelImg
  sklep.aladyn.pl,sklep.mariall.pl###trzecia
  sklep.farmona.pl##.tabs > section.product_link_nav
@@ -61,25 +62,15 @@ index 5e580e88b..1bd773fcf 100644
  sklep.odziez-robocza.com###druga_ikona
  sklep.pakrol.pl##.suggest-slider
  sklep.veterynaria.pl###sideTab
-@@ -938,7 +934,6 @@ suwalki24.pl###sideCard
- swiatbaterii.pl###growls
- swiatkwiatow.pl###cards-next-link, #cards-prev-link
- swiezoizdrowo.pl###sales-booster-popup
--sympatia.onet.pl###iconsBar
- syngenta.pl##.pane-menu-menu-sticky-menu
- szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
- szkolnastrona.pl##.btn-fav
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 730662bef..a37fb7629 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -1,7 +1,7 @@
- 2drink.pl,imperiumromanum.edu.pl,olagosciniak.pl###wbounce-modal
- 4lifedirect.pl##.leadinModal
--6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,budujmase.pl,cebit.pl,dietazliscia.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
--6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,budujmase.pl,cebit.pl,dietazliscia.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
-+6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,budujmase.pl,cebit.pl,dietazliscia.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items .bhr-image-popup-container
-+6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,budujmase.pl,cebit.pl,dietazliscia.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
- 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
- 24hurt.pl##.wt-popup, #overlay
- 29aleja.pl##.popupWrap
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index e5d20c209..7b1f48e39 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -512,7 +512,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+ promopixel.pl###fitcher-container
+ przestronnie.pl##a[id*="back"][href^="tel:"]
+ psprices.com###chatra
+-pup.gliwice.pl###sugestiaForm
+ pytamy.pl##.tabZB
+ pzu.pl###baner-doradcy, #metka-przycisk
+ r.pl##.divCallback
