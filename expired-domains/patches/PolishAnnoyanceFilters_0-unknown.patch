@@ -1,8 +1,16 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 10053da20..1dff8cd71 100644
+index 59d7bae2f..4fe508941 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -565,7 +565,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+@@ -229,7 +229,6 @@ dodadeau.com###ast-scroll-top
+ doktormonika.pl###page-gotop.page-gotop
+ domdlaciebie.com.pl##.fix-scroll-top
+ domenergo.com###to-to
+-domowa.pizza##.smoothup
+ domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
+ domusfari.pl,swiatekspresow.pl###back_up
+ domzagadek.pl###scroll_strz
+@@ -564,7 +563,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
  mojewypieki.com###jumpup
  mojprzeworsk.pl##.walkerpress-top
  mojzdrowyfutrzak.elanco.com###Group_1
@@ -10,15 +18,7 @@ index 10053da20..1dff8cd71 100644
  mokis.info,olesnica.pl,tabelaofert.pl,wug.gov.pl##.do-gory
  molnlycke.pl##.button-sticky-to-top
  montaz-anten.eu##.topHome
-@@ -591,7 +590,6 @@ nazwa.pl##.arrowUp__wrapper
- neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
- neon24.info###button-top
- neonet.pl##div[class^="scrollTopArrow-wrapper"]
--news.samsung.com###btn_top
- newtonmedia.pl##.take-me-up
- nfon.com##.page-back-to-top
- njumobile.pl###back-to-top-of-page
-@@ -865,7 +863,6 @@ vwfs.pl##.c-back-to-top
+@@ -864,7 +862,6 @@ vwfs.pl##.c-back-to-top
  wabisabi-store.jp###shopify-section-back_top
  wago.com##.scroll-hint
  wasserman.eu##.ws-elevator-btn
