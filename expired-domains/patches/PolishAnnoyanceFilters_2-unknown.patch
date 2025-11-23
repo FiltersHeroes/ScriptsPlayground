@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 0cecee2b1..dd955e0ca 100644
+index c8baaf832..a7b08db5f 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -18,7 +18,7 @@
@@ -20,6 +20,15 @@ index 0cecee2b1..dd955e0ca 100644
  ahe.lodz.pl###company-newsletter-column
  airfryerprzepisy.pl##.wp-block-kadence-rowlayout.kb-row-layout-wrap:has(> div > div > div > h3 + div.ml-embedded)
  airport.com.pl,deweloper-interes.pl,niebieskimigdal.pl###text-2
+@@ -260,7 +260,7 @@ buslapidus.pl,pasja-informatyki.pl##.widget_1
+ butybuty.pl,delis.pl,diamir.sklep.pl,eltkom.pl,telefony-gdansk.pl,wetro.pl##div.col-md-3.col-sm-6.col-xs-12.col-xxs:nth-of-type(4)
+ butyjana.pl##.bjNewsletterText
+ butyraj.pl##.hidden-phone.top_toplayer
+-bydgoszcz.com,ct.jaworzno.pl,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
++bydgoszcz.com,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
+ byinsomnia.com,mniammniam.com,opakowania24.eu,r-gol.com,rylko.com,stoprocent.com,unisono.eu##.newsletter-container
+ bytom.com.pl##.footer-new__newsletter
+ cafago.com,tomtop.com##.m_subscribe_input
 @@ -379,7 +379,6 @@ dexpol.com##.stopka2_center > div.box_info:first-of-type
  di.com.pl##.footcol:nth-of-type(5) > form, .footcol:nth-of-type(5) > p, .footcol:nth-of-type(5) > .footnag:first-of-type
  dialog.mazovia.pl,galeriabronowice.pl##.news
@@ -70,7 +79,7 @@ index 0cecee2b1..dd955e0ca 100644
  latarki.pl##.bakedparallax-wrapper
  latarnia.teatrnn.pl###main_oferta > div:nth-of-type(2), #main_oferta > div:nth-of-type(2) + form
  lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
-@@ -1163,7 +1157,6 @@ pinkorblue.pl##div.econda-banner-click.stage-small:nth-of-type(2)
+@@ -1164,7 +1158,6 @@ pinkorblue.pl##div.econda-banner-click.stage-small:nth-of-type(2)
  piomax.pasaz24.pl##.newsletter-place
  pitbull.pl##.footer-blocks > .footer-block
  pixel-box.pl##.footer-newsletter-new
@@ -78,7 +87,7 @@ index 0cecee2b1..dd955e0ca 100644
  pl-eu.puma.com##.footer-logo-email
  pl.aleteia.org###logo-newsletter-follow, .module-newsletter-form
  pl.ejo-online.eu###footer > div > div.threecol:nth-of-type(2)
-@@ -1179,8 +1172,6 @@ pl.ryobitools.eu##.Footerstyles__Header-kxuaor-1
+@@ -1180,8 +1173,6 @@ pl.ryobitools.eu##.Footerstyles__Header-kxuaor-1
  pl.silvexcraft.eu###newslet_section
  pl.sportsdirect.com##.signup-wrapper
  pl.techinfus.com##.subscription
@@ -87,7 +96,7 @@ index 0cecee2b1..dd955e0ca 100644
  placesandplants.com###subscribe-blog-blog_subscription-2, footer div.col:first-of-type > div.widget:nth-of-type(3) > .widget-title
  planet.pl###zapis-do-newsletter
  platforma.org##.footer > .newsletter-container
-@@ -1230,7 +1221,6 @@ powerman.com.pl##.pm_newsletter
+@@ -1231,7 +1222,6 @@ powerman.com.pl##.pm_newsletter
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl
  poznan.factory.pl##.pane-2.pane-custom.panel-pane
@@ -95,7 +104,7 @@ index 0cecee2b1..dd955e0ca 100644
  prawo.pl##.wkNewsletterBlock
  prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
  press.pl##.pressletter
-@@ -1356,7 +1346,6 @@ silesiasem.pl##.entry-content > form
+@@ -1358,7 +1348,6 @@ silesiasem.pl##.entry-content > form
  silesion.pl##.pageFooter__newsletter
  sinsay.com##.home-ss20-newsletter
  sipma.pl###newslet
@@ -103,7 +112,7 @@ index 0cecee2b1..dd955e0ca 100644
  skalnik.pl##.newsletter_content.footer
  skapiec.pl##section.newsletter
  ski4you.pl##footer#footer.footer .widget--signup
-@@ -1389,7 +1378,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
+@@ -1391,7 +1380,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
  sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
  sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
  sklep.regalia.eu##footer > .row > .footer-block:only-child
@@ -112,7 +121,7 @@ index 0cecee2b1..dd955e0ca 100644
  sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
  sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 5818223f0..4be230342 100644
+index bcf97501e..6b36f24eb 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -624,7 +624,6 @@ pl.aleteia.org##.newsletter-popups
@@ -124,7 +133,7 @@ index 5818223f0..4be230342 100644
  planeta-budowlana.pl##.dialog[id^="window"], #toogas_pop_up
  plk.pl###okienko_yt, .ui-widget-overlay
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index abc178524..2ae19383e 100644
+index b152c941b..516d5d6d0 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -101,7 +101,7 @@ blog-daneosobowe.pl##+js(nostif, i(), 5000)

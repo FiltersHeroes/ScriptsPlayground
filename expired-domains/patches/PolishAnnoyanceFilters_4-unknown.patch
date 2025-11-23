@@ -1,10 +1,10 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 4be230342..9a166f0a2 100644
+index 4c1ed8bc7..2dba6aa3c 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -3,9 +3,7 @@
- 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
- 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
+ 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items .bhr-image-popup-container
+ 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
  9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
 -24hurt.pl##.wt-popup, #overlay
 -29aleja.pl##.popupWrap
@@ -18,13 +18,16 @@ index 4be230342..9a166f0a2 100644
  admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
  adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
 -adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
-+adresy.um.warszawa.pl###init_info[style], #komunikat[style]
++ulice.um.warszawa.pl###init_info[style], #komunikat[style]
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -40,7 +38,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+@@ -38,9 +36,9 @@ agrobex.pl##div:nth-of-type(6)
+ agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
+ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
  agrohandel.com.pl###jcemediabox-popup-page
- agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+-agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
++betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
  agromix.agro.pl##.nivo-lightbox-overlay
 -agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
 +agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay

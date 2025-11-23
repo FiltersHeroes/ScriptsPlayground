@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index fe881bca5..8f77eee00 100644
+index b7ad2dd97..8928d0183 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -38,7 +38,7 @@ agroperfekt.pl##.js-marquee-wrapper
@@ -20,15 +20,23 @@ index fe881bca5..8f77eee00 100644
  cowsierscipiszczy.pl##.CampaignType--floating
  creativecommons.org###deed-donate-slide
  creativehobby.pl###ch-strip
-@@ -352,7 +352,6 @@ forum-bron.pl,trumpeters.pl###tt_mobile_banner
- forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+@@ -353,7 +353,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
  forum.dobreprogramy.pl##.header-cloak
+ forum.dobreprogramy.pl##.nav-link[href*="/blogi"]
  forum.duolingo.com##.GB_SB
 -forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -558,7 +557,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+@@ -371,7 +370,6 @@ gandalf.com.pl###check_order, #flcart
+ gastro-pol.pl###bar-firma
+ gazeta.pl##.redirect
+ gazetadywicka.eu,michalowo.eu,nowy.plock.eu,zawidow.eu###pojo-a11y-toolbar
+-gazetapodatkowa.gofin.pl###demo-try, .demo-try-color-gray
+ gazetapraca.pl##.js-offer-suggested-offer-btn.next-offer-box
+ gazetaprawna.pl###redirectionMainPage
+ gazetki.pl##.corner-popup-container
+@@ -559,7 +557,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
  linuxporady.pl,pskrk.com##.crestaPostsBox
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
@@ -36,7 +44,7 @@ index fe881bca5..8f77eee00 100644
  losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
  lvbet.pl##splash-loader
  m.leroymerlin.pl##.smart-app-banner
-@@ -880,7 +878,6 @@ skladnicaksiegarska.pl##.hotinfo_top, #countdown
+@@ -882,7 +879,6 @@ skladnicaksiegarska.pl##.hotinfo_top, #countdown
  sklep-wedkarski.info###ClPanelImg
  sklep.aladyn.pl,sklep.mariall.pl###trzecia
  sklep.farmona.pl##.tabs > section.product_link_nav
@@ -44,3 +52,25 @@ index fe881bca5..8f77eee00 100644
  sklep.odziez-robocza.com###druga_ikona
  sklep.pakrol.pl##.suggest-slider
  sklep.veterynaria.pl###sideTab
+@@ -944,7 +940,6 @@ suwalki24.pl###sideCard
+ swiatbaterii.pl###growls
+ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+ swiezoizdrowo.pl###sales-booster-popup
+-sympatia.onet.pl###iconsBar
+ syngenta.pl##.pane-menu-menu-sticky-menu
+ szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
+ szkolnastrona.pl##.btn-fav
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 6b36f24eb..4c1ed8bc7 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -1,7 +1,7 @@
+ 2drink.pl,imperiumromanum.edu.pl,olagosciniak.pl###wbounce-modal
+ 4lifedirect.pl##.leadinModal
+-6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
+-6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
++6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items .bhr-image-popup-container
++6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
+ 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
+ 24hurt.pl##.wt-popup, #overlay
+ 29aleja.pl##.popupWrap
