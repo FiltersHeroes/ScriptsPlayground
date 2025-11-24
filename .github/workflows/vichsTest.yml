@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/filtersheroes/vichs_image:latest
     steps:
-      - uses: actions/checkout@v5 # pin@v2
+      - uses: actions/checkout@v6 # pin@v2
       - name: Test
         env:
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
