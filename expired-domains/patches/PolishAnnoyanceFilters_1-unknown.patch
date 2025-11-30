@@ -1,117 +1,83 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index aaa892d87..b7ad2dd97 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -816,7 +816,7 @@ pswbp.pl###accessibility-links
- psy-pies.com,swiatkwiatow.pl###wyskakujaca
- ptakoutlet.pl###kp, .pasek-right
- pultusk24.pl##form[action^="https://poll.pollcode.com/"]
--pup.gliwice.pl,puplegnica.pl###accessKeys
-+puplegnica.pl###accessKeys
- pyszne.pl##div[data-qa="app-banner"]
- pytamy.pl##.fixFooter
- pytanienasniadanie.tvp.pl##.stream-button
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 31ec18ed3..c8baaf832 100644
+index 31ec18ed3..68479f8b2 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1669,7 +1669,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
- wrp.pl##.vc_general.vc_cta3
- wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
- wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
--wseit.edu.pl###btn-newsletter
- wspieramrozwoj.pl##.newslatter
- wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
- wtk.pl###newsletter-animated-box
+@@ -1391,7 +1391,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
+ sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
+ sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
+ sklep.regalia.eu##footer > .row > .footer-block:only-child
+-sklep.sizeer.com##.b-footer_newsletter
+ sklep.skrypt.com.pl##.footer-conteiner > ul:nth-of-type(3)
+ sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
+ sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index cf180e6fd..bcf97501e 100644
+index 293476178..a1e52f652 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -693,7 +693,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- residenza.cz##.modal--newsletter
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 1ef143b8b..d829b52a3 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -105,7 +105,6 @@ brief.pl##.fab-desktop
- brw.pl##.brw_opineo.icon-menu
- bssztum.pl###widget_social2
- budus-developer.pl##.footer-floating-button
--bulwaryksiazece.pl##.ask-form
- buy-it.pl###crisp-chatbox
- cadenas.de##.notification_bar_content > .item.contact
- cadsoft.pl##.arrow-seeMe
-@@ -126,12 +125,12 @@ cdp.pl###customTrustbadge
- cebit.pl,guzik.konin.pl##.fab
- ceneo.pl###recent-activity-toast
- centrumpapieru.pl##.sb-chat-btn
--cersanit.com.pl,darnatury.pl,eforia.pl,euromobil.com.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
-+cersanit.com.pl,darnatury.pl,eforia.pl,euromotor.pl,japanmotors.pl,koreamotors.pl,mymeest.pl,opoczno.eu,pgd.pl##.FTChat_window, .FTChat_bar
- choinkowo.pl,olini.pl,wearethecoffee.com###appReviewsWidgetWrapper
- cinema3d.pl###popupBoxInvitation
- cinkciarz.pl,eurosender.com,extradom.pl,olini.pl###hbl-live-chat-wrapper
- citycar.com.pl,ford-krosno.pl,ford-lublin.pl,ford.bemo-motors.pl,ford.biacomex.pl,ford.golebiewski.com.pl,ursyncar.pl###gw_signpost
--citymotors.pl,eforia.pl,euromobil.com.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
-+citymotors.pl,eforia.pl,euromotor.pl,invette.pl,japanmotors.pl,koreamotors.pl,pgd.pl,victoriadom.pl##iframe[id^="fcc-sitecall-"]
- clineo.pl###contact_widget
- cmolmed.pl###footer > .module:last-child
- cmp.med.pl###altar-eye-catcher-div-container
-@@ -336,7 +335,6 @@ karmi.pl##.scrolled.homecontact
- kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
- ketowpraktyce.pl###chatbox
- kind.com##.AP_mod--button-symbol
--king-poligrafia.pl###face-slider
- klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
- klinikawitaminowa.pl##.ic-phone-button
- klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
-@@ -412,7 +410,6 @@ modelerolnicze.pl###fb-customer-chat
- modivo.pl##.live-chat-button
- mojataxi24.pl##h4#phone:first-of-type > .wiszacy
- mojbank.pl##.uk-grid.uk-flex-middle.uk-grid-row-small.uk-grid-column-collapse.uk-child-width-expand
--moje.pzu.pl##.pak-footer__call-container
- mojehobby.pl##.report-bug
- mojeppk.pl###ppk-cx-webchat-chat-button
- monedo.pl###satellite
-@@ -493,7 +490,7 @@ polkurier.pl##.pk-chat-container
- polnord.pl###contactForm
- poloniawroclaw.pl##body > iframe:first-of-type
- polsatbox.pl##.chat_display
--pomagamy-wszyscy.pl,um-swiecie.pl###formPopupHandler
-+um-swiecie.pl###formPopupHandler
- pomoc.bluemedia.pl##.icon_czat.ribbon
- poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
- porowneo.pl##.agent-avaiable
-@@ -513,7 +510,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
- promopixel.pl###fitcher-container
- przestronnie.pl##a[id*="back"][href^="tel:"]
- psprices.com###chatra
--pup.gliwice.pl###sugestiaForm
- pytamy.pl##.tabZB
- pzu.pl###baner-doradcy, #metka-przycisk
- r.pl##.divCallback
-@@ -670,7 +666,6 @@ wiked.pl##div[id^="menuboczne"]:nth-of-type(8)
- wizjamed.pl###callbutton
- wnt.com##.sticky-contact
- wolnekonopie.org##.kleo-quick-contact-link
--wseit.edu.pl###btn-tel
- wspieram.to###staff-chat-button
- www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
- www.ibm.com###contact-module
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-index 5ae6aa8b1..272887a78 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
-@@ -3,7 +3,6 @@
- ||api.livechatinc.com/v*/customer/action/get_$script,domain=pl
- ||app.sugester.pl/tpbocian/widget.js
- ||cdn.inbox.shoplo.com/chat.html$third-party
--||chat.4finance.com^$third-party
- ||chatbro.com^$third-party,domain=pl
- ||chatwoot.*/packs/js/sdk.js$script
- ||code.tidio.co^$third-party
+@@ -5,7 +5,7 @@
+ 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
+ 24hurt.pl##.wt-popup, #overlay
+ 29aleja.pl##.popupWrap
+-50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl,sklep.sizeer.com,tvp.info##.snrs-modal-wrapper, .snrs-modal-content
++50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl,tvp.info##.snrs-modal-wrapper, .snrs-modal-content
+ 80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gameinn.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,kukini.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedawnione.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
+ 1000dni.pl###news-popup
+ 51015kids.eu,lee.pl,willsoor.pl###newsletter_popup
+diff --git a/PPB/push.txt b/PPB/push.txt
+index f1d63e2cf..c9920b10e 100644
+--- a/PPB/push.txt
++++ b/PPB/push.txt
+@@ -1,6 +1,6 @@
+ ~1login.wp.pl,abczdrowie.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,pysznosci.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.wp-push-main-container
+ 2conv.com,flv2mp3.by,flvto.biz##.push-offer
+-50style.pl,carrefour.pl,sklep.sizeer.com###snrs-wp-subscriber
++50style.pl,carrefour.pl###snrs-wp-subscriber
+ agrofakt.pl,agroprofil.pl##.onesignal-slidedown-dialog
+ allani.pl,domodi.pl##div[id*="FakePromptContainer"]
+ andzela.com##.kb-cs-notify-container
+diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
+index da1607c97..90b02ae70 100644
+--- a/PPB/strzalki.txt
++++ b/PPB/strzalki.txt
+@@ -225,7 +225,6 @@ docs.github.com##footer button[class*="scroll-to-top"]
+ doktormonika.pl###page-gotop.page-gotop
+ domdlaciebie.com.pl##.fix-scroll-top
+ domenergo.com###to-to
+-domowa.pizza##.smoothup
+ domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
+ domusfari.pl,swiatekspresow.pl###back_up
+ domzagadek.pl###scroll_strz
+@@ -434,7 +433,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
+ kind.com##.AP_obj-top-button
+ kioxia.com##.icon-top
+ kitsune-subs.anime-odcinki.pl##.smoothscroll-top
+-kler.eu,sklep.sizeer.com##button.scroll
++kler.eu##button.scroll
+ klodzko24.eu##.scroll_top
+ kmdelikatesy.pl###scrollTopPage
+ knorr.pl,lipton.com##.back-to-top-cta
+@@ -570,7 +569,6 @@ nazwa.pl##.arrowUp__wrapper
+ neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
+ neon24.info###button-top
+ neonet.pl##div[class^="scrollTopArrow-wrapper"]
+-news.samsung.com###btn_top
+ newtonmedia.pl##.take-me-up
+ nfon.com##.page-back-to-top
+ njumobile.pl###back-to-top-of-page
+@@ -832,7 +830,6 @@ vwfs.pl##.c-back-to-top
+ wabisabi-store.jp###shopify-section-back_top
+ wago.com##.scroll-hint
+ wasserman.eu##.ws-elevator-btn
+-wbh.wp.mil.pl##.fi-arrow-up
+ websiteplanet.com###new-vendor-scrolltop-button
+ websyc.pl##.to-top-btn
+ wec.com.pl##.go2top
+diff --git a/PPB/strzalki_ogolne_sieciowe.txt b/PPB/strzalki_ogolne_sieciowe.txt
+index 003cd5bbf..1b0cd3adc 100644
+--- a/PPB/strzalki_ogolne_sieciowe.txt
++++ b/PPB/strzalki_ogolne_sieciowe.txt
+@@ -2,4 +2,3 @@
+ /wp-content/*/wpfront-scroll-top.$script
+ /wp-content/plugins/dynamic-to-top/js/dynamic.to.top.min.js
+ /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
+-||back-to-top.appspot.$subdocument
