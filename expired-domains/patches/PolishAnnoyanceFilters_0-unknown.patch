@@ -1,5 +1,42 @@
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index e2a9be153..955f3418b 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1396,7 +1396,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
+ sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
+ sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
+ sklep.regalia.eu##footer > .row > .footer-block:only-child
+-sklep.sizeer.com##.b-footer_newsletter
+ sklep.skrypt.com.pl##.footer-conteiner > ul:nth-of-type(3)
+ sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
+ sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 293476178..a1e52f652 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -5,7 +5,7 @@
+ 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
+ 24hurt.pl##.wt-popup, #overlay
+ 29aleja.pl##.popupWrap
+-50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl,sklep.sizeer.com,tvp.info##.snrs-modal-wrapper, .snrs-modal-content
++50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl,tvp.info##.snrs-modal-wrapper, .snrs-modal-content
+ 80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gameinn.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,kukini.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedawnione.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
+ 1000dni.pl###news-popup
+ 51015kids.eu,lee.pl,willsoor.pl###newsletter_popup
+diff --git a/PPB/push.txt b/PPB/push.txt
+index f1d63e2cf..c9920b10e 100644
+--- a/PPB/push.txt
++++ b/PPB/push.txt
+@@ -1,6 +1,6 @@
+ ~1login.wp.pl,abczdrowie.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,pysznosci.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.wp-push-main-container
+ 2conv.com,flv2mp3.by,flvto.biz##.push-offer
+-50style.pl,carrefour.pl,sklep.sizeer.com###snrs-wp-subscriber
++50style.pl,carrefour.pl###snrs-wp-subscriber
+ agrofakt.pl,agroprofil.pl##.onesignal-slidedown-dialog
+ allani.pl,domodi.pl##div[id*="FakePromptContainer"]
+ andzela.com##.kb-cs-notify-container
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index b8dd55c4c..140751f15 100644
+index d4d5553cb..532f6c68e 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -226,7 +226,6 @@ docs.github.com##footer button[class*="scroll-to-top"]
@@ -10,23 +47,25 @@ index b8dd55c4c..140751f15 100644
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
-@@ -557,7 +556,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
- motogen.pl###gora-przycisk-fixed
-@@ -582,7 +580,6 @@ nazwa.pl##.arrowUp__wrapper
- neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
- neon24.info###button-top
- neonet.pl##div[class^="scrollTopArrow-wrapper"]
--news.samsung.com###btn_top
- newtonmedia.pl##.take-me-up
- nfon.com##.page-back-to-top
- njumobile.pl###back-to-top-of-page
-@@ -851,7 +848,6 @@ vwfs.pl##.c-back-to-top
+@@ -414,7 +413,7 @@ jackjones.com##.js-back-to-top__button
+ jackpot.pl##back-to-top
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+-jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
++jawis.pl,techrol.com,webreklama.pl##.scrollDown
+ jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+ jomfruland.net##.scrollup__placeholder
+@@ -435,7 +434,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
+ kind.com##.AP_obj-top-button
+ kioxia.com##.icon-top
+ kitsune-subs.anime-odcinki.pl##.smoothscroll-top
+-kler.eu,sklep.sizeer.com##button.scroll
++kler.eu##button.scroll
+ klodzko24.eu##.scroll_top
+ kmdelikatesy.pl###scrollTopPage
+ knorr.pl,lipton.com##.back-to-top-cta
+@@ -833,7 +832,6 @@ vwfs.pl##.c-back-to-top
  wabisabi-store.jp###shopify-section-back_top
  wago.com##.scroll-hint
  wasserman.eu##.ws-elevator-btn
