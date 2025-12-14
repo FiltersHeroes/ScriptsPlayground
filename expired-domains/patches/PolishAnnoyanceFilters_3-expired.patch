@@ -1,37 +1,60 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 29cd2c02c..46aa5bb89 100644
+index a18887c17..52ad8eb33 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -845,7 +845,7 @@ robobat.pl###ReferenceBox
- roland-gazeta.pl##.eb-shdelevation.eb-dialog
- rolmax-sklep.pl###index-banner
- rootblog.pl###main > .cs-site-content ~ .cs-nextpost-inner, #main > .cs-site-content ~ .cs-nextpost-inner + .cs-nextpost-loading
--rosarosie.iai-shop.com,zapachyswiata.eu###tws_s_0
-+rosarosie.iai-shop.com###tws_s_0
- rosebelle.pl##.page-loader
- rossmann.pl###__next > section.block:has(> section > a[href*="/pobierz-aplikacje"])
- rowery-elektryczne.pl###b2b-link, #download-catalogue
+@@ -672,7 +672,7 @@ napiachu.pl##.blueNotification:has(a[href="/konto-plazowicza"])
+ naszemiasto.pl###magazyn-boks
+ nasztomaszow.pl##.sidebar > .widget:has(.poll_list)
+ national-geographic.pl##.affix-bottom.row.prev-next-item
+-natural.pl,sekretypoliglotow.pl###someone-purchased
++sekretypoliglotow.pl###someone-purchased
+ naukajazdy-kowalik.pl##.side-tab-widget > a[href="kierowcy.html"]
+ nbi.com.pl###pasek_bottom
+ nbportal.pl###show-tools
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 9849cea0a..8143e88c2 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1020,8 +1020,6 @@ naszerecenzje.wordpress.com###blog_subscription-4
+ naszesprawy.eu##.theiaStickySidebar > div.add-inner:first-of-type, .theiaStickySidebar > div.add-inner:nth-of-type(3)
+ naszhandel.pl##.box_02:nth-of-type(2) > .box_cnt
+ naszraciborz.pl##.comments.right_box:nth-of-type(15)
+-natural.pl##footer aside form.newsletter-form
+-natural.pl##footer aside:has(> form.newsletter-form)
+ natvita.pl##div.footer_about:nth-of-type(4) > div.block.ApHtml:first-of-type
+ naukawpolsce.pl##.followUsElement:not(.mail, .rss)
+ nazdrowie.pl##.widget_custom_html.widget.widget_text
+diff --git a/PPB/newslettery_nie_popupy_sieciowe.txt b/PPB/newslettery_nie_popupy_sieciowe.txt
+index 1f0db3a77..97d437eb0 100644
+--- a/PPB/newslettery_nie_popupy_sieciowe.txt
++++ b/PPB/newslettery_nie_popupy_sieciowe.txt
+@@ -6,7 +6,6 @@
+ ||carry.pl//themes/default/img/newsletter1.png
+ ||dobremiejsce.org/wp-content/themes/dobremiejsce_org_pds/images/s2-980.jpg
+ ||duckuckgo.com/assets/icons/footer/newsletter.svg
+-||forms.freshmail.io^$subdocument,domain=1242.eu|ita.tools|pulsembed.eu
+ ||genway.pl/images/frontend/theme/whitegen/social/newsletter.png
+ ||gofin.pl/images/newslettery_swl.png
+ ||i.perspektywy.net/pages/jhovngq2lj/banners/H41N57ow3HyikR9iXCxK4vKmEyIGFXSVPZHc9ABq.jpeg
+diff --git a/PPB/newslettery_ogolne_sieciowe.txt b/PPB/newslettery_ogolne_sieciowe.txt
+index b6d4bcc19..24b022cba 100644
+--- a/PPB/newslettery_ogolne_sieciowe.txt
++++ b/PPB/newslettery_ogolne_sieciowe.txt
+@@ -1,4 +1,3 @@
+ /btn-newsletter
+ /button/newsletter.jpg
+ /wp-content/plugins/wysija-newsletters
+-||forms.freshmail.io^$subdocument,domain=pl
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 4aa6422f9..c71149a28 100644
+index 3838e4b56..c7e077419 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -9,7 +9,7 @@
- 1000dni.pl###news-popup
- 51015kids.eu,lee.pl,willsoor.pl###newsletter_popup
- aasapolska.pl###leave-page-modal
--aba-sport.pl,alpinsklep.pl,apteka-natura.eu,autochemia.pl,avaro.pl,barokko.pl,bludshop.com,blueskypolska.pl,bogulandia.pl,bugo.pl,butosklep.pl,butylukow.pl,cafeborowka.pl,californiaskateshop.pl,candleworld.com.pl,cosslodkiego.com.pl,cyfra.eu,czasnabuty.pl,damizabawki.pl,denicler.eu,divanii.pl,dowarsztatu.com,e-baseus.com,e-megasport.com,efutro.com.pl,ene-due.eu,gratoria.pl,groomer.com.pl,hile.pl,hydromech.eu,korob.pl,ksiegarnia-edukacyjna.pl,kupbuty.com,littlejungle.pl,malowanebiela.pl,megazoologiczny.pl,meskiegacie.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rovicky.eu,sestimi.pl,sewel.pl,shop.s-a.pl,sportowybazar.pl,stili.pl,surgepolonia.pl,twojeobuwie.pl,ulubionabielizna.pl,unbrokenstore.com,vitasport.pl,wispol.eu,zapachyswiata.eu###topLayerBackDrop, .iai-toplayer__background
-+aba-sport.pl,alpinsklep.pl,apteka-natura.eu,autochemia.pl,avaro.pl,barokko.pl,bludshop.com,blueskypolska.pl,bogulandia.pl,bugo.pl,butosklep.pl,butylukow.pl,cafeborowka.pl,californiaskateshop.pl,candleworld.com.pl,cosslodkiego.com.pl,cyfra.eu,czasnabuty.pl,damizabawki.pl,denicler.eu,divanii.pl,dowarsztatu.com,e-baseus.com,e-megasport.com,efutro.com.pl,ene-due.eu,gratoria.pl,groomer.com.pl,hile.pl,hydromech.eu,korob.pl,ksiegarnia-edukacyjna.pl,kupbuty.com,littlejungle.pl,malowanebiela.pl,megazoologiczny.pl,meskiegacie.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rovicky.eu,sestimi.pl,sewel.pl,shop.s-a.pl,sportowybazar.pl,stili.pl,surgepolonia.pl,twojeobuwie.pl,ulubionabielizna.pl,unbrokenstore.com,vitasport.pl,wispol.eu###topLayerBackDrop, .iai-toplayer__background
- aba-sport.pl,autochemia.pl,bogulandia.pl,californiaskateshop.pl,cosslodkiego.com.pl,cyfra.eu,damizabawki.pl,dowarsztatu.com,efutro.com.pl,gratoria.pl,groomer.com.pl,hydromech.eu,kupbuty.com,meskiegacie.pl,mobile-city.pl,obuwie-lizuraj.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rasowear.pl,sewel.pl,sportowybazar.pl,unbrokenstore.com,vitasport.pl,wispol.eu###tws_i_0
- abc-zoosklep.pl###ec-v-from-popup-cover
- abcfirany.pl,kochamzabawki.eu###InfoNewsletterOkno, #InfoNewsletter
-@@ -119,8 +119,8 @@ auto-swiat.pl,businessinsider.com.pl,fakt.pl,komputerswiat.pl,medonet.pl,noizz.p
- auto-swiat.pl,businessinsider.com.pl,fakt.pl,komputerswiat.pl,medonet.pl,noizz.pl,onet.pl,plejada.pl##body[class]::before
- autokult.pl,fitness.wp.pl,fotoblogia.pl,medycyna24.pl,smaczneblogi.pl###exit-intent-modal
- automotiveceeday.eu,pracodawcagodnyzaufania.pl###rstbox_3
--avaro.pl,blueskypolska.pl,bugo.pl,butosklep.pl,cafeborowka.pl,czasnabuty.pl,hile.pl,littlejungle.pl,okularymarkowe.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,sestimi.pl,shop.s-a.pl,stili.pl,twojeobuwie.pl,ulubionabielizna.pl,zapachyswiata.eu###toplayer_newsletter_popup, #toplayer_newsletter
--avaro.pl,blueskypolska.pl,bugo.pl,butosklep.pl,cafeborowka.pl,czasnabuty.pl,hile.pl,littlejungle.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,sestimi.pl,shop.s-a.pl,stili.pl,twojeobuwie.pl,ulubionabielizna.pl,zapachyswiata.eu##div[id^="tln"][id$="_bg"]
-+avaro.pl,blueskypolska.pl,bugo.pl,butosklep.pl,cafeborowka.pl,czasnabuty.pl,hile.pl,littlejungle.pl,okularymarkowe.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,sestimi.pl,shop.s-a.pl,stili.pl,twojeobuwie.pl,ulubionabielizna.pl###toplayer_newsletter_popup, #toplayer_newsletter
-+avaro.pl,blueskypolska.pl,bugo.pl,butosklep.pl,cafeborowka.pl,czasnabuty.pl,hile.pl,littlejungle.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,sestimi.pl,shop.s-a.pl,stili.pl,twojeobuwie.pl,ulubionabielizna.pl##div[id^="tln"][id$="_bg"]
- axa.pl##.welcome-popup
- azzun.pl##.js-popup.popup
- b4internet.pl###newsletter_container
+@@ -212,7 +212,7 @@ chrzypsko.pl,metaltech.com.pl,vas.com.pl###dhtml_popup
+ ciechocinek.biz,gniewkowo.eu,ki24.info,kolniak24.eu,lowiczanin.info,nizanskie.info,roztocze.net##.hejhej.hey-outer
+ cieszanowrockfestiwal.pl,wantmore.pl##.et_bloom_trigger_bottom.et_bloom_popup
+ citroen-shop.eu##.cp-popup, .cp-popup-overlay
+-cleangang.pl,ekogram.pl,natural.pl,pl.mova.tech,shop-dent.pl,stylion.pl,woliniusz.pl,zenox.pl##body > div:not([class], [id]):has(> .needsclick[class*="kl-private"])
++cleangang.pl,ekogram.pl,pl.mova.tech,shop-dent.pl,stylion.pl,woliniusz.pl,zenox.pl##body > div:not([class], [id]):has(> .needsclick[class*="kl-private"])
+ clickfashion.pl##.layer_cart_overlay
+ clickfashion.pl,dzwignice.info,embryolisse.pl,lenovozone.pl,mohito.com,woblink.com,xlm.pl,zdrowie.pap.pl###newsletter-popup
+ clinic4car.pl##.newsletter-popup-zone

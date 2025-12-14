@@ -1,8 +1,8 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index e2a9be153..955f3418b 100644
+index fb2d6ec1c..97964a078 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1396,7 +1396,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
+@@ -1399,7 +1399,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
  sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
  sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
  sklep.regalia.eu##footer > .row > .footer-block:only-child
@@ -11,7 +11,7 @@ index e2a9be153..955f3418b 100644
  sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
  sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 293476178..a1e52f652 100644
+index 3dd280da9..f58566c0f 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,7 +5,7 @@
@@ -36,10 +36,10 @@ index f1d63e2cf..c9920b10e 100644
  allani.pl,domodi.pl##div[id*="FakePromptContainer"]
  andzela.com##.kb-cs-notify-container
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index d4d5553cb..532f6c68e 100644
+index a5ad54b40..48765c428 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -226,7 +226,6 @@ docs.github.com##footer button[class*="scroll-to-top"]
+@@ -227,7 +227,6 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
  domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
@@ -47,16 +47,16 @@ index d4d5553cb..532f6c68e 100644
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
-@@ -414,7 +413,7 @@ jackjones.com##.js-back-to-top__button
- jackpot.pl##back-to-top
+@@ -416,7 +415,7 @@ jackpot.pl##back-to-top
  janssen.tv##.move-btn__parent
  jarock.pl,mentel.com.pl###back-to-top-btn
--jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
-+jawis.pl,techrol.com,webreklama.pl##.scrollDown
- jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
  jmlnet.pl##.pi-scroll-top-arrow
  jomfruland.net##.scrollup__placeholder
-@@ -435,7 +434,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
+ journals.viamedica.pl##.Back_To_Top_Button
+@@ -436,7 +435,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
  kind.com##.AP_obj-top-button
  kioxia.com##.icon-top
  kitsune-subs.anime-odcinki.pl##.smoothscroll-top
@@ -65,7 +65,15 @@ index d4d5553cb..532f6c68e 100644
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
  knorr.pl,lipton.com##.back-to-top-cta
-@@ -833,7 +832,6 @@ vwfs.pl##.c-back-to-top
+@@ -573,7 +572,6 @@ nazwa.pl##.arrowUp__wrapper
+ neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
+ neon24.info###button-top
+ neonet.pl##div[class^="scrollTopArrow-wrapper"]
+-news.samsung.com###btn_top
+ newtonmedia.pl##.take-me-up
+ nfon.com##.page-back-to-top
+ njumobile.pl###back-to-top-of-page
+@@ -835,7 +833,6 @@ vwfs.pl##.c-back-to-top
  wabisabi-store.jp###shopify-section-back_top
  wago.com##.scroll-hint
  wasserman.eu##.ws-elevator-btn

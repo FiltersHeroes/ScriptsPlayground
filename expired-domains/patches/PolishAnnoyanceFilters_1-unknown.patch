@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index f8028b0d5..d2c3b4788 100644
+index b45acf989..a18887c17 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -818,7 +818,7 @@ pswbp.pl###accessibility-links
+@@ -819,7 +819,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -11,11 +11,23 @@ index f8028b0d5..d2c3b4788 100644
  pyszne.pl##div[data-qa="app-banner"]
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index 97964a078..9849cea0a 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1677,7 +1677,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
+ wrp.pl##.vc_general.vc_cta3
+ wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
+ wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
+-wseit.edu.pl###btn-newsletter
+ wspieramrozwoj.pl##.newslatter
+ wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
+ wtk.pl###newsletter-animated-box
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index a1e52f652..99916e1e9 100644
+index f58566c0f..3838e4b56 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -692,7 +692,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -697,7 +697,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -24,10 +36,10 @@ index a1e52f652..99916e1e9 100644
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 1ef143b8b..592e57a2b 100644
+index c407355fd..e989bd86a 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -105,7 +105,6 @@ brief.pl##.fab-desktop
+@@ -106,7 +106,6 @@ brief.pl##.fab-desktop
  brw.pl##.brw_opineo.icon-menu
  bssztum.pl###widget_social2
  budus-developer.pl##.footer-floating-button
@@ -35,7 +47,7 @@ index 1ef143b8b..592e57a2b 100644
  buy-it.pl###crisp-chatbox
  cadenas.de##.notification_bar_content > .item.contact
  cadsoft.pl##.arrow-seeMe
-@@ -126,12 +125,12 @@ cdp.pl###customTrustbadge
+@@ -127,12 +126,12 @@ cdp.pl###customTrustbadge
  cebit.pl,guzik.konin.pl##.fab
  ceneo.pl###recent-activity-toast
  centrumpapieru.pl##.sb-chat-btn
@@ -50,7 +62,7 @@ index 1ef143b8b..592e57a2b 100644
  clineo.pl###contact_widget
  cmolmed.pl###footer > .module:last-child
  cmp.med.pl###altar-eye-catcher-div-container
-@@ -336,7 +335,6 @@ karmi.pl##.scrolled.homecontact
+@@ -337,7 +336,6 @@ karmi.pl##.scrolled.homecontact
  kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
  ketowpraktyce.pl###chatbox
  kind.com##.AP_mod--button-symbol
@@ -58,7 +70,7 @@ index 1ef143b8b..592e57a2b 100644
  klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
  klinikawitaminowa.pl##.ic-phone-button
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
-@@ -493,7 +491,7 @@ polkurier.pl##.pk-chat-container
+@@ -494,7 +492,7 @@ polkurier.pl##.pk-chat-container
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -67,7 +79,7 @@ index 1ef143b8b..592e57a2b 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -513,7 +511,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -514,7 +512,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -75,6 +87,14 @@ index 1ef143b8b..592e57a2b 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
+@@ -671,7 +668,6 @@ wiked.pl##div[id^="menuboczne"]:nth-of-type(8)
+ wizjamed.pl###callbutton
+ wnt.com##.sticky-contact
+ wolnekonopie.org##.kleo-quick-contact-link
+-wseit.edu.pl###btn-tel
+ wspieram.to###staff-chat-button
+ www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
+ www.ibm.com###contact-module
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
 index 5ae6aa8b1..272887a78 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
