@@ -47,7 +47,7 @@ jobs:
         KAD: ${{ fromJson(needs.KAD_S.outputs.KAD-strategy-matrix) }}
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v7
         with:
           name: E_KAD_S
           path: split
@@ -118,7 +118,7 @@ jobs:
         KADH: ${{ fromJson(needs.KADHWWW_S.outputs.KADh-strategy-matrix) }}
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v7
         with:
           name: E_KADHWWW_S
           path: split
