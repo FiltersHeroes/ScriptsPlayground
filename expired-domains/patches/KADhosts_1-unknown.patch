@@ -1,8 +1,16 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index b0e9f574f..28da5e975 100644
+index c9b124f9a..aedac9ca7 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -31,7 +31,6 @@
+@@ -4,7 +4,6 @@
+ ||a.ero.bullrun-new.com^
+ ||abc.travel2days.com^
+ ||activestin-pl.great-beauty.org^
+-||adpro.futurenet.club^
+ ||affiliate.playhub.store^
+ ||aoc.teleaudio.pl^
+ ||api.myeforsa.pl^
+@@ -31,7 +30,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
  ||dev.apps.co.pl^
@@ -10,7 +18,7 @@ index b0e9f574f..28da5e975 100644
  ||download.apps.co.pl^
  ||download.file.co.pl^
  ||dziennik-info.x9.eu^
-@@ -79,7 +78,6 @@
+@@ -79,7 +77,6 @@
  ||foto-zdjecia.24.eu^
  ||free.apps.co.pl^
  ||free.file.co.pl^
@@ -18,7 +26,7 @@ index b0e9f574f..28da5e975 100644
  ||freeiqtest.blogspot.com^
  ||g2eld.doctorhey.com^
  ||game.apps.co.pl^
-@@ -124,19 +122,16 @@
+@@ -124,19 +121,15 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -33,12 +41,12 @@ index b0e9f574f..28da5e975 100644
  ||myorlenblog.myfreesites.net^
  ||naszemiasto-fakty24.x9.eu^
  ||naszemiasto-wiadomosci24.x9.eu^
- ||netflix.apps.co.pl^
+-||netflix.apps.co.pl^
 -||news24.ushoppyworld.com^
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -146,7 +141,6 @@
+@@ -146,7 +139,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -46,7 +54,7 @@ index b0e9f574f..28da5e975 100644
  ||ping.ublock.org^
  ||pl1-germivir.great-goods.org^
  ||pl1.colladioxprosale.com^
-@@ -294,10 +288,7 @@
+@@ -294,11 +286,7 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -54,10 +62,11 @@ index b0e9f574f..28da5e975 100644
  ||pl.thepawland.com^
 -||play.leadzu.com^
 -||pocztapolska24.pl^
- ||polska.enchantevent.com^
+-||polska.enchantevent.com^
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
-@@ -336,7 +327,6 @@
+ ||preg.viciworld.com^
+@@ -335,7 +323,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
