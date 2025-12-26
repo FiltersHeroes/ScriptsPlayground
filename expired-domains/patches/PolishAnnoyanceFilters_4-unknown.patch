@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 03400a712..e06f35b0a 100644
+index e7bc938cc..89d51db45 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -3,10 +3,8 @@
@@ -23,9 +23,12 @@ index 03400a712..e06f35b0a 100644
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -41,7 +39,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+@@ -39,9 +37,9 @@ agrobex.pl##div:nth-of-type(6)
+ agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
+ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
  agrohandel.com.pl###jcemediabox-popup-page
- agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+-agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
++betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
  agromix.agro.pl##.nivo-lightbox-overlay
 -agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
 +agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
@@ -94,7 +97,7 @@ index 03400a712..e06f35b0a 100644
  longterm.pl###list-builder
  longterm.pl###popup-box
  lookfantastic.pl,myprotein.pl##.emailReengagement
-@@ -643,7 +640,6 @@ podworko.nivea.pl###pobierz-apke-popup
+@@ -642,7 +639,6 @@ podworko.nivea.pl###pobierz-apke-popup
  pol-nor.com###boxpopup, #overlay, #popforfirma
  policja.gov.pl###blisko, .modal-backdrop
  policja.gov.pl,policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
@@ -103,10 +106,18 @@ index 03400a712..e06f35b0a 100644
  polityka.pl##.cg_subscribe99_banner_apla
  polityka.pl##div[class^="cg_promo"][class$="_popup"]
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 7ecffaca3..28e704676 100644
+index 7ecffaca3..e22fcd180 100644
 --- a/PPB/popupy_sieciowe.txt
 +++ b/PPB/popupy_sieciowe.txt
-@@ -74,7 +74,6 @@
+@@ -51,7 +51,6 @@
+ ||jsystems.pl/resources/js/modal.js
+ ||kbhakord.pl/sites/all/modules/popup_announcement/popup_announcement.js
+ ||kierunekspozywczy.pl/js/magnific-popup/jquery.magnific-popup.js
+-||kuchenny.com.pl/popup/js/jquery.simplemodal.js
+ ||liceum.org.pl/modules/mod_mh_ajax_popup/js/mhap.js
+ ||losyziemi.pl/?spu_action=spu_load&lang=
+ ||m-wierchomla.youlead.pl/ylcustom.js
+@@ -74,7 +73,6 @@
  ||proto.pl/popup_newsletter/settings
  ||regus.pl/Home/OnExitModal$xmlhttprequest
  ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js

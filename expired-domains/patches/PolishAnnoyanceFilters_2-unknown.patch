@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 04ea78d35..cf765c296 100644
+index b3f8c2764..9fc6ce7a9 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -18,7 +18,7 @@
@@ -29,6 +29,15 @@ index 04ea78d35..cf765c296 100644
  biznes.gazetaprawna.pl,dziennik.pl,forsal.pl##.newsButton
  blik.com,emaillabs.io##.newsletter-iframe
  blip.pl###salesmanagoIframe
+@@ -261,7 +261,7 @@ buslapidus.pl,pasja-informatyki.pl##.widget_1
+ butybuty.pl,delis.pl,diamir.sklep.pl,eltkom.pl,telefony-gdansk.pl,wetro.pl##div.col-md-3.col-sm-6.col-xs-12.col-xxs:nth-of-type(4)
+ butyjana.pl##.bjNewsletterText
+ butyraj.pl##.hidden-phone.top_toplayer
+-bydgoszcz.com,ct.jaworzno.pl,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
++bydgoszcz.com,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
+ byinsomnia.com,mniammniam.com,opakowania24.eu,r-gol.com,rylko.com,stoprocent.com,unisono.eu##.newsletter-container
+ bytom.com.pl##.footer-new__newsletter
+ cafago.com,tomtop.com##.m_subscribe_input
 @@ -381,7 +381,6 @@ dexpol.com##.stopka2_center > div.box_info:first-of-type
  di.com.pl##.footcol:nth-of-type(5) > form, .footcol:nth-of-type(5) > p, .footcol:nth-of-type(5) > .footnag:first-of-type
  dialog.mazovia.pl,galeriabronowice.pl##.news
@@ -88,7 +97,15 @@ index 04ea78d35..cf765c296 100644
  placesandplants.com###subscribe-blog-blog_subscription-2, footer div.col:first-of-type > div.widget:nth-of-type(3) > .widget-title
  planet.pl###zapis-do-newsletter
  platforma.org##.footer > .newsletter-container
-@@ -1236,7 +1228,6 @@ powerman.com.pl##.pm_newsletter
+@@ -1217,7 +1209,6 @@ polygamia.pl###sidebar-footer-top-right
+ popvinyl.pl##.xl\:mt-0.mt-6.p-6.shadow-custom
+ poradnikhandlowca.com.pl##.section-bar-newsletter
+ poradnikogrodniczy.pl##.sidebar-menu > div.block:nth-of-type(4)
+-poradybudowlane.com.pl###search2
+ porcja.eu###footer-top-news
+ porozmawiajmy.tv###text-36
+ porta.com.pl##.newsletter--section > div > div:not(.advertisement--container)
+@@ -1236,7 +1227,6 @@ powerman.com.pl##.pm_newsletter
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl
  poznan.factory.pl##.pane-2.pane-custom.panel-pane
@@ -96,7 +113,7 @@ index 04ea78d35..cf765c296 100644
  prawo.pl##.wkNewsletterBlock
  prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
  press.pl##.pressletter
-@@ -1364,7 +1355,6 @@ silesiasem.pl##.entry-content > form
+@@ -1364,7 +1354,6 @@ silesiasem.pl##.entry-content > form
  silesion.pl##.pageFooter__newsletter
  sinsay.com##.home-ss20-newsletter
  sipma.pl###newslet
@@ -104,7 +121,15 @@ index 04ea78d35..cf765c296 100644
  skalnik.pl##.newsletter_content.footer
  skapiec.pl##section.newsletter
  ski4you.pl##footer#footer.footer .widget--signup
-@@ -1733,7 +1723,6 @@ zasiejpole.pl##main > div.grid:has(> div > div > div[data-module-name="newslette
+@@ -1520,7 +1509,6 @@ telix.pl###mailster_signup-3
+ telko.in##ul > li > .tip[data-tip="Biuletyny TELKO.in"]
+ temi.pl##.module:nth-of-type(8) > div > div > div
+ teraz-srodowisko.pl###footer-newsletter-container
+-termet.com.pl###newsletter-block
+ termyszaflary.com##footer div.col-md-4:nth-of-type(3)
+ terrymoda.pl##footer > .grid-container > div[class]:nth-of-type(2)
+ tesco.pl##.leaflets_subscribe_itesco
+@@ -1732,7 +1720,6 @@ zasiejpole.pl##main > div.grid:has(> div > div > div[data-module-name="newslette
  zawady.com.pl###subscribe
  zdobadzkobiete.pl###access
  zdrowie.pap.pl##section ~ a[href="/newsletter/form"]
@@ -113,10 +138,10 @@ index 04ea78d35..cf765c296 100644
  zegarkiipasja.pl###contactBoxForm
  zgarden.pl##.col-xs-6.col-sm-5.col-lg2-offset-5.col-lg2-3
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 1f7f57f0c..03400a712 100644
+index 1837fe085..e7bc938cc 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -629,7 +629,6 @@ pl.aleteia.org##.newsletter-popups
+@@ -628,7 +628,6 @@ pl.aleteia.org##.newsletter-popups
  pl.geofumadas.com,webmastah.pl##.ulp-window, .ulp-overlay
  pl.hinative.com##.mod_banner_register_float_pc
  pl.kronospan-express.com###modalWindowCMSubscribes, .iziModal-overlay

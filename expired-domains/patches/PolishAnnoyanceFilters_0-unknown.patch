@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index eaafea8a7..a07b104c1 100644
+index 6485c0e72..2e56f8529 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -892,7 +892,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -893,7 +893,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -23,7 +23,7 @@ index 8b6104e03..04ea78d35 100644
  sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
  sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index b0ee97d0b..b701d55a7 100644
+index 567aa8520..8213afb9b 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,7 +5,7 @@
@@ -35,17 +35,8 @@ index b0ee97d0b..b701d55a7 100644
  80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gameinn.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,kukini.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedawnione.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
  1000dni.pl###news-popup
  51015kids.eu,lee.pl,willsoor.pl###newsletter_popup
-@@ -521,7 +521,7 @@ merwinski.pl##.ppsPopupListsShell, #ppsPopupBgOverlay
- metal-bud.eu##.banner-b2b
- metin2list.pl###news_popup
- mgprojekt.com.pl##.orlando-whiteboard.orlando-background, .jupiter-entrance.jupiter-background.optin-monster-saas-overlay
--miastonowydwor.pl,paslek.pl,um.gorzow.pl###js__popupContainer
-+miastonowydwor.pl,paslek.pl###js__popupContainer
- michelin.pl##.apos-dialog-box-blackout
- microsoft.com##.newsletter-pop-up
- mierzeja.com###banner-popup
 diff --git a/PPB/push.txt b/PPB/push.txt
-index f1d63e2cf..424af016a 100644
+index f1d63e2cf..c9920b10e 100644
 --- a/PPB/push.txt
 +++ b/PPB/push.txt
 @@ -1,6 +1,6 @@
@@ -56,28 +47,20 @@ index f1d63e2cf..424af016a 100644
  agrofakt.pl,agroprofil.pl##.onesignal-slidedown-dialog
  allani.pl,domodi.pl##div[id*="FakePromptContainer"]
  andzela.com##.kb-cs-notify-container
-@@ -55,7 +55,7 @@ termedia.pl##body #ue_popups > #ue_push_dialog
- travelplanet.pl##.fcx-push-modal
- tunelefoliowe.eu##.wce_has-label.wce_popup-consolidator-trigger
- tygodniowa.pl##iframe[style*="fixed"]:not([src])
--um.gorzow.pl,wielen.pl,wronki.pl###js__webpushBell
-+wielen.pl,wronki.pl###js__webpushBell
- urban-vpn.com##.rgbc-slidedown-dialog
- wnp.pl##amp-web-push-widget
- www.interia.pl##header.page-header:has(#header_push_list .push-list-lock ~ .push-list-ul:empty) nav .push-number:only-child:not(:has(> *))
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index e990bf61f..be1109393 100644
+index e990bf61f..8dd3e1536 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -227,7 +227,6 @@ docs.github.com##footer button[class*="scroll-to-top"]
- doktormonika.pl###page-gotop.page-gotop
- domdlaciebie.com.pl##.fix-scroll-top
- domenergo.com###to-to
--domowa.pizza##.smoothup
- domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
- domusfari.pl,swiatekspresow.pl###back_up
- domzagadek.pl###scroll_strz
-@@ -438,7 +437,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
+@@ -418,7 +418,7 @@ jackpot.pl##back-to-top
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+ jomfruland.net##.scrollup__placeholder
+ journals.viamedica.pl##.Back_To_Top_Button
+@@ -438,7 +438,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
  kind.com##.AP_obj-top-button
  kioxia.com##.icon-top
  kitsune-subs.anime-odcinki.pl##.smoothscroll-top
@@ -86,24 +69,7 @@ index e990bf61f..be1109393 100644
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
  knorr.pl,lipton.com##.back-to-top-cta
-@@ -528,7 +527,7 @@ meskietematy.pl,tranzystor.pl###vl-back-top
- metalgearsolid.pl###return_top
- mghome.pl###footgroup-last
- miasto.zgierz.pl###slidetotop.slidetotop
--miastonowydwor.pl,um.gorzow.pl,wimbp.gorzow.pl,wronki.pl##.go_up__wrapper
-+miastonowydwor.pl,wimbp.gorzow.pl,wronki.pl##.go_up__wrapper
- mil.link,psycholog-pisze.pl##.buttontop-top
- millymally.pl##.page-up
- milmag.pl##.doScrollTop
-@@ -575,7 +574,6 @@ nazwa.pl##.arrowUp__wrapper
- neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
- neon24.info###button-top
- neonet.pl##div[class^="scrollTopArrow-wrapper"]
--news.samsung.com###btn_top
- newtonmedia.pl##.take-me-up
- nfon.com##.page-back-to-top
- njumobile.pl###back-to-top-of-page
-@@ -740,7 +738,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -740,7 +740,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -111,7 +77,7 @@ index e990bf61f..be1109393 100644
  sklum.com##.js-goToTop
  skrzynie.com.pl###wsa_button_up
  skutecznie.tv##.to_the_top
-@@ -836,7 +833,6 @@ vwfs.pl##.c-back-to-top
+@@ -836,7 +835,6 @@ vwfs.pl##.c-back-to-top
  wabisabi-store.jp###shopify-section-back_top
  wago.com##.scroll-hint
  wasserman.eu##.ws-elevator-btn
