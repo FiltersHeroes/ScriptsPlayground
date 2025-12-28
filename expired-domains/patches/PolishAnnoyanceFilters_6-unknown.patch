@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 88a337c17..175ea8272 100644
+index fd557ebda..33b478707 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -3,10 +3,8 @@
@@ -17,7 +17,7 @@ index 88a337c17..175ea8272 100644
 @@ -25,7 +23,7 @@ addhost.pl##.fsp-wrapper
  addons.opera.com,altair.com.pl,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
  admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
- adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
+ adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,ladnebebe.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
 -adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
 +ulice.um.warszawa.pl###init_info[style], #komunikat[style]
  adria-art.pl###overlay, .popup.newsletter
@@ -32,16 +32,16 @@ index 88a337c17..175ea8272 100644
  agrosiec.pl,angelgold.pl,bolix.pl##.modal
  agrotopparts.pl###kartka, #kartka ~ #tlo
  akademia.nask.pl###newsletterall
-@@ -92,7 +90,7 @@ artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com
+@@ -93,7 +91,7 @@ artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com
  arturjablonski.com,eswinoujscie.pl##.ulp-layer, .ulp-overlay
  asd.pl##.popUpHolder, #Fader
  ashampoo.com##.exitlayer
 -askarzeznik.pl,greenpolska.com,ogrodnictwo.expert,primadance.pl###popup-box-gfcr-1
 +askarzeznik.pl,greenpolska.com,primadance.pl###popup-box-gfcr-1
+ asta-net.pl##.jsHomeBookCallModal
  asta-net.pl##html:not([style*="overflow"]) body:not([style*="overflow"]) #popup-call
  asta-net.pl##html:not([style*="overflow"]) body:not([style*="overflow"]) #popup-call-shadow
- astratex.pl###PopUpBanner
-@@ -101,7 +99,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+@@ -103,7 +101,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
  astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
@@ -50,7 +50,7 @@ index 88a337c17..175ea8272 100644
  atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
  atrexpress.com.pl,ch24.pl###popup-box, #list-builder
  atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
-@@ -152,7 +150,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
+@@ -154,7 +152,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
  biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
  bioindygo.pl###popup-1
  biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
@@ -59,7 +59,7 @@ index 88a337c17..175ea8272 100644
  bitdefender.pl,eluban.pl,izigsm.pl,jaslo4u.pl,krasnik.eu,kukulahealthyfood.pl,motherhood.pl,muzeumwp.pl,planujemyogrod.pl,przepisychinskie.pl,rankomat.pl,roltech.eu,sagana.pl,sklepdekarza.pl,sklepdlarolnika.pl,spodiglyinitki.pl,sushi-sklep.pl###popup
  biuroprasowe.pl###global_overlay_cont, #global_overlay
  biznesoutfit.pl###formWrapper, #formOverlay
-@@ -201,7 +199,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
+@@ -205,7 +203,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
  chillglobal.pl##.bounceright-popup-acm.popup-acm
  chinytolubie.pl##.ui-dialog-titlebar-close, .ui-widget-overlay
  chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl##div[data-gr="popup-container"]
@@ -68,7 +68,15 @@ index 88a337c17..175ea8272 100644
  cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
  chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
  chronpesel.pl##.wh-popUp-overlay
-@@ -287,7 +285,7 @@ e-insportline.pl###vivpopup-collapsed
+@@ -267,7 +265,6 @@ dlapacjenta.pl##.bhr-iframe-holder--custom
+ dluta.pl###fx-modal-3
+ dobredomy.pl###pop_promocja
+ dobremiejsce.org##.wph-modal
+-dodaj-strone.com.pl###popupframe, #popupframe_bg
+ dodrukarki.pl##header > .mp_container
+ dogry.pl##.register-overlayer--game, .register-modal
+ domar.pl##.hours-popup
+@@ -293,7 +290,7 @@ e-insportline.pl###vivpopup-collapsed
  e-kidsplanet.com##.banner, .banner-curtain
  e-kwiaty.pl###exitpopup-newsletter
  e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
@@ -77,7 +85,7 @@ index 88a337c17..175ea8272 100644
  e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
  e-spar.com.pl###modal-welcome
  e-spar.com.pl###modal-welcome[style] ~ .modal-backdrop
-@@ -326,7 +324,6 @@ fabrykawafelkow.pl###someone-purchased
+@@ -333,7 +330,6 @@ fabrykawafelkow.pl###someone-purchased
  fabrykazabawek.eu###helloModal
  faie.pl###searchPopUp
  fajnekonkursy.pl###tnp-modal
@@ -85,16 +93,7 @@ index 88a337c17..175ea8272 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
-@@ -473,7 +470,7 @@ linguajob.pl##.popup, #get-similar-offers
- linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
- listymikolaja.pl###newsletter_layer
- loanme.pl##.exit-popup-block
--lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
-+lodzkietargi.pl,slaskietargi.pl###popup_mlm
- longterm.pl###list-builder
- longterm.pl###popup-box
- lookfantastic.pl,myprotein.pl##.emailReengagement
-@@ -637,7 +634,6 @@ podworko.nivea.pl###pobierz-apke-popup
+@@ -642,7 +638,6 @@ podworko.nivea.pl###pobierz-apke-popup
  pol-nor.com###boxpopup, #overlay, #popforfirma
  policja.gov.pl###blisko, .modal-backdrop
  policja.gov.pl,policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
