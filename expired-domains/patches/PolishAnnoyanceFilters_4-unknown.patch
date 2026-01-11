@@ -1,0 +1,98 @@
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 8d5938cce..1bb2b5c6b 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -38,7 +38,7 @@ agroperfekt.pl##.js-marquee-wrapper
+ ahe.lodz.pl###wysuwane7, #wysuwane2
+ airly.eu##.air-quality, .header__links
+ akademiaap.com###sidebar
+-akson.pl,di-polska.pl###medical-comp-info-bar
++akson.pl###medical-comp-info-bar
+ aktualnyodpis.pl###carq-iframe
+ alablaboratoria.pl###small-pop-up
+ alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
+@@ -180,7 +180,6 @@ castrol.com##footer > div > div.nv-parsys-component.nv-container
+ catawiki.pl##body > .be-cornerlabel
+ cdaction.pl,pcformat.pl,pomponik.pl,smaker.pl##body > .topbar
+ cefarm24.pl,dlapacjenta.pl###drawer
+-centrumdruku.com.pl##.ra-animated.ranking-wrapper
+ cenyrolnicze.pl##.bd-margins.bd-headerarea-1, .jf_mm_trigger, .zgloszeniaPanel
+ certyficate.it,github.com,github.io##a[href*="paypal.me/pools/c/87zNJ8OJ3I"], a[href*="paypal.com/pools/c/87zNJ8OJ3I"]
+ chojnow.pl###login-box
+@@ -198,7 +197,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+ comarch.pl##.widget-detach-right-bar-container
+ context.reverso.net###register-popup-bottom
+ coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
+-covircontrol.pl,likefb.pl###message-purchased
++likefb.pl###message-purchased
+ cowsierscipiszczy.pl##.CampaignType--floating
+ creativecommons.org###deed-donate-slide
+ creativehobby.pl###ch-strip
+@@ -351,7 +350,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+ forum.dobreprogramy.pl##.header-cloak
+ forum.dobreprogramy.pl##.nav-link[href*="/blogi"]
+ forum.duolingo.com##.GB_SB
+-forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
+ forum.muratordom.pl###left_circus > .dostepne_mobile
+ forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
+ forum.swiateczne.info##.av-preloader-box
+@@ -560,8 +558,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+ linuxporady.pl,pskrk.com##.crestaPostsBox
+ literackifestiwal.zakopane.eu###g-page-preloader
+ lodzkie.pl##.jj_sl_custom2
+-login.aliorbank.pl##.mobile-app-add
+-login.ingbank.pl###smart-app-banner-region
+ losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
+ lvbet.pl##splash-loader
+ m.leroymerlin.pl##.smart-app-banner
+@@ -592,7 +588,7 @@ matopat24.pl##.aks-about
+ maxsklep.pl##.widgets
+ mbank.pl##.covered.edge-menu
+ mebleczarnkow.pl###widget_block
+-mebline.co.uk,mebline.nl##.order.hidden-xs.hidden-sm
++mebline.nl##.order.hidden-xs.hidden-sm
+ meblohaus.pl##.big-link
+ meblohurt.eu###box_slider_3
+ meblohurt.eu,sklep.hultajpolski.pl###MX_hotinfo
+@@ -886,7 +882,6 @@ sklep-wedkarski.info###ClPanelImg
+ sklep.aladyn.pl,sklep.mariall.pl###trzecia
+ sklep.bioceriq.pl##.mfn-fake-sale-noti
+ sklep.farmona.pl##.tabs > section.product_link_nav
+-sklep.fusic.pl##.fa-google
+ sklep.odziez-robocza.com###druga_ikona
+ sklep.pakrol.pl##.suggest-slider
+ sklep.veterynaria.pl###sideTab
+@@ -948,7 +943,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+ swiezoizdrowo.pl###sales-booster-popup
+ sympatia.onet.pl###iconsBar
+ syngenta.pl##.pane-menu-menu-sticky-menu
+-system.aliorbank.pl##app-mobile-app-banner
+ szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
+ szkolnastrona.pl##.btn-fav
+ sznyt.pl##.recommended-articles
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index e6256a74c..3673fbd9c 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -130,7 +130,7 @@ astratex.pl###MailNewsForm
+ atakto.pl##.sidebar-newsletter-wrapper
+ atlantic.pl###blockEmailSubscription_displayHome
+ atlastours.pl##div[style*="newsletter.png"]
+-atrakcjenaimprezy.pl,kom-ster.pl,mebline.co.uk,mebline.nl,mebline.pl##.moduletable_newsletter
++atrakcjenaimprezy.pl,kom-ster.pl,mebline.nl,mebline.pl##.moduletable_newsletter
+ atrexpress.com.pl##.nlsection
+ atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-felicity.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,promenada.com##section.pop-up > button.btn-pop-up[data-toggle="modal"]
+ atriumsystem.eu##.box-newsletter.box
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 35ad5f128..bb3d7242a 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -503,7 +503,7 @@ masterproject.pl##.hover_bkgr_fricc
+ mateuszrus.pl##.moModal.moOptinForm
+ maxizoo.pl##.add-to-cart-modal
+ mazovia.pl##.blok-DefaultSubskrypcja
+-mebline.co.uk,mebline.nl###popup-message-container
++mebline.nl###popup-message-container
+ med-store.pl###okno_wyjscie.okno_wyjscie
+ media-tech.eu###popup_mediatech
+ media-tech.eu,polskimarket.de,vanitysklep.pl###Overlay
