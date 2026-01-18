@@ -1,0 +1,24 @@
+diff --git a/PPB/push.txt b/PPB/push.txt
+index cc380a1a6..a0cdd8444 100644
+--- a/PPB/push.txt
++++ b/PPB/push.txt
+@@ -1,5 +1,5 @@
+ ~1login.wp.pl,abczdrowie.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,pysznosci.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.wp-push-main-container
+-2conv.com,flv2mp3.by,flvto.biz##.push-offer
++2conv.com,flvto.biz##.push-offer
+ 50style.pl,carrefour.pl,www.komputronik.pl###snrs-wp-subscriber
+ agrofakt.pl,agroprofil.pl##.onesignal-slidedown-dialog
+ allani.pl,domodi.pl##div[id*="FakePromptContainer"]
+diff --git a/PPB/push_sieciowe.txt b/PPB/push_sieciowe.txt
+index 61b7da7b4..31a442332 100644
+--- a/PPB/push_sieciowe.txt
++++ b/PPB/push_sieciowe.txt
+@@ -17,7 +17,7 @@
+ /sw.js$domain=adaware.com|mojwzrok.pl|openload.co|optes.pl|podaj.to|taniesoczewki.pl
+ /web-push/*$xmlhttprequest,domain=brw.pl|eobuwie.com.pl|military.pl
+ @@/sw.js$domain=youtube.com
+-||cdn.*.com/push_app.js$script,domain=2conv.com|flv2mp3.by|flvto.biz
++||cdn.*.com/push_app.js$script,domain=2conv.com|flvto.biz
+ ||cdn.foxpush.net/sdk/foxpush_SDK_min.js$domain=media4web.pl
+ ||cdn.qgraph.io/v3/r/qgraph.v2.js$domain=domodi.pl|homebook.pl
+ ||cdn.siteswithcontent.com/js/push/subscribe.js$script,domain=postimages.org|postimg.cc

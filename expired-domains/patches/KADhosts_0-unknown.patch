@@ -1,57 +1,32 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 3791b9b6c..fdefdaa79 100644
+index 2eed880f8..4202bc3f2 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,9 +4,7 @@
+@@ -4,7 +4,6 @@
  ||a.ero.bullrun-new.com^
  ||abc.travel2days.com^
  ||activestin-pl.great-beauty.org^
 -||adpro.futurenet.club^
  ||aoc.teleaudio.pl^
--||api.myeforsa.pl^
+ ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
- ||apteline.deal-pl.shop^
- ||biedronka-zamyka-sklepy.24.eu^
-@@ -21,7 +19,6 @@
+@@ -20,7 +19,6 @@
+ ||ce.wielkanagroda.com^
  ||ce.wielkaniespodzianka.pl^
  ||ce.winfreetoday.com^
- ||chomikuj-new-t1.opx.pl^
--||cloud.file.co.pl^
+-||chomikuj-new-t1.opx.pl^
+ ||cloud.file.co.pl^
  ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
  ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
- ||czas-na-fb.blogspot.com^
-@@ -29,10 +26,6 @@
- ||darmowe-bony.24.eu^
+@@ -30,7 +28,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
--||dev.apps.co.pl^
+ ||dev.apps.co.pl^
 -||dotpay.pocztapolska24.pl^
--||download.apps.co.pl^
--||download.file.co.pl^
+ ||download.apps.co.pl^
+ ||download.file.co.pl^
  ||dziennik-info.x9.eu^
- ||dziennik-polski.x9.eu^
- ||echo-dnia.24.eu^
-@@ -76,19 +69,15 @@
- ||fleboxin.fair-2sale.com^
- ||fotaonline.24.eu^
- ||foto-zdjecia.24.eu^
--||free.apps.co.pl^
--||free.file.co.pl^
- ||free.propdfconverter.com^
- ||freeiqtest.blogspot.com^
- ||g2eld.doctorhey.com^
--||game.apps.co.pl^
- ||gazeta-polska.24.eu^
- ||glikotril.fair-2sale.com^
- ||glukofin-pol.eddy-goods.com^
- ||gotowanie.pl.edrrak.com^
- ||gw.firesub.pl^
- ||gzs2u.doctortrf.com^
--||hd.vod.co.pl^
- ||hp.myway.com^
- ||i7s86.doctorhey.com^
- ||info-polska.24.eu^
-@@ -123,19 +112,16 @@
+@@ -124,19 +121,16 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -71,7 +46,7 @@ index 3791b9b6c..fdefdaa79 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -145,7 +131,6 @@
+@@ -146,7 +140,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -79,7 +54,7 @@ index 3791b9b6c..fdefdaa79 100644
  ||ping.ublock.org^
  ||pl1-germivir.great-goods.org^
  ||pl1.colladioxprosale.com^
-@@ -293,11 +278,7 @@
+@@ -294,11 +287,7 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -91,7 +66,7 @@ index 3791b9b6c..fdefdaa79 100644
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -334,7 +315,6 @@
+@@ -335,7 +324,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
