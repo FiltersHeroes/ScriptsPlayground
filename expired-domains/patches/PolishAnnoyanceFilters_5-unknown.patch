@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 46e949145..9358ef738 100644
+index fd5774a5f..6dada29c4 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -39,7 +39,7 @@ agroperfekt.pl##.js-marquee-wrapper
+@@ -40,7 +40,7 @@ agroperfekt.pl##.js-marquee-wrapper
  ahe.lodz.pl###wysuwane7, #wysuwane2
  airly.eu##.air-quality, .header__links
  akademiaap.com###sidebar
@@ -11,7 +11,7 @@ index 46e949145..9358ef738 100644
  aktualnyodpis.pl###carq-iframe
  alablaboratoria.pl###small-pop-up
  alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
-@@ -183,7 +183,6 @@ castrol.com##footer > div > div.nv-parsys-component.nv-container
+@@ -182,7 +182,6 @@ castrol.com##footer > div > div.nv-parsys-component.nv-container
  catawiki.pl##body > .be-cornerlabel
  cdaction.pl,pcformat.pl,pomponik.pl,smaker.pl##body > .topbar
  cefarm24.pl,dlapacjenta.pl###drawer
@@ -19,7 +19,7 @@ index 46e949145..9358ef738 100644
  cenyrolnicze.pl##.bd-margins.bd-headerarea-1, .jf_mm_trigger, .zgloszeniaPanel
  certyficate.it,github.com,github.io##a[href*="paypal.me/pools/c/87zNJ8OJ3I"], a[href*="paypal.com/pools/c/87zNJ8OJ3I"]
  chojnow.pl###login-box
-@@ -201,7 +200,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+@@ -200,7 +199,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
  comarch.pl##.widget-detach-right-bar-container
  context.reverso.net###register-popup-bottom
  coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
@@ -28,7 +28,7 @@ index 46e949145..9358ef738 100644
  cowsierscipiszczy.pl##.CampaignType--floating
  creativecommons.org###deed-donate-slide
  creativehobby.pl###ch-strip
-@@ -352,7 +351,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+@@ -356,7 +355,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
  forum.dobreprogramy.pl##.header-cloak
  forum.dobreprogramy.pl##.nav-link[href*="/blogi"]
  forum.duolingo.com##.GB_SB
@@ -36,7 +36,15 @@ index 46e949145..9358ef738 100644
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -561,8 +559,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+@@ -436,7 +434,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
+ hubkolektyw.pl##.panel-boczny
+ hurtowniarolnicza.pl##.recruitment
+ i-apteka.pl,rolmarket.pl###menu_hotspot_zone3
+-i-ekosystem.pl###wptime-plugin-preloader
+ ican.pl###drawer_bar
+ iglazura24.pl##.sold-item-popup
+ iiyama-sklep.pl###foot-lastbought-button
+@@ -564,8 +561,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
  linuxporady.pl,pskrk.com##.crestaPostsBox
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
@@ -45,15 +53,15 @@ index 46e949145..9358ef738 100644
  losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
  lvbet.pl##splash-loader
  m.leroymerlin.pl##.smart-app-banner
-@@ -886,7 +882,6 @@ skladnicaksiegarska.pl##.hotinfo_top, #countdown
- sklep-wedkarski.info###ClPanelImg
+@@ -889,7 +884,6 @@ sklep-wedkarski.info###ClPanelImg
  sklep.aladyn.pl,sklep.mariall.pl###trzecia
+ sklep.bioceriq.pl##.mfn-fake-sale-noti
  sklep.farmona.pl##.tabs > section.product_link_nav
 -sklep.fusic.pl##.fa-google
  sklep.odziez-robocza.com###druga_ikona
  sklep.pakrol.pl##.suggest-slider
  sklep.veterynaria.pl###sideTab
-@@ -948,7 +943,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+@@ -951,7 +945,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
  swiezoizdrowo.pl###sales-booster-popup
  sympatia.onet.pl###iconsBar
  syngenta.pl##.pane-menu-menu-sticky-menu

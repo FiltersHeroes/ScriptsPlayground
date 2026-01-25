@@ -1,0 +1,34 @@
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 5d96e3c07..2d40eeb22 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -290,7 +290,6 @@ dzwignice.pl##.bg
+ e-insportline.pl###vivpopup-collapsed
+ e-kidsplanet.com##.banner, .banner-curtain
+ e-kwiaty.pl###exitpopup-newsletter
+-e-podlogi24.pl##div[id$="czater"] > div[id][class$="CzaterSheet"]
+ e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
+ e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
+ e-spar.com.pl###modal-welcome
+@@ -537,7 +536,7 @@ mojataxi24.pl##.popup, #overlay
+ mojeinstalacje.com###subscribe_popup
+ mojmac.pl##.et_bloom_animated
+ mojogrodek.pl###ypmcolorbox, #ypmcboxOverlay
+-mojwzrok.pl,optes.pl,taniesoczewki.pl###ctk_np_popup, .reveal-modal-bg
++optes.pl,taniesoczewki.pl###ctk_np_popup, .reveal-modal-bg
+ monitoring-system.pl###element_to_pop_up
+ moovitapp.com,polmed.pl##.md-dialog-container, .md-dialog-backdrop
+ morele.net##.bottomFixedPopup
+diff --git a/PPB/push_sieciowe.txt b/PPB/push_sieciowe.txt
+index 61b7da7b4..66524ddf3 100644
+--- a/PPB/push_sieciowe.txt
++++ b/PPB/push_sieciowe.txt
+@@ -14,7 +14,7 @@
+ /store/web-push-settings$xmlhttprequest,domain=adventuresports.pl
+ /sw-push.js$script,domain=m.zapytaj.onet.pl|medonet.pl
+ /sw-rmf-push.js$script,domain=rmf.fm|rmf24.pl|rmfclassic.pl|rmfmaxxx.pl|rmfon.pl
+-/sw.js$domain=adaware.com|mojwzrok.pl|openload.co|optes.pl|podaj.to|taniesoczewki.pl
++/sw.js$domain=adaware.com|openload.co|optes.pl|podaj.to|taniesoczewki.pl
+ /web-push/*$xmlhttprequest,domain=brw.pl|eobuwie.com.pl|military.pl
+ @@/sw.js$domain=youtube.com
+ ||cdn.*.com/push_app.js$script,domain=2conv.com|flv2mp3.by|flvto.biz

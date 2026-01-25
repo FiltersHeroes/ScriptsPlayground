@@ -1,13 +1,21 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 7c947067f..237a5c9a2 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -88,7 +88,7 @@ arteodevelopment.pl##div.bbx-col-3:nth-of-type(3) > .footer-cell-container
- artis-loft.pl##.wa-popup--active
- artkomiks.pl##.ulp-fadeIn.ulp-animated.ulp-overlay
- artkomiks.pl##.ulp-window-container
--artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,monden.pl,nbielizna.pl,odblask.com.pl,pcoutlet.pl,posciel.mazury.pl,vanitysklep.pl,veoveo.pl,wellsamed.pl##.rc-popups.box
-+artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com.pl,pcoutlet.pl,posciel.mazury.pl,vanitysklep.pl,veoveo.pl,wellsamed.pl##.rc-popups.box
- arturjablonski.com,eswinoujscie.pl##.ulp-layer, .ulp-overlay
- asd.pl##.popUpHolder, #Fader
- ashampoo.com##.exitlayer
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 9aebe021c..fd5774a5f 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -397,7 +397,6 @@ godanparty.pl##.shipping-info
+ godealla.pl###top-offers, .hand
+ godstoys.pl##.master-loading-overlay
+ gomobi.pl##.blog-head
+-goodair.pl###bestsellers_panel
+ google.com,google.pl##iframe[src^="https://ogs.google.com/widget/callout?prid="], iframe[src^="https://ogs.google.pl/widget/callout?prid="]
+ gorzow24.pl###nasze_serwisy
+ gosc.pl##.fixedBottom
+@@ -705,7 +704,7 @@ ntfy.pl###comp-google-merchant
+ nutrismed.pl,sklep-muzyczny.com.pl,sklep.wodna-kraina.pl###widget_shop4
+ o2.pl##a[data-st-area^="ST-goToO2"], a[data-st-area^="ST-backToO2"]
+ o.pl###codemanipulator-tools
+-obuwiemedyczne.eu,optimedpro-office.eu,pokrowce.net,x-moto.eu##.sm-gmap
++optimedpro-office.eu,pokrowce.net,x-moto.eu##.sm-gmap
+ oddslivesport.com###task
+ odjazdowenaklejki.pl##.sm-panel > div[id^="side"]:nth-of-type(4)
+ oees.pl###floating-button-en

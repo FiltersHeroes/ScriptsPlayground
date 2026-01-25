@@ -1,589 +1,623 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 606c0f70b..080a82a8d 100644
+index 61b629062..8c60f049a 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -29,12 +29,12 @@
+@@ -1,7 +1,6 @@
+ 029128161.pl
+ 03918271s.pl
+ 1009z99z8.pl
+-1029532.pl
+ 10298433.pl
+ 10saxv.sbs
+ 12092812.pl
+@@ -29,6 +28,7 @@
  915282122.pl
  9288z990-0398.pl
  938267270.pl
--a12012912.pl
++99812.pl
  a951212.pl
  aalintegrationuk.org
  abc-miasto.pl
- adaptableenergy.click
- afrykanium-zoo.pl
-+agniezaj.pl
+@@ -38,7 +38,7 @@ agniezaj.pl
  aifragranceandscents.com
  aipluginlab.com
  aiviralblogs.com
-@@ -43,6 +43,7 @@ alfabet-miasto.pl
+-al-haseeb-trading.com
++alebrelok.pl
+ alfabet-miasto.pl
  alfoquiachippy.com
  alienapparelsltd.com
- alishbahshopping.com
-+alizsy.pl
- alkmrpwa.pl
- altrix-sync-app.com
- amazone-us.com
-@@ -57,6 +58,8 @@ aowka.pl
+@@ -53,13 +53,13 @@ analystics-tv.pl
+ analyzinginsights.com
+ angrumbit-app.com
+ aniyahairaccessories.com
+-anmf.pl
+ aowka.pl
  apexestimations.com
  apyoe.com
  apzoo50-05.pl
-+aquapark-suntago.com.pl
-+aquapark-suntago.pl
+ aquapark-suntago.com.pl
+ aquapark-suntago.pl
++architekt-dom.pl
  aromaregal.com
  artizinconnu.com
  asbelmi.cloud
-@@ -66,6 +69,8 @@ azansarfraz.com
- babeldevstudio.com
- ballplay.buzz
+@@ -71,6 +71,7 @@ ballplay.buzz
  beliko.pl
-+belikoti.pl
-+bellikoto.pl
+ belikoti.pl
+ bellikoto.pl
++beltugi.pl
  benimomo.pl
  bestcleanbuildingcleaningservices.com
  besthotelratings.com
-@@ -99,7 +104,6 @@ cainstore.com
+@@ -104,6 +105,7 @@ cainstore.com
  cashtequila.com
  cennneeo.pl
  centr72a.pl
--chroniclefeedglobe.com
++chruby.pl
  circlek-energy.pl
  citybrokerz.org
  cleanjoy.buzz
-@@ -123,7 +127,6 @@ dealmenot.com
+@@ -114,6 +116,7 @@ com-auth.pl
+ com-oferta185383.pl
+ copyredic.com
+ creativexolutions.com
++cryptmax.buzz
+ cryptoforallnow.cc
+ cssdayz.buzz
+ cudapolskosci.pl
+@@ -125,7 +128,6 @@ czytamy-razem.pl
+ dataproz.buzz
+ dealmenot.com
  decademist.melodicloud.com
- decoded.lat
+-decoded.lat
  decornesthome.com
--deltaforceindonesia.com
  deszczowewakacje.pl
  detpltv.pl
- devirfan.com
-@@ -172,6 +175,7 @@ enerygalndia-wydarzenia.pl
- eniebieskiocean.pl
- eosla.pl
- epreyourorl.cyou
-+esamego.pl
- esperka.pl
- essays-on-line.com
- ethereum-2-0.com
-@@ -198,7 +202,6 @@ fiftylinksnow.com
- fil-gaz-handelgazem-jacek-filewicz.pl
- finatis66.com
- finoxodium.de
--fiso-kab.com
- foodisnsandagro.pl
- foodsandagro.pl
- foodsandagros.com.pl
-@@ -227,9 +230,9 @@ govministry.pl
- gramerdak.com
+@@ -155,7 +157,6 @@ e-zdrowie-verify.pl
+ e-zobaczznami.pl
+ earningmania.com
+ ebelito.pl
+-ebquir4.za.com
+ echerag.com
+ ecobeesm.com
+ edadevzz.buzz
+@@ -186,13 +187,14 @@ ethereumproair-4-0.com
+ ethereumproair.app
+ ethereumproair.net
+ ethereumproairai.com
+-evspecscompare.com
++ewaco.pl
+ ewura.pl
+ excfitzzy.buzz
+ excrayzzy.buzz
+ exodus-compliance.com
+ fabricsguru.com
+ faceb00k.pl
++faktowiec24.pl
+ falachaosu.pl
+ fashioncept.com
+ fastdelvrysone.net
+@@ -231,7 +233,6 @@ gramerdak.com
  grawitacjaziemi.pl
  gta-turk.com
-+gymshark.priv.pl
- h5pl.lat
+ gymshark.priv.pl
+-h5pl.lat
  hadibabygarments.com
--hawkconsultant.com
  healthylifebytes.online
  heropostagency.com
- heropostcentral.com
-@@ -263,6 +266,7 @@ id2390.pl
- id3291.pl
+@@ -263,13 +264,13 @@ id11.pl
+ id223.pl
+ id2352.pl
+ id2390.pl
+-id3291.pl
  id4478.pl
  id5291.pl
-+id5534.pl
+ id5534.pl
  id5552.pl
  id6662.pl
  id7367.pl
-@@ -328,7 +332,6 @@ immediatesanorexplatform.com
- info-dnia-wydarzenia.pl
- info-energylandia.com.pl
- info-energylandia.pl
--informacje-wakacyjne.pl
- inpostplose.cfd
- inpostplose.my
- inpostplosl.cfd
-@@ -337,10 +340,10 @@ insrod.com
- institutodeingenieriairza.com
- interestgrowthhub.xyz
- investorbjorn.com
--investtheirment.top
- ioferta012954.pl
- ioferta015291.pl
- ioferty9218z2.pl
-+isamego.pl
++id8374.pl
+ id8812.pl
+ id9111.pl
+ id9203.pl
+@@ -346,6 +347,7 @@ ioferty9218z2.pl
+ isamego.pl
  isotigo.pl
  isuntago.pl
++itelinomo.pl
  j9mrnu.lol
-@@ -367,7 +370,8 @@ krakow-alerty.pl
- kreatorhostplt.pl
- krishmaearning.com
- krjonline.pl
--kryzyspolski24.pl
-+krtorai.pl
-+ksploa.pl
- lalagulle.com
- lamoli.com
- latexdecadence.com
-@@ -391,6 +395,7 @@ lioydintbank.com
- lisbeth-bizuteria.pl
- listnawodzie.pl
+ jahanzaib-gm.com
+ jblenetwork.com
+@@ -386,7 +388,6 @@ ledger-security-portal.com
+ ledger-support-center.com
+ ledger-support-customer.com
+ lekarzwpogotowiu.pl
+-lesmatematika.com
+ lewicka-warszawa.pl
+ lifttomove.com
+ lindorado.pl
+@@ -397,6 +398,7 @@ listnawodzie.pl
  lm-fastigheter.com
-+logiw82a.pl
+ logiw82a.pl
  lstva.pl
++madlensstudio.pl
  magazynstolicy.pl
  malopolska-zatorinfo24.com.pl
-@@ -425,13 +430,12 @@ migatools.online
+ malopolska-zatorinfo24.pl
+@@ -404,14 +406,15 @@ mamywstolicy.pl
+ mango-outlet.pl
+ marketingagencyzone.com
+ marketingandmore.pl
+-matemprende.com
+ meble-ogrodowe-szewc.pl
+ med-32894.pl
+ medfiie.pl
+ medflle.pl
++medlamarkt.pl
+ melido.pl
+ melinest.pl
+ melwana.com
++mer-car.com.pl
+ merferbitappengine.com
+ metatechsystemsllc.com
+ metro-alert.pl
+@@ -425,7 +428,6 @@ metrorozklad.pl
+ miastowsercu.pl
+ miejscenaplazy.pl
+ miejskidziennikarzwp.pl
+-mielleoficial.com
+ migatools.online
  misla.pl
  mm33389291.pl
- mmn6049.pl
--mob892.pl
- mojesupport.com
- morskiwiatr.pl
- motido.pl
- motyleczek.pl
--movie8729a.pl
- mp93827321.pl
-+mrlwa2.pl
- msxm.pl
- mulimo.pl
- muri2.pl
-@@ -446,12 +450,14 @@ najlepszelokaty.com.pl
- namedatabase.hk
- naszeparkirozrywki.pl
- naturyszept.pl
-+nbpa.pl
+@@ -453,7 +455,6 @@ naturyszept.pl
+ nbpa.pl
  nemnozhko.com
  netfiix-free.pl
- nexgengrafx.com
+-nexgengrafx.com
  nexreich.de
  nextlevelsend.com
  nextsmmaagency.com
-+ngh29a2.pl
- nikharharbelcosmeticsandtraders.com
+@@ -462,10 +463,8 @@ nikharharbelcosmeticsandtraders.com
  nodedevz.buzz
  nomoreworking9to5.com
-@@ -483,6 +489,7 @@ oferta12512512.pl
+ notfxpl.pl
+-novaintlb.com
+ ntpwoa.pl
+ nurplsa.pl
+-nuwalandia.pl
+ oakjjs950-59590az.pl
+ oamn1590212.pl
+ ochronakupujaceg09936197322.pl
+@@ -473,27 +472,25 @@ odorremovalpittsburgh.com
+ ofborz.pl
+ oferta-0519292.pl
+ oferta-1370225.pl
++oferta-2938626.pl
++oferta-3641668.pl
+ oferta-522712.pl
++oferta-7516198.pl
+ oferta-8547674.pl
+ oferta-prywanta857121.pl
+ oferta01295182.pl
+ oferta015295812.pl
+ oferta01591251.pl
+ oferta0192861.pl
+-oferta0199531.pl
+-oferta021921.pl
+ oferta051295.pl
+ oferta10924512.pl
+ oferta120539.pl
+ oferta12512512.pl
  oferta1525112.pl
  oferta152512.pl
- oferta1923837.pl
-+oferta2312.pl
+-oferta1923837.pl
+ oferta2312.pl
  oferta512512503.pl
  oferta51251251.pl
- oferta54179201.pl
-@@ -512,12 +519,10 @@ oponexpert.pl
- opoznienia-metro24.pl
- organicshila.com
- orionprofit.com
--orlengiftcard.jyxgo.com
- orthohubpk.com
- orylandia.it
- oxforddepot.net
- pakl.pl
--pantvs.pl
- paoz95-09.pl
- parkzator-malopolska24.com.pl
- parkzator-malopolska24.pl
-@@ -619,7 +624,6 @@ pl-oferta98273.pl
- pl-oferta9830.pl
- pl-oferta9839162.pl
- pl-oferta9944139.pl
--pl29ao.pl
- play-as.online
+-oferta54179201.pl
+-oferta541910101.pl
+ oferta549348.pl
+ oferta5774377.pl
+ oferta5918512.pl
+@@ -538,13 +535,11 @@ phpfoxzz.buzz
+ piaszczystaprzygoda.pl
+ piledrillingmachinespareparts.com
+ pirinskiing.com
+-pkbetmix.com
+ pkp-polska.pl
+ pl-00812.pl
+ pl-26491.pl
+ pl-36282.pl
+ pl-7514.pl
+-pl-83791.pl
+ pl-928749.pl
+ pl-kategoria2345463.pl
+ pl-oferta.pl
+@@ -628,11 +623,11 @@ play-as.online
  plbikinvest.buzz
  plgfs.org
-@@ -629,13 +633,13 @@ pocztaskapol.my
+ plor.pl
++poczta-home.pl
+ pocztaskapol.cfd
+ pocztaskapol.my
  pocztaskapol.sbs
  polfimly.pl
- polskafortuna.click
-+polskapieknosc.pl
+-polskafortuna.click
+ polskapieknosc.pl
  polskiekontenery.pl
  pomochome.pl
- prejoyzz.buzz
- premiumleadflowdynamics.com
+@@ -641,6 +636,7 @@ premiumleadflowdynamics.com
  preprocess.buzz
  pressuresoresadvice.com
--prestineapartments.com
  prismpropfunding.com
++prissylilyco.com
  promocjantfx.pl
  prywatna15125125.pl
-@@ -653,12 +657,10 @@ przyrodainfo-wrozoo.pl
- przyrodaznami.pl
- przyrodniczyraj.pl
- psychsciencetoday.com
--pulsenewsreel.com
- puresheethaven.com
- pymaxzz.buzz
- pzesw.pl
- qasmirealestate.com
--qaumilibas.com
- quality-custom-writing.com
- quantum-i200maxair.com
- quantum-i800-bumex-engine.com
-@@ -666,14 +668,15 @@ ramada-money.com
- rampaway.com
- rctravels.com
- rednews24.su
-+reeboksklep.pl
- refund-disneyvod.com
- refundify.com
- rehmanjewlers.com
- reklamaplatnt.pl
- renewsptfypremium.com
- rentacarislamabad.online
-+rentsky.pl
- rfcscorsa.com
--rinconchileno.pl
- rpltv.pl
- ru-suppr.top
+ prywatna15251.pl
+@@ -683,23 +679,6 @@ ru-suppr.top
  rubyfoxz.buzz
-@@ -683,7 +686,6 @@ s100pl.lol
- s199pl.lol
- s201pl.lol
- s202pl.lol
--s203pl.lol
- s204pl.lol
- s205pl.lol
- s206pl.lol
-@@ -692,8 +694,6 @@ s210pl.lol
- s211pl.lol
- s212pl.lol
- s213pl.lol
--s215pl.lol
--s216pl.lol
- s217pl.lol
- s218pl.lol
- s219pl.lol
-@@ -712,6 +712,7 @@ sarwa-profit.com
- secfitzz.buzz
- sek82a.pl
- sektv.pl
-+selinodi.pl
- sercenawodzie.pl
- serenehealthquest.com
- shopkove.com
-@@ -728,7 +729,6 @@ smmbingx.com
- smtravelsandtours.com
- snaptheme.com
- sobota-tvn24.pl
--socialiscresc.top
- socialmediamarketingcloud.com
- socialmediamarketinghouse.com
- socialsocialmediamarketing.com
-@@ -737,7 +737,6 @@ sodasodal.buzz
- sofilibrary.com
- solewraptintingcompany.com
- sotigo.pl
--sourcefreshnews.com
- specjalny2750.pl
- sport35.com
- springbranchserenitypass.com
-@@ -771,7 +770,6 @@ telegramweb.vip
- telepresenceconsulting.com
- the-immediate-enigma.com
- the-immediate-peak.com
--thebirminghambowelclinic.com
- thebtst.pl
- thefastearn.com
- thefoodsgeek.com
-@@ -779,13 +777,10 @@ theimmediatecoraldex.com
- theshoesxpress.com
- theteraboxpro.com
- threepointslab.com
--tic-stac.com
--tinyurl-pl.pl
- to-str.help
- tojest-krakow.pl
- tomaszikasia.pl
--topdailyhub.com
--tophubdaily.com
-+tommic.pl
- topsmmaagency.com
- torbend.net
- townscity.com
-@@ -806,7 +801,6 @@ tradereopro.ai
- tradereopro360.com
- transport-warszawski.pl
- tratwanawodzie.pl
--troubleshootyourself.com
- trueselfthreads.com
- ttswebhosting.com
- turkeydentalservices.com
-@@ -820,11 +814,9 @@ tvn24-parkrozrywki.pl
- tvn24-parkzator.pl
- tvn24-regionalneinformacje.pl
- tvn24-tablicadnia.pl
--tvninfowydarzenia24h.pl
- tvwiadomosci-twojeinfo.com.pl
- tvwiadomosci-twojeinfo.pl
- twarzoksiazka.pl
--twentydailynews.com
+ rubyhubz.buzz
+ runhubz.buzz
+-s100pl.lol
+-s199pl.lol
+-s201pl.lol
+-s202pl.lol
+-s204pl.lol
+-s205pl.lol
+-s206pl.lol
+-s207pl.lol
+-s210pl.lol
+-s211pl.lol
+-s212pl.lol
+-s213pl.lol
+-s217pl.lol
+-s218pl.lol
+-s219pl.lol
+-s220pl.lol
+-s221pl.lol
+ safaripl.pl
+ sahrishrizwan.com
+ sale-lidl.sa.com
+@@ -749,7 +728,6 @@ ssmsilesia.pl
+ stangberga.com
+ startwrzesien.pl
+ stolica-skokow.pl
+-stolicametro.pl
+ storageauctionclub.com
+ strangerthingsnt.pl
+ strazpozarnawp.pl
+@@ -762,9 +740,7 @@ szybkafala.pl
+ szybkinurt.pl
+ tamiryosef.com
+ tantricdeluxemassage.com
+-tanuy.pl
+ technhobby.com
+-technoworldd.com
+ teklino.pl
+ tekonest.pl
+ telegramweb.vip
+@@ -822,6 +798,7 @@ twarzoksiazka.pl
  twinsgoodlife.com
  twojeekspresy.pl
  twojefakty-24naszemiastotvn.pl
-@@ -878,9 +870,9 @@ wydarzenia24polska.pl
- xn--santandr-beb.pl
- xtb-group.pl
- xtremebrandingpk.com
--yaseenmarble.pk
- z551sa1.pl
- zamkniecie-metra.pl
-+zbrodnieraport.pl
- zeznajomieni-aktualnosci.pl
- ziemiajutro.pl
- zk499942.pl
++tyganlkpowszehny.pl
+ uidevhub.buzz
+ uidevzz.buzz
+ ujriaw.pl
+@@ -849,7 +826,6 @@ visprozz.buzz
+ vitalhealthpluse.com
+ vivianfrancoo.com
+ warszawa-metro.pl
+-warszawa-metro24.pl
+ wayofbest.com
+ webkitpo.pl
+ wecleancarpetsandupholstery.com
 diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
-index a873a657b..59d815d8c 100644
+index 59d815d8c..53d931fcd 100644
 --- a/exclusions/LWS_expired.txt
 +++ b/exclusions/LWS_expired.txt
-@@ -988,6 +988,7 @@ rbfrh.com
- rbhth.com
- rbn-pl.net
- reasport.pl
-+redmimobile-czk.shop
- redwingpolandoutlet.com
- redwingshoespolska.com
- reebok-polska.pl
+@@ -897,6 +897,7 @@ oranzadaklub.pl
+ orlan77.com
+ orthofeetpolska.pl
+ osiedlewidok.pl
++osiedlewillowa.pl
+ outbutypt.online
+ outleteuropa.com
+ outletowo.com
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 7ae69852c..d6f6f02ac 100644
+index d6f6f02ac..23fa57427 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -134,7 +134,6 @@
- ||bravonaforte.pl^$all
- ||brevio.pl^$all
- ||brightsport.com^$all
--||brooks-polska.com^$all
- ||brooksbutydobiegania.com^$all
- ||brooksrunningpl.com^$all
- ||browy.shop^$all
-@@ -308,7 +307,6 @@
- ||esashop.pl^$all
- ||estelaz.pl^$all
- ||esukienki.com^$all
--||eur.djieyryiuybcb.shop^$all
- ||euro420buds.com^$all
- ||europan.pl^$all
- ||europejskaedukacja.pl^$all
-@@ -444,7 +442,6 @@
+@@ -427,7 +427,6 @@
+ ||gougeng.shop^$all
+ ||granicasportu.pl^$all
+ ||great-beauty.org^$all
+-||great-goods.org^$all
+ ||greattop-goods.press^$all
+ ||green-home.com.pl^$all
+ ||greenbarleyplus.pl^$all
+@@ -437,7 +436,6 @@
+ ||grnpower.io^$all
+ ||grovem.com^$all
+ ||guesspolskapl.com^$all
+-||guzyl.com^$all
+ ||halex.waw.pl^$all
  ||halodzwonek.pl^$all
  ||halopozyczka.pl^$all
- ||hanksly.pl^$all
--||hanna-krakow.pl^$all
- ||hazel-projektowanie.com.pl^$all
- ||hdmovies.pl^$all
- ||headjordan.com^$all
-@@ -863,7 +860,6 @@
- ||pitbull.ek1.pl^$all
- ||pitbullonlinestore.it.com^$all
- ||pixelgame.pl^$all
--||pixpalpro.com^$all
- ||pizzarewal.pl^$all
- ||pl7.landnol.com^$all
- ||pl-huda.myshopify.com^$all
-@@ -974,7 +970,6 @@
- ||rectangledownloads.com^$all
- ||recznekatalogowanie.pl^$all
- ||redbear.pl^$all
--||redmimobile-czk.shop^$all
- ||redwingspolska.com^$all
- ||registrationlife.com^$all
- ||reimageplus.com^$all
+@@ -455,7 +453,6 @@
+ ||hearclear.com^$all,to=hearclear.com|~www.hearclear.com
+ ||helena-hera.com^$all
+ ||helenakrystyna-butik.pl^$all
+-||helinwarszawa.pl^$all
+ ||hemoroxin-new.org^$all
+ ||hemorv.com^$all
+ ||herbalife.pl^$all
+@@ -800,7 +797,6 @@
+ ||olaroka.fashion^$all
+ ||oleksy.net.pl^$all
+ ||olivrae-warszawa.com^$all
+-||oliwia-krakow.pl^$all
+ ||on-runningpolska.pl^$all
+ ||onlineblackfrday.com^$all
+ ||onlyfutbol.pl^$all
+@@ -812,7 +808,6 @@
+ ||oreylo.com^$all
+ ||organicmed.pl^$all
+ ||organogold.com^$all
+-||osiedlewillowa.pl^$all
+ ||oswieconykochanek.pl^$all
+ ||oszukacruletke.like.pl^$all
+ ||ottomax-new.com^$all
+@@ -921,7 +916,6 @@
+ ||prenatalin.pl^$all
+ ||primavera.shoppy.pl^$all
+ ||primedk.pl^$all
+-||prissylilyco.com^$all
+ ||prizelava.com^$all
+ ||probiosinplus.pl^$all
+ ||probolan50.pl^$all
 diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index 343146eec..917ca8895 100644
+index e283fd667..094be4f34 100644
 --- a/sections/przekrety.txt
 +++ b/sections/przekrety.txt
-@@ -638,7 +638,6 @@
- ||more-2-flirt.com^$all
- ||movieboxpro.cc^$all
- ||moviecpot.com^$all
--||moviesae.cc^$all
- ||moviesearchcenter.com^$all
- ||mowmihache.pl^$all
- ||ms10be.be^$all
-@@ -739,7 +738,6 @@
- ||pinkstar.pl^$all
- ||pististrustltd.com^$all
- ||pko-bp.pl^$all
--||pl.allsports4free.club^$all
- ||pl.centrumoferty.com^$all
- ||pl.edrrak.com^$all
- ||pl.esrlive.com^$all
+@@ -80,7 +80,6 @@
+ ||beneko.com^$all
+ ||benlandscaping.co.uk^$all
+ ||benzkartel.duckdns.org^$all
+-||bepayedtoday.com^$all
+ ||bestpromosoffers.world^$all
+ ||bestvod.pl^$all
+ ||bet777red.com^$all
+@@ -136,7 +135,6 @@
+ ||carambaba.com^$all
+ ||casecat.instructure.com^$all
+ ||cashbro.net^$all
+-||casino-winter.com^$all
+ ||casualdating.com^$all
+ ||cbsmarket.co^$all
+ ||cda360.pl^$all
+@@ -576,7 +574,6 @@
+ ||letswinstuff.com^$all
+ ||lewplnews.yolasite.com^$all
+ ||lidi.pl^$all
+-||lifehackz.net^$all
+ ||lightcloud.pl^$all
+ ||limkon.com^$all
+ ||lincolninst.instructure.com^$all
+@@ -1002,11 +999,7 @@
+ ||traderprof.club^$all
+ ||traderprof.com^$all
+ ||traderprof.live^$all
+-||traderprof.online^$all
+-||traderprof.review^$all
+ ||traderprof.today^$all
+-||traderprof.website^$all
+-||traderprof.xyz^$all
+ ||traderschain.com^$all
+ ||trading.com^$all
+ ||tradingcapital.ltd^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index 0e03655f7..82cc7cbe4 100644
+index d5ed17f4b..102630e6c 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -591,7 +591,6 @@
- ||agilebut.com^$all
- ||agilemindh.info^$all
- ||agility-business.com^$all
--||agniezaj.pl^$all
- ||agnoia.net^$all
- ||agreatcustomerservice.com^$all
- ||agreementssystem.biz^$all
-@@ -1155,7 +1154,6 @@
- ||alinearinc.com^$all
- ||alioktem.com^$all
- ||alionosubtu.rest^$all
--||alizsy.pl^$all
- ||alkadri.net^$all
- ||all-media-studios.com^$all
- ||allclearancessouthampton.com^$all
-@@ -3322,8 +3320,6 @@
- ||aquadoux.net^$all
- ||aquagreenmaterials.com^$all
- ||aquan.store^$all
--||aquapark-suntago.com.pl^$all
--||aquapark-suntago.pl^$all
- ||aquariumhobby92d.info^$all
- ||aquariumhobby298d.info^$all
- ||aquiandamos.com^$all
-@@ -3749,10 +3745,8 @@
- ||belenkask.club^$all
- ||belgorodalko24.shop^$all
- ||belianisale.shop^$all
--||belikoti.pl^$all
- ||bellavitacafeoneida.com^$all
+@@ -972,14 +972,11 @@
+ ||alebilet.oferta-1506.cfd^$all
+ ||alebilet.oferta-7691.cfd^$all
+ ||alebilet.oferta-1250538.icu^$all
+-||alebilet.oferta-2938626.pl^$all
+-||alebilet.oferta-3641668.pl^$all
+ ||alebilet.oferta-4295512.icu^$all
+ ||alebilet.oferta-4595486.sbs^$all
+ ||alebilet.oferta-4960394.sbs^$all
+ ||alebilet.oferta-4968301.icu^$all
+ ||alebilet.oferta-5157212pl.cfd^$all
+-||alebilet.oferta-7516198.pl^$all
+ ||alebilet.oferta-7739451.icu^$all
+ ||alebilet.oferta-8172580.sbs^$all
+ ||alebilet.oferta-9045883.sbs^$all
+@@ -1229,7 +1226,6 @@
+ ||alebilet.plso9klazs02xk.icu^$all
+ ||alebilet.plst9klazs02xk.icu^$all
+ ||alebilet.plsx9klazs02xk.icu^$all
+-||alebrelok.pl^$all
+ ||aleenasa.shop^$all
+ ||aleezbouger.4lima.at^$all
+ ||alenka.org^$all
+@@ -1618,14 +1614,11 @@
+ ||allegro.oferta-7691.cfd^$all
+ ||allegro.oferta-90161.icu^$all
+ ||allegro.oferta-1250538.icu^$all
+-||allegro.oferta-2938626.pl^$all
+-||allegro.oferta-3641668.pl^$all
+ ||allegro.oferta-4295512.icu^$all
+ ||allegro.oferta-4595486.sbs^$all
+ ||allegro.oferta-4960394.sbs^$all
+ ||allegro.oferta-4968301.icu^$all
+ ||allegro.oferta-5157212pl.cfd^$all
+-||allegro.oferta-7516198.pl^$all
+ ||allegro.oferta-7739451.icu^$all
+ ||allegro.oferta-8172580.sbs^$all
+ ||allegro.oferta-9045883.sbs^$all
+@@ -2250,7 +2243,6 @@
+ ||allegrolokalnie.99077.click^$all
+ ||allegrolokalnie.99571.click^$all
+ ||allegrolokalnie.99600.sale^$all
+-||allegrolokalnie.99812.pl^$all
+ ||allegrolokalnie.0155681.click^$all
+ ||allegrolokalnie.191927.click^$all
+ ||allegrolokalnie.195739.vu^$all
+@@ -3491,7 +3483,6 @@
+ ||archertestprep.com^$all
+ ||architectureedge76d.info^$all
+ ||architecturehubh.info^$all
+-||architekt-dom.pl^$all
+ ||archivemodelsfree.icu^$all
+ ||arctic-ks.com^$all
+ ||arcticcactusnaturals.com^$all
+@@ -3905,7 +3896,6 @@
  ||bellerocapital.com^$all
--||bellikoto.pl^$all
  ||belmontsquareapartments.com^$all
+ ||beloutfits.com^$all
+-||beltugi.pl^$all
  ||belviroxbit.net^$all
  ||ben-vickers.com^$all
-@@ -5848,7 +5842,6 @@
- ||ery.g1giig.life^$all
- ||erynavoltrixaibot.com^$all
- ||eryxavin-app.net^$all
--||esamego.pl^$all
- ||esautmalca.world^$all
- ||eschasmugn.pro^$all
- ||eschilanne.pro^$all
-@@ -6986,7 +6979,6 @@
- ||gx4fqj.hair^$all
- ||gyarapixai.net^$all
- ||gymnoraste.rest^$all
--||gymshark.priv.pl^$all
- ||h0n6wc.icu^$all
- ||h1dmbq.cyou^$all
- ||h1mrzt.bond^$all
-@@ -7771,7 +7763,6 @@
- ||irs-btech-distributie.online^$all
- ||irtoridom.rest^$all
- ||isabelladiva.com^$all
--||isamego.pl^$all
- ||ischekazat.pro^$all
- ||iselinpresbyterian.org^$all
- ||islamnostr.pro^$all
-@@ -8142,12 +8133,10 @@
- ||krilatorotulacion.com^$all
- ||kriptonomist.org^$all
- ||krnapinna.my^$all
--||krtorai.pl^$all
- ||kryptrumig.pro^$all
- ||kryptzyskvaltrion.pl^$all
- ||ksbms.com^$all
- ||ksopy.digital^$all
--||ksploa.pl^$all
- ||ktpindustriescom.com^$all
- ||kubahemas.com^$all
- ||kubektermosshop.com^$all
-@@ -8433,7 +8422,6 @@
+ ||benefactorthen.unitedasone.com^$all
+@@ -4657,7 +4647,6 @@
+ ||chromtriol.pro^$all
+ ||chroniclepulsehub.pro^$all
+ ||chronoscapeg.info^$all
+-||chruby.pl^$all
+ ||chuckbufordmediation.com^$all
+ ||chuckhagel.com^$all
+ ||chucklegolf.com^$all
+@@ -5108,7 +5097,6 @@
+ ||crushedsupe.whatyafind.com^$all
+ ||cryogsfati.rest^$all
+ ||cryptexai-app.com^$all
+-||cryptmax.buzz^$all
+ ||cryptoautol.info^$all
+ ||cryptobulliesnft.com^$all
+ ||cryptocresth.info^$all
+@@ -6254,7 +6242,6 @@
+ ||evtechnicianshop.com^$all
+ ||evuiotsone.digital^$all
+ ||evyla-veynon.com^$all
+-||ewaco.pl^$all
+ ||ewdo2c.cfd^$all
+ ||examwhizpro.com^$all
+ ||exarobot.com^$all
+@@ -6342,7 +6329,6 @@
+ ||faithleft.com^$all
+ ||fajesuo.com^$all
+ ||faktowiec24.eu^$all
+-||faktowiec24.pl^$all
+ ||fakturaklienta.com^$all
+ ||fakturaklientapolska.com^$all
+ ||fakturowanieklient.com^$all
+@@ -7899,7 +7885,6 @@
+ ||icotharith.com^$all
+ ||icprogression.com^$all
+ ||icyf.net^$all
+-||id8374.pl^$all
+ ||id9002xe941.xyz^$all
+ ||id301920-12.click^$all
+ ||id568982.org^$all
+@@ -8309,7 +8294,6 @@
+ ||itazoon.net^$all
+ ||iteacorner.com^$all
+ ||iteguipuzcoa.com^$all
+-||itelinomo.pl^$all
+ ||itkclenrw.net-platnosc.shop^$all
+ ||itnahub.net^$all
+ ||itresrl.com^$all
+@@ -9068,7 +9052,6 @@
+ ||login-vistula.vercel.app^$all
  ||login.auth0-v2-microsoft365.dropportal.io^$all
- ||login.poczta-home.pl^$all
+ ||login.kmy3vnthzbqt69h5f9nrsxabfc2rd26gwzz.dedyn.io^$all
+-||login.poczta-home.pl^$all
+ ||login.workshopcollectionskins.com^$all
  ||loginotherdevice.cyou^$all
--||logiw82a.pl^$all
- ||logon.microaostworksystem.com.stiptaly.eu^$all
  ||loiscurtis.com^$all
- ||lokal-schedule-demo.com^$all
-@@ -8812,7 +8800,6 @@
- ||mozliwosci-teraz-pl.com^$all
- ||mozliwosciteraz.com^$all
- ||mpd.forcen.company^$all
--||mrlwa2.pl^$all
- ||msmodesales.shop^$all
- ||mticket-pl.eu^$all
- ||muffeconce.rest^$all
-@@ -8934,7 +8921,6 @@
- ||nayilazufamtaga.world^$all
- ||nayobe.world^$all
- ||nbmow.kmnwl.pl^$all
--||nbpa.pl^$all
- ||ne8omz.cyou^$all
- ||neancdemos.rest^$all
- ||nebula-synox.net^$all
-@@ -9050,7 +9036,6 @@
- ||neyxv.momuw.pl^$all
- ||nfciyzx.slkra.pl^$all
- ||ngfrg.qpon^$all
--||ngh29a2.pl^$all
- ||nghiasi.com^$all
- ||nghiasi.org^$all
- ||nhacaidk8.net^$all
-@@ -9282,7 +9267,6 @@
- ||odusleuco.rest^$all
- ||ofepro392812-2.cyou^$all
- ||ofer1029-11.cyou^$all
--||oferta2312.pl^$all
- ||oferta42801.sbs^$all
- ||oferta526172.icu^$all
- ||oferta784315.sbs^$all
-@@ -9552,7 +9536,6 @@
- ||olx.haja289911.cyou^$all
- ||olx.hfghfggdf.store^$all
- ||olx.hk494h.cyou^$all
--||olx.id5534.pl^$all
- ||olx.idogloszenia-296864.org^$all
- ||olx.ife918270-a.cyou^$all
- ||olx.info31029.cfd^$all
-@@ -9568,7 +9551,6 @@
- ||olx.o09por3-1029.cfd^$all
- ||olx.ofepro392812-2.cyou^$all
- ||olx.ofer1029-11.cyou^$all
--||olx.oferta2312.pl^$all
- ||olx.oferta42801.sbs^$all
- ||olx.oferta526172.icu^$all
- ||olx.oferta784315.sbs^$all
-@@ -11003,7 +10985,6 @@
- ||polservicer.com^$all
- ||polska-info.site^$all
- ||polskadert.com^$all
--||polskapieknosc.pl^$all
- ||polskapremium.com^$all
- ||polvix-kartix-biz17-selmon-hasrix-sp18ct12-bt2.pages.dev^$all
- ||polwarp.pro^$all
-@@ -11517,7 +11498,6 @@
- ||redupgloss.homes^$all
- ||redwoodspiregroup.live^$all
- ||redzilla.net^$all
--||reeboksklep.pl^$all
- ||reelshots.com^$all
- ||reesehullmusic.com^$all
- ||reference-lastreserve.com^$all
-@@ -11556,7 +11536,6 @@
- ||renewableresource460d.info^$all
- ||renewally.cc^$all
- ||renovhousecd.com^$all
--||rentsky.pl^$all
- ||renwre.org^$all
- ||reolixio-app.com^$all
- ||repairslogo.plainkeyman.com^$all
-@@ -12174,7 +12153,6 @@
- ||selenalkyl.homes^$all
- ||selencongl.pro^$all
- ||selimsanel.com^$all
--||selinodi.pl^$all
- ||sellaincap.rest^$all
- ||selmorivantux.world^$all
- ||selvionaxelis.com^$all
-@@ -13485,7 +13463,6 @@
- ||tombanka.org^$all
- ||tomino.appwrite.network^$all
- ||tommeeprofittx.com^$all
--||tommic.pl^$all
- ||tomorrownewsfeed.com^$all
- ||tonemuse.buzz^$all
- ||tonfalenin.rest^$all
-@@ -15204,7 +15181,6 @@
- ||zaxoyuyel.cloud^$all
- ||zazowolodivu.com^$all
- ||zazzing.org^$all
--||zbrodnieraport.pl^$all
- ||zdrovo.online^$all
- ||zeeke.de^$all
- ||zefemapvozi.cloud^$all
+@@ -9189,7 +9172,6 @@
+ ||machinelearninghubh.info^$all
+ ||maciejka-yxf.top^$all
+ ||mactelengineering.info^$all
+-||madlensstudio.pl^$all
+ ||magamaneter-invovcie.welfare-day.it^$all
+ ||magehaxupu.com^$all
+ ||magherisos.world^$all
+@@ -9311,7 +9293,6 @@
+ ||medisposalsolution.info^$all
+ ||meditationhubh.info^$all
+ ||meditspomp.pro^$all
+-||medlamarkt.pl^$all
+ ||megadhaka.com^$all
+ ||megalcentr.rest^$all
+ ||megapaza.pl^$all
+@@ -9329,7 +9310,6 @@
+ ||mentalcareh.info^$all
+ ||mentomutua.pro^$all
+ ||meophifing.com^$all
+-||mer-car.com.pl^$all
+ ||mercerforpresident2008.com^$all
+ ||meriksstonnyks.top^$all
+ ||merubodosi.com^$all
+@@ -9981,14 +9961,11 @@
+ ||oferta-7691.cfd^$all
+ ||oferta-90161.icu^$all
+ ||oferta-1250538.icu^$all
+-||oferta-2938626.pl^$all
+-||oferta-3641668.pl^$all
+ ||oferta-4295512.icu^$all
+ ||oferta-4595486.sbs^$all
+ ||oferta-4960394.sbs^$all
+ ||oferta-4968301.icu^$all
+ ||oferta-5157212pl.cfd^$all
+-||oferta-7516198.pl^$all
+ ||oferta-7739451.icu^$all
+ ||oferta-8172580.sbs^$all
+ ||oferta-9045883.sbs^$all
+@@ -11804,7 +11781,6 @@
+ ||po053292-201.sbs^$all
+ ||poc2edtow9j.cfd^$all
+ ||poczt-polska.top^$all
+-||poczta-home.pl^$all
+ ||poczta-pl.hidelak.cfd^$all
+ ||poczta-pl.hyziekol.cfd^$all
+ ||poczta-pl.lilashm.rest^$all
+@@ -15014,7 +14990,6 @@
+ ||twrju.zaplacic.hair^$all
+ ||txtrxn1.biz^$all
+ ||tyfugaosi.com^$all
+-||tyganlkpowszehny.pl^$all
+ ||tykentots.com^$all
+ ||tyvuzaume.com^$all
+ ||tyyuiopopoiuytr-dwrasvzg2a.edgeone.dev^$all
+@@ -15545,14 +15520,11 @@
+ ||vinted.oferta-1506.cfd^$all
+ ||vinted.oferta-7691.cfd^$all
+ ||vinted.oferta-1250538.icu^$all
+-||vinted.oferta-2938626.pl^$all
+-||vinted.oferta-3641668.pl^$all
+ ||vinted.oferta-4295512.icu^$all
+ ||vinted.oferta-4595486.sbs^$all
+ ||vinted.oferta-4960394.sbs^$all
+ ||vinted.oferta-4968301.icu^$all
+ ||vinted.oferta-5157212pl.cfd^$all
+-||vinted.oferta-7516198.pl^$all
+ ||vinted.oferta-7739451.icu^$all
+ ||vinted.oferta-8172580.sbs^$all
+ ||vinted.oferta-9045883.sbs^$all
+diff --git a/sections/szybko_wygaszajace.txt b/sections/szybko_wygaszajace.txt
+index 358b8bedd..2336659d5 100644
+--- a/sections/szybko_wygaszajace.txt
++++ b/sections/szybko_wygaszajace.txt
+@@ -18,7 +18,6 @@
+ ||lnktk.com^$all
+ ||mecz.ujm.pl^$all
+ ||mememakers.mobi^$all
+-||menminishaver.com^$all
+ ||mloda-cera.pl^$all
+ ||mobileofferplace.site^$all
+ ||onlineslotmaschine.com^$all
