@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 24f48dfca..9aebe021c 100644
+index dd6c0f794..33b3a0a6b 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -823,7 +823,7 @@ pswbp.pl###accessibility-links
+@@ -822,7 +822,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -11,23 +11,11 @@ index 24f48dfca..9aebe021c 100644
  pyszne.pl##div[data-qa="app-banner"]
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index ec6d487af..70b840cc1 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -1694,7 +1694,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
- wrp.pl##.vc_general.vc_cta3
- wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
- wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
--wseit.edu.pl###btn-newsletter
- wspieramrozwoj.pl##.newslatter
- wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
- wtk.pl###newsletter-animated-box
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 5412268df..6f48abcbe 100644
+index 1b963aa3c..d15e05d4a 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -697,7 +697,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -696,7 +696,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -36,10 +24,10 @@ index 5412268df..6f48abcbe 100644
  robojet.pl###modal_home_page, .modal-backdrop
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 43d947ebd..c8a3d526f 100644
+index a7c6359fd..c5da9d977 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -425,8 +425,6 @@ rolmix.net.pl##.popup-html
+@@ -427,8 +427,6 @@ rolmix.net.pl##.popup-html
  rowery-elektryczne.pl###popup, #popup-overlay
  rylko.com###modal-newsletter
  rzetelnafirma.pl##+js(nostif, setPopup)
@@ -49,7 +37,7 @@ index 43d947ebd..c8a3d526f 100644
  secure.avaaz.org##.signup-petition-modal-wrapper
  sferis.pl##+js(acis, $, promoNewsletter)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 11bf46b8d..f1987d422 100644
+index 2a349e077..314d8035b 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -105,7 +105,6 @@ brief.pl##.fab-desktop
@@ -75,7 +63,7 @@ index 11bf46b8d..f1987d422 100644
  clineo.pl###contact_widget
  cmolmed.pl###footer > .module:last-child
  cmp.med.pl###altar-eye-catcher-div-container
-@@ -336,7 +335,6 @@ karmi.pl##.scrolled.homecontact
+@@ -338,7 +337,6 @@ karmi.pl##.scrolled.homecontact
  kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
  ketowpraktyce.pl###chatbox
  kind.com##.AP_mod--button-symbol
@@ -83,7 +71,7 @@ index 11bf46b8d..f1987d422 100644
  klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
  klinikawitaminowa.pl##.ic-phone-button
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
-@@ -493,7 +491,7 @@ polkurier.pl##.pk-chat-container
+@@ -495,7 +493,7 @@ polkurier.pl##.pk-chat-container
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -92,7 +80,7 @@ index 11bf46b8d..f1987d422 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -513,7 +511,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -515,7 +513,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -100,7 +88,7 @@ index 11bf46b8d..f1987d422 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -540,7 +537,6 @@ salesmanago.pl###sm-bot
+@@ -542,7 +539,6 @@ salesmanago.pl###sm-bot
  salomon.com##.chatbot-box
  salon2kolka.pl##.msl-envelope-o
  salon-kosiarek.pl##.tm-sticker
@@ -108,14 +96,6 @@ index 11bf46b8d..f1987d422 100644
  sanbetdevelopment.pl###fastcontact
  santanderconsumer.pl##.chat-cc__header
  sat-system.uk###gg_ikona
-@@ -670,7 +666,6 @@ wiked.pl##div[id^="menuboczne"]:nth-of-type(8)
- wizjamed.pl###callbutton
- wnt.com##.sticky-contact
- wolnekonopie.org##.kleo-quick-contact-link
--wseit.edu.pl###btn-tel
- wspieram.to###staff-chat-button
- www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
- www.ibm.com###contact-module
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
 index 5ae6aa8b1..272887a78 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
