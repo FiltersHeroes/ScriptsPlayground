@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index fe68a422a..f3ed28cbc 100644
+index e4c2fa69c..36c860bb0 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -3,10 +3,8 @@
@@ -74,15 +74,6 @@ index fe68a422a..f3ed28cbc 100644
  cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
  chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
  chronpesel.pl##.wh-popUp-overlay
-@@ -290,7 +288,7 @@ dzwignice.pl##.bg
- e-insportline.pl###vivpopup-collapsed
- e-kidsplanet.com##.banner, .banner-curtain
- e-kwiaty.pl###exitpopup-newsletter
--e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
-+e-podlogidrzwi.pl###infoPage
- e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
- e-spar.com.pl###modal-welcome
- e-spar.com.pl###modal-welcome[style] ~ .modal-backdrop
 @@ -330,7 +328,6 @@ fabrykawafelkow.pl###someone-purchased
  fabrykazabawek.eu###helloModal
  faie.pl###searchPopUp
@@ -91,31 +82,6 @@ index fe68a422a..f3ed28cbc 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
-@@ -479,7 +476,7 @@ linguajob.pl##.popup, #get-similar-offers
- linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
- listymikolaja.pl###newsletter_layer
- loanme.pl##.exit-popup-block
--lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
-+lodzkietargi.pl,slaskietargi.pl###popup_mlm
- longterm.pl###list-builder
- longterm.pl###popup-box
- lookfantastic.pl,myprotein.pl##.emailReengagement
-@@ -659,7 +656,6 @@ potreningu.pl##.mobile-popup-window
- powerjobs.pl##.newsletter-mailchimp-modal
- powerjobs.pl##.screen-newsletter-mailchimp
- poznaj-swiat.pl###popup, #overlay
--pozyczymyci.pl###popupEmailPhone
- pracatobie.pl###Ankieta1PopupContent, #Ankieta1PopupBackground
- pracuj.pl###popupContainer
- prawodlasamorzadu.pl###lightbox-2
-@@ -695,7 +691,6 @@ rckik.poznan.pl###popup, #popupBg
- realme.com##.subscribe
- residenza.cz##.modal--newsletter
- retailnet.pl,rp.pl##tqwidget
--rivieraparkmarvipol.pl##.fastcall_popup
- rms.pl##.sj-popup-container
- robojet.pl###modal_home_page, .modal-backdrop
- rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
 index 7ecffaca3..28e704676 100644
 --- a/PPB/popupy_sieciowe.txt
@@ -129,7 +95,7 @@ index 7ecffaca3..28e704676 100644
  ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
  ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 285032e46..dff1d56db 100644
+index 78f696719..8ed37cfae 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,7 +1,7 @@

@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index b8ba489b8..141c52930 100644
+index 0f114625b..9a34dec2d 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -901,7 +901,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -905,7 +905,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -11,10 +11,10 @@ index b8ba489b8..141c52930 100644
  sky-shop.pl###promo-banner
  slippersfamily.com###widget_shop8
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index f217e60da..ec6d487af 100644
+index 7f1932eb8..aae805917 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -1411,7 +1411,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
+@@ -1414,7 +1414,6 @@ sklep.polska-zbrojna.pl##.newsletter-widget-4
  sklep.powermat.pl##div.foot-group:nth-of-type(4) > .list-group > h5 > a[href="#"]
  sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
  sklep.regalia.eu##footer > .row > .footer-block:only-child
@@ -48,7 +48,7 @@ index a6dca2e2a..ff8dfab3a 100644
  andzela.com##.kb-cs-notify-container
  at-outlet.pl###WebPushAddSubscription
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 4487a1768..ed83f4dec 100644
+index a38f67dc3..b8d37c4d2 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -39,7 +39,7 @@ airbuy.pl##.js-gotop
@@ -60,15 +60,6 @@ index 4487a1768..ed83f4dec 100644
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
  aleleki.pl,media-press.tv###back_to_top
-@@ -112,7 +112,7 @@ beltone-polska.eu,beltone-polska.pl##.cc-FloatingButtonBarContainer-button-scrol
- benchmark.pl,sgb.pl##.jsScrollToTop
- benler.pl,lenovogaming.pl,lento.pl,restaurantguru.com###scroller
- beskidy.news,hg.eu,intimissimi.com,nawa.gov.pl,powiatslubicki.pl##.js-scroll-top
--bet.mbp.olsztyn.pl,fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
-+fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
- bet.pl,citroen.pl,domkulturywkodniu.pl,infocrypto.pl,ipon.pl,zhp.pl###scrolltop
- betlejempoznanskie.pl##.icon-up-new-box
- bettingexpert.com,florini.pl##.slideInUp
 @@ -279,7 +279,7 @@ enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  epiotrkow.pl,swiatkwiatow.pl,wyspa.tv##.back-to-top
@@ -78,6 +69,15 @@ index 4487a1768..ed83f4dec 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
+@@ -419,7 +419,7 @@ jackpot.pl##back-to-top
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+ jomfruland.net##.scrollup__placeholder
+ journals.viamedica.pl##.Back_To_Top_Button
 @@ -439,7 +439,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
  kind.com##.AP_obj-top-button
  kioxia.com##.icon-top
@@ -87,6 +87,15 @@ index 4487a1768..ed83f4dec 100644
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
  knorr.pl,lipton.com##.back-to-top-cta
+@@ -508,7 +508,7 @@ makeup.pl,pomysloweprezenty.pl,sport.tvp.pl,zagranie.com##.button-up
+ malafabryczka.pl###button-up
+ marbo-sport.pl##.upArrow
+ marenaspa.pl###desktop-bottom-bar-arrow
+-marfafashion.com,sklep.energylandia.pl,sklep.mpay.pl##.scroll-visible
++marfafashion.com,sklep.mpay.pl##.scroll-visible
+ marketdino.pl##button:has(> .icon-arrow-up)
+ marki.pl###linktop
+ mastersport.pl##ktr-rollup
 @@ -576,7 +576,6 @@ nazwa.pl##.arrowUp__wrapper
  neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
  neon24.info###button-top
