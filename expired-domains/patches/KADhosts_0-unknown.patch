@@ -1,8 +1,8 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 5c52e3e4e..f512d28f2 100644
+index a35c0777d..a0fa03721 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,7 +4,6 @@
+@@ -4,11 +4,9 @@
  ||a.ero.bullrun-new.com^
  ||abc.travel2days.com^
  ||activestin-pl.great-beauty.org^
@@ -10,15 +10,11 @@ index 5c52e3e4e..f512d28f2 100644
  ||aoc.teleaudio.pl^
  ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
-@@ -20,7 +19,6 @@
- ||ce.wielkanagroda.com^
- ||ce.wielkaniespodzianka.pl^
- ||ce.winfreetoday.com^
--||chomikuj-new-t1.opx.pl^
- ||cloud.file.co.pl^
- ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
- ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
-@@ -30,7 +28,6 @@
+-||apteline-pl.sbs^
+ ||apteline.deal-pl.shop^
+ ||biedronka-zamyka-sklepy.24.eu^
+ ||biedronkowe-karty.24.eu^
+@@ -31,7 +29,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
  ||dev.apps.co.pl^
@@ -26,7 +22,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||download.apps.co.pl^
  ||download.file.co.pl^
  ||dziennik-info.x9.eu^
-@@ -79,7 +76,6 @@
+@@ -81,7 +78,6 @@
  ||foto-zdjecia.24.eu^
  ||free.apps.co.pl^
  ||free.file.co.pl^
@@ -34,7 +30,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||freeiqtest.blogspot.com^
  ||g2eld.doctorhey.com^
  ||game.apps.co.pl^
-@@ -124,19 +120,16 @@
+@@ -126,20 +122,17 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -45,6 +41,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||m.pl.failmobile.net^
  ||miasto-wiadomosci-24h.x9.eu^
 -||microcam.ushoppyworld.com^
+ ||minutainfo.numpet.com^
  ||mob-valgone-pl.fiven-goods.com^
  ||myorlenblog.myfreesites.net^
  ||naszemiasto-fakty24.x9.eu^
@@ -54,7 +51,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -146,7 +139,6 @@
+@@ -149,7 +142,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -62,7 +59,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -293,11 +285,7 @@
+@@ -296,11 +288,7 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -74,7 +71,7 @@ index 5c52e3e4e..f512d28f2 100644
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -336,7 +324,6 @@
+@@ -339,7 +327,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^

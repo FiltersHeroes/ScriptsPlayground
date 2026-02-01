@@ -1,148 +1,92 @@
-diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index aaf87ae18..79761bd74 100644
---- a/PPB/popupy.txt
-+++ b/PPB/popupy.txt
-@@ -3,10 +3,8 @@
- 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
- 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,porta.com.pl,rp.pl,sympatia.onet.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
- 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
--24hurt.pl##.wt-popup, #overlay
--29aleja.pl##.popupWrap
- 50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,mediaexpert.pl,neo24.pl,neonet.pl,renee.pl,tvp.info##.snrs-modal-wrapper, .snrs-modal-content
--80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gameinn.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,kukini.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedawnione.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
-+80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedawnione.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
- 1000dni.pl###news-popup
- aasapolska.pl###leave-page-modal
- aba-sport.pl,alpinsklep.pl,apteka-natura.eu,autochemia.pl,avaro.pl,barokko.pl,bludshop.com,blueskypolska.pl,bogulandia.pl,bugo.pl,butosklep.pl,butylukow.pl,cafeborowka.pl,californiaskateshop.pl,candleworld.com.pl,cosslodkiego.com.pl,cyfra.eu,czasnabuty.pl,damizabawki.pl,denicler.eu,divanii.pl,dowarsztatu.com,e-baseus.com,e-megasport.com,efutro.com.pl,gratoria.pl,groomer.com.pl,hile.pl,hydromech.eu,korob.pl,ksiegarnia-edukacyjna.pl,kupbuty.com,littlejungle.pl,malowanebiela.pl,megazoologiczny.pl,meskiegacie.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rovicky.eu,sestimi.pl,sewel.pl,shop.s-a.pl,sportowybazar.pl,stili.pl,surgepolonia.pl,twojeobuwie.pl,ulubionabielizna.pl,unbrokenstore.com,vitasport.pl,wispol.eu###topLayerBackDrop, .iai-toplayer__background
-@@ -24,7 +22,7 @@ addhost.pl##.fsp-wrapper
- addons.opera.com,altair.com.pl,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
- admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
- adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,ladnebebe.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
--adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
-+ulice.um.warszawa.pl###init_info[style], #komunikat[style]
- adria-art.pl###overlay, .popup.newsletter
- adventuresports.pl##seguno-popup.__seguno-popup-wrapper
- agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -35,12 +33,12 @@ agro-star.com.pl##.lufcik, .lufcik__bg
- agro-trade.pl###f-popup
- agro-trade.pl,bitdefender.pl,byann.pl,demagog.org.pl,domisad.pl,feriogaj.com,tertio.pl,tpi.com.pl##.popup-overlay
- agrobex.pl##div:nth-of-type(6)
--agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
-+agrodoradca24.pl,dok-oswiata-kadry.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
- agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
- agrohandel.com.pl###jcemediabox-popup-page
- agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
- agromix.agro.pl##.nivo-lightbox-overlay
--agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
-+agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
- agrosiec.pl,angelgold.pl,bolix.pl##.modal
- agrotopparts.pl###kartka, #kartka ~ #tlo
- akademia.nask.pl###newsletterall
-@@ -92,7 +90,7 @@ artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com
- arturjablonski.com,eswinoujscie.pl##.ulp-layer, .ulp-overlay
- asd.pl##.popUpHolder, #Fader
- ashampoo.com##.exitlayer
--askarzeznik.pl,greenpolska.com,ogrodnictwo.expert,primadance.pl###popup-box-gfcr-1
-+askarzeznik.pl,greenpolska.com,primadance.pl###popup-box-gfcr-1
- asta-net.pl##.jsHomeBookCallModal
- asta-net.pl##html:not([style*="overflow"]) body:not([style*="overflow"]) #popup-call
- asta-net.pl##html:not([style*="overflow"]) body:not([style*="overflow"]) #popup-call-shadow
-@@ -102,7 +100,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
- astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
- astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
- astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
--atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
-+atat.pl,bananki.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl,zywnosc-atat.pl###exitpopup, #exitpopup_bg
- atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
- atrexpress.com.pl,ch24.pl###popup-box, #list-builder
- atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-gama.pl,atrium-kasztanowa.pl,atrium-koszalin.pl,atrium-molo.pl,atrium-mosty.pl,atrium-plejada.pl,atrium-reduta.pl,atrium-targowek.pl,warszawa.promenada.com##section.pop-up, .modal-backdrop
-@@ -152,7 +150,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
- biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
- bioindygo.pl###popup-1
- biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
--bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,nasztalerz.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
-+bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
- bitdefender.pl,eluban.pl,izigsm.pl,jaslo4u.pl,krasnik.eu,kukulahealthyfood.pl,motherhood.pl,muzeumwp.pl,planujemyogrod.pl,przepisychinskie.pl,rankomat.pl,roltech.eu,sagana.pl,sklepdekarza.pl,sklepdlarolnika.pl,spodiglyinitki.pl,sushi-sklep.pl###popup
- biuroprasowe.pl###global_overlay_cont, #global_overlay
- biznesoutfit.pl###formWrapper, #formOverlay
-@@ -203,7 +201,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
- chillglobal.pl##.bounceright-popup-acm.popup-acm
- chinytolubie.pl##.ui-dialog-titlebar-close, .ui-widget-overlay
- chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl##div[data-gr="popup-container"]
--chocholowskietermy.pl,grailpoint.com,hoho.sklep.pl,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
-+chocholowskietermy.pl,grailpoint.com,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
- cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
- chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
- chronpesel.pl##.wh-popUp-overlay
-@@ -290,7 +288,7 @@ dzwignice.pl##.bg
- e-insportline.pl###vivpopup-collapsed
- e-kidsplanet.com##.banner, .banner-curtain
- e-kwiaty.pl###exitpopup-newsletter
--e-podlogidrzwi.pl,szyszybkikoszyk.pl###infoPage
-+e-podlogidrzwi.pl###infoPage
- e-skladnica.pl,skarbyroztocza.com###popup-sc1-exit
- e-spar.com.pl###modal-welcome
- e-spar.com.pl###modal-welcome[style] ~ .modal-backdrop
-@@ -330,7 +328,6 @@ fabrykawafelkow.pl###someone-purchased
- fabrykazabawek.eu###helloModal
- faie.pl###searchPopUp
- fajnekonkursy.pl###tnp-modal
--familyzone.com.pl##.fx-block.fx-wrapper-modal
- fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
- farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
- farmer.pl###axnBodyContainer
-@@ -479,7 +476,7 @@ linguajob.pl##.popup, #get-similar-offers
- linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
- listymikolaja.pl###newsletter_layer
- loanme.pl##.exit-popup-block
--lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
-+lodzkietargi.pl,slaskietargi.pl###popup_mlm
- longterm.pl###list-builder
- longterm.pl###popup-box
- lookfantastic.pl,myprotein.pl##.emailReengagement
-@@ -640,7 +637,6 @@ podworko.nivea.pl###pobierz-apke-popup
- pol-nor.com###boxpopup, #overlay, #popforfirma
- policja.gov.pl###blisko, .modal-backdrop
- policja.gov.pl,policja.pl##[id^="popup-"], #krajowa_mapa_zagrozen
--policja.orsip.pl##.jimu-widget.jimu-widget-splash
- polish.wifilterouter.com##.leave-message-dialog
- polityka.pl##.cg_subscribe99_banner_apla
- polityka.pl##div[class^="cg_promo"][class$="_popup"]
-diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 7ecffaca3..28e704676 100644
---- a/PPB/popupy_sieciowe.txt
-+++ b/PPB/popupy_sieciowe.txt
-@@ -74,7 +74,6 @@
- ||proto.pl/popup_newsletter/settings
- ||regus.pl/Home/OnExitModal$xmlhttprequest
- ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
--||sklep.jack-wolfskin.pl/*/js/newsletter-modal-
- ||sklep.rms.pl/js/rms_copy_copy/popup.js
- ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
- ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
-diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index db77c2c11..405b1eff5 100644
---- a/PPB/uBO_AG/popupy_suplement.txt
-+++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -2,8 +2,8 @@ queshop.pl##html:has(.newsletter-modal.in):style(overflow-y: auto !important;)
- queshop.pl##.newsletter-modal, .modal-backdrop
- 99rent.pl##.invpopup
- 99rent.pl,agro-top.com.pl##body.invpop-visible:style(overflow-y: auto !important)
--360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,airalo.com,alesoczewki.com,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bobomio.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,chocolissimo.pl,confronter.pl,cyberdefence24.pl,czescirolnicze.eu,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dlalakierni.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekodrogeria.pl,ekoteka.pl,endo.pl,energetyka24.com,eoptic.pl,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,gospodarowaniewoda.pl,grantthornton.pl,greenpoint.pl,ibuk.pl,idream.pl,ikonka.eu,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jogapiekna.com,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,kofiup.pl,konin.pl,kontigo.com.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,limango.pl,linux-magazine.pl,lubimyczytac.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,nck.pl,neo-net.com.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,testerzy.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zaufanekliniki.pl,zeskory.com,zico-bike.pl##.modal-open[class]:style(overflow-y: auto !important; padding-right: 0 !important; margin-right: 0 !important)
--360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,alesoczewki.com,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,confronter.pl,cyberdefence24.pl,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekoteka.pl,endo.pl,energetyka24.com,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,gospodarowaniewoda.pl,grantthornton.pl,ibuk.pl,idream.pl,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,kofiup.pl,konin.pl,kontigo.com.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,limango.pl,linux-magazine.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zaufanekliniki.pl,zeskory.com,zico-bike.pl##.modal-open[class] [style*="padding-right:"]:style(padding-right: 0 !important)
-+360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,airalo.com,alesoczewki.com,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bobomio.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,chocolissimo.pl,confronter.pl,cyberdefence24.pl,czescirolnicze.eu,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dlalakierni.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekodrogeria.pl,ekoteka.pl,endo.pl,energetyka24.com,eoptic.pl,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,grantthornton.pl,greenpoint.pl,ibuk.pl,idream.pl,ikonka.eu,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jogapiekna.com,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,kofiup.pl,konin.pl,kontigo.com.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,limango.pl,linux-magazine.pl,lubimyczytac.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,nck.pl,neo-net.com.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,testerzy.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zaufanekliniki.pl,zeskory.com,zico-bike.pl##.modal-open[class]:style(overflow-y: auto !important; padding-right: 0 !important; margin-right: 0 !important)
-+360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,alesoczewki.com,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,confronter.pl,cyberdefence24.pl,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekoteka.pl,endo.pl,energetyka24.com,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,grantthornton.pl,ibuk.pl,idream.pl,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,kofiup.pl,konin.pl,kontigo.com.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,limango.pl,linux-magazine.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zaufanekliniki.pl,zeskory.com,zico-bike.pl##.modal-open[class] [style*="padding-right:"]:style(padding-right: 0 !important)
- 360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
- a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
- a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -22,8 +22,8 @@ agroalex.pl,beautysupply.pl,ekogram.pl,porcja.eu,salonydenon.pl,wildcar.pl##.x13
- agrobex.pl,akademiafamilijna.pl,ava-kosmetyki.pl,azbudownictwo.com,bi1.pl,blog.lh.pl,brakeparts.pl,bukmacherstwo.info,ckr.pl,dorotafilipiuk.pl,evplus.com.pl,ewl.com.pl,fastestvpn.com,fricke.pl,gannet.pl,gazetaklobucka.pl,gazetazoliborza.pl,gomobi.pl,grupa-tense.pl,hairbyjul.pl,homekoncept.com.pl,ideau.pl,innergo.pl,instytutozonoterapii.pl,kam-sport.pl,klinikamiracki.pl,kreatywna-europa.eu,lpu24.pl,luxtom.pl,magnapolonia.org,marfafashion.com,naumobile.pl,nowa-energia.com.pl,nsix.pl,odczasudoczasu.pl,pcg.pl,pl.geofumadas.com,pol-ukr.com,polska-ie.com,premiummobile.pl,remprodex.com.pl,rzepiennik.pl,sla.pl,sprawdzimy.info,strusiakraina.pl,sukcesedukacja.pl,takemehome.pl,tech-mate.pl,techmlek.com.pl,topplant.pl,tova.pl,tuwiazowna.pl,unia-sklep.pl,waszaturystyka.pl,wielkopolska.tv,woocommerce.pl,wpdesk.pl,wynalazca.tv,zeglarski.info,zoosafari.com.pl##.pum-open:style(overflow-y: auto !important)
- agrobex.pl,akademiafamilijna.pl,ava-kosmetyki.pl,azbudownictwo.com,bi1.pl,blog.lh.pl,brakeparts.pl,bukmacherstwo.info,ckr.pl,dorotafilipiuk.pl,evplus.com.pl,ewl.com.pl,fastestvpn.com,fricke.pl,gannet.pl,gazetaklobucka.pl,gazetazoliborza.pl,gomobi.pl,grupa-tense.pl,hairbyjul.pl,homekoncept.com.pl,ideau.pl,innergo.pl,instytutozonoterapii.pl,kam-sport.pl,klinikamiracki.pl,kreatywna-europa.eu,lpu24.pl,luxtom.pl,magnapolonia.org,marfafashion.com,naumobile.pl,nowa-energia.com.pl,nsix.pl,odczasudoczasu.pl,pcg.pl,pl.geofumadas.com,pol-ukr.com,polska-ie.com,premiummobile.pl,remprodex.com.pl,rzepiennik.pl,sla.pl,sprawdzimy.info,strusiakraina.pl,sukcesedukacja.pl,takemehome.pl,tech-mate.pl,techmlek.com.pl,topplant.pl,tova.pl,tuwiazowna.pl,unia-sklep.pl,waszaturystyka.pl,wielkopolska.tv,woocommerce.pl,wpdesk.pl,wynalazca.tv,zeglarski.info,zoosafari.com.pl##html.pum-open body > [aria-hidden]:style(padding-right: 0 !important)
- agrobex.pl,akademiafamilijna.pl,ava-kosmetyki.pl,azbudownictwo.com,bi1.pl,blog.lh.pl,brakeparts.pl,bukmacherstwo.info,ckr.pl,dorotafilipiuk.pl,evplus.com.pl,ewl.com.pl,fastestvpn.com,fricke.pl,gannet.pl,gazetaklobucka.pl,gazetazoliborza.pl,gomobi.pl,grupa-tense.pl,hairbyjul.pl,homekoncept.com.pl,innergo.pl,kam-sport.pl,klinikamiracki.pl,kreatywna-europa.eu,lpu24.pl,luxtom.pl,magnapolonia.org,marfafashion.com,naumobile.pl,nowa-energia.com.pl,nsix.pl,odczasudoczasu.pl,pcg.pl,pl.geofumadas.com,pol-ukr.com,polska-ie.com,premiummobile.pl,remprodex.com.pl,rzepiennik.pl,sla.pl,sprawdzimy.info,strusiakraina.pl,sukcesedukacja.pl,takemehome.pl,tech-mate.pl,techmlek.com.pl,topplant.pl,tova.pl,tuwiazowna.pl,unia-sklep.pl,waszaturystyka.pl,wielkopolska.tv,woocommerce.pl,wpdesk.pl,wynalazca.tv,zeglarski.info,zoosafari.com.pl##.popmake-overlay.pum-overlay.pum
--agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-scrollable, .modal-backdrop
--agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##body.modal-open .container:style(filter: none !important)
-+agrodoradca24.pl,dok-oswiata-kadry.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-scrollable, .modal-backdrop
-+agrodoradca24.pl,dok-oswiata-kadry.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##body.modal-open .container:style(filter: none !important)
- agroma1.pl,apartamentyzdrowie.pl,art.sarzynski.com.pl,avisplacezabaw.pl,biznesalert.pl,deezee.pl,drzwionline.net,ergokantor.pl,foodsbrothers.pl,happyenergy.pl,ifirma.pl,jakdorobic.pl,kierunekwodkan.pl,lesniow.pl,mebin.pl,medycznamarihuana.com,moi-mili.pl,musiclab.com.pl,profbud.info,sanbetdevelopment.pl,socialtigers.pl,spidersweb.pl,stoprocent.com,stradivarius.com,swederm.com,texacopolska.pl,ursus.com.pl##html[style*="overflow"]:style(overflow-y: auto !important; margin-right: 0 !important; padding-right: 0 !important)
- agroma1.pl,apartamentyzdrowie.pl,art.sarzynski.com.pl,biznesalert.pl,cantino.pl,deezee.pl,distance.pl,dpm.eu,drzwionline.net,ef.pl,ergokantor.pl,foodsbrothers.pl,happyenergy.pl,jakdorobic.pl,kierunekwodkan.pl,lesniow.pl,mebin.pl,medycznamarihuana.com,moi-mili.pl,musiclab.com.pl,piernikowysklep.pl,pl.weber,sanbetdevelopment.pl,sklephonda.pl,socialtigers.pl,stoprocent.com,texacopolska.pl,trenerangielskiego.com,truphone.com,ursus.com.pl,zakoplan.pl,zaradnyfinansowo.pl,zryjzdrowocatering.com,zyciepabianic.pl##.mfp-wrap, .mfp-bg
- agroma1.pl,apartamentyzdrowie.pl,biznesalert.pl,cantino.pl,deezee.pl,dpm.eu,ef.pl,ergokantor.pl,jakdorobic.pl,lancerto.com,medycznamarihuana.com,musiclab.com.pl,piernikowysklep.pl,pl.weber,sanbetdevelopment.pl,sklephonda.pl,socialtigers.pl,stoprocent.com,trenerangielskiego.com,truphone.com,ursus.com.pl,zaradnyfinansowo.pl,zyciepabianic.pl##._has-modal:style(overflow-y: auto !important)
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index 74004b707..6570944b9 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -40,7 +40,7 @@ agroperfekt.pl##.js-marquee-wrapper
+ ahe.lodz.pl###wysuwane7, #wysuwane2
+ airly.eu##.air-quality, .header__links
+ akademiaap.com###sidebar
+-akson.pl,di-polska.pl###medical-comp-info-bar
++akson.pl###medical-comp-info-bar
+ aktualnyodpis.pl###carq-iframe
+ alablaboratoria.pl###small-pop-up
+ alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
+@@ -182,7 +182,6 @@ castrol.com##footer > div > div.nv-parsys-component.nv-container
+ catawiki.pl##body > .be-cornerlabel
+ cdaction.pl,pcformat.pl,pomponik.pl,smaker.pl##body > .topbar
+ cefarm24.pl,dlapacjenta.pl###drawer
+-centrumdruku.com.pl##.ra-animated.ranking-wrapper
+ cenyrolnicze.pl##.bd-margins.bd-headerarea-1, .jf_mm_trigger, .zgloszeniaPanel
+ certyficate.it,github.com,github.io##a[href*="paypal.me/pools/c/87zNJ8OJ3I"], a[href*="paypal.com/pools/c/87zNJ8OJ3I"]
+ chojnow.pl###login-box
+@@ -200,7 +199,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+ comarch.pl##.widget-detach-right-bar-container
+ context.reverso.net###register-popup-bottom
+ coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
+-covircontrol.pl,likefb.pl###message-purchased
++likefb.pl###message-purchased
+ cowsierscipiszczy.pl##.CampaignType--floating
+ creativecommons.org###deed-donate-slide
+ creativehobby.pl###ch-strip
+@@ -356,7 +355,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
+ forum.dobreprogramy.pl##.header-cloak
+ forum.dobreprogramy.pl##.nav-link[href*="/blogi"]
+ forum.duolingo.com##.GB_SB
+-forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
+ forum.muratordom.pl###left_circus > .dostepne_mobile
+ forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
+ forum.swiateczne.info##.av-preloader-box
+@@ -437,7 +435,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
+ hubkolektyw.pl##.panel-boczny
+ hurtowniarolnicza.pl##.recruitment
+ i-apteka.pl,rolmarket.pl###menu_hotspot_zone3
+-i-ekosystem.pl###wptime-plugin-preloader
+ ican.pl###drawer_bar
+ iglazura24.pl##.sold-item-popup
+ iiyama-sklep.pl###foot-lastbought-button
+@@ -568,8 +565,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+ linuxporady.pl,pskrk.com##.crestaPostsBox
+ literackifestiwal.zakopane.eu###g-page-preloader
+ lodzkie.pl##.jj_sl_custom2
+-login.aliorbank.pl##.mobile-app-add
+-login.ingbank.pl###smart-app-banner-region
+ losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
+ lvbet.pl##splash-loader
+ m.leroymerlin.pl##.smart-app-banner
+@@ -826,7 +821,7 @@ pswbp.pl###accessibility-links
+ psy-pies.com,swiatkwiatow.pl###wyskakujaca
+ ptakoutlet.pl###kp, .pasek-right
+ pultusk24.pl##form[action^="https://poll.pollcode.com/"]
+-pup.gliwice.pl,puplegnica.pl###accessKeys
++puplegnica.pl###accessKeys
+ pyszne.pl##div[data-qa="app-banner"]
+ pytamy.pl##.fixFooter
+ pytanienasniadanie.tvp.pl##.stream-button
+@@ -893,7 +888,6 @@ sklep-wedkarski.info###ClPanelImg
+ sklep.aladyn.pl,sklep.mariall.pl###trzecia
+ sklep.bioceriq.pl##.mfn-fake-sale-noti
+ sklep.farmona.pl##.tabs > section.product_link_nav
+-sklep.fusic.pl##.fa-google
+ sklep.odziez-robocza.com###druga_ikona
+ sklep.pakrol.pl##.suggest-slider
+ sklep.veterynaria.pl###sideTab
+@@ -955,7 +949,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+ swiezoizdrowo.pl###sales-booster-popup
+ sympatia.onet.pl###iconsBar
+ syngenta.pl##.pane-menu-menu-sticky-menu
+-system.aliorbank.pl##app-mobile-app-banner
+ szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
+ szkolnastrona.pl##.btn-fav
+ sznyt.pl##.recommended-articles
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 2a349e077..f808844af 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -515,7 +515,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+ promopixel.pl###fitcher-container
+ przestronnie.pl##a[id*="back"][href^="tel:"]
+ psprices.com###chatra
+-pup.gliwice.pl###sugestiaForm
+ pytamy.pl##.tabZB
+ pzu.pl###baner-doradcy, #metka-przycisk
+ r.pl##.divCallback

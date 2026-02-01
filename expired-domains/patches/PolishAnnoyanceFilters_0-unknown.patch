@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index c280eb98e..dd6c0f794 100644
+index b8ba489b8..141c52930 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -897,7 +897,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -901,7 +901,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -23,7 +23,7 @@ index f217e60da..ec6d487af 100644
  sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
  sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index e35f99f6c..1b963aa3c 100644
+index 3d4a665fd..4d37626d5 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,7 +5,7 @@
@@ -48,7 +48,7 @@ index a6dca2e2a..ff8dfab3a 100644
  andzela.com##.kb-cs-notify-container
  at-outlet.pl###WebPushAddSubscription
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index fb8424227..82b3817b6 100644
+index 4487a1768..ed83f4dec 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -39,7 +39,7 @@ airbuy.pl##.js-gotop
@@ -60,6 +60,15 @@ index fb8424227..82b3817b6 100644
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
  aleleki.pl,media-press.tv###back_to_top
+@@ -112,7 +112,7 @@ beltone-polska.eu,beltone-polska.pl##.cc-FloatingButtonBarContainer-button-scrol
+ benchmark.pl,sgb.pl##.jsScrollToTop
+ benler.pl,lenovogaming.pl,lento.pl,restaurantguru.com###scroller
+ beskidy.news,hg.eu,intimissimi.com,nawa.gov.pl,powiatslubicki.pl##.js-scroll-top
+-bet.mbp.olsztyn.pl,fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
++fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
+ bet.pl,citroen.pl,domkulturywkodniu.pl,infocrypto.pl,ipon.pl,zhp.pl###scrolltop
+ betlejempoznanskie.pl##.icon-up-new-box
+ bettingexpert.com,florini.pl##.slideInUp
 @@ -279,7 +279,7 @@ enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  epiotrkow.pl,swiatkwiatow.pl,wyspa.tv##.back-to-top
@@ -78,14 +87,14 @@ index fb8424227..82b3817b6 100644
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
  knorr.pl,lipton.com##.back-to-top-cta
-@@ -551,7 +551,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
- motogen.pl###gora-przycisk-fixed
+@@ -576,7 +576,6 @@ nazwa.pl##.arrowUp__wrapper
+ neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
+ neon24.info###button-top
+ neonet.pl##div[class^="scrollTopArrow-wrapper"]
+-news.samsung.com###btn_top
+ newtonmedia.pl##.take-me-up
+ nfon.com##.page-back-to-top
+ njumobile.pl###back-to-top-of-page
 @@ -741,7 +740,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
