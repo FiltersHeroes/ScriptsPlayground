@@ -1,36 +1,432 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 00cbe3b4e..5b8cc24af 100644
+index 17f4b627c..e9f048826 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -652,6 +652,7 @@ servisu.pl
- shopkove.com
- shopping027479193.pl
- shortfor.alivae.com
-+signalsms.com
- skinfinity-com.com
- sklepoponypremium.pl
- smartmarketingmagnet.com
+@@ -1,7 +1,6 @@
+ 029128161.pl
+ 03918271s.pl
+ 1009z99z8.pl
+-10298433.pl
+ 12092812.pl
+ 12s8x8z.pl
+ 13z-6436633.pl
+@@ -62,11 +61,11 @@ aromaregal.com
+ artizinconnu.com
+ asbelmi.cloud
+ atasehirsackaynakmerkezi.com
+-awamzone.com
+ azansarfraz.com
+ ballplay.buzz
+ beliko.pl
+ belikoti.pl
++belintego.pl
+ bellikoto.pl
+ belmontsquareapartments.com
+ beltugi.pl
+@@ -84,7 +83,6 @@ bitcoinaiapp.com
+ bitcoinavage.com
+ bitcoinavage500.com
+ bitcoinavageai.com
+-bl6cvu.lol
+ bnsabikeparts.com
+ bolaslot21goal.com
+ brylantnawodzie.pl
+@@ -100,7 +98,6 @@ centr72a.pl
+ chruby.pl
+ cinemagalyapi.com
+ circlek-energy.pl
+-citybrokerz.org
+ cleanjoy.buzz
+ clothinger.com
+ clp-revalidation.com
+@@ -121,6 +118,7 @@ dataproz.buzz
+ dealmenot.com
+ decademist.melodicloud.com
+ decornesthome.com
++delomi.pl
+ deszczowewakacje.pl
+ detpltv.pl
+ devirfan.com
+@@ -134,8 +132,7 @@ dmlop.pl
+ dmone.pl
+ doj-withcounsel.com
+ domenamiasta.pl
+-doska82.pl
+-dp5vmb.lol
++dougshop.pl
+ dreammatchhub.com
+ drewpoldrzwi.pl
+ drogadomarzen.pl
+@@ -159,12 +156,11 @@ edadevzz.buzz
+ edotek.pl
+ edupdf.org
+ efektymotyla.pl
++egdatelemo.pl
+ ekoiflashsale.sa.com
+ elindo.pl
+-emonitoringposct.lol
+ emulimo.pl
+ energyland-malopolska24.com.pl
+-energylandia-wirtualnapolska.pl
+ energylandia-wydarzeniadnia-24.pl
+ energylandia-wydarzeniadnia-online.pl
+ energylandia-wydarzeniadnia.szczecin.pl
+@@ -204,15 +200,14 @@ folsomplumbingrepair.com
+ foodisnsandagro.pl
+ foodsandagros.com.pl
+ framekey.buzz
+-freetvntf.pl
+ friendlycarwashuae.com
+ gablnet.pl
+ gabrieloijiojigado.shop
+ gaetafoundation.org
+ galatykaplanet.pl
++gdatelemo.pl
+ genetykazwierzat.pl
+ genifytechnologies.com
+-getintopci.com
+ gfpasl.pl
+ ghipwa.com.pl
+ gizmodica.com
+@@ -235,7 +230,6 @@ heyi5221.com
+ heysalesboat.com
+ homemadeideas.org
+ houpeacou.sa.com
+-howmanyday.com
+ hqty001.com
+ htdtv823.pl
+ htmlfunzzy.buzz
+@@ -243,7 +237,6 @@ huntersklep.pl
+ i-pomocnedrzewo.pl
+ i-przyroda.pl
+ i-terazczas.pl
+-i6oecx.cyou
+ iauikc3918.pl
+ iaukcja015929812.pl
+ iaukcja827612612.pl
+@@ -257,16 +250,15 @@ id5534.pl
+ id5552.pl
+ id6662.pl
+ id8374.pl
++id8533.pl
+ id8812.pl
+ id9111.pl
+ id9203.pl
+ id9222.pl
+ id93.pl
+-id9328.pl
+ id9343.pl
+ id9898.pl
+ iforbet.com.pl
+-il4wgl.lol
+ imenimo.pl
+ immediate-adipex-platform.com
+ immediate-adipex.com
+@@ -320,7 +312,6 @@ info-dnia-wydarzenia.pl
+ info-energylandia.com.pl
+ info-energylandia.pl
+ insrod.com
+-institutodeingenieriairza.com
+ interestgrowthhub.xyz
+ ioferta012954.pl
+ ioferta015291.pl
+@@ -329,12 +320,12 @@ isamego.pl
+ isotigo.pl
+ isuntago.pl
+ itelinomo.pl
+-j9mrnu.lol
+ jahanzaib-gm.com
+ jblenetwork.com
+ jesienny-czas.pl
+ jesniowa-tablica.pl
+ jestserwis.pl
++jisramuhammadiyah.org
+ jmptwa.pl
+ jobflow.cfd
+ joinsmartproperty.com
+@@ -343,6 +334,7 @@ jumpjoyz.buzz
+ kalandashop.com
+ kategorie-inne19258928.pl
+ kazimirjs.pl
++kedimo.pl
+ keypad.biz
+ kingbchallenge.com
+ klotpa.pl
+@@ -355,7 +347,6 @@ krtorai.pl
+ ksploa.pl
+ lalagulle.com
+ lamoli.com
+-latexdecadence.com
+ lawyer-group.pl
+ leadsrhino.com
+ learn2earns.com
+@@ -392,7 +383,6 @@ melinest.pl
+ melwana.com
+ mer-car.com.pl
+ merferbitappengine.com
+-metro-alert.pl
+ metro-opoznienia.pl
+ metro-utrudnienia.pl
+ miejskidziennikarzwp.pl
+@@ -421,7 +411,6 @@ namedatabase.hk
+ naszeparkirozrywki.pl
+ naturyszept.pl
+ nbpa.pl
+-netfiix-free.pl
+ nexreich.de
+ nextlevelsend.com
+ nextsmmaagency.com
+@@ -443,12 +432,9 @@ oferta-522712.pl
+ oferta-7516198.pl
+ oferta-8547674.pl
+ oferta-prywanta857121.pl
+-oferta01295182.pl
+ oferta015295812.pl
+-oferta01591251.pl
+ oferta0192861.pl
+ oferta051295.pl
+-oferta120539.pl
+ oferta12512512.pl
+ oferta1525112.pl
+ oferta152512.pl
+@@ -498,13 +484,10 @@ phpfoxzz.buzz
+ piaszczystaprzygoda.pl
+ piledrillingmachinespareparts.com
+ pl-00812.pl
+-pl-26491.pl
+ pl-36282.pl
+ pl-7514.pl
+-pl-928749.pl
+ pl-kategoria2345463.pl
+ pl-oferta1020.pl
+-pl-oferta1070833.pl
+ pl-oferta1253321.pl
+ pl-oferta1351156.pl
+ pl-oferta1432735.pl
+@@ -517,7 +500,6 @@ pl-oferta2102454.pl
+ pl-oferta2110734.pl
+ pl-oferta217096.pl
+ pl-oferta2257646.pl
+-pl-oferta2275178.pl
+ pl-oferta2533826.pl
+ pl-oferta2652367.pl
+ pl-oferta26928.pl
+@@ -568,14 +550,12 @@ pl-oferta8455056.pl
+ pl-oferta847.pl
+ pl-oferta8483.pl
+ pl-oferta8531072.pl
+-pl-oferta9049444.pl
+ pl-oferta9219764.pl
+ pl-oferta9383629.pl
+ pl-oferta941546.pl
+ pl-oferta9526.pl
+ pl-oferta9577689.pl
+ pl-oferta97431.pl
+-pl-oferta9802431.pl
+ pl-oferta98273.pl
+ pl-oferta9830.pl
+ pl-oferta9839162.pl
+@@ -586,6 +566,7 @@ plbikinvest.buzz
+ plgfs.org
+ plor.pl
+ poczta-home.pl
++polavestpro.pl
+ polfimly.pl
+ polskapieknosc.pl
+ polskiekontenery.pl
+@@ -610,6 +591,7 @@ przejrzystechmury.pl
+ przyrodainfo-wrozoo.pl
+ przyrodaznami.pl
+ przyrodniczyraj.pl
++ptgo.edu.pl
+ puresheethaven.com
+ pymaxzz.buzz
+ qasmirealestate.com
+@@ -632,7 +614,6 @@ rpltv.pl
+ rubyfoxz.buzz
+ rubyhubz.buzz
+ runhubz.buzz
+-safaripl.pl
+ sahrishrizwan.com
+ sales-propertyfinder.com
+ saltcaveoakville.com
+@@ -700,12 +681,10 @@ thefoodsgeek.com
+ theimmediatecoraldex.com
+ theshoesxpress.com
+ threepointslab.com
+-to-str.help
+ tojest-krakow.pl
+ tomaszikasia.pl
+ tommic.pl
+ topsmmaagency.com
+-torbend.net
+ townscity.com
+ trade-chenix-platform.com
+ trade-flarex-platform.com
+@@ -754,7 +733,6 @@ uluspatrick.com
+ unilqo-polska.pl
+ unilqopolska.pl
+ univers-inter-services.online
+-uorpa.pl
+ urtinpl.pl
+ us-wishpond.com
+ uxdayzzy.buzz
+@@ -771,18 +749,13 @@ vishubzz.buzz
+ visprozz.buzz
+ vitalhealthpluse.com
+ wayofbest.com
+-webkitpo.pl
+ wecleancarpetsandupholstery.com
+ weekend-tvn24.pl
+-wegielplus.pl
+ welimo.pl
+ well-living-blog.com
+ weryfikacja-podatki-gov.pl
+ whytedata.com
+ wiadomosci24polska.pl
+-wirtualnapolska-energylandia.pl
+-wirtualnapolska-parkzator.pl
+-wirtualnapolskawp.pl
+ wodaexpress.pl
+ wodospadnatury.pl
+ wp-codziennynews.pl
+diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
+index 2627c0af3..c25e593f4 100644
+--- a/exclusions/LWS_expired.txt
++++ b/exclusions/LWS_expired.txt
+@@ -134,6 +134,7 @@ brooksoutletsklep.com
+ brooksrunningpolska.com
+ brooksrunningpolska.pl
+ brookswyprzedaz.com
++bshellz.pl
+ budoserv.pl
+ bueongi.pl
+ buffalobuty.com
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 042b31ffd..18a717a20 100644
+index 18a717a20..e799ee17a 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -1108,7 +1108,6 @@
- ||straight-outta-cotton.com^$all
- ||streetvibe.pl^$all
- ||strefa-filmu.pl^$all
--||strongfitobody.com^$all
- ||stuntoffer.com^$all
- ||stylemotion.pl^$all
- ||stylovemeble.pl^$all
+@@ -139,7 +139,6 @@
+ ||brooksrunningpl.com^$all
+ ||browy.shop^$all
+ ||brudnyromans.com^$all
+-||bshellz.pl^$all
+ ||bukavi.pl^$all
+ ||bulkextreme.pl^$all
+ ||bullrun-new.com^$all
+@@ -300,7 +299,6 @@
+ ||eonline.pl^$all
+ ||epsilonpureis.com^$all
+ ||erexol24.pro^$all
+-||ergonome.pl^$all
+ ||erisilplus.pl^$all
+ ||eronplus.pl^$all
+ ||eropteka.com.pl^$all
+@@ -393,7 +391,6 @@
+ ||gamemine.com^$all
+ ||garciniacambogiaactives.pl^$all
+ ||gatu.pl^$all
+-||gcpolska.com^$all
+ ||gebe.com.pl^$all
+ ||gemverify.com^$all
+ ||generatorkodow.hpu.pl^$all
+@@ -763,7 +760,6 @@
+ ||notowani.pl^$all
+ ||nova-office.pl^$all
+ ||nova-warszawa.com^$all
+-||nowak-krakow.pl^$all
+ ||nowakmazur.com^$all
+ ||noweciezarowe.pl^$all
+ ||nowmarket.pl^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index de127acdd..545ca953a 100644
+index 02d1fc627..79e4c4a80 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -14449,7 +14449,6 @@
- ||sigma-aspect.com^$all
- ||sigma-betrix.com^$all
- ||signalflare.cfd^$all
--||signalsms.com^$all
- ||signaragio.rest^$all
- ||signaturebrassquintet.org^$all
- ||signin.neflix.account-recovery-acc.zrdxy.zhh.njg.mybluehost.me^$all
+@@ -3171,7 +3171,6 @@
+ ||beiruteh.com^$all
+ ||bekydoo.pro^$all
+ ||belfastsandwich.com^$all
+-||belintego.pl^$all
+ ||bellainesc.rest^$all
+ ||bellariavv.rest^$all
+ ||bellavitacafeoneida.com^$all
+@@ -5282,7 +5281,6 @@
+ ||delink.lat^$all
+ ||delivery-ondemand.com^$all
+ ||deljpego.top^$all
+-||delomi.pl^$all
+ ||delta-invest-app.com^$all
+ ||demandsbig.bond^$all
+ ||demenpassa.rest^$all
+@@ -5714,7 +5712,6 @@
+ ||dougimus.com^$all
+ ||douglas-delights.com^$all
+ ||dougshop-pl.com^$all
+-||dougshop.pl^$all
+ ||dovrecorp.com^$all
+ ||dowebmarketing.com^$all
+ ||downcache.com^$all
+@@ -6124,7 +6121,6 @@
+ ||egabet.net^$all
+ ||egation.goldretirement.info^$all
+ ||egbeiworiaweda.com^$all
+-||egdatelemo.pl^$all
+ ||egeceviz.com^$all
+ ||eggandolive.com^$all
+ ||eggrollstan.com^$all
+@@ -7484,7 +7480,6 @@
+ ||gbvanleasing.com^$all
+ ||gbytec.bond^$all
+ ||gd4rcn.lat^$all
+-||gdatelemo.pl^$all
+ ||gdonxwxutl.info^$all
+ ||gdrecycling.com^$all
+ ||gdsextranet.com^$all
+@@ -8770,7 +8765,6 @@
+ ||icrossedtheborder.com^$all
+ ||ictstudents.help^$all
+ ||icyf.net^$all
+-||id8533.pl^$all
+ ||id9002xe941.xyz^$all
+ ||id301920-12.click^$all
+ ||id568982.org^$all
+@@ -9477,7 +9471,6 @@
+ ||jimdudley.net^$all
+ ||jimreidrealty.com^$all
+ ||jiryov.digital^$all
+-||jisramuhammadiyah.org^$all
+ ||jiziquy.com^$all
+ ||jizzware.com^$all
+ ||jk3hsd5f.eu^$all
+@@ -9704,7 +9697,6 @@
+ ||kd1qprw.eu^$all
+ ||kdecr.casa^$all
+ ||kebonderole.mobi^$all
+-||kedimo.pl^$all
+ ||keenhooks.com^$all
+ ||keep-dev.com^$all
+ ||keepdcantaloupe.bond^$all
+@@ -11808,7 +11800,6 @@
+ ||olx.dostw-126.shop^$all
+ ||olx.dostw-133.shop^$all
+ ||olx.id332.pl^$all
+-||olx.id8533.pl^$all
+ ||olx.id568982.org^$all
+ ||olx.id846872.org^$all
+ ||olx.id-527482.com^$all
+@@ -13378,7 +13369,6 @@
+ ||polarisg.info^$all
+ ||polarrealmsg.info^$all
+ ||polavestpro.com^$all
+-||polavestpro.pl^$all
+ ||polavestprop-ai.net^$all
+ ||polbec.com^$all
+ ||polbytex.com^$all
+@@ -13733,7 +13723,6 @@
+ ||psychradde.rest^$all
+ ||ptelinsal.pro^$all
+ ||pteroalbum.rest^$all
+-||ptgo.edu.pl^$all
+ ||ptkcanarias.com^$all
+ ||ptw309-677.xyz^$all
+ ||pub-856cc8463e9b4be5aa81f70b157990a1.r2.dev^$all

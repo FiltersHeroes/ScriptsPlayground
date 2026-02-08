@@ -1,17 +1,5 @@
-diff --git a/PPB/e_gazety.txt b/PPB/e_gazety.txt
-index 7fed59ed9..8689f4a4a 100644
---- a/PPB/e_gazety.txt
-+++ b/PPB/e_gazety.txt
-@@ -164,7 +164,6 @@ polonika.at###left > div.clearfix.module:first-of-type
- polskaniepodlegla.pl###sp-right
- polskaniepodlegla.pl##.sppb-column-addons img.jch-lazyloaded[src*="/images/okladka"]
- polskicaravaning.pl##.voffset4.row > .boffset4.voffset1.col-xs-24.col-md-24.col-lg-24
--polskiprzemysl.com.pl##.footer .issue-show-link
- poradnikasfaltowy.pl###o-poradniku
- poradnikhandlowca.com.pl##.section-bar-newspaper
- portalhodowcy.pl###sp-okladki
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index aae805917..236bff59a 100644
+index e6a6fdd0a..83f9968aa 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -18,7 +18,7 @@
@@ -109,15 +97,7 @@ index aae805917..236bff59a 100644
  placesandplants.com###subscribe-blog-blog_subscription-2, footer div.col:first-of-type > div.widget:nth-of-type(3) > .widget-title
  planet.pl###zapis-do-newsletter
  platforma.org##.footer > .newsletter-container
-@@ -1227,7 +1219,6 @@ polska.travel##.fixed-elements
- polskacanada.com###alo_easymail_widget_form
- polskieradio.com##.post-widget.widget:nth-of-type(4) > .post-widget.widget
- polskimarket.de,polskimarket.nl##.fn-title, #footer_newsletters, .fn-description
--polskiprzemysl.com.pl##.prenumerata-heder
- polygamia.pl###sidebar-footer-top-right
- popvinyl.pl##.xl\:mt-0.mt-6.p-6.shadow-custom
- poradnikhandlowca.com.pl##.section-bar-newsletter
-@@ -1251,7 +1242,6 @@ powerman.com.pl##.pm_newsletter
+@@ -1251,7 +1243,6 @@ powerman.com.pl##.pm_newsletter
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl
  poznan.factory.pl##.pane-2.pane-custom.panel-pane
@@ -125,12 +105,7 @@ index aae805917..236bff59a 100644
  prawo.pl##.wkNewsletterBlock
  prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
  press.pl##.pressletter
-@@ -1376,12 +1366,10 @@ shop.massdnm.com,taniefototapety.eu###menu_newsletter
- shop.prettyone.pl##.container-fluid:nth-of-type(2) > .doubleBox > .container > .row > .col-xs-6:nth-of-type(2) > h2
- shopgracz.pl##.newsletter_footer_block li:nth-child(-n+2)
- showroom.pl##.news-signup
--sii.org.pl###newsform
- silesiasem.pl##.entry-content > form
+@@ -1381,7 +1372,6 @@ silesiasem.pl##.entry-content > form
  silesion.pl##.pageFooter__newsletter
  sinsay.com##.home-ss20-newsletter
  sipma.pl###newslet
@@ -138,7 +113,7 @@ index aae805917..236bff59a 100644
  skalnik.pl##.newsletter_content.footer
  skapiec.pl##section.newsletter
  ski4you.pl##footer#footer.footer .widget--signup
-@@ -1755,7 +1743,6 @@ zasiejpole.pl##main > div.grid:has(> div > div > div[data-module-name="newslette
+@@ -1755,7 +1745,6 @@ zasiejpole.pl##main > div.grid:has(> div > div > div[data-module-name="newslette
  zawady.com.pl###subscribe
  zdobadzkobiete.pl###access
  zdrowie.pap.pl##section ~ a[href="/newsletter/form"]
@@ -159,7 +134,7 @@ index 588615528..e4c2fa69c 100644
  planeta-budowlana.pl##.dialog[id^="window"], #toogas_pop_up
  plk.pl###okienko_yt, .ui-widget-overlay
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 03e87a59d..78f696719 100644
+index cfb1bc3e4..1331df863 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -101,7 +101,7 @@ blog-daneosobowe.pl##+js(nostif, i(), 5000)
