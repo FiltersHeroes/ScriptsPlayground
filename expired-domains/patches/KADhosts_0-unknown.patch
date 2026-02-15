@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index a35c0777d..0bcd023cb 100644
+index 6eb38e20b..675efcfaf 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -4,11 +4,9 @@
@@ -14,7 +14,15 @@ index a35c0777d..0bcd023cb 100644
  ||apteline.deal-pl.shop^
  ||biedronka-zamyka-sklepy.24.eu^
  ||biedronkowe-karty.24.eu^
-@@ -31,7 +29,6 @@
+@@ -21,7 +19,6 @@
+ ||ce.wielkanagroda.com^
+ ||ce.wielkaniespodzianka.pl^
+ ||ce.winfreetoday.com^
+-||chomikuj-new-t1.opx.pl^
+ ||cloud.file.co.pl^
+ ||cuvok46071bc73ad8lc0.mergeconnection.co.in^
+ ||cuvomfu071bc73adcgh0.mergeconnection.co.in^
+@@ -31,7 +28,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
  ||dev.apps.co.pl^
@@ -22,20 +30,19 @@ index a35c0777d..0bcd023cb 100644
  ||download.apps.co.pl^
  ||download.file.co.pl^
  ||dziennik-info.x9.eu^
-@@ -61,7 +58,6 @@
- ||fakty27a.is-best.net^
- ||fakty28a.is-best.net^
- ||fakty29a.is-best.net^
--||fakty30a.is-best.net^
- ||fakty31a.is-best.net^
- ||fakty32a.is-best.net^
- ||fakty33a.is-best.net^
-@@ -126,20 +122,17 @@
+@@ -81,7 +77,6 @@
+ ||foto-zdjecia.24.eu^
+ ||free.apps.co.pl^
+ ||free.file.co.pl^
+-||free.propdfconverter.com^
+ ||freeiqtest.blogspot.com^
+ ||g2eld.doctorhey.com^
+ ||game.apps.co.pl^
+@@ -126,19 +121,16 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
 -||lp.trade360.com^
- ||lpagfafo.strongfitobody.com^
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
  ||m.pl.failmobile.net^
@@ -51,7 +58,7 @@ index a35c0777d..0bcd023cb 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -149,7 +142,6 @@
+@@ -148,7 +140,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -59,7 +66,7 @@ index a35c0777d..0bcd023cb 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -296,11 +288,7 @@
+@@ -294,18 +285,13 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -71,7 +78,14 @@ index a35c0777d..0bcd023cb 100644
  ||portalrandkowy.c.pl^
  ||powiekszgo.c.pl^
  ||preg.viciworld.com^
-@@ -339,7 +327,6 @@
+ ||prod.letswinstuff.com^
+ ||promocjezkauflandu.24.eu^
+ ||protected.net^
+-||publisher.lead.network^
+ ||quality-products1.blogspot.com^
+ ||rncig.doctortrf.com^
+ ||roksa.sx^
+@@ -337,7 +323,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -79,3 +93,11 @@ index a35c0777d..0bcd023cb 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
+@@ -348,7 +333,6 @@
+ ||wydarzenia-naszemiasto24.x9.eu^
+ ||wydarzenia-naszemiasto-24.x9.eu^
+ ||wydarzenia-naszemiasto.x9.eu^
+-||wydawca.lead.network^
+ ||wygraj-samsunga.24.eu^
+ ||yzxvm.doctorbusy.com^
+ ||z.centrum-aparatow-sluchowych.pl^
