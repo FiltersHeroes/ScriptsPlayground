@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index d663b7a7d..d1b03b8c6 100644
+index 866979a1d..dfb34a46f 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -521,7 +521,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -522,7 +522,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -10,7 +10,7 @@ index d663b7a7d..d1b03b8c6 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -906,7 +905,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -907,7 +906,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -39,7 +39,7 @@ index 064324081..e6a6fdd0a 100644
  sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
  sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 3d4a665fd..4d37626d5 100644
+index 0d7c4a494..9a29dc8a7 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,7 +5,7 @@
@@ -64,7 +64,7 @@ index a6dca2e2a..ff8dfab3a 100644
  andzela.com##.kb-cs-notify-container
  at-outlet.pl###WebPushAddSubscription
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index a38f67dc3..14ee41159 100644
+index fb252e151..f577a2309 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -39,7 +39,7 @@ airbuy.pl##.js-gotop
@@ -76,6 +76,15 @@ index a38f67dc3..14ee41159 100644
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
  aleleki.pl,media-press.tv###back_to_top
+@@ -168,7 +168,7 @@ chimmo.pl###arrow-up
+ chmielnik.com###na_gore
+ choinka-sztuczna.pl###ico_up
+ choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
+-ciechpress.pl,niesamowitapolska.eu,redditch.pl###astroid-backtotop
++ciechpress.pl,niesamowitapolska.eu###astroid-backtotop
+ ckz.pl##.wpv-scroll-to-top
+ claas.roltexkrasnystaw.pl##.top-link
+ cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
 @@ -279,7 +279,7 @@ enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  epiotrkow.pl,swiatkwiatow.pl,wyspa.tv##.back-to-top
@@ -85,7 +94,7 @@ index a38f67dc3..14ee41159 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -419,7 +419,7 @@ jackpot.pl##back-to-top
+@@ -420,7 +420,7 @@ jackpot.pl##back-to-top
  janssen.tv##.move-btn__parent
  jarock.pl,mentel.com.pl###back-to-top-btn
  jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
@@ -94,7 +103,7 @@ index a38f67dc3..14ee41159 100644
  jmlnet.pl##.pi-scroll-top-arrow
  jomfruland.net##.scrollup__placeholder
  journals.viamedica.pl##.Back_To_Top_Button
-@@ -439,7 +439,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
+@@ -440,7 +440,7 @@ kimjestesmy.lidl.pl##.nuc-m-to-top-button
  kind.com##.AP_obj-top-button
  kioxia.com##.icon-top
  kitsune-subs.anime-odcinki.pl##.smoothscroll-top
@@ -103,7 +112,7 @@ index a38f67dc3..14ee41159 100644
  klodzko24.eu##.scroll_top
  kmdelikatesy.pl###scrollTopPage
  knorr.pl,lipton.com##.back-to-top-cta
-@@ -451,7 +451,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -452,7 +452,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -111,7 +120,7 @@ index a38f67dc3..14ee41159 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -576,7 +575,6 @@ nazwa.pl##.arrowUp__wrapper
+@@ -577,7 +576,6 @@ nazwa.pl##.arrowUp__wrapper
  neo24.pl,neonet.pl##div[class*="scrollTopArrowCss"]
  neon24.info###button-top
  neonet.pl##div[class^="scrollTopArrow-wrapper"]
@@ -119,7 +128,7 @@ index a38f67dc3..14ee41159 100644
  newtonmedia.pl##.take-me-up
  nfon.com##.page-back-to-top
  njumobile.pl###back-to-top-of-page
-@@ -741,7 +739,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -742,7 +740,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top

@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index d1b03b8c6..4fd6128cc 100644
+index dfb34a46f..89bc6d505 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -830,7 +830,7 @@ pswbp.pl###accessibility-links
+@@ -831,7 +831,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -12,10 +12,10 @@ index d1b03b8c6..4fd6128cc 100644
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 4d37626d5..588615528 100644
+index 9a29dc8a7..dd48cf23f 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -696,7 +696,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -700,7 +700,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -37,7 +37,7 @@ index f635f5653..cfb1bc3e4 100644
  secure.avaaz.org##.signup-petition-modal-wrapper
  sferis.pl##+js(acis, $, promoNewsletter)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 2a349e077..314d8035b 100644
+index a70e5c13c..a99293a69 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -105,7 +105,6 @@ brief.pl##.fab-desktop
@@ -71,7 +71,15 @@ index 2a349e077..314d8035b 100644
  klimacold.com.pl###ssb-btn-0, #ssb-btn-1, #ssb-btn-2, #ssb-btn-4
  klinikawitaminowa.pl##.ic-phone-button
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
-@@ -495,7 +493,7 @@ polkurier.pl##.pk-chat-container
+@@ -414,7 +412,6 @@ modelerolnicze.pl###fb-customer-chat
+ modivo.pl##.live-chat-button
+ mojataxi24.pl##h4#phone:first-of-type > .wiszacy
+ mojbank.pl##.uk-grid.uk-flex-middle.uk-grid-row-small.uk-grid-column-collapse.uk-child-width-expand
+-moje.pzu.pl##.pak-footer__call-container
+ mojehobby.pl##.report-bug
+ mojeppk.pl###ppk-cx-webchat-chat-button
+ monedo.pl###satellite
+@@ -496,7 +493,7 @@ polkurier.pl##.pk-chat-container
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -80,7 +88,7 @@ index 2a349e077..314d8035b 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -515,7 +513,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -516,7 +513,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -88,7 +96,7 @@ index 2a349e077..314d8035b 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -542,7 +539,6 @@ salesmanago.pl###sm-bot
+@@ -543,7 +539,6 @@ salesmanago.pl###sm-bot
  salomon.com##.chatbot-box
  salon2kolka.pl##.msl-envelope-o
  salon-kosiarek.pl##.tm-sticker
