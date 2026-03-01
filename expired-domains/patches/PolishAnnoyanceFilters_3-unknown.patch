@@ -1,0 +1,12 @@
+diff --git a/PPB/uBO_AG/inne_suplement.txt b/PPB/uBO_AG/inne_suplement.txt
+index 0ebbc2c58..0e6b45792 100644
+--- a/PPB/uBO_AG/inne_suplement.txt
++++ b/PPB/uBO_AG/inne_suplement.txt
+@@ -28,7 +28,6 @@ blogspot.com,miejskamuzyka.pl##+js(spoof-css, body\, html, background-attachment
+ blogspot.com,miejskamuzyka.pl##body, html:style(background-attachment: fixed !important)
+ budujemydom.pl##.magazyn-label .m-okladka:style(bottom: 0 !important)
+ budujemydom.pl##.magazyn-label:style(position:static !important)
+-build.opensuse.org##.flash-and-announcement:style(position: static !important; z-index: 10 !important)
+ canva.com##section[class] ~ div[class] > div[class] > div[class]:matches-css(position: sticky)
+ castorama.pl##+js(set-local-storage-item, tool-tip-header-visibility, false)
+ cda.pl##a[href*="dla-dzieci"] span[style]:remove-attr(style)
