@@ -1,45 +1,28 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 733264064..c75988168 100644
+index 733264064..eb88b8893 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,11 +4,8 @@
+@@ -4,11 +4,9 @@
  ||a.ero.bullrun-new.com^
  ||abc.travel2days.com^
  ||activestin-pl.great-beauty.org^
 -||adpro.futurenet.club^
  ||aoc.teleaudio.pl^
--||api.myeforsa.pl^
+ ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
 -||apteline-pl.sbs^
  ||apteline.deal-pl.shop^
  ||biedronka-zamyka-sklepy.24.eu^
  ||biedronkowe-karty.24.eu^
-@@ -21,17 +18,11 @@
- ||ce.wielkanagroda.com^
- ||ce.wielkaniespodzianka.pl^
- ||ce.winfreetoday.com^
--||chomikuj-new-t1.opx.pl^
--||cloud.file.co.pl^
- ||czas-na-fb.blogspot.com^
- ||daily.boonovel.com^
- ||darmowe-bony.24.eu^
+@@ -29,7 +27,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
--||dev.apps.co.pl^
+ ||dev.apps.co.pl^
 -||dotpay.pocztapolska24.pl^
--||download.apps.co.pl^
--||download.file.co.pl^
+ ||download.apps.co.pl^
+ ||download.file.co.pl^
  ||dziennik-info.x9.eu^
- ||dziennik-polski.x9.eu^
- ||dzisiaj.numpet.com^
-@@ -79,14 +70,12 @@
- ||foto-zdjecia.24.eu^
- ||free.apps.co.pl^
- ||free.file.co.pl^
--||free.propdfconverter.com^
- ||freeiqtest.blogspot.com^
- ||g2eld.doctorhey.com^
- ||game.apps.co.pl^
+@@ -86,7 +83,6 @@
  ||gazeta-polska.24.eu^
  ||glikotril.fair-2sale.com^
  ||glukofin-pol.eddy-goods.com^
@@ -47,7 +30,7 @@ index 733264064..c75988168 100644
  ||gw.firesub.pl^
  ||gzs2u.doctortrf.com^
  ||hd.vod.co.pl^
-@@ -124,18 +113,15 @@
+@@ -124,18 +120,15 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -66,7 +49,7 @@ index 733264064..c75988168 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -145,7 +131,6 @@
+@@ -145,7 +138,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -74,7 +57,7 @@ index 733264064..c75988168 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -289,18 +274,13 @@
+@@ -289,18 +281,13 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -93,7 +76,7 @@ index 733264064..c75988168 100644
  ||quality-products1.blogspot.com^
  ||rncig.doctortrf.com^
  ||roksa.sx^
-@@ -322,7 +302,6 @@
+@@ -322,7 +309,6 @@
  ||twoje-miasto.x9.eu^
  ||ublock.org^
  ||url-partners.g2afse.com^
@@ -101,7 +84,7 @@ index 733264064..c75988168 100644
  ||visospect.fair-2sale.com^
  ||web.cellfun.mobi^
  ||web.hearclear.com^
-@@ -330,7 +309,6 @@
+@@ -330,7 +316,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -109,7 +92,7 @@ index 733264064..c75988168 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
-@@ -341,7 +319,6 @@
+@@ -341,7 +326,6 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^
