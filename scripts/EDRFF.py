@@ -3,14 +3,14 @@
 # pylint: disable=anomalous-backslash-in-string
 # pylint: disable=C0103
 # Expired Domains Remover For Filterlists
-# v1.8
+# v1.9
 # Usage: EDRFF.py pathToSections listOfExpiredDomains.txt TLD (optional) "exclude"(optional)
 
 import os
 import sys
 import shutil
 import re
-from multiprocessing import Pool
+import multiprocessing as mp
 import subprocess
 
 pj = os.path.join
@@ -23,13 +23,6 @@ temp_path = pj(main_path, "temp")
 sections_path = sys.argv[1]
 
 regex_list = []
-
-if os.path.isdir(temp_path):
-    shutil.rmtree(temp_path)
-
-os.makedirs(temp_path)
-os.chdir(temp_path)
-
 expired_f_list = []
 with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
     for expired_f_line in expired_f:
@@ -49,7 +42,7 @@ with open(sys.argv[2], "r", encoding='utf-8') as expired_f:
 
 regex_list = []
 regex_part_domains = '|'.join(expired_f_list)
-regex_part_domains = f"(([\w\d-]+\.)+)?({regex_part_domains})"
+regex_part_domains = f"(?<![\\w-])((?:[\\w-]+\\.)+)?({regex_part_domains})(?![\\w-])"
 # ||domain.com
 regex_list.append(f"^\|\|{regex_part_domains}.*")
 # $domain=domain.com|
@@ -76,23 +69,52 @@ def remove_domains(line):
         line = f"{line}\n"
     return line
 
+def process_sections(sections_path):
+    ctx = mp.get_context("spawn")
+    old_cwd = os.getcwd()
 
-with Pool() as p:
-    for root, dirs, files in os.walk(sections_path):
-        for section in files:
-            section_file_path = pj(root, section)
-            section = os.path.basename(section_file_path)
-            print(f"Checking {section} ...")
-            with open(section_file_path, "r", encoding='utf-8') as section_f:
-                results = p.map(remove_domains, section_f)
-            with open(section_file_path, "w", encoding='utf-8') as f_out:
-                for line in results:
-                    f_out.write(line)
-    p.close()
-    p.join()
+    try:
+        with ctx.Pool() as p:
+            for root, dirs, files in os.walk(sections_path):
+                for section in files:
+                    file_path = os.path.join(root, section)
+                    print(f"Checking {section} ...")
 
-os.chdir(main_path)
-os.rmdir(temp_path)
+                    tmp_path = file_path + ".tmp"
+                    chunk = []
+
+                    with open(file_path, "r", encoding="utf-8") as f_in, \
+                         open(tmp_path, "w", encoding="utf-8") as f_out:
+
+                        for line in f_in:
+                            chunk.append(line)
+                            if len(chunk) >= 10000:
+                                results = p.map(remove_domains, chunk)
+                                f_out.writelines(results)
+                                chunk = []
+
+                        if chunk:
+                            results = p.map(remove_domains, chunk)
+                            f_out.writelines(results)
+
+                    os.replace(tmp_path, file_path)
+
+    except KeyboardInterrupt:
+        print("Stopping workers gracefully...")
+        p.terminate()
+
+    finally:
+        os.chdir(old_cwd)
+
+if __name__ == "__main__":
+    if os.path.isdir(temp_path):
+        shutil.rmtree(temp_path)
+    os.makedirs(temp_path, exist_ok=True)
+    os.chdir(temp_path)
+    process_sections(sections_path)
+    os.chdir(main_path)
+    if os.path.isdir(temp_path):
+        shutil.rmtree(temp_path)
 
 if "KAD" in sections_path and not "KADhosts" in sections_path:
     tp_names = ["CERT", "LWS"]
