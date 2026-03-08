@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 5935a7c11..e7bda7eed 100644
+index 499ed1fe3..180802740 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -40,7 +40,7 @@ agroperfekt.pl##.js-marquee-wrapper
@@ -11,7 +11,15 @@ index 5935a7c11..e7bda7eed 100644
  aktualnyodpis.pl###carq-iframe
  alablaboratoria.pl###small-pop-up
  alawar.pl##.b-skin__push #actionBannerContainer.b-action-banner__container
-@@ -203,7 +203,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
+@@ -185,7 +185,6 @@ castrol.com##footer > div > div.nv-parsys-component.nv-container
+ catawiki.pl##body > .be-cornerlabel
+ cdaction.pl,pcformat.pl,pomponik.pl,smaker.pl##body > .topbar
+ cefarm24.pl,dlapacjenta.pl###drawer
+-centrumdruku.com.pl##.ra-animated.ranking-wrapper
+ cenyrolnicze.pl##.bd-margins.bd-headerarea-1, .jf_mm_trigger, .zgloszeniaPanel
+ certyficate.it,github.com,github.io##a[href*="paypal.me/pools/c/87zNJ8OJ3I"], a[href*="paypal.com/pools/c/87zNJ8OJ3I"]
+ chojnow.pl###login-box
+@@ -203,7 +202,7 @@ codojedzenia.pl,teraz-wilanow.pl,zlotaproporcja.pl##.slide-dock
  comarch.pl##.widget-detach-right-bar-container
  context.reverso.net###register-popup-bottom
  coolmama.pl,devangari-art.pl,sareto.pl,sklep.valentini.pl###reviewsWidgetButton
@@ -20,15 +28,15 @@ index 5935a7c11..e7bda7eed 100644
  cowsierscipiszczy.pl##.CampaignType--floating
  creativecommons.org###deed-donate-slide
  creativehobby.pl###ch-strip
-@@ -361,7 +361,6 @@ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
- forum.dobreprogramy.pl##.header-cloak
- forum.dobreprogramy.pl##.nav-link[href*="/blogi"]
+@@ -360,7 +359,6 @@ fortnitepolska.pl,gwint24.pl###single-sticky
+ forum-bron.pl,trumpeters.pl###tt_mobile_banner
+ forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
  forum.duolingo.com##.GB_SB
 -forum.gram.pl#?#.cTopicPostArea:has-text(Utwórz konto lub zaloguj się, aby skomentować)
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -443,7 +442,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
+@@ -442,7 +440,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
  hubkolektyw.pl##.panel-boczny
  hurtowniarolnicza.pl##.recruitment
  i-apteka.pl,rolmarket.pl###menu_hotspot_zone3
@@ -36,15 +44,7 @@ index 5935a7c11..e7bda7eed 100644
  ican.pl###drawer_bar
  iglazura24.pl##.sold-item-popup
  iiyama-sklep.pl###foot-lastbought-button
-@@ -522,7 +520,6 @@ kolorowymotylek.pl##.widgets_fcenter_left
- kolorowypokoik.pl##.sm-ceneo
- komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://komorkomat.pl/porownywarka/"]
- komorkomat.pl#?#.post-content h3:has-text(> >>)
--komputery.cieszyn.pl###serwisbok
- komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
- konto.onet.pl###navright
- kornik.com.pl###katalog-drzwi
-@@ -575,8 +572,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+@@ -574,8 +571,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
  linuxporady.pl,pskrk.com##.crestaPostsBox
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
@@ -53,23 +53,7 @@ index 5935a7c11..e7bda7eed 100644
  losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
  lvbet.pl##splash-loader
  m.leroymerlin.pl##.smart-app-banner
-@@ -689,7 +684,6 @@ naszemiasto.pl###magazyn-boks
- nasztomaszow.pl##.sidebar > .widget:has(.poll_list)
- national-geographic.pl##.affix-bottom.row.prev-next-item
- naukajazdy-kowalik.pl##.side-tab-widget > a[href="kierowcy.html"]
--nbi.com.pl###pasek_bottom
- nbportal.pl###show-tools
- nekla.eu###pogodynka_widget_wide
- neo24.pl##.as-wallpaper_right.as-wallpaper
-@@ -836,7 +830,6 @@ puplegnica.pl###accessKeys
- pyszne.pl##div[data-qa="app-banner"]
- pytamy.pl##.fixFooter
- pytanienasniadanie.tvp.pl##.stream-button
--pzw.org.pl###body_google_play
- radiobonton.pl##.hidden-xs.offbox-position-right.radio-play.offbox-radio
- radiopogoda.pl##.gra-pobierz_aplikacje
- radiosochaczew.pl##.ready.is-fixed
-@@ -899,7 +892,6 @@ sklep-wedkarski.info###ClPanelImg
+@@ -898,7 +893,6 @@ sklep-wedkarski.info###ClPanelImg
  sklep.aladyn.pl,sklep.mariall.pl###trzecia
  sklep.bioceriq.pl##.mfn-fake-sale-noti
  sklep.farmona.pl##.tabs > section.product_link_nav
@@ -77,7 +61,7 @@ index 5935a7c11..e7bda7eed 100644
  sklep.odziez-robocza.com###druga_ikona
  sklep.pakrol.pl##.suggest-slider
  sklep.veterynaria.pl###sideTab
-@@ -961,7 +953,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+@@ -960,7 +954,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
  swiezoizdrowo.pl###sales-booster-popup
  sympatia.onet.pl###iconsBar
  syngenta.pl##.pane-menu-menu-sticky-menu
@@ -85,11 +69,3 @@ index 5935a7c11..e7bda7eed 100644
  szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
  szkolnastrona.pl##.btn-fav
  sznyt.pl##.recommended-articles
-@@ -1010,7 +1001,6 @@ tvokazje.pl##.call-popup-newslater
- twitch.tv#?##twilight-sticky-footer-root:has-text(Zarejestruj się)
- tymbark.com,winiary.pl###kwit_brandwidget_btn
- tysol.pl##.fiszka
--uap.edu.pl###DOFINANSOWANIA_LOGOS
- uml.lodz.pl##.sticked-widgets__widget-trigger
- uzdrowisko-wieniec.pl##.sfl-widget--ribbon, .hidden-xs
- veganbanda.pl##.rcps-next-prev
