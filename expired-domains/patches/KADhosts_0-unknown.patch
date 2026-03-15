@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 733264064..eb88b8893 100644
+index 4dae6cd1b..018fbb7a4 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -4,11 +4,9 @@
@@ -14,7 +14,15 @@ index 733264064..eb88b8893 100644
  ||apteline.deal-pl.shop^
  ||biedronka-zamyka-sklepy.24.eu^
  ||biedronkowe-karty.24.eu^
-@@ -29,7 +27,6 @@
+@@ -21,7 +19,6 @@
+ ||ce.wielkanagroda.com^
+ ||ce.wielkaniespodzianka.pl^
+ ||ce.winfreetoday.com^
+-||chomikuj-new-t1.opx.pl^
+ ||cloud.file.co.pl^
+ ||czas-na-fb.blogspot.com^
+ ||daily.boonovel.com^
+@@ -29,7 +26,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
  ||dev.apps.co.pl^
@@ -22,7 +30,45 @@ index 733264064..eb88b8893 100644
  ||download.apps.co.pl^
  ||download.file.co.pl^
  ||dziennik-info.x9.eu^
-@@ -86,7 +83,6 @@
+@@ -45,30 +41,7 @@
+ ||facebook-login.5v.pl^
+ ||facebook-profile.5v.pl^
+ ||facebook.5v.pl^
+-||faktoswe.is-best.net^
+-||faktowace.is-best.net^
+-||faktowe.is-best.net^
+-||faktowy.is-best.net^
+-||faktowya.is-best.net^
+-||faktowyua.is-best.net^
+-||faktujea.is-best.net^
+-||faktujemy.is-best.net^
+-||fakty24a.is-best.net^
+-||fakty25a.is-best.net^
+-||fakty26a.is-best.net^
+-||fakty27a.is-best.net^
+-||fakty28a.is-best.net^
+-||fakty29a.is-best.net^
+ ||fakty30a.is-best.net^
+-||fakty31a.is-best.net^
+-||fakty32a.is-best.net^
+-||fakty33a.is-best.net^
+-||fakty34a.is-best.net^
+-||fakty35a.is-best.net^
+-||fakty37a.is-best.net^
+-||fakty39a.is-best.net^
+-||faktya.is-best.net^
+-||faktyas.is-best.net^
+ ||fb-podglad.blogspot.com^
+ ||fbcolor.blogspot.com^
+ ||fejs-colors.blogspot.com^
+@@ -79,14 +52,12 @@
+ ||foto-zdjecia.24.eu^
+ ||free.apps.co.pl^
+ ||free.file.co.pl^
+-||free.propdfconverter.com^
+ ||freeiqtest.blogspot.com^
+ ||g2eld.doctorhey.com^
+ ||game.apps.co.pl^
  ||gazeta-polska.24.eu^
  ||glikotril.fair-2sale.com^
  ||glukofin-pol.eddy-goods.com^
@@ -30,7 +76,23 @@ index 733264064..eb88b8893 100644
  ||gw.firesub.pl^
  ||gzs2u.doctortrf.com^
  ||hd.vod.co.pl^
-@@ -124,18 +120,15 @@
+@@ -94,15 +65,6 @@
+ ||i7s86.doctorhey.com^
+ ||info-polska.24.eu^
+ ||informacje-naszemiasto.x9.eu^
+-||informcje1.is-best.net^
+-||informcje2.is-best.net^
+-||informcje3.is-best.net^
+-||informje3.is-best.net^
+-||informje4.is-best.net^
+-||informje5.is-best.net^
+-||informje7.is-best.net^
+-||informje8.is-best.net^
+-||informje9.is-great.net^
+ ||install.protected.net^
+ ||it-bluestone.adult-shops.com^
+ ||karty-biedronkowe.24.eu^
+@@ -124,18 +86,15 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -49,7 +111,7 @@ index 733264064..eb88b8893 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -145,7 +138,6 @@
+@@ -145,7 +104,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -57,7 +119,7 @@ index 733264064..eb88b8893 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -289,18 +281,13 @@
+@@ -289,18 +247,13 @@
  ||pl.gluconv.com^
  ||pl.hemorv.com^
  ||pl.hondrostrc.com^
@@ -76,15 +138,7 @@ index 733264064..eb88b8893 100644
  ||quality-products1.blogspot.com^
  ||rncig.doctortrf.com^
  ||roksa.sx^
-@@ -322,7 +309,6 @@
- ||twoje-miasto.x9.eu^
- ||ublock.org^
- ||url-partners.g2afse.com^
--||videa.123mopie.com^
- ||visospect.fair-2sale.com^
- ||web.cellfun.mobi^
- ||web.hearclear.com^
-@@ -330,7 +316,6 @@
+@@ -329,7 +282,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -92,7 +146,7 @@ index 733264064..eb88b8893 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
-@@ -341,7 +326,6 @@
+@@ -340,7 +292,6 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^
