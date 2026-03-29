@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 1899d2540..173c52289 100644
+index 358c42522..10b288abe 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -18,7 +18,7 @@
@@ -29,15 +29,6 @@ index 1899d2540..173c52289 100644
  almania.pl,glossyme.eu##.shb-newsletter-widget-1
  alpinus.eu##.fnls
  alsen.pl,kakto.pl,vezzi.pl,wyspaszkrabow.pl##.box-newsletter-lp
-@@ -269,7 +269,7 @@ buslapidus.pl,pasja-informatyki.pl##.widget_1
- butybuty.pl,delis.pl,diamir.sklep.pl,eltkom.pl,telefony-gdansk.pl,wetro.pl##div.col-md-3.col-sm-6.col-xs-12.col-xxs:nth-of-type(4)
- butyjana.pl##.bjNewsletterText
- butyraj.pl##.hidden-phone.top_toplayer
--bydgoszcz.com,ct.jaworzno.pl,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
-+bydgoszcz.com,damitv.pl,echotygodnik.info,kociewiak.pl,narew.info,pzl24.pl,telewizjazary.pl,tvobiektyw.pl,tvsudecka.pl,tvswinoujscie.pl##div.sm-text-center.mb15.col-sm-6:first-of-type
- byinsomnia.com,mniammniam.com,opakowania24.eu,poltex.eu,r-gol.com,rylko.com,stoprocent.com,unisono.eu##.newsletter-container
- bytom.com.pl##.footer-new__newsletter
- cadprojekt.com.pl,moyamatcha.com###custom_html-6
 @@ -390,7 +390,6 @@ dexpol.com##.stopka2_center > div.box_info:first-of-type
  di.com.pl##.footcol:nth-of-type(5) > form, .footcol:nth-of-type(5) > p, .footcol:nth-of-type(5) > .footnag:first-of-type
  dialog.mazovia.pl,galeriabronowice.pl##.news
@@ -55,7 +46,15 @@ index 1899d2540..173c52289 100644
  esprit.com.pl##.newsletter-gora
  espritshop.pl###newsletter-registration-form
  esselte.com##.abc-footer__newsletter
-@@ -741,7 +738,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
+@@ -564,7 +561,6 @@ fasardi.com,iobit.com,revouninstaller.com##.subscribe
+ fashyas.com,kolekcjonerki.com##footer div:nth-of-type(3)
+ fc-moto.de##.NewsletterBox, .NewsletterBox + div
+ felixcom.net##.ftop > .container > .right
+-feniks.wroc.pl##.newsletter-wr
+ festool.pl##.newsletter__footer
+ fielmann.pl##div[data-cy="newsletter-"]
+ finereader.pl##.formularz.row, .text-uppercase.mb-2.font17.bold.text-white
+@@ -741,7 +737,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
  izba-lekarska.pl##.add-to-newsletter-button
  izigsm.pl###footer > .footMenu > .color.columnBox
  jackjones.com##.js-customer-club__signup
@@ -64,7 +63,7 @@ index 1899d2540..173c52289 100644
  jagodnik.pl##.tdi_70.vc_widget_sidebar.td_block_wrap.wpb_wrapper > .widget_text.widget.td_block_template_1
  jakiwniosek.pl##.footer > div > div > div:first-child > :nth-last-child(n+2):nth-last-child(-n+4)
  jakrobicmarketing.pl###\31 -2
-@@ -756,7 +753,6 @@ johndog.pl##.newsletter-form-event, .promo-newsletter
+@@ -756,7 +752,6 @@ johndog.pl##.newsletter-form-event, .promo-newsletter
  joom.com##div[class*="promoCorner_"]
  jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
  jumo.pl##.news-updates
@@ -72,7 +71,7 @@ index 1899d2540..173c52289 100644
  justbefit.pl###new_footer
  kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
  kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -846,7 +842,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
+@@ -846,7 +841,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
  labotiga.pl##.block_newletter
  ladybusiness.pl##.newsletter-sectionw
  laksystem.pl##.wf2-scroll-box.grwf2-wrapper
@@ -80,7 +79,7 @@ index 1899d2540..173c52289 100644
  lamoda.pl##.min-h-newsletter
  lampy.pl###newsletterbox_1
  lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -855,7 +850,6 @@ languagetool.org###newsletter_reg
+@@ -855,7 +849,6 @@ languagetool.org###newsletter_reg
  lantre.pl##.newsletter.block
  laptopypoznan.pl##.ps-spotlight5
  lastowiec.pl##.contact-box:has(img[src="data/images/icon_newsletter.png"])
@@ -88,7 +87,7 @@ index 1899d2540..173c52289 100644
  latarki.pl##.bakedparallax-wrapper
  latarnia.teatrnn.pl###main_oferta > div:nth-of-type(2), #main_oferta > div:nth-of-type(2) + form
  lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
-@@ -1009,7 +1003,6 @@ motogen.pl##.region-7 > .blok-jasny:nth-of-type(3)
+@@ -1009,7 +1002,6 @@ motogen.pl##.region-7 > .blok-jasny:nth-of-type(3)
  mozilla.org##.mzp-c-newsletter
  mp-office.eu###cta-newsletter
  mp.pl##.box-newsletter-pacjent
@@ -96,14 +95,6 @@ index 1899d2540..173c52289 100644
  mpk.nowysacz.pl##.sidebar_newsletter
  mpk.poznan.pl##.rnd.module:nth-of-type(4)
  mr-fix.pl##.six
-@@ -1241,7 +1234,6 @@ polygamia.pl###sidebar-footer-top-right
- popvinyl.pl##.xl\:mt-0.mt-6.p-6.shadow-custom
- poradnikhandlowca.com.pl##.section-bar-newsletter
- poradnikogrodniczy.pl##.sidebar-menu > div.block:nth-of-type(4)
--poradybudowlane.com.pl###search2
- porcja.eu###footer-top-news
- porozmawiajmy.tv###text-36
- porta.com.pl##.newsletter--section > div > div:not(.advertisement--container)
 @@ -1260,7 +1252,6 @@ powerman.com.pl##.pm_newsletter
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl

@@ -1,12 +1,24 @@
-diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 557ed7776..d517e31cb 100644
---- a/PPB/inne.txt
-+++ b/PPB/inne.txt
-@@ -941,7 +941,6 @@ sferis.pl###TopBarScroll
- shareinfo.pl###install-button
- shipgratis.eu###soutez-wrapper
- shop-dent.pl##button.needsclick[style*="z-index"]
--siepisze.pl##.et_pb_code_inner
- sieradz.eu###site-loader
- siglo.pl##.lws-widget-container
- silesion.pl##.art-tripwire-big
+diff --git a/PPB/push.txt b/PPB/push.txt
+index 068bc3184..554755b06 100644
+--- a/PPB/push.txt
++++ b/PPB/push.txt
+@@ -1,5 +1,5 @@
+ ~1login.wp.pl,abczdrowie.pl,autokult.pl,dobreprogramy.pl,fotoblogia.pl,gadzetomania.pl,jastrzabpost.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,pysznosci.pl,wp.pl##.wp-push-main-container
+-2conv.com,flv2mp3.by,flvto.biz##.push-offer
++flv2mp3.by,flvto.biz##.push-offer
+ 50style.pl,carrefour.pl,sklep.sizeer.com,www.komputronik.pl###snrs-wp-subscriber
+ allani.pl,domodi.pl##div[id*="FakePromptContainer"]
+ andzela.com##.kb-cs-notify-container
+diff --git a/PPB/push_sieciowe.txt b/PPB/push_sieciowe.txt
+index e1aeed607..b2643f201 100644
+--- a/PPB/push_sieciowe.txt
++++ b/PPB/push_sieciowe.txt
+@@ -18,7 +18,7 @@
+ /web-push-odin/web-push-odin-pre.$script,domain=binance.com
+ /web-push/*$xmlhttprequest,domain=brw.pl|eobuwie.com.pl|military.pl
+ @@/sw.js$domain=youtube.com
+-||cdn.*.com/push_app.js$script,domain=2conv.com|flv2mp3.by|flvto.biz
++||cdn.*.com/push_app.js$script,domain=flv2mp3.by|flvto.biz
+ ||cdn.foxpush.net/sdk/foxpush_SDK_min.js$domain=media4web.pl
+ ||cdn.qgraph.io/v3/r/qgraph.v2.js$domain=domodi.pl|homebook.pl
+ ||cdn.siteswithcontent.com/js/push/subscribe.js$script,domain=postimages.org|postimg.cc

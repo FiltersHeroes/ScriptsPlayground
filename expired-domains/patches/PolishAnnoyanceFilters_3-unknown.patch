@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index abdc568e0..bc519f857 100644
+index 85b3ff793..21cef6a54 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -39,7 +39,7 @@ agroperfekt.pl##.js-marquee-wrapper
@@ -69,3 +69,15 @@ index abdc568e0..bc519f857 100644
  szkolajazdykoronamm.pl##.spjwidget-double a[href$="/szkola-jazdy-korona-mm,20821.htm?widget=register"]
  szkolnastrona.pl##.btn-fav
  sznyt.pl##.recommended-articles
+diff --git a/PPB/inne_sieciowe.txt b/PPB/inne_sieciowe.txt
+index 406422387..72e3c0258 100644
+--- a/PPB/inne_sieciowe.txt
++++ b/PPB/inne_sieciowe.txt
+@@ -21,7 +21,6 @@
+ ||jugrol.pl/wp-content/uploads/20*/0*/ikonka-olx-zielona-footer.jpg$image
+ ||jugrol.pl/wp-content/uploads/20*/0*/olx-ikona-na-www.jpg$image
+ ||kariera.infopraca.pl/wp-content/themes/cv-tools/img/pracanaemail.jpg
+-||niezbednik.mediraty.pl/img/widget_duzy_button_1.png
+ ||niszczarki.org/templates/standard/images/jestesmy_na_allegro.jpg
+ ||ocdn.eu/*/sg-loader.$script,domain=auto-swiat.pl|businessinsider.com.pl|cdn.ampproject.org|fakt.pl|komputerswiat.pl|noizz.pl|ofeminin.pl|onet.pl|plejada.pl
+ ||ocdn.eu/*/sgLoader$script,domain=auto-swiat.pl|businessinsider.com.pl|cdn.ampproject.org|fakt.pl|komputerswiat.pl|noizz.pl|ofeminin.pl|onet.pl|plejada.pl
