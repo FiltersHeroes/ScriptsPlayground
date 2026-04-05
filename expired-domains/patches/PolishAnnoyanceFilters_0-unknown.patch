@@ -31,11 +31,11 @@ index fd8c6c6aa..358c42522 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index e06ea50d4..43026ac9d 100644
+index bce326272..4a0f8d75c 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -39,7 +39,7 @@ airwick.pl###top-btn
- akardo.pl##.btn-scroll-up
+ akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
  alberski.artbhp.pl###disclaimer-button
 -albo24.pl,awf.edu.pl,nbportal.pl###go-up
@@ -43,15 +43,7 @@ index e06ea50d4..43026ac9d 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -100,7 +100,6 @@ balterio.com,pergo.pl##.c-top
- barbrafeszyn.pl##.tn-back-top
- batyra.pl,krasnystaw.eu,rolnex.pl##.js-up
- baza-firm.com.pl###goTopArrow
--bdb.com.pl###powrotBT
- beardrust.pl,gazetasenior.pl,gezeta.pl,mamygadzety.pl,pitbull.pl,skleprolniczy.com##.scroll-up
- beaton.pl###btn-to-top
- begryf.pl##.base-scroll-to-top
-@@ -170,7 +169,7 @@ chimmo.pl###arrow-up
+@@ -170,7 +170,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -60,7 +52,16 @@ index e06ea50d4..43026ac9d 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -279,7 +278,7 @@ enel.pl###afario-back-top
+@@ -219,7 +219,7 @@ dictionary.cambridge.org##.ctop
+ dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
+ digi-store.pl,techsat24.pl###buttonTop
+ digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
+-directfloor.pl,infolinia.info.pl,memento.com.pl,mpolski.pl,pense.pl,prawo.amu.edu.pl##.arrow
++directfloor.pl,infolinia.info.pl,memento.com.pl,mpolski.pl,pense.pl##.arrow
+ disco-polo.info,meizupolska.pl##.toup
+ dlabiznesu.voice-net.pl##.scroll-to-top
+ dns.pl##footer + button[class=""]
+@@ -279,7 +279,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -69,7 +70,7 @@ index e06ea50d4..43026ac9d 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -457,7 +456,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -457,7 +457,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -77,16 +78,7 @@ index e06ea50d4..43026ac9d 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -499,7 +497,7 @@ linuxiarze.pl##.fa-chevron-up
- littleforest.pl##.smoothscroll
- littlelights.pl##.btn-backtotop
- lotnisko-chopina.pl###btn_back_top, .scroll.btn_up
--louma.pl,zoo.net.pl##.zak-scroll-to-top
-+louma.pl##.zak-scroll-to-top
- lubliniec.starostwo.gov.pl##.przycisk_dogory2
- lukar.pl,prosportowy.pl###rb-back-top
- lurker.pl###scrollTopBtn
-@@ -748,7 +746,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -748,7 +747,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -103,6 +95,15 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/dynamic-to-top/js/dynamic.to.top.min.js
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
+diff --git a/PPB/strzalki_sieciowe.txt b/PPB/strzalki_sieciowe.txt
+index de4432e6f..3d7e5403b 100644
+--- a/PPB/strzalki_sieciowe.txt
++++ b/PPB/strzalki_sieciowe.txt
+@@ -7,4 +7,3 @@
+ ||loteriainpost.pl/images/up.png
+ ||tapeciarnia.pl/img/do_gory.png
+ ||tomaszek.pl/index_pliki/top.png
+-||turek.net.pl/js/default/scroll_to_top.js
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
 index 9f9413f11..acae01d88 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt

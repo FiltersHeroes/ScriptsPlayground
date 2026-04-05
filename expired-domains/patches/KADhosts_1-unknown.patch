@@ -1,8 +1,8 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 122d28d39..7e27f98a0 100644
+index f78505647..519a7db27 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -1,14 +1,11 @@
+@@ -1,14 +1,12 @@
  ||4s13t.doctortrf.com^
  ||05agu.doctortrf.com^
  ||a-tocard-pl.treasure-shop.org^
@@ -11,30 +11,29 @@ index 122d28d39..7e27f98a0 100644
  ||activestin-pl.great-beauty.org^
  ||adpro.futurenet.club^
  ||aoc.teleaudio.pl^
--||api.myeforsa.pl^
+ ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
 -||apteline-pl.sbs^
  ||apteline.deal-pl.shop^
  ||biedronka-zamyka-sklepy.24.eu^
  ||biedronkowe-karty.24.eu^
-@@ -22,16 +19,11 @@
+@@ -21,7 +19,6 @@
+ ||ce.wielkanagroda.com^
  ||ce.wielkaniespodzianka.pl^
  ||ce.winfreetoday.com^
- ||chomikuj-new-t1.opx.pl^
--||cloud.file.co.pl^
+-||chomikuj-new-t1.opx.pl^
+ ||cloud.file.co.pl^
  ||czas-na-fb.blogspot.com^
  ||daily.boonovel.com^
- ||darmowe-bony.24.eu^
+@@ -29,7 +26,6 @@
  ||dcfeed.datedeskads.com^
  ||dctrk.datedeskads.com^
--||dev.apps.co.pl^
+ ||dev.apps.co.pl^
 -||dotpay.pocztapolska24.pl^
--||download.apps.co.pl^
--||download.file.co.pl^
+ ||download.apps.co.pl^
+ ||download.file.co.pl^
  ||dziennik-info.x9.eu^
- ||dziennik-polski.x9.eu^
- ||dzisiaj.numpet.com^
-@@ -40,7 +32,6 @@
+@@ -40,7 +36,6 @@
  ||exchange.dgtmarket.com^
  ||express.jnews5.com^
  ||ezalukaj.pl^
@@ -42,22 +41,15 @@ index 122d28d39..7e27f98a0 100644
  ||facebokznajomi.blogspot.com^
  ||facebook-login.5v.pl^
  ||facebook-profile.5v.pl^
-@@ -79,14 +70,12 @@
- ||foto-zdjecia.24.eu^
- ||free.apps.co.pl^
- ||free.file.co.pl^
--||free.propdfconverter.com^
- ||freeiqtest.blogspot.com^
- ||g2eld.doctorhey.com^
+@@ -85,7 +80,6 @@
  ||game.apps.co.pl^
  ||gazeta-polska.24.eu^
  ||glikotril.fair-2sale.com^
- ||glukofin-pol.eddy-goods.com^
 -||gotowanie.pl.edrrak.com^
  ||gw.firesub.pl^
  ||gzs2u.doctortrf.com^
  ||hd.vod.co.pl^
-@@ -124,17 +113,14 @@
+@@ -122,17 +116,14 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -75,7 +67,7 @@ index 122d28d39..7e27f98a0 100644
  ||nieuws.znicely.com^
  ||noje.topnewsource.com^
  ||odbieramy-karty.24.eu^
-@@ -144,7 +130,6 @@
+@@ -142,7 +133,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -83,7 +75,7 @@ index 122d28d39..7e27f98a0 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -282,24 +267,17 @@
+@@ -280,24 +270,16 @@
  ||pl46.landovn.com^
  ||pl47.landofm.com^
  ||pl-eroprostin.relty-goods.com^
@@ -92,7 +84,7 @@ index 122d28d39..7e27f98a0 100644
  ||pl.gamemine.com^
  ||pl.gluconv.com^
 -||pl.hemorv.com^
- ||pl.hondrostrc.com^
+-||pl.hondrostrc.com^
 -||pl.mobile-redirection.com^
  ||pl.thepawland.com^
 -||play.leadzu.com^
@@ -108,7 +100,7 @@ index 122d28d39..7e27f98a0 100644
  ||quality-products1.blogspot.com^
  ||rncig.doctortrf.com^
  ||roksa.sx^
-@@ -328,7 +306,6 @@
+@@ -326,7 +308,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -116,7 +108,7 @@ index 122d28d39..7e27f98a0 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
-@@ -339,7 +316,6 @@
+@@ -337,7 +318,6 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^
