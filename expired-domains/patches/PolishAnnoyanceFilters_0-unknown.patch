@@ -39,18 +39,9 @@ index f424dda76..6e256c903 100644
  olimpiasport.pl##.section--frontnewsletter
  olsztyn24.com##.katalog_newsletter_content
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 1495779b9..20d314e6a 100644
+index 7961e88fa..a493b9510 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -13,7 +13,7 @@ acer.com##.btn--btt
- ach-te-internety.pl,applemania.pl###cenote-back-to-top
- active.sklep.pl,epicgames.com,grupawsparcia.pl,smaki.pl,wprost.pl##.up-button
- activefamily.pl##.moto-back-to-top-button_visible
--ad-al.pl,barszcz.edu.pl,misericordia.media.pl##.hc_scrollup
-+ad-al.pl,misericordia.media.pl##.hc_scrollup
- adata.com###back-2-top.back-2-top-rocket
- addnature.pl,bikester.pl###iscjs_scroller
- addons.prestashop.com##.ontop.btn-top.btn
 @@ -39,7 +39,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
@@ -69,15 +60,16 @@ index 1495779b9..20d314e6a 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -228,7 +228,6 @@ dobramine.com##.to_top_link
- dobrzemieszkaj.pl###gallery > .circle
- docs.github.com##footer button[class*="scroll-to-top"]
- doktormonika.pl###page-gotop.page-gotop
--domdlaciebie.com.pl##.fix-scroll-top
- domenergo.com###to-to
- domowa.pizza##.smoothup
+@@ -234,7 +234,7 @@ domowa.pizza##.smoothup
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
-@@ -279,7 +278,7 @@ enel.pl###afario-back-top
+ domusfari.pl,swiatekspresow.pl###back_up
+ domzagadek.pl###scroll_strz
+-dopek.info,zenbox.pl##.scroll-page
++zenbox.pl##.scroll-page
+ doppelherz.pl##.link--scroll-to-top
+ dopracowani.pl###pulse_to_top
+ doradcasmaku.pl,porta.com.pl##.floating_scroll_top
+@@ -279,7 +279,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -86,15 +78,7 @@ index 1495779b9..20d314e6a 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -320,7 +319,6 @@ ftt.roto-frank.com##.scroll-container
- funclub.pl##button[aria-label="Wróć na górę"]
- fundacjapestka.pl,iform4u.com##.back__top
- funduszeue.wzp.pl,mixit.pl,plus.pl###scroll-up-btn
--funer.com.pl###backtotop
- galeriakatowicka.eu###js-scroll-to
- gama-sklep.com.pl##.go-to-top-page
- gandalf.com.pl,in4.pl,mediastar.pl,motobros.pl###goup
-@@ -428,12 +426,10 @@ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+@@ -428,12 +428,10 @@ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
  jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
  jmlnet.pl##.pi-scroll-top-arrow
  jomfruland.net##.scrollup__placeholder
@@ -107,7 +91,7 @@ index 1495779b9..20d314e6a 100644
  kancelaria.info##.eut-top-btn
  karcz.eu##.ce_toplink
  kaufland.pl##.a-back-to-top__button
-@@ -457,7 +453,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -457,7 +455,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -115,7 +99,7 @@ index 1495779b9..20d314e6a 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -575,7 +570,6 @@ mypewex.com###goToTop
+@@ -575,7 +572,6 @@ mypewex.com###goToTop
  nagaba.pl###fixed_top
  najlepszekonto.pl##.footer__to-the-top
  napad.pl###ssRollTop
@@ -123,14 +107,7 @@ index 1495779b9..20d314e6a 100644
  nasz-gabinet.pl##.back-to-top-bttn
  naszesmieci.mos.gov.pl##.nav_up
  naszoptyk.pl##.icon-backToTop
-@@ -598,14 +592,12 @@ numo.pl###kliktop
- nuty.eu###back-to-top-button
- nyxcosmetics.pl##.c-back-top
- obi.pl##.to-top-nav
--obuwiedzieciece.net.pl###es-scrollup
- oc-spedytora.info##iframe[title="Back to Top"]
- odchudzanie.medicover.pl##.jumping
- oees.pl###iconup
+@@ -605,7 +601,6 @@ oees.pl###iconup
  oferteo.pl###scroll-operator-arrow-up
  offshorewindpoland.pl###newsmatic-scroll-to-top
  okaidi.pl##.footer-top > .right-block
@@ -138,7 +115,7 @@ index 1495779b9..20d314e6a 100644
  omega.pc.pl###imPageToTop
  onebid.pl###movetotop
  opera.com##.hf--nav > .hf--width-holder > .hf--back
-@@ -748,7 +740,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -748,7 +743,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
