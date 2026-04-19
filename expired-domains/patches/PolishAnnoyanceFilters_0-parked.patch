@@ -1,13 +1,24 @@
+diff --git a/PPB/inne.txt b/PPB/inne.txt
+index a8a5ade61..50bd28e68 100644
+--- a/PPB/inne.txt
++++ b/PPB/inne.txt
+@@ -489,7 +489,6 @@ jelonka.com,swidniczka.com,walbrzyszek.com##.kol2 .glosuj.sonda
+ jelonka.com,swidniczka.com,walbrzyszek.com##.kol2 > h2:has(+ .glosuj.sonda)
+ jezykiobce.pl###top-bar-promotions, #top_nav
+ joemonster.org###mtv_main_swf.popup
+-jomfruland.net##progress ~ div[class*="sidedock"][class*="-placement"]
+ joy.pl##.article-widget-fixed.article-widget-box
+ kalendarzrolnikow.pl##.carousel_wrap
+ kamaciuch.pl###meerkat-wrap
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 5eac47158..992a31fa6 100644
+index 7961e88fa..13e32b258 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -125,7 +125,7 @@ biuropodrozymax.pl###ui-up-arrow
- biurowazszywka.pl,montaz-anten.tv##.ast-scroll-top-icon
- biznesomania.com.pl,igomedia.pl,notebooki.pl##.goto-top
- biznesplan.net.pl##.ta_upscr
--blasty.pl,hulaka.pl###widget-back-to-top
-+blasty.pl###widget-back-to-top
- blix.pl##.rewindTopButton.footer__rewind-button
- blizejciebie.pl,seni24.pl##.quicknav-to-top
- blog.doktortusz.pl##.mb-to-top
+@@ -427,7 +427,6 @@ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+ jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+-jomfruland.net##.scrollup__placeholder
+ journals.viamedica.pl##.Back_To_Top_Button
+ kaercher.com##.fg-totop
+ kajakiem.info##.bttn_up

@@ -1,863 +1,193 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index dd3f95e58..0b9929cf5 100644
+index 79691eaec..081c317cc 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -9,10 +9,12 @@
- 20sat.com
- 214131.com
- 2298c3733498je303r.pl
-+247162.pl
- 24bbc.pro
- 262627.pl
- 2974720843.pl
- 3038200d222719d2.pl
-+336991.pl
- 352710472.pl
- 378210.pl
- 401982iiq.pl
-@@ -28,6 +30,7 @@
- 5239por18.pl
- 5300pryakzl.pl
- 627812.pl
-+6372642319867.pl
- 6420-6029.pl
- 645684.pl
- 673882.pl
-@@ -42,7 +45,6 @@
- 88armory.net
- 88armoury.com
- 9288z990-0398.pl
--938267270.pl
+@@ -48,6 +48,7 @@
  972729.pl
  987345.pl
  99812.pl
-@@ -53,13 +55,13 @@ aiapp4u.net
- aifordaily.com
- airesumeandcv.com
- airmastersutah.com
-+aktualnosci-fakty-wydarzenia.com.pl
- al92.pl
- alaskatraditions.com
- alebrelok.pl
- alizsy.pl
- allstagemerchants.com
- altrix-sync-app.com
--analizaprzyrody.pl
- angrumbit-app.com
- aniyahairaccessories.com
- aowka.pl
-@@ -76,6 +78,7 @@ artmor.pl
- artrend.icu
- atasehirsackaynakmerkezi.com
- atillaavlayici.com
-+auhkzii.com
- auranode.site
- ballplay.buzz
- barodie.com
-@@ -89,11 +92,10 @@ beltugi.pl
- benimomo.pl
- benitoro.pl
- berotego.pl
-+bershkapolska.pl
- besthotelratings.com
- betomeno.pl
- bezonero-24.pl
--bezpiecznezakupy3584997472.pl
--bezpiecznie5812875128.pl
- bgha.pl
- bit522.com
- bitavage.com
-@@ -118,6 +120,7 @@ budgetsho.pl
- bugfoxzz.buzz
- buildingbuddyai.com
- buildscre.pl
-+burgerfactory.pl
- burotree.store
- butimo.pl
- buzzit.digital
-@@ -143,12 +146,10 @@ crypteescapital.com
- cryptmax.buzz
- cryptoforallnow.cc
- cssdayz.buzz
--cudapolskosci.pl
- cududzien.online
- cududzien.site
- customizestudwio.com
- czestorpoa.pl
--czystaprzyroda.pl
- dailygrift.com
- danceian.pl
- dardenneanimal.com
-@@ -183,15 +184,16 @@ drewpoldrzwi.pl
- drtvhdd.pl
++adob-document.online
+ agniezaj.pl
+ agnisara.org
+ aiandtechnology.com
+@@ -174,6 +175,8 @@ drtvhdd.pl
  dsp29.pl
  dumelek.pl
-+duspa.pl
+ duspa.pl
++dzieci.net.pl
++dzieci24h.pl
  dziennik-wroclawinfo24.com.pl
  e-powiadomienie.pl
  e-zdrowle.pl
- e-ziko-apteka.pl
--e-zobaczznami.pl
- ebelito.pl
- eberotego.pl
- ebesthomesecuritysystems.com
- ebetomeno.pl
-+ebokpg-energia6456.pl
- edadevzz.buzz
- edotek.pl
- edugate-ac.com
-@@ -213,6 +215,7 @@ essays-on-line.com
- essence4u.net
- estateminis.com
- eszlakomania.pl
-+etenigo24.pl
- ethereum-2-0.com
- ethereum360.app
- ethereumai-app.com
-@@ -230,6 +233,7 @@ falachaosu.pl
- faseya.net
- fashioncept.com
- fastdelvrysone.net
-+fc0293a.pl
- ferixo.pl
- fil-gaz-handelgazem-jacek-filewicz.pl
- filtrsa.pl
-@@ -258,7 +262,6 @@ genetykazwierzat.pl
- getpilate.pl
- getxiian.pl
- gfpasl.pl
--globallfundin.com
- goenous.pl
+@@ -247,8 +250,8 @@ goenous.pl
  goodjimei.com
  googdkzzfl.com
-@@ -282,9 +285,11 @@ htmlfunzzy.buzz
+ govministry.pl
+-grawitacjaziemi.pl
+ great-voiceovers.com
++greghouse.com.pl
+ gront.com.pl
+ grzegorzcwik.pl
+ gymshark.priv.pl
+@@ -267,6 +270,7 @@ htmlfunzzy.buzz
  i-berotego.pl
  iauikc3918.pl
  ibemelino.pl
-+icemigo24.pl
++iceberdo24online.pl
+ icemigo24.pl
  icolde.pl
  icolodo.pl
- id0495.pl
-+id051.pl
- id0581.pl
- id1245.pl
- id223.pl
-@@ -406,6 +411,7 @@ kliknijabyuzyskac.online
- klotpa.pl
+@@ -288,6 +292,7 @@ id3829.pl
+ id3892.pl
+ id3902.pl
+ id4578.pl
++id4603.pl
+ id4893.pl
+ id5534.pl
+ id5552.pl
+@@ -348,6 +353,7 @@ klotpa.pl
  klrila.pl
  knf.com.pl
-+koligo24.pl
+ koligo24.pl
++konsys.com.pl
  kpwa2.pl
  krtorai.pl
- ksparkelectrics.com
-@@ -428,7 +434,6 @@ lotosnavigator.pl
- lstva.pl
- lynxhedqe.se
- madlensstudio.pl
--magazynstolicy.pl
- malopolska-zatorinfo24.com.pl
- malopolska-zatorinfo24.pl
- mango-outlet.pl
-@@ -485,9 +490,10 @@ ntpwoa.pl
- ntsh92.sbs
- ntvshows.sbs
- oakjjs950-59590az.pl
--ochronakupujaceg09936197322.pl
- od0zl.pl
- ofborz.pl
-+oferta-24785-pl.click
-+oferta-2788222pl.click
- oferta-2938626.pl
- oferta-3528376.pl
- oferta-3641668.pl
-@@ -514,6 +520,7 @@ oponexpert.pl
- optinopt.pl
- oshacedemy-atp.com
- oviyaitsolutions.com
-+p0rtal.pl
- pacificofood.com
- pakl.pl
- panuchopr.com
-@@ -524,7 +531,6 @@ pdfultra.com
- pdsia.pl
- pelletfactory.pl
- percreate.pl
--pge-service.pl
- pgngi.pl
- phocusanda.com
- phpfoxzz.buzz
-@@ -546,11 +552,16 @@ pl-901662.pl
- pl-91236.pl
- pl-96712.pl
- pl-98132.pl
-+pl-allegrolokalnie.click
- pl-aukcja.pl
-+pl-aukcja4214.pl
-+pl-aukcja6235.pl
+ kscolaw.com
+@@ -494,6 +500,7 @@ pl-aukcja.pl
+ pl-aukcja4214.pl
+ pl-aukcja6235.pl
  pl-firma.pl
-+pl-firmowe-94043.click
++pl-firmowe-284919.click
+ pl-firmowe-94043.click
  pl-id320323.pl
  pl-id383822.pl
- pl-id5464.pl
-+pl-oferta.com.pl
- pl-oferta1020.pl
- pl-oferta1223.pl
- pl-oferta1253321.pl
-@@ -579,6 +590,7 @@ pl-ogloszenie304823.pl
- pl-ogloszenie304933.pl
- pl-ogloszenie3049343.pl
- pl-rdr.pl
-+pl-sprzedaz2342.pl
- plantingpeas.com
- play-as.online
- plbikinvest.buzz
-@@ -602,12 +614,11 @@ preprocess.buzz
- princesscommons.ist
- prismpropfunding.com
- prissylilyco.com
-+prmnd.com
- proitstam.click
- promocjantfx.pl
- promotionallaser.com
--prywatna5392382.pl
- przyrodainfo-wrozoo.pl
--przyrodaznami.pl
- ptgo.edu.pl
- pularniesja.pl
- punkerotica.com
-@@ -623,6 +634,7 @@ quickthir.pl
- racing1.click
- ramsang.se
- randmqualitytruckbody.net
-+rapidertcrefunds.site
- rctravels.com
- recfound.pl
- redgirl40.com
-@@ -632,7 +644,6 @@ refntfsa.pl
- refund-disneyvod.com
- regilo.pl
- rehmanjewlers.com
--rentacarislamabad.online
- rentsky.pl
- retlock.pl
- revuemax.click
-@@ -662,13 +673,13 @@ service-agb.de
- serviciosvirtuales.site
- servisu.pl
- shinyhaven.com
--shopping027479193.pl
- shortfor.alivae.com
- signalsms.com
- signemp.pl
- silverinvestmentcompanyllc.com
- simplecon.pl
- sklepoponypremium.pl
-+skplsa.pl
- smallstagemerchants.com
- smartdecorideas.com
- smartdigitalfunnel.com
-@@ -735,6 +746,7 @@ tratwanawodzie.pl
- trimus.pl
- trvls.pl
- turkeydentalservices.com
-+tv-info24-stacja.pl
- twarzoksiazka.pl
- twojeekspresy.pl
- tyganlkpowszehny.pl
-@@ -763,6 +775,7 @@ wawateno-24.pl
+@@ -636,6 +643,10 @@ strefaklienta.online
+ strserv1.pl
+ strzelac.online
+ stussypoland.pl
++sun-tago.com.pl
++sun-tago.pl
++suntago-waw.pl
++suntago-wawa.pl
+ sunuphb.pl
+ suptravel.pl
+ surpluscapital.org
+@@ -650,6 +661,7 @@ tatrzykanczyk.pl
+ teaandthoughts.com
+ teaassert.pl
+ teachpr.pl
++tedramsay.com
+ teklino.pl
+ tekonest.pl
+ thebtst.pl
+@@ -696,6 +708,7 @@ visdayzz.buzz
+ visflowz.buzz
+ vishubzz.buzz
+ visprozz.buzz
++warszawa-sun-tago.com.pl
+ wawateno-24.pl
  wawotemo-24.pl
  wayofbest.com
- wbierz.pl
-+wcars.pl
- websiteskool.com
- welimo.pl
- well-living-blog.com
-@@ -773,9 +786,6 @@ whilma.pl
- whytedata.com
- wieczorek-iwona-znalezieni.pl
- wink-software.com
--wodospadnatury.pl
--wroclawinfo-wiadomosci-fakty.com.pl
--wszystkiedrogi.pl
- wt829a.pl
- wybpla.pl
- wybrack.pl
-@@ -787,10 +797,10 @@ zabkainvest.pl
- zagubieni.com.pl
- zagubione-osoby.com.pl
- zagubione-osoby.pl
-+zal0g-ds72a.pl
- zbrodnieraport.pl
- zenithiq.site
- zentarofluxai.pl
--ziemiajutro.pl
- zk499942.pl
- zmienogrzewanie.pl
- zoukia.com
-diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 37608149e..3a0b6d127 100644
---- a/sections/podejrzane_inne_oszustwa.txt
-+++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -298,7 +298,6 @@
- ||eurotrades.pl^$all
- ||ewelyna.com^$all
- ||excelz.com^$all
--||exitopolska.com^$all
- ||expansil.pl^$all
- ||expertbike.pl^$all
- ||ezoom.top^$all
-@@ -810,7 +809,6 @@
- ||pinapple.pl^$all
- ||pinkies.pl^$all
- ||pinkpine.ie^$all
--||pinnaclepolska.com^$all
- ||piosenkanaszkle.pl^$all
- ||piperinox.pl^$all
- ||pitbull.ek1.pl^$all
-@@ -952,7 +950,6 @@
- ||ruletka-systemy.com^$all
- ||ruletkasystem.eu^$all
- ||rumandcoco.com^$all
--||rumian.shop^$all
- ||runaddict.pl^$all
- ||rushpay.pl^$all
- ||rzezak.pl^$all
-diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
-index cee9b0d47..ff5462998 100644
---- a/sections/przekierowujace_do_przekretow.txt
-+++ b/sections/przekierowujace_do_przekretow.txt
-@@ -90,7 +90,6 @@
- ||meetonlyhot.com^$all
- ||milosnerozmowy.pl^$all
- ||mobiklivestmox.pl^$all
--||mobile-redirection.com^$all
- ||mszalive.pl^$all
- ||my-traffic7.com^$all
- ||noebank.pl^$all
-diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index d494f862e..4b4c0fa82 100644
---- a/sections/przekrety.txt
-+++ b/sections/przekrety.txt
-@@ -632,7 +632,6 @@
- ||odstraszacz-szkodnikow-pl.com^$all
- ||ofertanajuz.pl^$all
- ||ogladaj-online.pl^$all
--||ogladaj.eu^$all
- ||ogloszenia-ukrainek.pl^$all
- ||oiltraderai.com^$all
- ||okulary-wieloogniskowe-pl.com^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index be0bc19e5..fc9a666fb 100644
+index 182b58933..166058d40 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -437,9 +437,7 @@
- ||0229972.cfd^$all
- ||234873.click^$all
- ||238762.sbs^$all
--||247162.pl^$all
- ||287232.sbs^$all
--||336991.pl^$all
- ||342094.click^$all
- ||343984y398h.bond^$all
- ||0357494-236.icu^$all
-@@ -782,7 +780,6 @@
- ||890164681373.bond^$all
- ||03750922053078.click^$all
- ||4903489632148.shop^$all
--||6372642319867.pl^$all
- ||6380423831130.cfd^$all
- ||6923781294237.click^$all
- ||6924781059237.click^$all
-@@ -1234,7 +1231,6 @@
- ||aktualnefaktypl.top^$all
- ||aktualnewspro.pro^$all
- ||aktualnosci365.site^$all
--||aktualnosci-fakty-wydarzenia.com.pl^$all
- ||aktualnosci-fakty-wydarzenia.pl^$all
- ||aktualnoscidniapolska.info^$all
- ||aktualnoscinet.convertri.com^$all
-@@ -1366,9 +1362,7 @@
- ||alebilet.195748b2.click^$all
- ||alebilet.234873.click^$all
- ||alebilet.238762.sbs^$all
--||alebilet.247162.pl^$all
- ||alebilet.287232.sbs^$all
--||alebilet.336991.pl^$all
- ||alebilet.342094.click^$all
- ||alebilet.372694.click^$all
- ||alebilet.387623.sbs^$all
-@@ -1519,7 +1513,6 @@
- ||alebilet.oferta-2748.click^$all
- ||alebilet.oferta-21938-pl.click^$all
- ||alebilet.oferta-23282.sbs^$all
--||alebilet.oferta-24785-pl.click^$all
- ||alebilet.oferta-28347-pl.click^$all
- ||alebilet.oferta-37617-pl.click^$all
- ||alebilet.oferta-53234-pl.click^$all
-@@ -1529,7 +1522,6 @@
- ||alebilet.oferta-415127-pl.sbs^$all
- ||alebilet.oferta-1566781-pl.click^$all
- ||alebilet.oferta-2788211-pl.click^$all
--||alebilet.oferta-2788222pl.click^$all
- ||alebilet.oferta-5721771-pl.lol^$all
- ||alebilet.oferta-16872156-pl.click^$all
- ||alebilet.oferta-28458091-pl.click^$all
-@@ -1680,8 +1672,6 @@
- ||alebilet.pl-alebilet-3427.sbs^$all
- ||alebilet.pl-alebilet-8278.cfd^$all
- ||alebilet.pl-alebilet.sbs^$all
--||alebilet.pl-aukcja4214.pl^$all
--||alebilet.pl-aukcja6235.pl^$all
- ||alebilet.pl-aukcja958912.best^$all
- ||alebilet.pl-aukcja968942.sbs^$all
- ||alebilet.pl-aukcja291394321.sbs^$all
-@@ -1880,7 +1870,6 @@
- ||alebilet.pl-oferta-id-184566-kategorie-id-19923324cfd.cfd^$all
- ||alebilet.pl-oferta-id-184566-kategorie-id-199223466.cfd^$all
- ||alebilet.pl-oferta-id-184566-kategorie-id-199233543.cfd^$all
--||alebilet.pl-oferta.com.pl^$all
- ||alebilet.pl-ogloszenia-frimowe-8328409.click^$all
- ||alebilet.pl-ogloszenia-frimowe-28318821.click^$all
- ||alebilet.pl-ogloszenia-frimowe-82388233.click^$all
-@@ -1928,7 +1917,6 @@
- ||alebilet.pl-smart9859124.cyou^$all
- ||alebilet.pl-smart78598127.sbs^$all
- ||alebilet.pl-smart589154843.sbs^$all
--||alebilet.pl-sprzedaz2342.pl^$all
- ||alebilet.pl-ssid38019.click^$all
- ||alebilet.pl-ssid38673.click^$all
- ||alebilet.pl-ssid55346.click^$all
-@@ -2109,7 +2097,6 @@
- ||allegro-lokalnie.0728723889735.cyou^$all
- ||allegro-lokalnie.890164681373.bond^$all
- ||allegro-lokalnie.4903489632148.shop^$all
--||allegro-lokalnie.6372642319867.pl^$all
- ||allegro-lokalnie.6380423831130.cfd^$all
- ||allegro-lokalnie.07853789690320.cfd^$all
- ||allegro-lokalnie.289326758976235.asia^$all
-@@ -2298,9 +2285,7 @@
- ||allegro.195748b2.click^$all
- ||allegro.234873.click^$all
- ||allegro.238762.sbs^$all
--||allegro.247162.pl^$all
- ||allegro.287232.sbs^$all
--||allegro.336991.pl^$all
- ||allegro.342094.click^$all
- ||allegro.343984y398h.bond^$all
- ||allegro.0349354.lat^$all
-@@ -2412,7 +2397,6 @@
- ||allegro.890164681373.bond^$all
- ||allegro.03750922053078.click^$all
- ||allegro.4903489632148.shop^$all
--||allegro.6372642319867.pl^$all
- ||allegro.6380423831130.cfd^$all
- ||allegro.6923781294237.click^$all
- ||allegro.6924781059237.click^$all
-@@ -2551,7 +2535,6 @@
- ||allegro.oferta-2748.click^$all
- ||allegro.oferta-21938-pl.click^$all
- ||allegro.oferta-23282.sbs^$all
--||allegro.oferta-24785-pl.click^$all
- ||allegro.oferta-28347-pl.click^$all
- ||allegro.oferta-37617-pl.click^$all
- ||allegro.oferta-53234-pl.click^$all
-@@ -2561,7 +2544,6 @@
- ||allegro.oferta-415127-pl.sbs^$all
- ||allegro.oferta-1566781-pl.click^$all
- ||allegro.oferta-2788211-pl.click^$all
--||allegro.oferta-2788222pl.click^$all
- ||allegro.oferta-5721771-pl.lol^$all
- ||allegro.oferta-16872156-pl.click^$all
- ||allegro.oferta-28458091-pl.click^$all
-@@ -2858,8 +2840,6 @@
- ||allegro.pl-alebilet-3427.sbs^$all
- ||allegro.pl-alebilet-8278.cfd^$all
- ||allegro.pl-alebilet.sbs^$all
--||allegro.pl-aukcja4214.pl^$all
--||allegro.pl-aukcja6235.pl^$all
- ||allegro.pl-aukcja958912.best^$all
- ||allegro.pl-aukcja968942.sbs^$all
- ||allegro.pl-aukcja291394321.sbs^$all
-@@ -3071,7 +3051,6 @@
- ||allegro.pl-oferta-id-184566-kategorie-id-19923324cfd.cfd^$all
- ||allegro.pl-oferta-id-184566-kategorie-id-199223466.cfd^$all
- ||allegro.pl-oferta-id-184566-kategorie-id-199233543.cfd^$all
--||allegro.pl-oferta.com.pl^$all
- ||allegro.pl-ogloszenia-frimowe-8328409.click^$all
- ||allegro.pl-ogloszenia-frimowe-28318821.click^$all
- ||allegro.pl-ogloszenia-frimowe-82388233.click^$all
-@@ -3132,7 +3111,6 @@
- ||allegro.pl-smart9859124.cyou^$all
- ||allegro.pl-smart78598127.sbs^$all
- ||allegro.pl-smart589154843.sbs^$all
--||allegro.pl-sprzedaz2342.pl^$all
- ||allegro.pl-ssid38019.click^$all
- ||allegro.pl-ssid38673.click^$all
- ||allegro.pl-ssid55346.click^$all
-@@ -3380,10 +3358,8 @@
- ||allegrolokalnie.0229972.cfd^$all
- ||allegrolokalnie.234873.click^$all
- ||allegrolokalnie.238762.sbs^$all
--||allegrolokalnie.247162.pl^$all
- ||allegrolokalnie.272389vjier.sbs^$all
- ||allegrolokalnie.287232.sbs^$all
--||allegrolokalnie.336991.pl^$all
- ||allegrolokalnie.342094.click^$all
- ||allegrolokalnie.0349354.lat^$all
- ||allegrolokalnie.0357494-236.icu^$all
-@@ -3838,7 +3814,6 @@
- ||allegrolokalnie.oferta-2748.click^$all
- ||allegrolokalnie.oferta-21938-pl.click^$all
- ||allegrolokalnie.oferta-23282.sbs^$all
--||allegrolokalnie.oferta-24785-pl.click^$all
- ||allegrolokalnie.oferta-28347-pl.click^$all
- ||allegrolokalnie.oferta-37617-pl.click^$all
- ||allegrolokalnie.oferta-53234-pl.click^$all
-@@ -3849,7 +3824,6 @@
- ||allegrolokalnie.oferta-415127-pl.sbs^$all
- ||allegrolokalnie.oferta-1566781-pl.click^$all
- ||allegrolokalnie.oferta-2788211-pl.click^$all
--||allegrolokalnie.oferta-2788222pl.click^$all
- ||allegrolokalnie.oferta-5721771-pl.lol^$all
- ||allegrolokalnie.oferta-16872156-pl.click^$all
- ||allegrolokalnie.oferta-28458091-pl.click^$all
-@@ -4290,10 +4264,7 @@
- ||allegrolokalnie.pl-alebilet-3427.sbs^$all
- ||allegrolokalnie.pl-alebilet-8278.cfd^$all
- ||allegrolokalnie.pl-alebilet.sbs^$all
--||allegrolokalnie.pl-allegrolokalnie.click^$all
- ||allegrolokalnie.pl-allegrolokalnie.icu^$all
--||allegrolokalnie.pl-aukcja4214.pl^$all
--||allegrolokalnie.pl-aukcja6235.pl^$all
- ||allegrolokalnie.pl-aukcja19062.icu^$all
- ||allegrolokalnie.pl-aukcja106901.icu^$all
- ||allegrolokalnie.pl-aukcja110023.icu^$all
-@@ -4312,7 +4283,6 @@
- ||allegrolokalnie.pl-firmowe-19582.sbs^$all
+@@ -1029,7 +1029,6 @@
+ ||admintran.womenofcolorthrive.com^$all
+ ||adnanbappee.com^$all
+ ||adnocea.com^$all
+-||adob-document.online^$all
+ ||adobesharepointdoc-pp.vercel.app^$all
+ ||adrasanapartevleri.com^$all
+ ||adrev.ltd^$all
+@@ -1435,7 +1434,6 @@
+ ||alebilet.923892945927458285489238547.cfd^$all
+ ||alebilet.c87ax.click^$all
+ ||alebilet.com958395231.cfd^$all
+-||alebilet.id4603.pl^$all
+ ||alebilet.ido483146.xyz^$all
+ ||alebilet.ix78c.cfd^$all
+ ||alebilet.j34in43io2n.click^$all
+@@ -4145,7 +4143,6 @@
+ ||allegrolokalnie.pl-firmowe-18491.sbs^$all
  ||allegrolokalnie.pl-firmowe-28491.click^$all
  ||allegrolokalnie.pl-firmowe-28492.click^$all
--||allegrolokalnie.pl-firmowe-94043.click^$all
- ||allegrolokalnie.pl-firmowe-284919.click^$all
+-||allegrolokalnie.pl-firmowe-284919.click^$all
  ||allegrolokalnie.pl-firmowe-allegrol.sbs^$all
  ||allegrolokalnie.pl-firmowe-allegrolo.sbs^$all
-@@ -4569,7 +4539,6 @@
- ||allegrolokalnie.pl-oferta-id-184566-kategorie-id-19923324cfd.cfd^$all
- ||allegrolokalnie.pl-oferta-id-184566-kategorie-id-199223466.cfd^$all
- ||allegrolokalnie.pl-oferta-id-184566-kategorie-id-199233543.cfd^$all
--||allegrolokalnie.pl-oferta.com.pl^$all
- ||allegrolokalnie.pl-oferta.lat^$all
- ||allegrolokalnie.pl-ogloszenia-frimowe-8328409.click^$all
- ||allegrolokalnie.pl-ogloszenia-frimowe-28318821.click^$all
-@@ -4642,7 +4611,6 @@
- ||allegrolokalnie.pl-smart9859124.cyou^$all
- ||allegrolokalnie.pl-smart78598127.sbs^$all
- ||allegrolokalnie.pl-smart589154843.sbs^$all
--||allegrolokalnie.pl-sprzedaz2342.pl^$all
- ||allegrolokalnie.pl-ssid38019.click^$all
- ||allegrolokalnie.pl-ssid38673.click^$all
- ||allegrolokalnie.pl-ssid55346.click^$all
-@@ -4876,7 +4844,6 @@
- ||anglingdirect-pl.shop^$all
- ||angryiend.grittylegs.com^$all
- ||angrywond.best^$all
--||ania77.duspa.pl^$all
- ||anieyyusoff.com^$all
- ||animaladvisor.com^$all
- ||animalheartsinternational.org^$all
-@@ -5564,7 +5531,6 @@
- ||bernhard-jaeger.online^$all
- ||berra-home.com^$all
- ||bershkao.shop^$all
--||bershkapolska.pl^$all
- ||besarnikto.pro^$all
- ||besebaofv.info^$all
- ||besiktas.store^$all
-@@ -6302,7 +6268,6 @@
- ||bureauvanaarszen.de^$all
- ||burebau.pro^$all
- ||bureskovind.info^$all
--||burgerfactory.pl^$all
- ||burk3.com^$all
- ||burrcangi.com^$all
- ||burrisplen.rest^$all
-@@ -8726,7 +8691,6 @@
- ||duskhead.biz^$all
- ||duskspire-sentinel.com^$all
- ||duskwing-relax.com^$all
--||duspa.pl^$all
- ||dustleap.com^$all
- ||dustonhomescollective.com^$all
- ||duvore.shop^$all
-@@ -8842,7 +8806,6 @@
- ||ebo-idx-42a59fd42a59fd42a59fd.sensmaroc.nl^$all
- ||ebok-pl.proevent.rs^$all
- ||ebok.minanoa.rs^$all
--||ebokpg-energia6456.pl^$all
- ||ebook-genie-ai.online^$all
- ||ebook-logownie2375c37b8938bdd201182bbf616a044625eb.dynamicsolarshading.org^$all
- ||ebookk-449b3f27-df3a-4ac8-80e2-8bf5a43dc385.indiandiasporacouncil.nl^$all
-@@ -9300,7 +9263,6 @@
- ||etadrafumesiflotwc.pro^$all
- ||etasvcvw.shop^$all
- ||etazukusminifap.info^$all
--||etenigo24.pl^$all
- ||eternalmorgue.site^$all
- ||eternaltribute.site^$all
- ||eterophlyc.rest^$all
-@@ -9407,7 +9369,6 @@
- ||evsholdingco.com^$all
- ||ewaex.com^$all
- ||ewaldfranz.shop^$all
--||ewarfa.skplsa.pl^$all
- ||ewgosp.com^$all
- ||ewhd683e.lol^$all
- ||ewohopevyj.forum^$all
-@@ -9663,7 +9624,6 @@
- ||fbproadultnet-anastasia-armstrong.com^$all
- ||fbprocontact-vanessa-donovan.online^$all
- ||fbtxb.com^$all
--||fc0293a.pl^$all
- ||fcasef.marytarrant.com^$all
- ||fcguannoc.rest^$all
- ||fclgp.com^$all
-@@ -11873,7 +11833,6 @@
+ ||allegrolokalnie.pl-firmowe-allegrolokalnie.click^$all
+@@ -8182,7 +8179,6 @@
+ ||dpacel.movieshuffler.com^$all
+ ||dpcconsulting.us^$all
+ ||dpd-14647471.piquedesigninc.com^$all
+-||dpd-35654078.tedramsay.com^$all
+ ||dpd-corelina.com^$all
+ ||dpd-fluxnira.com^$all
+ ||dpd-kelvora.com^$all
+@@ -8407,8 +8403,6 @@
+ ||dzaboronlinecodzienny.top^$all
+ ||dzflm.com^$all
+ ||dzgsq.com^$all
+-||dzieci24h.pl^$all
+-||dzieci.net.pl^$all
+ ||dzienniknarodowy24.top^$all
+ ||dzienniknowoczesny.pro^$all
+ ||dzisiajraportpolski.pro^$all
+@@ -10593,7 +10587,6 @@
+ ||greenwriting.click^$all
+ ||greenzonepath.pro^$all
+ ||gregabeaman.com^$all
+-||greghouse.com.pl^$all
+ ||gregjgraye.com^$all
+ ||gregorylites.shop^$all
+ ||gremtosh.pro^$all
+@@ -11358,7 +11351,6 @@
+ ||ic-dbe.fit^$all
+ ||icbcorp.us^$all
+ ||icclnn.com^$all
+-||iceberdo24online.pl^$all
+ ||iceberg-assets.com^$all
  ||icebound-gear.com^$all
  ||icelandion.click^$all
- ||icelt.org^$all
--||icemigo24.pl^$all
- ||ichamati.org^$all
- ||ichthyosaureeians.info^$all
- ||iconicboots.club^$all
-@@ -11886,7 +11845,6 @@
- ||icsid-fund.com^$all
- ||icy-flash.com^$all
- ||icy-investments.com^$all
--||id051.pl^$all
- ||id842144.cfd^$all
- ||id-893822.com^$all
- ||idahohomesteadconference.com^$all
-@@ -13039,7 +12997,6 @@
- ||kadenmoss.shop^$all
- ||kadinineli.com^$all
- ||kaganajans.com^$all
--||kagr84.duspa.pl^$all
- ||kagyjiulo.autos^$all
- ||kahbt.com^$all
- ||kahvemakinasitamiri.com^$all
-@@ -13244,7 +13201,6 @@
- ||kjwebcjecrfw.com^$all
- ||kjxsm.com^$all
- ||kkkil.de^$all
--||kkp.fc0293a.pl^$all
- ||kkpopi.de^$all
- ||kkyed.com^$all
- ||kla0001.wpenginepowered.com^$all
-@@ -13296,7 +13252,6 @@
- ||kohkongdivers.com^$all
- ||kokata.pro^$all
- ||kolektifevent.com^$all
--||koligo24.pl^$all
- ||kolihunher.com^$all
- ||kolofoi.homes^$all
- ||komvex.pro^$all
-@@ -15618,7 +15573,6 @@
- ||oferta-2748.click^$all
- ||oferta-21938-pl.click^$all
- ||oferta-23282.sbs^$all
--||oferta-24785-pl.click^$all
- ||oferta-28347-pl.click^$all
- ||oferta-37617-pl.click^$all
- ||oferta-53234-pl.click^$all
-@@ -15628,7 +15582,6 @@
- ||oferta-415127-pl.sbs^$all
- ||oferta-1566781-pl.click^$all
- ||oferta-2788211-pl.click^$all
--||oferta-2788222pl.click^$all
- ||oferta-5721771-pl.lol^$all
- ||oferta-16872156-pl.click^$all
- ||oferta-28458091-pl.click^$all
-@@ -15826,9 +15779,7 @@
- ||olx.195748b2.click^$all
- ||olx.234873.click^$all
- ||olx.238762.sbs^$all
--||olx.247162.pl^$all
- ||olx.287232.sbs^$all
--||olx.336991.pl^$all
- ||olx.342094.click^$all
- ||olx.343984y398h.bond^$all
- ||olx.0349354.lat^$all
-@@ -16024,7 +15975,6 @@
- ||olx.oferta-2748.click^$all
- ||olx.oferta-21938-pl.click^$all
- ||olx.oferta-23282.sbs^$all
--||olx.oferta-24785-pl.click^$all
- ||olx.oferta-28347-pl.click^$all
- ||olx.oferta-37617-pl.click^$all
- ||olx.oferta-53234-pl.click^$all
-@@ -16034,7 +15984,6 @@
- ||olx.oferta-415127-pl.sbs^$all
- ||olx.oferta-1566781-pl.click^$all
- ||olx.oferta-2788211-pl.click^$all
--||olx.oferta-2788222pl.click^$all
- ||olx.oferta-5721771-pl.lol^$all
- ||olx.oferta-16872156-pl.click^$all
- ||olx.oferta-28458091-pl.click^$all
-@@ -16331,8 +16280,6 @@
- ||olx.pl-alebilet-3427.sbs^$all
- ||olx.pl-alebilet-8278.cfd^$all
- ||olx.pl-alebilet.sbs^$all
--||olx.pl-aukcja4214.pl^$all
--||olx.pl-aukcja6235.pl^$all
- ||olx.pl-aukcja958912.best^$all
- ||olx.pl-aukcja968942.sbs^$all
- ||olx.pl-aukcja291394321.sbs^$all
-@@ -16540,7 +16487,6 @@
- ||olx.pl-oferta-id-184566-kategorie-id-19923324cfd.cfd^$all
- ||olx.pl-oferta-id-184566-kategorie-id-199223466.cfd^$all
- ||olx.pl-oferta-id-184566-kategorie-id-199233543.cfd^$all
--||olx.pl-oferta.com.pl^$all
- ||olx.pl-ogloszenia-frimowe-8328409.click^$all
- ||olx.pl-ogloszenia-frimowe-28318821.click^$all
- ||olx.pl-ogloszenia-frimowe-82388233.click^$all
-@@ -16601,7 +16547,6 @@
- ||olx.pl-smart9859124.cyou^$all
- ||olx.pl-smart78598127.sbs^$all
- ||olx.pl-smart589154843.sbs^$all
--||olx.pl-sprzedaz2342.pl^$all
- ||olx.pl-ssid38019.click^$all
- ||olx.pl-ssid38673.click^$all
- ||olx.pl-ssid55346.click^$all
-@@ -16953,7 +16898,6 @@
- ||ozonoungos.cyou^$all
- ||ozsavunmaakademisi.com^$all
- ||ozyun.com^$all
--||p0rtal.pl^$all
- ||p1nkjo70vft7lg.dynv6.net^$all
- ||p1y9a7.cfd^$all
- ||p2-9ra.site^$all
-@@ -17909,10 +17853,7 @@
- ||pl-alebilet-3427.sbs^$all
- ||pl-alebilet-8278.cfd^$all
- ||pl-alebilet.sbs^$all
--||pl-allegrolokalnie.click^$all
- ||pl-allegrolokalnie.icu^$all
--||pl-aukcja4214.pl^$all
--||pl-aukcja6235.pl^$all
- ||pl-aukcja19062.icu^$all
- ||pl-aukcja106901.icu^$all
- ||pl-aukcja110023.icu^$all
-@@ -18157,7 +18098,6 @@
- ||pl-oferta-id-184566-kategorie-id-19923324cfd.cfd^$all
- ||pl-oferta-id-184566-kategorie-id-199223466.cfd^$all
- ||pl-oferta-id-184566-kategorie-id-199233543.cfd^$all
--||pl-oferta.com.pl^$all
- ||pl-ogloszenia-frimowe-8328409.click^$all
- ||pl-ogloszenia-frimowe-28318821.click^$all
- ||pl-ogloszenia-frimowe-82388233.click^$all
-@@ -18204,7 +18144,6 @@
- ||pl-s7by3.sbs^$all
- ||pl-smart7392354.sbs^$all
- ||pl-smart9691358.sbs^$all
--||pl-sprzedaz2342.pl^$all
- ||pl-ssid38019.click^$all
- ||pl-ssid38673.click^$all
- ||pl-ssid55346.click^$all
-@@ -18726,7 +18665,6 @@
- ||prizma-inwerez.org^$all
- ||prizmanexoratrade.com^$all
- ||prkketensions.info^$all
--||prmnd.com^$all
- ||pro1gg.info^$all
- ||pro.fvpromo.digital^$all
- ||proaltivaro.info^$all
-@@ -19397,7 +19335,6 @@
- ||rap-hosting.com^$all
- ||raphion.pro^$all
- ||rapid-flame.com^$all
--||rapidertcrefunds.site^$all
- ||rapidlogicgames.com^$all
- ||rapido-fintoris-app.com^$all
- ||rapidofincoura-es.fyi^$all
-@@ -22727,7 +22664,6 @@
- ||tivive.pro^$all
- ||tivronacloudservices.site^$all
- ||tixearyii.info^$all
--||tj.auhkzii.com^$all
- ||tjjemperances.info^$all
- ||tjxiny.com^$all
- ||tjyffg.com^$all
-@@ -22776,7 +22712,6 @@
- ||tolcarsauto.com^$all
- ||toliparkpl.com^$all
- ||tomalincor.cyou^$all
--||tomaszstadnik.zal0g-ds72a.pl^$all
- ||tombibasis.rest^$all
- ||tomconnects.com^$all
- ||tomiensia-ja.fyi^$all
-@@ -23173,7 +23108,6 @@
- ||tuzwerik.onl^$all
- ||tuzzmbrelskhaddars.info^$all
- ||tv-info24-stacja.com.pl^$all
--||tv-info24-stacja.pl^$all
- ||tvbhk.com^$all
- ||tvjdek.com^$all
- ||tvmxh.com^$all
-@@ -23880,9 +23814,7 @@
- ||vinted.195748b2.click^$all
- ||vinted.234873.click^$all
- ||vinted.238762.sbs^$all
--||vinted.247162.pl^$all
- ||vinted.287232.sbs^$all
--||vinted.336991.pl^$all
- ||vinted.342094.click^$all
- ||vinted.372694.click^$all
- ||vinted.387623.sbs^$all
-@@ -24054,7 +23986,6 @@
- ||vinted.oferta-2748.click^$all
- ||vinted.oferta-21938-pl.click^$all
- ||vinted.oferta-23282.sbs^$all
--||vinted.oferta-24785-pl.click^$all
- ||vinted.oferta-28347-pl.click^$all
- ||vinted.oferta-37617-pl.click^$all
- ||vinted.oferta-53234-pl.click^$all
-@@ -24064,7 +23995,6 @@
- ||vinted.oferta-415127-pl.sbs^$all
- ||vinted.oferta-1566781-pl.click^$all
- ||vinted.oferta-2788211-pl.click^$all
--||vinted.oferta-2788222pl.click^$all
- ||vinted.oferta-5721771-pl.lol^$all
- ||vinted.oferta-16872156-pl.click^$all
- ||vinted.oferta-28458091-pl.click^$all
-@@ -24219,8 +24149,6 @@
- ||vinted.pl-alebilet-3427.sbs^$all
- ||vinted.pl-alebilet-8278.cfd^$all
- ||vinted.pl-alebilet.sbs^$all
--||vinted.pl-aukcja4214.pl^$all
--||vinted.pl-aukcja6235.pl^$all
- ||vinted.pl-aukcja958912.best^$all
- ||vinted.pl-aukcja968942.sbs^$all
- ||vinted.pl-aukcja291394321.sbs^$all
-@@ -24468,7 +24396,6 @@
- ||vinted.pl-smart9859124.cyou^$all
- ||vinted.pl-smart78598127.sbs^$all
- ||vinted.pl-smart589154843.sbs^$all
--||vinted.pl-sprzedaz2342.pl^$all
- ||vinted.pl-ssid38019.click^$all
- ||vinted.pl-ssid38673.click^$all
- ||vinted.pl-ssid55346.click^$all
-@@ -24803,7 +24730,6 @@
- ||wb-cde.bond^$all
- ||wcaddons.com^$all
- ||wcapa.themagicalmaids.com^$all
--||wcars.pl^$all
- ||wcloudj.mytalentlife.com^$all
- ||wcnxm.com^$all
- ||wcurr.magdiel-sanchez.com^$all
-@@ -25813,7 +25739,6 @@
- ||zahitvaid.com^$all
- ||zainabshahzad.site^$all
- ||zakariashishirfcma.xyz^$all
--||zal0g-ds72a.pl^$all
- ||zalando.outlet-free.com^$all
- ||zalanoutletsale.shop^$all
- ||zalicekeating.com^$all
+@@ -12699,7 +12691,6 @@
+ ||koneymen.com^$all
+ ||konkrethurt.asterlce.top^$all
+ ||konkrethurt.cyohprion.com^$all
+-||konsys.com.pl^$all
+ ||konto-auth.ct.ws^$all
+ ||kontrola-stosowin.com^$all
+ ||kontrola-stosowin.net^$all
+@@ -20771,8 +20762,6 @@
+ ||summerbreeze.click^$all
+ ||summerhub.shop^$all
+ ||summerorledge.com^$all
+-||sun-tago.com.pl^$all
+-||sun-tago.pl^$all
+ ||sunburst-axle.com^$all
+ ||sunconf.online^$all
+ ||sundresshop.shop^$all
+@@ -20792,8 +20781,6 @@
+ ||sunsetmarova.com^$all
+ ||sunshadow-archer.com^$all
+ ||sunshadow-express.com^$all
+-||suntago-waw.pl^$all
+-||suntago-wawa.pl^$all
+ ||sunwind.my^$all
+ ||supeona.click^$all
+ ||super-wizjer-odnalezieni.com.pl^$all
+@@ -21240,7 +21227,6 @@
+ ||techweb.cfd^$all
+ ||techworthlearning.com^$all
+ ||tectimeoni.rest^$all
+-||tedramsay.com^$all
+ ||tedulearn.com^$all
+ ||tedxou.org^$all
+ ||teehalidomides.info^$all
+@@ -23460,7 +23446,6 @@
+ ||warsawpp.b-cdn.net^$all
+ ||warsawwp.b-cdn.net^$all
+ ||warsawzone.top^$all
+-||warszawa-sun-tago.com.pl^$all
+ ||wartermination.com^$all
+ ||warto-vin.com^$all
+ ||wartovin.com^$all
