@@ -1,5 +1,5 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 7d2f187a0..e1eb71b9e 100644
+index 1a77bb148..5ee620a55 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
 @@ -1,14 +1,12 @@
@@ -41,7 +41,7 @@ index 7d2f187a0..e1eb71b9e 100644
  ||gw.firesub.pl^
  ||gzs2u.doctortrf.com^
  ||hd.vod.co.pl^
-@@ -122,17 +117,14 @@
+@@ -122,7 +117,6 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -49,17 +49,7 @@ index 7d2f187a0..e1eb71b9e 100644
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
  ||miasto-wiadomosci-24h.x9.eu^
--||microcam.ushoppyworld.com^
- ||minutainfo.numpet.com^
- ||myorlenblog.myfreesites.net^
- ||naszemiasto-fakty24.x9.eu^
- ||naszemiasto-wiadomosci24.x9.eu^
- ||netflix.apps.co.pl^
--||news24.ushoppyworld.com^
- ||nieuws.znicely.com^
- ||noje.topnewsource.com^
- ||odbieramy-karty.24.eu^
-@@ -142,7 +134,6 @@
+@@ -142,7 +136,6 @@
  ||ostyhealth-pl.few-goods.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -67,7 +57,7 @@ index 7d2f187a0..e1eb71b9e 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.intensv.com^
-@@ -280,23 +271,16 @@
+@@ -280,22 +273,16 @@
  ||pl46.landovn.com^
  ||pl47.landofm.com^
  ||pl-eroprostin.relty-goods.com^
@@ -75,7 +65,6 @@ index 7d2f187a0..e1eb71b9e 100644
  ||pl.fxgm.com^
  ||pl.gamemine.com^
  ||pl.gluconv.com^
--||pl.hemorv.com^
 -||pl.hondrostrc.com^
  ||pl.thepawland.com^
 -||play.leadzu.com^
@@ -91,7 +80,7 @@ index 7d2f187a0..e1eb71b9e 100644
  ||quality-products1.blogspot.com^
  ||rncig.doctortrf.com^
  ||roksa.sx^
-@@ -325,7 +309,6 @@
+@@ -324,7 +311,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -99,7 +88,7 @@ index 7d2f187a0..e1eb71b9e 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
-@@ -336,7 +319,6 @@
+@@ -335,14 +321,12 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^
@@ -107,3 +96,10 @@ index 7d2f187a0..e1eb71b9e 100644
  ||wygraj-samsunga.24.eu^
  ||yzxvm.doctorbusy.com^
  ||z.centrum-aparatow-sluchowych.pl^
+ ||zalukaj24.pl^
+ ||zalukaj-film.24.eu^
+ ||zalukaj-online.24.eu^
+-||zalukaj-pl.pl^
+ ||zalukaj-tv.com.pl^
+ ||zalukaj-tv.pl^
+ ||zalukaj-vip.pl^
