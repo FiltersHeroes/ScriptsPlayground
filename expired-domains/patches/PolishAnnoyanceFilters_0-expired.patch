@@ -1,13 +1,12 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index d2a708250..9a4831e2d 100644
+index 91570b402..e9ab5bd29 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -752,7 +752,7 @@ spolecznosc.allegro.pl##.li-common-scroll-to-wrapper
- srokao.pl##.scrollToTop
- stage24.pl##.arrow-up
- stalowa.info##.to-top-arrow
--stalremdrzwi.pl,zaliniamety.pl##.icn-up-small
-+stalremdrzwi.pl##.icn-up-small
- stareforumpoly.pl##.u-scrollButtons
- start24.pl###bottom
- stawiszynski.org##.jupiterx-scrolled
+@@ -577,7 +577,6 @@ mypewex.com###goToTop
+ nagaba.pl###fixed_top
+ najlepszekonto.pl##.footer__to-the-top
+ napad.pl###ssRollTop
+-naprzedwiosniu.waw.pl###zf--top-anchor-container
+ nasz-gabinet.pl##.back-to-top-bttn
+ naszesmieci.mos.gov.pl##.nav_up
+ naszoptyk.pl##.icon-backToTop
