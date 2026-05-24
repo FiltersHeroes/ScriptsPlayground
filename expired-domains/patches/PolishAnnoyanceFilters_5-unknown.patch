@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 70f48eb11..c5beb4a87 100644
+index 22f23f870..460fa0484 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -5,10 +5,8 @@
@@ -14,7 +14,13 @@ index 70f48eb11..c5beb4a87 100644
  1000dni.pl###news-popup
  aasapolska.pl###leave-page-modal
  aba-sport.pl,alpinsklep.pl,apteka-natura.eu,autochemia.pl,avaro.pl,barokko.pl,bludshop.com,blueskypolska.pl,bogulandia.pl,bugo.pl,butosklep.pl,butylukow.pl,cafeborowka.pl,californiaskateshop.pl,candleworld.com.pl,cosslodkiego.com.pl,cyfra.eu,czasnabuty.pl,damizabawki.pl,denicler.eu,divanii.pl,dowarsztatu.com,e-baseus.com,e-megasport.com,efutro.com.pl,gratoria.pl,groomer.com.pl,hile.pl,hydromech.eu,korob.pl,ksiegarnia-edukacyjna.pl,kupbuty.com,littlejungle.pl,malowanebiela.pl,megazoologiczny.pl,meskiegacie.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rovicky.eu,sestimi.pl,sewel.pl,shop.s-a.pl,sportowybazar.pl,stili.pl,surgepolonia.pl,twojeobuwie.pl,ulubionabielizna.pl,unbrokenstore.com,vitasport.pl,wispol.eu###topLayerBackDrop, .iai-toplayer__background
-@@ -27,7 +25,7 @@ addhost.pl##.fsp-wrapper
+@@ -21,12 +19,12 @@ activejet.pl###newsleterKontener, .newsletterBox
+ activeshop.com.pl##.popupid21
+ activlab.pl,porta.com.pl##.bhr-board:has(.type--POPUP)
+ adamkuncicki.pl###listfusion_popup_lightbox_main
+-adamspa.pl,alkalicznystylzycia.com,angelius.pl,elektoralna.pl,horeca.ban-food.pl,hospicjum-podkarpackie.pl,inspiringsolutions.pl,kompleksowausluga.pl,passion.pl,qagile.pl##.ppsPopupShell, #ppsPopupBgOverlay
++adamspa.pl,alkalicznystylzycia.com,angelius.pl,elektoralna.pl,hospicjum-podkarpackie.pl,inspiringsolutions.pl,kompleksowausluga.pl,passion.pl,qagile.pl##.ppsPopupShell, #ppsPopupBgOverlay
+ addhost.pl##.fsp-wrapper
  addons.opera.com,altair.com.pl,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
  admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
  adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,ladnebebe.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
@@ -23,7 +29,7 @@ index 70f48eb11..c5beb4a87 100644
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -38,12 +36,12 @@ agro-star.com.pl##.lufcik, .lufcik__bg
+@@ -37,12 +35,12 @@ agro-star.com.pl##.lufcik, .lufcik__bg
  agro-trade.pl###f-popup
  agro-trade.pl,bitdefender.pl,byann.pl,demagog.org.pl,domisad.pl,feriogaj.com,tertio.pl,tpi.com.pl##.popup-overlay
  agrobex.pl##div:nth-of-type(6)
@@ -38,7 +44,7 @@ index 70f48eb11..c5beb4a87 100644
  agrosiec.pl,angelgold.pl,bolix.pl##.modal
  agrotopparts.pl###kartka, #kartka ~ #tlo
  akademia.nask.pl###newsletterall
-@@ -94,7 +92,7 @@ artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com
+@@ -93,7 +91,7 @@ artlazienkowe.pl,giftmania.com.pl,krolmajtekpierwszy.pl,nbielizna.pl,odblask.com
  arturjablonski.com,eswinoujscie.pl##.ulp-layer, .ulp-overlay
  asd.pl##.popUpHolder, #Fader
  ashampoo.com##.exitlayer
@@ -47,7 +53,7 @@ index 70f48eb11..c5beb4a87 100644
  asta-net.pl##.jsHomeBookCallModal
  asta-net.pl##.z-40.overlay.jsOverlay
  asta-net.pl##html:not([style*="overflow"]) body:not([style*="overflow"]) #popup-call
-@@ -105,7 +103,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
+@@ -104,7 +102,7 @@ astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.
  astromagia.pl,gazeta.pl,kulturaliberalna.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-bg
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup-overlay
  astromagia.pl,gazeta.pl,mohito.com,monacollection.pl,ochnik.com,porcelana.pl,reserved.com,taniaksiazka.pl,winnicalidla.pl,znak.com.pl##.newsletter-popup__overlay
@@ -56,11 +62,13 @@ index 70f48eb11..c5beb4a87 100644
  aterima-med.pl##.popup-wrapper
  atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
  atrexpress.com.pl,ch24.pl###popup-box, #list-builder
-@@ -155,7 +153,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
+@@ -154,8 +152,8 @@ bigchina.pl,pkwieruszow.pl,solidsecurity.pl,sportgdansk.pl###myModal
+ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
  biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
  bioindygo.pl###popup-1
- biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
+-biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
 -bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,nasztalerz.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
++twojfrancuski.pl,twojniemiecki.pl###dropin
 +bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
  bitdefender.pl,eluban.pl,izigsm.pl,jaslo4u.pl,krasnik.eu,kukulahealthyfood.pl,motherhood.pl,muzeumwp.pl,planujemyogrod.pl,przepisychinskie.pl,rankomat.pl,roltech.eu,sagana.pl,sklepdekarza.pl,sklepdlarolnika.pl,spodiglyinitki.pl,sushi-sklep.pl###popup
  biuroprasowe.pl###global_overlay_cont, #global_overlay
@@ -91,6 +99,15 @@ index 70f48eb11..c5beb4a87 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
+@@ -488,7 +485,7 @@ linguajob.pl##.popup, #get-similar-offers
+ linuxportal.pl###wyskakujaca_plansza_tlo, #wyskakujaca_plansza_srodek
+ listymikolaja.pl###newsletter_layer
+ loanme.pl##.exit-popup-block
+-lodzkietargi.pl,slaskietargi.pl,targipolnocne.pl###popup_mlm
++lodzkietargi.pl,slaskietargi.pl###popup_mlm
+ longterm.pl###list-builder
+ longterm.pl###popup-box
+ lookfantastic.pl,myprotein.pl##.emailReengagement
 @@ -651,7 +648,6 @@ podworko.nivea.pl###pobierz-apke-popup
  pol-nor.com###boxpopup, #overlay, #popforfirma
  policja.gov.pl###blisko, .modal-backdrop
@@ -100,9 +117,18 @@ index 70f48eb11..c5beb4a87 100644
  polityka.pl##.cg_subscribe99_banner_apla
  polityka.pl##div[class^="cg_promo"][class$="_popup"]
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 7ecffaca3..28e704676 100644
+index 7ecffaca3..67dc5644a 100644
 --- a/PPB/popupy_sieciowe.txt
 +++ b/PPB/popupy_sieciowe.txt
+@@ -15,7 +15,7 @@
+ /wp-content/plugins/popup-builder/public/sound/*$media,object,domain=polska-ie.com
+ /wp-content/plugins/popup-maker/assets/js/site.min.js$domain=stressfree.pl
+ /wp-content/plugins/popupally/resource/frontend/popup.min.js$domain=forum-oddluzanie.pl|gazetagazeta.com
+-/wp-content/plugins/popups/public/assets/js/min/public-min.js$domain=adrenalina-kielce.pl|businesstraveller.pl|hykker.com|instalnet.pl|portal.nysa.pl
++/wp-content/plugins/popups/public/assets/js/min/public-min.js$domain=adrenalina-kielce.pl|businesstraveller.pl|hykker.com|instalnet.pl
+ /wp-content/plugins/popups/public/assets/js/public.js$domain=pierwsze-kroki.com|ps4site.pl
+ /wp-content/plugins/wordpress-popup/js/public.min.js$domain=dobremiejsce.org|kwiaciarnia-rikka.pl
+ /wp-includes/js/backbone.min.js$script,~third-party,domain=expander.pl
 @@ -74,7 +74,6 @@
  ||proto.pl/popup_newsletter/settings
  ||regus.pl/Home/OnExitModal$xmlhttprequest
@@ -112,7 +138,7 @@ index 7ecffaca3..28e704676 100644
  ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
  ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index c4a3604c5..4fd75b02a 100644
+index 69d2a6c91..9ef7c2cd8 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,6 +1,6 @@

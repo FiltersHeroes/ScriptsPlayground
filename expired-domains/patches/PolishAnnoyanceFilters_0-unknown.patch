@@ -19,10 +19,10 @@ index eca4ccc0d..b100a5cc0 100644
  sky-shop.pl###promo-banner
  slippersfamily.com###widget_shop8
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 3c53e9069..b3f588fe7 100644
+index f6c9b7ed3..76c202da9 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -807,7 +807,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -812,7 +812,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -31,7 +31,7 @@ index 3c53e9069..b3f588fe7 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 805abbbcc..352520a33 100644
+index 1d7f8b463..e924fc738 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -42,7 +42,7 @@ airwick.pl###top-btn
@@ -43,7 +43,7 @@ index 805abbbcc..352520a33 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -174,7 +174,7 @@ chimmo.pl###arrow-up
+@@ -175,7 +175,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -52,7 +52,16 @@ index 805abbbcc..352520a33 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -238,7 +238,7 @@ domowa.pizza##.smoothup
+@@ -224,7 +224,7 @@ dictionary.cambridge.org##.ctop
+ dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
+ digi-store.pl,techsat24.pl###buttonTop
+ digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
+-directfloor.pl,infolinia.info.pl,memento.com.pl,mpolski.pl,pense.pl,prawo.amu.edu.pl##.arrow
++directfloor.pl,infolinia.info.pl,memento.com.pl,pense.pl,prawo.amu.edu.pl##.arrow
+ disco-polo.info,meizupolska.pl##.toup
+ dlabiznesu.voice-net.pl##.scroll-to-top
+ dns.pl##footer + button[class=""]
+@@ -239,7 +239,7 @@ domowa.pizza##.smoothup
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
@@ -61,7 +70,7 @@ index 805abbbcc..352520a33 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -283,7 +283,7 @@ enel.pl###afario-back-top
+@@ -284,7 +284,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -70,7 +79,7 @@ index 805abbbcc..352520a33 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -461,7 +461,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -462,7 +462,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -78,7 +87,7 @@ index 805abbbcc..352520a33 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -756,7 +755,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -757,7 +756,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top

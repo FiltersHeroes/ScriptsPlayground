@@ -1,289 +1,253 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index f8a81964d..83ec216dd 100644
+index dddee818a..5f54511c8 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -37,7 +37,6 @@
- 728012.pl
- 749393.pl
- 771509.pl
--82673020.pl
- 842742.pl
- 88-armory.com
- 88-armory.net
-@@ -108,7 +107,6 @@ bprog.danstedwifimtaani.com
- brandhit.click
- breezybubbles.net
- broward-treasury.com
--brylantnawodzie.pl
- budgetsho.pl
- bugfoxzz.buzz
- buildingbuddyai.com
-@@ -179,6 +177,7 @@ dougshop.pl
- dplsa.pl
- drewpoldrzwi.pl
+@@ -6,15 +6,12 @@
+ 12s8x8z.pl
+ 13z-6436633.pl
+ 1htf2tgv.sbs
+-20sat.com
+ 2298c3733498je303r.pl
+ 247162.pl
+ 24bbc.pro
+ 262627.pl
+-2974720843.pl
+ 3038200d222719d2.pl
+ 336991.pl
+-352710472.pl
+ 378210.pl
+ 401982iiq.pl
+ 403773.pl
+@@ -120,9 +117,12 @@ cannabistraditions.com
+ carhelpercenter.com
+ ccceu.online
+ cemigo24.pl
++centralnamennica.pl
++centrumenergylandia24.pl
+ charitiesregister.ie
+ chicascalente.us
+ chruby.pl
++chzzwudao.com
+ cinemagalyapi.com
+ clbconthe.net
+ cleanjoy.buzz
+@@ -138,7 +138,6 @@ createwat.pl
+ crypteescapital.com
+ cryptmax.buzz
+ cryptoconsulenza.info
+-cryptoforallnow.cc
+ cssdayz.buzz
+ cududzien.online
+ cududzien.site
+@@ -179,7 +178,6 @@ drewpoldrzwi.pl
  drtvhdd.pl
-+dsny7281.pl
+ dsny7281.pl
  dsp29.pl
- dumelek.pl
+-dumelek.pl
  duspa.pl
-@@ -267,6 +266,7 @@ hevelyu.pl
- himilayaherbal.com
- hk-aks.com
+ dzieci.net.pl
+ dzieci24h.pl
+@@ -238,7 +236,6 @@ forbetcasino.pl
+ forebet.com.pl
+ fotolexikon.com
+ framekey.buzz
+-friendlycarwashuae.com
+ funkci.pl
+ gablnet.pl
+ gaccworldwide.com
+@@ -268,7 +265,6 @@ hk-aks.com
  hlpw.pl
-+hntvs.pl
+ hntvs.pl
  hshmining.com
- htdtv823.pl
+-htdtv823.pl
  htmlfunzzy.buzz
-@@ -301,6 +301,7 @@ id4893.pl
+ i-berotego.pl
+ iauikc3918.pl
+@@ -281,6 +277,7 @@ id0495.pl
+ id051.pl
+ id0581.pl
+ id1245.pl
++id213.pl
+ id223.pl
+ id2390.pl
+ id2681.pl
+@@ -299,6 +296,7 @@ id4578.pl
+ id4603.pl
+ id4893.pl
  id5534.pl
++id56.pl
  id6653.pl
  id6662.pl
-+id71.pl
- id82.pl
- id8341.pl
- id8374.pl
-@@ -360,7 +361,6 @@ klotpa.pl
- klrila.pl
- knf.com.pl
- koligo24.pl
--konsys.com.pl
- kpwa2.pl
- krtorai.pl
- kscolaw.com
-@@ -378,7 +378,6 @@ lifesteals.com
- limueol.shop
- lindorado.pl
- linggo.pl
--listnawodzie.pl
- logak.pl
- logiw82a.pl
- lotosnavigator.pl
-@@ -387,9 +386,7 @@ lynxhedqe.se
- madlensstudio.pl
- mango-outlet.pl
- maxoperat.pl
--med-32894.pl
- med-sys.pl
--medflle.pl
- medlamarkt.pl
- meeriming.com
- melido.pl
-@@ -401,6 +398,7 @@ mennicepolska.pl
+ id71.pl
+@@ -393,6 +391,7 @@ melido.pl
+ melinest.pl
+ melodino.pl
+ mengkeshi.com
++mennica-centralna.pl
+ mennicakapltalowa.pl
+ mennicepolska.pl
  mennicezlota.pl
- mennlca.pl
- mennlcakapitalowa.pl
-+mennlcanarodowa.pl
- mennlcapolska.pl
- mennlce.pl
- mer-car.com.pl
-@@ -436,7 +434,6 @@ nigeriarealestatemarket.com
- nodedevz.buzz
- nt72a.pl
- ntfxpl.fun
--ntpwoa.pl
- ntsh92.sbs
- ntvshows.sbs
- oakjjs950-59590az.pl
-@@ -475,9 +472,11 @@ oviyaitsolutions.com
- p0rtal.pl
- pacificofood.com
- pakl.pl
-+panstwowezloto.pl
- panuchopr.com
- paoz95-09.pl
- par-soft-app.online
-+parcouditore.it
- pdfultra.com
- pdsia.pl
- pelletfactory.pl
-@@ -554,6 +553,7 @@ pokpak.pl
- polavestpro.pl
- poldawia.pl
- polska-mennica.pl
-+polskamennlca.pl
- polskapieknosc.pl
- polvestapro.pl
- polvestiapro.pl
-@@ -623,7 +623,6 @@ service-agb.de
+@@ -455,7 +454,6 @@ oferta0.pl
+ oferta2312.pl
+ oferta5774377.pl
+ oferta8362.pl
+-ofertatvhd.pl
+ ogloszenie74855.pl
+ ogloszenie832482390.pl
+ ogrod-sad.pl
+@@ -567,13 +565,12 @@ prefabtown.com
+ prejoyzz.buzz
+ premiumgov.pl
+ preprocess.buzz
++prestigegrading.com
+ princesscommons.ist
+ prissylilyco.com
+ prmnd.com
+ proitstam.click
+-promocjantfx.pl
+ promotionallaser.com
+-przyrodainfo-wrozoo.pl
+ ptgo.edu.pl
+ pularniesja.pl
+ punkerotica.com
+@@ -614,13 +611,13 @@ savinart.com
+ schoolmystery.com
+ scottemma.shop
+ secfitzz.buzz
+-sektv.pl
+ selgros24.unieurodeal.shop
+ selinodi.pl
+ selinonest.pl
+ selizen.pl
+ semicolonchecker.com
+ serenrentcars.com
++serveetoo-dupooood-polski.pl
+ service-agb.de
  serviciosvirtuales.site
  servisu.pl
- shinyhaven.com
--shortfor.alivae.com
- signalsms.com
- signemp.pl
- silverinvestmentcompanyllc.com
-@@ -679,7 +678,6 @@ theproudgerman.com
+@@ -675,7 +672,6 @@ teachpr.pl
+ tedramsay.com
+ teklino.pl
+ tekonest.pl
+-thebtst.pl
+ theplacetosee.org
+ theproudgerman.com
  threepointslab.com
- throatfire.org
- tommic.pl
--trade8-lidex.com
- tradeneupro.net
- tradeproair360.com
- tradereopro.ai
-@@ -688,9 +686,11 @@ tradesprix.com
- tramanage.pl
- trampolin.com.pl
- trimus.pl
-+trnsk.pl
- trvls.pl
- turkeydentalservices.com
- tv-info24-stacja.pl
-+tvrshd.pl
- twarzoksiazka.pl
- tyganlkpowszehny.pl
- uidevhub.buzz
-@@ -746,6 +746,7 @@ zbrodnieraport.pl
- zenithiq.site
- zentarofluxai.pl
- zk499942.pl
-+zlotopanstwowe.pl
- zmienogrzewanie.pl
- zoukia.com
- zredis.pl
+@@ -702,7 +698,6 @@ ultra-cashier.com
+ unfilteredimpact.com
+ unieurodeal.shop
+ unilqo-polska.pl
+-unilqopolska.pl
+ uniqlo-poland.pl
+ univers-inter-services.online
+ urbanchange.click
+@@ -737,7 +732,6 @@ wink-software.com
+ wt829a.pl
+ wybpla.pl
+ wybrack.pl
+-xn--santandr-beb.pl
+ yourusreputation.com
+ z551sa1.pl
+ zabkainvest.pl
+diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
+index d00fda72a..3775c43c8 100644
+--- a/exclusions/LWS_expired.txt
++++ b/exclusions/LWS_expired.txt
+@@ -491,6 +491,7 @@ geoxsklep.com
+ geoxskleponlinepolska.com
+ gerotel.com
+ getthesneakers.pl
++gimnazjumlyski.pl
+ glodni.com.pl
+ gmp-poland.pl
+ goldengoosepolska.pl
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index bf7f0431e..70fe0501c 100644
+index 70fe0501c..555eb2609 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -320,8 +320,6 @@
- ||few-goods.com^$all
- ||fhgfffdsf9.appspot.com^$all
- ||fibreselect.pl^$all
--||file.co.pl^$all
--||fileice.net^$all
- ||fileman.pl^$all
- ||fileoasis.net^$all
- ||filesdock.com^$all
-diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
-index 7525de380..819c6dbdb 100644
---- a/sections/przekierowujace_do_przekretow.txt
-+++ b/sections/przekierowujace_do_przekretow.txt
-@@ -145,9 +145,7 @@
- ||true-date.eu^$all
- ||twojenewsy24pl.livejournal.com^$all
- ||up.maschinen.ba^$all
--||videos.co.pl^$all
- ||vitaltrading.pl^$all
--||vod.co.pl^$all
- ||vulkan18.com^$all
- ||vulkan-vegas-kasyno.com^$all
- ||vulkanbet-pl.com^$all
-diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index 9d74f82e5..2425c1625 100644
---- a/sections/przekrety.txt
-+++ b/sections/przekrety.txt
-@@ -43,7 +43,6 @@
- ||anubandi.com^$all
- ||apexenterprisesweb.com^$all
- ||aplsolutionsonline.com^$all
--||apps.co.pl^$all
- ||appsdorado.com^$all
- ||apptrader.com^$all
- ||apteka-antykoncepcja.pl^$all
-@@ -127,7 +126,6 @@
- ||cda-cda.prv.pl^$all
- ||cda-film.prv.pl^$all
- ||cda-flix.pl^$all
--||cda-hd-cc.com^$all
- ||cda-hd.eu^$all
- ||cda-vod.pl^$all
- ||cda-vod.prv.pl^$all
-@@ -686,7 +684,6 @@
- ||player-cda.pl^$all
- ||playery.pl^$all
- ||playproz.com^$all
--||playstar.co.pl^$all
- ||playvod.pl^$all
- ||plikownik2015.wordpress.com^$all
- ||plikson.pl^$all
+@@ -40,7 +40,6 @@
+ ||alerter.pl^$all
+ ||aleshop.pl^$all
+ ||alfabetzdrowia.com.pl^$all
+-||alfazv.com^$all
+ ||alise.pl^$all
+ ||alkotoxv.com^$all
+ ||allfiles.pl^$all
+@@ -384,7 +383,6 @@
+ ||gigantx.pl^$all
+ ||gikon.pl^$all
+ ||gimi.co^$all
+-||gimnazjumlyski.pl^$all
+ ||gimnazjumniedrzwica.pl^$all
+ ||girllyday.com^$all
+ ||gleefulsaving.com^$all
+@@ -1260,7 +1258,6 @@
+ ||wiosna.shop^$all
+ ||wirtuozseksu.pl^$all
+ ||witkae-warszawa.com^$all
+-||wlosnd.com^$all
+ ||wmbixe.vip^$all
+ ||woaiiwo.com^$all
+ ||wodaplazmowana.eu^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index 6d3011874..1adc152cd 100644
+index 8f14b79d0..eb5666717 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -3761,7 +3761,6 @@
- ||auto-reactive-icuser827934-pl.seedfuturegroup.eu^$all
- ||auto-renwal-id564375-nfz-pl.verbietenverboten.de^$all
- ||autocgelid.cyou^$all
--||autoconfug-general-pl-agent.parcouditore.it^$all
- ||autoleadninja.com^$all
- ||autoops.site^$all
- ||autopaccor.cyou^$all
-@@ -6412,7 +6411,6 @@
- ||dipchunky.advisorweboptions.com^$all
- ||diqikae.pro^$all
- ||diradsimul.cyou^$all
--||direct-contact-pl.parcouditore.it^$all
- ||directoryofdentalspeakers.net^$all
- ||directsitedesign.com^$all
- ||direnuniversite.com^$all
-@@ -7286,7 +7284,6 @@
- ||eruuythroblastosesrecessives.info^$all
- ||eruvimuucornhusk.info^$all
- ||erwiwu.today^$all
--||erytrocyty.dsny7281.pl^$all
- ||esaarena.com^$all
- ||escapeelements.com^$all
- ||escecammat.cyou^$all
-@@ -9497,7 +9494,6 @@
- ||id4stay.com^$all
- ||id4stay.info^$all
- ||id17d7.webwave.dev^$all
--||id71.pl^$all
- ||id8758381.click^$all
- ||idahavemann.shop^$all
- ||idahoskinco.com^$all
-@@ -11066,7 +11062,6 @@
- ||ligsm.com^$all
- ||lihrj.com^$all
- ||likeapotato.com^$all
--||lila44.tvrshd.pl^$all
- ||lilac-haven.com^$all
- ||lilacvemerald.thebeezzees.com^$all
- ||limecrete.net^$all
-@@ -11656,7 +11651,6 @@
+@@ -1208,9 +1208,7 @@
+ ||alebilet.aukcje729917.lat^$all
+ ||alebilet.iafer72437923-1243.lol^$all
+ ||alebilet.iaukcj8321920-h345.lat^$all
+-||alebilet.id56.pl^$all
+ ||alebilet.id72.pl^$all
+-||alebilet.id213.pl^$all
+ ||alebilet.ido389144.top^$all
+ ||alebilet.ido468145.top^$all
+ ||alebilet.ido468146.top^$all
+@@ -4923,7 +4921,6 @@
+ ||centra-insight.site^$all
+ ||centralbriefora365.pro^$all
+ ||centralmnfcu.org^$all
+-||centralnamennica.pl^$all
+ ||centraloregoninsurance.com^$all
+ ||centraviaq.top^$all
+ ||centrebearings.com^$all
+@@ -4932,7 +4929,6 @@
+ ||centrium24.polskservizes.com^$all
+ ||centrium24.veriftv.com^$all
+ ||centromedicoelite.net^$all
+-||centrumenergylandia24.pl^$all
+ ||centrumzakupow.shop^$all
+ ||centurionbusinesssolutions.com^$all
+ ||cepiyi.net^$all
+@@ -5076,7 +5072,6 @@
+ ||chuccffiersapropels.info^$all
+ ||churchs.top^$all
+ ||chwvrhdp.shop^$all
+-||chzzwudao.com^$all
+ ||cia.e5cvyb.casa^$all
+ ||ciaec.org^$all
+ ||ciciliz.pro^$all
+@@ -11511,7 +11506,6 @@
+ ||member-hub.credit-agency-meta.com^$all
+ ||meninbelon.cyou^$all
+ ||menipou.com^$all
+-||mennica-centralna.pl^$all
+ ||mennica-narodowa.info^$all
  ||mennicakrajowa.com^$all
  ||mennice24.com^$all
- ||mennlca.com^$all
--||mennlcanarodowa.pl^$all
- ||mennlcaskarbowa.pl^$all
- ||menomaffag.cyou^$all
- ||mensepaashawing.info^$all
-@@ -13681,7 +13675,6 @@
- ||panikbar.net^$all
- ||pannasperm.cyou^$all
- ||panpolefortun.com^$all
--||panstwowezloto.pl^$all
- ||pantisocracbby.info^$all
- ||paoloiotti.shop^$all
- ||papafavip4.shop^$all
-@@ -14569,7 +14562,6 @@
- ||polskacapital.xyz^$all
- ||polskainprojecto.site^$all
- ||polskainprojectum.site^$all
--||polskamennlca.pl^$all
- ||polskandnewinfo.com^$all
- ||polskapkp.store^$all
- ||polskaprojectos.site^$all
-@@ -18113,7 +18105,6 @@
- ||tokp3dslot88.shop^$all
- ||tolesmeeinions.info^$all
- ||tomato-cristen-55.tiiny.site^$all
--||tomekkrzyzak.hntvs.pl^$all
- ||tomilas.com^$all
- ||tomk.top^$all
- ||tommydong.com^$all
-@@ -18347,7 +18338,6 @@
- ||trixeo.shop^$all
- ||trixiehull.shop^$all
- ||trjls.com^$all
--||trnsk.pl^$all
- ||troglspreg.cyou^$all
- ||tronview.digitalpresenceexpert.de^$all
- ||tropicalsandscc.org^$all
-@@ -20615,7 +20605,6 @@
- ||zlnlq.com^$all
- ||zlopdghn.shop^$all
- ||zlotdanrt24.cfd^$all
--||zlotopanstwowe.pl^$all
- ||zlotostaw.com^$all
- ||zlqqx.com^$all
- ||zmdpt.com^$all
+@@ -14577,7 +14571,6 @@
+ ||pressroomless.info^$all
+ ||pressviaq.info^$all
+ ||presswelle.click^$all
+-||prestigegrading.com^$all
+ ||prestigepress.xyz^$all
+ ||prestigethe.club^$all
+ ||prestivo.cfd^$all
+@@ -16231,7 +16224,6 @@
+ ||serreconfl.cyou^$all
+ ||servboss.com^$all
+ ||servedtop.thepennyjar.com^$all
+-||serveetoo-dupooood-polski.pl^$all
+ ||servehunt.xyz^$all
+ ||server.osteomedicvzla.com^$all
+ ||serveurofficenew.duckdns.org^$all
