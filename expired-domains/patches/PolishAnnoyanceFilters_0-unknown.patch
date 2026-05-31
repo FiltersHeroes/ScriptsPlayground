@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index eca4ccc0d..b100a5cc0 100644
+index 2b16fa690..04dad4d03 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -525,7 +525,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -526,7 +526,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -10,7 +10,7 @@ index eca4ccc0d..b100a5cc0 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -915,7 +914,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -916,7 +915,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -19,10 +19,10 @@ index eca4ccc0d..b100a5cc0 100644
  sky-shop.pl###promo-banner
  slippersfamily.com###widget_shop8
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index f6c9b7ed3..76c202da9 100644
+index da35742e1..073b94e27 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -812,7 +812,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -815,7 +815,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -31,19 +31,28 @@ index f6c9b7ed3..76c202da9 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 1d7f8b463..e924fc738 100644
+index 90416108c..3a6bc59d5 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -42,7 +42,7 @@ airwick.pl###top-btn
+@@ -41,8 +41,7 @@ airbuy.pl##.js-gotop
+ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
- alberski.artbhp.pl###disclaimer-button
+-alberski.artbhp.pl###disclaimer-button
 -albo24.pl,awf.edu.pl,nbportal.pl###go-up
 +albo24.pl,nbportal.pl###go-up
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -175,7 +175,7 @@ chimmo.pl###arrow-up
+@@ -69,7 +68,6 @@ apartamenty.nawyspie.eu##.roll
+ apia.pl,cro-online.pl,icrow.pl,nat.pl,sportowiec.info,ti-ksiaz.iap.pl,unia-sklep.pl##.page-scroll-up
+ apo-discounter.pl###page_up_button
+ apollo.pl##.tt-scroll-up
+-appsource.microsoft.com##.appSourceScrollToTop
+ aptekaolmed.pl###btn-going-top
+ aptekazdrowie-24.pl,e-zikoapteka.pl##.site-scrolltop
+ apteline.pl,elevensports.pl,etuo.pl##.footer__scroll-top
+@@ -177,7 +175,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -52,7 +61,7 @@ index 1d7f8b463..e924fc738 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -224,7 +224,7 @@ dictionary.cambridge.org##.ctop
+@@ -226,7 +224,7 @@ dictionary.cambridge.org##.ctop
  dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
  digi-store.pl,techsat24.pl###buttonTop
  digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
@@ -61,7 +70,11 @@ index 1d7f8b463..e924fc738 100644
  disco-polo.info,meizupolska.pl##.toup
  dlabiznesu.voice-net.pl##.scroll-to-top
  dns.pl##footer + button[class=""]
-@@ -239,7 +239,7 @@ domowa.pizza##.smoothup
+@@ -237,11 +235,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
+ doktormonika.pl###page-gotop.page-gotop
+ domdlaciebie.com.pl##.fix-scroll-top
+ domenergo.com###to-to
+-domowa.pizza##.smoothup
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
@@ -70,7 +83,16 @@ index 1d7f8b463..e924fc738 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -284,7 +284,7 @@ enel.pl###afario-back-top
+@@ -275,7 +272,7 @@ ekrak.pl###zltop
+ eksiegarnia.mnk.pl,mojepodlogi.com,renee.pl##.scroll__top
+ ekspedyt.org,rawa.katowice.pl###sbttBacktotop
+ ekstrastats.pl##.site-scroll-top
+-electropapa.com,mrowka.com,sklep.poczta-polska.pl,ungepflanzen.de##.scroll-up-container
++electropapa.com,mrowka.com,sklep.poczta-polska.pl##.scroll-up-container
+ elektrosalon.pl###buttontotop
+ elektrykadlakazdego.pl##.crane-top
+ elipublishing.pl##.e-fas-arrow-alt-circle-up
+@@ -286,7 +283,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -79,7 +101,23 @@ index 1d7f8b463..e924fc738 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -462,7 +462,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -432,14 +429,13 @@ jackjones.com##.js-back-to-top__button
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++jbc.bj.uj.edu.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+ journals.viamedica.pl##.Back_To_Top_Button
+ kaercher.com##.fg-totop
+ kajakiem.info##.bttn_up
+ kakadu.pl##.kakadu_scroll_to_top
+ kamami.pl###go_top
+-kamen.com.pl###footer_top
+ kancelaria.info##.eut-top-btn
+ karcz.eu##.ce_toplink
+ kaufland.pl##.a-back-to-top__button
+@@ -463,7 +459,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -87,7 +125,7 @@ index 1d7f8b463..e924fc738 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -757,7 +756,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -758,7 +753,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
