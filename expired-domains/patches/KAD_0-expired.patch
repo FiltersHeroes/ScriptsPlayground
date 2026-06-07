@@ -1,170 +1,183 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index c48135aa5..aa59b3726 100644
+index 32cba1e2e..786919fc2 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -76,7 +76,6 @@ architekt-dom.pl
- artag.click
- artmor.pl
- artrend.icu
--atasehirsackaynakmerkezi.com
- atillaavlayici.com
- auhkzii.com
- auranode.site
-@@ -200,6 +199,7 @@ edotek.pl
- educationaldaily.com
- edugate-ac.com
- egdatelemo.pl
-+ehms.pl
- electedto.com
- elindo.pl
- emagolen.pl
-@@ -210,7 +210,6 @@ energymajowe.pl
- enterprisechristian.com
- eobuwie-pl.store
- eosla.pl
--epreyourorl.cyou
- esamego.pl
- essays-on-line.com
- essence4u.net
-@@ -227,10 +226,8 @@ extremeadipo.com
- faktowiec24.pl
- faseya.net
- fast-online.store
--fastdelvrysone.net
- fc0293a.pl
- ferixo.pl
--fil-gaz-handelgazem-jacek-filewicz.pl
- filtrsa.pl
- fitnessbydwight.com
- fixcctv.com
-@@ -309,6 +306,7 @@ id56.pl
- id6653.pl
- id6662.pl
- id71.pl
-+id72.pl
- id82.pl
- id8341.pl
- id8374.pl
-@@ -343,12 +341,16 @@ ido578143.top
- ido578543.top
- ido578644.top
- ido766134.top
-+ido766138.top
- ido766141.top
- ido766142.top
-+ido768142.top
- ido789444.top
- ido789445.top
- ido789455.top
- ido984554.top
-+ido985542.top
-+ido986652.top
- idsplug.com
- idv3mkfr.pl
- ignitoral.com
-@@ -449,7 +451,6 @@ msxm.pl
- muri2.pl
- mutelo.pl
- na-stoku.com.pl
--najlepszelokaty.com.pl
- nalvot.pl
- nandih.org
- nbpa.pl
-@@ -619,9 +620,9 @@ racing1.click
- ramsang.se
- randmqualitytruckbody.net
- rapidertcrefunds.site
-+raybanspolska.pl
- recfound.pl
- redgirl40.com
--rednews24.su
- reeboksklep.pl
- refntfsa.pl
- regilo.pl
-@@ -733,7 +734,6 @@ uidevzz.buzz
- ultra-cashier.com
+@@ -69,6 +69,7 @@ alebrelok.pl
+ alizsy.pl
+ allstagemerchants.com
+ altrix-sync-app.com
++animacja.edu.pl
+ aowka.pl
+ aprendekriptos.com
+ apzoo50-05.pl
+@@ -161,6 +162,7 @@ decademist.melodicloud.com
+ deepseek4o.com
+ delomi.pl
+ demoniabuty.pl
++desigual-outlet.pl
+ devicfly.sharktankaddicts.com
+ diabetfree.shop
+ diamondpipsignal.com
+@@ -182,6 +184,7 @@ dostaawa-do-skleppu.pl
+ dougshop.pl
+ dplsa.pl
+ dreamsanctum.com
++drewopal.pl
+ drewpoldrzwi.pl
+ drtvhdd.pl
+ dsny7281.pl
+@@ -399,7 +402,6 @@ klotpa.pl
+ klrila.pl
+ knf.com.pl
+ koligo24.pl
+-kpwa2.pl
+ krtorai.pl
+ kscolaw.com
+ ksparkelectrics.com
+@@ -407,6 +409,7 @@ ksploa.pl
+ ktxarc.com
+ kumonity.club
+ kumonity.org
++lamamaevyters.com
+ lantorlowl.com
+ learn2earns.com
+ lekanpool.org
+@@ -572,7 +575,6 @@ pl-oferta7666370.pl
+ pl-oferta8292177.pl
+ pl-oferta934929.net.pl
+ pl-oferta98453.pl
+-pl-oferta9944139.pl
+ pl-ogloszenie.pl
+ pl-ogloszenie303943.pl
+ pl-ogloszenie304823.pl
+@@ -682,7 +684,6 @@ stablevig.pl
+ stalco-sklep.pl
+ stalcosklep.pl
+ startu.pl
+-strangerthingsnt.pl
+ strauss-sklep.pl
+ streamlinefood.com
+ strefa-klient.click
+@@ -740,6 +741,7 @@ ultra-cashier.com
  unfilteredimpact.com
  unieurodeal.shop
--unilqo-polska.pl
  uniqlo-poland.pl
++uniqlo-polska.com.pl
  uniqlopolska.pl
  univers-inter-services.online
-diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 08606cede..b0653ca3f 100644
---- a/sections/podejrzane_inne_oszustwa.txt
-+++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -672,7 +672,6 @@
- ||namierzanie-telefonu.pl^$all
- ||nanawardrobe.pl^$all
- ||nanimaly-shop.myshopify.com^$all
--||nanisp.com^$all
- ||nanoflex-new.com^$all
- ||naporost.pl^$all
- ||narzuty.sklep.pl^$all
-@@ -753,7 +752,6 @@
- ||organogold.com^$all
- ||oswieconykochanek.pl^$all
- ||oszukacruletke.like.pl^$all
--||ottomax-new.com^$all
- ||ovielstyle.com^$all
- ||owalapolska.com^$all
- ||pacyfka99.pl^$all
+ urbanchange.click
+@@ -757,11 +759,13 @@ visflowz.buzz
+ vishubzz.buzz
+ visprozz.buzz
+ warszawa-sun-tago.com.pl
++wasvk.com
+ wawateno-24.pl
+ wawotemo-24.pl
+ wayofbest.com
+ wbierz.pl
+ websiteskool.com
++websrmtly.com
+ welimo.pl
+ wenonimo24.pl
+ weryfikacja-podatki-gov.pl
+@@ -773,6 +777,7 @@ wink-software.com
+ wt829a.pl
+ wybpla.pl
+ wybrack.pl
++wzatorskimobiektywie24.pl
+ xn--wyprzedaspecjalna-3yd.pl
+ your-quest-details.rest
+ yourusreputation.com
+diff --git a/sections/przekrety-regex-wildcard.txt b/sections/przekrety-regex-wildcard.txt
+index c712e1d08..6fdd44da5 100644
+--- a/sections/przekrety-regex-wildcard.txt
++++ b/sections/przekrety-regex-wildcard.txt
+@@ -20,8 +20,6 @@
+ ||apteline-pl.$frame,object,domain=~apteline.pl
+ ||chomikuj*.opx.pl^$all,domain=pl
+ ||chomikuj.$doc,to=~chomikuj.pl
+-||czyjtonumer.net^$doc,to=czyjtonumer.net
+-||czyjtonumer.net^$doc,to=czyjtonumer.net,reason="Uważaj na oferowany przez nich pakiet premium"
+ ||dates-here-now*.com^$all
+ ||dating-4-adults*.com^$all
+ ||dating-heart*.com^$all
 diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index 9669f4388..afb86f47d 100644
+index 97022564b..9e2d67faf 100644
 --- a/sections/przekrety.txt
 +++ b/sections/przekrety.txt
-@@ -185,7 +185,6 @@
- ||darmowe-doladowania.net.pl^$all
- ||darmowekino.pl^$all
- ||darmoweprezenty.pl^$all
--||darmowetesty.com^$all
- ||darmowyfilmrfm44.ek1.pl^$all
- ||darmowyfilmzlektoremoas10.ek1.pl^$all
- ||date-now.pl^$all
-@@ -684,7 +683,6 @@
- ||platformcoop.net^$all
- ||player-cda.pl^$all
- ||playery.pl^$all
--||playproz.com^$all
- ||playvod.pl^$all
- ||plikownik2015.wordpress.com^$all
- ||plikson.pl^$all
+@@ -90,7 +90,6 @@
+ ||bitcoinprime.org^$all
+ ||bitcoinprimeapp.com^$all
+ ||bitcoinprofitpro.com^$all
+-||bitcoinrevolution.ai^$all
+ ||bitcoins-profit.com^$all
+ ||bitcoinset.pl^$all
+ ||bitcoinsunrise.com^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index 10231e930..0f8689b5a 100644
+index 1870104b1..86b89dd24 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -1260,7 +1260,6 @@
- ||alebilet.bilet.forum^$all
- ||alebilet.iafer72437923-1243.lol^$all
- ||alebilet.iaukcj8321920-h345.lat^$all
--||alebilet.id72.pl^$all
- ||alebilet.oaikcj823012-340.lat^$all
- ||alebilet.ofe1924812034-yh345.shop^$all
- ||alebilet.oferp7283501.lat^$all
-@@ -2142,10 +2141,6 @@
- ||allegrolokalnie.iaukcj8321920-h345.lat^$all
- ||allegrolokalnie.id81.lat^$all
- ||allegrolokalnie.id813.lat^$all
--||allegrolokalnie.ido766138.top^$all
--||allegrolokalnie.ido768142.top^$all
--||allegrolokalnie.ido985542.top^$all
--||allegrolokalnie.ido986652.top^$all
- ||allegrolokalnie.js5698qnfiasn.top^$all
- ||allegrolokalnie.kab739hs38.lol^$all
- ||allegrolokalnie.kup-teraz-17299263-pozostale.cyou^$all
-@@ -14566,7 +14561,6 @@
- ||polizajuridicadearrendamiento.com^$all
- ||polk78920643-230.lat^$all
- ||pollocktiny.com^$all
--||pollub.ehms.pl^$all
- ||polmarcas3.online^$all
- ||polmeradia.pro^$all
- ||polmori.shop^$all
-@@ -15500,7 +15494,6 @@
- ||rawlplugpl.shop^$all
- ||rawlplugselected.shop^$all
- ||rawpermaculture.com^$all
--||raybanspolska.pl^$all
- ||raykyte.com^$all
- ||raysurrection.pro^$all
- ||razavip.top^$all
+@@ -2480,7 +2480,6 @@
+ ||anglesalert.stefanmve.com^$all
+ ||anguiscapital.com^$all
+ ||anilkablo.com^$all
+-||animacja.edu.pl^$all
+ ||animalesdepoder.net^$all
+ ||animaspyromhhetallurgy.info^$all
+ ||animeou.com^$all
+@@ -3488,7 +3487,6 @@
+ ||bmwmt2026vip.shop^$all
+ ||bmwmtmall2026.shop^$all
+ ||bmwmtvip2026.shop^$all
+-||bn.wasvk.com^$all
+ ||bnefasqwen.cfd^$all
+ ||bneqme.shop^$all
+ ||bnetflix.fashioncolourbd.com^$all
+@@ -5353,7 +5351,6 @@
+ ||designinvectra.digital^$all
+ ||designlab19.com^$all
+ ||designycharge.hazkat.com^$all
+-||desigual-outlet.pl^$all
+ ||desinogroup.com^$all
+ ||deskisup-pl.shop^$all
+ ||deskjockeypro.net^$all
+@@ -5780,7 +5777,6 @@
+ ||drevkontfal.top^$all
+ ||drevoskimhel.top^$all
+ ||drewopal.com^$all
+-||drewopal.pl^$all
+ ||drgreenberg.com^$all
+ ||drift-accounts.com^$all
+ ||drift-money.com^$all
+@@ -10248,7 +10244,6 @@
+ ||laliradepozuelo.es^$all
+ ||laluneprofessional.com^$all
+ ||lamaloca.info^$all
+-||lamamaevyters.com^$all
+ ||lamparabbr.cyou^$all
+ ||lampivo.shop^$all
+ ||lancastercorner.eu^$all
+@@ -18703,7 +18698,6 @@
+ ||unifistrav.cyou^$all
+ ||uniloredde.cyou^$all
+ ||unipronex.com^$all
+-||uniqlo-polska.com.pl^$all
+ ||uniqlo-polska.pl^$all
+ ||uniqlocojp.shop^$all
+ ||uniqlocojponline.com^$all
+@@ -19697,7 +19691,6 @@
+ ||website-6a2aa55f.kyt.blc.mybluehost.me^$all
+ ||websitelaunchplans.com^$all
+ ||websitesample.com^$all
+-||websrmtly.com^$all
+ ||webuniverses.com^$all
+ ||wedailosa.info^$all
+ ||wedgeworld.click^$all
+@@ -20123,7 +20116,6 @@
+ ||wyzofya.com^$all
+ ||wyzxl.com^$all
+ ||wzatorskimobiektywie24.eu^$all
+-||wzatorskimobiektywie24.pl^$all
+ ||wzmzlyxd.com^$all
+ ||wzpbg.com^$all
+ ||wzrostcoinmarkapp.com^$all

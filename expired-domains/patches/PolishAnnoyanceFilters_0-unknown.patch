@@ -1,16 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 7ea0a0948..e6b165d54 100644
+index f476a8801..2cb08cdec 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -154,7 +154,6 @@ biurowe-zakupy.pl###BoczneZakladki
- biznes2biznes.com###zakladki > div:nth-of-type(6)
- biznesalert.pl##.toolbar
- biznesfinder.pl,panoramafirm.pl,pkt.pl###hs-web-interactives-top-anchor
--blog.doktortusz.pl##[href^="https://drtusz.pl"]
- blog.purebeauty.pl###single-sticky div.h6
- blog.siegnijpozdrowie.org##.limk-widget
- bluecity.pl##.js-loader.loader
-@@ -525,7 +524,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -526,7 +526,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -18,7 +10,7 @@ index 7ea0a0948..e6b165d54 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -915,7 +913,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -916,7 +915,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -27,18 +19,10 @@ index 7ea0a0948..e6b165d54 100644
  sky-shop.pl###promo-banner
  slippersfamily.com###widget_shop8
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index da35742e1..f404d8e3e 100644
+index da35742e1..bd3554b24 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -230,7 +230,6 @@ blik.com,emaillabs.io##.newsletter-iframe
- blip.pl###salesmanagoIframe
- blip.pl,chcemybycrodzicami.pl##.front-newsletter
- blog-daneosobowe.pl,ekorekta24.pl,labosport.pl,niezlasztuka.net,sprawyzdrowia.pl##.nksub_hidden .nks_cc_trigger_tabs
--blog.doktortusz.pl##.site-sidebar .widget:has(.newsletter_sub)
- blog.gdaq.pl,doktorania.pl,faktyozywnosci.pl,haart.pl,kryptopomocnik.pl,magnapolonia.org,naukatolubie.pl,obserwatorlogistyczny.pl,ostatniatawerna.pl,refreszing.pl,stomatologianews.pl###custom_html-2
- blog.mozilla.org,legal-base.co.uk,olesnica24.com,peak-bike.pl,zamek-krolewski.pl,zkmgdynia.pl###newsletter_form
- blog.spotawheel.pl,oknarolety.com###subscribe-form
-@@ -815,7 +814,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -815,7 +815,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -46,7 +30,7 @@ index da35742e1..f404d8e3e 100644
  kormoran-rowy.pl##.site-footer__row--top > .inner-section > .align-right.site-footer__col
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
-@@ -1029,7 +1027,6 @@ multiform.pl###mainContact .writeToUs
+@@ -1029,7 +1028,6 @@ multiform.pl###mainContact .writeToUs
  muratorplus.pl##.right > form > button
  muszakski.com.pl###zr_footer_newsletter
  muve.pl##.newsl-box
@@ -55,18 +39,9 @@ index da35742e1..f404d8e3e 100644
  muzyczneradio.pl##.newsletter.col-md-3
  muzykotekaszkolna.pl##.nl-subscribe
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 90416108c..f491a8a04 100644
+index 90416108c..d3cee3b31 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -15,7 +15,7 @@ action.pl##.btn-top
- active.sklep.pl,epicgames.com,grupawsparcia.pl,smaki.pl,wprost.pl##.up-button
- activefalcon.nazwa.pl,jaw.com.pl,market-point.pl,meblem4.pl,ogrodniksklep.pl,vipmajster.pl##.scrollup
- activefamily.pl##.moto-back-to-top-button_visible
--ad-al.pl,barszcz.edu.pl,misericordia.media.pl##.hc_scrollup
-+ad-al.pl,misericordia.media.pl##.hc_scrollup
- adata.com###back-2-top.back-2-top-rocket
- addnature.pl,bikester.pl###iscjs_scroller
- addons.prestashop.com##.ontop.btn-top.btn
 @@ -42,7 +42,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
@@ -76,23 +51,14 @@ index 90416108c..f491a8a04 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -119,7 +119,7 @@ beltone-polska.eu,beltone-polska.pl##.cc-FloatingButtonBarContainer-button-scrol
- benchmark.pl,sgb.pl##.jsScrollToTop
- benler.pl,lenovogaming.pl,lento.pl,restaurantguru.com###scroller
- beskidy.news,hg.eu,intimissimi.com,nawa.gov.pl,powiatslubicki.pl##.js-scroll-top
--bet.mbp.olsztyn.pl,fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
-+fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
- bet.pl,citroen.pl,domkulturywkodniu.pl,infocrypto.pl,ipon.pl,zhp.pl###scrolltop
- betlejempoznanskie.pl##.icon-up-new-box
- bettingexpert.com,florini.pl##.slideInUp
-@@ -135,7 +135,6 @@ biznesplan.net.pl##.ta_upscr
- blasty.pl###widget-back-to-top
- blix.pl##.rewindTopButton.footer__rewind-button
- blizejciebie.pl,seni24.pl##.quicknav-to-top
--blog.doktortusz.pl##.mb-to-top
- blog.noblehealth.pl##footer .slide-up
- blog.polskiekino.com.pl##.tidymag-scroll-top
- blogzapetytem.pl##.tc-btt-wrapper
+@@ -69,7 +69,6 @@ apartamenty.nawyspie.eu##.roll
+ apia.pl,cro-online.pl,icrow.pl,nat.pl,sportowiec.info,ti-ksiaz.iap.pl,unia-sklep.pl##.page-scroll-up
+ apo-discounter.pl###page_up_button
+ apollo.pl##.tt-scroll-up
+-appsource.microsoft.com##.appSourceScrollToTop
+ aptekaolmed.pl###btn-going-top
+ aptekazdrowie-24.pl,e-zikoapteka.pl##.site-scrolltop
+ apteline.pl,elevensports.pl,etuo.pl##.footer__scroll-top
 @@ -177,7 +176,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
@@ -120,11 +86,9 @@ index 90416108c..f491a8a04 100644
  disco-polo.info,meizupolska.pl##.toup
  dlabiznesu.voice-net.pl##.scroll-to-top
  dns.pl##footer + button[class=""]
-@@ -235,13 +234,11 @@ dobramine.com##.to_top_link
- dobrzemieszkaj.pl###gallery > .circle
- docs.github.com##footer button[class*="scroll-to-top"]
+@@ -237,11 +236,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
--domdlaciebie.com.pl##.fix-scroll-top
+ domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
 -domowa.pizza##.smoothup
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
@@ -135,7 +99,7 @@ index 90416108c..f491a8a04 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -275,7 +272,7 @@ ekrak.pl###zltop
+@@ -275,7 +273,7 @@ ekrak.pl###zltop
  eksiegarnia.mnk.pl,mojepodlogi.com,renee.pl##.scroll__top
  ekspedyt.org,rawa.katowice.pl###sbttBacktotop
  ekstrastats.pl##.site-scroll-top
@@ -144,7 +108,7 @@ index 90416108c..f491a8a04 100644
  elektrosalon.pl###buttontotop
  elektrykadlakazdego.pl##.crane-top
  elipublishing.pl##.e-fas-arrow-alt-circle-up
-@@ -286,7 +283,7 @@ enel.pl###afario-back-top
+@@ -286,7 +284,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -153,30 +117,7 @@ index 90416108c..f491a8a04 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -328,9 +325,7 @@ ftt.roto-frank.com##.scroll-container
- funclub.pl##button[aria-label="Wróć na górę"]
- fundacjapestka.pl,iform4u.com##.back__top
- funduszeue.wzp.pl,mixit.pl,plus.pl###scroll-up-btn
--funer.com.pl###backtotop
- galeriakatowicka.eu###js-scroll-to
--gama-sklep.com.pl##.go-to-top-page
- gandalf.com.pl,in4.pl,mediastar.pl,motobros.pl###goup
- garneczki.pl##.go-to-up
- gazeta-fotograficzna.org,gmoto.pl,iberogast.pl,mp.pl###top-link-block
-@@ -434,12 +429,10 @@ jarock.pl,mentel.com.pl###back-to-top-btn
- jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
- jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
- jmlnet.pl##.pi-scroll-top-arrow
--journals.viamedica.pl##.Back_To_Top_Button
- kaercher.com##.fg-totop
- kajakiem.info##.bttn_up
- kakadu.pl##.kakadu_scroll_to_top
- kamami.pl###go_top
--kamen.com.pl###footer_top
- kancelaria.info##.eut-top-btn
- karcz.eu##.ce_toplink
- kaufland.pl##.a-back-to-top__button
-@@ -463,7 +456,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -463,7 +461,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -184,7 +125,7 @@ index 90416108c..f491a8a04 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -758,7 +750,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -758,7 +755,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -202,7 +143,7 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index fc83525a1..f690eb7f5 100644
+index 28af158ea..a7da4f5f9 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,6 +1,6 @@
@@ -213,7 +154,7 @@ index fc83525a1..f690eb7f5 100644
  360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
  a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
  a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -239,7 +239,7 @@ kmziz.pl###full_newsletter_modal, .modal-backdrop
+@@ -240,7 +240,7 @@ kmziz.pl###full_newsletter_modal, .modal-backdrop
  kolobrzeg.pl##.popup, #popup-bg
  kolobrzeg.pl,tluszcz.pl##.popup_active:style(overflow-y: auto !important)
  konin.pl###myModal, #myModal ~ .modal-backdrop
@@ -222,15 +163,3 @@ index fc83525a1..f690eb7f5 100644
  koronawirusunas.pl###PatronModal, .modal-backdrop
  koty.pl,psy.pl##.ReactModal__Overlay:has(a[href*="/newsletter"])
  koty.pl,psy.pl##html[style], body[class*="Modal"]:style(position: static !important; overflow-y: auto !important)
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 052468578..499b41dad 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -254,7 +254,6 @@ foto.auchan.pl##.sidebar-link[href="http://www.foto.auchan.pl/obsluga-klienta.ht
- fsmm.pl##body > .contactform
- fundacjakibica.pl###contact_rozwin
- galskor.com###yotpo_testimonials_btn
--gama-sklep.com.pl##footer > .contact-element
- gamerweb.pl##.zoxrel.left.zox-post-soc-list
- gandalf.com.pl##.fb_dialog_advanced
- garazeinterstal.pl##.phone-button

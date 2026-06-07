@@ -1,8 +1,8 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 35013db34..a16ffb283 100644
+index 35013db34..66be50164 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -1,15 +1,12 @@
+@@ -1,15 +1,11 @@
  ||4s13t.doctortrf.com^
  ||05agu.doctortrf.com^
  ||a-tocard-pl.treasure-shop.org^
@@ -10,7 +10,7 @@ index 35013db34..a16ffb283 100644
  ||abc.travel2days.com^
  ||activestin-pl.great-beauty.org^
  ||adpro.futurenet.club^
- ||aoc.teleaudio.pl^
+-||aoc.teleaudio.pl^
  ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
 -||apteline-pl.sbs^
@@ -18,7 +18,12 @@ index 35013db34..a16ffb283 100644
  ||biedronka-zamyka-sklepy.24.eu^
  ||biedronkowe-karty.24.eu^
  ||bigbangads.go2cloud.org^
-@@ -23,7 +20,6 @@
+@@ -18,22 +14,17 @@
+ ||bonswiateczny.24.eu^
+ ||buzz.mobiapp-games.com^
+ ||caiiddb.getpixlss.com^
+-||caiiddb.hubstatts.com^
+ ||cardioa-pl.treasure-shop.org^
  ||ce.wielkanagroda.com^
  ||ce.wielkaniespodzianka.pl^
  ||ce.winfreetoday.com^
@@ -26,7 +31,9 @@ index 35013db34..a16ffb283 100644
  ||czas-na-fb.blogspot.com^
  ||daily.boonovel.com^
  ||darmowe-bony.24.eu^
-@@ -33,7 +29,6 @@
+ ||dcfeed.datedeskads.com^
+-||dchedhc.getpixlss.com^
+-||dchedhc.hubstatts.com^
  ||dcjddha.getpixlss.com^
  ||dcjddha.hubstatts.com^
  ||dctrk.datedeskads.com^
@@ -34,7 +41,7 @@ index 35013db34..a16ffb283 100644
  ||dziennik-info.x9.eu^
  ||dziennik-polski.x9.eu^
  ||dzisiaj.numpet.com^
-@@ -42,7 +37,6 @@
+@@ -42,7 +33,6 @@
  ||exchange.dgtmarket.com^
  ||express.jnews5.com^
  ||ezalukaj.pl^
@@ -42,7 +49,7 @@ index 35013db34..a16ffb283 100644
  ||facebokznajomi.blogspot.com^
  ||facebook-login.5v.pl^
  ||facebook-profile.5v.pl^
-@@ -84,7 +78,6 @@
+@@ -84,7 +74,6 @@
  ||g2eld.doctorhey.com^
  ||gazeta-polska.24.eu^
  ||glikotril.fair-2sale.com^
@@ -50,7 +57,7 @@ index 35013db34..a16ffb283 100644
  ||gw.firesub.pl^
  ||gzs2u.doctortrf.com^
  ||hp.myway.com^
-@@ -121,7 +114,6 @@
+@@ -121,7 +110,6 @@
  ||lp845.filmo.agency^
  ||lp.bringtheallow.com^
  ||lp.investingops.com^
@@ -58,7 +65,7 @@ index 35013db34..a16ffb283 100644
  ||lrtljmae.profitobody.com^
  ||lskzwapf.hiragazza.com^
  ||miasto-wiadomosci-24h.x9.eu^
-@@ -278,21 +270,15 @@
+@@ -278,21 +266,15 @@
  ||pl46.landovn.com^
  ||pl47.landofm.com^
  ||pl-eroprostin.relty-goods.com^
@@ -80,7 +87,7 @@ index 35013db34..a16ffb283 100644
  ||quality-products1.blogspot.com^
  ||rncig.doctortrf.com^
  ||roksa.sx^
-@@ -321,7 +307,6 @@
+@@ -321,7 +303,6 @@
  ||wez-bon.24.eu^
  ||wiadomosci-naszemiasto24.x9.eu^
  ||wiadomosci-web.24.eu^
@@ -88,7 +95,7 @@ index 35013db34..a16ffb283 100644
  ||witamina.c.pl^
  ||ww1.e-kino.tv^
  ||ww2.xn--30986-udb.biz^
-@@ -332,14 +317,12 @@
+@@ -332,14 +313,12 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^
