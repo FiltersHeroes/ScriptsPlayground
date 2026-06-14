@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index f476a8801..2cb08cdec 100644
+index 941663fa6..1eeb7ff4c 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -526,7 +526,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
@@ -10,7 +10,7 @@ index f476a8801..2cb08cdec 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -916,7 +915,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -917,7 +916,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -19,7 +19,7 @@ index f476a8801..2cb08cdec 100644
  sky-shop.pl###promo-banner
  slippersfamily.com###widget_shop8
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index da35742e1..bd3554b24 100644
+index cdd1c5b38..7ce59c2e7 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -815,7 +815,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
@@ -30,19 +30,11 @@ index da35742e1..bd3554b24 100644
  kormoran-rowy.pl##.site-footer__row--top > .inner-section > .align-right.site-footer__col
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
-@@ -1029,7 +1028,6 @@ multiform.pl###mainContact .writeToUs
- muratorplus.pl##.right > form > button
- muszakski.com.pl###zr_footer_newsletter
- muve.pl##.newsl-box
--muzarp.poznan.pl##.footer .form-inline[id]
- muzeumslaskie.pl##.c_newsletter
- muzyczneradio.pl##.newsletter.col-md-3
- muzykotekaszkolna.pl##.nl-subscribe
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 90416108c..d3cee3b31 100644
+index e6c91a124..195b0fa26 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -42,7 +42,7 @@ airwick.pl###top-btn
+@@ -43,7 +43,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
  alberski.artbhp.pl###disclaimer-button
@@ -51,7 +43,7 @@ index 90416108c..d3cee3b31 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -69,7 +69,6 @@ apartamenty.nawyspie.eu##.roll
+@@ -70,7 +70,6 @@ apartamenty.nawyspie.eu##.roll
  apia.pl,cro-online.pl,icrow.pl,nat.pl,sportowiec.info,ti-ksiaz.iap.pl,unia-sklep.pl##.page-scroll-up
  apo-discounter.pl###page_up_button
  apollo.pl##.tt-scroll-up
@@ -59,7 +51,7 @@ index 90416108c..d3cee3b31 100644
  aptekaolmed.pl###btn-going-top
  aptekazdrowie-24.pl,e-zikoapteka.pl##.site-scrolltop
  apteline.pl,elevensports.pl,etuo.pl##.footer__scroll-top
-@@ -177,7 +176,7 @@ chimmo.pl###arrow-up
+@@ -178,7 +177,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -68,16 +60,7 @@ index 90416108c..d3cee3b31 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -217,7 +216,7 @@ decoliving.pl,intymna.pl,ohso.pl##.ftop1
- deezee.pl##.is-scrollToTopContainer
- denso.com##.Pagetop
- dentalmedicenter.pl,jackvision.pl,mapsolutions.pl###to_the_top
--deon.pl,muzarp.poznan.pl,tupowstalapolska.pl##.strzalka
-+deon.pl,tupowstalapolska.pl##.strzalka
- depositphotos.com##button[aria-label="Do góry"]
- deubaxxlshop.pl###scrolltopbutton
- dhl.com##.c-go-to-top-button
-@@ -226,7 +225,7 @@ dictionary.cambridge.org##.ctop
+@@ -227,7 +226,7 @@ dictionary.cambridge.org##.ctop
  dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
  digi-store.pl,techsat24.pl###buttonTop
  digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
@@ -86,7 +69,7 @@ index 90416108c..d3cee3b31 100644
  disco-polo.info,meizupolska.pl##.toup
  dlabiznesu.voice-net.pl##.scroll-to-top
  dns.pl##footer + button[class=""]
-@@ -237,11 +236,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
+@@ -238,11 +237,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
  domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
@@ -99,7 +82,7 @@ index 90416108c..d3cee3b31 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -275,7 +273,7 @@ ekrak.pl###zltop
+@@ -276,7 +274,7 @@ ekrak.pl###zltop
  eksiegarnia.mnk.pl,mojepodlogi.com,renee.pl##.scroll__top
  ekspedyt.org,rawa.katowice.pl###sbttBacktotop
  ekstrastats.pl##.site-scroll-top
@@ -108,7 +91,7 @@ index 90416108c..d3cee3b31 100644
  elektrosalon.pl###buttontotop
  elektrykadlakazdego.pl##.crane-top
  elipublishing.pl##.e-fas-arrow-alt-circle-up
-@@ -286,7 +284,7 @@ enel.pl###afario-back-top
+@@ -287,7 +285,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -117,7 +100,7 @@ index 90416108c..d3cee3b31 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -463,7 +461,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -465,7 +463,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -125,7 +108,7 @@ index 90416108c..d3cee3b31 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -758,7 +755,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -762,7 +759,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -143,7 +126,7 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 28af158ea..a7da4f5f9 100644
+index c85916f4d..4c462d7b5 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,6 +1,6 @@
@@ -154,7 +137,7 @@ index 28af158ea..a7da4f5f9 100644
  360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
  a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
  a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -240,7 +240,7 @@ kmziz.pl###full_newsletter_modal, .modal-backdrop
+@@ -242,7 +242,7 @@ kmziz.pl###full_newsletter_modal, .modal-backdrop
  kolobrzeg.pl##.popup, #popup-bg
  kolobrzeg.pl,tluszcz.pl##.popup_active:style(overflow-y: auto !important)
  konin.pl###myModal, #myModal ~ .modal-backdrop

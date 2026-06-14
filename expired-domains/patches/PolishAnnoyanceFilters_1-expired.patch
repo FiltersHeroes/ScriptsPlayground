@@ -1,13 +1,12 @@
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 499b41dad..83ef3d64e 100644
+index 2253c98fe..d4c609962 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -163,7 +163,7 @@ decoliving.pl###swifttagdatacontaineraha9azkq59 > div > .hide_on_mobile
- decoraliki.pl###sideTab
- dekordia.pl##.info.left.fixed-module
- delikatesylosos.pl###arlsf-notification
--dentalmedicenter.pl,mapsolutions.pl,stomatolog-smile.pl##.show_callback_icon
-+dentalmedicenter.pl,mapsolutions.pl##.show_callback_icon
- dentalradio.pl###send_bt
- dewelopart.pl###leftquickcontact
- diag.pl##.show-chat-icon
+@@ -344,7 +344,6 @@ komputronik.pl##aside button:has(img[alt="chat"])
+ konicaminolta.info.pl##.kontakt-slide
+ kontakty.info.pl,telefon.info.pl###zadzwon-div
+ kontri.pl###widget_opineo
+-koszulkiznadrukiem.biz##a[href*="widget.gg.pl"]
+ krainawody.pl,pij-wode.pl,taxxo.pl##.novocall-button
+ krakow.pl##.alert__item--red.alert__item
+ krd.pl##.krd-fiche

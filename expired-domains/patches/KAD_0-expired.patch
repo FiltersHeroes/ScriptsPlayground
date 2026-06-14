@@ -1,183 +1,361 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index 32cba1e2e..786919fc2 100644
+index 3294a95e6..e270022ec 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -69,6 +69,7 @@ alebrelok.pl
+@@ -52,6 +52,7 @@
+ 987345.pl
+ 99812.pl
+ a-millenium.pl
++abiturratgeber.de
+ adob-document.online
+ agniezaj.pl
+ agnisara.org
+@@ -69,7 +70,6 @@ aldi-us.vortexvibeone.com
+ alebrelok.pl
  alizsy.pl
  allstagemerchants.com
- altrix-sync-app.com
-+animacja.edu.pl
+-altrix-sync-app.com
+ animacja.edu.pl
  aowka.pl
  aprendekriptos.com
- apzoo50-05.pl
-@@ -161,6 +162,7 @@ decademist.melodicloud.com
+@@ -102,6 +102,7 @@ betomeno.pl
+ bezonero-24.pl
+ bgha.pl
+ bizstart.net
++bizuuretailstore.com.pl
+ blancoequipment.com
+ blockcryptoliteracy.com
+ bloomstudio-instituts.com
+@@ -129,6 +130,7 @@ cemigo24.pl
+ centralnamennica.pl
+ centrumenergylandia24.pl
+ charitiesregister.ie
++charliebrowninsurance.com
+ chicascalente.us
+ chruby.pl
+ chzzwudao.com
+@@ -151,6 +153,7 @@ cryptoconsulenza.info
+ cssdayz.buzz
+ cududzien.online
+ cududzien.site
++curautomate.com
+ customizestudwio.com
+ cvdunyasi.net
+ czestorpoa.pl
+@@ -163,6 +166,7 @@ dbtygs.com
+ decademist.melodicloud.com
  deepseek4o.com
  delomi.pl
++demirmengen.com
  demoniabuty.pl
-+desigual-outlet.pl
+ desigual-outlet.pl
  devicfly.sharktankaddicts.com
- diabetfree.shop
- diamondpipsignal.com
-@@ -182,6 +184,7 @@ dostaawa-do-skleppu.pl
- dougshop.pl
- dplsa.pl
+@@ -188,6 +192,7 @@ dplsa.pl
  dreamsanctum.com
-+drewopal.pl
+ drewopal.pl
  drewpoldrzwi.pl
++drmartens-polska.pl
  drtvhdd.pl
  dsny7281.pl
-@@ -399,7 +402,6 @@ klotpa.pl
- klrila.pl
- knf.com.pl
- koligo24.pl
--kpwa2.pl
- krtorai.pl
- kscolaw.com
- ksparkelectrics.com
-@@ -407,6 +409,7 @@ ksploa.pl
- ktxarc.com
- kumonity.club
- kumonity.org
-+lamamaevyters.com
- lantorlowl.com
+ dsp29.pl
+@@ -197,13 +202,11 @@ dzieci24h.pl
+ e-powiadomienie.pl
+ e-zdrowle.pl
+ e-ziko-apteka.pl
+-ebelito.pl
+ eberotego.pl
+ ebesthomesecuritysystems.com
+ ebetomeno.pl
+ ebokpg-energia6456.pl
+ edadevzz.buzz
+-edotek.pl
+ educationaldaily.com
+ edugate-ac.com
+ egdatelemo.pl
+@@ -227,6 +230,7 @@ etenigo24.pl
+ eubestdeals.shop
+ eusale.store
+ eutooltore.online
++evoled.pl
+ ewaco.pl
+ excfitzzy.buzz
+ excrayzzy.buzz
+@@ -365,7 +369,6 @@ ignitoral.com
+ igulinoro.pl
+ imenimo.pl
+ imetelego.pl
+-immediateivortex-pro.com
+ imodoli.pl
+ impgive.pl
+ info-znalezieni24.com.pl
+@@ -377,7 +380,6 @@ interactiveto.com
+ interparcelcouriers.com
+ isamego.pl
+ iselinodi.pl
+-isotigo.pl
+ iszlakomania.pl
+ itelinomo.pl
+ itsbact.it
+@@ -388,7 +390,6 @@ jetspeedycourier.com
+ jisramuhammadiyah.org
+ jjs92.pl
+ joannalos.pl
+-jobflow.cfd
+ jopr2a.pl
+ jsjoyzz.buzz
+ jtservicesinc.com
+@@ -417,6 +418,7 @@ lantorlowl.com
  learn2earns.com
  lekanpool.org
-@@ -572,7 +575,6 @@ pl-oferta7666370.pl
- pl-oferta8292177.pl
- pl-oferta934929.net.pl
- pl-oferta98453.pl
--pl-oferta9944139.pl
- pl-ogloszenie.pl
- pl-ogloszenie303943.pl
- pl-ogloszenie304823.pl
-@@ -682,7 +684,6 @@ stablevig.pl
- stalco-sklep.pl
- stalcosklep.pl
- startu.pl
--strangerthingsnt.pl
- strauss-sklep.pl
- streamlinefood.com
- strefa-klient.click
-@@ -740,6 +741,7 @@ ultra-cashier.com
- unfilteredimpact.com
- unieurodeal.shop
- uniqlo-poland.pl
-+uniqlo-polska.com.pl
- uniqlopolska.pl
- univers-inter-services.online
- urbanchange.click
-@@ -757,11 +759,13 @@ visflowz.buzz
+ leuoodz.shop
++levis-polska.pl
+ librvs.pl
+ lifesteals.com
+ limueol.shop
+@@ -425,7 +427,6 @@ linggo.pl
+ logak.pl
+ logiw82a.pl
+ lotosnavigator.pl
+-lstva.pl
+ lynxhedqe.se
+ madlensstudio.pl
+ mango-outlet.pl
+@@ -452,13 +453,10 @@ mihrimah.org
+ misieawrzykalcazk.pl
+ misla.pl
+ mmn6049.pl
+-mojesupport.com
+ moltrixia.com
+ motido.pl
+ mrlwa2.pl
+ msxm.pl
+-muri2.pl
+-mutelo.pl
+ na-stoku.com.pl
+ nalvot.pl
+ nandih.org
+@@ -524,6 +522,7 @@ parcouditore.it
+ pdfultra.com
+ pdsia.pl
+ pelletfactory.pl
++perapilatesstudio.com
+ percreate.pl
+ pgngi.pl
+ phocusanda.com
+@@ -532,7 +531,6 @@ pieknydzien.online
+ pixelstartcdn.com
+ pko-kredyt.pl
+ pkobppomoc.pl
+-pl-00812.pl
+ pl-01238.pl
+ pl-07123.pl
+ pl-08166.pl
+@@ -586,8 +584,8 @@ pl-ogloszenie3049343.pl
+ pl-rdr.pl
+ pl-sprzedaz2342.pl
+ plantingpeas.com
+-plbikinvest.buzz
+ plodzl.pl
++poczla-polska.pl
+ poczta-home.pl
+ pogocinema.com
+ pokpak.pl
+@@ -617,7 +615,6 @@ pularniesja.pl
+ punkerotica.com
+ pymaxzz.buzz
+ qasimalli.site
+-quality-custom-writing.com
+ quantumdexair.app
+ quantumtrust-system.com
+ quest-confrirn-reserv.rest
+@@ -677,7 +674,6 @@ socialartistic.com
+ sodasodal.buzz
+ sohung.org
+ solodino.pl
+-sotigo.pl
+ speakonbest.com
+ specializeds.pl
+ sqlfoxzzy.buzz
+@@ -721,9 +717,6 @@ theproudgerman.com
+ thithis.com
+ throatfire.org
+ tommic.pl
+-tradeneupro.net
+-tradeproair360.com
+-tradereopro.ai
+ tradereopro360.com
+ tradesprix.com
+ tramanage.pl
+@@ -737,6 +730,7 @@ tv-info24-stacja.pl
+ tvrshd.pl
+ twarzoksiazka.pl
+ tyganlkpowszehny.pl
++uas1-scotnect-portal.com
+ uidevhub.buzz
+ uidevzz.buzz
+ ultra-cashier.com
+@@ -760,7 +754,9 @@ visdayzz.buzz
+ visflowz.buzz
  vishubzz.buzz
  visprozz.buzz
++vivienneswestwood.pl
  warszawa-sun-tago.com.pl
-+wasvk.com
++warszawamennica.pl
+ wasvk.com
  wawateno-24.pl
  wawotemo-24.pl
- wayofbest.com
+@@ -768,7 +764,7 @@ wayofbest.com
  wbierz.pl
  websiteskool.com
-+websrmtly.com
- welimo.pl
+ websrmtly.com
+-welimo.pl
++weekdaypolska.pl
  wenonimo24.pl
  weryfikacja-podatki-gov.pl
-@@ -773,6 +777,7 @@ wink-software.com
- wt829a.pl
- wybpla.pl
- wybrack.pl
-+wzatorskimobiektywie24.pl
- xn--wyprzedaspecjalna-3yd.pl
- your-quest-details.rest
- yourusreputation.com
-diff --git a/sections/przekrety-regex-wildcard.txt b/sections/przekrety-regex-wildcard.txt
-index c712e1d08..6fdd44da5 100644
---- a/sections/przekrety-regex-wildcard.txt
-+++ b/sections/przekrety-regex-wildcard.txt
-@@ -20,8 +20,6 @@
- ||apteline-pl.$frame,object,domain=~apteline.pl
- ||chomikuj*.opx.pl^$all,domain=pl
- ||chomikuj.$doc,to=~chomikuj.pl
--||czyjtonumer.net^$doc,to=czyjtonumer.net
--||czyjtonumer.net^$doc,to=czyjtonumer.net,reason="Uważaj na oferowany przez nich pakiet premium"
- ||dates-here-now*.com^$all
- ||dating-4-adults*.com^$all
- ||dating-heart*.com^$all
-diff --git a/sections/przekrety.txt b/sections/przekrety.txt
-index 97022564b..9e2d67faf 100644
---- a/sections/przekrety.txt
-+++ b/sections/przekrety.txt
-@@ -90,7 +90,6 @@
- ||bitcoinprime.org^$all
- ||bitcoinprimeapp.com^$all
- ||bitcoinprofitpro.com^$all
--||bitcoinrevolution.ai^$all
- ||bitcoins-profit.com^$all
- ||bitcoinset.pl^$all
- ||bitcoinsunrise.com^$all
+ westsummerr.site
+diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
+index 8012f9f53..fdf33a728 100644
+--- a/sections/podejrzane_inne_oszustwa.txt
++++ b/sections/podejrzane_inne_oszustwa.txt
+@@ -237,9 +237,6 @@
+ ||dobrapolozna.pl^$all
+ ||dobrapraktykakk.pl^$all
+ ||dobrykredyt.co.pl^$all
+-||doctorbusy.com^$all
+-||doctorhey.com^$all
+-||doctortrf.com^$all
+ ||dodax.pl^$all
+ ||dollishreborndolls.com^$all
+ ||domofonik.pl^$all
+@@ -387,7 +384,6 @@
+ ||gleefulsaving.com^$all
+ ||glimpses.top^$all
+ ||glowlane.pl^$all
+-||gluconv.com^$all
+ ||goatstamina.pl^$all
+ ||gojiberry500.pl^$all
+ ||gola-polska.com^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index 1870104b1..86b89dd24 100644
+index bafc8c47a..4456889f5 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -2480,7 +2480,6 @@
- ||anglesalert.stefanmve.com^$all
- ||anguiscapital.com^$all
- ||anilkablo.com^$all
--||animacja.edu.pl^$all
- ||animalesdepoder.net^$all
- ||animaspyromhhetallurgy.info^$all
- ||animeou.com^$all
-@@ -3488,7 +3487,6 @@
- ||bmwmt2026vip.shop^$all
- ||bmwmtmall2026.shop^$all
- ||bmwmtvip2026.shop^$all
--||bn.wasvk.com^$all
- ||bnefasqwen.cfd^$all
- ||bneqme.shop^$all
- ||bnetflix.fashioncolourbd.com^$all
-@@ -5353,7 +5351,6 @@
- ||designinvectra.digital^$all
- ||designlab19.com^$all
- ||designycharge.hazkat.com^$all
--||desigual-outlet.pl^$all
- ||desinogroup.com^$all
- ||deskisup-pl.shop^$all
- ||deskjockeypro.net^$all
-@@ -5780,7 +5777,6 @@
- ||drevkontfal.top^$all
- ||drevoskimhel.top^$all
- ||drewopal.com^$all
--||drewopal.pl^$all
- ||drgreenberg.com^$all
- ||drift-accounts.com^$all
- ||drift-money.com^$all
-@@ -10248,7 +10244,6 @@
- ||laliradepozuelo.es^$all
- ||laluneprofessional.com^$all
- ||lamaloca.info^$all
--||lamamaevyters.com^$all
- ||lamparabbr.cyou^$all
- ||lampivo.shop^$all
- ||lancastercorner.eu^$all
-@@ -18703,7 +18698,6 @@
- ||unifistrav.cyou^$all
- ||uniloredde.cyou^$all
- ||unipronex.com^$all
--||uniqlo-polska.com.pl^$all
- ||uniqlo-polska.pl^$all
- ||uniqlocojp.shop^$all
- ||uniqlocojponline.com^$all
-@@ -19697,7 +19691,6 @@
- ||website-6a2aa55f.kyt.blc.mybluehost.me^$all
- ||websitelaunchplans.com^$all
- ||websitesample.com^$all
--||websrmtly.com^$all
- ||webuniverses.com^$all
+@@ -460,7 +460,6 @@
+ ||abindensarg.de^$all
+ ||abitocluba.com^$all
+ ||abitstream.cfd^$all
+-||abiturratgeber.de^$all
+ ||abodevra.com^$all
+ ||abondstrac.cyou^$all
+ ||aborroverr.cyou^$all
+@@ -490,7 +489,6 @@
+ ||accimage.digital^$all
+ ||accomnoyan.cyou^$all
+ ||accorrifri.cyou^$all
+-||account65918.evoled.pl^$all
+ ||account-check.icu^$all
+ ||account-hetzner.aknativearts.org^$all
+ ||account.important.vu^$all
+@@ -2838,7 +2836,6 @@
+ ||bizuuoutlet.top^$all
+ ||bizuuretail.shop^$all
+ ||bizuuretails.shop^$all
+-||bizuuretailstore.com.pl^$all
+ ||bizuusretail.shop^$all
+ ||bizuussretail.shop^$all
+ ||bizuustore-pl.shop^$all
+@@ -3770,7 +3767,6 @@
+ ||chargedust.tnblack.com^$all
+ ||chargehamburg.com^$all
+ ||charle-cache.com^$all
+-||charliebrowninsurance.com^$all
+ ||charlottesecuritysolutions.com^$all
+ ||charmifybracelet.cyou^$all
+ ||charteredmanagementinshcqtitute.vu^$all
+@@ -4449,7 +4445,6 @@
+ ||cupe109.net^$all
+ ||cupenter.digital^$all
+ ||curateyourchic.com^$all
+-||curautomate.com^$all
+ ||curiobrusc.cyou^$all
+ ||curiousspirits.net^$all
+ ||curnnlycuesscreaked.info^$all
+@@ -4745,7 +4740,6 @@
+ ||demigreduc.cyou^$all
+ ||demirayreklam.com^$all
+ ||demirkus.com^$all
+-||demirmengen.com^$all
+ ||demonnn-1-8t84aozt.s3.eu-west-2.amazonaws.com^$all
+ ||demonrebun.cyou^$all
+ ||demonstrationsiron.finlandpalm.com^$all
+@@ -5226,7 +5220,6 @@
+ ||drivingrangeinabox.com^$all
+ ||drivingrecipe.com^$all
+ ||drixora.shop^$all
+-||drmartens-polska.pl^$all
+ ||drmax.clarel.top^$all
+ ||drmax.haldorado-outlet.shop^$all
+ ||drmax.kicks-se.shop^$all
+@@ -9925,7 +9918,6 @@
+ ||levelshoestore.shop^$all
+ ||leviagarden.com^$all
+ ||levimore.shop^$all
+-||levis-polska.pl^$all
+ ||lewdetoons.com^$all
+ ||lewymyt.pro^$all
+ ||lexikrosplatform.com^$all
+@@ -12680,7 +12672,6 @@
+ ||peppy-repair.com^$all
+ ||peqojue.com^$all
+ ||peqqyhugipunyf.eu^$all
+-||perapilatesstudio.com^$all
+ ||peraroi.com^$all
+ ||peraroi.pro^$all
+ ||percuskoal.cyou^$all
+@@ -13041,7 +13032,6 @@
+ ||pocketeers.store^$all
+ ||poctiborski.com^$all
+ ||poctzaecdfsd.weebly.com^$all
+-||poczla-polska.pl^$all
+ ||poczta-google.netlify.app^$all
+ ||poczta-pl.eauinae.icu^$all
+ ||poczta-pl.eefage.icu^$all
+@@ -15141,7 +15131,6 @@
+ ||servedtop.thepennyjar.com^$all
+ ||server901-user-validation-z4n8c1t5y7w2m9q6-557vi.bunny.run^$all
+ ||service000023233servernotificatiions9990009.s3-eu-south-2.ionoscloud.com^$all
+-||service70724.evoled.pl^$all
+ ||service88705.dialson.pl^$all
+ ||service-auth.netlify.app^$all
+ ||service-check.top^$all
+@@ -18334,7 +18323,6 @@
+ ||u108010571.ct.eu.sendgrid.net^$all
+ ||u108586306.ct.eu.sendgrid.net^$all
+ ||uaiduiqejdisauerw.site^$all
+-||uas1-scotnect-portal.com^$all
+ ||ubacafafflj.eu^$all
+ ||ubezpieczenie-zautomatyzowane-oczekiwanie.labuonanovella.it^$all
+ ||ubrauliocarrillo.com^$all
+@@ -19214,7 +19202,6 @@
+ ||vividdvivid.info^$all
+ ||vividnewspulse.pro^$all
+ ||vividthorn.com^$all
+-||vivienneswestwood.pl^$all
+ ||vivomora.shop^$all
+ ||vixgenai-app.com^$all
+ ||vizanto.cfd^$all
+@@ -19416,7 +19403,6 @@
+ ||warmwindow.eu^$all
+ ||warpcoil.org^$all
+ ||warsawtoto.b-cdn.net^$all
+-||warszawamennica.pl^$all
+ ||wartoszak.net^$all
+ ||warungfadlan.store^$all
+ ||wasanazaqwerip.site^$all
+@@ -19496,7 +19482,6 @@
  ||wedailosa.info^$all
  ||wedgeworld.click^$all
-@@ -20123,7 +20116,6 @@
- ||wyzofya.com^$all
- ||wyzxl.com^$all
- ||wzatorskimobiektywie24.eu^$all
--||wzatorskimobiektywie24.pl^$all
- ||wzmzlyxd.com^$all
- ||wzpbg.com^$all
- ||wzrostcoinmarkapp.com^$all
+ ||weeakadsjoper.site^$all
+-||weekdaypolska.pl^$all
+ ||weekendwardrobe.shop^$all
+ ||weeklywhat.com^$all
+ ||weeniazoos.cyou^$all
