@@ -1,0 +1,38 @@
+diff --git a/PPB/push.txt b/PPB/push.txt
+index 4700e48e6..8ea18dbce 100644
+--- a/PPB/push.txt
++++ b/PPB/push.txt
+@@ -17,7 +17,7 @@ codziennypoznan.pl,ipolska24.pl##.perfecty-push-dialog-box
+ ding.pl#?#button[class] ~ div[class*="_"][style*="transition"][style*="opacity"][style*="margin"]:has(span:has-text(/^Powiadomienia$/))
+ eurosport.tvn24.pl,lidl.pl,wamiz.pl###batchsdk-ui-alert-container
+ eurosport.tvn24.pl,lidl.pl,wamiz.pl###batchsdk-ui-banner
+-flv2mp3.by,flvto.biz##.push-offer
++flv2mp3.by##.push-offer
+ folk24.pl###pushFooter
+ gazetkonosz.pl##.floating-dialog
+ homebook.pl###qgraphFakePromptContainer
+diff --git a/PPB/push_sieciowe.txt b/PPB/push_sieciowe.txt
+index f5f7bc776..98af9c39b 100644
+--- a/PPB/push_sieciowe.txt
++++ b/PPB/push_sieciowe.txt
+@@ -18,7 +18,7 @@
+ /web-push-odin/web-push-odin-pre.$script,domain=binance.com
+ /web-push/*$xmlhttprequest,domain=brw.pl|eobuwie.com.pl|military.pl
+ @@/sw.js$domain=youtube.com
+-||cdn.*.com/push_app.js$script,domain=flv2mp3.by|flvto.biz
++||cdn.*.com/push_app.js$script,domain=flv2mp3.by
+ ||cdn.foxpush.net/sdk/foxpush_SDK_min.js$domain=media4web.pl
+ ||cdn.qgraph.io/v3/r/qgraph.v2.js$domain=domodi.pl|homebook.pl
+ ||cdn.siteswithcontent.com/js/push/subscribe.js$script,domain=postimages.org|postimg.cc
+diff --git a/PPB/uBO_AG/push_suplement.txt b/PPB/uBO_AG/push_suplement.txt
+index 0de09d115..50433811c 100644
+--- a/PPB/uBO_AG/push_suplement.txt
++++ b/PPB/uBO_AG/push_suplement.txt
+@@ -1,6 +1,6 @@
+ ||pepper.pl/assets/js/PushNotifications_$important,redirect=noop.js,domain=pepper.pl
+ ||pushpushgo.com/js/*.js$important,redirect=noop.js,script,domain=centrumriviera.pl
+-adaware.com,androidlista.pl,anime-odcinki.pl,b2b.grodno.pl,beliani.pl,brain-start.tech,chillizet.pl,comment-reparer.com,domodi.pl,epoznan.pl,flvto.biz,grupamagnum.eu,howtodo.rocks,inea.pl,inkbook.pl,izigsm.pl,joom.com,kupbilecik.pl,m.leroymerlin.pl,meczyki.pl,mediaexpert.pl,medyczny.store,ppe.pl,radiozet.pl,rego-bis.pl,tygodnik-rolniczy.pl,unisono.eu,wish.com,wolnislowianie.pl,wtk.pl,~www.radiozet.pl,www.reddit.com,yoursclothing.pl##+js(set, Notification.requestPermission, falseFunc)
++adaware.com,androidlista.pl,anime-odcinki.pl,b2b.grodno.pl,beliani.pl,brain-start.tech,chillizet.pl,comment-reparer.com,domodi.pl,epoznan.pl,grupamagnum.eu,howtodo.rocks,inea.pl,inkbook.pl,izigsm.pl,joom.com,kupbilecik.pl,m.leroymerlin.pl,meczyki.pl,mediaexpert.pl,medyczny.store,ppe.pl,radiozet.pl,rego-bis.pl,tygodnik-rolniczy.pl,unisono.eu,wish.com,wolnislowianie.pl,wtk.pl,~www.radiozet.pl,www.reddit.com,yoursclothing.pl##+js(set, Notification.requestPermission, falseFunc)
+ egami-image.com,mpcforum.pl,winclub.pl##+js(set, ips.utils.notification.supported, false)
+ filmweb.pl##+js(aopr, webPushPublicKey)
+ groove.pl##+js(set, push_notification_ready, true)
