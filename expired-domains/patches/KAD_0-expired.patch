@@ -1,12 +1,411 @@
+diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
+index 6941ed5a4..7db7cccdd 100644
+--- a/exclusions/CERT_expired.txt
++++ b/exclusions/CERT_expired.txt
+@@ -10,7 +10,6 @@
+ 336991.pl
+ 378210.pl
+ 3rqdre.rest
+-401982iiq.pl
+ 403773.pl
+ 40lang.com
+ 415673.pl
+@@ -19,8 +18,6 @@
+ 487579.icu
+ 4fsale.pl
+ 4qtfwrw.rest
+-4wmk.com.pl
+-5109psoz-5011.pl
+ 5239por18.pl
+ 5441og.top
+ 627812.pl
+@@ -29,7 +26,6 @@
+ 6583og.top
+ 673882.pl
+ 6895og.top
+-6sn29202bnd739382hd92.pl
+ 728012.pl
+ 749393.pl
+ 771509.pl
+@@ -64,7 +60,7 @@ alebrelok.pl
+ alizsy.pl
+ allstagemerchants.com
+ animacja.edu.pl
+-aowka.pl
++animeou.com
+ aprendekriptos.com
+ aquapark-suntago.com.pl
+ aquapark-suntago.pl
+@@ -77,7 +73,6 @@ artrend.icu
+ atillaavlayici.com
+ auhkzii.com
+ auranode.site
+-ballplay.buzz
+ barantisway.com
+ barodie.com
+ bavaria-tech.com
+@@ -94,6 +89,7 @@ bershkapolska.pl
+ betomeno.pl
+ bezonero-24.pl
+ bgha.pl
++binthus.com
+ bizstart.net
+ bizuuretailstore.com.pl
+ blancoequipment.com
+@@ -139,12 +135,12 @@ codeeksi.com
+ coindashboard.com
+ confirmedto.com
+ continuingto.com
++converse-polska.pl
+ coveredto.com
+ createwat.pl
+ crypteescapital.com
+ cryptmax.buzz
+ cryptoconsulenza.info
+-cssdayz.buzz
+ cududzien.online
+ cududzien.site
+ curautomate.com
+@@ -155,7 +151,6 @@ dailygrift.com
+ danceian.pl
+ danielleisk.info
+ dardenneanimal.com
+-dataproz.buzz
+ datesfound.com
+ dbtygs.com
+ deepseek4o.com
+@@ -176,9 +171,7 @@ displus4k.pl
+ dissa.pl
+ divisaxalmet-soft.com
+ dlsiebi.pl
+-dmlop.pl
+ dmnpl.pl
+-dmone.pl
+ dogubeygrup.com
+ dojimarket.com
+ doml2a.pl
+@@ -259,7 +252,6 @@ gejowo.com.pl
+ genoify.com
+ getpilate.pl
+ getxiian.pl
+-gfpasl.pl
+ goenous.pl
+ goodjimei.com
+ googdkzzfl.com
+@@ -281,7 +273,6 @@ hk-aks.com
+ hlpw.pl
+ hntvs.pl
+ hshmining.com
+-htmlfunzzy.buzz
+ i-berotego.pl
+ ibemelino.pl
+ iceberdo24online.pl
+@@ -293,8 +284,6 @@ id051.pl
+ id0581.pl
+ id1245.pl
+ id213.pl
+-id223.pl
+-id2390.pl
+ id2681.pl
+ id2841.pl
+ id3201.pl
+@@ -387,10 +376,8 @@ jisramuhammadiyah.org
+ jjs92.pl
+ joannalos.pl
+ jopr2a.pl
+-jsjoyzz.buzz
+ jtservicesinc.com
+ juanessentials.site
+-jumpjoyz.buzz
+ jyskeu.online
+ kapfexproplatform.com
+ kasklopg.pl
+@@ -399,7 +386,6 @@ keepsuc.pl
+ kelodino.pl
+ kijaniosol.com
+ kliknijabyuzyskac.online
+-klotpa.pl
+ knf.com.pl
+ koligo24.pl
+ krtorai.pl
+@@ -422,6 +408,7 @@ linggo.pl
+ logak.pl
+ logiw82a.pl
+ lotosnavigator.pl
++luciansays.com
+ lynxhedqe.se
+ madlensstudio.pl
+ maxoperat.pl
+@@ -445,10 +432,10 @@ mer-car.com.pl
+ metelego.pl
+ mihrimah.org
+ misieawrzykalcazk.pl
+-misla.pl
+ moltrixia.com
+ mrlwa2.pl
+-msxm.pl
++muselight.pl
++musemuse.pl
+ na-stoku.com.pl
+ nalvot.pl
+ nandih.org
+@@ -485,7 +472,6 @@ oferta-7866870.pl
+ oferta-7915102.pl
+ oferta0.pl
+ oferta2312.pl
+-oferta5774377.pl
+ oferta8362.pl
+ ogloszenie74855.pl
+ ogloszenie832482390.pl
+@@ -504,11 +490,11 @@ oshacedemy-atp.com
+ oviyaitsolutions.com
+ p0rtal.pl
+ pacificofood.com
+-pakl.pl
+ panstwowezloto.pl
+ panuchopr.com
+ par-soft-app.online
+ parcouditore.it
++paulachlon.pl
+ pdfultra.com
+ pdsia.pl
+ pelletfactory.pl
+@@ -545,22 +531,16 @@ pl-id383822.pl
+ pl-id5464.pl
+ pl-oferta.com.pl
+ pl-oferta1223.pl
+-pl-oferta1253321.pl
+ pl-oferta2110734.pl
+-pl-oferta2533826.pl
+-pl-oferta3107145.pl
+ pl-oferta356437.pl
+ pl-oferta4.pl
+-pl-oferta4561884.pl
+ pl-oferta5.pl
+-pl-oferta5173964.pl
+ pl-oferta5286734.pl
+ pl-oferta718239.pl
+ pl-oferta74387.pl
+ pl-oferta7523487.pl
+ pl-oferta759257831.pl
+ pl-oferta7666370.pl
+-pl-oferta8292177.pl
+ pl-oferta934929.net.pl
+ pl-oferta98453.pl
+ pl-ogloszenie.pl
+@@ -601,7 +581,6 @@ proptwisters.org
+ ptgo.edu.pl
+ pularniesja.pl
+ punkerotica.com
+-pymaxzz.buzz
+ qasimalli.site
+ qhumanoidrobot.com
+ quantumdexair.app
+@@ -630,7 +609,6 @@ royalpos.site
+ rtearnerica.com
+ rubyfoxz.buzz
+ rubyhubz.buzz
+-runhubz.buzz
+ sackthemitchellshire.com
+ safeexh.pl
+ sancaiculture.com
+@@ -688,6 +666,7 @@ sunuphb.pl
+ suptravel.pl
+ surpluscapital.org
+ svlta.pl
++swarovski-outlet.pl
+ swipeortunity.com
+ szczesliwaosoba.click
+ tamashawebapk.com
+@@ -705,9 +684,9 @@ theplacetosee.org
+ theproudgerman.com
+ thithis.com
+ throatfire.org
++timberland-polska.pl
+ tommic.pl
+ trade-alrex.com
+-tradesprix.com
+ tramanage.pl
+ trampolin.com.pl
+ travelexperiencecr.com
+@@ -730,7 +709,6 @@ uniqlopolska.pl
+ univers-inter-services.online
+ urbanchange.click
+ urbanlifestyle.click
+-urtinpl.pl
+ uxdayzzy.buzz
+ uxfitzzzy.buzz
+ uzywac2750.online
+@@ -766,7 +744,6 @@ wzatorskimobiektywie24.pl
+ xn--wyprzedaspecjalna-3yd.pl
+ your-quest-details.rest
+ yourusreputation.com
+-z551sa1.pl
+ zabkainvest.pl
+ zagubieni.com.pl
+ zagubione-osoby.com.pl
+diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
+index 3775c43c8..f736debe3 100644
+--- a/exclusions/LWS_expired.txt
++++ b/exclusions/LWS_expired.txt
+@@ -401,6 +401,7 @@ eccopolska.pl
+ eccopolskasklep.pl
+ eccopromocje.pl
+ eccosoft.pl
++eccowyprzedaz.com
+ ecobutysklep.com
+ ecomotto.pl
+ eduhull.pl
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index dd3b31dc6..558dbf69e 100644
+index 558dbf69e..ae729c357 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -1145,7 +1145,6 @@
- ||veclaim.com^$all
- ||vegatestsklep.pl^$all
- ||vejapoland.com^$all
--||velashape.store^$all
- ||veltocars.com.pl^$all
- ||verifycaptcha.com^$all
- ||versacepoland.pl^$all
+@@ -194,7 +194,6 @@
+ ||computersfd.company.site^$all
+ ||comvella.com^$all
+ ||concash.pl^$all
+-||contentlockingnetworks.com^$all
+ ||conversepolskasklep.pl^$all
+ ||coramoon.com^$all
+ ||corezone.pl^$all
+@@ -259,7 +258,6 @@
+ ||easybuyfashion.takedrop.pl^$all
+ ||easygolift.pl^$all
+ ||ebook4all.com.pl^$all
+-||eccowyprzedaz.com^$all
+ ||edutrading.com^$all
+ ||edymek.net^$all
+ ||eelhoe.us^$all
+@@ -310,7 +308,6 @@
+ ||fbhrobud.pl^$all
+ ||feminplus.pl^$all
+ ||fenzy.pl^$all
+-||few-goods.com^$all
+ ||fhgfffdsf9.appspot.com^$all
+ ||fibreselect.pl^$all
+ ||fileman.pl^$all
+@@ -810,7 +807,6 @@
+ ||plusmedia.pl^$all
+ ||plyy.sjneb.shop^$all
+ ||pmanager.pl^$all
+-||poaimore.com^$all
+ ||pobierz.biz^$all
+ ||pobierznet.pl^$all
+ ||podbiegi.pl^$all
+@@ -898,7 +894,6 @@
+ ||registrationlife.com^$all
+ ||reimageplus.com^$all
+ ||reksiowet.pl^$all
+-||relty-goods.com^$all
+ ||removiov.com^$all
+ ||renomy.shop^$all
+ ||rentito.pl^$all
+diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
+index 6923862d3..52316fc00 100644
+--- a/sections/przekierowujace_do_przekretow.txt
++++ b/sections/przekierowujace_do_przekretow.txt
+@@ -68,7 +68,6 @@
+ ||giftprizewinner.com^$all
+ ||go-link.network^$all
+ ||go-todates.com^$all
+-||graizoah.com^$all
+ ||gridglass32.co^$all
+ ||gry-vulkan-vegas.com^$all
+ ||gry-vulkanvegas-pl.com^$all
+diff --git a/sections/przekrety.txt b/sections/przekrety.txt
+index 044e3585b..a7beaa0e7 100644
+--- a/sections/przekrety.txt
++++ b/sections/przekrety.txt
+@@ -276,7 +276,6 @@
+ ||fileconvertpro.co^$all
+ ||filespeedy.net^$all
+ ||filestrue.com^$all
+-||fili-cc.tv^$all
+ ||filihd.pl^$all
+ ||filis.pl^$all
+ ||filiser.eu^$all
+@@ -603,7 +602,6 @@
+ ||naszatajemnica.com^$all
+ ||nationalcasino.co^$all
+ ||nationalcasinolp.com^$all
+-||naturaclub24.com^$all
+ ||nesterowicz.pl^$all
+ ||neurorehabtraining.com^$all
+ ||newsspypro.com^$all
+@@ -827,7 +825,6 @@
+ ||spnccrzone.com^$all
+ ||spolszczenia4you.net^$all
+ ||spolszczenia-gier.com.pl^$all
+-||spolszczenie24.pl^$all
+ ||spolszczeniemax.com^$all
+ ||spolszczeniepl.com^$all
+ ||sponsor-sex.pl^$all
+diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
+index f42f510f7..14c64f07d 100644
+--- a/sections/przekrety_CERT.txt
++++ b/sections/przekrety_CERT.txt
+@@ -3284,7 +3284,6 @@
+ ||anieladel.com^$all
+ ||anilkablo.com^$all
+ ||animaincur.cyou^$all
+-||animeou.com^$all
+ ||anioped.info^$all
+ ||anirudestok.info^$all
+ ||anitatomek.shop^$all
+@@ -4132,7 +4131,6 @@
+ ||binarymaple.roomkrakow.com^$all
+ ||binawor.cyou^$all
+ ||binsheeth.com^$all
+-||binthus.com^$all
+ ||bioennserum.com^$all
+ ||biogtzgx.shop^$all
+ ||biohuepharma.com^$all
+@@ -5382,7 +5380,6 @@
+ ||contrpilot.cyou^$all
+ ||contuarret.cyou^$all
+ ||convecener.cyou^$all
+-||converse-polska.pl^$all
+ ||convezelot.cyou^$all
+ ||conviviodihera.it^$all
+ ||coodp.com^$all
+@@ -11008,7 +11005,6 @@
+ ||ltu.godlopolski.com^$all
+ ||lubnantasimacilik.com^$all
+ ||lucenzatradexplatform.com^$all
+-||luciansays.com^$all
+ ||luckypot2u.com^$all
+ ||lucraspiga.cyou^$all
+ ||lucrox-ai-tech.com^$all
+@@ -11572,8 +11568,6 @@
+ ||musa18.com^$all
+ ||musavirce.com^$all
+ ||museiarist.cyou^$all
+-||muselight.pl^$all
+-||musemuse.pl^$all
+ ||musical-orchestras.com^$all
+ ||mustafakalkanli.com^$all
+ ||musteldnux.com^$all
+@@ -15715,7 +15709,6 @@
+ ||seulderma.com^$all
+ ||sevensole.shop^$all
+ ||sevenstarcarrental.com^$all
+-||sever-id1.paulachlon.pl^$all
+ ||severproem.cyou^$all
+ ||seviienthlyscrob.info^$all
+ ||sexpe.localsavingsguide.com^$all
+@@ -16768,7 +16761,6 @@
+ ||swap-hiberix200-app.com^$all
+ ||swapedexxsystem.com^$all
+ ||swapitor-soft.com^$all
+-||swarovski-outlet.pl^$all
+ ||swarovski-polska.pl^$all
+ ||swattlucre.cyou^$all
+ ||swattmasto.cyou^$all
+@@ -18419,7 +18411,6 @@
+ ||timberail.com^$all
+ ||timbercresthome.eu^$all
+ ||timberexports.info^$all
+-||timberland-polska.pl^$all
+ ||timbernook.eu^$all
+ ||timberviewgoods.eu^$all
+ ||timborh.com^$all
