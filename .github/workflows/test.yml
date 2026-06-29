@@ -55,7 +55,7 @@ jobs:
     container: ghcr.io/filtersheroes/expired_domains_image:latest
     steps:
       - uses: actions/checkout@v7
-      - uses: hawkeye116477/download-multiple-artifacts-action@v2
+      - uses: hawkeye116477/download-multiple-artifacts-action@v2.1.3
         with:
           names: |
             E_KAD_01
