@@ -1,8 +1,16 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index ece4604ef..01f9b624a 100644
+index ece4604ef..bcf66e1a3 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -842,7 +842,7 @@ pswbp.pl###accessibility-links
+@@ -574,7 +574,6 @@ lidia.pl##.ceneo
+ lidia.pl,porcja.eu###allecomments
+ lifemanagerka.pl##.posts-pagination
+ lightingcenter.pl,spawaj.eu##.kac-sm-gmb
+-lincoln.edu.pl##.s_kurs, .s_online
+ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+ linuxporady.pl,pskrk.com##.crestaPostsBox
+ literackifestiwal.zakopane.eu###g-page-preloader
+@@ -842,7 +841,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -11,7 +19,7 @@ index ece4604ef..01f9b624a 100644
  pyszne.pl##div[data-qa="app-banner"]
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
-@@ -934,7 +934,6 @@ solidclub.pl##.ssb-btns-right
+@@ -934,7 +933,6 @@ solidclub.pl##.ssb-btns-right
  solidnedrzwi.pl##footer > .float
  solidnedrzwiokna.pl###tab_slide
  solidpak.pl###show-cart
@@ -19,24 +27,11 @@ index ece4604ef..01f9b624a 100644
  spidersweb.pl##.havetoread
  spidersweb.pl##.main--post.main > div + div > .product-placement
  spidersweb.pl##div.loading-title
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 7d56142e0..0c043d234 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -108,7 +108,7 @@ anna-urbanska.pl,londonshoes.pl###text-7
- anna-urbanska.pl,moneygrabbing.co.uk##.ml-block-form
- annapoplawska.pl##.newsletter_in_footer
- anotherdesign.pl###nw
--antyksobieski.pl,czaszabawy.pl,sklep.charaktery.eu,sklep.psychologia.eu,smieszneprezenty.com.pl###skNewsletterPopupFooter
-+antyksobieski.pl,czaszabawy.pl,sklep.charaktery.eu,sklep.psychologia.eu###skNewsletterPopupFooter
- antyksobieski.pl,fotopanorama.pl,sklep.prana24.eu,sklepsaturn.pl,sprzet-fryzjerski.pl###social a[href*="/newsletter"]
- antykwariatlibra.pl##.cms_newsletter_form
- antyweb.pl##.email.btn-tools
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index c364ff506..49cb788cb 100644
+index 326b08440..8d19d3c15 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -712,7 +712,6 @@ rckik.poznan.pl###popup, #popupBg
+@@ -711,7 +711,6 @@ rckik.poznan.pl###popup, #popupBg
  realme.com##.subscribe
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -55,7 +50,7 @@ index 97c63c50c..997672dad 100644
  youtube.com###guide-inner-content:style(scrollbar-color: #C1C1C1 #F1F1F1 !important; scrollbar-width: auto !important)
  youtube.com##html:not([dark]) #guide-inner-content:style(scrollbar-color: #C1C1C1 #F1F1F1 !important; scrollbar-width: auto !important)
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 8939c9da1..db540609a 100644
+index b21309366..c5e928810 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -427,8 +427,6 @@ rolmix.net.pl##.popup-html
@@ -68,9 +63,18 @@ index 8939c9da1..db540609a 100644
  secure.avaaz.org##.signup-petition-modal-wrapper
  sferis.pl##+js(acis, $, promoNewsletter)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 8fc521d27..8aedecf14 100644
+index 5a1e008af..c98ee377f 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -62,7 +62,7 @@ artdelarte.pl###slideit
+ artefakt.pl##[data-module="phone_popup"]
+ arteodevelopment.pl###callback24widgetButton
+ atakto.pl###lhc_status_widget_v2
+-audiosklep.pl,boboland24.pl,delkom.pl,interlazienka.pl,korzystneit.pl,officeexpert.pl,shark.sklep.pl,sklep.wisan.pl###contactBox
++audiosklep.pl,boboland24.pl,delkom.pl,interlazienka.pl,korzystneit.pl,officeexpert.pl,shark.sklep.pl###contactBox
+ autodoc.pl##.js-chat-buttons-container-genesys
+ autohero.com##.root___o8kuv
+ autokomis-berlin.pl##.ctc_s_2.ctc-analytics
 @@ -74,7 +74,7 @@ axadirect.pl###wirtualnyDoradcaPluginHome, #zadzwonPlugin
  badaniaprenatalne.pl##.contact-button-link
  balladine.com##.zendiv1
@@ -112,15 +116,7 @@ index 8fc521d27..8aedecf14 100644
  clineo.pl###contact_widget
  cmolmed.pl###patient-assistant-widget
  cmp.med.pl##.cmp-fab-launcher
-@@ -313,7 +312,6 @@ instalaton.pl##.extraBoxMail
- instalhurt.sklep.pl###widget_shop5
- interankiety.pl,simplyyourself.pl###beacon-container
- intercars.pl##.btn-chat
--interwencja.polsatnews.pl##.icon-mail.platform__link
- intimissimi.com##.js-bubble-open.botton-bubble
- investkomfort.pl###videocall-trigger
- inwestinfo.pl##.suggest-trigger
-@@ -334,7 +332,6 @@ karmi.pl##.scrolled.homecontact
+@@ -333,7 +332,6 @@ karmi.pl##.scrolled.homecontact
  kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
  ketowpraktyce.pl###chatbox
  kind.com##.AP_mod--button-symbol
@@ -128,7 +124,15 @@ index 8fc521d27..8aedecf14 100644
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
  knall.com.pl##.socialTabs-tab--contact.socialTabs-tab
  kodologia.pl###cq-suggestion
-@@ -495,7 +492,7 @@ polmed.pl###app-chat-easymed
+@@ -366,7 +364,6 @@ libertex.com###sherlockWidget
+ lidl.pl##.feedback-flyout__button-box
+ lighting.philips.pl##aside[class$="support-contact-details"]
+ lightingcenter.pl,mniammniam.com,sklephonda.pl###o-widget-lws
+-lincoln.edu.pl##.s_kontakt
+ link4.pl##.stuck
+ linux-magazine.pl###floater-tel
+ lispol.com##.msgsDV
+@@ -494,7 +491,7 @@ polmed.pl###app-chat-easymed
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -137,7 +141,7 @@ index 8fc521d27..8aedecf14 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -515,7 +512,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -514,7 +511,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -145,7 +149,7 @@ index 8fc521d27..8aedecf14 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -548,7 +544,6 @@ salesmanago.pl###sm-bot
+@@ -547,7 +543,6 @@ salesmanago.pl###sm-bot
  salomon.com##.chatbot-box
  salon2kolka.pl##.msl-envelope-o
  salon-kosiarek.pl##.tm-sticker
