@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 88dd4dec9..34b4229e1 100644
+index 585f2c03d..f40faf1d8 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -19,7 +19,7 @@
@@ -102,7 +102,7 @@ index 88dd4dec9..34b4229e1 100644
  skalnik.pl##.newsletter_content.footer
  skapiec.pl##section.newsletter
  ski4you.pl##footer#footer.footer .widget--signup
-@@ -1498,7 +1488,6 @@ spidersonline.pl,szachownica.com.pl##.st_news_letter_container
+@@ -1500,7 +1490,6 @@ spidersonline.pl,szachownica.com.pl##.st_news_letter_container
  splendear.com##.footer-top .col-12.text
  spolemkatowice.pl##.footer .form--horizontal
  sport-shop.pl##.newsletter_fotter
@@ -110,14 +110,6 @@ index 88dd4dec9..34b4229e1 100644
  sportbazar.pl##.news-desktop
  sportisimo.pl###newsletter_bottom
  sportplaza.pl##.sekcja-newsletter > .container
-@@ -1575,7 +1564,6 @@ telix.pl###mailster_signup-3
- telko.in##ul > li > .tip[data-tip="Biuletyny TELKO.in"]
- temi.pl##.module:nth-of-type(8) > div > div > div
- teraz-srodowisko.pl###footer-newsletter-container
--termet.com.pl###newsletter-block
- termyszaflary.com##footer div.col-md-4:nth-of-type(3)
- terrymoda.pl##footer > .grid-container > div[class]:nth-of-type(2)
- tesco.pl##.leaflets_subscribe_itesco
 diff --git a/PPB/uBO_AG/powrotowe_tytuly.txt b/PPB/uBO_AG/powrotowe_tytuly.txt
 index d8415fa29..8512f5205 100644
 --- a/PPB/uBO_AG/powrotowe_tytuly.txt
