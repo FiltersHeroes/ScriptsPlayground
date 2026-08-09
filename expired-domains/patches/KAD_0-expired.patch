@@ -1,12 +1,468 @@
+diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
+index 56f3514bc..0934df806 100644
+--- a/exclusions/CERT_expired.txt
++++ b/exclusions/CERT_expired.txt
+@@ -6,6 +6,7 @@
+ 247162.pl
+ 24bbc.pro
+ 262627.pl
++28124.pl
+ 282119.pl
+ 30000b888.pl
+ 3291200bb.pl
+@@ -41,9 +42,6 @@
+ 771509.pl
+ 842742.pl
+ 8695og.top
+-88-armory.net
+-88armory.net
+-88armoury.com
+ 8icmimarlik.com
+ 94832432vv.pl
+ 972729.pl
+@@ -79,6 +77,7 @@ artag.click
+ artmor.pl
+ artrend.icu
+ atillaavlayici.com
++atlasr.mg
+ auhkzii.com
+ auranode.site
+ austrariseprofits-tech.com
+@@ -109,6 +108,7 @@ bogusbraxtoph.com
+ book-profits.org
+ boses.pl
+ bouclierapextrail-app.com
++bpo2-grupp.pl
+ bramleyfundex-system.com
+ brandhit.click
+ breezybubbles.net
+@@ -144,9 +144,7 @@ chzzwudao.com
+ clbconthe.net
+ cleatcrew.click
+ clickanddesign.com
+-clinicamariauxiliadora.com
+ codenr.com
+-coindashboard.com
+ cokobey3.com
+ confirmedto.com
+ continuingto.com
+@@ -162,12 +160,10 @@ cukurovahaberajansi.net
+ curautomate.com
+ cvdunyasi.net
+ czestorpoa.pl
+-danceian.pl
+ danielleisk.info
+ dardenneanimal.com
+ daykeo.com
+ deepseek4o.com
+-delomi.pl
+ demirmengen.com
+ demoniabuty.pl
+ demostapro-app.com
+@@ -183,11 +179,9 @@ displus4k.pl
+ dissa.pl
+ divisaxalmet-soft.com
+ dlsiebi.pl
+-dmnpl.pl
+ dogubeygrup.com
+ doml2a.pl
+ dostaawa-do-skleppu.pl
+-dougshop.pl
+ dplsa.pl
+ dreamsanctum.com
+ drewopal.pl
+@@ -195,17 +189,18 @@ drmartens-polska.pl
+ dronelayikama.com
+ dronjett.com
+ drtvhdd.pl
++dryuu.pl
+ dsny7281.pl
+ dsp29.pl
+ duspa.pl
+ dzieci24h.pl
+ e-faktury92.pl
++e-fkt8272.pl
+ e-ziko-apteka.pl
+ eberotego.pl
+ ebetomeno.pl
+ ebokpg-energia6456.pl
+ educationaldaily.com
+-egdatelemo.pl
+ ehms.pl
+ electedto.com
+ elektromars.pl
+@@ -243,6 +238,7 @@ fast-online.store
+ fc0293a.pl
+ ferixo.pl
+ filtrsa.pl
++fior-thuath.scot
+ fitbertoys.com
+ fitnessbydwight.com
+ fixedincometips.com
+@@ -255,8 +251,6 @@ frentixalsoft.com
+ frictionlesssales.com
+ funkci.pl
+ gaccworldwide.com
+-gaumatischool.com
+-gdatelemo.pl
+ gdatemo.pl
+ genoify.com
+ getpilate.pl
+@@ -266,7 +260,6 @@ goenous.pl
+ goodjimei.com
+ gotripy.com
+ graphikey.vip
+-great-voiceovers.com
+ gront.com.pl
+ grzegorzcwik.pl
+ gsrp.pl
+@@ -330,7 +323,6 @@ id9021.pl
+ id9083.pl
+ id9212.pl
+ id9331.pl
+-idealstud.pl
+ idimingo24.pl
+ idkiosk.com
+ ido389144.top
+@@ -372,7 +364,6 @@ immediateploud-tech.com
+ immediatewolc-tech.com
+ immediatex-soft.com
+ imodoli.pl
+-impgive.pl
+ info-znalezieni24.pl
+ info093872.pl
+ innovaciondiabetes2025.com
+@@ -402,7 +393,6 @@ k333sa.com
+ kanbosk.info
+ kapfexproplatform.com
+ kasklopg.pl
+-kedimo.pl
+ keepsuc.pl
+ kelodino.pl
+ kemo6.com
+@@ -417,15 +407,18 @@ ksparkelectrics.com
+ ktxarc.com
+ kumonity.club
+ kumonity.org
++kup-teraz890139.pl
+ kup-teraz908745.pl
+ kup-teraz910597.pl
+ kup-teraz930257.pl
++kupteraz-6961483.pl
+ kupteraz-8924691.pl
+ lacasadelredroom.com
+ ladyboyphotos.com
+ lalizajewelry.com
+ lamamaevyters.com
+ lasvegasmedicaid.info
++leadingstarbd.com
+ lekanpool.org
+ lesdermes.com
+ leuoodz.shop
+@@ -434,9 +427,7 @@ levis-polska.pl
+ librvs.pl
+ lifesteals.com
+ limueol.shop
+-logak.pl
+ lomarvixpro-system.com
+-lotosnavigator.pl
+ lovarionix-liquiditysoftware.com
+ lucenzatradexplatform.com
+ luciansays.com
+@@ -468,16 +459,12 @@ nalvot.pl
+ nantaban.com
+ neatscout.com
+ nefernewellness.com
+-neom-erp.com
+-neom-hms.com
+ neonpulsesss.site
+ netfix-plts.help
+ netmovies21.com
+ neuraldynasty.com
+-newksion.pl
+ newtvmo.pl
+ nexiogate-solution.com
+-nigeriarealestatemarket.com
+ nimacard.com
+ nixajans.com
+ nnllw.info
+@@ -485,7 +472,6 @@ nordenergie.info
+ northsignales.com
+ notino-rabat.pl
+ novarefluxensystem.com
+-nt72a.pl
+ ntfxpl.fun
+ ntsh92.sbs
+ ntvshows.sbs
+@@ -522,9 +508,8 @@ ourteff.org
+ oysho-polska.pl
+ ozkomkompresor.com
+ p0rtal.pl
+-pacificofood.com
++pandia.pl
+ panstwowezloto.pl
+-panuchopr.com
+ parcouditore.it
+ pass4web.com
+ paulachlon.pl
+@@ -595,7 +580,6 @@ polska-gold-ai.com
+ polska-mennica.pl
+ polskamennlca.pl
+ polvestapro.pl
+-polvestiapro.pl
+ polvestion.pl
+ pomins.pl
+ pop-mart.pl
+@@ -603,7 +587,6 @@ postcolonialwords.digital
+ potepotful.com
+ pozyczkanieoprocentowana.online
+ prefabtown.com
+-premiumgov.pl
+ prestigegrading.com
+ primesim.net
+ princesscommons.ist
+@@ -621,7 +604,6 @@ quantumdexair.app
+ qubitcoin-software.com
+ quest-confrirn-reserv.rest
+ quickfaci.pl
+-quickthir.pl
+ r-golsklep.pl
+ racing1.click
+ radebeuler.info
+@@ -650,8 +632,6 @@ royalpos.site
+ rtearnerica.com
+ s89128729.pl
+ saatcini.com
+-sackthemitchellshire.com
+-safeexh.pl
+ sanalmuhasebeciniz.com
+ sancaiculture.com
+ sarikacorwin.com
+@@ -674,7 +654,6 @@ showderin.com
+ shuoguowang.com
+ signemp.pl
+ silverinvestmentcompanyllc.com
+-simplecon.pl
+ sistemfix.com
+ skplsa.pl
+ smallstagemerchants.com
+@@ -687,7 +666,6 @@ sp03ds.pl
+ speakonbest.com
+ specializeds.pl
+ sporttory.com
+-stablevig.pl
+ stalco-sklep.pl
+ stalcosklep.pl
+ startrader-engine.com
+@@ -705,7 +683,6 @@ suntago-info24.pl
+ suntago-waw.pl
+ suntago-wawa.pl
+ suntago-wydarzenia.pl
+-suptravel.pl
+ surdurulebilirlikhaberleri.com
+ surpluscapital.org
+ svlta.pl
+@@ -722,7 +699,6 @@ tatrymeno.pl
+ tatrywiemco.pl
+ tatrzykanczyk.pl
+ teaassert.pl
+-teachpr.pl
+ tedramsay.com
+ tekno-sistem.com
+ the-bit-lq.ml
+@@ -745,7 +721,6 @@ trade-9avita-platform.com
+ trade-alrex.com
+ trade4-avita-solution.com
+ tradebitproai-engine.com
+-tramanage.pl
+ trampkieu.pl
+ travelexperiencecr.com
+ travelnmguides.info
 diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 97d112f1b..e0b7d787a 100644
+index e0b7d787a..44ae0e1c9 100644
 --- a/sections/podejrzane_inne_oszustwa.txt
 +++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -711,7 +711,6 @@
- ||obudzgeniusza.pl^$all
- ||obuwie-online.pl^$all
- ||obuwiezs.pl^$all
--||oculv.com^$all
- ||ocuvnd.com^$all
- ||odbierzdarmowedoladowanie.wordpress.com^$all
- ||odchudzaniezpasja.pl^$all
+@@ -227,7 +227,6 @@
+ ||diabolique.com.pl^$all
+ ||diadora-polska.com^$all
+ ||diamentowamozaika.com^$all
+-||dietoll.com^$all
+ ||dilusso.com.pl^$all
+ ||djervner.shop^$all
+ ||dla-ciala.pl^$all
+@@ -428,7 +427,6 @@
+ ||home-outlet.pl^$all
+ ||homeandmarker.eu^$all
+ ||homearena.pl^$all
+-||hondrofr.com^$all
+ ||hostedfiles.net^$all
+ ||hpregen.pl^$all
+ ||humanverify.net^$all
+@@ -1048,7 +1046,6 @@
+ ||szalonepromocje.com^$all
+ ||szamponrevita.pl^$all
+ ||szczesliwydzien.com^$all
+-||szlonepromocje.com^$all
+ ||szybkapozyczkateraz.pl^$all
+ ||szybkaupadlosc.pl^$all
+ ||tangoltd.com^$all
+@@ -1101,7 +1098,6 @@
+ ||turystyczne-suwalki.pl^$all
+ ||twoj-typ.pl^$all
+ ||twoja-kariera.pl^$all
+-||twoja-wygrana.com^$all
+ ||twoje-piekno.pl^$all
+ ||twojelogo.eu^$all
+ ||twojszczesliwydzien.com^$all
+diff --git a/sections/przekierowujace_do_przekretow.txt b/sections/przekierowujace_do_przekretow.txt
+index c1c723236..df3e19683 100644
+--- a/sections/przekierowujace_do_przekretow.txt
++++ b/sections/przekierowujace_do_przekretow.txt
+@@ -134,7 +134,6 @@
+ ||singlespotkania.pl^$all
+ ||sites.google.com/view/websiteoffciall2023a$all
+ ||smrturl.co^$all
+-||soczyste-kobiety.pl^$all
+ ||spicypromo10.sbs^$all
+ ||sportezpremium.com^$all
+ ||superdeltas.com^$all
+diff --git a/sections/przekrety.txt b/sections/przekrety.txt
+index 90384e6d4..2959c51d0 100644
+--- a/sections/przekrety.txt
++++ b/sections/przekrety.txt
+@@ -165,7 +165,6 @@
+ ||company.site^$all
+ ||coolerspro.com^$all
+ ||covergt.com^$all
+-||cpagettistream6.com^$all
+ ||cpagrip.com^$all
+ ||creating.studio^$all
+ ||creditron.org^$all
+@@ -237,7 +236,6 @@
+ ||elememory.com^$all
+ ||elitegadgetinsider.com^$all
+ ||embemy.com^$all
+-||enchantevent.com^$all
+ ||energy-victory.com^$all
+ ||erolove.cc^$all
+ ||eromansik.pl^$all
+@@ -589,7 +587,6 @@
+ ||mytraffic.pl^$all
+ ||nagroda-sms.pl^$all
+ ||nailrr.com^$all
+-||najlepszekonkursy.com^$all
+ ||najlepszewrozby.pl^$all
+ ||namierz-telefon.pl^$all
+ ||namietnespotkanie.pl^$all
+@@ -612,7 +609,6 @@
+ ||now.xinloc.com^$all
+ ||nowinki.blog-online.eu^$all
+ ||nowiny24h.com^$all
+-||nowoczesnekody.pl^$all
+ ||numpet.com^$all
+ ||nvod.pl^$all
+ ||obejrzyj-to.pl^$all
+@@ -858,7 +854,6 @@
+ ||superserwisy.pl^$all
+ ||swietne-ceny.com^$all
+ ||sympatia.info.pl^$all
+-||szansa-na-nagrode.com^$all
+ ||szczepimysie.org.pl^$all
+ ||szkolenie.m.poznan.pm^$all
+ ||szonisko.pl^$all
+@@ -1009,7 +1004,6 @@
+ ||wygodnepozyczki.pl^$all
+ ||wygraj-dzisiaj.com^$all
+ ||wygraj-iphone-x.tujest.pl^$all
+-||wygraj-super-nagrode.com^$all
+ ||x-hosepl2.com^$all
+ ||x.hemonx.com^$all
+ ||xxxflirting.com^$all
+@@ -1026,7 +1020,6 @@
+ ||zasilkonto.cba.pl^$all
+ ||zaswiadczeniekrk.pl^$all
+ ||zauroczeni.pl^$all
+-||zdobyj-nagrode.com^$all
+ ||zdroweszpitale.pl^$all
+ ||zeemlight.myshoplaza.com^$all
+ ||zenek-caly-film.kazeo.com^$all
+diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
+index c02d1f448..f6f64930c 100644
+--- a/sections/przekrety_CERT.txt
++++ b/sections/przekrety_CERT.txt
+@@ -1865,7 +1865,6 @@
+ ||allegrolokalnie.1678c6819x6b7.biz^$all
+ ||allegrolokalnie.2082v47x58.click^$all
+ ||allegrolokalnie.2938oferta0p398.click^$all
+-||allegrolokalnie.28124.pl^$all
+ ||allegrolokalnie.49172v8a93.lat^$all
+ ||allegrolokalnie.51925.lat^$all
+ ||allegrolokalnie.68472.lat^$all
+@@ -2034,11 +2033,9 @@
+ ||allegrolokalnie.id-323484345.click^$all
+ ||allegrolokalnie.id-sn73m4s234.click^$all
+ ||allegrolokalnie.j39-94-b0-30-o3.pics^$all
+-||allegrolokalnie.kup-teraz890139.pl^$all
+ ||allegrolokalnie.kup-teraz9042971.click^$all
+ ||allegrolokalnie.kup-teraz7363628373836.click^$all
+ ||allegrolokalnie.kup-teraz-468266.pl^$all
+-||allegrolokalnie.kupteraz-6961483.pl^$all
+ ||allegrolokalnie.lato-2026-523924.click^$all
+ ||allegrolokalnie.letnie-okazje33754615.cyou^$all
+ ||allegrolokalnie.letnie-okazje77416698.cyou^$all
+@@ -4795,7 +4792,6 @@
+ ||bp371.com^$all
+ ||bp-coating.jp^$all
+ ||bp-wealthprogram.com^$all
+-||bpo2-grupp.pl^$all
+ ||bppumpkinlyproviso.info^$all
+ ||bpsbetter.com^$all
+ ||braag.com^$all
+@@ -8103,7 +8099,6 @@
+ ||drynexphantomgpt.net^$all
+ ||drynexphantomgpt.org^$all
+ ||dryridgeharleydavidson.com^$all
+-||dryuu.pl^$all
+ ||dryzor-syncapp.net^$all
+ ||dryzorsync.digital^$all
+ ||dryzorsyncapp.com^$all
+@@ -8214,7 +8209,6 @@
+ ||e-devletinvest.digital^$all
+ ||e-devletinvest.live^$all
+ ||e-dram.biz^$all
+-||e-fkt8272.pl^$all
+ ||e-inet.com.pl^$all
+ ||e-litesemi.com^$all
+ ||e-sozlesme.org^$all
+@@ -9879,7 +9873,6 @@
+ ||finzavelle-de.live^$all
+ ||finzavelle.live^$all
+ ||fionero.lovable.app^$all
+-||fior-thuath.scot^$all
+ ||fiorante-ai.live^$all
+ ||fioranteai-it.live^$all
+ ||fiorecolvento-ai.live^$all
+@@ -14304,7 +14297,6 @@
+ ||ldbjzcgl.com^$all
+ ||ldijhop.com^$all
+ ||leadetoggle.timedline.com^$all
+-||leadingstarbd.com^$all
+ ||leallucrivado.com^$all
+ ||leandroceleste-fr.live^$all
+ ||leandroceleste.live^$all
+@@ -17960,7 +17952,6 @@
+ ||panamabungalov.com^$all
+ ||panatfredd.cyou^$all
+ ||panchayaqqtexclusivenesses.info^$all
+-||pandia.pl^$all
+ ||pandiinsta.cyou^$all
+ ||pandoraspleasures.com^$all
+ ||panicfund.com^$all
+@@ -21447,7 +21438,6 @@
+ ||securenamedomain.com^$all
+ ||secureprizmexsolution.com^$all
+ ||securesignaledgesolution.com^$all
+-||securetrackibg.atlasr.mg^$all
+ ||securichain24.net^$all
+ ||sedemaksadlaodpadl.site^$all
+ ||sedsdisdoadisweerrmd.site^$all
