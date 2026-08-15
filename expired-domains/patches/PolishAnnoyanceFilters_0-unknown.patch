@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 7bb9efc9a..b89c76805 100644
+index e53d58b7e..1c115a1d2 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -530,7 +530,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -529,7 +529,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -10,7 +10,7 @@ index 7bb9efc9a..b89c76805 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -923,7 +922,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -927,7 +926,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -19,10 +19,10 @@ index 7bb9efc9a..b89c76805 100644
  sky-shop.pl###promo-banner
  sleepmed.pl##.metka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index 73dc166a6..e6d445a40 100644
+index 4d88b9724..f50eebc29 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -801,7 +801,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -802,7 +802,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -31,18 +31,9 @@ index 73dc166a6..e6d445a40 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index b1aa2ef4f..10b0918b6 100644
+index 03d9c292a..3cb03520f 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -16,7 +16,7 @@ action.pl##.btn-top
- active.sklep.pl,epicgames.com,grupawsparcia.pl,smaki.pl,wprost.pl##.up-button
- activefalcon.nazwa.pl,jaw.com.pl,market-point.pl,meblem4.pl,ogrodniksklep.pl,schiever.com.pl,vipmajster.pl##.scrollup
- activefamily.pl##.moto-back-to-top-button_visible
--ad-al.pl,barszcz.edu.pl,misericordia.media.pl##.hc_scrollup
-+ad-al.pl,misericordia.media.pl##.hc_scrollup
- adata.com###back-2-top.back-2-top-rocket
- addnature.pl,bikester.pl###iscjs_scroller
- addons.prestashop.com##.ontop.btn-top.btn
 @@ -45,7 +45,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
@@ -52,16 +43,15 @@ index b1aa2ef4f..10b0918b6 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -124,7 +124,7 @@ beltone-polska.eu,beltone-polska.pl##.cc-FloatingButtonBarContainer-button-scrol
- benchmark.pl,sgb.pl##.jsScrollToTop
- benler.pl,lenovogaming.pl,lento.pl,restaurantguru.com###scroller
- beskidy.news,hg.eu,intimissimi.com,nawa.gov.pl,powiatslubicki.pl##.js-scroll-top
--bet.mbp.olsztyn.pl,fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
-+fastdeal.pl,jestok.eu,okazik.pl,polskiemedia.org,serwistvsat.pl###btn-scrollup
- bet.pl,citroen.pl,domkulturywkodniu.pl,infocrypto.pl,ipon.pl,zhp.pl###scrolltop
- betlejempoznanskie.pl##.icon-up-new-box
- bettingexpert.com,florini.pl##.slideInUp
-@@ -184,7 +184,7 @@ chimmo.pl###arrow-up
+@@ -72,7 +72,6 @@ apartamenty.nawyspie.eu##.roll
+ apia.pl,bivert.pl,cro-online.pl,icrow.pl,nat.pl,sportowiec.info,ti-ksiaz.iap.pl,unia-sklep.pl##.page-scroll-up
+ apo-discounter.pl###page_up_button
+ apollo.pl##.tt-scroll-up
+-appsource.microsoft.com##.appSourceScrollToTop
+ aptekaolmed.pl###btn-going-top
+ aptekawsieci.pl,e-zikoapteka.pl,emp-shop.pl##.scroll-top
+ aptekazdrowie-24.pl##.site-scrolltop
+@@ -184,7 +183,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -70,7 +60,7 @@ index b1aa2ef4f..10b0918b6 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -233,7 +233,7 @@ dictionary.cambridge.org##.ctop
+@@ -233,7 +232,7 @@ dictionary.cambridge.org##.ctop
  dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
  digi-store.pl,techsat24.pl###buttonTop
  digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
@@ -79,11 +69,9 @@ index b1aa2ef4f..10b0918b6 100644
  disco-polo.info,meizupolska.pl##.toup
  dns.pl##footer + button[class=""]
  dobra-mama.pl###top-to-bottom
-@@ -241,13 +241,11 @@ dobramine.com##.to_top_link
- dobrzemieszkaj.pl###gallery > .circle
- docs.github.com##footer button[class*="scroll-to-top"]
+@@ -243,11 +242,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
--domdlaciebie.com.pl##.fix-scroll-top
+ domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
 -domowa.pizza##.smoothup
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
@@ -112,24 +100,7 @@ index b1aa2ef4f..10b0918b6 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -335,7 +333,6 @@ ftt.roto-frank.com##.scroll-container
- funclub.pl##button[aria-label="Wróć na górę"]
- fundacjapestka.pl,iform4u.com##.back__top
- funduszeue.wzp.pl,mixit.pl,plus.pl###scroll-up-btn
--funer.com.pl###backtotop
- galeriakatowicka.eu###js-scroll-to
- gama-sklep.com.pl##.go-to-top-page
- gandalf.com.pl,in4.pl,mediastar.pl,motobros.pl###goup
-@@ -440,7 +437,7 @@ jackjones.com##.js-back-to-top__button
- janssen.tv##.move-btn__parent
- jarock.pl,mentel.com.pl###back-to-top-btn
- jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
--jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
-+sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
- jmlnet.pl##.pi-scroll-top-arrow
- journals.viamedica.pl##.Back_To_Top_Button
- kaercher.com##.fg-totop
-@@ -472,7 +469,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -472,7 +470,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -137,6 +108,14 @@ index b1aa2ef4f..10b0918b6 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
+@@ -576,7 +573,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+ mojewypieki.com###jumpup
+ mojprzeworsk.pl##.walkerpress-top
+ mojzdrowyfutrzak.elanco.com###Group_1
+-mok.olsztyn.pl###neko-to-top
+ molnlycke.pl##.button-sticky-to-top
+ montaz-anten.eu##.topHome
+ motogen.pl###gora-przycisk-fixed
 @@ -769,7 +765,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
@@ -155,7 +134,7 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 79c26f3ed..9aeca7b1f 100644
+index bb38d5106..0005aa9c7 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
 @@ -1,6 +1,6 @@

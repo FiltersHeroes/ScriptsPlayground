@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index ebcf8da8b..c92c9e072 100644
+index da5654852..bcfb2d0b8 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -39,7 +39,7 @@ agroperfekt.pl##.js-marquee-wrapper
@@ -28,7 +28,7 @@ index ebcf8da8b..c92c9e072 100644
  cowsierscipiszczy.pl##.CampaignType--floating
  creativecommons.org###deed-donate-slide
  creativehobby.pl###ch-strip
-@@ -367,7 +366,6 @@ fortnitepolska.pl,gwint24.pl###single-sticky
+@@ -366,7 +365,6 @@ fortnitepolska.pl,gwint24.pl###single-sticky
  forum-bron.pl,trumpeters.pl###tt_mobile_banner
  forum.android.com.pl##.ipsMessage_information.ipsMessage.cAnnouncementPageTop
  forum.duolingo.com##.GB_SB
@@ -36,7 +36,7 @@ index ebcf8da8b..c92c9e072 100644
  forum.muratordom.pl###left_circus > .dostepne_mobile
  forum.optymalizacja.com##.cTopicPostArea:has(.cGuestTeaser)
  forum.swiateczne.info##.av-preloader-box
-@@ -435,7 +433,6 @@ historykon.pl##.erpProContainer
+@@ -434,7 +432,6 @@ historykon.pl##.erpProContainer
  hitobuwie.pl##.fixedBaners__container
  home-net.pl###utils
  home.biedronka.pl##.count-down-banner
@@ -44,7 +44,7 @@ index ebcf8da8b..c92c9e072 100644
  hostgrafia.pl##.side-tab-widget > a[href="jak-dzialamy.html"]
  hoteladler.com##.bookingfixedtop.book-online-button
  hotelbonifacio.pl##.corner-pop-up
-@@ -451,7 +448,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
+@@ -450,7 +447,6 @@ hub.pl,interia.pl,~poczta.interia.pl,pomponik.pl,terazgotuje.pl,top.pl##.topbar,
  hubkolektyw.pl##.panel-boczny
  hurtowniarolnicza.pl##.recruitment
  i-apteka.pl,rolmarket.pl###menu_hotspot_zone3
@@ -52,7 +52,7 @@ index ebcf8da8b..c92c9e072 100644
  ican.pl###drawer_bar
  iglazura24.pl##.sold-item-popup
  iiyama-sklep.pl###foot-lastbought-button
-@@ -582,8 +578,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
+@@ -581,8 +577,6 @@ linkedin.com##.cta-modal:has(a[href^="ms-windows-store://"])
  linuxporady.pl,pskrk.com##.crestaPostsBox
  literackifestiwal.zakopane.eu###g-page-preloader
  lodzkie.pl##.jj_sl_custom2
@@ -61,7 +61,15 @@ index ebcf8da8b..c92c9e072 100644
  losgustos.pl###smi-kulikow li:has(a[href*="/maps/"])
  lvbet.pl##splash-loader
  m.leroymerlin.pl##.smart-app-banner
-@@ -913,7 +907,6 @@ sklep-wedkarski.info###ClPanelImg
+@@ -824,7 +818,6 @@ poradnikhandlowca.com.pl##.region-page-bottom > #slidead-popup
+ poradyodo.pl##.baner-stopka
+ poranny.pl##a[href*="&utm_campaign=prenumerata-swiateczna"]
+ porta.com.pl###popup-questionnaire
+-portal.librus.pl###synergiaLogin + div[class]:has(picture > source[srcset] ~ img[src])
+ portalhodowcy.pl##.kac-sm-panel > ul:first-of-type
+ portalmorski.pl###clause-info-mobile
+ portalsamorzadowy.pl,portalspozywczy.pl###bottom_slider
+@@ -918,7 +911,6 @@ sklep-wedkarski.info###ClPanelImg
  sklep.aladyn.pl,sklep.mariall.pl###trzecia
  sklep.bioceriq.pl##.mfn-fake-sale-noti
  sklep.farmona.pl##.tabs > section.product_link_nav
@@ -69,7 +77,7 @@ index ebcf8da8b..c92c9e072 100644
  sklep.odziez-robocza.com###druga_ikona
  sklep.pakrol.pl##.suggest-slider
  sklep.veterynaria.pl###sideTab
-@@ -980,7 +973,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
+@@ -985,7 +977,6 @@ swiatkwiatow.pl###cards-next-link, #cards-prev-link
  swiezoizdrowo.pl###sales-booster-popup
  sympatia.onet.pl###iconsBar
  syngenta.pl##.pane-menu-menu-sticky-menu

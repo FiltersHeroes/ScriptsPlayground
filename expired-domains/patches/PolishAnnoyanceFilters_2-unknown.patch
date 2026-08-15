@@ -1,5 +1,5 @@
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index e6d445a40..2bb8581b0 100644
+index f50eebc29..f5973ba59 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
 @@ -18,7 +18,7 @@
@@ -28,15 +28,7 @@ index e6d445a40..2bb8581b0 100644
  dimedic.eu,listymikolaja.pl##.r-newsletter
  dji-ars.pl###newsletter-bottom-banner
  dlabystrzakow.pl##.footer-form-newsletter
-@@ -482,7 +481,6 @@ ekodrogeria.pl##.wrap-newsletter :is(.newsletter-box, .newsletter-form)
- ekoj.pl###newsletterbar
- ekomercyjnie.pl##.clearfix.main-menu > li:first-of-type, .home-newsletter, .blog-newsletter, #bottom-newsletter
- ekopaka.pl,naszogrodniczy.pl,sklep-agroland.pl,zakreconysloik.com.pl##.wce_footerinfo > .wce.overlay > li > ul > li:nth-of-type(5)
--eksiazki.az.pl##.subscribe > p, .subscribe > h2, .feedburner
- ekskluzywnymenel.com##.marlene-widget-newsletter
- eksperymentalnie.com,pozdrozkrld.com##.widget_mailchimpsf_widget
- eksperymentalnie.com,totalnareklama.pl##.widget_getresponse-widget.widget
-@@ -513,8 +511,6 @@ erp-view.pl###top-mod
+@@ -513,8 +512,6 @@ erp-view.pl###top-mod
  esaliens.pl##.news-btn.aside-btn
  escoli.pl##.no-left-padding.col-sm-6 > .footer-block-title, [id^="newsletter-validate-detail"]
  esklep.bi1.pl,haczykowo.pl,kopalniasrebra.com,sklep.miodyapis.pl,sklep.wzso.pl,texasclub.pl##.newsletter1-wrapper
@@ -45,16 +37,16 @@ index e6d445a40..2bb8581b0 100644
  esprit.com.pl##.newsletter-gora
  espritshop.pl###newsletter-registration-form
  esselte.com##.abc-footer__newsletter
-@@ -735,7 +731,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
+@@ -736,7 +733,7 @@ iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
  izba-lekarska.pl##.add-to-newsletter-button
  izigsm.pl###footer > .footMenu > .color.columnBox
  jackjones.com##.js-customer-club__signup
 -jadwizanki.com.pl,opi.org.pl,rosebikes.pl##.newsletterform
-+rosebikes.pl##.newsletterform
++opi.org.pl,rosebikes.pl##.newsletterform
  jagodnik.pl##.tdi_70.vc_widget_sidebar.td_block_wrap.wpb_wrapper > .widget_text.widget.td_block_template_1
  jakiwniosek.pl##.footer > div > div > div:first-child > :nth-last-child(n+2):nth-last-child(-n+4)
  jakrobicmarketing.pl###\31 -2
-@@ -751,7 +747,6 @@ johndog.pl##.newsletter-form-event, .promo-newsletter
+@@ -752,7 +749,6 @@ johndog.pl##.newsletter-form-event, .promo-newsletter
  joom.com##div[class*="promoCorner_"]
  jsystems.pl###zapisz-sie-newsletter, a[href="newsletter.do"]
  jumo.pl##.news-updates
@@ -62,7 +54,7 @@ index e6d445a40..2bb8581b0 100644
  justbefit.pl###new_footer
  kabexdocieplenia.eu##.footer-wrapper > .footer > div.f-box:first-of-type > *
  kalkulatorkalorii.net##footer .row-fluid .form-inline, .row-fluid .bs-callout-success
-@@ -843,7 +838,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
+@@ -844,7 +840,6 @@ l37.eu###footer-container > div.row:first-of-type > div.footer-menu:nth-of-type(
  labotiga.pl##.block_newletter
  ladybusiness.pl##.newsletter-sectionw
  laksystem.pl##.wf2-scroll-box.grwf2-wrapper
@@ -70,7 +62,7 @@ index e6d445a40..2bb8581b0 100644
  lamoda.pl##.min-h-newsletter
  lampy.pl###newsletterbox_1
  lancut4u.pl##.lsvr-mailchimp-subscribe
-@@ -852,7 +846,6 @@ languagetool.org###newsletter_reg
+@@ -853,7 +848,6 @@ languagetool.org###newsletter_reg
  lantre.pl##.newsletter.block > *
  laptopypoznan.pl##.ps-spotlight5
  lastowiec.pl##.contact-box:has(img[src="data/images/icon_newsletter.png"])
@@ -78,7 +70,7 @@ index e6d445a40..2bb8581b0 100644
  latarki.pl##.bakedparallax-wrapper
  latarnia.teatrnn.pl###main_oferta > div:nth-of-type(2), #main_oferta > div:nth-of-type(2) + form
  lawendowykredens.pl##.footer-static > div.col-sms-12:nth-of-type(3)
-@@ -892,7 +885,6 @@ lp.al.to,lp.x-kom.pl##.newsletter > div > div:nth-child(-n+2)
+@@ -893,7 +887,6 @@ lp.al.to,lp.x-kom.pl##.newsletter > div > div:nth-child(-n+2)
  lp.morele.net#@#.newsletter__form:lang(pl)
  luba-group.com##.footer-list > h6.title:nth-of-type(2), .footer-list > .oposite.theme-button-three
  lubimyczytac.pl##.footer__fixed.js-footer-fixed
@@ -86,15 +78,7 @@ index e6d445a40..2bb8581b0 100644
  lumarte.eu###newsAnch
  luminosfera.pl,slaskiecentrumkomputerowe.pl##.container > .row > .col-sm-4
  luxfood.pl###Left > .nyroModal:first-of-type
-@@ -936,7 +928,6 @@ mazovia.pl##.clearfix > .nice-shadow.search-block
- mazowsze.waw.pl##.footer__box__newsletter
- mazury.travel,moliera2.com###newsletter_box
- mbmeganarzedzia.pl,motogron.com##.footer-container > div > div > div:nth-of-type(4)
--mdk.opole.pl##footer > .my_container > .formularz.sub
- meble-z-drewna.pl###lewy .zawartosc > table, #lewy .zawartosc > table + p:empty
- meble.pl##.row-flex > div:nth-of-type(6)
- meblohaus.pl##.moduletable_left
-@@ -1007,7 +998,6 @@ motozbrojownia.pl##.py-4.px-0.email-subscription
+@@ -1008,7 +1001,6 @@ motozbrojownia.pl##.py-4.px-0.email-subscription
  mozilla.org##.moz24-newsletter-container
  mp-office.eu###cta-newsletter
  mp.pl##.box-newsletter-pacjent
@@ -102,7 +86,7 @@ index e6d445a40..2bb8581b0 100644
  mpk.nowysacz.pl##.sidebar_newsletter
  mpk.poznan.pl##.rnd.module:nth-of-type(4)
  mr-fix.pl##.six
-@@ -1258,7 +1248,6 @@ powerman.com.pl##.pm_newsletter
+@@ -1258,7 +1250,6 @@ powerman.com.pl##.pm_newsletter
  powiat-piaseczynski.info###gkSidebar > div.box:nth-of-type(3)
  powiatlobeski.pl###nl
  poznan.factory.pl##.pane-2.pane-custom.panel-pane
@@ -110,14 +94,22 @@ index e6d445a40..2bb8581b0 100644
  prawo.pl##.wkNewsletterBlock
  prawodrogowe.pl##.footer-logo.footer-widget.col-md-2
  press.pl##.pressletter
-@@ -1427,7 +1416,6 @@ sklep.regalia.eu##footer > .row > .footer-block:only-child
+@@ -1426,7 +1417,6 @@ sklep.rai-bud.pl##div.CalyBox:nth-of-type(3)
+ sklep.regalia.eu##footer > .row > .footer-block:only-child
  sklep.sizeer.com##.b-footer_newsletter
  sklep.skrypt.com.pl##.footer-conteiner > ul:nth-of-type(3)
- sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
--sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
+-sklep.szeged.pl##section ~ section:has(> div .elementor-widget-wp-widget-mc4wp_form_widget .mc4wp-form input[placeholder="Twój adres e-mail"])
+ sklep.thepartners.pl##footer > div > .vc_row:has(.mailpoet_form)
  sklep.tonerylublin.pl##ul:nth-of-type(4)
  sklep.vileda.pl###newsletter-category
- sklep.zakrecovnia.pl##.shb-newsletter-background
+@@ -1558,7 +1548,6 @@ telix.pl###mailster_signup-3
+ telko.in##ul > li > .tip[data-tip="Biuletyny TELKO.in"]
+ temi.pl##.module:nth-of-type(8) > div > div > div
+ teraz-srodowisko.pl###footer-newsletter-container
+-termet.com.pl###newsletter-block
+ termyszaflary.com##footer div.col-md-4:nth-of-type(3)
+ terrymoda.pl##footer > .grid-container > div[class]:nth-of-type(2)
+ tesco.pl##.leaflets_subscribe_itesco
 diff --git a/PPB/uBO_AG/powrotowe_tytuly.txt b/PPB/uBO_AG/powrotowe_tytuly.txt
 index d8415fa29..8512f5205 100644
 --- a/PPB/uBO_AG/powrotowe_tytuly.txt
