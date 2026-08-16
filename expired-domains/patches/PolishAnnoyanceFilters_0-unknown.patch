@@ -31,10 +31,10 @@ index 4d88b9724..f50eebc29 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 03d9c292a..3cb03520f 100644
+index 77b20f716..f7e3017ee 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -45,7 +45,7 @@ airwick.pl###top-btn
+@@ -46,7 +46,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
  alberski.artbhp.pl###disclaimer-button
@@ -43,7 +43,7 @@ index 03d9c292a..3cb03520f 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -72,7 +72,6 @@ apartamenty.nawyspie.eu##.roll
+@@ -73,7 +73,6 @@ apartamenty.nawyspie.eu##.roll
  apia.pl,bivert.pl,cro-online.pl,icrow.pl,nat.pl,sportowiec.info,ti-ksiaz.iap.pl,unia-sklep.pl##.page-scroll-up
  apo-discounter.pl###page_up_button
  apollo.pl##.tt-scroll-up
@@ -51,7 +51,7 @@ index 03d9c292a..3cb03520f 100644
  aptekaolmed.pl###btn-going-top
  aptekawsieci.pl,e-zikoapteka.pl,emp-shop.pl##.scroll-top
  aptekazdrowie-24.pl##.site-scrolltop
-@@ -184,7 +183,7 @@ chimmo.pl###arrow-up
+@@ -185,7 +184,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -60,7 +60,7 @@ index 03d9c292a..3cb03520f 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -233,7 +232,7 @@ dictionary.cambridge.org##.ctop
+@@ -234,7 +233,7 @@ dictionary.cambridge.org##.ctop
  dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
  digi-store.pl,techsat24.pl###buttonTop
  digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
@@ -69,7 +69,7 @@ index 03d9c292a..3cb03520f 100644
  disco-polo.info,meizupolska.pl##.toup
  dns.pl##footer + button[class=""]
  dobra-mama.pl###top-to-bottom
-@@ -243,11 +242,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
+@@ -244,11 +243,10 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
  domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
@@ -82,7 +82,7 @@ index 03d9c292a..3cb03520f 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -282,7 +280,7 @@ ekrak.pl###zltop
+@@ -283,7 +281,7 @@ ekrak.pl###zltop
  eksiegarnia.mnk.pl,mojepodlogi.com,renee.pl##.scroll__top
  ekspedyt.org,rawa.katowice.pl###sbttBacktotop
  ekstrastats.pl##.site-scroll-top
@@ -91,7 +91,7 @@ index 03d9c292a..3cb03520f 100644
  elektrosalon.pl###buttontotop
  elektrykadlakazdego.pl##.crane-top
  elipublishing.pl##.e-fas-arrow-alt-circle-up
-@@ -292,7 +290,7 @@ enel.pl###afario-back-top
+@@ -293,7 +291,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -100,7 +100,16 @@ index 03d9c292a..3cb03520f 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -472,7 +470,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -441,7 +439,7 @@ jackjones.com##.js-back-to-top__button
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jmlnet.pl##.pi-scroll-top-arrow
+ journals.viamedica.pl##.Back_To_Top_Button
+ kaercher.com##.fg-totop
+@@ -473,7 +471,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -108,7 +117,7 @@ index 03d9c292a..3cb03520f 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -576,7 +573,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+@@ -577,7 +574,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
  mojewypieki.com###jumpup
  mojprzeworsk.pl##.walkerpress-top
  mojzdrowyfutrzak.elanco.com###Group_1
@@ -116,7 +125,7 @@ index 03d9c292a..3cb03520f 100644
  molnlycke.pl##.button-sticky-to-top
  montaz-anten.eu##.topHome
  motogen.pl###gora-przycisk-fixed
-@@ -769,7 +765,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -770,7 +766,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
