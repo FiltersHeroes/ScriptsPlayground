@@ -31,18 +31,9 @@ index ce17a0b72..07cc6f92f 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 30070eade..9712c5e8f 100644
+index 30070eade..474cd1b33 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -17,7 +17,7 @@ action.pl##.btn-top
- active.sklep.pl,epicgames.com,grupawsparcia.pl,smaki.pl,wprost.pl##.up-button
- activefalcon.nazwa.pl,jaw.com.pl,market-point.pl,meblem4.pl,ogrodniksklep.pl,schiever.com.pl,vipmajster.pl##.scrollup
- activefamily.pl##.moto-back-to-top-button_visible
--ad-al.pl,barszcz.edu.pl,misericordia.media.pl##.hc_scrollup
-+ad-al.pl,misericordia.media.pl##.hc_scrollup
- adata.com###back-2-top.back-2-top-rocket
- addnature.pl,bikester.pl###iscjs_scroller
- addons.prestashop.com##.ontop.btn-top.btn
 @@ -46,7 +46,7 @@ airwick.pl###top-btn
  akardo.pl,mixit.pl##.btn-scroll-up
  akonet.pl###up-href
@@ -111,15 +102,7 @@ index 30070eade..9712c5e8f 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -339,7 +336,6 @@ ftt.roto-frank.com##.scroll-container
- funclub.pl##button[aria-label="Wróć na górę"]
- fundacjapestka.pl,iform4u.com##.back__top
- funduszeue.wzp.pl,mixit.pl,plus.pl###scroll-up-btn
--funer.com.pl###backtotop
- galeriakatowicka.eu###js-scroll-to
- gama-sklep.com.pl##.go-to-top-page
- gandalf.com.pl,in4.pl,mediastar.pl,motobros.pl###goup
-@@ -475,7 +471,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -475,7 +472,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -127,6 +110,14 @@ index 30070eade..9712c5e8f 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
+@@ -580,7 +576,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
+ mojewypieki.com###jumpup
+ mojprzeworsk.pl##.walkerpress-top
+ mojzdrowyfutrzak.elanco.com###Group_1
+-mok.olsztyn.pl###neko-to-top
+ molnlycke.pl##.button-sticky-to-top
+ montaz-anten.eu##.topHome
+ motogen.pl###gora-przycisk-fixed
 @@ -774,7 +769,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
