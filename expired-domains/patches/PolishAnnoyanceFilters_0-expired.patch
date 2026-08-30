@@ -1,13 +1,26 @@
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index e65e745c7..c0ad6dfaf 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -285,7 +285,7 @@ carrefour.pl##.push-newsletter
+ carry.pl,tani-laptop.com###block_newsletter
+ cba.pl##.links > div > div:nth-of-type(4)
+ cebit.pl##a[href="http://net.cebit.pl/newsletter/"]
+-cebule-kwiatowe.pl,hurtex.com.pl,inpostpay.pl##.newsletterBar
++cebule-kwiatowe.pl,inpostpay.pl##.newsletterBar
+ centos.com.pl##form:first-of-type
+ centrum-hiperbaryczne.pl##.bok:has(.acymailing_modulebok)
+ centrum-terapii.pl###sml_subscribe_widget
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 7fbe8234c..d870b6dd8 100644
+index c6b2ce93d..28f0d336f 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -304,7 +304,7 @@ ewaipiotr.pl,leftlane.pl,oiot.pl,tabletowo.pl###to-top-wrap
- exerim.pl###footer a[href="#"]
- expressoffice.pl,faceoffice.pl###move-up
- extraswiecie.pl,modr.pl###vscroll_to_top
--fajnafabryka.pl,hortex.pl,sosen-blog.pl##.topbutton
-+fajnafabryka.pl,hortex.pl##.topbutton
- faraonkebab.pl##.hdrsocial
- farmer-sj.pl###topScroll
- festiwaldobregosmaku.eu,fonmed.pl,twojaslupca.pl###mkd-back-to-top
+@@ -178,7 +178,7 @@ casu.pl##.btn_scroll
+ cateromarket.pl##footer a[href="javascript:void(0)"]:has(> svg)
+ catzy.pl,paypo.pl,reklama.gazeta.pl##.scroll-top-btn
+ cds-lider.com.pl,polsero.pl,www.nowiny.gliwice.pl##.btn-up
+-cebule-kwiatowe.pl,geo-polska.pl,hurtex.com.pl,hurtowniazabawek.pl##.scrollBackToTop
++cebule-kwiatowe.pl,geo-polska.pl,hurtowniazabawek.pl##.scrollBackToTop
+ cedynia.pl,napisy24.pl,wegemaluch.pl###smoothtop
+ cellbes.pl,www.akademiareklamy.edu.pl###topscroller
+ centrum.auto.pl##.elementor-fixed.elementor-widget-icon:has(> .elementor-icon-wrapper > a[href="#gotop"])
