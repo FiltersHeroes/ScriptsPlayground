@@ -1,26 +1,13 @@
-diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index e65e745c7..c0ad6dfaf 100644
---- a/PPB/newslettery_nie_popupy.txt
-+++ b/PPB/newslettery_nie_popupy.txt
-@@ -285,7 +285,7 @@ carrefour.pl##.push-newsletter
- carry.pl,tani-laptop.com###block_newsletter
- cba.pl##.links > div > div:nth-of-type(4)
- cebit.pl##a[href="http://net.cebit.pl/newsletter/"]
--cebule-kwiatowe.pl,hurtex.com.pl,inpostpay.pl##.newsletterBar
-+cebule-kwiatowe.pl,inpostpay.pl##.newsletterBar
- centos.com.pl##form:first-of-type
- centrum-hiperbaryczne.pl##.bok:has(.acymailing_modulebok)
- centrum-terapii.pl###sml_subscribe_widget
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index c6b2ce93d..28f0d336f 100644
+index ed19bb10c..ffe7cba51 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -178,7 +178,7 @@ casu.pl##.btn_scroll
- cateromarket.pl##footer a[href="javascript:void(0)"]:has(> svg)
- catzy.pl,paypo.pl,reklama.gazeta.pl##.scroll-top-btn
- cds-lider.com.pl,polsero.pl,www.nowiny.gliwice.pl##.btn-up
--cebule-kwiatowe.pl,geo-polska.pl,hurtex.com.pl,hurtowniazabawek.pl##.scrollBackToTop
-+cebule-kwiatowe.pl,geo-polska.pl,hurtowniazabawek.pl##.scrollBackToTop
- cedynia.pl,napisy24.pl,wegemaluch.pl###smoothtop
- cellbes.pl,www.akademiareklamy.edu.pl###topscroller
- centrum.auto.pl##.elementor-fixed.elementor-widget-icon:has(> .elementor-icon-wrapper > a[href="#gotop"])
+@@ -895,7 +895,7 @@ whatnext.pl###back-to-up
+ wiadomoscihandlowe.pl##.scroll-up-box
+ wielkahistoria.pl###johannes-goto-top
+ wiesci.com.pl###divGoToTop
+-wiktormeble.pl,znajdownik.pl###mt-scrollup
++wiktormeble.pl###mt-scrollup
+ wilkuchnia.pl##.show-up
+ winclub.pl##.fa-chevron-circle-up
+ winers.pl##.upToScroll.buttonScrollUp
