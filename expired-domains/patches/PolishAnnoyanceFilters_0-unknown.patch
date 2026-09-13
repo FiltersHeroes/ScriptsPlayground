@@ -1,8 +1,23 @@
+diff --git a/PPB/e_gazety.txt b/PPB/e_gazety.txt
+index a0814f8e0..a5fcdf288 100644
+--- a/PPB/e_gazety.txt
++++ b/PPB/e_gazety.txt
+@@ -4,8 +4,8 @@
+ agrodoradca24.pl##.nf-newspaper
+ astromagia.pl##.other-services
+ astromagia.pl##.section-current-numbers
+-audio.com.pl,automatykab2b.pl,budujemydom.pl,elektronikab2b.pl,ep.com.pl,estradaistudio.pl,magazyngitarzysta.pl##.kiosk
+-audio.com.pl,ekobudowanie.pl##.newspaper
++automatykab2b.pl,budujemydom.pl,elektronikab2b.pl,ep.com.pl,estradaistudio.pl,magazyngitarzysta.pl##.kiosk
++ekobudowanie.pl##.newspaper
+ auto-motor-i-sport.pl##.new-hitbox-extra.part-1-4.item
+ auto-motor-i-sport.pl##.visible-lg.visible-md.visible-sm.hidden-xs.footer-bar
+ auto-swiat.pl##aside[class*="float"].promoFrame
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index daf1a3046..afb3d6cb8 100644
+index c0f457214..d6c8e2a40 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -529,7 +529,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -532,7 +532,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -10,7 +25,7 @@ index daf1a3046..afb3d6cb8 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -927,7 +926,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -932,7 +931,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -19,10 +34,18 @@ index daf1a3046..afb3d6cb8 100644
  sky-shop.pl###promo-banner
  sleepmed.pl##.metka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index ce17a0b72..07cc6f92f 100644
+index b158f94a4..9e39dd607 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -807,7 +807,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -143,7 +143,6 @@ atrium-biala.pl,atrium-ch.pl,atrium-copernicus.pl,atrium-felicity.pl,atrium-gama
+ atriumsystem.eu##.box-newsletter.box
+ attipas.pl##div.col-sm-6.col-md-3:nth-of-type(4) > .widget
+ auchan.pl##a[href="/newsletter/ref/box"]
+-audio.com.pl##.sticky-newsletter
+ audiopolis.pl###mod_Newsletter
+ audytel.pl,eko-ue.pl##.fixed-newsletter
+ australiangoldshop.pl###formNewsletterFooter > div:nth-child(3)
+@@ -811,7 +810,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -30,8 +53,34 @@ index ce17a0b72..07cc6f92f 100644
  kormoran-rowy.pl##.site-footer__row--top > .inner-section > .align-right.site-footer__col
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 6d9d0327e..1b1480da7 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -113,8 +113,7 @@ atat.pl,bananki.pl,chemia-atat.pl,elektryka-atat.pl,oswietlenie-atat.pl,papis.pl
+ aterima-med.pl##.popup-wrapper
+ atrakcje.com.pl,blog.atrakcjenaimprezy.pl###boxes
+ atrexpress.com.pl,ch24.pl###popup-box, #list-builder
+-audio.com.pl##.big-newsletter
+-audio.com.pl,estradaistudio.pl##.waitbox
++estradaistudio.pl##.waitbox
+ audioforte.com.pl##.christmas-popup
+ audiomed.com.pl###popuphere
+ audycje.tokfm.pl###gp--popup
+diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
+index 7ecffaca3..8ce53e8b0 100644
+--- a/PPB/popupy_sieciowe.txt
++++ b/PPB/popupy_sieciowe.txt
+@@ -22,7 +22,6 @@
+ ||a-masterlease.youlead.pl/api/query/popup/SettingsForPopups$script,domain=master1.pl
+ ||apaczka.pl/theme/default/lightbox.min.css
+ ||app.sendbean.pl/api/widget/init$xmlhttprequest,domain=baccata.com.pl|www.angelsadvertising.pl|www.sendbean.pl
+-||audio.com.pl/media/jui/js/jquery.cookie.min.js
+ ||autodoc.pl/ajax/popup/on_leave
+ ||brilum24.pl/skins/user/rwd_shoper_1/js/remodal.min.js
+ ||call.novocall.co/v1/widgets$script,domain=krainawody.pl|pij-wode.pl
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 30070eade..474cd1b33 100644
+index 8c832326e..0ad5a91ba 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -46,7 +46,7 @@ airwick.pl###top-btn
@@ -51,7 +100,15 @@ index 30070eade..474cd1b33 100644
  aptekaolmed.pl###btn-going-top
  aptekawsieci.pl,e-zikoapteka.pl,emp-shop.pl##.scroll-top
  aptekazdrowie-24.pl##.site-scrolltop
-@@ -187,7 +186,7 @@ chimmo.pl###arrow-up
+@@ -95,7 +94,6 @@ asus.com##div[class*="scrollTopWrapper_"]
+ asystentbhp.pl##.gototop-button.gototop
+ auchan.pl,bonprix.pl,zakupopedia.pl##.scroll-to-top-btn
+ auchanhetmanska.pl##.a-ScrollTop
+-audio.com.pl###return-btn
+ audiocare.pl##.yydev-back-to-top
+ audioklan.pl,tophifi.pl##.back-top-btn
+ aurainweb.pl,edugry.pl,louma.pl,pozycjonowanie.net,zoo.net.pl##.zak-scroll-to-top
+@@ -189,7 +187,7 @@ chimmo.pl###arrow-up
  chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
@@ -60,7 +117,7 @@ index 30070eade..474cd1b33 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -237,7 +236,7 @@ dictionary.cambridge.org##.ctop
+@@ -239,7 +237,7 @@ dictionary.cambridge.org##.ctop
  dictionary.cambridge.org##header + .cc:not(.cc-ns) span[on="tap:top.scrollTo"]
  digi-store.pl,techsat24.pl###buttonTop
  digitalvirgo.com,extrabukiet.pl,forum.budujemydom.pl,lispol.com##.fa-arrow-circle-up
@@ -69,13 +126,13 @@ index 30070eade..474cd1b33 100644
  disco-polo.info,meizupolska.pl##.toup
  dns.pl##footer + button[class=""]
  dobra-mama.pl###top-to-bottom
-@@ -245,13 +244,11 @@ dobramine.com##.to_top_link
- dobrzemieszkaj.pl###gallery > .circle
- docs.github.com##footer button[class*="scroll-to-top"]
+@@ -249,12 +247,11 @@ docs.github.com##footer button[class*="scroll-to-top"]
  doktormonika.pl###page-gotop.page-gotop
--domdlaciebie.com.pl##.fix-scroll-top
+ domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
+-domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl,ungepflanzen.de##.scroll-up-container
 -domowa.pizza##.smoothup
++domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl##.scroll-up-container
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
@@ -84,16 +141,7 @@ index 30070eade..474cd1b33 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -286,7 +283,7 @@ ekrak.pl###zltop
- eksiegarnia.mnk.pl,mojepodlogi.com,renee.pl##.scroll__top
- ekspedyt.org,rawa.katowice.pl###sbttBacktotop
- ekstrastats.pl##.site-scroll-top
--electropapa.com,mrowka.com,sklep.poczta-polska.pl,ungepflanzen.de##.scroll-up-container
-+electropapa.com,mrowka.com,sklep.poczta-polska.pl##.scroll-up-container
- elektrosalon.pl###buttontotop
- elektrykadlakazdego.pl##.crane-top
- elipublishing.pl##.e-fas-arrow-alt-circle-up
-@@ -296,7 +293,7 @@ enel.pl###afario-back-top
+@@ -298,7 +295,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -102,7 +150,16 @@ index 30070eade..474cd1b33 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  eset.com##.footer-scroll-to-top-wrapper
-@@ -475,7 +472,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -448,7 +445,7 @@ jackjones.com##.js-back-to-top__button
+ janssen.tv##.move-btn__parent
+ jarock.pl,mentel.com.pl###back-to-top-btn
+ jawis.pl,stalko.net.pl,techrol.com,webreklama.pl##.scrollDown
+-jbc.bj.uj.edu.pl,sbc.org.pl##button[class*="ScrollToTop_scroll-to-top_"]
++jbc.bj.uj.edu.pl##button[class*="ScrollToTop_scroll-to-top_"]
+ jdsports.pl##.scroll
+ jmlnet.pl##.pi-scroll-top-arrow
+ journals.viamedica.pl##.Back_To_Top_Button
+@@ -480,7 +477,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -110,15 +167,7 @@ index 30070eade..474cd1b33 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -580,7 +576,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
- motogen.pl###gora-przycisk-fixed
-@@ -774,7 +769,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -781,7 +777,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -136,23 +185,15 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 1ec54947c..69be046b4 100644
+index 13f2e6c56..5d7832f24 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -1,6 +1,6 @@
- 99rent.pl##.invpopup
- 99rent.pl,agro-top.com.pl##body.invpop-visible:style(overflow-y: auto !important)
--360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,airalo.com,alesoczewki.com,all4home.pl,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bobomio.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,chocolissimo.pl,confronter.pl,cyberdefence24.pl,czescirolnicze.eu,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dlalakierni.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekodrogeria.pl,ekoteka.pl,endo.pl,energetyka24.com,eoptic.pl,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,gospodarowaniewoda.pl,grantthornton.pl,greenpoint.pl,ibuk.pl,idream.pl,ikonka.eu,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jogapiekna.com,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,konin.pl,kontigo.com.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,lewmik.pl,limango.pl,linux-magazine.pl,lubimyczytac.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,nck.pl,neo-net.com.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,orders.porta.com.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,testerzy.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zeskory.com,zico-bike.pl##.modal-open[class]:style(overflow-y: auto !important; padding-right: 0 !important; margin-right: 0 !important)
-+360ksiegowosc.pl,abrakadabra.sklep.pl,agrarada.pl,agrodoradca24.pl,agromer.pl,airalo.com,alesoczewki.com,all4home.pl,aluna.eu,aptekakamagra.pl,archonhome.pl,at-outlet.pl,bezokularow.pl,bilety24.pl,bilkom.pl,bilscy.info,biofemina.pl,bitner.com.pl,biznes-host.pl,bobomio.pl,bonprix.pl,bookbook.pl,botland.com.pl,braciaprzykawie.pl,bryk.pl,campingshop.pl,chocolissimo.pl,confronter.pl,cyberdefence24.pl,czescirolnicze.eu,darmarsklep.pl,defence24.com,defence24.pl,dhosting.pl,diag.pl,dieta.hpba.pl,dlalakierni.pl,dobresofty.pl,dok-oswiata-kadry.pl,dolasu.pl,drogerienatura.pl,dwdomel.pl,e-biurowce.pl,e-sas.pl,edulider.pl,ekodrogeria.pl,ekoteka.pl,endo.pl,energetyka24.com,eoptic.pl,eurobuty.com.pl,extradom.pl,fmmobile.pl,fricke.pl,galeriapolnocna.pl,gardenguru.pl,gazetkonosz.pl,giacomo.pl,giftshop24.pl,gospodarowaniewoda.pl,grantthornton.pl,greenpoint.pl,ibuk.pl,idream.pl,ikonka.eu,ilily.pl,intershoe.com.pl,inverso.pl,jezykiobce.pl,jogapiekna.com,jordanki.torun.pl,kartafitsport.pl,kidsworld.pl,kmziz.pl,konin.pl,koronawirusunas.pl,kuriernet.pl,kurspolskiego.pl,lewmik.pl,limango.pl,linux-magazine.pl,lubimyczytac.pl,marchewkowepole.com,mediaexpert.pl,medme.pl,mensahome.eu,menspace.pl,merkandi.pl,miastakobiet.pl,miastodzieci.pl,mikesport.pl,minecraft.org.pl,mintshost.pl,moliera2.com,mpoint.pl,nalepsze.pl,narzedziak.pl,ncez.pl,nck.pl,neo-net.com.pl,niedziela.pl,nife.pl,north.pl,nowafarmacja.pl,onedaymore.pl,orders.porta.com.pl,osehero.pl,pantalerzyk.pl,panwybierak.pl,pepco.pl,pinsola.pl,plantini.pl,politykazdrowotna.com,polskieszlaki.pl,poltalento.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,ppr.pl,prawowaptece.pl,prnews.pl,prusice.pl,przemysl.pl,quiosque.pl,rajsoczewek.pl,rego-bis.pl,remote-control-world.eu,reporteryoung.pl,revouninstaller.com,rylko.com,s-pl.pl,sekrecik.pl,selkar.pl,sklep-lubar.pl,sklep.daisyzoologia.pl,sklep.polmarkus.com.pl,sklep.technica.pl,sklepkamil.pl,solven.pl,space24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,super-polska.pl,swiatkwiatow.pl,szlachetneinwestycje.pl,tarti24.pl,teamquest.pl,teatr-sabat.pl,testerzy.pl,tkmaxx.pl,toysrus.pl,tpa-group.pl,trojansport.pl,ttv.pl,tvokazje.pl,twojekwiaty.pl,ubraniadooddania.pl,um24.pl,upolujebooka.pl,vebo.pl,villaitalia.pl,walizkazabawek.pl,wip.pl,wokularach.pl,wpolu.pl,wynagrodzenia.pl,zadowolenie.pl,zeskory.com,zico-bike.pl##.modal-open[class]:style(overflow-y: auto !important; padding-right: 0 !important; margin-right: 0 !important)
- 360ksiegowosc.pl,polskieszlaki.pl##[id].modal, .modal-backdrop
- a2mobile.pl##.overflow-hidden:style(overflow-y: auto !important)
- a2mobile.pl##.z-40.inset-0.fixed.dark\:bg-opacity-80.bg-opacity-50.bg-gray-900, #phone-register-modal
-@@ -249,7 +249,7 @@ kmziz.pl###full_newsletter_modal, .modal-backdrop
- kolobrzeg.pl##.popup, #popup-bg
- kolobrzeg.pl,tluszcz.pl##.popup_active:style(overflow-y: auto !important)
- konin.pl###myModal, #myModal ~ .modal-backdrop
+@@ -124,7 +124,7 @@ karo.waw.pl##body.modal-open:style(overflow: auto !important;)
+ kiep.pl##[style*="opacity: 0.3;"]:style(opacity: 1 !important)
+ kiribaticlub.pl,zielonasowa.pl###ns-popup-box, #mask
+ kler.eu###newsletter-form.modal--newsletter.modal
 -kontigo.com.pl,macris.com.pl###newsletter-popup
 +macris.com.pl###newsletter-popup
- koronawirusunas.pl###PatronModal, .modal-backdrop
  koty.pl,psy.pl##.ReactModal__Overlay:has(a[href*="/newsletter"])
  koty.pl,psy.pl##html[style], body[class*="Modal"]:style(position: static !important; overflow-y: auto !important)
+ krasnal.sklep.pl,nerdstore.pl##+js(set-cookie, posnewsletterpopup, 1)

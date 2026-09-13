@@ -1,0 +1,88 @@
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 707e8bc00..92485adc0 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -6,11 +6,9 @@
+ 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,badaj.to,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,rp.pl,sterkowski.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
+ 6paknutrition.com,8a.pl,alfaelektro.pl,archicom.pl,atlantic.pl,badaj.to,budujmase.pl,cebit.pl,dietazliscia.pl,dlaroslin.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,monikasmulewicz.pl,rp.pl,sterkowski.pl,sympatia.onet.pl###bhr-items :is(.bhr-popup-advanced, .bhr-popup-basic):has(iframe[src*="salesmanago."])
+ 9c.com.pl,agagrzelak.pl,dommeblowy.com,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
+-24hurt.pl##.wt-popup, #overlay
+-29aleja.pl##.popupWrap
+ 50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,jdsports.pl,mediaexpert.pl,neonet.pl,renee.pl,sklep.sizeer.com,tvp.info##.snrs-modal-content
+ 50style.pl,born2be.pl,brw.pl,butysportowe.pl,cortland.pl,crocs.pl,decathlon.pl,helios.pl,jdsports.pl,mediaexpert.pl,neonet.pl,renee.pl,sklep.sizeer.com,tvp.info##.snrs-modal-wrapper:not(:has(.snrs-container-webpush, #snrs-wp-subscriber))
+-80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gameinn.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,kukini.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
++80dni.pl,agroinstal.com.pl,aliholik.pl,ap-goal.pl,apgrojec.com.pl,asc-pro.pl,atomsport.pl,atutszkola.pl,badaniaprenatalne.pl,bellpolska.com.pl,bialekolnierzyki.com.pl,businesstraveller.pl,centrum-terapii.pl,codzienniefit.pl,computer-alliance.pl,dochodzeniewierzytelnosci.pl,ecochemia.pl,edbak.com,erif.pl,esportnow.pl,faktykonopne.pl,gdziejestdziecko.pl,infokonin.pl,infokonsument.pl,intercyza-blog.pl,inwestycjebudowlane.biz,ironsky.pl,jakzalozycfirmenaukrainie.com,kartanauczycielablog.pl,katechezanatana.pl,lajtmobile.pl,leclerc.pl,leszekbloch.pl,maxbus.com.pl,mhtm.pl,monikahonory.pl,odroczenie-kary.pl,pandrwal.pl,pantabletka.pl,pierwsze-kroki.com,poloniawroclaw.pl,przedszkolankowo.pl,psychologiazycia.com,radiowarszawa.com.pl,remekdabrowski.pl,sds-automatyka.pl,sherlocktrafika.pl,spjawna.pl,spkomandytowa.pl,stanprawnynieruchomosci.pl,studiosante.pl,towsrodku.pl,villacarpatia.com,wspa.pl,wspolnotakrzyzasmolec.pl,zabieganamama.com,zadowolonypacjent.pl,zarzadwspolcezoo.pl,zatorland.pl,zobraczkaczybez.pl##.spu-box, .spu-bg
+ 1000dni.pl###news-popup
+ aasapolska.pl###leave-page-modal
+ aba-sport.pl,alpinsklep.pl,apteka-natura.eu,autochemia.pl,avaro.pl,barokko.pl,bludshop.com,blueskypolska.pl,bogulandia.pl,bugo.pl,butosklep.pl,butylukow.pl,cafeborowka.pl,californiaskateshop.pl,candleworld.com.pl,cosslodkiego.com.pl,cyfra.eu,czasnabuty.pl,damizabawki.pl,denicler.eu,divanii.pl,dowarsztatu.com,e-baseus.com,e-megasport.com,efutro.com.pl,gratoria.pl,groomer.com.pl,hile.pl,hydromech.eu,korob.pl,ksiegarnia-edukacyjna.pl,kupbuty.com,littlejungle.pl,malowanebiela.pl,megazoologiczny.pl,meskiegacie.pl,ozonee.pl,pakolorente.com,partneragdrtv.com.pl,pepegi.eu,pomocna24.pl,portalokienny.pl,rovicky.eu,sestimi.pl,sewel.pl,shop.s-a.pl,sportowybazar.pl,stili.pl,surgepolonia.pl,twojeobuwie.pl,ulubionabielizna.pl,unbrokenstore.com,vitasport.pl,wispol.eu###topLayerBackDrop, .iai-toplayer__background
+@@ -23,12 +21,12 @@ activejet.pl###newsleterKontener, .newsletterBox
+ activeshop.com.pl##.popupid21
+ activlab.pl,porta.com.pl##.bhr-board:has(.type--POPUP)
+ adamkuncicki.pl###listfusion_popup_lightbox_main
+-adamspa.pl,alkalicznystylzycia.com,angelius.pl,elektoralna.pl,horeca.ban-food.pl,hospicjum-podkarpackie.pl,inspiringsolutions.pl,kompleksowausluga.pl,passion.pl,qagile.pl##.ppsPopupShell, #ppsPopupBgOverlay
++adamspa.pl,alkalicznystylzycia.com,angelius.pl,elektoralna.pl,hospicjum-podkarpackie.pl,inspiringsolutions.pl,kompleksowausluga.pl,passion.pl,qagile.pl##.ppsPopupShell, #ppsPopupBgOverlay
+ addhost.pl##.fsp-wrapper
+ addons.opera.com,altair.com.pl,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
+ admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
+ adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,ladnebebe.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
+-adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
++mapa.um.warszawa.pl###init_info[style], #komunikat[style]
+ adria-art.pl###overlay, .popup.newsletter
+ adventuresports.pl##seguno-popup.__seguno-popup-wrapper
+ agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
+@@ -44,7 +42,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+ agrohandel.com.pl###jcemediabox-popup-page
+ agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,sklep.tel-mar.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+ agromix.agro.pl##.nivo-lightbox-overlay
+-agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
++agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
+ agrosiec.pl,angelgold.pl,bolix.pl##.modal
+ agrotopparts.pl###kartka, #kartka ~ #tlo
+ akademia.nask.pl###newsletterall
+@@ -158,7 +156,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
+ biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
+ bioindygo.pl###popup-1
+ biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
+-bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,nasztalerz.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklep.swiatlnu.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
++bissole.pl,devmentor.pl,elbau.com.pl,laboosiedlce.pl,lovesimple.pl,luminapark.pl,modesta.com.pl,naszenaturalne.pl,oclean.pl,ogrod-marzen24.pl,praisethewear.com,projektowanie-wnetrz-online.pl,retailnet.pl,sklep.swiatlnu.pl,sklepzprawem.pl,wysmakowane.pl##.elementor-popup-modal
+ bitdefender.pl,eluban.pl,izigsm.pl,jaslo4u.pl,krasnik.eu,kukulahealthyfood.pl,motherhood.pl,muzeumwp.pl,planujemyogrod.pl,przepisychinskie.pl,rankomat.pl,roltech.eu,sagana.pl,sklepdekarza.pl,sklepdlarolnika.pl,spodiglyinitki.pl,sushi-sklep.pl###popup
+ biuroprasowe.pl###global_overlay_cont, #global_overlay
+ biznesoutfit.pl###formWrapper, #formOverlay
+@@ -208,7 +206,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
+ chillglobal.pl##.bounceright-popup-acm.popup-acm
+ chinytolubie.pl##.ui-dialog-titlebar-close, .ui-widget-overlay
+ chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl##div[data-gr="popup-container"]
+-chocholowskietermy.pl,grailpoint.com,hoho.sklep.pl,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
++chocholowskietermy.pl,grailpoint.com,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
+ cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
+ chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
+ chronpesel.pl##.wh-popUp-overlay
+@@ -337,7 +335,6 @@ fabrykawafelkow.pl###someone-purchased
+ fabrykazabawek.eu###helloModal
+ faie.pl###searchPopUp
+ fajnekonkursy.pl###tnp-modal
+-familyzone.com.pl##.fx-block.fx-wrapper-modal
+ fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
+ farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
+ farmer.pl###axnBodyContainer
+@@ -447,8 +444,6 @@ kolniak24.eu##.topLayer
+ kolobrzeg.pl###dailyfullscreen
+ kolorowejeziorka.pl###lpl.lpl-window, #lpl-overlay.lpl-overlay
+ kolorowymotylek.pl##.newsletter3__wrapper
+-kombo.krakow.pl###divGoTop2Mob
+-kombo.krakow.pl##body > div:nth-of-type(4), body > div:nth-of-type(6)
+ komorkomat.pl##.offer_modal.order_contact_offer_modal.vue_modal
+ kontri.pl###element_to_pop_up, .bModal
+ kontri.pl###ys-container, .ys-layer
+diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
+index 8ce53e8b0..737557aff 100644
+--- a/PPB/popupy_sieciowe.txt
++++ b/PPB/popupy_sieciowe.txt
+@@ -73,7 +73,6 @@
+ ||proto.pl/popup_newsletter/settings
+ ||regus.pl/Home/OnExitModal$xmlhttprequest
+ ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
+-||sklep.jack-wolfskin.pl/*/js/newsletter-modal-
+ ||sklep.rms.pl/js/rms_copy_copy/popup.js
+ ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
+ ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
