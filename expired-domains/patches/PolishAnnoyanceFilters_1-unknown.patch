@@ -11,11 +11,23 @@ index d6c8e2a40..d36d67525 100644
  pyszne.pl##div[data-qa="app-banner"]
  pytamy.pl##.fixFooter
  pytanienasniadanie.tvp.pl##.stream-button
+diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
+index d545f9b48..df9c75d82 100644
+--- a/PPB/newslettery_nie_popupy.txt
++++ b/PPB/newslettery_nie_popupy.txt
+@@ -1742,7 +1742,6 @@ wrozka.com.pl##td:first-of-type, .newsletter_right, .footer_newsletter_container
+ wrp.pl##.vc_general.vc_cta3
+ wrzesnia.pl##footer .stopka div.kolumna:nth-of-type(3)
+ wsei.edu.pl###wsei-footer > div.vc_col-sm-3.wpb_column:nth-of-type(5)
+-wseit.edu.pl###btn-newsletter
+ wspieramrozwoj.pl##.newslatter
+ wszystkiegoslodkiego.pl##.ws-footer__center > div > div > div > div > .text-lg-left.col-12
+ wtk.pl###newsletter-animated-box
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 1b1480da7..707e8bc00 100644
+index d418fee22..c02a8219d 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -701,7 +701,6 @@ realme.com##.subscribe
+@@ -704,7 +704,6 @@ realme.com##.subscribe
  refurbed.pl##.fixed[x-data*="NewsletterPopup"]
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -24,20 +36,20 @@ index 1b1480da7..707e8bc00 100644
  rosa24.pl##body > .MuiModal-root.MuiDialog-root:has(.promo-timer) { visibility: hidden !important }
  rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 5d7832f24..ce9458a31 100644
+index 01b5a714b..e9f985f91 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -228,8 +228,6 @@ rolety24.net##body[style*="overflow"]:style(overflow-y: auto !important)
+@@ -215,8 +215,6 @@ rolety24.net##body[style*="overflow"]:style(overflow-y: auto !important)
  rowery-elektryczne.pl###popup, #popup-overlay
  rylko.com###modal-newsletter
  rzetelnafirma.pl##+js(nostif, setPopup)
 -samochod.porowneo.pl###modalContainer
 -samochod.porowneo.pl##.noScroll:style(position: static !important)
+ sanbetdevelopment.pl##.breakdance-popup-open
  sferis.pl##+js(acis, $, promoNewsletter)
  shop.mango.com##.modal-container-newsletter
- shop.mango.com##.scroll__block:style(overflow-y: auto !important; height: auto !important)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 6b4a4b878..f7029b3d0 100644
+index 01f0c8c4f..695f067b4 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -85,7 +85,7 @@ bezpieczny.pl###call_phone
@@ -80,7 +92,7 @@ index 6b4a4b878..f7029b3d0 100644
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
  kluczesoft.pl###ks-chat-rootk
  knall.com.pl##.socialTabs-tab--contact.socialTabs-tab
-@@ -501,7 +499,7 @@ polmed.pl###app-chat-easymed
+@@ -502,7 +500,7 @@ polmed.pl###app-chat-easymed
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -89,7 +101,7 @@ index 6b4a4b878..f7029b3d0 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -522,7 +520,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -523,7 +521,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -97,7 +109,7 @@ index 6b4a4b878..f7029b3d0 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -557,7 +554,6 @@ salesmanago.pl###sm-bot
+@@ -558,7 +555,6 @@ salesmanago.pl###sm-bot
  salomon.com##.chatbot-box
  salon2kolka.pl##.msl-envelope-o
  salon-kosiarek.pl##.tm-sticker
@@ -105,6 +117,14 @@ index 6b4a4b878..f7029b3d0 100644
  samochodyzpolski.pl##.fab-whatsapp
  samsung.com###chatbot-consent-popup-container
  sanbetdevelopment.pl###fastcontact
+@@ -689,7 +685,6 @@ wnt.com##.sticky-contact
+ wolnekonopie.org##.kleo-quick-contact-link
+ woodfan.pl###onwebchat_code
+ worxlandroid.pl##mavenoid-assistant
+-wseit.edu.pl###btn-tel
+ wspieram.to###staff-chat-button
+ www.bekerpolska.pl##a.buttonizer-button[href*="javascript"]:nth-child(3)
+ www.ibm.com###contact-module
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt
 index ec83888fc..00e3f664e 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej_ogolne_sieciowe.txt

@@ -1,392 +1,688 @@
 diff --git a/exclusions/CERT_expired.txt b/exclusions/CERT_expired.txt
-index ece2d6816..8122a7e1f 100644
+index e26417de5..e73dfd17c 100644
 --- a/exclusions/CERT_expired.txt
 +++ b/exclusions/CERT_expired.txt
-@@ -1,11 +1,9 @@
- 017342.pl
--10283.pl
- 128310321342.pl
- 1frfr2dfw.rest
- 23899120h.pl
- 247162.pl
- 24bbc.pro
--262627.pl
- 28124.pl
- 282119.pl
- 30000b888.pl
-@@ -35,7 +33,6 @@
- 6372642319867.pl
- 645684.pl
- 6583og.top
--673882.pl
- 6895og.top
- 728012.pl
+@@ -38,12 +38,13 @@
  7283762.pl
-@@ -59,13 +56,10 @@ adob-document.online
- adslaboneligi.com
- agroracibozambezia.com
- aidecorhome.com
--aifordaily.com
--airesumeandcv.com
- aislingsoflife.info
- aivrn.com
- akujet.shop
- albedofruits.com
--allstagemerchants.com
- alsguvenlik.info
- amazingin.com
- ampbls.com
-@@ -77,6 +71,8 @@ apart-zamowienia.pl
- apart-zamowienie.pl
- aptekageminil.pl
- arcadeelite.com
-+archiwummody.pl
-+archiwumstylu.pl
+ 7384628.pl
+ 7392031.pl
+-749393.pl
+ 771509.pl
+ 842742.pl
++8643275.pl
+ 8695og.top
+ 8icmimarlik.com
+ 94832432vv.pl
++9642345.pl
+ 972729.pl
+ 987335.pl
+ 987345.pl
+@@ -74,7 +75,6 @@ arcadeelite.com
+ archiwummody.pl
+ archiwumstylu.pl
  atlasr.mg
- auhkzii.com
+-auhkzii.com
  auranode.site
-@@ -87,7 +83,6 @@ balenciaga-polska.pl
- barantisway.com
+ austrariseprofits-tech.com
+ avukatmsb.com
+@@ -85,17 +85,13 @@ barantisway.com
  bavaria-tech.com
  bebekmusic.com
--belekurbelekas.online
  belfastmugs.com
- benitoro.pl
- berotego.pl
-@@ -111,7 +106,6 @@ bpo2-grupp.pl
- bramleyfundex-system.com
- broward-treasury.com
- btc-iplexapp.com
--buildingbuddyai.com
- burberry-polska.pl
+-berotego.pl
+ bershkapolska.pl
+ bestpor.com
+-betomeno.pl
+-bezonero-24.pl
+ bienmaxton.com
+ binthus.com
+ bioterya.com
+ bizstart.net
+ blackless.click
+-blockcryptoliteracy.com
+ bluewavenexor-solution.com
+ boataccidentlawyerblog.com
+ bogusbraxtoph.com
+@@ -110,7 +106,6 @@ burberry-polska.pl
  burgerfactory.pl
  bursacadirkamp.com
-@@ -173,7 +167,6 @@ dissa.pl
- divisaxalmet-soft.com
- dogubeygrup.com
+ buythisdomain.net
+-bygizol.com
+ caboorgy.info
+ caddebagdat.com
+ canons.pl
+@@ -168,7 +163,6 @@ dogubeygrup.com
  dominionpeak.co.uk
--doml2a.pl
  dongpeixun.com
  dostaawa-do-skleppu.pl
- dplsa.pl
-@@ -229,6 +222,7 @@ extremeadipo.com
- eziko-apteka.pl
- faktury-zamowienie.pl
- fangush.com
-+fashionarchive.pl
- fast-online.store
- fc0293a.pl
- fior-thuath.scot
-@@ -243,7 +237,6 @@ frictionlesssales.com
- funcky.info
- gaccworldwide.com
- gakeps.com
--gdatemo.pl
- genoify.com
- globtrades.com
- gotripy.com
-@@ -286,20 +279,12 @@ icolde.pl
- icolodo.pl
- id051.pl
- id213.pl
--id2681.pl
--id3201.pl
--id3401.pl
- id3531.pl
--id3813.pl
--id3902.pl
- id4603.pl
- id56.pl
- id71.pl
- id72.pl
- id82.pl
--id8341.pl
--id9083.pl
--id9212.pl
- idimingo24.pl
- ido389144.top
- ido468145.top
-@@ -334,7 +319,6 @@ ido986652.top
- idsplug.com
- igulinoro.pl
- ikitekajans.com
--imetelego.pl
+-dplsa.pl
+ dreamsanctum.com
+ drewnosprzedawcaa.pl
+ drewopal.pl
+@@ -176,7 +170,6 @@ drmartens-polska.pl
+ drogerienaturas.pl
+ dronelayikama.com
+ dronjett.com
+-drtvhdd.pl
+ drunkfail.com
+ dryuu.pl
+ dsny7281.pl
+@@ -186,8 +179,6 @@ dzieci24h.pl
+ e-faktury92.pl
+ e-fkt8272.pl
+ e-ziko-apteka.pl
+-eberotego.pl
+-ebetomeno.pl
+ ebokpg-energia6456.pl
+ edge-wealth.cc
+ edge-wealth.org
+@@ -197,14 +188,12 @@ ehms.pl
+ electedto.com
+ elektromars.pl
+ ellystegge.info
+-emelidogo24.pl
+ endingdiabetes.info
+ energy-otwarcie24.pl
+ energymajowe.pl
+ epsilonelevatron-app.com
+ erbainsaat.com
+ esesarp.com
+-eszlakomania.pl
+ etenigo24.pl
+ eternal-lunesta-tech.com
+ eternal-lunestatech.com
+@@ -271,7 +260,6 @@ hugebeanbag.com
+ hummingbirdmaloca.org
+ hyrdroshifa.shop
+ hzqyzs.com
+-i-berotego.pl
+ iabizapp-system.com
+ iceberdo24online.pl
+ icemigo24.pl
+@@ -320,7 +308,6 @@ ikitekajans.com
  immediateploud-tech.com
  immediatewolc-tech.com
  immediatex-soft.com
-@@ -361,7 +345,6 @@ jogos-para-android.com
- jopr2a.pl
- jtservicesinc.com
- juanessentials.site
--jyskeu.online
- k333sa.com
- kanbosk.info
+-imodoli.pl
+ imoureye.com
+ info-znalezieni24.pl
+ info093872.pl
+@@ -333,7 +320,6 @@ interparcelcouriers.com
+ inveranix-platform.com
+ islakmendilkapagi.shop
+ isveckoftesi.com
+-iszlakomania.pl
+ itsbact.it
+ jde0471937ma.com
+ jetspeedycourier.com
+@@ -348,6 +334,7 @@ kanbosk.info
  kapfexproplatform.com
-@@ -393,6 +376,7 @@ lacasadelredroom.com
- ladyboyphotos.com
- lalizajewelry.com
- lamamaevyters.com
-+lamania-collections.pl
- lamaniastore.pl
- lasvegasmedicaid.info
- laughcorner.com
-@@ -413,6 +397,7 @@ lunaessy.com
- luxecz.info
- macron-polska.pl
- mammut-polska.pl
-+medicine-archive.pl
- meditationsmoebel.info
- mennica-centralna.pl
- mennica-krajowa.pl
-@@ -424,8 +409,8 @@ mennlcakapitalowa.pl
- mennlcanarodowa.pl
- mennlcapolska.pl
+ kategoria-75423523.pl
+ kategoria56543334.pl
++kategoria5764523.pl
+ kategoria9879676340.pl
+ kategoriaoferta4364566340.pl
+ katowicedisplustv.pl
+@@ -359,7 +346,6 @@ kirklarelipromosyon.com
+ kliknijabyuzyskac.online
+ koligo24.pl
+ kscolaw.com
+-ksparkelectrics.com
+ ktxarc.com
+ kup-teraz-4477378.pl
+ kup-teraz-468266.pl
+@@ -383,8 +369,6 @@ lesdermes.com
+ leuoodz.shop
+ level33.tv
+ levis-polska.pl
+-librvs.pl
+-lifesteals.com
+ limueol.shop
+ lomarvixpro-system.com
+ lovarionix-liquiditysoftware.com
+@@ -409,9 +393,11 @@ mennlcapolska.pl
  mennlce.pl
--metelego.pl
  misieawrzykalcazk.pl
-+modaarchive.pl
+ modaarchive.pl
++modacollection.pl
  moltrixia.com
  muselight.pl
  musemuse.pl
-@@ -435,7 +420,6 @@ nantaban.com
- nefernewellness.com
- neonpulsesss.site
- netmovies21.com
--neuraldynasty.com
- nexiogate-solution.com
- nimacard.com
- nixajans.com
-@@ -454,17 +438,14 @@ oferta-1982.top
++musepiece.pl
+ myproteinpolska.pl
+ nanoflexstudio.com
+ nantaban.com
+@@ -436,13 +422,17 @@ oestfundprosystem.com
+ oferta-1982.top
  oferta-24785-pl.click
  oferta-2788222pl.click
- oferta-3528376.pl
--oferta-4030610.pl
--oferta-732714.pl
- oferta-7866870.pl
- oferta-7915102.pl
+-oferta-7866870.pl
+-oferta-7915102.pl
++oferta-alufelgi732512341.pl
  oferta0.pl
  oferta312312.pl
++oferta3262.pl
++oferta3893.pl
  oferta7678678564.pl
  oferta7893466340.pl
--ogloszenie74855.pl
-+oferta830613.pl
+ oferta830613.pl
++oferta9263.pl
++ofetraikategoria838412.pl
++ogloszenie57483.pl
  ogloszenie832482390.pl
--ogrod-sad.pl
  oldsironesides.com
  olivetestates.com
- olmed-apteka.pl
-@@ -486,7 +467,6 @@ panstwowezloto.pl
- parcouditore.it
- pass4web.com
- paulachlon.pl
--pdfultra.com
- pdsia.pl
- pekaogroup.com.pl
- pembrokeshiregrassfedlamb.com
-@@ -514,12 +494,10 @@ pl-oferta.com.pl
+@@ -471,7 +461,6 @@ pembrokeshiregrassfedlamb.com
+ perapilatesstudio.com
+ petsgourmet.it
+ pgngi.pl
+-pieknydzien.online
+ piresearch.info
+ pko-kredyt.pl
+ pkobppomoc.pl
+@@ -483,6 +472,8 @@ pl-allegrolokalnie.click
+ pl-aukcja.pl
+ pl-aukcja4214.pl
+ pl-aukcja6235.pl
++pl-delivery244.pl
++pl-delivery247.pl
+ pl-dpd24.pl
+ pl-firma.pl
+ pl-firmowe-284919.click
+@@ -490,10 +481,6 @@ pl-firmowe-94043.click
+ pl-id320323.pl
+ pl-oferta.com.pl
  pl-oferta1223.pl
- pl-oferta4.pl
- pl-oferta5.pl
--pl-oferta5286734.pl
- pl-oferta718239.pl
- pl-oferta74387.pl
+-pl-oferta4.pl
+-pl-oferta5.pl
+-pl-oferta718239.pl
+-pl-oferta74387.pl
  pl-oferta7523487.pl
  pl-oferta759257831.pl
--pl-oferta7666370.pl
- pl-oferta934929.net.pl
  pl-ogloszenie.pl
- pl-ogloszenie303943.pl
-@@ -532,7 +510,6 @@ pl-sprzedaz2342.pl
- poczla-polska.pl
- pogocinema.com
- polareonx.pl
--poldawia.pl
- polska-gold-ai.com
- polska-mennica.pl
- polskamennlca.pl
-@@ -542,7 +519,6 @@ postcolonialwords.digital
+@@ -515,6 +502,7 @@ pop-mart.pl
+ postcolonialwords.digital
  potepotful.com
  potiadenbakery.com
++powiatchelrnski.pl
  pozyczkanieoprocentowana.online
--prefabtown.com
  prestigegrading.com
  primesim.net
- privilegeplan.com
-@@ -577,6 +553,7 @@ rtearnerica.com
- ryobi-polska.pl
- s89128729.pl
- saatcini.com
-+safepay.com.pl
- safetempe.pl
- samjonesfencing.com
- sanalmuhasebeciniz.com
-@@ -584,7 +561,6 @@ sancaiculture.com
- saverita-ai-system.com
- schoolmystery.com
- scottemma.shop
--serenrentcars.com
- serveetoo-dupooood-polski.pl
- seslikaya.shop
- sessiz5.com
-@@ -598,8 +574,6 @@ silverinvestmentcompanyllc.com
- sistemfix.com
- skecherssklep.pl
- skplsa.pl
--smallstagemerchants.com
--smartdecorideas.com
- socialartistic.com
- solvexpulse-system.com
- solvextradersoft.com
-@@ -628,12 +602,11 @@ swarovski-outlet.pl
- switch-evistacap.com
- switch-flarex-lab.com
- tahtabu.com
--tamashawebapk.com
-+taranko-archive.pl
+@@ -523,6 +511,13 @@ prmnd.com
+ prohubsoftware.info
+ proptwisters.org
+ prosperon.com
++prywatne-84236346.pl
++prywatne-97536.pl
++przedmiot-alufelgi7235234.pl
++przedmiot3525443.pl
++przedmiot452342.pl
++przedmiot6452343.pl
++przedmiot7435234.pl
+ punkerotica.com
+ qasimalli.site
+ qhumanoidrobot.com
+@@ -585,10 +580,8 @@ stradivariuspolska.pl
+ strauss-sklep.pl
+ streamlinefood.com
+ strefa-klient.click
+-strefaklienta.online
+ strovemont-capital.org
+ strserv1.pl
+-strzelac.online
+ sun-tago.pl
+ suntago-info24.pl
+ suntago-waw.pl
+@@ -602,7 +595,6 @@ tahtabu.com
+ taranko-archive.pl
  tarifasmile.com
  tatliseskoftecisi.info
--tatrymeno.pl
--tatrywiemco.pl
- tatrzykanczyk.pl
-+tatuum-archive.pl
+-tatrzykanczyk.pl
+ tatuum-archive.pl
  tedramsay.com
  tekno-sistem.com
- telkodo.pl
-@@ -678,9 +651,7 @@ tvrshd.pl
- tzcsrj.com
- tzgcsj.com
- uas1-scotnect-portal.com
--unfilteredimpact.com
- unieurodeal.shop
--uniqlo-poland.pl
- uniqlopolska.pl
- urbanchange.click
- urbanlifestyle.click
-@@ -705,15 +676,11 @@ vivienneswestwood.pl
- waltbock.com
- warszawamennica.pl
- wasvk.com
--wawateno-24.pl
--wawotemo-24.pl
- wayofwade-polska.pl
- wazny-komunikat.pl
- wazny-zamowienie.pl
--wbierz.pl
- wearecappadocia.com
- web-cn-haixing.com
--websiteskool.com
- websrmtly.com
- weekdaypolska.pl
+@@ -666,6 +658,7 @@ verdienen-sieapp.com
+ vergiselmalimusavirlik.com
+ veteransmusicministry.com
+ vexxtta.site
++vibrams.pl
+ vinnersclub.net
+ vire-elvonfull-system.com
+ visacenterservice.com
+@@ -683,7 +676,6 @@ weekdaypolska.pl
  wenonimo24.pl
-@@ -721,7 +688,6 @@ werreuer.site
+ werreuer.site
  westsummerr.site
- whilma.pl
+-whilma.pl
  wizarddogtraining.com
--wt829a.pl
  wzatorskimobiektywie24.pl
  xinglianxing.com
- xn--wyprzedaspecjalna-3yd.pl
-@@ -742,6 +708,5 @@ zhcn-kaifagame.com
- zifferhaintech.com
- zikirler.com
- zlotopanstwowe.pl
--zmienogrzewanie.pl
- zredis.pl
- zsjysj.com
-diff --git a/sections/podejrzane_inne_oszustwa.txt b/sections/podejrzane_inne_oszustwa.txt
-index 1ec8853da..5e86b6fbc 100644
---- a/sections/podejrzane_inne_oszustwa.txt
-+++ b/sections/podejrzane_inne_oszustwa.txt
-@@ -256,7 +256,6 @@
- ||ecoengine.pl^$all
- ||edutrading.com^$all
- ||edymek.net^$all
--||eelhoe.us^$all
- ||ela-warszawa.com^$all
- ||elcap.pl^$all
- ||electofun.pl^$all
-@@ -573,7 +572,6 @@
- ||maria-warszawa.pl^$all
- ||marian-wasilewski.pl^$all
- ||mariuszmroz.pl^$all
--||marketpremium.pl^$all
- ||masenkotrkr.com^$all
- ||mason-waszawa.pl^$all
- ||massextreme.pl^$all
+diff --git a/exclusions/LWS_expired.txt b/exclusions/LWS_expired.txt
+index 3c3617cb2..c80593c07 100644
+--- a/exclusions/LWS_expired.txt
++++ b/exclusions/LWS_expired.txt
+@@ -1300,6 +1300,7 @@ vemini.pl
+ versacesklep.com
+ vethurt.pl
+ vibbo.pl
++vibrams.pl
+ vibramwyprzedaz.com
+ vibramxpolska.com
+ video-top.pl
+diff --git a/sections/przekrety.txt b/sections/przekrety.txt
+index 449642f50..10f0d6679 100644
+--- a/sections/przekrety.txt
++++ b/sections/przekrety.txt
+@@ -516,7 +516,6 @@
+ ||lublin.lu^$all
+ ||m2m.tedmcgrathbrands.com^$all
+ ||m-facebook.ct8.pl^$all
+-||maceju.com^$all
+ ||mackeeperaffiliates.com^$all
+ ||mackeeperapp.mackeeper.com^$all
+ ||magicznedopalacze.com^$all
+@@ -910,7 +909,6 @@
+ ||umowmy-sie-teraz.pl^$all
+ ||unionfxtradingpro.com^$all
+ ||unitedproductsllc.net^$all
+-||upvod.pl^$all
+ ||ushoppyworld.com^$all
+ ||uwe4wallonia.be^$all
+ ||valuesmatter.com.au^$all
 diff --git a/sections/przekrety_CERT.txt b/sections/przekrety_CERT.txt
-index d80413296..e2d2286a9 100644
+index 0f899a05b..aa2571c3d 100644
 --- a/sections/przekrety_CERT.txt
 +++ b/sections/przekrety_CERT.txt
-@@ -2515,7 +2515,6 @@
- ||allegrolokalnie.oferta743821.lol^$all
- ||allegrolokalnie.oferta823161.click^$all
- ||allegrolokalnie.oferta825791.click^$all
--||allegrolokalnie.oferta830613.pl^$all
- ||allegrolokalnie.oferta837133.click^$all
- ||allegrolokalnie.oferta837412.click^$all
- ||allegrolokalnie.oferta839174.click^$all
-@@ -3235,8 +3234,6 @@
- ||arcerproto.site^$all
- ||arcgatelab.site^$all
- ||archeunlis.store^$all
--||archiwummody.pl^$all
--||archiwumstylu.pl^$all
- ||arciumri.site^$all
- ||arcjams.site^$all
- ||arcmarkhash.site^$all
-@@ -6086,7 +6083,6 @@
- ||faroinvesteza.net^$all
- ||faroprofitanza.com^$all
- ||farquti.shop^$all
--||fashionarchive.pl^$all
- ||fashionette.mom^$all
- ||fast-check-id.com^$all
- ||fastamlcheck.com^$all
-@@ -9795,7 +9791,6 @@
- ||lalopgritt.store^$all
- ||lamaisonsignaturetouch.com^$all
- ||lamania-archive.com^$all
--||lamania-collections.pl^$all
- ||lamania-store.top^$all
- ||lamania-topsale.shop^$all
- ||lamania.shop^$all
-@@ -9992,7 +9987,6 @@
- ||linia-dialogu.vercel.app^$all
- ||link-ai-engine-shop.pages.dev^$all
- ||link-ai-engine.shop^$all
--||link.allegro.safepay.com.pl^$all
- ||linkbrain.site^$all
- ||linkcube.site^$all
- ||linkelixl.site^$all
-@@ -10528,7 +10522,6 @@
- ||mechanik-piotrowski.live^$all
- ||mediacompany.mom^$all
- ||mediat-brevante7p.digital^$all
--||medicine-archive.pl^$all
- ||medipms.com^$all
- ||medpik.com^$all
- ||medruki.shop^$all
-@@ -10680,7 +10673,6 @@
- ||mocnas.sbs^$all
+@@ -309,7 +309,6 @@
+ ||8635564.lat^$all
+ ||8642356.lat^$all
+ ||8643264.lat^$all
+-||8643275.pl^$all
+ ||8646325.cfd^$all
+ ||8653464.lat^$all
+ ||8653465.lat^$all
+@@ -1307,7 +1306,6 @@
+ ||alebilet.8635564.lat^$all
+ ||alebilet.8642356.lat^$all
+ ||alebilet.8643264.lat^$all
+-||alebilet.8643275.pl^$all
+ ||alebilet.8646325.cfd^$all
+ ||alebilet.8653464.lat^$all
+ ||alebilet.8653465.lat^$all
+@@ -1381,7 +1379,6 @@
+ ||alebilet.ipkategoria72343432.sbs^$all
+ ||alebilet.ipodkategoriia823471174332.sbs^$all
+ ||alebilet.k-48v.lat^$all
+-||alebilet.kategoria5764523.pl^$all
+ ||alebilet.kup-teraz-3143435.com^$all
+ ||alebilet.kup-teraz-5177812.sbs^$all
+ ||alebilet.kupno-biletu.sbs^$all
+@@ -1433,13 +1430,11 @@
+ ||alebilet.oferta6213123451512.sbs^$all
+ ||alebilet.oferta-12.lat^$all
+ ||alebilet.oferta-584392143.live^$all
+-||alebilet.oferta-alufelgi732512341.pl^$all
+ ||alebilet.oferta-kupbilety.forum^$all
+ ||alebilet.oferta-kupteraz.lol^$all
+ ||alebilet.ofeta-71329.lol^$all
+ ||alebilet.ofeta-928191.lol^$all
+ ||alebilet.ogloszenie24-89683926268.cfd^$all
+-||alebilet.ogloszenie57483.pl^$all
+ ||alebilet.ogloszenie304959781.cyou^$all
+ ||alebilet.ogloszenie2108578947.cyou^$all
+ ||alebilet.ogloszenie3198850903.bond^$all
+@@ -1532,8 +1527,6 @@
+ ||alebilet.pl-d-offerta-ssid61054-pryw.casa^$all
+ ||alebilet.pl-de0produkty876267424.cyou^$all
+ ||alebilet.pl-de2produkt9362883681.lol^$all
+-||alebilet.pl-delivery244.pl^$all
+-||alebilet.pl-delivery247.pl^$all
+ ||alebilet.pl-deprodukty7368164823.lol^$all
+ ||alebilet.pl-dn0produkt7847621934.lol^$all
+ ||alebilet.pl-dostawa.co^$all
+@@ -1675,13 +1668,6 @@
+ ||alebilet.ploferta8393937.shop^$all
+ ||alebilet.ploferta-93742993.shop^$all
+ ||alebilet.plx-offertta-ogloszenie.casa^$all
+-||alebilet.prywatne-97536.pl^$all
+-||alebilet.prywatne-84236346.pl^$all
+-||alebilet.przedmiot452342.pl^$all
+-||alebilet.przedmiot3525443.pl^$all
+-||alebilet.przedmiot6452343.pl^$all
+-||alebilet.przedmiot7435234.pl^$all
+-||alebilet.przedmiot-alufelgi7235234.pl^$all
+ ||alebilet.smart-94582.cfd^$all
+ ||alebilet.transakcja27261661.sbs^$all
+ ||alebilet.u04ba.lat^$all
+@@ -1864,7 +1850,6 @@
+ ||allegro.8635564.lat^$all
+ ||allegro.8642356.lat^$all
+ ||allegro.8643264.lat^$all
+-||allegro.8643275.pl^$all
+ ||allegro.8646325.cfd^$all
+ ||allegro.8653464.lat^$all
+ ||allegro.8756345.lat^$all
+@@ -1980,7 +1965,6 @@
+ ||allegro.ipodkategoriia823471174332.sbs^$all
+ ||allegro.ippoferta75635423412.sbs^$all
+ ||allegro.k-48v.lat^$all
+-||allegro.kategoria5764523.pl^$all
+ ||allegro.kup-teraz-3143435.com^$all
+ ||allegro.kup-teraz-5177812.sbs^$all
+ ||allegro.kupteraz429199421.xyz^$all
+@@ -2111,7 +2095,6 @@
+ ||allegro.oferta-7894213.shop^$all
+ ||allegro.oferta-8941320.sbs^$all
+ ||allegro.oferta-584392143.live^$all
+-||allegro.oferta-alufelgi732512341.pl^$all
+ ||allegro.oferta-kupbilety.forum^$all
+ ||allegro.oferta-kupteraz.lol^$all
+ ||allegro.oferta-lokalana37198264.sbs^$all
+@@ -2128,7 +2111,6 @@
+ ||allegro.ofeta-71903.lat^$all
+ ||allegro.ofeta-928191.lol^$all
+ ||allegro.ogloszenie24-89683926268.cfd^$all
+-||allegro.ogloszenie57483.pl^$all
+ ||allegro.ogloszenie304959781.cyou^$all
+ ||allegro.ogloszenie2108578947.cyou^$all
+ ||allegro.ogloszenie3198850903.bond^$all
+@@ -2232,8 +2214,6 @@
+ ||allegro.pl-d-offerta-ssid61054-pryw.casa^$all
+ ||allegro.pl-de0produkty876267424.cyou^$all
+ ||allegro.pl-de2produkt9362883681.lol^$all
+-||allegro.pl-delivery244.pl^$all
+-||allegro.pl-delivery247.pl^$all
+ ||allegro.pl-deprodukty7368164823.lol^$all
+ ||allegro.pl-dn0produkt7847621934.lol^$all
+ ||allegro.pl-dostawa.co^$all
+@@ -2419,17 +2399,10 @@
+ ||allegro.prywanm543823901.beer^$all
+ ||allegro.prywanrm2388129.beer^$all
+ ||allegro.prywant8391020.study^$all
+-||allegro.prywatne-97536.pl^$all
+-||allegro.prywatne-84236346.pl^$all
+ ||allegro.prywatnem1982875h7.rest^$all
+ ||allegro.prywean8329120h5.study^$all
+ ||allegro.pryweantm438934.beer^$all
+ ||allegro.prywnam12391210.me^$all
+-||allegro.przedmiot452342.pl^$all
+-||allegro.przedmiot3525443.pl^$all
+-||allegro.przedmiot6452343.pl^$all
+-||allegro.przedmiot7435234.pl^$all
+-||allegro.przedmiot-alufelgi7235234.pl^$all
+ ||allegro.przedmiotnr75142352.sbs^$all
+ ||allegro.r230f203f023.casa^$all
+ ||allegro.s9121t4g.study^$all
+@@ -2616,7 +2589,6 @@
+ ||allegrolokalnie.8635564.lat^$all
+ ||allegrolokalnie.8642356.lat^$all
+ ||allegrolokalnie.8643264.lat^$all
+-||allegrolokalnie.8643275.pl^$all
+ ||allegrolokalnie.8646325.cfd^$all
+ ||allegrolokalnie.8653464.lat^$all
+ ||allegrolokalnie.8756345.lat^$all
+@@ -2625,7 +2597,6 @@
+ ||allegrolokalnie.8786452.icu^$all
+ ||allegrolokalnie.9618269.mom^$all
+ ||allegrolokalnie.9642315.lat^$all
+-||allegrolokalnie.9642345.pl^$all
+ ||allegrolokalnie.9645325.lat^$all
+ ||allegrolokalnie.9654326.cyou^$all
+ ||allegrolokalnie.9654365.lat^$all
+@@ -2734,7 +2705,6 @@
+ ||allegrolokalnie.ippokateegoria723472.sbs^$all
+ ||allegrolokalnie.k8319.lat^$all
+ ||allegrolokalnie.k-48v.lat^$all
+-||allegrolokalnie.kategoria5764523.pl^$all
+ ||allegrolokalnie.kup-teraz-144654.com^$all
+ ||allegrolokalnie.kup-teraz-323033.com^$all
+ ||allegrolokalnie.kup-teraz-580371.pl^$all
+@@ -2868,7 +2838,6 @@
+ ||allegrolokalnie.oferta3546.sbs^$all
+ ||allegrolokalnie.oferta3847bs8a10.live^$all
+ ||allegrolokalnie.oferta3847ns5k86g.live^$all
+-||allegrolokalnie.oferta3893.pl^$all
+ ||allegrolokalnie.oferta6972.icu^$all
+ ||allegrolokalnie.oferta9483.cfd^$all
+ ||allegrolokalnie.oferta23823.cfd^$all
+@@ -2983,7 +2952,6 @@
+ ||allegrolokalnie.oferta-584392143.live^$all
+ ||allegrolokalnie.oferta-828727455.cfd^$all
+ ||allegrolokalnie.oferta-829274735.cfd^$all
+-||allegrolokalnie.oferta-alufelgi732512341.pl^$all
+ ||allegrolokalnie.oferta-id57691052.shop^$all
+ ||allegrolokalnie.oferta-id3829691052.shop^$all
+ ||allegrolokalnie.oferta-kupbilety.forum^$all
+@@ -3004,9 +2972,7 @@
+ ||allegrolokalnie.ofeta-71329.lol^$all
+ ||allegrolokalnie.ofeta-71903.lat^$all
+ ||allegrolokalnie.ofeta-928191.lol^$all
+-||allegrolokalnie.ofetraikategoria838412.pl^$all
+ ||allegrolokalnie.ogloszenie24-89683926268.cfd^$all
+-||allegrolokalnie.ogloszenie57483.pl^$all
+ ||allegrolokalnie.ogloszenie220569805.cyou^$all
+ ||allegrolokalnie.ogloszenie304959781.cyou^$all
+ ||allegrolokalnie.ogloszenie1008475901.cyou^$all
+@@ -3208,8 +3174,6 @@
+ ||allegrolokalnie.pl-d-offerta-ssid61054-pryw.casa^$all
+ ||allegrolokalnie.pl-de0produkty876267424.cyou^$all
+ ||allegrolokalnie.pl-de2produkt9362883681.lol^$all
+-||allegrolokalnie.pl-delivery244.pl^$all
+-||allegrolokalnie.pl-delivery247.pl^$all
+ ||allegrolokalnie.pl-deprodukty7368164823.lol^$all
+ ||allegrolokalnie.pl-dk76346.lol^$all
+ ||allegrolokalnie.pl-dk76436.lol^$all
+@@ -3450,13 +3414,6 @@
+ ||allegrolokalnie.ploferta-93742993.shop^$all
+ ||allegrolokalnie.plx-offertta-ogloszenie.casa^$all
+ ||allegrolokalnie.podkategoria764324.pl^$all
+-||allegrolokalnie.prywatne-97536.pl^$all
+-||allegrolokalnie.prywatne-84236346.pl^$all
+-||allegrolokalnie.przedmiot452342.pl^$all
+-||allegrolokalnie.przedmiot3525443.pl^$all
+-||allegrolokalnie.przedmiot6452343.pl^$all
+-||allegrolokalnie.przedmiot7435234.pl^$all
+-||allegrolokalnie.przedmiot-alufelgi7235234.pl^$all
+ ||allegrolokalnie.przedmiotnumer7563243.sbs^$all
+ ||allegrolokalnie.rezerwacja5274.click^$all
+ ||allegrolokalnie.rezerwacja7489.lol^$all
+@@ -9225,7 +9182,6 @@
+ ||kaspiai.net^$all
+ ||kassegewinnburg.de^$all
+ ||katayu.click^$all
+-||kategoria5764523.pl^$all
+ ||katoen-invest-pro.pages.dev^$all
+ ||katoen-invest.pro^$all
+ ||kaudecto.net^$all
+@@ -10321,7 +10277,6 @@
+ ||mocbezkabla.com^$all
  ||mocny-finspire.com^$all
  ||mocny-fundalis.com^$all
--||modaarchive.pl^$all
- ||mode-designs.mom^$all
- ||modelavagepro.click^$all
- ||modeltoolshop.com^$all
-@@ -15810,7 +15802,6 @@
- ||tapandmusiclab.live^$all
- ||tapart.live^$all
- ||tapruno.shop^$all
--||taranko-archive.pl^$all
- ||tarankopln.top^$all
- ||tarankosale.top^$all
- ||tarcice.mom^$all
-@@ -15846,7 +15837,6 @@
- ||tatranziscowin.shop^$all
- ||tatrivexaai.com^$all
- ||tatuavetri.rest^$all
--||tatuum-archive.pl^$all
- ||taupe-bag.shop^$all
- ||tautaphoto.live^$all
- ||taverspind.cyou^$all
+-||modacollection.pl^$all
+ ||modearchive.shop^$all
+ ||model-maxalt-opt.com^$all
+ ||model-maxalt-opt.live^$all
+@@ -10440,7 +10395,6 @@
+ ||museline.pl^$all
+ ||musemark.pl^$all
+ ||musemold.pl^$all
+-||musepiece.pl^$all
+ ||musepoem.pl^$all
+ ||muserhythm.pl^$all
+ ||musescene.pl^$all
+@@ -11153,7 +11107,6 @@
+ ||oferta-584392143.live^$all
+ ||oferta-828727455.cfd^$all
+ ||oferta-829274735.cfd^$all
+-||oferta-alufelgi732512341.pl^$all
+ ||oferta-kupbilety.forum^$all
+ ||oferta-kupteraz.lol^$all
+ ||oferta-lokalana37198264.sbs^$all
+@@ -11184,7 +11137,6 @@
+ ||oftalintra.store^$all
+ ||oftesid.lat^$all
+ ||ogloszenie24-89683926268.cfd^$all
+-||ogloszenie57483.pl^$all
+ ||ogloszenie304959781.cyou^$all
+ ||ogloszenie2108578947.cyou^$all
+ ||ogloszenie3198850903.bond^$all
+@@ -11266,7 +11218,6 @@
+ ||olx.8635564.lat^$all
+ ||olx.8642356.lat^$all
+ ||olx.8643264.lat^$all
+-||olx.8643275.pl^$all
+ ||olx.8646325.cfd^$all
+ ||olx.8653464.lat^$all
+ ||olx.8756345.lat^$all
+@@ -11351,7 +11302,6 @@
+ ||olx.ippoferta75635423412.sbs^$all
+ ||olx.jvcbud.shop^$all
+ ||olx.k-48v.lat^$all
+-||olx.kategoria5764523.pl^$all
+ ||olx.kup-teraz-3143435.com^$all
+ ||olx.kup-teraz-5177812.sbs^$all
+ ||olx.kupteraz429199421.xyz^$all
+@@ -11438,11 +11388,9 @@
+ ||olx.ofera783727222.shop^$all
+ ||olx.ofera2939934349.shop^$all
+ ||olx.ofera8932882822.shop^$all
+-||olx.oferta3262.pl^$all
+ ||olx.oferta3546.sbs^$all
+ ||olx.oferta3847bs8a10.live^$all
+ ||olx.oferta4882.sbs^$all
+-||olx.oferta9263.pl^$all
+ ||olx.oferta23823.cfd^$all
+ ||olx.oferta24235.cfd^$all
+ ||olx.oferta26583.live^$all
+@@ -11493,7 +11441,6 @@
+ ||olx.oferta-7894213.shop^$all
+ ||olx.oferta-8941320.sbs^$all
+ ||olx.oferta-584392143.live^$all
+-||olx.oferta-alufelgi732512341.pl^$all
+ ||olx.oferta-kupbilety.forum^$all
+ ||olx.oferta-kupteraz.lol^$all
+ ||olx.oferta-lokalana37198264.sbs^$all
+@@ -11510,7 +11457,6 @@
+ ||olx.ofeta-71903.lat^$all
+ ||olx.ofeta-928191.lol^$all
+ ||olx.ogloszenie24-89683926268.cfd^$all
+-||olx.ogloszenie57483.pl^$all
+ ||olx.ogloszenie304959781.cyou^$all
+ ||olx.ogloszenie2108578947.cyou^$all
+ ||olx.ogloszenie3198850903.bond^$all
+@@ -11619,8 +11565,6 @@
+ ||olx.pl-d-offerta-ssid61054-pryw.casa^$all
+ ||olx.pl-de0produkty876267424.cyou^$all
+ ||olx.pl-de2produkt9362883681.lol^$all
+-||olx.pl-delivery244.pl^$all
+-||olx.pl-delivery247.pl^$all
+ ||olx.pl-deprodukty7368164823.lol^$all
+ ||olx.pl-dn0produkt7847621934.lol^$all
+ ||olx.pl-dostawa.co^$all
+@@ -11794,13 +11738,6 @@
+ ||olx.ploferta-93742993.shop^$all
+ ||olx.plx-offertta-ogloszenie.casa^$all
+ ||olx.polskapaczka-me.cfd^$all
+-||olx.prywatne-97536.pl^$all
+-||olx.prywatne-84236346.pl^$all
+-||olx.przedmiot452342.pl^$all
+-||olx.przedmiot3525443.pl^$all
+-||olx.przedmiot6452343.pl^$all
+-||olx.przedmiot7435234.pl^$all
+-||olx.przedmiot-alufelgi7235234.pl^$all
+ ||olx.przedmiotnr75142352.sbs^$all
+ ||olx.przelew-paycore.cyou^$all
+ ||olx.przelew-paycore.sbs^$all
+@@ -12558,8 +12495,6 @@
+ ||pl-dakine.com^$all
+ ||pl-de0produkty876267424.cyou^$all
+ ||pl-de2produkt9362883681.lol^$all
+-||pl-delivery244.pl^$all
+-||pl-delivery247.pl^$all
+ ||pl-deprodukty7368164823.lol^$all
+ ||pl-dhl.top^$all
+ ||pl-dn0produkt7847621934.lol^$all
+@@ -13003,7 +12938,6 @@
+ ||potwierdzenie-bezpieczenstwa.vercel.app^$all
+ ||pourprevalorange.net^$all
+ ||powerprofittech.com^$all
+-||powiatchelrnski.pl^$all
+ ||poxtzapl.pythonanywhere.com^$all
+ ||pozcta-plolska-vore4-lab.b1knvm.qpon^$all
+ ||pprgrp.co.uk^$all
+@@ -13233,14 +13167,7 @@
+ ||pryluxo.com^$all
+ ||prymvexai.net^$all
+ ||pryvok.shop^$all
+-||prywatne-97536.pl^$all
+-||prywatne-84236346.pl^$all
+ ||pryzmat-nexor.com^$all
+-||przedmiot452342.pl^$all
+-||przedmiot3525443.pl^$all
+-||przedmiot6452343.pl^$all
+-||przedmiot7435234.pl^$all
+-||przedmiot-alufelgi7235234.pl^$all
+ ||przedmiotnr75142352.sbs^$all
+ ||przyrosttrade.com^$all
+ ||pseudoscddorpion.info^$all
+@@ -16835,7 +16762,6 @@
+ ||vibecraftersvip.com^$all
+ ||vibefeedce.site^$all
+ ||vibewrapfuel.site^$all
+-||vibrams.pl^$all
+ ||vichrrentov.net^$all
+ ||vicoruo.com^$all
+ ||victiingra.store^$all
+@@ -16913,7 +16839,6 @@
+ ||vinted.8635564.lat^$all
+ ||vinted.8642356.lat^$all
+ ||vinted.8643264.lat^$all
+-||vinted.8643275.pl^$all
+ ||vinted.8646325.cfd^$all
+ ||vinted.8653464.lat^$all
+ ||vinted.8653465.lat^$all
+@@ -17007,7 +16932,6 @@
+ ||vinted.ipkategoria72343432.sbs^$all
+ ||vinted.ipodkategoriia823471174332.sbs^$all
+ ||vinted.k-48v.lat^$all
+-||vinted.kategoria5764523.pl^$all
+ ||vinted.klassische-kontoverifizierung92211151231.com^$all
+ ||vinted.kup-teraz-3143435.com^$all
+ ||vinted.kup-teraz-5177812.sbs^$all
+@@ -17058,13 +16982,11 @@
+ ||vinted.oferta2795789056.icu^$all
+ ||vinted.oferta6213123451512.sbs^$all
+ ||vinted.oferta-584392143.live^$all
+-||vinted.oferta-alufelgi732512341.pl^$all
+ ||vinted.oferta-kupbilety.forum^$all
+ ||vinted.oferta-kupteraz.lol^$all
+ ||vinted.ofeta-71329.lol^$all
+ ||vinted.ofeta-928191.lol^$all
+ ||vinted.ogloszenie24-89683926268.cfd^$all
+-||vinted.ogloszenie57483.pl^$all
+ ||vinted.ogloszenie304959781.cyou^$all
+ ||vinted.ogloszenie2108578947.cyou^$all
+ ||vinted.ogloszenie3198850903.bond^$all
+@@ -17156,8 +17078,6 @@
+ ||vinted.pl-d-offerta-ssid61054-pryw.casa^$all
+ ||vinted.pl-de0produkty876267424.cyou^$all
+ ||vinted.pl-de2produkt9362883681.lol^$all
+-||vinted.pl-delivery244.pl^$all
+-||vinted.pl-delivery247.pl^$all
+ ||vinted.pl-deprodukty7368164823.lol^$all
+ ||vinted.pl-dn0produkt7847621934.lol^$all
+ ||vinted.pl-dostawa.co^$all
+@@ -17292,13 +17212,6 @@
+ ||vinted.ploferta8393937.shop^$all
+ ||vinted.ploferta-93742993.shop^$all
+ ||vinted.plx-offertta-ogloszenie.casa^$all
+-||vinted.prywatne-97536.pl^$all
+-||vinted.prywatne-84236346.pl^$all
+-||vinted.przedmiot452342.pl^$all
+-||vinted.przedmiot3525443.pl^$all
+-||vinted.przedmiot6452343.pl^$all
+-||vinted.przedmiot7435234.pl^$all
+-||vinted.przedmiot-alufelgi7235234.pl^$all
+ ||vinted.purchase19.com^$all
+ ||vinted.s93825.com^$all
+ ||vinted.smart-94582.cfd^$all

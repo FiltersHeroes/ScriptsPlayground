@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 707e8bc00..92485adc0 100644
+index c02a8219d..a47adda34 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -6,11 +6,9 @@
@@ -30,16 +30,19 @@ index 707e8bc00..92485adc0 100644
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -44,7 +42,7 @@ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
+@@ -42,9 +40,9 @@ agrobex.pl##div:nth-of-type(6)
+ agrodoradca24.pl,dok-oswiata-kadry.pl,gospodarowaniewoda.pl,linux-magazine.pl,poradnik-dyrektora.pl,portaloswiatowy.pl,prawowaptece.pl,rodomed24.pl,stomatologiawpraktyce.pl,strefalogopedy.pl,wip.pl##.modal-message
+ agrofakt.pl##.seattle-simple.optin-monster-saas-overlay
  agrohandel.com.pl###jcemediabox-popup-page
- agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,sklep.tel-mar.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
+-agrojumal.com.pl,betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,sklep.tel-mar.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
++betamed.pl,dobiegania.pl,hurtidetal.pl,lowicz24.eu,netlandcomputers.pl,opteam.pl,pl.globalvoices.org,resulto.pl,sklep.tel-mar.pl,tabal.pl,twojapogoda.pl###colorbox, #cboxOverlay
  agromix.agro.pl##.nivo-lightbox-overlay
 -agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,masa-honda.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
 +agropolska.pl,airport.com.pl,auto-gdansk.com.pl,blancz.pl,canalplus.com,chinskieprzepisy.pl,hamol.pl,holiday.aquila.pl,honda-kemag.pl,honda.mojsiuk.pl,honda.torun.pl,hondabiela.pl,hondacichonski.com.pl,hondamalta.karlik.poznan.pl,hondaplaza.pl,ozptd.pl,promax.media.pl,romantycznyweekend.eu,strzalkowski.pl,zdobadzkobiete.pl,zus.pox.pl###fancybox-wrap, #fancybox-overlay
  agrosiec.pl,angelgold.pl,bolix.pl##.modal
  agrotopparts.pl###kartka, #kartka ~ #tlo
  akademia.nask.pl###newsletterall
-@@ -158,7 +156,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
+@@ -159,7 +157,7 @@ bilety.laczynaspilka.pl##.shadowbox-popup, .shadowbox_overlay
  biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
  bioindygo.pl###popup-1
  biologia.net.pl,historia.azv.pl,twojfrancuski.pl,twojniemiecki.pl,wos.net.pl###dropin
@@ -48,7 +51,7 @@ index 707e8bc00..92485adc0 100644
  bitdefender.pl,eluban.pl,izigsm.pl,jaslo4u.pl,krasnik.eu,kukulahealthyfood.pl,motherhood.pl,muzeumwp.pl,planujemyogrod.pl,przepisychinskie.pl,rankomat.pl,roltech.eu,sagana.pl,sklepdekarza.pl,sklepdlarolnika.pl,spodiglyinitki.pl,sushi-sklep.pl###popup
  biuroprasowe.pl###global_overlay_cont, #global_overlay
  biznesoutfit.pl###formWrapper, #formOverlay
-@@ -208,7 +206,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
+@@ -209,7 +207,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
  chillglobal.pl##.bounceright-popup-acm.popup-acm
  chinytolubie.pl##.ui-dialog-titlebar-close, .ui-widget-overlay
  chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl##div[data-gr="popup-container"]
@@ -57,7 +60,7 @@ index 707e8bc00..92485adc0 100644
  cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
  chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
  chronpesel.pl##.wh-popUp-overlay
-@@ -337,7 +335,6 @@ fabrykawafelkow.pl###someone-purchased
+@@ -338,7 +336,6 @@ fabrykawafelkow.pl###someone-purchased
  fabrykazabawek.eu###helloModal
  faie.pl###searchPopUp
  fajnekonkursy.pl###tnp-modal
@@ -65,7 +68,7 @@ index 707e8bc00..92485adc0 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
-@@ -447,8 +444,6 @@ kolniak24.eu##.topLayer
+@@ -450,8 +447,6 @@ kolniak24.eu##.topLayer
  kolobrzeg.pl###dailyfullscreen
  kolorowejeziorka.pl###lpl.lpl-window, #lpl-overlay.lpl-overlay
  kolorowymotylek.pl##.newsletter3__wrapper
@@ -74,11 +77,28 @@ index 707e8bc00..92485adc0 100644
  komorkomat.pl##.offer_modal.order_contact_offer_modal.vue_modal
  kontri.pl###element_to_pop_up, .bModal
  kontri.pl###ys-container, .ys-layer
+@@ -613,7 +608,7 @@ otozlewy.pl###cp_footerPopup
+ otvarta.pl###call-to-us-popup
+ ozonee.pl###twsshadow2_bg
+ paga.org.pl##.popup-container, .dark-bg
+-pakamera.pl,webber.com.pl##.fancybox-is-open
++pakamera.pl##.fancybox-is-open
+ pakolorente.com##div:nth-of-type(7)
+ pamami.pl###edrone--main--wl--container
+ papierniczystudent.pl###covid19-info, .covid19-overlay
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 8ce53e8b0..737557aff 100644
+index 7ecffaca3..e22fcd180 100644
 --- a/PPB/popupy_sieciowe.txt
 +++ b/PPB/popupy_sieciowe.txt
-@@ -73,7 +73,6 @@
+@@ -51,7 +51,6 @@
+ ||jsystems.pl/resources/js/modal.js
+ ||kbhakord.pl/sites/all/modules/popup_announcement/popup_announcement.js
+ ||kierunekspozywczy.pl/js/magnific-popup/jquery.magnific-popup.js
+-||kuchenny.com.pl/popup/js/jquery.simplemodal.js
+ ||liceum.org.pl/modules/mod_mh_ajax_popup/js/mhap.js
+ ||losyziemi.pl/?spu_action=spu_load&lang=
+ ||m-wierchomla.youlead.pl/ylcustom.js
+@@ -74,7 +73,6 @@
  ||proto.pl/popup_newsletter/settings
  ||regus.pl/Home/OnExitModal$xmlhttprequest
  ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
@@ -86,3 +106,15 @@ index 8ce53e8b0..737557aff 100644
  ||sklep.rms.pl/js/rms_copy_copy/popup.js
  ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
  ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
+diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
+index e9f985f91..a0429124d 100644
+--- a/PPB/uBO_AG/popupy_suplement.txt
++++ b/PPB/uBO_AG/popupy_suplement.txt
+@@ -256,7 +256,6 @@ wbok.syrion.pl##html.v-overlay-scroll-blocked #app ~ .v-overlay-container .v-dia
+ wbok.syrion.pl##html.v-overlay-scroll-blocked:style(position: static !important; overflow-y: scroll !important; --v-scrollbar-offset: 0 !important)
+ weathermap.netatmo.com##.blured #map, .blured .side-panel, .blured .navbar, .blured .button-control-ctn, .blured .small-banner, .side-panel.blured, .blured #mainwrapper .legend:style(filter: none !important)
+ weathermap.netatmo.com##first-use-slider
+-webber.com.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
+ westwing.pl##body[style*="top"][style*="position"]:style(position: static !important)
+ westwing.pl##div[data-component-name="Overlay"] > .qa-overlay:has(.qa-sign-up-overlay__content)
+ westwingnow.pl##+js(nostif, showOverlay)
