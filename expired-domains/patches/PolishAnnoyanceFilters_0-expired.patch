@@ -1,13 +1,20 @@
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index ed19bb10c..ffe7cba51 100644
+index 14f5cbb04..9d7e124d1 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
-@@ -895,7 +895,7 @@ whatnext.pl###back-to-up
- wiadomoscihandlowe.pl##.scroll-up-box
- wielkahistoria.pl###johannes-goto-top
- wiesci.com.pl###divGoToTop
--wiktormeble.pl,znajdownik.pl###mt-scrollup
-+wiktormeble.pl###mt-scrollup
- wilkuchnia.pl##.show-up
- winclub.pl##.fa-chevron-circle-up
- winers.pl##.upToScroll.buttonScrollUp
+@@ -174,7 +174,6 @@ calypso.com.pl##.mouseScroll
+ calzadomoda.pl###bt-scroll-up
+ camil.pl,pizzeria-vendetta.eu,sklep.vivamix.pl##.return-to-top
+ canagri.pl##.btt-button
+-cashback.getdify.com###back-button
+ casu.pl##.btn_scroll
+ cateromarket.pl##footer a[href="javascript:void(0)"]:has(> svg)
+ catzy.pl,paypo.pl,polska-posciel.pl,reklama.gazeta.pl##.scroll-top-btn
+@@ -821,7 +820,6 @@ swisskrono.com##.row-top-up
+ systempartnerski.pl,ubraniadooddania.pl###scroll-up-button
+ szalonewalizki.pl###desert-back-top
+ szarlatan.pl##.landing-back-top
+-szklanedrzwi.pl###GO_TOP
+ szopi.pl###scisco-gototop
+ szukajwarchiwach.gov.pl###scroolButton
+ tadar.pl##.menu_up
