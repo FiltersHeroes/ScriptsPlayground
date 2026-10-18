@@ -1,5 +1,5 @@
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index f2e5a4457..692f92bdf 100644
+index 54bec32da..52c5e187a 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
 @@ -7,11 +7,9 @@
@@ -30,16 +30,16 @@ index f2e5a4457..692f92bdf 100644
  adria-art.pl###overlay, .popup.newsletter
  adventuresports.pl##seguno-popup.__seguno-popup-wrapper
  agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
-@@ -213,7 +211,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
+@@ -214,7 +212,7 @@ chemiabudowlana.info,mylomza.pl###fadeinbox
  chillglobal.pl##.bounceright-popup-acm.popup-acm
  chinytolubie.pl##.ui-dialog-titlebar-close, .ui-widget-overlay
- chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl,pl.natec-zone.com##div[data-gr="popup-container"]
+ chinytolubie.pl,cyberprofilaktyka.pl,kalkulatorkalorii.net,lellek.pl,maxcom.pl,pl.natec-zone.com##div[data-gr="popup-container"]
 -chocholowskietermy.pl,grailpoint.com,hoho.sklep.pl,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
 +chocholowskietermy.pl,grailpoint.com,hurtowniarolnicza.pl,instalacjebudowlane.pl,max4.pl,outhorn.com,przegladbaltycki.pl,salonyhoff.pl,sklep.chomik.pl,wentylacyjny.pl,wydawnictwomartel.pl,zapachdomu.pl##.simplemodal-container, .simplemodal-overlay
  cholewinski.com###egnewsletter_popup_container.egnewsletter-popup-container
  chopin.polskieradio.pl##div[class^="MarathonPopup_curtain_"]
  chronpesel.pl##.wh-popUp-overlay
-@@ -342,7 +340,6 @@ fabrykawafelkow.pl###someone-purchased
+@@ -343,7 +341,6 @@ fabrykawafelkow.pl###someone-purchased
  fabrykazabawek.eu###helloModal
  faie.pl###searchPopUp
  fajnekonkursy.pl,topplant.pl###tnp-modal
@@ -47,28 +47,11 @@ index f2e5a4457..692f92bdf 100644
  fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
  farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
  farmer.pl###axnBodyContainer
-@@ -617,7 +614,7 @@ otozlewy.pl###cp_footerPopup
- otvarta.pl###call-to-us-popup
- ozonee.pl###twsshadow2_bg
- paga.org.pl##.popup-container, .dark-bg
--pakamera.pl,webber.com.pl##.fancybox-is-open
-+pakamera.pl##.fancybox-is-open
- pakolorente.com##div:nth-of-type(7)
- pamami.pl###edrone--main--wl--container
- papierniczystudent.pl###covid19-info, .covid19-overlay
 diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
-index 758ff83e3..ded6c5078 100644
+index 758ff83e3..ec113b67f 100644
 --- a/PPB/popupy_sieciowe.txt
 +++ b/PPB/popupy_sieciowe.txt
-@@ -50,7 +50,6 @@
- ||jsystems.pl/resources/js/modal.js
- ||kbhakord.pl/sites/all/modules/popup_announcement/popup_announcement.js
- ||kierunekspozywczy.pl/js/magnific-popup/jquery.magnific-popup.js
--||kuchenny.com.pl/popup/js/jquery.simplemodal.js
- ||liceum.org.pl/modules/mod_mh_ajax_popup/js/mhap.js
- ||losyziemi.pl/?spu_action=spu_load&lang=
- ||m-wierchomla.youlead.pl/ylcustom.js
-@@ -73,13 +72,11 @@
+@@ -73,13 +73,11 @@
  ||proto.pl/popup_newsletter/settings
  ||regus.pl/Home/OnExitModal$xmlhttprequest
  ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
@@ -82,15 +65,3 @@ index 758ff83e3..ded6c5078 100644
  ||virgobooks.pl/modules/advancedpopupcreator/lib/fancybox/jquery.fancybox.transitions.js
  ||woblink.com/js/newsletterPopup.js
  ||wszystkookotach.pl/wp-content/plugins/popslide/assets/js/front.js
-diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index e11235cfb..c3b4807ac 100644
---- a/PPB/uBO_AG/popupy_suplement.txt
-+++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -159,7 +159,6 @@ wbok.syrion.pl##html.v-overlay-scroll-blocked #app ~ .v-overlay-container .v-dia
- wbok.syrion.pl##html.v-overlay-scroll-blocked:style(position: static !important; overflow-y: scroll !important; --v-scrollbar-offset: 0 !important)
- weathermap.netatmo.com##.blured #map, .blured .side-panel, .blured .navbar, .blured .button-control-ctn, .blured .small-banner, .side-panel.blured, .blured #mainwrapper .legend:style(filter: none !important)
- weathermap.netatmo.com##first-use-slider
--webber.com.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
- westwing.pl##body[style*="top"][style*="position"]:style(position: static !important)
- westwing.pl##div[data-component-name="Overlay"] > .qa-overlay:has(.qa-sign-up-overlay__content)
- westwingnow.pl##+js(nostif, showOverlay)

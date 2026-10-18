@@ -1,8 +1,8 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 07dc2b699..57130f048 100644
+index 07dc2b699..cac58be2a 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,34 +4,27 @@
+@@ -4,15 +4,12 @@
  ||aoc.teleaudio.pl^
  ||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
@@ -18,10 +18,7 @@ index 07dc2b699..57130f048 100644
  ||buzz.mobiapp-games.com^
  ||caiiddb.getpixlss.com^
  ||caiiddb.hubstatts.com^
- ||ce.wielkanagroda.com^
- ||ce.wielkaniespodzianka.pl^
- ||ce.winfreetoday.com^
--||chomikuj-new-t1.opx.pl^
+@@ -23,23 +20,18 @@
  ||czas-na-fb.blogspot.com^
  ||daily.boonovel.com^
  ||darmowe-bony.24.eu^
@@ -37,9 +34,9 @@ index 07dc2b699..57130f048 100644
  ||dziennik-info.x9.eu^
  ||dziennik-polski.x9.eu^
  ||dzisiaj.numpet.com^
-@@ -39,7 +32,6 @@
+ ||echo-dnia.24.eu^
  ||erritz.xcartpro.com^
- ||exchange.dgtmarket.com^
+-||exchange.dgtmarket.com^
  ||express.jnews5.com^
 -||f.drops.fortunella-new.com^
  ||facebokznajomi.blogspot.com^

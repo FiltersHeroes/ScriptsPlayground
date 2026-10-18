@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 23dd9cd03..371a86254 100644
+index c6bbc74f5..0c1e582cf 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -857,7 +857,7 @@ pswbp.pl###accessibility-links
+@@ -859,7 +859,7 @@ pswbp.pl###accessibility-links
  psy-pies.com,swiatkwiatow.pl###wyskakujaca
  ptakoutlet.pl###kp, .pasek-right
  pultusk24.pl##form[action^="https://poll.pollcode.com/"]
@@ -12,10 +12,10 @@ index 23dd9cd03..371a86254 100644
  pyszne.pl##div[data-qa="app-banner"]
  pytamy.pl##.fixFooter
 diff --git a/PPB/popupy.txt b/PPB/popupy.txt
-index 0a5a12a55..f2e5a4457 100644
+index 2c03d83ab..54bec32da 100644
 --- a/PPB/popupy.txt
 +++ b/PPB/popupy.txt
-@@ -709,7 +709,6 @@ realme.com##.subscribe
+@@ -710,7 +710,6 @@ realme.com##.subscribe
  refurbed.pl##.fixed[x-data*="NewsletterPopup"]
  residenza.cz##.modal--newsletter
  retailnet.pl,rp.pl##tqwidget
@@ -36,10 +36,10 @@ index 7ecffaca3..758ff83e3 100644
  ||autodoc.pl/ajax/popup/on_leave
  ||brilum24.pl/skins/user/rwd_shoper_1/js/remodal.min.js
 diff --git a/PPB/uBO_AG/inne_suplement.txt b/PPB/uBO_AG/inne_suplement.txt
-index 475bf57a8..7147c0850 100644
+index 738abafee..90b9bc475 100644
 --- a/PPB/uBO_AG/inne_suplement.txt
 +++ b/PPB/uBO_AG/inne_suplement.txt
-@@ -6,8 +6,8 @@
+@@ -7,8 +7,8 @@
  ~1login.wp.pl,~poczta.wp.pl,wp.pl,~www.wp.pl##div > div > span ~ a[href*="wlacz-tryb-ciemny-"]:upward(2)
  ~1login.wp.pl,~poczta.wp.pl,wp.pl,~www.wp.pl##div > div > span ~ a[href="undefined"]:has-text(Jak to działa?):upward(2)
  4mats.pl##html, body:style(overflow-y: auto !important)
@@ -51,20 +51,20 @@ index 475bf57a8..7147c0850 100644
  airalo.com##body > .smartbanner
  al.to,x-kom.pl##+js(set-local-storage-item, hide-mobile-app-alert, true)
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 1b1525309..e11235cfb 100644
+index 43299a1f3..50b4b73a4 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -141,8 +141,6 @@ produktyzyskajzdrowie.pl##html.pum-open.pum-open-overlay, html.pum-open.pum-open
+@@ -134,8 +134,6 @@ produktyzyskajzdrowie.pl##:root.pum-open.pum-open-overlay, :root.pum-open.pum-op
  rolety24.net###r24np-root, .r24np-root
- rolety24.net##body:style(overflow-y: auto !important)
+ rolety24.net##+js(set-cookie, r24_np_seen, 1)
  rowery-elektryczne.pl###popup, #popup-overlay
 -samochod.porowneo.pl###modalContainer
 -samochod.porowneo.pl##.noScroll:style(position: static !important)
  sanbetdevelopment.pl##.breakdance-popup-open
  shopcademy.pl##.kadence-conversion, .kadence-conversion-overlay
- sleepandglow.pl##.pp__mailing, .pp__mailing_second
+ sleepandglow.pl##+js(set-constant, mailing-hide, true)
 diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index 257a127f3..74829ec0f 100644
+index 363e5638c..ad8fb842f 100644
 --- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 +++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
 @@ -45,7 +45,7 @@ amperlux.pl##.ggu-widget-launcher
@@ -76,15 +76,6 @@ index 257a127f3..74829ec0f 100644
  angloville.pl##.rngst_phone_button, .widget__show
  aniagemma.com,bboptic.com,cocochoco.com.pl,sbys.pl##iframe[aria-label="Wix Chat"]
  anton-paar.com###footer-contact-us
-@@ -85,7 +85,7 @@ bezpieczny.pl###call_phone
- bhpsupply.pl##.cta-button:not(.fb-msg-link)
- bike-parts-honda.pl###fleche_popin_contact
- bikeinn.com,dressinn.com,goalinn.com,kidinn.com,motardinn.com,outletinn.com,runnerinn.com,scubastore.com,smashinn.com,snowinn.com,swiminn.com,techinn.com,traininn.com,trekkinn.com,waveinn.com,xtremeinn.com###bim-ifr
--bilety.termymaltanskie.com.pl,mtp.pl###mtp-chat
-+mtp.pl###mtp-chat
- bilgorajska.pl##.pod_feedback
- bilgorajska.pl,bobbyburger.pl,godealla.pl,majsterkowo.pl,unisono.eu,venezia.pl##.feedback
- bitrix24.pl,upominki24.pl,webiso.pl##div[class*="-widget-button-wrapper"]
 @@ -111,7 +111,6 @@ brief.pl##.fab-desktop
  bssztum.pl###widget_social2
  budio.pl,buy-it.pl###crisp-chatbox
@@ -108,7 +99,7 @@ index 257a127f3..74829ec0f 100644
  clineo.pl###contact_widget
  cmolmed.pl###patient-assistant-widget
  cmp.med.pl##.cmp-fab-launcher
-@@ -343,7 +342,6 @@ karmi.pl##.scrolled.homecontact
+@@ -344,7 +343,6 @@ karmi.pl##.scrolled.homecontact
  kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
  ketowpraktyce.pl###chatbox
  kind.com##.AP_mod--button-symbol
@@ -116,7 +107,7 @@ index 257a127f3..74829ec0f 100644
  klonowypark.pl###belka_phone2, #belka_mail2, #belka_map2, #belka_form2
  kluczesoft.pl###ks-chat-rootk
  knall.com.pl##.socialTabs-tab--contact.socialTabs-tab
-@@ -504,7 +502,7 @@ polmed.pl###app-chat-easymed
+@@ -506,7 +504,7 @@ polmed.pl###app-chat-easymed
  polnord.pl###contactForm
  poloniawroclaw.pl##body > iframe:first-of-type
  polsatbox.pl##.chat_display
@@ -125,7 +116,7 @@ index 257a127f3..74829ec0f 100644
  pomoc.bluemedia.pl##.icon_czat.ribbon
  poradnikprzedsiebiorcy.pl##.visible.text-right.widget-guide-online
  porowneo.pl##.agent-avaiable
-@@ -525,7 +523,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
+@@ -527,7 +525,6 @@ proline.pl##div[id][style*="cursor"][title^="Przycisk "] > div[style*="fixed"]
  promopixel.pl###fitcher-container
  przestronnie.pl##a[id*="back"][href^="tel:"]
  psprices.com###chatra
@@ -133,7 +124,7 @@ index 257a127f3..74829ec0f 100644
  pytamy.pl##.tabZB
  pzu.pl###baner-doradcy, #metka-przycisk
  r.pl##.divCallback
-@@ -560,7 +557,6 @@ salesmanago.pl###sm-bot
+@@ -562,7 +559,6 @@ salesmanago.pl###sm-bot
  salomon.com##.chatbot-box
  salon2kolka.pl##.msl-envelope-o
  salon-kosiarek.pl##.tm-sticker
