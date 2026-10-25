@@ -1,5 +1,5 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 2c69e85da..c6bbc74f5 100644
+index f2e0493f3..7268aa19e 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
 @@ -537,7 +537,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
@@ -10,7 +10,7 @@ index 2c69e85da..c6bbc74f5 100644
  konto.onet.pl###navright
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
-@@ -939,7 +938,6 @@ sklep.vivamix.pl##.main-question-form
+@@ -941,7 +940,6 @@ sklep.vivamix.pl##.main-question-form
  sklepbaterie.pl##.naskroty
  sklepmaniek.pl##.LastOrderBox
  sklepy.mediaexpert.pl##.baner_right, .baner_left
@@ -19,10 +19,10 @@ index 2c69e85da..c6bbc74f5 100644
  sky-shop.pl###promo-banner
  sleepmed.pl##.metka
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index b8edd9188..5381ceed9 100644
+index c1781a520..9417d8761 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -817,7 +817,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -819,7 +819,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -31,7 +31,7 @@ index b8edd9188..5381ceed9 100644
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index c49178ee0..8538e70f4 100644
+index 68b35b4e1..29d36aa1e 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -46,7 +46,7 @@ airwick.pl###top-btn
@@ -43,28 +43,22 @@ index c49178ee0..8538e70f4 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -189,7 +189,7 @@ chimmo.pl###arrow-up
- chmielnik.com###na_gore
+@@ -190,7 +190,7 @@ chmielnik.com###na_gore
  choinka-sztuczna.pl###ico_up
  choinki.net,sherlocktrafika.pl,wyciagarki.eu###backtop
+ chryzantemki.com##.page-to-top-visible
 -ciechpress.pl,niesamowitapolska.eu,redditch.pl###astroid-backtotop
 +ciechpress.pl,niesamowitapolska.eu###astroid-backtotop
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -247,17 +247,16 @@ dns.pl##footer + button[class=""]
- dobra-mama.pl###top-to-bottom
- dobramine.com##.to_top_link
- dobrzemieszkaj.pl###gallery > .circle
--docs.github.com,jbc.bj.uj.edu.pl,sbc.org.pl,zakupy.auchan.pl##button[class*="scroll-to-top"]
-+docs.github.com,sbc.org.pl,zakupy.auchan.pl##button[class*="scroll-to-top"]
- doktormonika.pl###page-gotop.page-gotop
+@@ -253,12 +253,11 @@ doktormonika.pl###page-gotop.page-gotop
  domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
  domoferm.com##.Footer-btnPageTop
--domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl,ungepflanzen.de##.scroll-up-container
+-domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl,technisat.pl,ungepflanzen.de##.scroll-up-container
 -domowa.pizza##.smoothup
-+domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl##.scroll-up-container
++domondo.pl,electropapa.com,mrowka.com,sklep.poczta-polska.pl,technisat.pl##.scroll-up-container
  domowe-wypieki.pl,kuchnia-domowa.pl##.sunfw-scrollup
  domusfari.pl,swiatekspresow.pl###back_up
  domzagadek.pl###scroll_strz
@@ -73,7 +67,7 @@ index c49178ee0..8538e70f4 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -300,7 +299,7 @@ enel.pl###afario-back-top
+@@ -301,7 +300,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -82,7 +76,7 @@ index c49178ee0..8538e70f4 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  ervegan.com##.top
-@@ -482,7 +481,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -483,7 +482,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -90,7 +84,7 @@ index c49178ee0..8538e70f4 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -786,7 +784,6 @@ sklep.geers.pl##.j-scroll-top
+@@ -788,7 +786,6 @@ sklep.geers.pl##.j-scroll-top
  sklep.lemoniade.pl##.btn-up-page
  sklep.panasonic.pl##.btn-go-top
  sklepjubilerski.com##app-scroll-to-top
@@ -108,10 +102,10 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index eefa8a75b..43299a1f3 100644
+index 9d2dd0a3c..ce8b46973 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -66,7 +66,7 @@ karo.waw.pl###skNewsletterPopupOverlay, #skNewsletterPopupForm
+@@ -67,7 +67,7 @@ karo.waw.pl###skNewsletterPopupOverlay, #skNewsletterPopupForm
  karo.waw.pl##body.modal-open:style(overflow-y: auto !important;)
  kiep.pl##[style*="opacity: 0.3;"]:style(opacity: 1 !important)
  kiribaticlub.pl,zielonasowa.pl###ns-popup-box, #mask

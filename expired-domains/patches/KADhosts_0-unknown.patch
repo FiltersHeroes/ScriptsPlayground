@@ -1,10 +1,12 @@
 diff --git a/sections/hostsplus.txt b/sections/hostsplus.txt
-index 07dc2b699..cac58be2a 100644
+index 07dc2b699..813a67624 100644
 --- a/sections/hostsplus.txt
 +++ b/sections/hostsplus.txt
-@@ -4,15 +4,12 @@
+@@ -2,44 +2,34 @@
+ ||activestin-pl.great-beauty.org^
+ ||adpro.futurenet.club^
  ||aoc.teleaudio.pl^
- ||api.myeforsa.pl^
+-||api.myeforsa.pl^
  ||app2.mackeeperaffiliates.com^
 -||apteline-pl.sbs^
 -||apteline.deal-pl.shop^
@@ -18,7 +20,10 @@ index 07dc2b699..cac58be2a 100644
  ||buzz.mobiapp-games.com^
  ||caiiddb.getpixlss.com^
  ||caiiddb.hubstatts.com^
-@@ -23,23 +20,18 @@
+ ||ce.wielkanagroda.com^
+ ||ce.wielkaniespodzianka.pl^
+ ||ce.winfreetoday.com^
+-||chomikuj-new-t1.opx.pl^
  ||czas-na-fb.blogspot.com^
  ||daily.boonovel.com^
  ||darmowe-bony.24.eu^
@@ -42,7 +47,7 @@ index 07dc2b699..cac58be2a 100644
  ||facebokznajomi.blogspot.com^
  ||facebook-login.5v.pl^
  ||facebook-profile.5v.pl^
-@@ -80,7 +72,6 @@
+@@ -80,7 +70,6 @@
  ||freeiqtest.blogspot.com^
  ||gazeta-polska.24.eu^
  ||glikotril.fair-2sale.com^
@@ -50,7 +55,7 @@ index 07dc2b699..cac58be2a 100644
  ||gw.firesub.pl^
  ||hp.myway.com^
  ||info-polska.24.eu^
-@@ -117,11 +108,8 @@
+@@ -117,11 +106,8 @@
  ||lp761.streamseek.net^
  ||lp832.streamseek.net^
  ||lp845.filmo.agency^
@@ -62,7 +67,7 @@ index 07dc2b699..cac58be2a 100644
  ||miasto-wiadomosci-24h.x9.eu^
  ||microcam.ushoppyworld.com^
  ||minutainfo.numpet.com^
-@@ -137,7 +125,6 @@
+@@ -137,7 +123,6 @@
  ||offer.shirem.com^
  ||paiementhome-pl-5b4f060c.rpm-technik.at^
  ||pakiety-lte-5gb.blogspot.com^
@@ -70,7 +75,7 @@ index 07dc2b699..cac58be2a 100644
  ||ping.ublock.org^
  ||pl1.colladioxprosale.com^
  ||pl1.landnob.com^
-@@ -265,19 +252,15 @@
+@@ -265,19 +250,15 @@
  ||pl46.landofm.com^
  ||pl46.landovn.com^
  ||pl47.landofm.com^
@@ -90,7 +95,15 @@ index 07dc2b699..cac58be2a 100644
  ||quality-products1.blogspot.com^
  ||roksa.sx^
  ||sala-samobojcow-hejter-pobierz.eeu.pl^
-@@ -315,13 +298,11 @@
+@@ -287,7 +268,6 @@
+ ||sds.superdeltas.com^
+ ||serve.flipplayer.com^
+ ||serwisinformacyjny.x9.eu^
+-||sfakty.hukfi.com^
+ ||sklep.mariuszmroz.pl^
+ ||somi.tiktokclaim.eu^
+ ||special-news.myfreesites.net^
+@@ -315,13 +295,11 @@
  ||wydarzenia-naszemiasto24.x9.eu^
  ||wydarzenia-naszemiasto-24.x9.eu^
  ||wydarzenia-naszemiasto.x9.eu^

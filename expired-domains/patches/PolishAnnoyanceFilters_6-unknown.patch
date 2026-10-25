@@ -1,0 +1,77 @@
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 4cf5be380..0be84d989 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -29,7 +29,7 @@ addhost.pl##.fsp-wrapper
+ addons.opera.com,altair.com.pl,atcdevelopment.pl,bankobranie.blogspot.com,bobbyburger.pl###overlay
+ admiraltax.pl##iframe[id][src*="popups.landingi.com/api/popups/"]
+ adra.pl,agro-rolnik.pl,agroefekt.pl,agrosiec.pl,apaczka.pl,blog.lh.pl,dekanex.pl,dobroplast.pl,dzisiajwgliwicach.pl,elus.pl,estante.pl,g2aarena.pl,gazetasenior.pl,gf24.pl,glokalna.pl,komputerowapasja.pl,konopia-med.pl,ksm.org.pl,ladnebebe.pl,lalorraine.pl,lukasiewicz.gov.pl,neworleans.pl,niw.gov.pl,no44.pl,pantabletka.pl,pewnedrzwi.pl,polska-ie.com,prostamol.pl,sedna.pl,siecprzedsiebiorczychkobiet.pl,sklep.lancray.pl,skslegal.pl,sulmierzyce.info,sw-rita.pl,techfresh.pl,techsetter.pl,uroda.in,vratislavia-medica.pl,zostanwpolsce.com###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
+-adresy.um.warszawa.pl,mapa.um.warszawa.pl,ulice.um.warszawa.pl###init_info[style], #komunikat[style]
++mapa.um.warszawa.pl###init_info[style], #komunikat[style]
+ adria-art.pl###overlay, .popup.newsletter
+ adventuresports.pl##seguno-popup.__seguno-popup-wrapper
+ agamasmaka.pl##.et_bloom_auto_popup.et_bloom_flyin
+@@ -147,7 +147,7 @@ barokko.pl,butylukow.pl,korob.pl###tws_i_2
+ batom.pl##div[class*="Modal__ModalPortalStyled-sc-"]
+ bazarek-deco.com.pl###NewsPop
+ bdl.lasy.gov.pl##.blockPage.blockMsg.blockUI, .blockOverlay.blockUI
+-beardman.pl,polskicaravaning.pl,swiatopon.info,warsztat.pl,wiadomoscihandlowe.pl,wiadomoscikosmetyczne.pl###newsletter-popup-wrapper
++beardman.pl,polskicaravaning.pl,warsztat.pl,wiadomoscihandlowe.pl,wiadomoscikosmetyczne.pl###newsletter-popup-wrapper
+ beardman.pl,subiektywnieofinansach.pl###newsletter-overlay
+ beliani.pl###front_overlay_subscription
+ bemuke.pl##div[id^="tws_i_"]
+@@ -343,7 +343,6 @@ fabrykawafelkow.pl###someone-purchased
+ fabrykazabawek.eu###helloModal
+ faie.pl###searchPopUp
+ fajnekonkursy.pl,topplant.pl###tnp-modal
+-familyzone.com.pl##.fx-block.fx-wrapper-modal
+ fantoma.pl,iglazura24.pl,ikapol.net,militarialodz.pl,styleev-shop.pl,stylewhite.pl,zabutani.pl##div[id^="popup-scademy"]
+ farbotka.pl,uzdrowiskowespa.pl###fx-modal-2
+ farmer.pl###axnBodyContainer
+@@ -567,7 +566,6 @@ myloview.pl##.subskrypcja, .ui-widget-overlay
+ myob.pl###popup-message-background
+ mysize.com.pl###popup_box, #overlay
+ mzk-gorzow.com.pl,wielen.pl,wronki.pl##.webpush_modal
+-nabory.kprm.gov.pl##.popup-newsletter
+ naekranie.pl###welcome_screen-content
+ najlepszebuty.com.pl##.pp-wrapper, .pp-overlay
+ naszeledy.pl##.modal, .mask
+@@ -619,7 +617,7 @@ otozlewy.pl###cp_footerPopup
+ otvarta.pl###call-to-us-popup
+ ozonee.pl###twsshadow2_bg
+ paga.org.pl##.popup-container, .dark-bg
+-pakamera.pl,webber.com.pl##.fancybox-is-open
++pakamera.pl##.fancybox-is-open
+ pakolorente.com##div:nth-of-type(7)
+ pamami.pl###edrone--main--wl--container
+ papierniczystudent.pl###covid19-info, .covid19-overlay
+diff --git a/PPB/popupy_sieciowe.txt b/PPB/popupy_sieciowe.txt
+index 758ff83e3..ec113b67f 100644
+--- a/PPB/popupy_sieciowe.txt
++++ b/PPB/popupy_sieciowe.txt
+@@ -73,13 +73,11 @@
+ ||proto.pl/popup_newsletter/settings
+ ||regus.pl/Home/OnExitModal$xmlhttprequest
+ ||salaterka.pl/wp-content/plugins/optin-cat-personal-wp/assets/vendor/featherlight/release/featherlight.min.js
+-||sklep.jack-wolfskin.pl/*/js/newsletter-modal-
+ ||sklep.rms.pl/js/rms_copy_copy/popup.js
+ ||sky-shop.pl/view/scripts/sweetalert/dist/sweetalert.min.js
+ ||starter.net.pl/wp-content/plugins/modal-window/assets/css/style.min.css
+ ||super-toys.pl/javascript/banner_popup.php
+ ||superkoszyk.pl/media/nl_modal/js/delay1page.js
+-||v2.getall.pl/modules/popup/*$domain=skladaniekomputera.pl
+ ||virgobooks.pl/modules/advancedpopupcreator/lib/fancybox/jquery.fancybox.transitions.js
+ ||woblink.com/js/newsletterPopup.js
+ ||wszystkookotach.pl/wp-content/plugins/popslide/assets/js/front.js
+diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
+index f8aa09e64..aaedbd218 100644
+--- a/PPB/uBO_AG/popupy_suplement.txt
++++ b/PPB/uBO_AG/popupy_suplement.txt
+@@ -156,7 +156,6 @@ wbok.syrion.pl##:root.v-overlay-scroll-blocked #app ~ .v-overlay-container .v-di
+ wbok.syrion.pl##:root.v-overlay-scroll-blocked:style(position: static !important; overflow-y: scroll !important; --v-scrollbar-offset: 0 !important)
+ weathermap.netatmo.com##.blured #map, .blured .side-panel, .blured .navbar, .blured .button-control-ctn, .blured .small-banner, .side-panel.blured, .blured #mainwrapper .legend:style(filter: none !important)
+ weathermap.netatmo.com##first-use-slider
+-webber.com.pl##.compensate-for-scrollbar[class]:style(overflow-y: auto !important; margin-right: 0 !important)
+ westwing.pl##body[style*="top"][style*="position"]:style(position: static !important)
+ westwing.pl##div[data-component-name="Overlay"] > .qa-overlay:has(.qa-sign-up-overlay__content)
+ westwingnow.pl##+js(nostif, showOverlay)
