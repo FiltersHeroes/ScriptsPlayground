@@ -1,25 +1,12 @@
-diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index e47911893..8871e3ae3 100644
---- a/PPB/uBO_AG/popupy_suplement.txt
-+++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -112,8 +112,6 @@ otodom.pl###__next > div[class] + div:not([class], [id]):has(div[data-cy="modal"
- ozogtomczykowski.pl###homeModal
- pasmanteria.eu,sprzedajemyrosliny.pl,twojzwierzak.com.pl##.swal2-modal, .swal2-container
- paypo.pl##+js(set-cookie, pp_registration_modal_rejected, true)
--payukraine.com##.gl-blur:style(filter: none !important)
--payukraine.com##.pc_withoutCommissionBanner
- pepper.pl##+js(set-local-storage-item, guestBpnModalSeen, true)
- pepper.pl##.zIndex--modal[class^="popover"][class*="bottom"]:has(.oreo-message-emoticon)
- pixlr.com##body > div[id^="modal-"]:has(> div.announce > div.content > div#after-content)
-diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-index ad484f477..d7e1d27e8 100644
---- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-+++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
-@@ -475,7 +475,6 @@ panmaterac.pl###call-container-floating
- parkrozrywkizawada.pl,poklocki.pl,quantec.pl##.fa-paper-plane
- partnerpapes.pl##.elementor-button-wrapper
- pasland.pl###panel
--payukraine.com###jvlabelWrap
- pbgorski.pl##.call-back
- pbkm.pl##.side-bar__item--phone
- pccentre.pl###zak_error
+diff --git a/PPB/popupy.txt b/PPB/popupy.txt
+index 3d9012b2a..6fef77f26 100644
+--- a/PPB/popupy.txt
++++ b/PPB/popupy.txt
+@@ -651,7 +651,6 @@ pl.hinative.com##.mod_banner_register_float_pc
+ pl.kronospan-express.com###modalWindowCMSubscribes, .iziModal-overlay
+ pl.safetydetectives.com##.main-pp
+ pl.weekendmaxmara.com##.newsletter.modal, .jquery-modal
+-plakatynasciany.pl###ap-popup, #ap-popup-tlo
+ planeta-budowlana.pl##.dialog[id^="window"], #toogas_pop_up
+ plk.pl###okienko_yt, .ui-widget-overlay
+ poczta.interia.pl##.app-promo

@@ -1,8 +1,8 @@
 diff --git a/PPB/inne.txt b/PPB/inne.txt
-index 591994308..3c5edf01f 100644
+index 5be41f875..59756860e 100644
 --- a/PPB/inne.txt
 +++ b/PPB/inne.txt
-@@ -537,7 +537,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
+@@ -538,7 +538,6 @@ komorkomat.pl##.compare_widget_box, .single-post-inner .animated[href="https://k
  komorkomat.pl#?#.post-content h3:has-text(> >>)
  komputery.cieszyn.pl###serwisbok
  komputronik.pl,kresy.pl,spaceads.pl,spirulina.pl##.avia-post-nav
@@ -11,10 +11,10 @@ index 591994308..3c5edf01f 100644
  kornik.com.pl###katalog-drzwi
  korzystneit.pl,shark.sklep.pl,sklep.milicon.eu###cartBox
 diff --git a/PPB/newslettery_nie_popupy.txt b/PPB/newslettery_nie_popupy.txt
-index c64879d5d..953535fa8 100644
+index 28d47d923..706a6bfef 100644
 --- a/PPB/newslettery_nie_popupy.txt
 +++ b/PPB/newslettery_nie_popupy.txt
-@@ -824,7 +824,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
+@@ -828,7 +828,6 @@ konfederacjalewiatan.pl###bazo_form_popup0
  konstantinkanin.com###mailchimp-top-bar
  kontakt-simon.com.pl##.newsletter-subscribe__button
  kontaktowe.pl###nbj
@@ -22,7 +22,7 @@ index c64879d5d..953535fa8 100644
  kormoran-rowy.pl##.site-footer__row--top > .inner-section > .align-right.site-footer__col
  koszulkomat.eu##div.group:nth-of-type(5)
  koszulkowo.com##.sec--foot__main__box:nth-of-type(2)
-@@ -1048,7 +1047,6 @@ multiform.pl###mainContact .writeToUs
+@@ -1052,7 +1051,6 @@ multiform.pl###mainContact .writeToUs
  muratorplus.pl##.right > form > button
  muszakski.com.pl###zr_footer_newsletter
  muve.pl##.newsl-box
@@ -31,7 +31,7 @@ index c64879d5d..953535fa8 100644
  muzyczneradio.pl##.newsletter.col-md-3
  muzykotekaszkolna.pl##.nl-subscribe
 diff --git a/PPB/strzalki.txt b/PPB/strzalki.txt
-index 6c99771fa..899826ef0 100644
+index df21200b4..541fb4603 100644
 --- a/PPB/strzalki.txt
 +++ b/PPB/strzalki.txt
 @@ -46,7 +46,7 @@ airwick.pl###top-btn
@@ -43,7 +43,7 @@ index 6c99771fa..899826ef0 100644
  alchemianatury.pl###the4-backtop
  aldi.pl##.mod-back-to-top
  alegloria.pl,secure.e-konsulat.gov.pl##.go-up-button
-@@ -188,10 +188,9 @@ centrumdom.info##.tm-my-totop-scroller
+@@ -189,10 +189,9 @@ centrumdom.info##.tm-my-totop-scroller
  chemko.com.pl,informatique-mania.com,specto.com.pl##.go-to-top-button
  chimmo.pl###arrow-up
  chmielnik.com###na_gore
@@ -55,7 +55,7 @@ index 6c99771fa..899826ef0 100644
  ckz.pl##.wpv-scroll-to-top
  claas.roltexkrasnystaw.pl##.top-link
  cleangang.pl##main button.cursor-pointer[type="button"][class*="36"]:has(> svg[viewBox="0 0 15 15"])
-@@ -235,7 +234,7 @@ deezee.pl##.is-scrollToTopContainer
+@@ -236,7 +235,7 @@ deezee.pl##.is-scrollToTopContainer
  dell.com##button.btnbacktotop
  denso.com##.Pagetop
  dentalmedicenter.pl,jackvision.pl,mapsolutions.pl###to_the_top
@@ -64,7 +64,7 @@ index 6c99771fa..899826ef0 100644
  depositphotos.com##button[aria-label="Do góry"]
  deubaxxlshop.pl###scrolltopbutton
  dhl.com##.c-go-to-top-button
-@@ -255,12 +254,11 @@ doktormonika.pl###page-gotop.page-gotop
+@@ -256,12 +255,11 @@ doktormonika.pl###page-gotop.page-gotop
  domdlaciebie.com.pl##.fix-scroll-top
  domenergo.com###to-to
  domoferm.com##.Footer-btnPageTop
@@ -79,7 +79,7 @@ index 6c99771fa..899826ef0 100644
  doppelherz.pl##.link--scroll-to-top
  dopracowani.pl###pulse_to_top
  doradcasmaku.pl,porta.com.pl##.floating_scroll_top
-@@ -304,7 +302,7 @@ enel.pl###afario-back-top
+@@ -305,7 +303,7 @@ enel.pl###afario-back-top
  enetproduction.com##div.vued-custom-scroll_to_top
  enowiny.pl,mobileworld24.pl##.mnmd-go-top
  ergolife.com.pl,pib-nio.pl###es-top
@@ -88,7 +88,24 @@ index 6c99771fa..899826ef0 100644
  erkado.pl##.skip--top
  erli.pl###root > header ~ button:has(> svg:only-child):has(~ footer)
  ervegan.com##.top
-@@ -486,7 +484,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
+@@ -353,7 +351,6 @@ fundacjapestka.pl,gisplay.pl,iform4u.com##.back__top
+ funduszeue.wzp.pl,mixit.pl,plus.pl###scroll-up-btn
+ funer.com.pl###backtotop
+ galeriakatowicka.eu###js-scroll-to
+-gama-sklep.com.pl##.go-to-top-page
+ gandalf.com.pl,in4.pl,mediastar.pl,motobros.pl###goup
+ garneczki.pl,nq.pl##.go-to-up
+ gazeta-fotograficzna.org,gmoto.pl,iberogast.pl,mp.pl###top-link-block
+@@ -395,7 +392,7 @@ gpcodziennie.pl##.col-md-2
+ gralandia.tv##img[src$="/images/arrow.png"]
+ green-fields.pl##.gf-back-to-top
+ greencell.global###js-top
+-gromgroup.pl,silesiasa.pl,singraph.pl,srw.org.pl###scroll-top-btn
++gromgroup.pl,silesiasa.pl,singraph.pl###scroll-top-btn
+ groupon.pl###ls-back-to-top
+ grupa.unimet.pl,kosciolpalmarianski.org###ht-back-top
+ gry-online.pl,muve.pl###return-up
+@@ -487,7 +484,6 @@ komputronik.pl##aside button:has(.i-arrow-circle-up)
  kongresobywatelski.pl##.top-btn
  konskowola.info.pl###scrollUpBtn
  kontakty.info.pl##.top-to
@@ -96,15 +113,7 @@ index 6c99771fa..899826ef0 100644
  kosmetyczna-hedonistka.blogspot.com##.totop-arrow
  krainaoszczedzania.pl###finoScroll
  krakow.pl###footer-scroll-up
-@@ -597,7 +594,6 @@ mojewronki.pl,wlaczoszczedzanie.pl##.waypoints-goto-top
- mojewypieki.com###jumpup
- mojprzeworsk.pl##.walkerpress-top
- mojzdrowyfutrzak.elanco.com###Group_1
--mok.olsztyn.pl###neko-to-top
- molnlycke.pl##.button-sticky-to-top
- montaz-anten.eu##.topHome
- motogen.pl###gora-przycisk-fixed
-@@ -656,7 +652,6 @@ organichouse.eu,podrogach.pl###ssttbutton
+@@ -657,7 +653,6 @@ organichouse.eu,podrogach.pl###ssttbutton
  ostredyzury.pl,zus.info.pl##.sm-up-container
  otoagent.pl,targiehandlu.pl##button[aria-label="scroll back to top"]
  ottobest.pl###xo-scroll2top
@@ -122,10 +131,10 @@ index 003cd5bbf..1b0cd3adc 100644
  /wp-content/plugins/scroll-back-to-top/assets/js/scroll-back-to-top.js
 -||back-to-top.appspot.$subdocument
 diff --git a/PPB/uBO_AG/popupy_suplement.txt b/PPB/uBO_AG/popupy_suplement.txt
-index 6e8fafd4f..f42fc3284 100644
+index ebd161c61..35a3d4b0b 100644
 --- a/PPB/uBO_AG/popupy_suplement.txt
 +++ b/PPB/uBO_AG/popupy_suplement.txt
-@@ -73,7 +73,7 @@ karo.waw.pl###skNewsletterPopupOverlay, #skNewsletterPopupForm
+@@ -74,7 +74,7 @@ karo.waw.pl###skNewsletterPopupOverlay, #skNewsletterPopupForm
  karo.waw.pl##body.modal-open:style(overflow-y: auto !important;)
  kiep.pl##[style*="opacity: 0.3;"]:style(opacity: 1 !important)
  kiribaticlub.pl,zielonasowa.pl###ns-popup-box, #mask
@@ -134,3 +143,15 @@ index 6e8fafd4f..f42fc3284 100644
  koty.pl,psy.pl##.ReactModal__Overlay:has(a[href*="/newsletter"])
  koty.pl,psy.pl##:root[style], body[class*="Modal"]:style(position: static !important; overflow-y: auto !important)
  krasnal.sklep.pl,nerdstore.pl##+js(set-cookie, posnewsletterpopup, 1)
+diff --git a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+index 89d507ec2..c1861a55c 100644
+--- a/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
++++ b/PPB/widgety_kontaktowe_informacji_zwrotnej.txt
+@@ -271,7 +271,6 @@ freeconvert.com###ZohodeskWidgetPlaceholder
+ fsmm.pl##body > .contactform
+ fundacjakibica.pl###contact_rozwin
+ galskor.com###yotpo_testimonials_btn
+-gama-sklep.com.pl##footer > .contact-element
+ gamer-zone.pl##.gz-contact-widget
+ gamerweb.pl##.zoxrel.left.zox-post-soc-list
+ gandalf.com.pl##.fb_dialog_advanced
